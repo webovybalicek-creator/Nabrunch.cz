@@ -1,0 +1,90 @@
+name: SEO audit WordPressu
+
+# Projde sitemapu živého WordPressu (nabrunch.cz) a uloží pro každou URL titulek, popis, H1, canonical, robots a OG
+# do větve „seo-audit“ (soubor wp-seo.json). Slouží k převzetí SEO metadat do nového webu.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Stažení metadat
+        run: |
+          mkdir -p out
+          python - <<'PY'
+          import json, re, time, urllib.request, html
+          from html.parser import HTMLParser
+          UA = {'User-Agent': 'Mozilla/5.0 (nabrunch-seo-audit)'}
+          def get(u):
+              r = urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=30)
+              return r.status, r.geturl(), r.read().decode('utf-8', 'replace')
+          # Sitemapy (SEOPress: /sitemaps.xml, WP core: /wp-sitemap.xml)
+          urls, fronta, videno = set(), ['https://nabrunch.cz/sitemaps.xml', 'https://nabrunch.cz/sitemap.xml', 'https://nabrunch.cz/wp-sitemap.xml'], set()
+          sitemapy = []
+          while fronta:
+              s = fronta.pop()
+              if s in videno: continue
+              videno.add(s)
+              try: _, _, x = get(s)
+              except Exception as e: print('sitemap chyba', s, e); continue
+              sitemapy.append(s)
+              for loc in re.findall(r'<loc>\s*([^<\s]+)\s*</loc>', x):
+                  loc = html.unescape(loc)
+                  if re.search(r'\.xml($|\?)', loc): fronta.append(loc)
+                  else: urls.add(loc)
+          print('sitemapy:', sitemapy, 'URL:', len(urls))
+          class P(HTMLParser):
+              def __init__(s):
+                  super().__init__(); s.d = {'h1': [], 'meta': {}, 'link': {}}; s.v_title = s.v_h1 = False; s.title = ''; s.h1 = ''; s.ld = []; s.v_ld = False
+              def handle_starttag(s, t, a):
+                  a = dict(a)
+                  if t == 'title': s.v_title = True
+                  if t == 'h1': s.v_h1 = True; s.h1 = ''
+                  if t == 'meta':
+                      k = a.get('name') or a.get('property')
+                      if k: s.d['meta'][k.lower()] = a.get('content', '')
+                  if t == 'link' and a.get('rel') in ('canonical', 'alternate', 'prev', 'next'):
+                      s.d['link'].setdefault(a['rel'], a.get('href'))
+                  if t == 'script' and a.get('type') == 'application/ld+json': s.v_ld = True
+              def handle_endtag(s, t):
+                  if t == 'title': s.v_title = False
+                  if t == 'h1' and s.v_h1: s.v_h1 = False; s.d['h1'].append(re.sub(r'\s+', ' ', s.h1).strip())
+                  if t == 'script': s.v_ld = False
+              def handle_data(s, x):
+                  if s.v_title: s.title += x
+                  if s.v_h1: s.h1 += x
+                  if s.v_ld: s.ld.append(x)
+          out = {}
+          for u in sorted(urls):
+              try:
+                  st, final, x = get(u)
+                  p = P(); p.feed(x)
+                  typy = sorted(set(re.findall(r'"@type"\s*:\s*"([^"]+)"', ''.join(p.ld))))
+                  out[u] = {'status': st, 'final': final, 'title': html.unescape(p.title.strip()), 'h1': p.d['h1'],
+                            'description': p.d['meta'].get('description'), 'robots': p.d['meta'].get('robots'),
+                            'canonical': p.d['link'].get('canonical'), 'og_title': p.d['meta'].get('og:title'),
+                            'og_description': p.d['meta'].get('og:description'), 'og_image': p.d['meta'].get('og:image'),
+                            'jsonld': typy}
+              except Exception as e:
+                  out[u] = {'chyba': str(e)}
+              time.sleep(0.3)
+          json.dump({'sitemapy': sitemapy, 'stranky': out}, open('out/wp-seo.json', 'w'), ensure_ascii=False, indent=1)
+          # robots.txt pro srovnání
+          try: open('out/robots.txt', 'w').write(get('https://nabrunch.cz/robots.txt')[2])
+          except Exception as e: print('robots', e)
+          print('Hotovo:', len(out))
+          PY
+      - name: Uložení do větve seo-audit
+        run: |
+          cd out
+          git init -q && git checkout -q -b seo-audit
+          git add . && git -c user.name=bot -c user.email=bot@local commit -qm "SEO audit $(date -u +%F)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" seo-audit
