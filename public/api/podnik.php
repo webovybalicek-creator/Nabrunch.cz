@@ -1,6 +1,6 @@
 <?php
 /**
- * Formulář „Přidat podnik“ → e-mail redakci s fotkami v příloze.
+ * Formulář „Přidat podnik“ → e-mail redakci s fotkami v příloze (přes SMTP Websupportu, viz _smtp.php).
  * POST: nazev, popis, adresa, googlemaps, doba, telefon, email, web, instagram, rezervace,
  *       platba[], wifi, wc, kuchyne[], atmosfera[], tipnadpis, tip, foto (soubor), galerie[] (soubory)
  *       web2 (past na roboty), t (čas načtení formuláře)
@@ -8,9 +8,10 @@
  * Limit: 5 odeslání za hodinu z jedné IP (ukládá se jen HMAC otisk IP na hodinu, v dočasné složce).
  */
 declare(strict_types=1);
+require __DIR__ . '/_smtp.php';
 
 const PRIJEMCE = 'karolina@nabrunch.cz';
-const ODESILATEL = 'no-reply@nabrunch.cz';
+const ODESILATEL = 'karolina@nabrunch.cz';
 const MAX_SOUBOR = 3 * 1024 * 1024;
 const MAX_GALERIE = 6;
 const LIMIT_ZA_HODINU = 5;
@@ -109,7 +110,7 @@ $hlavicky = implode("\r\n", [
     "Content-Type: multipart/mixed; boundary=\"$hranice\"",
 ]);
 
-if (!@mail(PRIJEMCE, $predmet, $telo, $hlavicky, '-f' . ODESILATEL)) {
+if (!nb_odesli(PRIJEMCE, $predmet, $telo, $hlavicky)) {
     out(500, ['ok' => false, 'chyba' => 'E-mail se nepodařilo odeslat. Napište nám prosím přímo na ' . PRIJEMCE . '.']);
 }
 @file_put_contents($limitSoubor, (string)($pocet + 1));

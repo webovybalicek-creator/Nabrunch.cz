@@ -1,0 +1,50 @@
+name: Test SMTP
+
+# Ověří přihlášení k smtp.websupport.cz (SSL 465) se secretem SMTP_PASSWORD a pošle zkušební e-mail.
+on:
+  workflow_dispatch:
+    inputs:
+      poslat:
+        description: 'Poslat zkušební e-mail na karolina@nabrunch.cz'
+        type: boolean
+        default: true
+
+jobs:
+  smtp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      POSLAT: ${{ inputs.poslat }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Přihlášení a zkušební e-mail
+        run: |
+          python - <<'PY'
+          import os, smtplib, ssl
+          from email.message import EmailMessage
+          from email.utils import formatdate, make_msgid
+          HOST, PORT, USER = 'smtp.websupport.cz', 465, 'karolina@nabrunch.cz'
+          heslo = os.environ.get('SMTP_PASSWORD', '')
+          if not heslo:
+              print('::error::Chybí secret SMTP_PASSWORD'); raise SystemExit(1)
+          try:
+              with smtplib.SMTP_SSL(HOST, PORT, context=ssl.create_default_context(), timeout=20) as s:
+                  print(f'::notice::Spojení OK: {s.ehlo()[0]}')
+                  s.login(USER, heslo)
+                  print('::notice::Přihlášení OK')
+                  if os.environ.get('POSLAT') == 'true':
+                      m = EmailMessage()
+                      m['From'], m['To'] = f'naBrunch.cz <{USER}>', USER
+                      m['Subject'] = '[naBrunch] Test SMTP z new.nabrunch.cz'
+                      m['Date'], m['Message-ID'] = formatdate(localtime=True), make_msgid(domain='nabrunch.cz')
+                      m.set_content('Zkušební e-mail: SMTP pro formulář „Přidat podnik“ na new.nabrunch.cz funguje.')
+                      s.send_message(m)
+                      print(f'::notice::Zkušební e-mail odeslán na {USER}')
+          except smtplib.SMTPAuthenticationError as e:
+              print(f'::error::Přihlášení odmítnuto ({e.smtp_code}): zkontroluj heslo v SMTP_PASSWORD'); raise SystemExit(1)
+          except Exception as e:
+              print(f'::error::{type(e).__name__}: {e}'); raise SystemExit(1)
+          PY

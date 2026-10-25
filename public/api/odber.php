@@ -2,7 +2,7 @@
 /**
  * Přihlášení k odběru newsletteru → Ecomail (seznam ECOMAIL_LIST).
  * POST: email, web2 (past na roboty), t (čas načtení), zdroj (stránka)
- * API klíč není v repozitáři: deploy ho ze secretu ECOMAIL_API_KEY zapíše do api/_ecomail.php
+ * API klíč není v repozitáři: deploy ho ze secretu ECOMAIL_API_KEY zapíše do api/_konfig.php
  * (přímý přístup zakazuje .htaccess). Ecomail podle nastavení seznamu pošle potvrzovací e-mail (double opt-in).
  */
 declare(strict_types=1);
@@ -34,8 +34,8 @@ $pocet = is_file($limitSoubor) ? (int)file_get_contents($limitSoubor) : 0;
 if ($pocet >= LIMIT_ZA_HODINU) out(429, ['ok' => false, 'chyba' => 'Příliš mnoho pokusů. Zkus to prosím později.']);
 @file_put_contents($limitSoubor, (string)($pocet + 1));
 
-$konfig = is_file(__DIR__ . '/_ecomail.php') ? require __DIR__ . '/_ecomail.php' : [];
-$klic = $konfig['klic'] ?? getenv('ECOMAIL_API_KEY') ?: '';
+$konfig = is_file(__DIR__ . '/_konfig.php') ? (array)require __DIR__ . '/_konfig.php' : [];
+$klic = $konfig['ecomail'] ?? '';
 if ($klic === '') out(503, ['ok' => false, 'chyba' => 'Odběr je dočasně nedostupný.']);
 
 $zdroj = mb_substr(preg_replace('~[^a-z0-9/_-]~i', '', (string)($_POST['zdroj'] ?? '')), 0, 120);

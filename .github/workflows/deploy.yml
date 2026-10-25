@@ -22,6 +22,7 @@ jobs:
       FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
       FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
       ECOMAIL_API_KEY: ${{ secrets.ECOMAIL_API_KEY }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       # Cílová doména – po spuštění ostrého webu nastavit proměnnou SITE_HOST na nabrunch.cz
       SITE_HOST: ${{ vars.SITE_HOST || 'new.nabrunch.cz' }}
     steps:
@@ -35,15 +36,17 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Konfigurace Ecomailu (API klíč jen na serveru, ne v repozitáři)
-        if: env.ECOMAIL_API_KEY != ''
+      - name: Konfigurace serveru (API klíče a hesla jen na serveru, ne v repozitáři)
         run: |
-          printf '<?php return [%s => %s];\n' "'klic'" "'${ECOMAIL_API_KEY//\'/}'" > dist/api/_ecomail.php
-          echo "::notice::Konfigurace Ecomailu přidána"
-
-      - name: Chybí klíč Ecomailu
-        if: env.ECOMAIL_API_KEY == ''
-        run: echo "::warning::Chybí secret ECOMAIL_API_KEY – přihlášení k newsletteru nebude fungovat."
+          python3 - <<'PY'
+          import os
+          esc = lambda v: v.replace('\\', '\\\\').replace("'", "\\'")
+          k = {'ecomail': os.environ.get('ECOMAIL_API_KEY', ''), 'smtp_heslo': os.environ.get('SMTP_PASSWORD', '')}
+          radky = ''.join(f"  '{n}' => '{esc(v)}',\n" for n, v in k.items() if v)
+          open('dist/api/_konfig.php', 'w').write(f"<?php\nreturn [\n{radky}];\n")
+          for n, v in k.items():
+              print(f"::{'notice' if v else 'warning'}::{n}: {'nastaveno' if v else 'chybí secret'}")
+          PY
 
       - name: Kontrola přístupových údajů
         if: env.FTP_PASSWORD == ''
