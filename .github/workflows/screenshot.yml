@@ -64,6 +64,13 @@ jobs:
                   pg.wait_for_timeout(8)
               pg.wait_for_timeout(60)
               pg.screenshot(path='shots/smouha.jpg', type='jpeg', quality=75)
+              # Test našeptávače v hledání
+              for dotaz in ('pra', 'kafe'):
+                  pg.fill('#q', '')
+                  pg.click('#q')
+                  pg.keyboard.type(dotaz, delay=60)
+                  pg.wait_for_timeout(900)
+                  pg.screenshot(path=f'shots/hledani-{dotaz}.jpg', type='jpeg', quality=75)
               pg.close()
               b.close()
           open('shots/log.txt', 'w').write('\n'.join(sorted(set(log))) or 'bez chyb')

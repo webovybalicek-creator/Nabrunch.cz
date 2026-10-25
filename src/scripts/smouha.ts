@@ -3,7 +3,7 @@
 
 const ZIVOT = 520; // ms, za jak dlouho bod zmizí
 const PRAH = 0.45; // px/ms, od jaké rychlosti se kreslí
-const MAX_SIRKA = 70;
+const MAX_SIRKA = 90;
 
 interface Bod {
   x: number;
@@ -44,7 +44,7 @@ export function smouha(platno: HTMLCanvasElement, oblast: HTMLElement) {
       const v = Math.hypot(x - posledni.x, y - posledni.y) / dt;
       if (v > PRAH) {
         // Šířka roste s rychlostí, plynule navazuje na předchozí bod
-        const cil = Math.min(MAX_SIRKA, 10 + (v - PRAH) * 28);
+        const cil = Math.min(MAX_SIRKA, 18 + (v - PRAH) * 34);
         const pred = body.at(-1);
         const w = pred && t - pred.t < 60 ? pred.w + (cil - pred.w) * 0.35 : cil * 0.5;
         body.push({ x, y, w, t });
@@ -73,8 +73,8 @@ export function smouha(platno: HTMLCanvasElement, oblast: HTMLElement) {
       if (Number.isNaN(a.x) || Number.isNaN(b.x)) continue;
       const k = 1 - (ted - b.t) / ZIVOT; // 1 → 0
       const g = ctx!.createLinearGradient(a.x, a.y, b.x, b.y);
-      g.addColorStop(0, `rgba(255, 142, 95, ${0.45 * k})`);
-      g.addColorStop(1, `rgba(255, 154, 152, ${0.55 * k})`);
+      g.addColorStop(0, `rgba(255, 142, 95, ${0.7 * k})`);
+      g.addColorStop(1, `rgba(255, 120, 130, ${0.75 * k})`);
       ctx!.strokeStyle = g;
       ctx!.lineWidth = Math.max(1, b.w * (0.35 + 0.65 * k));
       ctx!.beginPath();

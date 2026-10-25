@@ -217,6 +217,9 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
       );
     });
 
+    // Odkaz „V mém okolí“ z hledání na úvodu (/podniky/?okoli=1)
+    if (new URLSearchParams(location.search).get('okoli') === '1') okoliBtn?.click();
+
     dalsi.addEventListener('click', () => {
       limit += krok;
       vykresli(false);

@@ -1,0 +1,301 @@
+---
+// Hledání podle města, názvu podniku, adresy nebo tématu. Index (/hledat.json) se načte až při prvním psaní.
+---
+
+<form class="srch" role="search" action="/podniky/" method="get" data-hledani>
+  <label for="q" class="sr-only">Kavárna, město nebo ulice</label>
+  <input id="q" name="q" type="search" autocomplete="off" placeholder="Kavárna, město nebo ulice…" aria-controls="srch-vysledky" aria-autocomplete="list" />
+  <a class="srch__geo" href="/podniky/?okoli=1" title="Podniky v mém okolí">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
+      ><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="1.6"></path><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"></circle></svg
+    >
+    <span>V mém okolí</span>
+  </a>
+  <button class="srch__btn" type="submit">Hledat</button>
+  <div id="srch-vysledky" class="srch__res" role="listbox" hidden></div>
+</form>
+
+<script>
+  type Mesto = [string, string, number, string]; // název, url, počet, nadřazená
+  type Podnik = [string, string, string, string, string]; // název, url, místo, náhled, hledaný text
+  type Tema = [string, string, number, string, string]; // název, url, počet, emoji, hledaný text
+  type Index = { m: Mesto[]; s: Podnik[]; t: Tema[] };
+
+  const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
+  const tvar = (n: number) => (n === 1 ? 'podnik' : n >= 2 && n <= 4 ? 'podniky' : 'podniků');
+
+  let nacitani: Promise<Index> | null = null;
+  const nacti = () => (nacitani ??= fetch('/hledat.json').then((r) => r.json()));
+
+  function vyhledej(q: string, idx: Index) {
+    const t = norm(q).split(/\s+/).filter(Boolean);
+    if (!t.length) return { mesta: [], podniky: [], temata: [] };
+    const shoda = (txt: string) => {
+      const n = norm(txt);
+      return t.every((w) => n.includes(w));
+    };
+    const zacina = (txt: string) => norm(txt).startsWith(t[0]) || norm(txt).includes(` ${t[0]}`);
+    const mesta = idx.m
+      .filter((m) => shoda(m[0]))
+      .sort((a, b) => Number(norm(b[0]).startsWith(t[0])) - Number(norm(a[0]).startsWith(t[0])) || b[2] - a[2])
+      .slice(0, 5);
+    const podniky = idx.s
+      .filter((s) => shoda(`${s[0]} ${s[4]}`))
+      .sort((a, b) => Number(zacina(b[0])) - Number(zacina(a[0])))
+      .slice(0, 7);
+    const temata = idx.t.filter((x) => shoda(`${x[0]} ${x[4]}`)).slice(0, 3);
+    return { mesta, podniky, temata };
+  }
+
+  document.querySelectorAll<HTMLFormElement>('[data-hledani]').forEach((form) => {
+    const input = form.querySelector('input')!;
+    const box = form.querySelector<HTMLElement>('.srch__res')!;
+    let token = 0;
+
+    const render = async () => {
+      const q = input.value.trim();
+      const my = ++token;
+      if (q.length < 2) {
+        box.hidden = true;
+        return;
+      }
+      const idx = await nacti();
+      if (my !== token) return;
+      const { mesta, podniky, temata } = vyhledej(q, idx);
+      if (!mesta.length && !podniky.length && !temata.length) {
+        box.innerHTML = `<p class="srch__empty">Pro „${esc(q)}“ jsme nic nenašli. Zkus jiný název, ulici nebo jen město.</p><a class="srch__vse" href="/podniky/">Zobrazit všechny podniky →</a>`;
+      } else {
+        box.innerHTML =
+          (mesta.length
+            ? `<p class="srch__h">Města</p>` +
+              mesta
+                .map((m) => `<a role="option" href="${m[1]}"><span>${esc(m[0])}</span><small>${m[3] ? `${esc(m[3])} · ` : ''}${m[2]} ${tvar(m[2])}</small></a>`)
+                .join('')
+            : '') +
+          (podniky.length
+            ? `<p class="srch__h">Podniky</p>` +
+              podniky
+                .map(
+                  (s) =>
+                    `<a role="option" class="srch__podnik" href="${s[1]}"><span class="srch__th"><img src="${s[3]}" alt="" loading="lazy" onload="this.classList.add('ok')" onerror="this.remove()"></span><span class="srch__txt"><span>${esc(s[0])}</span><small>${esc(s[2])}</small></span></a>`,
+                )
+                .join('')
+            : '') +
+          (temata.length
+            ? `<p class="srch__h">Podle chuti</p>` +
+              temata.map((x) => `<a role="option" href="${x[1]}"><span>${x[3]} ${esc(x[0])}</span><small>${x[2]} ${tvar(x[2])}</small></a>`).join('')
+            : '') +
+          `<a class="srch__vse" href="/podniky/?q=${encodeURIComponent(q)}">Všechny výsledky pro „${esc(q)}“ →</a>`;
+      }
+      box.hidden = false;
+    };
+
+    let casovac = 0;
+    input.addEventListener('input', () => {
+      clearTimeout(casovac);
+      casovac = window.setTimeout(render, 120);
+    });
+    input.addEventListener('focus', () => {
+      nacti();
+      if (input.value.trim().length >= 2) render();
+    });
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const q = input.value.trim();
+      if (!q) {
+        location.href = '/podniky/';
+        return;
+      }
+      const { mesta, podniky, temata } = vyhledej(q, await nacti());
+      const prvni = mesta[0]?.[1] ?? (podniky.length === 1 ? podniky[0][1] : undefined) ?? temata[0]?.[1];
+      location.href = prvni ?? `/podniky/?q=${encodeURIComponent(q)}`;
+    });
+    document.addEventListener('click', (e) => {
+      if (!form.contains(e.target as Node)) box.hidden = true;
+    });
+    form.addEventListener('keydown', (e) => {
+      const odkazy = [...box.querySelectorAll<HTMLAnchorElement>('a')];
+      const i = odkazy.indexOf(document.activeElement as HTMLAnchorElement);
+      if (e.key === 'Escape') {
+        box.hidden = true;
+        input.focus();
+      } else if (e.key === 'ArrowDown' && !box.hidden) {
+        odkazy[Math.min(i + 1, odkazy.length - 1)]?.focus();
+        e.preventDefault();
+      } else if (e.key === 'ArrowUp' && !box.hidden) {
+        if (i <= 0) input.focus();
+        else odkazy[i - 1].focus();
+        e.preventDefault();
+      }
+    });
+  });
+</script>
+
+<style>
+  .srch {
+    --srch-h: 3.1rem;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    max-width: 40rem;
+    padding: 0.4rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    box-shadow: 0 12px 40px rgb(83 42 25 / 0.1);
+  }
+  .srch:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgb(255 142 95 / 0.18), 0 12px 40px rgb(83 42 25 / 0.1);
+  }
+  input {
+    flex: 1;
+    min-width: 0;
+    height: var(--srch-h);
+    padding: 0 1em 0 1.1em;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    font: 400 1rem/1.2 var(--f-text);
+    color: var(--ink);
+  }
+  input::placeholder {
+    color: #a3928a;
+  }
+  input:focus-visible {
+    outline: none;
+  }
+  .srch__geo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    height: var(--srch-h);
+    padding: 0 1.1em;
+    border-radius: 999px;
+    background: var(--cream);
+    color: var(--accent-deep);
+    font: 600 0.88rem var(--f-display);
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .srch__geo:hover {
+    background: #ffdccc;
+    color: var(--accent-deep);
+  }
+  .srch__btn {
+    height: var(--srch-h);
+    padding: 0 1.6em;
+    border: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font: 600 0.95rem var(--f-display);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .srch__btn:hover {
+    background: var(--accent-deep);
+  }
+  @media (max-width: 560px) {
+    .srch {
+      flex-wrap: wrap;
+      border-radius: 22px;
+    }
+    input {
+      flex-basis: 100%;
+    }
+    .srch__geo,
+    .srch__btn {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+  .srch__res {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 30;
+    max-height: 70vh;
+    overflow: auto;
+    padding: 0.45rem;
+    background: #fff;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 20px 50px rgb(83 42 25 / 0.16);
+  }
+  .srch__res :global(a) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.55rem 0.7rem;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  .srch__res :global(a:hover),
+  .srch__res :global(a:focus-visible) {
+    background: var(--blush);
+    color: var(--ink);
+    outline: none;
+  }
+  .srch__res :global(.srch__podnik) {
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+  .srch__res :global(.srch__th) {
+    position: relative;
+    flex: none;
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .srch__res :global(.srch__th img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .srch__res :global(.srch__th img.ok) {
+    opacity: 1;
+  }
+  .srch__res :global(.srch__txt) {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .srch__res :global(.srch__txt small) {
+    white-space: normal;
+  }
+  .srch__res :global(small) {
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .srch__res :global(.srch__h) {
+    margin: 0.5rem 0.7rem 0.2rem;
+    font: 600 0.72rem/1.3 var(--f-display);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+  }
+  .srch__res :global(.srch__empty) {
+    margin: 0.6rem 0.7rem 0.3rem;
+    color: var(--ink-soft);
+  }
+  .srch__res :global(.srch__vse) {
+    justify-content: center;
+    margin-top: 0.3rem;
+    border-top: 1px solid var(--line);
+    border-radius: 0 0 10px 10px;
+    font: 600 0.88rem var(--f-display);
+    color: var(--brown-dark);
+  }
+</style>

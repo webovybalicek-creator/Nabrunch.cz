@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Slider from '../components/Slider.astro';
+import Hledani from '../components/Hledani.astro';
 import Vypis from '../components/Vypis.astro';
 import BlogKarta from '../components/BlogKarta.astro';
 import Foto from '../components/Foto.astro';
@@ -42,11 +43,7 @@ const jsonLd = {
         <span class="eyebrow">nabrunch.cz</span>
         <h1>Víme, kam <span>naBrunch!</span></h1>
         <p class="lead">Objev ta nejlepší místa na snídani a brunch po celé České republice. Ručně vybraných {podnikuText(PODNIKY.length)} v {mesta().length} městech.</p>
-        <form class="hero__hledat" action="/podniky/" method="get" role="search">
-          <label class="sr-only" for="hero-q">Hledat podnik nebo město</label>
-          <input id="hero-q" type="search" name="q" placeholder="Kavárna, město nebo ulice…" autocomplete="off" />
-          <button class="btn btn--akcent" type="submit">Najdi si svůj brunch</button>
-        </form>
+        <div class="hero__hledat"><Hledani /></div>
         <ul class="hero__mesta" aria-label="Oblíbená města">
           {topMesta.slice(0, 6).map((m) => <li><a class="tag" href={lokalitaUrl(m)}>{m.nazev}</a></li>)}
           <li><a class="tag" href="/mapa/">🗺️ Mapa podniků</a></li>
@@ -202,27 +199,7 @@ const jsonLd = {
     color: var(--accent);
   }
   .hero__hledat {
-    display: flex;
-    gap: 0.5rem;
     margin: 1.75rem 0 1.25rem;
-    padding: 0.4rem;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    box-shadow: 0 10px 30px rgb(83 42 25 / 0.08);
-    max-width: 36rem;
-  }
-  .hero__hledat input {
-    flex: 1;
-    min-width: 0;
-    border: 0;
-    padding: 0.6em 1em;
-    font: inherit;
-    background: transparent;
-    color: var(--ink);
-  }
-  .hero__hledat input:focus {
-    outline: none;
   }
   .hero__mesta {
     list-style: none;
@@ -271,12 +248,6 @@ const jsonLd = {
     }
     .hero__kolaz {
       display: none;
-    }
-  }
-  @media (max-width: 520px) {
-    .hero__hledat {
-      flex-direction: column;
-      border-radius: var(--radius);
     }
   }
   .temata {
