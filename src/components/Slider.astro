@@ -1,5 +1,5 @@
 ---
-// Vodorovný slider karet podniků: posouvání prstem/kolečkem, šipky, ukazatel průběhu.
+// Vodorovný slider karet podniků v šířce obsahu: 4 karty na desktopu, posouvání šipkami nebo prstem.
 import Karta from './Karta.astro';
 import type { Podnik } from '../lib/data';
 
@@ -32,13 +32,10 @@ const { podniky, eyebrow, nadpis, odkaz, tmavy = false } = Astro.props;
       </div>
     </div>
   </div>
-  <div class="slider__okno">
+  <div class="wrap">
     <ul class="slider__drah" data-drah tabindex="0" aria-label={nadpis}>
       {podniky.map((p) => <Karta p={p} />)}
     </ul>
-  </div>
-  <div class="wrap">
-    <div class="slider__prubeh" aria-hidden="true"><span data-prubeh></span></div>
   </div>
 </section>
 
@@ -46,14 +43,10 @@ const { podniky, eyebrow, nadpis, odkaz, tmavy = false } = Astro.props;
   document.querySelectorAll<HTMLElement>('[data-slider]').forEach((root) => {
     const drah = root.querySelector<HTMLElement>('[data-drah]')!;
     const [zpet, dal] = root.querySelectorAll<HTMLButtonElement>('[data-krok]');
-    const prubeh = root.querySelector<HTMLElement>('[data-prubeh]')!;
     const obnov = () => {
       const max = drah.scrollWidth - drah.clientWidth;
       zpet.disabled = drah.scrollLeft <= 4;
       dal.disabled = drah.scrollLeft >= max - 4;
-      const podil = drah.clientWidth / drah.scrollWidth;
-      prubeh.style.width = `${Math.min(100, podil * 100)}%`;
-      prubeh.style.transform = `translateX(${max > 0 ? (drah.scrollLeft / max) * (1 / podil - 1) * 100 : 0}%)`;
     };
     root.querySelectorAll<HTMLButtonElement>('[data-krok]').forEach((b) =>
       b.addEventListener('click', () => {
@@ -132,21 +125,19 @@ const { podniky, eyebrow, nadpis, odkaz, tmavy = false } = Astro.props;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-  /* Dráha začíná zarovnaná s obsahem stránky, ale doprava přetéká až k okraji okna */
-  .slider__okno {
-    --odsazeni: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter)));
-  }
+  /* 4 karty vedle sebe v šířce obsahu, další se odsouvají (nic nepřetéká ven ze sekce) */
   .slider__drah {
+    --mezera: clamp(0.9rem, 2vw, 1.5rem);
     list-style: none;
-    margin: 0;
-    padding: 0.5rem var(--odsazeni) 1rem;
+    margin: -0.5rem -0.5rem 0;
+    padding: 0.5rem 0.5rem 1.25rem;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: clamp(15rem, 23vw, 18.5rem);
-    column-gap: clamp(0.9rem, 2vw, 1.5rem);
+    grid-auto-columns: calc((100% - 3 * var(--mezera)) / 4);
+    column-gap: var(--mezera);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding-inline: var(--odsazeni);
+    scroll-padding-inline: 0.5rem;
     scrollbar-width: none;
     overscroll-behavior-x: contain;
   }
@@ -161,26 +152,21 @@ const { podniky, eyebrow, nadpis, odkaz, tmavy = false } = Astro.props;
   }
   .slider__drah :global(.karta__foto) {
     aspect-ratio: 4 / 5;
-    box-shadow: 0 14px 30px rgb(83 42 25 / 0.12);
+    box-shadow: 0 10px 22px rgb(83 42 25 / 0.1);
   }
-  .slider__prubeh {
-    height: 3px;
-    margin-top: 1.25rem;
-    border-radius: 3px;
-    background: var(--line);
-    overflow: hidden;
+  @media (max-width: 1000px) {
+    .slider__drah {
+      grid-auto-columns: calc((100% - 2 * var(--mezera)) / 3);
+    }
   }
-  .slider__prubeh span {
-    display: block;
-    height: 100%;
-    width: 30%;
-    border-radius: 3px;
-    background: var(--accent);
-    transition: transform 0.1s linear;
+  @media (max-width: 760px) {
+    .slider__drah {
+      grid-auto-columns: calc((100% - var(--mezera)) / 2);
+    }
   }
   @media (max-width: 640px) {
     .slider__drah {
-      grid-auto-columns: 72%;
+      grid-auto-columns: 78%;
     }
     .slider__sip {
       display: none;
