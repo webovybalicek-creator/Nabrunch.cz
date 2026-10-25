@@ -7,15 +7,22 @@ jobs:
   diag:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
     steps:
+      - name: Obsah složky na FTP
+        continue-on-error: true
+        run: |
+          rc=0; out=$(curl -sS --ssl-reqd --insecure --disable-epsv --user "$FTP_USERNAME:$FTP_PASSWORD" "ftp://$FTP_SERVER/" 2>&1) || rc=$?
+          echo "::notice title=Výpis FTP (rc=$rc)::$(printf '%s' "$out" | tr '\n' '|' | cut -c1-900)"
       - name: Odpověď serveru
         run: |
-          for u in https://new.nabrunch.cz/ http://new.nabrunch.cz/ https://new.nabrunch.cz/web/ https://new.nabrunch.cz/index.html; do
+          for u in "https://new.nabrunch.cz/" "https://new.nabrunch.cz/?nocache=$RANDOM" "https://new.nabrunch.cz/index.html" "https://new.nabrunch.cz/index.php"; do
             rc=0
-            info=$(curl -sS -L --max-time 20 -o body.html -w 'http=%{http_code} final=%{url_effective} ip=%{remote_ip} ssl_verify=%{ssl_verify_result}' "$u" 2>&1) || rc=$?
+            info=$(curl -sS --max-time 20 -D hdr.txt -o body.html -w 'http=%{http_code}' "$u" 2>&1) || rc=$?
             title=$(grep -o '<title>[^<]*' body.html 2>/dev/null | head -1 | sed 's/<title>//')
-            echo "::notice title=$u (rc=$rc)::$info | title: $title"
+            h=$(grep -iE '^(x-cache|age|cache-control|server|x-varnish|via|last-modified|content-length):' hdr.txt | tr -d '\r' | tr '\n' ' ')
+            echo "::notice title=$u (rc=$rc)::$info | $title | $h"
           done
-          echo "::notice title=DNS::$(dig +short new.nabrunch.cz A) / $(dig +short new.nabrunch.cz AAAA)"
-          rc=0; out=$(curl -sS -vI --max-time 15 https://new.nabrunch.cz/ 2>&1) || rc=$?
-          echo "::notice title=Certifikát (rc=$rc)::$(printf '%s\n' "$out" | grep -E 'subject:|issuer:|expire|SSL certificate' | tr '\n' '|')"
