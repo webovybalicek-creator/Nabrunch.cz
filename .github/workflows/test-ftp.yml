@@ -34,6 +34,10 @@ jobs:
           curl -sS --fail --ssl-reqd --insecure --retry 3 \
             --user "$FTP_USERNAME:$FTP_PASSWORD" \
             -T upload.html "ftp://$FTP_SERVER/${FTP_DIR%/}/index.html"
+          # Pro jistotu i do podsložky web/ (výchozí kořen služby na Active24)
+          curl -sS --fail --ssl-reqd --insecure --retry 3 --ftp-create-dirs \
+            --user "$FTP_USERNAME:$FTP_PASSWORD" \
+            -T upload.html "ftp://$FTP_SERVER/${FTP_DIR%/}/web/index.html"
           echo "::notice::Nahráno do ${FTP_DIR%/}/index.html → https://new.nabrunch.cz/"
 
       - name: Ověření z webu
