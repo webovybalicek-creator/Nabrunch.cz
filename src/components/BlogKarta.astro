@@ -1,6 +1,6 @@
 ---
 import Foto from './Foto.astro';
-import { clanekUrl, perex, kategorie, type Clanek } from '../lib/blog';
+import { clanekUrl, perex, kategorie, nazev, type Clanek } from '../lib/blog';
 
 interface Props {
   c: Clanek;
@@ -14,7 +14,7 @@ const { c } = Astro.props;
       {c.data.image && <Foto src={c.data.image} alt={c.data.title} />}
     </div>
     <span class="bk__kat">{kategorie(c)}</span>
-    <h3>{c.data.title}</h3>
+    <h3>{nazev(c)}</h3>
     <p>{perex(c, 140)}</p>
   </a>
 </li>

@@ -1,0 +1,6 @@
+---
+import KategorieStranka from '../../components/stranky/KategorieStranka.astro';
+import { doporucene } from '../../lib/data';
+---
+
+<KategorieStranka nadpis="Doporučené podniky" popis="Naše srdcovky – místa na snídani a brunch, kam se sami nejraději vracíme." podniky={doporucene()} />

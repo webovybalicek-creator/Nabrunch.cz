@@ -1,0 +1,2984 @@
+{
+ "sitemapy": [
+  "https://nabrunch.cz/wp-sitemap.xml",
+  "https://nabrunch.cz/kategorie-sitemap1.xml",
+  "https://nabrunch.cz/lokalita-sitemap1.xml",
+  "https://nabrunch.cz/post_tag-sitemap1.xml",
+  "https://nabrunch.cz/category-sitemap1.xml",
+  "https://nabrunch.cz/podniky-sitemap1.xml",
+  "https://nabrunch.cz/page-sitemap1.xml",
+  "https://nabrunch.cz/post-sitemap1.xml",
+  "https://nabrunch.cz/sitemap.xml",
+  "https://nabrunch.cz/sitemaps.xml"
+ ],
+ "stranky": {
+  "https://nabrunch.cz/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/",
+   "title": "Nabrunch.cz | Průvodce nejlepšími snídaňovými a brunchovými místy v Česku.",
+   "h1": [
+    "Víme, kam naBrunch!"
+   ],
+   "description": "Věříme, že snídaně a brunche nejsou jen o jídle, ale o atmosféře, zážitku a chvíli klidu, kterou si člověk zaslouží. Proto pro vás vybíráme ty nejlepší podniky po celé České republice – od skrytých kaváren v uličkách Prahy až po rodinné pekárny na jižní Moravě.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/",
+   "og_title": "Nabrunch.cz | Průvodce nejlepšími snídaňovými a brunchovými místy v Česku.",
+   "og_description": "Věříme, že snídaně a brunche nejsou jen o jídle, ale o atmosféře, zážitku a chvíli klidu, kterou si člověk zaslouží. Proto pro vás vybíráme ty nejlepší podniky po celé České republice – od skrytých kaváren v uličkách Prahy až po rodinné pekárny na jižní Moravě.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-1.jpg",
+   "jsonld": [
+    "WebSite"
+   ]
+  },
+  "https://nabrunch.cz/8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-☕🥐/": {
+   "chyba": "'ascii' codec can't encode characters in position 73-74: ordinal not in range(128)"
+  },
+  "https://nabrunch.cz/blog/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/blog/",
+   "title": "Blog – Nabrunch.cz",
+   "h1": [
+    "Blog – Nabrunch.cz"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/blog/",
+   "og_title": null,
+   "og_description": null,
+   "og_image": null,
+   "jsonld": [
+    "WebSite"
+   ]
+  },
+  "https://nabrunch.cz/brunch-vs-snidane-tady-je-rozdil/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/brunch-vs-snidane-tady-je-rozdil/",
+   "title": "Snídaně nebo brunch? Teď v tom budeš mít jasno | Nabrunch.cz",
+   "h1": [
+    "Snídaně nebo brunch? Teď v tom budeš mít jasno"
+   ],
+   "description": "Snídaně je základ dne. Brunch? To je malý rituál. Pozdní, pohodový, chutný a často i trochu rozmazlující. Ale kde přesně leží rozdíl?",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/brunch-vs-snidane-tady-je-rozdil/",
+   "og_title": "Snídaně nebo brunch? Teď v tom budeš mít jasno | Nabrunch.cz",
+   "og_description": "Snídaně je základ dne. Brunch? To je malý rituál. Pozdní, pohodový, chutný a často i trochu rozmazlující. Ale kde přesně leží rozdíl?",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/Navrh-bez-nazvu-2025-03-31T092025.881.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/casto-kladene-dotazy/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/casto-kladene-dotazy/",
+   "title": "Často kladené dotazy | Nabrunch.cz",
+   "h1": [
+    "Často kladené dotazy"
+   ],
+   "description": "🥐 Jak funguje naBrunch.cz? Projekt naBrunch.cz je průvodce těmi nejlepšími místy na snídani a brunche v Česku. Pomocí filtrů si můžeš vybrat podnik podle města, typu kuchyně nebo pohodlí – a objevit místa, kam se budeš chtít vracet. 📍 Musím si vytvořit účet, abych mohla/mohl procházet podniky? Ne, procházet a…",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/casto-kladene-dotazy/",
+   "og_title": "Často kladené dotazy | Nabrunch.cz",
+   "og_description": "🥐 Jak funguje naBrunch.cz? Projekt naBrunch.cz je průvodce těmi nejlepšími místy na snídani a brunche v Česku. Pomocí filtrů si můžeš vybrat podnik podle města, typu kuchyně nebo pohodlí – a objevit místa, kam se budeš chtít vracet. 📍 Musím si vytvořit účet, abych mohla/mohl procházet podniky? Ne, procházet a…",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-8.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-chai-latte/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-chai-latte/",
+   "title": "Co je chai latté? - naBrunch.cz",
+   "h1": [
+    "Co je chai latté?"
+   ],
+   "description": "Co je chai latté a proč patří ke snídani i brunchi? - naBrunch.c",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-chai-latte/",
+   "og_title": "Co je chai latté? - naBrunch.cz",
+   "og_description": "Co je chai latté a proč patří ke snídani i brunchi? - naBrunch.c",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/chailatte_nabrunch.cz_.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-espresso-tonic-a-proc-je-tak-popularni/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-espresso-tonic-a-proc-je-tak-popularni/",
+   "title": "Co je espresso tonic a proč je tak populární? - naBrunch.cz",
+   "h1": [
+    "Co je espresso tonic a proč je tak populární?"
+   ],
+   "description": "Co je espresso tonic a proč je tak populární? Jak chutná espresso tonic? Jak si doma espresso tonic připravit? Je vhodný i na brunch? - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-espresso-tonic-a-proc-je-tak-popularni/",
+   "og_title": "Co je espresso tonic a proč je tak populární? - naBrunch.cz",
+   "og_description": "Co je espresso tonic a proč je tak populární? Jak chutná espresso tonic? Jak si doma espresso tonic připravit? Je vhodný i na brunch? - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/ChatGPT-Image-4.-2.-2026-20_49_37.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-gaultmillau/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-gaultmillau/",
+   "title": "Co je Gault&Millau? | Nabrunch.cz",
+   "h1": [
+    "Co je Gault&Millau?"
+   ],
+   "description": "Víte, co znamenají čepice Gault&Millau a proč je restaurace tolik chtějí získat? To se dozvíte v našem článku.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-gaultmillau/",
+   "og_title": "Co je Gault&Millau? | Nabrunch.cz",
+   "og_description": "Víte, co znamenají čepice Gault&Millau a proč je restaurace tolik chtějí získat? To se dozvíte v našem článku.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/06/bea605b8-b609-4711-9e55-48db9b434584.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-kombucha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-kombucha/",
+   "title": "Co je to kombucha a na co je dobrá? - naBrunch.cz",
+   "h1": [
+    "Co je kombucha?"
+   ],
+   "description": "Co je to kombucha a na co je dobrá? Jak kombucha vzniká a jak chutná? Proč je populární? - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-kombucha/",
+   "og_title": "Co je to kombucha a na co je dobrá? - naBrunch.cz",
+   "og_description": "Co je to kombucha a na co je dobrá? Jak kombucha vzniká a jak chutná? Proč je populární? - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/ChatGPT-Image-10.-2.-2026-11_51_03.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-raw-strava-jake-ma-prinosy-a-jak-ji-zaclenit-do-sveho-jidelnicku/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-raw-strava-jake-ma-prinosy-a-jak-ji-zaclenit-do-sveho-jidelnicku/",
+   "title": "Co je raw strava: Jaké má přínosy a jak ji začlenit do svého jídelníčku? | Nabrunch.cz",
+   "h1": [
+    "Co je raw strava: Jaké má přínosy a jak ji začlenit do svého jídelníčku?"
+   ],
+   "description": "Raw strava se vyznačuje vysokým obsahem živin, ale také vyvolává otázky ohledně její výživové hodnoty a možných rizik.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-raw-strava-jake-ma-prinosy-a-jak-ji-zaclenit-do-sveho-jidelnicku/",
+   "og_title": "Co je raw strava: Jaké má přínosy a jak ji začlenit do svého jídelníčku? | Nabrunch.cz",
+   "og_description": "Raw strava se vyznačuje vysokým obsahem živin, ale také vyvolává otázky ohledně její výživové hodnoty a možných rizik.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/Navrh-bez-nazvu-2025-05-03T184118.396.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-sourdough/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-sourdough/",
+   "title": "Co je sourdough a proč je tak oblíbený? - naBrunch.cz",
+   "h1": [
+    "Co je sourdough?"
+   ],
+   "description": "Co je sourdough (kváskový chleba) a proč je tak oblíbený? Jak se sourdough vyrábí? Je sourdough zdravější než normální chleba? - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-sourdough/",
+   "og_title": "Co je sourdough a proč je tak oblíbený? - naBrunch.cz",
+   "og_description": "Co je sourdough (kváskový chleba) a proč je tak oblíbený? Jak se sourdough vyrábí? Je sourdough zdravější než normální chleba? - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/ChatGPT-Image-4.-2.-2026-20_42_06.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-to-brunch/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-to-brunch/",
+   "title": "Co je to brunch? Vysvětlíme a doporučíme. – naBrunch.cz",
+   "h1": [
+    "Co je to brunch?"
+   ],
+   "description": "Co je to brunch? Vše, co potřebuješ vědět o oblíbeném spojení snídaně a obědu.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-to-brunch/",
+   "og_title": "Co je to brunch? Vysvětlíme a doporučíme. – naBrunch.cz",
+   "og_description": "Co je to brunch? Vše, co potřebuješ vědět o oblíbeném spojení snídaně a obědu.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/ChatGPT-Image-11.-1.-2026-20_27_29.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-to-golden-milk/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-to-golden-milk/",
+   "title": "Co je to golden milk (kurkumové latté) - naBrunch.cz",
+   "h1": [
+    "Co je to golden milk?"
+   ],
+   "description": "Co je to golden milk (kurkumové latté) a proč si ho dát ke snídani nebo brunchi? - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-to-golden-milk/",
+   "og_title": "Co je to golden milk (kurkumové latté) - naBrunch.cz",
+   "og_description": "Co je to golden milk (kurkumové latté) a proč si ho dát ke snídani nebo brunchi? - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/goldenmilk_nabrunch.cz_.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/",
+   "title": "Co je vejce Benedikt a kde si dát to nejlepší? | Nabrunch.cz",
+   "h1": [
+    "Co je vejce Benedikt a kde si dát to nejlepší?"
+   ],
+   "description": "Pojďme se společně podívat, co vlastně vejce Benedikt jsou, odkud pocházejí a jak si je můžete připravit i doma.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/",
+   "og_title": "Co je vejce Benedikt a kde si dát to nejlepší? | Nabrunch.cz",
+   "og_description": "Pojďme se společně podívat, co vlastně vejce Benedikt jsou, odkud pocházejí a jak si je můžete připravit i doma.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/Navrh-bez-nazvu-2025-04-28T111956.942.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-jsou-fermentovane-potraviny-na-co-jsou-dobre-a-kde-je-najdeme/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-jsou-fermentovane-potraviny-na-co-jsou-dobre-a-kde-je-najdeme/",
+   "title": "Co jsou fermentované potraviny? - naBrunch.cz",
+   "h1": [
+    "Co jsou fermentované potraviny, na co jsou dobré a kde je najdeme?"
+   ],
+   "description": "Objevte, co jsou fermentované potraviny a na co jsou dobré. Vyzkoušejte kimchi, kysané zelí, kefír a další fermentované potraviny.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-jsou-fermentovane-potraviny-na-co-jsou-dobre-a-kde-je-najdeme/",
+   "og_title": "Co jsou fermentované potraviny? - naBrunch.cz",
+   "og_description": "Objevte, co jsou fermentované potraviny a na co jsou dobré. Vyzkoušejte kimchi, kysané zelí, kefír a další fermentované potraviny.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/Navrh-bez-nazvu-2025-04-17T125423.017.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/co-to-je-samahan/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/co-to-je-samahan/",
+   "title": "Čaj Samahan: co to je, co obsahuje? - naBrunch.cz",
+   "h1": [
+    "Co to je Samahan?",
+    "Čaj Samahan: co to je, co obsahuje a k čemu je dobrý?"
+   ],
+   "description": "Čaj Samahan: co to je, co obsahuje a k čemu je dobrý? Jak se Samahan čaj připravuje? Proč se hodí ke snídani nebo brunchi? - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/co-to-je-samahan/",
+   "og_title": "Čaj Samahan: co to je, co obsahuje? - naBrunch.cz",
+   "og_description": "Čaj Samahan: co to je, co obsahuje a k čemu je dobrý? Jak se Samahan čaj připravuje? Proč se hodí ke snídani nebo brunchi? - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/samahan-caj.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/dubajska-cokolada-sladky-luxus-ktery-ovladl-svet/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/dubajska-cokolada-sladky-luxus-ktery-ovladl-svet/",
+   "title": "Dubajská čokoláda s pistáciemi a kataifi. - naBrunch.cz",
+   "h1": [
+    "Dubajská čokoláda: sladký luxus, který ovládl svět"
+   ],
+   "description": "Dubajská čokoláda s pistáciovým vnitřkem a vrstvami kataifi se stala jedním z největších sladkých trendů posledních měsíců. - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/dubajska-cokolada-sladky-luxus-ktery-ovladl-svet/",
+   "og_title": "Dubajská čokoláda s pistáciemi a kataifi. - naBrunch.cz",
+   "og_description": "Dubajská čokoláda s pistáciovým vnitřkem a vrstvami kataifi se stala jedním z největších sladkých trendů posledních měsíců. - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/ddee3039-119c-4ee0-9ca0-3f391f9e358d.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/hojicha-vs-matcha-ktery-caj-si-zamilujete-vic/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/hojicha-vs-matcha-ktery-caj-si-zamilujete-vic/",
+   "title": "Hojicha vs. Matcha: Který čaj si zamilujete víc? | Nabrunch.cz",
+   "h1": [
+    "Hojicha vs. Matcha: Který čaj si zamilujete víc?"
+   ],
+   "description": "Jaký je mezi nimi rozdíl a který z nich si zamilujete víc? Pojďme si je porovnat! Matcha vs. Hojicha",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/hojicha-vs-matcha-ktery-caj-si-zamilujete-vic/",
+   "og_title": "Hojicha vs. Matcha: Který čaj si zamilujete víc? | Nabrunch.cz",
+   "og_description": "Jaký je mezi nimi rozdíl a který z nich si zamilujete víc? Pojďme si je porovnat! Matcha vs. Hojicha",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/Navrh-bez-nazvu-2025-04-28T114353.545.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/jak-si-vybrat-idealni-misto-na-snidani-ci-brunche/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/jak-si-vybrat-idealni-misto-na-snidani-ci-brunche/",
+   "title": "Jak si vybrat ideální místo na snídani či brunch? - naBrunch.cz",
+   "h1": [
+    "Jak si vybrat ideální místo na snídani či brunch?"
+   ],
+   "description": "Jak si vybrat ideální místo na snídani nebo brunch? Poradíme, na co se zaměřit – lokalita, menu, atmosféra i služby. Najděte podnik přesně pro vás.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/jak-si-vybrat-idealni-misto-na-snidani-ci-brunche/",
+   "og_title": "Jak si vybrat ideální místo na snídani či brunch? - naBrunch.cz",
+   "og_description": "Jak si vybrat ideální místo na snídani nebo brunch? Poradíme, na co se zaměřit – lokalita, menu, atmosféra i služby. Najděte podnik přesně pro vás.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/06/Navrh-bez-nazvu.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/jaky-je-rozdil-mezi-vegetarianem-a-veganem-prehledne-zajimavosti-navic/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/jaky-je-rozdil-mezi-vegetarianem-a-veganem-prehledne-zajimavosti-navic/",
+   "title": "Jaký je rozdíl mezi vegetariánem a veganem? Přehledně + zajímavosti navíc | Nabrunch.cz",
+   "h1": [
+    "Jaký je rozdíl mezi vegetariánem a veganem? Přehledně + zajímavosti navíc"
+   ],
+   "description": "Při výběru snídaně nebo brunche dnes často narazíš na označení vegetariánské nebo veganské jídlo. Spousta lidí tyto pojmy zaměňuje, přitom mezi nimi existuje zásadní rozdíl.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/jaky-je-rozdil-mezi-vegetarianem-a-veganem-prehledne-zajimavosti-navic/",
+   "og_title": "Jaký je rozdíl mezi vegetariánem a veganem? Přehledně + zajímavosti navíc | Nabrunch.cz",
+   "og_description": "Při výběru snídaně nebo brunche dnes často narazíš na označení vegetariánské nebo veganské jídlo. Spousta lidí tyto pojmy zaměňuje, přitom mezi nimi existuje zásadní rozdíl.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/ee21f049-7f16-4576-8211-74708b6aa9d7.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-ci-brunch-na-praze-2/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-ci-brunch-na-praze-2/",
+   "title": "Kam na snídani či brunch na Praze 2? | Nabrunch.cz",
+   "h1": [
+    "Kam na snídani či brunch na Praze 2?",
+    "Kam na snídani nebo brunch na Praze 2:"
+   ],
+   "description": "Přemýšlíte, kam na skvělou snídani nebo pohodový brunch na Praze 2? Máme pro vás 5 výborných kaváren, které stojí za návštěvu.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-ci-brunch-na-praze-2/",
+   "og_title": "Kam na snídani či brunch na Praze 2? | Nabrunch.cz",
+   "og_description": "Přemýšlíte, kam na skvělou snídani nebo pohodový brunch na Praze 2? Máme pro vás 5 výborných kaváren, které stojí za návštěvu.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/07/brunch_1-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-ci-brunch-v-praze/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-ci-brunch-v-praze/",
+   "title": "Kam na snídani či brunch v Praze? | Nabrunch.cz",
+   "h1": [
+    "Kam na snídani či brunch v Praze?",
+    "Kam na snídani nebo brunch v Praze: 5 osvědčených tipů"
+   ],
+   "description": "Přemýšlíte, kam na skvělou snídani nebo pohodový brunch v Praze? Máme pro vás 5 super tipů.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-ci-brunch-v-praze/",
+   "og_title": "Kam na snídani či brunch v Praze? | Nabrunch.cz",
+   "og_description": "Přemýšlíte, kam na skvělou snídani nebo pohodový brunch v Praze? Máme pro vás 5 super tipů.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/brunchpraha.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-ci-brunch-v-ricanech-u-prahy/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-ci-brunch-v-ricanech-u-prahy/",
+   "title": "Kam na snídani či brunch v Říčanech u Prahy? - naBrunch.cz",
+   "h1": [
+    "Kam na snídani či brunch v Říčanech u Prahy?"
+   ],
+   "description": "Kam na snídani či brunch v Říčanech u Prahy? Vybrali jsme pro vás 3 top podniky na snídani a brunch v Říčanech, které patří mezi TOP i oblíbené tipy na víkend.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-ci-brunch-v-ricanech-u-prahy/",
+   "og_title": "Kam na snídani či brunch v Říčanech u Prahy? - naBrunch.cz",
+   "og_description": "Kam na snídani či brunch v Říčanech u Prahy? Vybrali jsme pro vás 3 top podniky na snídani a brunch v Říčanech, které patří mezi TOP i oblíbené tipy na víkend.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/49cc25e9-5d3a-4b8b-95ea-1de68dd92704.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-brne-2-cast/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-brne-2-cast/",
+   "title": "Kam na snídani nebo brunch v Brně: 3 super tipy - naBrunch.cz",
+   "h1": [
+    "Kam na snídani nebo brunch v Brně? 2. část"
+   ],
+   "description": "Přemýšlíte, kam na snídani nebo brunch v Brně?  Máme pro vás 3 úžasné kavárny, které stojí za návštěvu. - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-brne-2-cast/",
+   "og_title": "Kam na snídani nebo brunch v Brně: 3 super tipy - naBrunch.cz",
+   "og_description": "Přemýšlíte, kam na snídani nebo brunch v Brně?  Máme pro vás 3 úžasné kavárny, které stojí za návštěvu. - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-19-v-10.42.31.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-brne/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-brne/",
+   "title": "Kam na snídani nebo brunch v Brně? - naBrunch.cz",
+   "h1": [
+    "Kam na snídani nebo brunch v Brně?",
+    "Kam na snídani nebo brunch v Brně: 5 osvědčených tipů"
+   ],
+   "description": "Kam na snídani nebo brunch v Brně? 5 TOP osvědčených tipů! Snídaně a brunch v Brně.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-brne/",
+   "og_title": "Kam na snídani nebo brunch v Brně? - naBrunch.cz",
+   "og_description": "Kam na snídani nebo brunch v Brně? 5 TOP osvědčených tipů! Snídaně a brunch v Brně.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-olomouci/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-olomouci/",
+   "title": "Kam na snídani nebo brunch v Olomouci? - naBrunch.cz",
+   "h1": [
+    "Kam na snídani nebo brunch v Olomouci?"
+   ],
+   "description": "Hledáš inspiraci, kam na snídani nebo brunch v Olomouci? Máme pro tebe 5 tipů, kam v Olomouci na snídani či brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-olomouci/",
+   "og_title": "Kam na snídani nebo brunch v Olomouci? - naBrunch.cz",
+   "og_description": "Hledáš inspiraci, kam na snídani nebo brunch v Olomouci? Máme pro tebe 5 tipů, kam v Olomouci na snídani či brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-20.02.58.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-plzni/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-plzni/",
+   "title": "Kam na snídani nebo brunch v Plzni: 3 TOP tipy - naBrunch.cz",
+   "h1": [
+    "Kam na snídani nebo brunch v Plzni?",
+    "Kam na snídani nebo brunch v Plzni: 3 osvědčené tipy"
+   ],
+   "description": "Přemýšlíte, kam na snídani nebo brunch v Plzni? Máme pro vás TOP 3 kavárny, které stojí za návštěvu. - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-plzni/",
+   "og_title": "Kam na snídani nebo brunch v Plzni: 3 TOP tipy - naBrunch.cz",
+   "og_description": "Přemýšlíte, kam na snídani nebo brunch v Plzni? Máme pro vás TOP 3 kavárny, které stojí za návštěvu. - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-19-v-9.22.54-e1768812795787.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-praze-karlin/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-praze-karlin/",
+   "title": "Kam na snídani nebo brunch v Praze - Karlín? | Nabrunch.cz",
+   "h1": [
+    "Kam na snídani nebo brunch v Praze – Karlín?"
+   ],
+   "description": "Karlín dnes patří mezi nejlepší adresy na snídani, brunch i výběrovou kávu. Máme pro vás 5 tipů, kam zajít.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-nebo-brunch-v-praze-karlin/",
+   "og_title": "Kam na snídani nebo brunch v Praze - Karlín? | Nabrunch.cz",
+   "og_description": "Karlín dnes patří mezi nejlepší adresy na snídani, brunch i výběrovou kávu. Máme pro vás 5 tipů, kam zajít.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/06/725f5036-f593-440d-bfe1-c1a1f61e7322.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kam-na-snidani-v-hradci-kralove-s-detmi-mame-pro-vas-tip/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kam-na-snidani-v-hradci-kralove-s-detmi-mame-pro-vas-tip/",
+   "title": "Kam na snídani v Hradci Králové s dětmi? Máme pro vás tip! - naBrunch.cz",
+   "h1": [
+    "Kam na snídani v Hradci Králové s dětmi? Máme pro vás tip!"
+   ],
+   "description": "Pokud hledáte tip, kam vyrazit v Hradci Králové na snídani či brunch s dětmi i bez nich, TimePlay HK je místo, které stojí za to objevit.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kam-na-snidani-v-hradci-kralove-s-detmi-mame-pro-vas-tip/",
+   "og_title": "Kam na snídani v Hradci Králové s dětmi? Máme pro vás tip! - naBrunch.cz",
+   "og_description": "Pokud hledáte tip, kam vyrazit v Hradci Králové na snídani či brunch s dětmi i bez nich, TimePlay HK je místo, které stojí za to objevit.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/09/Snimek-obrazovky-2025-09-04-v-20.46.32.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kategorie/doporucene-podniky/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kategorie/doporucene-podniky/",
+   "title": "Doporučené podniky  | Nabrunch.cz",
+   "h1": [
+    "Doporučené podniky"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kategorie/doporucene-podniky/",
+   "og_title": "Doporučené podniky  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kategorie/nove-pridane/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kategorie/nove-pridane/",
+   "title": "Nově přidané  | Nabrunch.cz",
+   "h1": [
+    "Nově přidané"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kategorie/nove-pridane/",
+   "og_title": "Nově přidané  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/kontakt/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/kontakt/",
+   "title": "Kontakt | Nabrunch.cz",
+   "h1": [
+    "Kontakt"
+   ],
+   "description": "Kontaktujte nás Máte dotaz nebo zájem o spolupráci? Ozvěte se nám – rádi si přečteme každý e-mail. 📩 E-mail: karolina@nabrunch.cz📍 Pokud máte zájem o přidání podniku, podívejte se do sekce Přidat podnik. Spolupráce, nápady, připomínky i pozdravy vítáme s otevřenou náručí. ❤️",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/kontakt/",
+   "og_title": "Kontakt | Nabrunch.cz",
+   "og_description": "Kontaktujte nás Máte dotaz nebo zájem o spolupráci? Ozvěte se nám – rádi si přečteme každý e-mail. 📩 E-mail: karolina@nabrunch.cz📍 Pokud máte zájem o přidání podniku, podívejte se do sekce Přidat podnik. Spolupráce, nápady, připomínky i pozdravy vítáme s otevřenou náručí. ❤️",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-5.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/latte-vs-cappuccino-vs-flat-white-jaky-je-rozdil/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/latte-vs-cappuccino-vs-flat-white-jaky-je-rozdil/",
+   "title": "Latte vs cappuccino vs flat white: jaký je rozdíl? - naBrunch.cz",
+   "h1": [
+    "Latte vs cappuccino vs flat white: jaký je rozdíl?"
+   ],
+   "description": "Latte vs cappuccino vs flat white: jaký je rozdíl? Na první pohled vypadají podobně – espresso, mléko, pěna. Jenže rozdíl mezi nimi je větší, než se zdá. - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/latte-vs-cappuccino-vs-flat-white-jaky-je-rozdil/",
+   "og_title": "Latte vs cappuccino vs flat white: jaký je rozdíl? - naBrunch.cz",
+   "og_description": "Latte vs cappuccino vs flat white: jaký je rozdíl? Na první pohled vypadají podobně – espresso, mléko, pěna. Jenže rozdíl mezi nimi je větší, než se zdá. - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/cafe-latte-capuccino-espresso.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/beroun/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/beroun/",
+   "title": "Beroun  | Nabrunch.cz",
+   "h1": [
+    "Beroun"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/beroun/",
+   "og_title": "Beroun  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/boretice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/boretice/",
+   "title": "Bořetice  | Nabrunch.cz",
+   "h1": [
+    "Bořetice"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/boretice/",
+   "og_title": "Bořetice  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/brno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/brno/",
+   "title": "Brno  | Nabrunch.cz",
+   "h1": [
+    "Brno"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/brno/",
+   "og_title": "Brno  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/celakovice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/celakovice/",
+   "title": "Čelákovice  | Nabrunch.cz",
+   "h1": [
+    "Čelákovice"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/celakovice/",
+   "og_title": "Čelákovice  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/ceske-budejovice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/ceske-budejovice/",
+   "title": "České Budějovice  | Nabrunch.cz",
+   "h1": [
+    "České Budějovice"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/ceske-budejovice/",
+   "og_title": "České Budějovice  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/cesky-krumlov/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/cesky-krumlov/",
+   "title": "Český Krumlov  | Nabrunch.cz",
+   "h1": [
+    "Český Krumlov"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/cesky-krumlov/",
+   "og_title": "Český Krumlov  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/chomutov/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/chomutov/",
+   "title": "Chomutov  | Nabrunch.cz",
+   "h1": [
+    "Chomutov"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/chomutov/",
+   "og_title": "Chomutov  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/chrudim/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/chrudim/",
+   "title": "Chrudim  | Nabrunch.cz",
+   "h1": [
+    "Chrudim"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/chrudim/",
+   "og_title": "Chrudim  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/hradec-kralove/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/hradec-kralove/",
+   "title": "Hradec Králové  | Nabrunch.cz",
+   "h1": [
+    "Hradec Králové"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/hradec-kralove/",
+   "og_title": "Hradec Králové  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/jihlava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/jihlava/",
+   "title": "Jihlava  | Nabrunch.cz",
+   "h1": [
+    "Jihlava"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/jihlava/",
+   "og_title": "Jihlava  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/karlovy-vary/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/karlovy-vary/",
+   "title": "Karlovy Vary  | Nabrunch.cz",
+   "h1": [
+    "Karlovy Vary"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/karlovy-vary/",
+   "og_title": "Karlovy Vary  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/kladno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/kladno/",
+   "title": "Kladno  | Nabrunch.cz",
+   "h1": [
+    "Kladno"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/kladno/",
+   "og_title": "Kladno  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/klatovy/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/klatovy/",
+   "title": "Klatovy  | Nabrunch.cz",
+   "h1": [
+    "Klatovy"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/klatovy/",
+   "og_title": "Klatovy  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/klecany/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/klecany/",
+   "title": "Klecany  | Nabrunch.cz",
+   "h1": [
+    "Klecany"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/klecany/",
+   "og_title": "Klecany  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/liberec/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/liberec/",
+   "title": "Liberec  | Nabrunch.cz",
+   "h1": [
+    "Liberec"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/liberec/",
+   "og_title": "Liberec  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/libeznice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/libeznice/",
+   "title": "Líbeznice  | Nabrunch.cz",
+   "h1": [
+    "Líbeznice"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/libeznice/",
+   "og_title": "Líbeznice  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/litomerice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/litomerice/",
+   "title": "Litoměřice  | Nabrunch.cz",
+   "h1": [
+    "Litoměřice"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/litomerice/",
+   "og_title": "Litoměřice  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/litomysl/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/litomysl/",
+   "title": "Litomyšl  | Nabrunch.cz",
+   "h1": [
+    "Litomyšl"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/litomysl/",
+   "og_title": "Litomyšl  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/mikulov/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/mikulov/",
+   "title": "Mikulov  | Nabrunch.cz",
+   "h1": [
+    "Mikulov"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/mikulov/",
+   "og_title": "Mikulov  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/mlada-boleslav/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/mlada-boleslav/",
+   "title": "Mladá Boleslav  | Nabrunch.cz",
+   "h1": [
+    "Mladá Boleslav"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/mlada-boleslav/",
+   "og_title": "Mladá Boleslav  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/novy-bor/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/novy-bor/",
+   "title": "Nový Bor  | Nabrunch.cz",
+   "h1": [
+    "Nový Bor"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/novy-bor/",
+   "og_title": "Nový Bor  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/olomouc/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/olomouc/",
+   "title": "Olomouc  | Nabrunch.cz",
+   "h1": [
+    "Olomouc"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/olomouc/",
+   "og_title": "Olomouc  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/opava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/opava/",
+   "title": "Opava  | Nabrunch.cz",
+   "h1": [
+    "Opava"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/opava/",
+   "og_title": "Opava  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/ostrava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/ostrava/",
+   "title": "Ostrava  | Nabrunch.cz",
+   "h1": [
+    "Ostrava"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/ostrava/",
+   "og_title": "Ostrava  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/pardubice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/pardubice/",
+   "title": "Pardubice  | Nabrunch.cz",
+   "h1": [
+    "Pardubice"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/pardubice/",
+   "og_title": "Pardubice  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/pisek/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/pisek/",
+   "title": "Písek  | Nabrunch.cz",
+   "h1": [
+    "Písek"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/pisek/",
+   "og_title": "Písek  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/plzen/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/plzen/",
+   "title": "Plzeň  | Nabrunch.cz",
+   "h1": [
+    "Plzeň"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/plzen/",
+   "og_title": "Plzeň  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/podebrady/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/podebrady/",
+   "title": "Poděbrady  | Nabrunch.cz",
+   "h1": [
+    "Poděbrady"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/podebrady/",
+   "og_title": "Poděbrady  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha-1/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha-1/",
+   "title": "Praha 1  | Nabrunch.cz",
+   "h1": [
+    "Praha 1"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha-1/",
+   "og_title": "Praha 1  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha-10/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha-10/",
+   "title": "Praha 10  | Nabrunch.cz",
+   "h1": [
+    "Praha 10"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha-10/",
+   "og_title": "Praha 10  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha-2/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha-2/",
+   "title": "Praha 2  | Nabrunch.cz",
+   "h1": [
+    "Praha 2"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha-2/",
+   "og_title": "Praha 2  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha-3/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha-3/",
+   "title": "Praha 3  | Nabrunch.cz",
+   "h1": [
+    "Praha 3"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha-3/",
+   "og_title": "Praha 3  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha-4/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha-4/",
+   "title": "Praha 4  | Nabrunch.cz",
+   "h1": [
+    "Praha 4"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha-4/",
+   "og_title": "Praha 4  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha-5/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha-5/",
+   "title": "Praha 5  | Nabrunch.cz",
+   "h1": [
+    "Praha 5"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha-5/",
+   "og_title": "Praha 5  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha-7/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha-7/",
+   "title": "Praha 7  | Nabrunch.cz",
+   "h1": [
+    "Praha 7"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha-7/",
+   "og_title": "Praha 7  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha-8/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha-8/",
+   "title": "Praha 8  | Nabrunch.cz",
+   "h1": [
+    "Praha 8"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha-8/",
+   "og_title": "Praha 8  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/praha/",
+   "title": "Praha  | Nabrunch.cz",
+   "h1": [
+    "Praha"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/praha/",
+   "og_title": "Praha  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/pribram/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/pribram/",
+   "title": "Příbram  | Nabrunch.cz",
+   "h1": [
+    "Příbram"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/pribram/",
+   "og_title": "Příbram  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/pruhonice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/pruhonice/",
+   "title": "Průhonice  | Nabrunch.cz",
+   "h1": [
+    "Průhonice"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/pruhonice/",
+   "og_title": "Průhonice  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/ricany/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/ricany/",
+   "title": "Říčany  | Nabrunch.cz",
+   "h1": [
+    "Říčany"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/ricany/",
+   "og_title": "Říčany  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/sumperk/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/sumperk/",
+   "title": "Šumperk  | Nabrunch.cz",
+   "h1": [
+    "Šumperk"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/sumperk/",
+   "og_title": "Šumperk  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/tabor/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/tabor/",
+   "title": "Tábor  | Nabrunch.cz",
+   "h1": [
+    "Tábor"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/tabor/",
+   "og_title": "Tábor  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/usti-nad-labem/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/usti-nad-labem/",
+   "title": "Ústí nad Labem  | Nabrunch.cz",
+   "h1": [
+    "Ústí nad Labem"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/usti-nad-labem/",
+   "og_title": "Ústí nad Labem  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/velke-karlovice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/velke-karlovice/",
+   "title": "Velké Karlovice  | Nabrunch.cz",
+   "h1": [
+    "Velké Karlovice"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/velke-karlovice/",
+   "og_title": "Velké Karlovice  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/zlin/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/zlin/",
+   "title": "Zlín  | Nabrunch.cz",
+   "h1": [
+    "Zlín"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/zlin/",
+   "og_title": "Zlín  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/lokalita/znojmo/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/lokalita/znojmo/",
+   "title": "Znojmo  | Nabrunch.cz",
+   "h1": [
+    "Znojmo"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/lokalita/znojmo/",
+   "og_title": "Znojmo  | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/mama-shelter-brunch-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/mama-shelter-brunch-praha/",
+   "title": "Mama Shelter Brunch Praha | Nabrunch.cz",
+   "h1": [
+    "Mama Shelter Brunch Praha"
+   ],
+   "description": "Mama Shelter Praha patří dlouhodobě mezi nejživější gastro spoty v Praze – a jejich nedělní Mama Brunch je toho jasným důkazem.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/mama-shelter-brunch-praha/",
+   "og_title": "Mama Shelter Brunch Praha | Nabrunch.cz",
+   "og_description": "Mama Shelter Praha patří dlouhodobě mezi nejživější gastro spoty v Praze – a jejich nedělní Mama Brunch je toho jasným důkazem.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/mamashelter2.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/mapa/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/mapa/",
+   "title": "Mapa podniků | Nabrunch.cz",
+   "h1": [
+    "Mapa podniků"
+   ],
+   "description": "Co je nového Brunch tipy Více Více Více Více",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/mapa/",
+   "og_title": "Mapa podniků | Nabrunch.cz",
+   "og_description": "Co je nového Brunch tipy Více Více Více Více",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-2.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/matcha-chai-a-moderni-napoje-ktere-patri-na-brunch/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/matcha-chai-a-moderni-napoje-ktere-patri-na-brunch/",
+   "title": "Matcha, chai a moderní nápoje, které patří na brunch | Nabrunch.cz",
+   "h1": [
+    "Matcha, chai a moderní nápoje, které patří na brunch"
+   ],
+   "description": "Stále více kaváren dnes rozšiřuje nabídku o matchu, chai a alternativní nápoje k brunchi.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/matcha-chai-a-moderni-napoje-ktere-patri-na-brunch/",
+   "og_title": "Matcha, chai a moderní nápoje, které patří na brunch | Nabrunch.cz",
+   "og_description": "Stále více kaváren dnes rozšiřuje nabídku o matchu, chai a alternativní nápoje k brunchi.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-14-v-9.59.04.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/nejlepsi-brunche-na-praze-1/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/nejlepsi-brunche-na-praze-1/",
+   "title": "Brunche na Praze 1 - naBrunch.cz",
+   "h1": [
+    "Kam na snídani a brunch na Praze 1?"
+   ],
+   "description": "Tipy na nejlepší brunche v centru Prahy: Mistral Café, Chloe Café a Pauseteria. Snídaně, styl, výběrová káva i dětský koutek v jednom článku.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/nejlepsi-brunche-na-praze-1/",
+   "og_title": "Brunche na Praze 1 - naBrunch.cz",
+   "og_description": "Tipy na nejlepší brunche v centru Prahy: Mistral Café, Chloe Café a Pauseteria. Snídaně, styl, výběrová káva i dětský koutek v jednom článku.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/brunchpraha1.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/nejlepsi-matcha-v-praze/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/nejlepsi-matcha-v-praze/",
+   "title": "Nejlepší Matcha v Praze - naBrunch.cz",
+   "h1": [
+    "Nejlepší Matcha v Praze – 3 TOP Matcha kavárny"
+   ],
+   "description": "Nejlepší Matcha v Praze. Objevte nejlepší Matcha kavárny v Praze. Nejlepší Matcha  Latté, Matcha dezerty. Matcha Crew, Sensu Cafe, Atomic Matcha.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/nejlepsi-matcha-v-praze/",
+   "og_title": "Nejlepší Matcha v Praze - naBrunch.cz",
+   "og_description": "Nejlepší Matcha v Praze. Objevte nejlepší Matcha kavárny v Praze. Nejlepší Matcha  Latté, Matcha dezerty. Matcha Crew, Sensu Cafe, Atomic Matcha.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/Navrh-bez-nazvu-2025-04-17T114144.736.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/nejoblibenejsi-brunch-jidla/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/nejoblibenejsi-brunch-jidla/",
+   "title": "Nejoblíbenější brunch jídla | Nabrunch.cz",
+   "h1": [
+    "Nejoblíbenější brunch jídla"
+   ],
+   "description": "Pojďme se podívat na ty nejčastější brunchové klasiky, které si lidé objednávají nejraději.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/nejoblibenejsi-brunch-jidla/",
+   "og_title": "Nejoblíbenější brunch jídla | Nabrunch.cz",
+   "og_description": "Pojďme se podívat na ty nejčastější brunchové klasiky, které si lidé objednávají nejraději.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/image-upscaled.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/nezarazene/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/nezarazene/",
+   "title": "Nezařazené | Nabrunch.cz",
+   "h1": [
+    "Rubrika: Nezařazené"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/nezarazene/",
+   "og_title": "Nezařazené | Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/novy-matcha-spot-v-praze-jun-matcha-bar-vas-okouzli-nejen-matchou/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/novy-matcha-spot-v-praze-jun-matcha-bar-vas-okouzli-nejen-matchou/",
+   "title": "Nový Matcha spot v Praze: Jun Matcha Bar vás okouzlí nejen matchou | Nabrunch.cz",
+   "h1": [
+    "Nový Matcha spot v Praze: Jun Matcha Bar vás okouzlí nejen matchou"
+   ],
+   "description": "Jun Matcha Bar, nedávno otevřený podnik v srdci města, láká na moderní japonskou estetiku a menu, které potěší každého fanouška matchy.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/novy-matcha-spot-v-praze-jun-matcha-bar-vas-okouzli-nejen-matchou/",
+   "og_title": "Nový Matcha spot v Praze: Jun Matcha Bar vás okouzlí nejen matchou | Nabrunch.cz",
+   "og_description": "Jun Matcha Bar, nedávno otevřený podnik v srdci města, láká na moderní japonskou estetiku a menu, které potěší každého fanouška matchy.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/08/Snimek-obrazovky-2025-08-02-v-15.13.52.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/o-nas/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/o-nas/",
+   "title": "O nás | Nabrunch.cz",
+   "h1": [
+    "O nás"
+   ],
+   "description": "Projekt NaBrunch.cz vznikl z jednoduché myšlenky: milujeme brunche a chceme je sdílet s ostatními. Věříme, že snídaně a brunche nejsou jen o jídle, ale o atmosféře, zážitku a chvíli klidu, kterou si člověk zaslouží. Proto pro vás vybíráme ty nejlepší podniky po celé České republice – od skrytých kaváren v…",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/o-nas/",
+   "og_title": "O nás | Nabrunch.cz",
+   "og_description": "Projekt NaBrunch.cz vznikl z jednoduché myšlenky: milujeme brunche a chceme je sdílet s ostatními. Věříme, že snídaně a brunche nejsou jen o jídle, ale o atmosféře, zážitku a chvíli klidu, kterou si člověk zaslouží. Proto pro vás vybíráme ty nejlepší podniky po celé České republice – od skrytých kaváren v…",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-4.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/obchodni-podminky/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/obchodni-podminky/",
+   "title": "Obchodní podmínky | Nabrunch.cz",
+   "h1": [
+    "Obchodní podmínky"
+   ],
+   "description": "1.) Úvodní ustanovení Tyto obchodní podmínky upravují vztah mezi provozovatelem webu nabrunch.cz a Vámi jakožto uživateli tohoto webu. Používáním webu vyjadřujete souhlas s těmito podmínkami a zavazujete se je dodržovat. 2.) Provozovatel webu Provozovatelem webu je: tým naBrunch.czKontaktní e-mail: karolina@nabrunch.cz Web je v tuto chvíli provozován jako neziskový projekt bez…",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/obchodni-podminky/",
+   "og_title": "Obchodní podmínky | Nabrunch.cz",
+   "og_description": "1.) Úvodní ustanovení Tyto obchodní podmínky upravují vztah mezi provozovatelem webu nabrunch.cz a Vámi jakožto uživateli tohoto webu. Používáním webu vyjadřujete souhlas s těmito podmínkami a zavazujete se je dodržovat. 2.) Provozovatel webu Provozovatelem webu je: tým naBrunch.czKontaktní e-mail: karolina@nabrunch.cz Web je v tuto chvíli provozován jako neziskový projekt bez…",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-9.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/ochrana-osobnich-udaju/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/ochrana-osobnich-udaju/",
+   "title": "Zásady ochrany osobních údajů | Nabrunch.cz",
+   "h1": [
+    "Zásady ochrany osobních údajů"
+   ],
+   "description": "Vaše soukromí bereme vážně. V těchto zásadách naleznete přehled, jak na webu nabrunch.cz nakládáme s osobními údaji a k jakým účelům je využíváme. 1.) Kdo je správcem údajů? Správcem osobních údajů je provozovatel webu nabrunch.cz(kontaktní e-mail: karolina@nabrunch.cz) 2.) Jaké údaje shromažďujeme? Shromažďujeme pouze údaje, které nám dobrovolně poskytnete, zejména: e-mailová…",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/ochrana-osobnich-udaju/",
+   "og_title": "Zásady ochrany osobních údajů | Nabrunch.cz",
+   "og_description": "Vaše soukromí bereme vážně. V těchto zásadách naleznete přehled, jak na webu nabrunch.cz nakládáme s osobními údaji a k jakým účelům je využíváme. 1.) Kdo je správcem údajů? Správcem osobních údajů je provozovatel webu nabrunch.cz(kontaktní e-mail: karolina@nabrunch.cz) 2.) Jaké údaje shromažďujeme? Shromažďujeme pouze údaje, které nám dobrovolně poskytnete, zejména: e-mailová…",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-3.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podnik-byl-pridan/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podnik-byl-pridan/",
+   "title": "Podnik byl přidán. | Nabrunch.cz",
+   "h1": [
+    "Podnik byl přidán."
+   ],
+   "description": "Děkujeme za nahrání dat k podniku. Nyní projde manuální kontrolou a schválení, poté bude podnik zveřejněn.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podnik-byl-pridan/",
+   "og_title": "Podnik byl přidán. | Nabrunch.cz",
+   "og_description": "Děkujeme za nahrání dat k podniku. Nyní projde manuální kontrolou a schválení, poté bude podnik zveřejněn.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-5.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/",
+   "title": "Podniky – Nabrunch.cz",
+   "h1": [
+    "Podniky"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/",
+   "og_title": "Podniky – Nabrunch.cz",
+   "og_description": null,
+   "og_image": null,
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/a-cafe-ostrava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/a-cafe-ostrava/",
+   "title": "A Café Ostrava - naBrunch.cz",
+   "h1": [
+    "A Café Ostrava"
+   ],
+   "description": "A Café Ostrava - kavárna a bistro - chutné snídaně a brunche, výběrová káva, domácí dezerty v příjemném prostředí. Skvělé místo pro začátek dne!",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/a-cafe-ostrava/",
+   "og_title": "A Café Ostrava - naBrunch.cz",
+   "og_description": "A Café Ostrava - kavárna a bistro - chutné snídaně a brunche, výběrová káva, domácí dezerty v příjemném prostředí. Skvělé místo pro začátek dne!",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/468332331_18348641716130569_7194443432373572760_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/alalu-cafe-chomutov/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/alalu-cafe-chomutov/",
+   "title": "Alalu Café Chomutov - naBrunch.cz",
+   "h1": [
+    "Alalu Café Chomutov"
+   ],
+   "description": "Alalu Café Chomutov je stylová kavárna s kvalitní kávou, domácími dorty. Dejte si tu skvělé snídaně a víkendový brunche v útulné atmosféře.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/alalu-cafe-chomutov/",
+   "og_title": "Alalu Café Chomutov - naBrunch.cz",
+   "og_description": "Alalu Café Chomutov je stylová kavárna s kvalitní kávou, domácími dorty. Dejte si tu skvělé snídaně a víkendový brunche v útulné atmosféře.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/08/Snimek-obrazovky-2025-08-02-v-17.57.09.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/antoninova-kavarna-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/antoninova-kavarna-praha/",
+   "title": "Antonínova kavárna Praha - naBrunch.cz",
+   "h1": [
+    "Antonínova kavárna Praha"
+   ],
+   "description": "Antonínova kavárna Praha je klidná sousedská kavárna ve Vršovicích navazující na Antonínovo pekařství, ideální na snídani a brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/antoninova-kavarna-praha/",
+   "og_title": "Antonínova kavárna Praha - naBrunch.cz",
+   "og_description": "Antonínova kavárna Praha je klidná sousedská kavárna ve Vršovicích navazující na Antonínovo pekařství, ideální na snídani a brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-30-v-10.52.45.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/antoninovo-pekarstvi/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/antoninovo-pekarstvi/",
+   "title": "Antonínovo pekařství Praha - naBrunch.cz",
+   "h1": [
+    "Antonínovo pekařství Praha"
+   ],
+   "description": "Antonínovo pekařství. Ochutnejte čerstvé sladké i slané pečivo v Antonínovo pekařství na Jiřího z Poděbrad v Praze. Dejte si tam snídani.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/antoninovo-pekarstvi/",
+   "og_title": "Antonínovo pekařství Praha - naBrunch.cz",
+   "og_description": "Antonínovo pekařství. Ochutnejte čerstvé sladké i slané pečivo v Antonínovo pekařství na Jiřího z Poděbrad v Praze. Dejte si tam snídani.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/antoninovo-pekarstvi.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/az-na-pudu-pisek/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/az-na-pudu-pisek/",
+   "title": "Až na půdu Písek - naBrunch.cz",
+   "h1": [
+    "Až na půdu Písek"
+   ],
+   "description": "Kavárna Až na půdu Písek: útulná kavárna v Písku, ideální pro snídaně a brunch. Užijte si čerstvé pečivo, dezerty, domácí dorty a výběrovou kávu.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/az-na-pudu-pisek/",
+   "og_title": "Až na půdu Písek - naBrunch.cz",
+   "og_description": "Kavárna Až na půdu Písek: útulná kavárna v Písku, ideální pro snídaně a brunch. Užijte si čerstvé pečivo, dezerty, domácí dorty a výběrovou kávu.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/471206620_18460889440064136_2963540139086464057_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/babu-coffee-jihlava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/babu-coffee-jihlava/",
+   "title": "Babu Coffee Jihlava - naBrunch.cz",
+   "h1": [
+    "Babu coffee Jihlava"
+   ],
+   "description": "Babu Coffee Jihlava je stylová kavárna se snídaněmi, výběrovou kávou a domácími dezerty. Nabízí i dorty, sweet bary a sladké krabičky na míru.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/babu-coffee-jihlava/",
+   "og_title": "Babu Coffee Jihlava - naBrunch.cz",
+   "og_description": "Babu Coffee Jihlava je stylová kavárna se snídaněmi, výběrovou kávou a domácími dezerty. Nabízí i dorty, sweet bary a sladké krabičky na míru.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/03.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/balance-coffee-wine-znojmo/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/balance-coffee-wine-znojmo/",
+   "title": "Balance coffee & wine Znojmo - naBrunch.cz",
+   "h1": [
+    "BALANCE coffee & wine Znojmo"
+   ],
+   "description": "Balance coffee & wine Znojmo je snídaňová kavárna s vlastní praženou kávou, lokálními víny, snídaněmi, dětským koutkem a krásnou zahrádkou.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/balance-coffee-wine-znojmo/",
+   "og_title": "Balance coffee & wine Znojmo - naBrunch.cz",
+   "og_description": "Balance coffee & wine Znojmo je snídaňová kavárna s vlastní praženou kávou, lokálními víny, snídaněmi, dětským koutkem a krásnou zahrádkou.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/439146389_959126909549882_8744943463799431012_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bali-coffee-bar-karlovy-vary/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bali-coffee-bar-karlovy-vary/",
+   "title": "Bali coffee bar Karlovy Vary - naBrunch.cz",
+   "h1": [
+    "Bali Coffee bar Karlovy Vary"
+   ],
+   "description": "Bali Coffee bar Karlovy Vary je tropická kavárna v Karlových Varech s výběrovou kávou, domácími dezerty a skvělým posezením. Užij si Bali brunch!",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bali-coffee-bar-karlovy-vary/",
+   "og_title": "Bali coffee bar Karlovy Vary - naBrunch.cz",
+   "og_description": "Bali Coffee bar Karlovy Vary je tropická kavárna v Karlových Varech s výběrovou kávou, domácími dezerty a skvělým posezením. Užij si Bali brunch!",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/unnamed-8.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/barista-cafe-chrudim/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/barista-cafe-chrudim/",
+   "title": "Barista Café Chrudim - naBrunch.cz",
+   "h1": [
+    "Barista Café Chrudim"
+   ],
+   "description": "Barista Café Chrudim – výborná snídaně nebo brunch v Chrudimi. Skvělá káva, domácí dobroty a příjemná atmosféra v centru Chrudimi.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/barista-cafe-chrudim/",
+   "og_title": "Barista Café Chrudim - naBrunch.cz",
+   "og_description": "Barista Café Chrudim – výborná snídaně nebo brunch v Chrudimi. Skvělá káva, domácí dobroty a příjemná atmosféra v centru Chrudimi.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/479718059_1053126836833654_2811039050279643205_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bavard-cafe-brno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bavard-cafe-brno/",
+   "title": "Bavard cafe Brno - naBrunch.cz",
+   "h1": [
+    "Bavard Cafe Brno"
+   ],
+   "description": "Bavard cafe Brno nabízí skvělé snídaně a brunch v útulném prostoru s výborným jídlem, příjemnou atmosférou a přátelským zázemím.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bavard-cafe-brno/",
+   "og_title": "Bavard cafe Brno - naBrunch.cz",
+   "og_description": "Bavard cafe Brno nabízí skvělé snídaně a brunch v útulném prostoru s výborným jídlem, příjemnou atmosférou a přátelským zázemím.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/Snimek-obrazovky-2025-11-10-v-19.05.08.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bistretto-liberec/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bistretto-liberec/",
+   "title": "Bistretto Liberec - naBrunch.cz",
+   "h1": [
+    "Bistretto Liberec"
+   ],
+   "description": "Bistretto Liberec je stylová kavárna v Liberci s výběrovou kávou, domácími dezerty a chutnými brunchemi. Bistretto je top místo na snídaně a brunche.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bistretto-liberec/",
+   "og_title": "Bistretto Liberec - naBrunch.cz",
+   "og_description": "Bistretto Liberec je stylová kavárna v Liberci s výběrovou kávou, domácími dezerty a chutnými brunchemi. Bistretto je top místo na snídaně a brunche.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/bistretto1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bistro-b-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bistro-b-praha/",
+   "title": "Bistro B Praha - naBrunch.cz",
+   "h1": [
+    "Bistro B Praha"
+   ],
+   "description": "Bistro B Praha je moderní bistro a kavárna v Praze u výstupu z metra Budějovická nabízející poctivé snídaně, brunch, výběrovou kávu a lehká jídla.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bistro-b-praha/",
+   "og_title": "Bistro B Praha - naBrunch.cz",
+   "og_description": "Bistro B Praha je moderní bistro a kavárna v Praze u výstupu z metra Budějovická nabízející poctivé snídaně, brunch, výběrovou kávu a lehká jídla.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/520230500_122152936790636250_6752156336979718440_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bistro-cafe-laskava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bistro-cafe-laskava/",
+   "title": "Bistro Cafe Laskavá - naBrunch.cz",
+   "h1": [
+    "Bistro Cafe Laskavá"
+   ],
+   "description": "Bistro Café Laskavá v Praze: útulné bistro, kavárna, celodenní snídaně a brunche, domácí dezerty a výborná káva v příjemné atmosféře se zahrádkou",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bistro-cafe-laskava/",
+   "og_title": "Bistro Cafe Laskavá - naBrunch.cz",
+   "og_description": "Bistro Café Laskavá v Praze: útulné bistro, kavárna, celodenní snídaně a brunche, domácí dezerty a výborná káva v příjemné atmosféře se zahrádkou",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/475097597_18057699544951452_2078562216678727395_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bistro-central-olomouc/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bistro-central-olomouc/",
+   "title": "Bistro Central Olomouc - naBrunch.cz",
+   "h1": [
+    "Bistro Central Olomouc"
+   ],
+   "description": "Bistro Central Olomouc je stylové bistro zaměřené na poctivé snídaně a brunche, inspirované italskou kuchyní. Nabízí také obědy, víno a prosecco.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bistro-central-olomouc/",
+   "og_title": "Bistro Central Olomouc - naBrunch.cz",
+   "og_description": "Bistro Central Olomouc je stylové bistro zaměřené na poctivé snídaně a brunche, inspirované italskou kuchyní. Nabízí také obědy, víno a prosecco.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-02-092752.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bistro-jj-sumperk/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bistro-jj-sumperk/",
+   "title": "Bistro J&J Šumperk - naBrunch.cz",
+   "h1": [
+    "Bistro J&J Šumperk"
+   ],
+   "description": "Bistro J&J Šumperk – rodinné bistro s přátelskou atmosférou, kde si vychutnáte poctivé snídaně a brunche v srdci města.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bistro-jj-sumperk/",
+   "og_title": "Bistro J&J Šumperk - naBrunch.cz",
+   "og_description": "Bistro J&J Šumperk – rodinné bistro s přátelskou atmosférou, kde si vychutnáte poctivé snídaně a brunche v srdci města.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/06/468960625_18048719438291837_6872963436908077094_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bistro-statek-libeznice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bistro-statek-libeznice/",
+   "title": "Bistro Statek Líbeznice - naBrunch.cz",
+   "h1": [
+    "Bistro Statek Líbeznice"
+   ],
+   "description": "Pet-friendly kavárna Bistro Statek Líbeznice u Prahy s krásnou zahrádkou, ideální na snídaně a brunche, skvělé domácí dezerty a čerstvé limonády.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bistro-statek-libeznice/",
+   "og_title": "Bistro Statek Líbeznice - naBrunch.cz",
+   "og_description": "Pet-friendly kavárna Bistro Statek Líbeznice u Prahy s krásnou zahrádkou, ideální na snídaně a brunche, skvělé domácí dezerty a čerstvé limonády.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/480666802_649005464750233_2942614016013800532_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bistro-topinka-cesky-krumlov/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bistro-topinka-cesky-krumlov/",
+   "title": "Bistro Topinka Český Krumlov - naBrunch.cz",
+   "h1": [
+    "Bistro Topinka Český Krumlov"
+   ],
+   "description": "Bistro Topinka Český Krumlov nabízí top snídaně, brunche a výběrovou kávu. Příjemné posezení s výhledem na řeku a historické střechy Krumlova.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bistro-topinka-cesky-krumlov/",
+   "og_title": "Bistro Topinka Český Krumlov - naBrunch.cz",
+   "og_description": "Bistro Topinka Český Krumlov nabízí top snídaně, brunche a výběrovou kávu. Příjemné posezení s výhledem na řeku a historické střechy Krumlova.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/485743050_1195084339288904_2484800289842811780_n_upscaled-scaled.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/bistro-u-sykorky-beroun/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/bistro-u-sykorky-beroun/",
+   "title": "Bistro U Sýkorky Beroun - naBrunch.cz",
+   "h1": [
+    "Bistro U Sýkorky Beroun"
+   ],
+   "description": "Bistro U Sýkorky je útulné bistro v Berouně s důrazem na klidnou atmosféru, poctivou kuchyni a pohodové snídaně a brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/bistro-u-sykorky-beroun/",
+   "og_title": "Bistro U Sýkorky Beroun - naBrunch.cz",
+   "og_description": "Bistro U Sýkorky je útulné bistro v Berouně s důrazem na klidnou atmosféru, poctivou kuchyni a pohodové snídaně a brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-01-v-20.51.44.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/botaniqa-bistro-cafe-opava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/botaniqa-bistro-cafe-opava/",
+   "title": "Botaniqa Bistro & Café Opava - naBrunch.cz",
+   "h1": [
+    "Botaniqa Bistro & Café Opava"
+   ],
+   "description": "Botaniqa kavárna a bistro Opava nabízí skvělé snídaně a brunche s čerstvou výběrovou kávou, sezónními jídly a příjemným prostředím v Opavě.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/botaniqa-bistro-cafe-opava/",
+   "og_title": "Botaniqa Bistro & Café Opava - naBrunch.cz",
+   "og_description": "Botaniqa kavárna a bistro Opava nabízí skvělé snídaně a brunche s čerstvou výběrovou kávou, sezónními jídly a příjemným prostředím v Opavě.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/Botaniqa-01361-scaled-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/brunch-cafe-sen-tabor/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/brunch-cafe-sen-tabor/",
+   "title": "BRUNCH & CAFÉ Sen Tábor - naBrunch.cz",
+   "h1": [
+    "BRUNCH & CAFÉ Sen Tábor"
+   ],
+   "description": "BRUNCH & CAFÉ Sen Tábor je stylová kavárna v centru Tábora. Nabízí snídaně, brunche, výběrovou kávou a útulný interiér. Zkuste Brunch Café Sen Tábor.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/brunch-cafe-sen-tabor/",
+   "og_title": "BRUNCH & CAFÉ Sen Tábor - naBrunch.cz",
+   "og_description": "BRUNCH & CAFÉ Sen Tábor je stylová kavárna v centru Tábora. Nabízí snídaně, brunche, výběrovou kávou a útulný interiér. Zkuste Brunch Café Sen Tábor.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/DSC_9502-scaled-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/brunches-bistro-brno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/brunches-bistro-brno/",
+   "title": "Brunche's Bistro Brno - naBrunch.cz",
+   "h1": [
+    "Brunche’s Bistro Brno"
+   ],
+   "description": "Brunche's Bistro Brno – stylové brunch bistro v Brně, křupavé pečivo, výborné snídaně, kvalitní káva. Celodenní snídaně a brunch. Dog friendly.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/brunches-bistro-brno/",
+   "og_title": "Brunche's Bistro Brno - naBrunch.cz",
+   "og_description": "Brunche's Bistro Brno – stylové brunch bistro v Brně, křupavé pečivo, výborné snídaně, kvalitní káva. Celodenní snídaně a brunch. Dog friendly.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/Snimek-obrazovky-2025-11-02-v-22.13.27.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cacao-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cacao-praha/",
+   "title": "Cacao Prague - naBrunch.cz",
+   "h1": [
+    "Cacao Prague"
+   ],
+   "description": "Cacao Prague je stylová kavárna v centru Prahy nabízí snídaně a brunch s výhledem na centrum Prahy. Od croissantů po acai bowls, dezerty a kávu.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cacao-praha/",
+   "og_title": "Cacao Prague - naBrunch.cz",
+   "og_description": "Cacao Prague je stylová kavárna v centru Prahy nabízí snídaně a brunch s výhledem na centrum Prahy. Od croissantů po acai bowls, dezerty a kávu.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/Snimek-obrazovky-2025-05-18-v-19.21.01.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cafe-datel-ceske-budejovice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cafe-datel-ceske-budejovice/",
+   "title": "Café Datel České Budějovice - naBrunch.cz",
+   "h1": [
+    "Café Datel České Budějovice"
+   ],
+   "description": "Café Datel České Budějovice je oblíbená kavárna v centru Budějovic s výběrovou kávou, skvělými snídaněmi a příjemnou atmosférou. Top brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cafe-datel-ceske-budejovice/",
+   "og_title": "Café Datel České Budějovice - naBrunch.cz",
+   "og_description": "Café Datel České Budějovice je oblíbená kavárna v centru Budějovic s výběrovou kávou, skvělými snídaněmi a příjemnou atmosférou. Top brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/1f8a2b90-6bf9-46b2-a731-c0d3b7b7d19d-scaled.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cafe-la-fee-olomouc/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cafe-la-fee-olomouc/",
+   "title": "Café La Fée Olomouc - naBrunch.cz",
+   "h1": [
+    "Café La Fée Olomouc"
+   ],
+   "description": "Café La Fée Olomouc je útulná kavárna s francouzským nádechem, ideální na snídaně a brunch a kvalitní kávu. Pet friendly kavárna v Olomouci.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cafe-la-fee-olomouc/",
+   "og_title": "Café La Fée Olomouc - naBrunch.cz",
+   "og_description": "Café La Fée Olomouc je útulná kavárna s francouzským nádechem, ideální na snídaně a brunch a kvalitní kávu. Pet friendly kavárna v Olomouci.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-19.35.59.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cafe-letka-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cafe-letka-praha/",
+   "title": "Café Letka Praha - naBrunch.cz",
+   "h1": [
+    "Café Letka Praha"
+   ],
+   "description": "Café Letka Praha je oblíbená kavárna na Letné s přátelskou atmosférou, výběrovou kávou a pestrou nabídkou na snídaně a brunch. Víkendový brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cafe-letka-praha/",
+   "og_title": "Café Letka Praha - naBrunch.cz",
+   "og_description": "Café Letka Praha je oblíbená kavárna na Letné s přátelskou atmosférou, výběrovou kávou a pestrou nabídkou na snídaně a brunch. Víkendový brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-14-v-9.52.42.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cafe-momenta-brno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cafe-momenta-brno/",
+   "title": "Café Momenta Brno - naBrunch.cz",
+   "h1": [
+    "Café Momenta Brno"
+   ],
+   "description": "Café Momenta Brno - kavárna s kvalitní kávou, domácími dezerty a originálními sušenkami. Užijte si výjimečné momenty v Café Momenta.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cafe-momenta-brno/",
+   "og_title": "Café Momenta Brno - naBrunch.cz",
+   "og_description": "Café Momenta Brno - kavárna s kvalitní kávou, domácími dezerty a originálními sušenkami. Užijte si výjimečné momenty v Café Momenta.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/DSC1031-1-scaled.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cafe-new-one-olomouc/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cafe-new-one-olomouc/",
+   "title": "Cafe New One Olomouc - naBrunch.cz",
+   "h1": [
+    "Cafe New One Olomouc"
+   ],
+   "description": "Café New One Olomouc je stylová kavárna a bistro v centru Olomouce nabízející oblíbenou snídani a brunch, výběrovou kávu i sladké dezerty.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cafe-new-one-olomouc/",
+   "og_title": "Cafe New One Olomouc - naBrunch.cz",
+   "og_description": "Café New One Olomouc je stylová kavárna a bistro v centru Olomouce nabízející oblíbenou snídani a brunch, výběrovou kávu i sladké dezerty.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-19.18.15.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cafe-oliver-podebrady/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cafe-oliver-podebrady/",
+   "title": "Café Oliver Poděbrady - naBrunch.cz",
+   "h1": [
+    "Café Oliver Poděbrady"
+   ],
+   "description": "Café Oliver Poděbrady. Snídaně a brunche, domácí pečivo, káva z místní pražírny a pohodová atmosféra v centru lázeňského města Poděbrad.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cafe-oliver-podebrady/",
+   "og_title": "Café Oliver Poděbrady - naBrunch.cz",
+   "og_description": "Café Oliver Poděbrady. Snídaně a brunche, domácí pečivo, káva z místní pražírny a pohodová atmosféra v centru lázeňského města Poděbrad.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/pribeh-2.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cafe-placzek-brno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cafe-placzek-brno/",
+   "title": "Café Placzek Brno - naBrunch.cz",
+   "h1": [
+    "Café Placzek Brno"
+   ],
+   "description": "Café Placzek Brno je oblíbená kavárna v Brně s příjemnou atmosférou, výběrovou kávou, ideální místo kam na snídani a brunch v Brně.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cafe-placzek-brno/",
+   "og_title": "Café Placzek Brno - naBrunch.cz",
+   "og_description": "Café Placzek Brno je oblíbená kavárna v Brně s příjemnou atmosférou, výběrovou kávou, ideální místo kam na snídani a brunch v Brně.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-19-v-11.59.24.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cafefin-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cafefin-praha/",
+   "title": "CAFEFIN Praha - naBrunch.cz",
+   "h1": [
+    "CAFEFIN Praha"
+   ],
+   "description": "Cafefin Praha je oblíbená kavárna na Praze 3 ideální na snídani i brunch. Skvělá káva, originální jídla a pohodová atmosféra na Vinohradech.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cafefin-praha/",
+   "og_title": "CAFEFIN Praha - naBrunch.cz",
+   "og_description": "Cafefin Praha je oblíbená kavárna na Praze 3 ideální na snídani i brunch. Skvělá káva, originální jídla a pohodová atmosféra na Vinohradech.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-09-v-14.00.38.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/cavino-plzen/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/cavino-plzen/",
+   "title": "Cavino Plzeň - naBrunch.cz",
+   "h1": [
+    "Cavino Plzeň"
+   ],
+   "description": "Cavino Plzeň je stylová kavárna a bistro v centru Plzně nabízející oblíbené snídaně a brunch, sladké dezerty i výbornou kávu. Také tapas a víno.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/cavino-plzen/",
+   "og_title": "Cavino Plzeň - naBrunch.cz",
+   "og_description": "Cavino Plzeň je stylová kavárna a bistro v centru Plzně nabízející oblíbené snídaně a brunch, sladké dezerty i výbornou kávu. Také tapas a víno.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-19-v-9.22.41.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/charlies-cafe-praha-uhrineves/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/charlies-cafe-praha-uhrineves/",
+   "title": "Charlie's Cafe Praha Uhříněves - naBrunch.cz",
+   "h1": [
+    "Charlie’s Cafe Praha Uhříněves"
+   ],
+   "description": "Charlie's Cafe Praha Uhříněves je rodinná kavárna v Uhříněvsi, která nabízí super snídaně, brunche, lehké obědy, italské uzeniny a točenou Plzeň.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/charlies-cafe-praha-uhrineves/",
+   "og_title": "Charlie's Cafe Praha Uhříněves - naBrunch.cz",
+   "og_description": "Charlie's Cafe Praha Uhříněves je rodinná kavárna v Uhříněvsi, která nabízí super snídaně, brunche, lehké obědy, italské uzeniny a točenou Plzeň.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/474034325_122118989792610871_561532769792238302_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/chloe-cafe-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/chloe-cafe-praha/",
+   "title": "Chloé café Praha - naBrunch.cz",
+   "h1": [
+    "CHLOÉ café Praha"
+   ],
+   "description": "CHLOÉ café Praha je stylová růžová kavárna v centru Prahy s lívanci, dortíky, kávou, Matchou a dokonalým interiérem. Růžový brunch, který potěší.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/chloe-cafe-praha/",
+   "og_title": "Chloé café Praha - naBrunch.cz",
+   "og_description": "CHLOÉ café Praha je stylová růžová kavárna v centru Prahy s lívanci, dortíky, kávou, Matchou a dokonalým interiérem. Růžový brunch, který potěší.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/IMG_9858_upscaled-scaled.jpeg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/coffee-library-olomouc/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/coffee-library-olomouc/",
+   "title": "Coffee library Olomouc - naBrunch.cz",
+   "h1": [
+    "Coffee library Olomouc"
+   ],
+   "description": "Coffee library Olomouc je kavárna v centru Olomouce s výběrovou kávou, sladkým pečivem a vlastními brunch boxy. Super místo pro snídani i brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/coffee-library-olomouc/",
+   "og_title": "Coffee library Olomouc - naBrunch.cz",
+   "og_description": "Coffee library Olomouc je kavárna v centru Olomouce s výběrovou kávou, sladkým pečivem a vlastními brunch boxy. Super místo pro snídani i brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/20e0f276-6c86-47f3-bd41-0be0dd803423-scaled.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/coffee-trail-bar-brno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/coffee-trail-bar-brno/",
+   "title": "Coffee Trail Bar Brno - naBrunch.cz",
+   "h1": [
+    "Coffee Trail Bar Brno"
+   ],
+   "description": "Coffee Trail Bar Brno nabízí výběrovou kávu, skvělé snídaně i brunch, domácí dorty a pečivo z řemeslných pekáren v pohodové atmosféře.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/coffee-trail-bar-brno/",
+   "og_title": "Coffee Trail Bar Brno - naBrunch.cz",
+   "og_description": "Coffee Trail Bar Brno nabízí výběrovou kávu, skvělé snídaně i brunch, domácí dorty a pečivo z řemeslných pekáren v pohodové atmosféře.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/Snimek-obrazovky-2025-11-03-v-11.20.32.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/coffeeup-usti-nad-labem/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/coffeeup-usti-nad-labem/",
+   "title": "Coffeeup Ústí nad Labem - naBrunch.cz",
+   "h1": [
+    "Coffeeup Ústí nad Labem"
+   ],
+   "description": "Coffeeup Ústí nad Labem: moderní kavárna, výběrová káva, čerstvé snídaně a brunch menu. Užijte si kvalitní kávu a domácí dezerty v milém prostředí.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/coffeeup-usti-nad-labem/",
+   "og_title": "Coffeeup Ústí nad Labem - naBrunch.cz",
+   "og_description": "Coffeeup Ústí nad Labem: moderní kavárna, výběrová káva, čerstvé snídaně a brunch menu. Užijte si kvalitní kávu a domácí dezerty v milém prostředí.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/105A0BA2-ACDE-457C-9134-39963F025A30-2048x2048-1.jpeg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/dim-sum-spot-pub-andel/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/dim-sum-spot-pub-andel/",
+   "title": "Dim Sum Spot & Pub Anděl – Nabrunch.cz",
+   "h1": [
+    "Dim Sum Spot & Pub Anděl"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/dim-sum-spot-pub-andel/",
+   "og_title": "Dim Sum Spot & Pub Anděl – Nabrunch.cz",
+   "og_description": null,
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-28-v-19.12.37.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/dusicka-velke-karlovice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/dusicka-velke-karlovice/",
+   "title": "Dušička Velké Karlovice - naBrunch.cz",
+   "h1": [
+    "Dušička Velké Karlovice"
+   ],
+   "description": "Dušička je kavárna ve Velkých Karlovicích s poctivou kávou, domácím chlebem a tradičními frgály. TOP místo pro snídani, brunch i rodinné posezení.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/dusicka-velke-karlovice/",
+   "og_title": "Dušička Velké Karlovice - naBrunch.cz",
+   "og_description": "Dušička je kavárna ve Velkých Karlovicích s poctivou kávou, domácím chlebem a tradičními frgály. TOP místo pro snídani, brunch i rodinné posezení.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/03/Snimek-obrazovky-2026-03-04-v-7.24.39.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/dvorek-boretice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/dvorek-boretice/",
+   "title": "Dvorek Bořetice - naBrunch.cz",
+   "h1": [
+    "Dvorek Bořetice"
+   ],
+   "description": "V Dvorek Bořetice si užijete výběrovou kávu, skvělé snídaně a brunche s domácími dezerty, kvalitním vínem a delikatesami od místních producentů.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/dvorek-boretice/",
+   "og_title": "Dvorek Bořetice - naBrunch.cz",
+   "og_description": "V Dvorek Bořetice si užijete výběrovou kávu, skvělé snídaně a brunche s domácími dezerty, kvalitním vínem a delikatesami od místních producentů.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/465449475_1107345234729380_1434729868022647911_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/dvorek-litomysl/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/dvorek-litomysl/",
+   "title": "Dvorek Litomyšl - naBrunch.cz",
+   "h1": [
+    "Dvorek Litomyšl"
+   ],
+   "description": "V Dvorku Litomyšl si užijete skvělé snídaně a brunche, sladké i slané pokrmy, výběrovou kávu a venkovní posezení. Ideální pro víkendový brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/dvorek-litomysl/",
+   "og_title": "Dvorek Litomyšl - naBrunch.cz",
+   "og_description": "V Dvorku Litomyšl si užijete skvělé snídaně a brunche, sladké i slané pokrmy, výběrovou kávu a venkovní posezení. Ideální pro víkendový brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/486568431_18038574185618268_2375950942099152051_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/eggsit-cafe-hradec-kralove/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/eggsit-cafe-hradec-kralove/",
+   "title": "Eggsit Café Hradec Králové - naBrunch.cz",
+   "h1": [
+    "Eggsit café Hradec Králové"
+   ],
+   "description": "Eggsit Café Hradec Králové je stylové bistro zaměřené na moderní snídaně a brunch. Vajíčka na všechny způsoby, top atmosféra a jídla, co nadchnou.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/eggsit-cafe-hradec-kralove/",
+   "og_title": "Eggsit Café Hradec Králové - naBrunch.cz",
+   "og_description": "Eggsit Café Hradec Králové je stylové bistro zaměřené na moderní snídaně a brunch. Vajíčka na všechny způsoby, top atmosféra a jídla, co nadchnou.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/eggsit1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/enjoy-coffee-brunch-plzen/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/enjoy-coffee-brunch-plzen/",
+   "title": "Enjoy coffee & brunch Plzeň - naBrunch.cz",
+   "h1": [
+    "Enjoy coffee & brunch Plzeň"
+   ],
+   "description": "Enjoy coffee & brunch Plzeň je oblíbená kavárna a brunch místo v Plzni nabízející poctivé snídaně a brunch, kvalitní kávu, sladké i slané pokrmy.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/enjoy-coffee-brunch-plzen/",
+   "og_title": "Enjoy coffee & brunch Plzeň - naBrunch.cz",
+   "og_description": "Enjoy coffee & brunch Plzeň je oblíbená kavárna a brunch místo v Plzni nabízející poctivé snídaně a brunch, kvalitní kávu, sladké i slané pokrmy.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-19-v-8.48.10.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/epifany-patisserie-pardubice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/epifany-patisserie-pardubice/",
+   "title": "Epifany Patisserie Pardubice - naBrunch.cz",
+   "h1": [
+    "Epifany Patisserie Pardubice"
+   ],
+   "description": "Epifany Patisserie Pardubice je stylová kavárna plná vůně čerstvého pečiva. Nadýchané koblihy, domácí koláče a káva – ideální na snídani či brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/epifany-patisserie-pardubice/",
+   "og_title": "Epifany Patisserie Pardubice - naBrunch.cz",
+   "og_description": "Epifany Patisserie Pardubice je stylová kavárna plná vůně čerstvého pečiva. Nadýchané koblihy, domácí koláče a káva – ideální na snídani či brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/6cb9bdf5-ecab-44d7-ab5f-2603d93c4a17-scaled.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/eska-karlin/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/eska-karlin/",
+   "title": "Eska Karlín Praha - naBrunch.cz",
+   "h1": [
+    "Eska Karlín Praha"
+   ],
+   "description": "Eska Karlín Praha. Pekárna s kuchyní, kam můžete každý den přijít pro čerstvý chléb a farmářské dobroty, na dlouhou snídani, brunch i rychlý oběd.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/eska-karlin/",
+   "og_title": "Eska Karlín Praha - naBrunch.cz",
+   "og_description": "Eska Karlín Praha. Pekárna s kuchyní, kam můžete každý den přijít pro čerstvý chléb a farmářské dobroty, na dlouhou snídani, brunch i rychlý oběd.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/eskakarlin1.jpeg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/etapa-karlin-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/etapa-karlin-praha/",
+   "title": "Etapa Karlín Praha - naBrunch.cz",
+   "h1": [
+    "Etapa Karlín Praha"
+   ],
+   "description": "Etapa Karlín Praha nabízí sezónní zeleninová jídla, výběrovou kávu, celozrnný kváskový chleba a sladkosti z lokálních surovin. Top kvalita a čerstvost.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/etapa-karlin-praha/",
+   "og_title": "Etapa Karlín Praha - naBrunch.cz",
+   "og_description": "Etapa Karlín Praha nabízí sezónní zeleninová jídla, výběrovou kávu, celozrnný kváskový chleba a sladkosti z lokálních surovin. Top kvalita a čerstvost.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/2024_leto_mood_menu_etapa-8095-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/family-bistro-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/family-bistro-praha/",
+   "title": "Family Bistro Praha - naBrunch.cz",
+   "h1": [
+    "Family Bistro Praha"
+   ],
+   "description": "Family Bistro Praha je přátelské bistro v Praze 8 s důrazem na domácí kuchyni, kvalitní kávu a oblíbené snídaně a brunch. Ideální pro rodiny.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/family-bistro-praha/",
+   "og_title": "Family Bistro Praha - naBrunch.cz",
+   "og_description": "Family Bistro Praha je přátelské bistro v Praze 8 s důrazem na domácí kuchyni, kvalitní kávu a oblíbené snídaně a brunch. Ideální pro rodiny.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/LYlkIDt-bOpNJQn-UDqEGaG-e1768407075928.webp",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/flek-na-kafe-celakovice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/flek-na-kafe-celakovice/",
+   "title": "Flek na kafe Čelákovice - naBrunch.cz",
+   "h1": [
+    "Flek na kafe Čelákovice"
+   ],
+   "description": "Kavárna Flek na kafe v Čelákovicích s výběrovou kávou a domácími sladkými i slanými dobrotami. Přijďte si užít skvělou kávu v příjemné atmosféře.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/flek-na-kafe-celakovice/",
+   "og_title": "Flek na kafe Čelákovice - naBrunch.cz",
+   "og_description": "Kavárna Flek na kafe v Čelákovicích s výběrovou kávou a domácími sladkými i slanými dobrotami. Přijďte si užít skvělou kávu v příjemné atmosféře.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/470175178_555938327336091_8458044165473217717_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/gabi-cafe-ricany/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/gabi-cafe-ricany/",
+   "title": "Kavárna Gabi Café Říčany - naBrunch.cz",
+   "h1": [
+    "Gabi Café Říčany"
+   ],
+   "description": "Gabi Café Říčany je Pet-friendly kavárna s venkovním posezením, dokonalými brunchemi a domácími dezerty. Gabi Café je ideální místo na brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/gabi-cafe-ricany/",
+   "og_title": "Kavárna Gabi Café Říčany - naBrunch.cz",
+   "og_description": "Gabi Café Říčany je Pet-friendly kavárna s venkovním posezením, dokonalými brunchemi a domácími dezerty. Gabi Café je ideální místo na brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/364036835_774273414707635_570992385538298897_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/jun-matcha-bar-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/jun-matcha-bar-praha/",
+   "title": "Jun Matcha Bar Praha - naBrunch.cz",
+   "h1": [
+    "Jun Matcha Bar Praha"
+   ],
+   "description": "Jun Matcha Bar Praha je specializovaná kavárna na prémiovou matchu a kreativní matcha dezerty. Top Instagram friendly místo pro milovníky kvalitní matcha.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/jun-matcha-bar-praha/",
+   "og_title": "Jun Matcha Bar Praha - naBrunch.cz",
+   "og_description": "Jun Matcha Bar Praha je specializovaná kavárna na prémiovou matchu a kreativní matcha dezerty. Top Instagram friendly místo pro milovníky kvalitní matcha.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/08/Snimek-obrazovky-2025-08-02-v-15.15.16.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kafe-doma-litomerice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kafe-doma-litomerice/",
+   "title": "Kafe doma Litoměřice - naBrunch.cz",
+   "h1": [
+    "Kafe doma Litoměřice"
+   ],
+   "description": "Kafe doma Litoměřice. Domácí pohoda, spousta snídaňových variant a milé venkovní posezení. Kafe Doma je místo, kde se opravdu cítíš jako doma.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kafe-doma-litomerice/",
+   "og_title": "Kafe doma Litoměřice - naBrunch.cz",
+   "og_description": "Kafe doma Litoměřice. Domácí pohoda, spousta snídaňových variant a milé venkovní posezení. Kafe Doma je místo, kde se opravdu cítíš jako doma.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/IMG3_1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kafkoff-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kafkoff-praha/",
+   "title": "Kafkoff Praha - naBrunch.cz",
+   "h1": [
+    "Kafkoff Praha"
+   ],
+   "description": "Kafkoff Praha je rodinná kavárna s oblíbeným konceptem Brunch, Beats & Kids. Každou neděli je rodinný brunch, prosecco, DJ a program pro děti.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kafkoff-praha/",
+   "og_title": "Kafkoff Praha - naBrunch.cz",
+   "og_description": "Kafkoff Praha je rodinná kavárna s oblíbeným konceptem Brunch, Beats & Kids. Každou neděli je rodinný brunch, prosecco, DJ a program pro děti.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-20-v-10.57.48-e1771582900966.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kavarna-co-hleda-jmeno-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kavarna-co-hleda-jmeno-praha/",
+   "title": "Kavárna co hledá jméno Praha - naBrunch.cz",
+   "h1": [
+    "Kavárna co hledá jméno Praha"
+   ],
+   "description": "Kavárna co hledá jméno Praha je kavárna na Smíchově. Nabízí snídaně, brunch, výběrovou kávu, domácí dezerty a venkovní posezením. Top brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kavarna-co-hleda-jmeno-praha/",
+   "og_title": "Kavárna co hledá jméno Praha - naBrunch.cz",
+   "og_description": "Kavárna co hledá jméno Praha je kavárna na Smíchově. Nabízí snídaně, brunch, výběrovou kávu, domácí dezerty a venkovní posezením. Top brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/zet-8874-20210325-2-1.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kavarna-klicka-klecany/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kavarna-klicka-klecany/",
+   "title": "Kavárna Klícka Klecany - naBrunch.cz",
+   "h1": [
+    "Kavárna Klícka Klecany"
+   ],
+   "description": "Kavárna Klícka Klecany nabízí skvělý brunch: výběrová káva, domácí šneci, koláče a osvěžující domácí limonáda. Užijte si snídani na zahrádce.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kavarna-klicka-klecany/",
+   "og_title": "Kavárna Klícka Klecany - naBrunch.cz",
+   "og_description": "Kavárna Klícka Klecany nabízí skvělý brunch: výběrová káva, domácí šneci, koláče a osvěžující domácí limonáda. Užijte si snídani na zahrádce.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/474101495_1158682356257621_6931325232837321689_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kavarna-lasvit-cafe/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kavarna-lasvit-cafe/",
+   "title": "Kavárna Lasvit Café – Nabrunch.cz",
+   "h1": [
+    "Kavárna Lasvit Café"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kavarna-lasvit-cafe/",
+   "og_title": "Kavárna Lasvit Café – Nabrunch.cz",
+   "og_description": null,
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/06/lasvit-cafe-2-scaled-1.webp",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kavarna-muna-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kavarna-muna-praha/",
+   "title": "Kavárna Muna Praha – Nabrunch.cz",
+   "h1": [
+    "Kavárna Muna Praha"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kavarna-muna-praha/",
+   "og_title": "Kavárna Muna Praha – Nabrunch.cz",
+   "og_description": null,
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/06/Snimek-obrazovky-2026-06-01-v-9.44.16.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kocici-kavarna-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kocici-kavarna-praha/",
+   "title": "Kavárna Kočičí Praha - naBrunch.cz",
+   "h1": [
+    "Kočičí kavárna Praha"
+   ],
+   "description": "Kočičí kavárna Praha – útulné kočičí místo pro snídani i brunch v centru města. Kvalitní káva, domácí dobroty a příjemná atmosféra s kočkami.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kocici-kavarna-praha/",
+   "og_title": "Kavárna Kočičí Praha - naBrunch.cz",
+   "og_description": "Kočičí kavárna Praha – útulné kočičí místo pro snídani i brunch v centru města. Kvalitní káva, domácí dobroty a příjemná atmosféra s kočkami.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/Untitled-design-68.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kookie-by-nikol-zlin/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kookie-by-nikol-zlin/",
+   "title": "Kookie by Nikol Zlín - naBrunch.cz",
+   "h1": [
+    "Kookie by Nikol Zlín"
+   ],
+   "description": "Kookie by Nikol Zlín je útulná kavárna s domácími dezerty, dětským koutkem a pet friendly atmosférou. Snídaně, brunch, příjemné místo i s dětmi.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kookie-by-nikol-zlin/",
+   "og_title": "Kookie by Nikol Zlín - naBrunch.cz",
+   "og_description": "Kookie by Nikol Zlín je útulná kavárna s domácími dezerty, dětským koutkem a pet friendly atmosférou. Snídaně, brunch, příjemné místo i s dětmi.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/468039636_18010540688666275_554550070829972744_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kuk-bistro-mikulov/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kuk-bistro-mikulov/",
+   "title": "KUK bistro Mikulov - naBrunch.cz",
+   "h1": [
+    "KUK Bistro Mikulov"
+   ],
+   "description": "Moderní KUK bistro Mikulov s výběrovou kávou, domácími snídaněmi a venkovním posezením je ideální místo na brunch a kávovou pauzu. Mikulov.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kuk-bistro-mikulov/",
+   "og_title": "KUK bistro Mikulov - naBrunch.cz",
+   "og_description": "Moderní KUK bistro Mikulov s výběrovou kávou, domácími snídaněmi a venkovním posezením je ideální místo na brunch a kávovou pauzu. Mikulov.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/434481489_962695152526824_7663837240605617178_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/kupkafe-opava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/kupkafe-opava/",
+   "title": "Kupkafe Opava - naBrunch.cz",
+   "h1": [
+    "Kupkafe Opava"
+   ],
+   "description": "Kupkafe Opava. Stylová kavárna v centru Opavy s výběrovou kávou, chutnou snídaní a příjemným posezením venku. Kupkafe Opava tě mile překvapí.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/kupkafe-opava/",
+   "og_title": "Kupkafe Opava - naBrunch.cz",
+   "og_description": "Kupkafe Opava. Stylová kavárna v centru Opavy s výběrovou kávou, chutnou snídaní a příjemným posezením venku. Kupkafe Opava tě mile překvapí.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/kupkafe3.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/la-petite-conversation-ostrava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/la-petite-conversation-ostrava/",
+   "title": "La Petite Conversation Lapeco Ostrava - naBrunch.cz",
+   "h1": [
+    "La Petite Conversation Ostrava"
+   ],
+   "description": "La Petite Conversation Ostrava zkráceně Lapeco je belgická kavárna a bistro v Ostravě s brunchovým menu, signature jídly a skvělou atmosférou.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/la-petite-conversation-ostrava/",
+   "og_title": "La Petite Conversation Lapeco Ostrava - naBrunch.cz",
+   "og_description": "La Petite Conversation Ostrava zkráceně Lapeco je belgická kavárna a bistro v Ostravě s brunchovým menu, signature jídly a skvělou atmosférou.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/lapeco-38_orig.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/le-frenchie-cafe-plzen/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/le-frenchie-cafe-plzen/",
+   "title": "Le Frenchie café Plzeň – Nabrunch.cz",
+   "h1": [
+    "Le Frenchie café Plzeň"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/le-frenchie-cafe-plzen/",
+   "og_title": "Le Frenchie café Plzeň – Nabrunch.cz",
+   "og_description": null,
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-16-v-18.55.59.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/mama-shelter-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/mama-shelter-praha/",
+   "title": "Mama Shelter Praha - naBrunch.cz",
+   "h1": [
+    "Mama Shelter Praha"
+   ],
+   "description": "Mama Shelter Praha Holešovice pořádá svůj nedělní brunch každou neděli od 12:00 do 15:00 v hlavní restauraci hotelu. Čeká na tebe all-you-can-eat.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/mama-shelter-praha/",
+   "og_title": "Mama Shelter Praha - naBrunch.cz",
+   "og_description": "Mama Shelter Praha Holešovice pořádá svůj nedělní brunch každou neděli od 12:00 do 15:00 v hlavní restauraci hotelu. Čeká na tebe all-you-can-eat.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/mamashelter1.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/matilda-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/matilda-praha/",
+   "title": "Matilda Praha - naBrunch.cz",
+   "h1": [
+    "Matilda Praha"
+   ],
+   "description": "Matilda Praha je stylové bistro a kavárna, kde snídaně a brunche voní čerstvým pečivem, káva je vždy perfektní a večery patří vínu a domácí pastě.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/matilda-praha/",
+   "og_title": "Matilda Praha - naBrunch.cz",
+   "og_description": "Matilda Praha je stylové bistro a kavárna, kde snídaně a brunche voní čerstvým pečivem, káva je vždy perfektní a večery patří vínu a domácí pastě.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/Snimek-obrazovky-2025-11-02-v-19.32.29.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/maybe-coffee-bistro/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/maybe-coffee-bistro/",
+   "title": "Maybe coffee & bistro Brno - naBrunch.cz",
+   "h1": [
+    "Maybe coffee & bistro Brno"
+   ],
+   "description": "Maybe coffee & bistro Brno. Výběrová káva, poctivé snídaně a brunche. Avokádový toast, co má styl. Ideální místo na snídani, brunch, posezení venku.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/maybe-coffee-bistro/",
+   "og_title": "Maybe coffee & bistro Brno - naBrunch.cz",
+   "og_description": "Maybe coffee & bistro Brno. Výběrová káva, poctivé snídaně a brunche. Avokádový toast, co má styl. Ideální místo na snídani, brunch, posezení venku.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/maybecoffeebistro2.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/meme-brunch-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/meme-brunch-praha/",
+   "title": "mèmè & brunch Praha - naBrunch.cz",
+   "h1": [
+    "mèmè & brunch Praha"
+   ],
+   "description": "Mèmè & Brunch Praha je stylová roztomilá kavárna a brunch spot v Praze zaměřený na poctivé snídaně a brunch, kvalitní kávu a moderní kuchyni.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/meme-brunch-praha/",
+   "og_title": "mèmè & brunch Praha - naBrunch.cz",
+   "og_description": "Mèmè & Brunch Praha je stylová roztomilá kavárna a brunch spot v Praze zaměřený na poctivé snídaně a brunch, kvalitní kávu a moderní kuchyni.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-29-v-8.33.26.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/mistral-cafe-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/mistral-cafe-praha/",
+   "title": "Mistral Café Praha - naBrunch.cz",
+   "h1": [
+    "Mistral Café Praha"
+   ],
+   "description": "Mistral Café Praha je kavárna v centru Prahy u Staromáku. Snídaně, brunch, dětský koutek, venkovní posezení. Ideální pro brunch s rodinou.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/mistral-cafe-praha/",
+   "og_title": "Mistral Café Praha - naBrunch.cz",
+   "og_description": "Mistral Café Praha je kavárna v centru Prahy u Staromáku. Snídaně, brunch, dětský koutek, venkovní posezení. Ideální pro brunch s rodinou.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/mistral-cafe_upscaled.jpeg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/moms-bakehouse-kladno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/moms-bakehouse-kladno/",
+   "title": "Mom’s Bakehouse Kladno - naBrunch.cz",
+   "h1": [
+    "Mom’s Bakehouse Kladno"
+   ],
+   "description": "Mom's Bakehouse Kladno: útulná kavárna, poctivé snídaně, brunch menu. Vychutnejte si čerstvé pečivo, dorty a skvělou kávu v příjemné atmosféře.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/moms-bakehouse-kladno/",
+   "og_title": "Mom’s Bakehouse Kladno - naBrunch.cz",
+   "og_description": "Mom's Bakehouse Kladno: útulná kavárna, poctivé snídaně, brunch menu. Vychutnejte si čerstvé pečivo, dorty a skvělou kávu v příjemné atmosféře.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/480484537_1255476869381669_8827083728222276544_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/muj-salek-kavy-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/muj-salek-kavy-praha/",
+   "title": "Můj šálek kávy Praha - naBrunch.cz",
+   "h1": [
+    "Můj šálek kávy Praha"
+   ],
+   "description": "Můj šálek kávy je oblíbená kavárna v Praze Karlíně zaměřená na výběrovou kávu, poctivé snídaně a brunch jako turecká vejce nebo francouzský toast.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/muj-salek-kavy-praha/",
+   "og_title": "Můj šálek kávy Praha - naBrunch.cz",
+   "og_description": "Můj šálek kávy je oblíbená kavárna v Praze Karlíně zaměřená na výběrovou kávu, poctivé snídaně a brunch jako turecká vejce nebo francouzský toast.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/03/Snimek-obrazovky-2026-03-03-v-19.10.44.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/mysak-prazsky-hrad/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/mysak-prazsky-hrad/",
+   "title": "Myšák Pražský Hrad – Nabrunch.cz",
+   "h1": [
+    "Myšák Pražský Hrad"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/mysak-prazsky-hrad/",
+   "og_title": "Myšák Pražský Hrad – Nabrunch.cz",
+   "og_description": null,
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/06/cf-image.avif",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/nejen-kafe-mlada-boleslav/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/nejen-kafe-mlada-boleslav/",
+   "title": "Nejen kafe Mladá Boleslav - naBrunch.cz",
+   "h1": [
+    "Nejen kafe Mladá Boleslav"
+   ],
+   "description": "Nejen kafe Mladá Boleslav. Nejen výběrová káva, ale i snídaně, lívance a venkovní posezení. Ideální místo na klidný brunch v Mladé Boleslavi.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/nejen-kafe-mlada-boleslav/",
+   "og_title": "Nejen kafe Mladá Boleslav - naBrunch.cz",
+   "og_description": "Nejen kafe Mladá Boleslav. Nejen výběrová káva, ale i snídaně, lívance a venkovní posezení. Ideální místo na klidný brunch v Mladé Boleslavi.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/480831191_18348701914147172_9054354735643439015_n-1-scaled.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/nm-desserts-cafe-olomouc/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/nm-desserts-cafe-olomouc/",
+   "title": "NM Desserts Cafe Olomouc - naBrunch.cz",
+   "h1": [
+    "NM desserts cafe Olomouc"
+   ],
+   "description": "NM Desserts Cafe Olomouc – kavárna s ikonickými zákusky, kávou a atmosférou, která potěší chuť i oko. Místo stvořené pro radost. Dokonalé dezerty.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/nm-desserts-cafe-olomouc/",
+   "og_title": "NM Desserts Cafe Olomouc - naBrunch.cz",
+   "og_description": "NM Desserts Cafe Olomouc – kavárna s ikonickými zákusky, kávou a atmosférou, která potěší chuť i oko. Místo stvořené pro radost. Dokonalé dezerty.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/06/NM_11088_Finalx.webp",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/o-mai-coffee-brunch-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/o-mai-coffee-brunch-praha/",
+   "title": "ô-mai COFFEE & BRUNCH Praha - naBrunch.cz",
+   "h1": [
+    "ô-mai COFFEE & BRUNCH Praha"
+   ],
+   "description": "ô-mai COFFEE & BRUNCH Praha. Stylová kavárna v Praze ideální na snídani či brunch s přáteli. Užij si skvělou atmosféru a výbornou kávu či matchu.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/o-mai-coffee-brunch-praha/",
+   "og_title": "ô-mai COFFEE & BRUNCH Praha - naBrunch.cz",
+   "og_description": "ô-mai COFFEE & BRUNCH Praha. Stylová kavárna v Praze ideální na snídani či brunch s přáteli. Užij si skvělou atmosféru a výbornou kávu či matchu.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/07/brunch_1-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/paloma-pruhonice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/paloma-pruhonice/",
+   "title": "Paloma Průhonice - naBrunch.cz",
+   "h1": [
+    "Paloma Průhonice"
+   ],
+   "description": "Paloma Průhonice je kavárna s francouzským nádechem v Průhonicích nabízející výběrovou kávu, čerstvé pečivo, dezerty a top snídaně a brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/paloma-pruhonice/",
+   "og_title": "Paloma Průhonice - naBrunch.cz",
+   "og_description": "Paloma Průhonice je kavárna s francouzským nádechem v Průhonicích nabízející výběrovou kávu, čerstvé pečivo, dezerty a top snídaně a brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-14-v-10.15.54.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/pauseteria-cafe-garden-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/pauseteria-cafe-garden-praha/",
+   "title": "Pauseteria - naBrunch.cz",
+   "h1": [
+    "Pauseteria café garden Praha"
+   ],
+   "description": "Pauseteria café garden Praha. Snídaně, brunch a káva přímo na Staroměstském náměstí v Praze. Pauseteria nabízí celodenní snídaně a brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/pauseteria-cafe-garden-praha/",
+   "og_title": "Pauseteria - naBrunch.cz",
+   "og_description": "Pauseteria café garden Praha. Snídaně, brunch a káva přímo na Staroměstském náměstí v Praze. Pauseteria nabízí celodenní snídaně a brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/pauseteria-fb-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/peceme-ricany/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/peceme-ricany/",
+   "title": "Pečeme Říčany - naBrunch.cz",
+   "h1": [
+    "Pečeme Říčany"
+   ],
+   "description": "Pečeme Říčany je řemeslné pekařství s kavárnou v Říčanech nabízející poctivé snídaně a brunch, obložené chleby, čerstvé sladké i slané pečivo.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/peceme-ricany/",
+   "og_title": "Pečeme Říčany - naBrunch.cz",
+   "og_description": "Pečeme Říčany je řemeslné pekařství s kavárnou v Říčanech nabízející poctivé snídaně a brunch, obložené chleby, čerstvé sladké i slané pečivo.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/600366932_122117621127010775_1022385899329423917_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/pekarna-august/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/pekarna-august/",
+   "title": "August Praha",
+   "h1": [
+    "Pekárna August Prague Praha"
+   ],
+   "description": "August Prague Praha je moderní kavárna a pekárna v centru Prahy, která je ideální volbou pro snídani i brunch. Minimalistický prostor, káva a pečivo.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/pekarna-august/",
+   "og_title": "August Praha",
+   "og_description": "August Prague Praha je moderní kavárna a pekárna v centru Prahy, která je ideální volbou pro snídani i brunch. Minimalistický prostor, káva a pečivo.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/04/Snimek-obrazovky-2026-05-21-v-16.45.14.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/pikola-sumperk/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/pikola-sumperk/",
+   "title": "pikola Šumperk - naBrunch.cz",
+   "h1": [
+    "pikola Šumperk"
+   ],
+   "description": "Pikola Šumperk. Rodinná kavárna v Šumperku s výběrovou kávou, domácími dezerty a skvělými snídaněmi. Pet-friendly místo, snídaně, brunche.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/pikola-sumperk/",
+   "og_title": "pikola Šumperk - naBrunch.cz",
+   "og_description": "Pikola Šumperk. Rodinná kavárna v Šumperku s výběrovou kávou, domácími dezerty a skvělými snídaněmi. Pet-friendly místo, snídaně, brunche.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/sum5.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/pleiku-coffee-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/pleiku-coffee-praha/",
+   "title": "Pleiku Coffee Praha - naBrunch.cz",
+   "h1": [
+    "Pleiku Coffee Praha"
+   ],
+   "description": "Pleiku Coffee Praha je vietnamská kavárna aměřená na autentickou výběrovou kávu z Vietnamu, originální snídaně a brunch s asijským twistem.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/pleiku-coffee-praha/",
+   "og_title": "Pleiku Coffee Praha - naBrunch.cz",
+   "og_description": "Pleiku Coffee Praha je vietnamská kavárna aměřená na autentickou výběrovou kávu z Vietnamu, originální snídaně a brunch s asijským twistem.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-22-v-20.39.52.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/poppy-beans-coffee-brno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/poppy-beans-coffee-brno/",
+   "title": "Poppy Beans Coffee Brno - naBrunch.cz",
+   "h1": [
+    "Poppy Beans Coffee Brno"
+   ],
+   "description": "Poppy Beans Coffee Brno je kavárna u Parku Lužánky nabízející kvalitní snídaně a víkendový brunch, výběrovou kávu, vlastní limonády a dezerty.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/poppy-beans-coffee-brno/",
+   "og_title": "Poppy Beans Coffee Brno - naBrunch.cz",
+   "og_description": "Poppy Beans Coffee Brno je kavárna u Parku Lužánky nabízející kvalitní snídaně a víkendový brunch, výběrovou kávu, vlastní limonády a dezerty.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-19-v-10.42.45.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/porubska-kafrarna-ostrava/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/porubska-kafrarna-ostrava/",
+   "title": "Porubská Kafrárna Ostrava - naBrunch.cz",
+   "h1": [
+    "Porubská Kaf(r)árna Ostrava"
+   ],
+   "description": "Kavárna Kafrárna Ostrava Poruba nabízí výběrovou kávu, domácí dezerty a čerstvé snídaně, brunche. Příjemné prostředí pro rodiny i přátele.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/porubska-kafrarna-ostrava/",
+   "og_title": "Porubská Kafrárna Ostrava - naBrunch.cz",
+   "og_description": "Kavárna Kafrárna Ostrava Poruba nabízí výběrovou kávu, domácí dezerty a čerstvé snídaně, brunche. Příjemné prostředí pro rodiny i přátele.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/Snimek-obrazovky-2025-04-16-v-9.42.18.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/sensu-cafe-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/sensu-cafe-praha/",
+   "title": "Sensu Cafe Praha - naBrunch.cz",
+   "h1": [
+    "Sensu Cafe Praha"
+   ],
+   "description": "Sensu Cafe Praha, Matcha kavárna, Sensu Cafe nabízí teplé i ledové Matcha latté, Matcha dezerty v designovém prostředí. Zkuste Sensu Cafe Praha.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/sensu-cafe-praha/",
+   "og_title": "Sensu Cafe Praha - naBrunch.cz",
+   "og_description": "Sensu Cafe Praha, Matcha kavárna, Sensu Cafe nabízí teplé i ledové Matcha latté, Matcha dezerty v designovém prostředí. Zkuste Sensu Cafe Praha.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/2025-02-21-1-scaled.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/sestava-vrsovice/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/sestava-vrsovice/",
+   "title": "Sestava Vršovice Praha - naBrunch.cz",
+   "h1": [
+    "Sestava Vršovice"
+   ],
+   "description": "Sestava Vršovice Praha je sousedská kavárna ve Vršovicích zaměřená na výběrovou kávu z vlastní pražírny, snídaně, brunch a sezónní menu.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/sestava-vrsovice/",
+   "og_title": "Sestava Vršovice Praha - naBrunch.cz",
+   "og_description": "Sestava Vršovice Praha je sousedská kavárna ve Vršovicích zaměřená na výběrovou kávu z vlastní pražírny, snídaně, brunch a sezónní menu.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-21.24.32.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/skog-brno/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/skog-brno/",
+   "title": "SKØG Urban Hub Brno - naBrunch.cz",
+   "h1": [
+    "SKØG Brno"
+   ],
+   "description": "SKØG Urban Hub Brno nabízí výběrovou kávu, božské snídaně a moderní brunch menu. Ideální místo na ranní snídani či víkendový brunch v Brně.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/skog-brno/",
+   "og_title": "SKØG Urban Hub Brno - naBrunch.cz",
+   "og_description": "SKØG Urban Hub Brno nabízí výběrovou kávu, božské snídaně a moderní brunch menu. Ideální místo na ranní snídani či víkendový brunch v Brně.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/Snimek-obrazovky-2025-11-02-v-20.01.11.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/smetanaq-cafe-bistro-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/smetanaq-cafe-bistro-praha/",
+   "title": "SmetanaQ Café & Bistro Praha - naBrunch.cz",
+   "h1": [
+    "SmetanaQ Café & Bistro Praha"
+   ],
+   "description": "SmetanaQ Café & Bistro Praha je stylová kavárna v centru Prahy, ideální na snídaně a brunch s venkovním sezením a krásným výhledem na Prahu.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/smetanaq-cafe-bistro-praha/",
+   "og_title": "SmetanaQ Café & Bistro Praha - naBrunch.cz",
+   "og_description": "SmetanaQ Café & Bistro Praha je stylová kavárna v centru Prahy, ideální na snídaně a brunch s venkovním sezením a krásným výhledem na Prahu.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-20-v-10.37.50.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/soma-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/soma-praha/",
+   "title": "SOMA Praha - naBrunch.cz",
+   "h1": [
+    "SOMA Praha"
+   ],
+   "description": "SOMA Praha – moderní kavárna na Žižkově s výběrovou kávou, skvělou snídaní a sezónním brunch menu. Příjemné místo pro klidné ráno i práci.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/soma-praha/",
+   "og_title": "SOMA Praha - naBrunch.cz",
+   "og_description": "SOMA Praha – moderní kavárna na Žižkově s výběrovou kávou, skvělou snídaní a sezónním brunch menu. Příjemné místo pro klidné ráno i práci.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/11/Snimek-obrazovky-2025-11-16-v-16.13.08.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/sophies-cafe-olomouc/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/sophies-cafe-olomouc/",
+   "title": "Sophie's Café Olomouc - naBrunch.cz",
+   "h1": [
+    "Sophie’s Café Olomouc"
+   ],
+   "description": "Sophie's Café Olomouc je útulná kavárna se zahrádkou v srdci Olomouce. Nabízí snídaně a brunch, výběrovou kávu a klidné posezení v Olomouci.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/sophies-cafe-olomouc/",
+   "og_title": "Sophie's Café Olomouc - naBrunch.cz",
+   "og_description": "Sophie's Café Olomouc je útulná kavárna se zahrádkou v srdci Olomouce. Nabízí snídaně a brunch, výběrovou kávu a klidné posezení v Olomouci.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-16.45.34.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/spojka-karlin/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/spojka-karlin/",
+   "title": "Spojka Karlín – Nabrunch.cz",
+   "h1": [
+    "Spojka Karlín"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/spojka-karlin/",
+   "og_title": "Spojka Karlín – Nabrunch.cz",
+   "og_description": null,
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/06/img_87711-1536x1024-1-1200x800-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/spot-bistro-ricany/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/spot-bistro-ricany/",
+   "title": "SPOT Bistro Říčany - naBrunch.cz",
+   "h1": [
+    "SPOT Bistro Říčany"
+   ],
+   "description": "Spot Bistro Říčany je oblíbené bistro na náměstí v Říčanech nabízející poctivé snídaně a brunch, výběrovou kávu a domácí dezerty. Venkovní sezení.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/spot-bistro-ricany/",
+   "og_title": "SPOT Bistro Říčany - naBrunch.cz",
+   "og_description": "Spot Bistro Říčany je oblíbené bistro na náměstí v Říčanech nabízející poctivé snídaně a brunch, výběrovou kávu a domácí dezerty. Venkovní sezení.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/welcome-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/sugar-life-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/sugar-life-praha/",
+   "title": "Sugar Life Praha - naBrunch.cz",
+   "h1": [
+    "Sugar Life Praha"
+   ],
+   "description": "Sugar Life Praha je moderní cukrářský koncept zaměřený na originální dezerty a sladkou snídani. Makronky v netradičních kombinacích.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/sugar-life-praha/",
+   "og_title": "Sugar Life Praha - naBrunch.cz",
+   "og_description": "Sugar Life Praha je moderní cukrářský koncept zaměřený na originální dezerty a sladkou snídani. Makronky v netradičních kombinacích.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/04/Snimek-obrazovky-2026-04-20-v-14.32.34.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/taste-coffee-pribram/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/taste-coffee-pribram/",
+   "title": "Taste Coffee Příbram - naBrunch.cz",
+   "h1": [
+    "Taste Coffee Příbram"
+   ],
+   "description": "V Taste Coffee Příbram si užijete snídaně, brunche, raw dezerty, dorty na objednávku, tematické zákusky, sladké i slané snídaně v milém prostředí.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/taste-coffee-pribram/",
+   "og_title": "Taste Coffee Příbram - naBrunch.cz",
+   "og_description": "V Taste Coffee Příbram si užijete snídaně, brunche, raw dezerty, dorty na objednávku, tematické zákusky, sladké i slané snídaně v milém prostředí.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/Navrh-bez-nazvu-2025-05-03T182949.022.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/tea-field-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/tea-field-praha/",
+   "title": "Tea Field Praha - naBrunch.cz",
+   "h1": [
+    "Tea Field Praha"
+   ],
+   "description": "Tea Field Praha je tylová tea & brunch kavárna nabízející výběrové čaje, kávu a prodej čerstvých květin v harmonickém a fotogenickém prostředí.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/tea-field-praha/",
+   "og_title": "Tea Field Praha - naBrunch.cz",
+   "og_description": "Tea Field Praha je tylová tea & brunch kavárna nabízející výběrové čaje, kávu a prodej čerstvých květin v harmonickém a fotogenickém prostředí.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-23-v-19.44.44-e1771873014604.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/timeplay-hradec-kralove/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/timeplay-hradec-kralove/",
+   "title": "TimePlay Hradec Králové - naBrunch.cz",
+   "h1": [
+    "TimePlay Hradec Králové"
+   ],
+   "description": "TimePlay Hradec Králové – moderní kavárna se skvělou snídaní a brunchem, ideální pro rodiny s dětmi díky zábavnému dětskému koutku.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/timeplay-hradec-kralove/",
+   "og_title": "TimePlay Hradec Králové - naBrunch.cz",
+   "og_description": "TimePlay Hradec Králové – moderní kavárna se skvělou snídaní a brunchem, ideální pro rodiny s dětmi díky zábavnému dětskému koutku.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/09/Snimek-obrazovky-2025-09-04-v-20.46.18.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/tisse-bakery-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/tisse-bakery-praha/",
+   "title": "TISSE Bakery Praha - naBrunch.cz",
+   "h1": [
+    "TISSE Bakery Praha"
+   ],
+   "description": "TISSE Bakery Praha je kavárna a pekárna na Vinohradech, kde nabízí skvělé snídaně a brunche, včetně širokého výběru veganského pečiva.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/tisse-bakery-praha/",
+   "og_title": "TISSE Bakery Praha - naBrunch.cz",
+   "og_description": "TISSE Bakery Praha je kavárna a pekárna na Vinohradech, kde nabízí skvělé snídaně a brunche, včetně širokého výběru veganského pečiva.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/05/IMG_9634-scaled-1.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/umamy-cafe-narodni-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/umamy-cafe-narodni-praha/",
+   "title": "Umámy Café Národní Praha - naBrunch.cz",
+   "h1": [
+    "Umámy Café Národní Praha"
+   ],
+   "description": "Umámy Café Národní Praha je útulná kavárna v centru Prahy s rodinnou atmosférou, ideální na snídaně a brunch. Příjemné venkovní sezení.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/umamy-cafe-narodni-praha/",
+   "og_title": "Umámy Café Národní Praha - naBrunch.cz",
+   "og_description": "Umámy Café Národní Praha je útulná kavárna v centru Prahy s rodinnou atmosférou, ideální na snídaně a brunch. Příjemné venkovní sezení.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-20-v-10.52.48.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/und-kaffee-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/und-kaffee-praha/",
+   "title": "Ünd Kaffee Praha – Nabrunch.cz",
+   "h1": [
+    "Ünd Kaffee Praha"
+   ],
+   "description": null,
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/und-kaffee-praha/",
+   "og_title": "Ünd Kaffee Praha – Nabrunch.cz",
+   "og_description": null,
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/06/Snimek-obrazovky-2026-06-15-v-9.20.44.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/walter-plzen/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/walter-plzen/",
+   "title": "Walter Mitty Brunch Plzeň - naBrunch.cz",
+   "h1": [
+    "Walter Plzeň"
+   ],
+   "description": "Walter Brunch Plzeň. Stylová kavárna v Plzni. Snídaně, brunch, výběrová káva, víkendový brunch a útulná atmosféra. Walter Plzeň inspiruje.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/walter-plzen/",
+   "og_title": "Walter Mitty Brunch Plzeň - naBrunch.cz",
+   "og_description": "Walter Brunch Plzeň. Stylová kavárna v Plzni. Snídaně, brunch, výběrová káva, víkendový brunch a útulná atmosféra. Walter Plzeň inspiruje.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/21febd67-be66-4173-9aa6-b5ef518ea825-scaled.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/yaki-pan-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/yaki-pan-praha/",
+   "title": "Yaki-Pan Praha - naBrunch.cz",
+   "h1": [
+    "Yaki-Pan Praha"
+   ],
+   "description": "Yaki‑Pan je japonská pekárna v Praze nabízející originální pečivo jako anpan, shokupan nebo sando sendviče. Skvělé místo na snídani a brunch.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/yaki-pan-praha/",
+   "og_title": "Yaki-Pan Praha - naBrunch.cz",
+   "og_description": "Yaki‑Pan je japonská pekárna v Praze nabízející originální pečivo jako anpan, shokupan nebo sando sendviče. Skvělé místo na snídani a brunch.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/03/Snimek-obrazovky-2026-03-09-v-19.14.00.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/yorkmut-cafe-praha/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/yorkmut-cafe-praha/",
+   "title": "Yorkmut Café Praha - naBrunch.cz",
+   "h1": [
+    "Yorkmut Café Praha"
+   ],
+   "description": "Yorkmut je psí kavárna v Praze ideální na snídaně a brunche, kde si vychutnáte výběrovou kávu, čerstvé pečivo a dezerty s pejsky.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/yorkmut-cafe-praha/",
+   "og_title": "Yorkmut Café Praha - naBrunch.cz",
+   "og_description": "Yorkmut je psí kavárna v Praze ideální na snídaně a brunche, kde si vychutnáte výběrovou kávu, čerstvé pečivo a dezerty s pejsky.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-03-v-13.58.34.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/podniky/zrno-klatovy/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/podniky/zrno-klatovy/",
+   "title": "Zrno Klatovy - naBrunch.cz",
+   "h1": [
+    "Zrno Klatovy"
+   ],
+   "description": "Zrno Klatovy. Kavárna v Klatovech s výběrovou kávou, domácími koláči a skvělými snídaněmi. Zrno je ideální místo pro snídani i brunch. Klatovy.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/podniky/zrno-klatovy/",
+   "og_title": "Zrno Klatovy - naBrunch.cz",
+   "og_description": "Zrno Klatovy. Kavárna v Klatovech s výběrovou kávou, domácími koláči a skvělými snídaněmi. Zrno je ideální místo pro snídani i brunch. Klatovy.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/04/482225796_645797661152581_52454724229349659_n.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/pridat-podnik/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/pridat-podnik/",
+   "title": "Přidat podnik | Nabrunch.cz",
+   "h1": [
+    "Přidat podnik",
+    "Vložit/upravit odkaz"
+   ],
+   "description": "Patří vaše snídaně mezi ty, na které se nezapomíná? Vaříte a pečete srdcem? Servírujete brunch s láskou? Chcete, aby se o vašem podniku dozvěděli ti správní lidé?Vyplňte náš formulář – rádi vás zařadíme na náš web.Jsme místo, kde lidé hledají inspiraci, kam vyrazit na svou nejoblíbenější část dne – snídani.…",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/pridat-podnik/",
+   "og_title": "Přidat podnik | Nabrunch.cz",
+   "og_description": "Patří vaše snídaně mezi ty, na které se nezapomíná? Vaříte a pečete srdcem? Servírujete brunch s láskou? Chcete, aby se o vašem podniku dozvěděli ti správní lidé?Vyplňte náš formulář – rádi vás zařadíme na náš web.Jsme místo, kde lidé hledají inspiraci, kam vyrazit na svou nejoblíbenější část dne – snídani.…",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/nabrunch-6.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/rodinny-brunch-pro-deti-v-kafkoff/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/rodinny-brunch-pro-deti-v-kafkoff/",
+   "title": "Rodinný brunch pro děti v Kafkoff - naBrunch.cz",
+   "h1": [
+    "Rodinný brunch pro děti v Kafkoff Praha"
+   ],
+   "description": "Rodinný brunch v Praze? Kafkoff má koncept, který si zamilují děti i rodiče. Každou neděli od 11:00 do 15:00 probíhá v Kafkoff brunch pro děti i rodiče.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/rodinny-brunch-pro-deti-v-kafkoff/",
+   "og_title": "Rodinný brunch pro děti v Kafkoff - naBrunch.cz",
+   "og_description": "Rodinný brunch v Praze? Kafkoff má koncept, který si zamilují děti i rodiče. Každou neděli od 11:00 do 15:00 probíhá v Kafkoff brunch pro děti i rodiče.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-20-v-10.57.43.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/scio-kuchyne-kdyz-skolni-jidlo-dostane-novy-rozmer/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/scio-kuchyne-kdyz-skolni-jidlo-dostane-novy-rozmer/",
+   "title": "Scio Kuchyně: když školní jídlo dostane nový rozměr",
+   "h1": [
+    "Scio Kuchyně: když školní jídlo dostane nový rozměr"
+   ],
+   "description": "Scio Kuchyně: když školní jídlo dostane nový rozměr. Co je Scio kuchyně? Kvalita a zkušenost? Co se vaří ve Scio kuchyni? - naBrunch.cz",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/scio-kuchyne-kdyz-skolni-jidlo-dostane-novy-rozmer/",
+   "og_title": "Scio Kuchyně: když školní jídlo dostane nový rozměr",
+   "og_description": "Scio Kuchyně: když školní jídlo dostane nový rozměr. Co je Scio kuchyně? Kvalita a zkušenost? Co se vaří ve Scio kuchyni? - naBrunch.cz",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/03/05.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/snidane-s-detmi-mistral-cafe-je-misto-kde-si-pochutnate-vsichni/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/snidane-s-detmi-mistral-cafe-je-misto-kde-si-pochutnate-vsichni/",
+   "title": "Snídaně s dětmi: Mistral Café je místo, kde si pochutnáte všichni | Nabrunch.cz",
+   "h1": [
+    "Snídaně s dětmi: Mistral Café je místo, kde si pochutnáte všichni"
+   ],
+   "description": "Hledáte podnik v centru Prahy, kde si užijete skvělou snídani nebo brunch i s dětmi? Zamiřte do Mistral Café!",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/snidane-s-detmi-mistral-cafe-je-misto-kde-si-pochutnate-vsichni/",
+   "og_title": "Snídaně s dětmi: Mistral Café je místo, kde si pochutnáte všichni | Nabrunch.cz",
+   "og_description": "Hledáte podnik v centru Prahy, kde si užijete skvělou snídani nebo brunch i s dětmi? Zamiřte do Mistral Café!",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/Snidane-s-detmi.jpg",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/tilapie-nenapadna-ryba-ktera-dobyva-restaurace-i-domaci-kuchyne/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/tilapie-nenapadna-ryba-ktera-dobyva-restaurace-i-domaci-kuchyne/",
+   "title": "Tilápie: Nenápadná ryba, která dobývá restaurace i domácí kuchyně | Nabrunch.cz",
+   "h1": [
+    "Tilápie: Nenápadná ryba, která dobývá restaurace i domácí kuchyně"
+   ],
+   "description": "Co je tilápie, odkud pochází a proč se stala jednou z nejprodávanějších ryb na světě?",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/tilapie-nenapadna-ryba-ktera-dobyva-restaurace-i-domaci-kuchyne/",
+   "og_title": "Tilápie: Nenápadná ryba, která dobývá restaurace i domácí kuchyně | Nabrunch.cz",
+   "og_description": "Co je tilápie, odkud pochází a proč se stala jednou z nejprodávanějších ryb na světě?",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/06/f67ef0ef-7d36-4360-ab0e-fe57696a7b5e.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/yorkmut-cafe-praha-oblibena-kavarna-s-pejsky/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/yorkmut-cafe-praha-oblibena-kavarna-s-pejsky/",
+   "title": "Yorkmut Café Praha: oblíbená kavárna s pejsky | Nabrunch.cz",
+   "h1": [
+    "Yorkmut Café Praha: oblíbená kavárna s pejsky"
+   ],
+   "description": "Yorkmut Café Praha je vyhlášená psí kavárna, která spojuje brunch, kávu a společnost psích kamarádů.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/yorkmut-cafe-praha-oblibena-kavarna-s-pejsky/",
+   "og_title": "Yorkmut Café Praha: oblíbená kavárna s pejsky | Nabrunch.cz",
+   "og_description": "Yorkmut Café Praha je vyhlášená psí kavárna, která spojuje brunch, kávu a společnost psích kamarádů.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-03-v-13.58.34.png",
+   "jsonld": []
+  },
+  "https://nabrunch.cz/za-brunchem-mimo-mesto-mikulov-kuk-bistro/": {
+   "status": 200,
+   "final": "https://nabrunch.cz/za-brunchem-mimo-mesto-mikulov-kuk-bistro/",
+   "title": "Za brunchem mimo město: Mikulov & KUK Bistro | Nabrunch.cz",
+   "h1": [
+    "Za brunchem mimo město: Mikulov & KUK Bistro"
+   ],
+   "description": "Někdy člověk potřebuje utéct z ruchu velkoměsta, trochu zpomalit a dopřát si dobré jídlo s výhledem. A právě Mikulov je ideálním místem.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://nabrunch.cz/za-brunchem-mimo-mesto-mikulov-kuk-bistro/",
+   "og_title": "Za brunchem mimo město: Mikulov & KUK Bistro | Nabrunch.cz",
+   "og_description": "Někdy člověk potřebuje utéct z ruchu velkoměsta, trochu zpomalit a dopřát si dobré jídlo s výhledem. A právě Mikulov je ideálním místem.",
+   "og_image": "https://nabrunch.cz/wp-content/uploads/2025/03/Za-brunchem-mimo-mesto.jpg",
+   "jsonld": []
+  }
+ }
+}

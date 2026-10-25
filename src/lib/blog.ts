@@ -22,6 +22,9 @@ export const KATEGORIE_POPIS: Record<Kategorie, string> = {
   Inspirace: 'Trendy, jídla a nápady pro každý víkendový brunch.',
 };
 
+/** Titulek článku jako na WordPressu (wptexturize: „ - “ → „ – “) */
+export const nazev = (c: Clanek) => c.data.title.replace(/ - /g, ' – ');
+
 export const kategorieUrl = (k: string) => `/blog/${slugify(k)}/`;
 /** Články zůstávají na stejných adresách jako na WordPressu: /<slug>/ */
 export const clanekUrl = (c: Clanek | string) => `/${typeof c === 'string' ? c : c.id}/`;

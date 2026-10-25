@@ -1,0 +1,29 @@
+---
+// Výpis kategorie podniků (stejné adresy jako taxonomie „kategorie“ na WordPressu)
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../Breadcrumb.astro';
+import Vypis from '../Vypis.astro';
+import type { Podnik } from '../../lib/data';
+
+interface Props {
+  nadpis: string;
+  popis: string;
+  podniky: Podnik[];
+}
+const { nadpis, popis, podniky } = Astro.props;
+---
+
+<Base title={nadpis} description={popis}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Podniky', url: '/podniky/' }, { nazev: nadpis }]} />
+      <h1>{nadpis}</h1>
+      <p class="lead">{popis}</p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <Vypis podniky={podniky} naStranku={24} />
+    </div>
+  </section>
+</Base>

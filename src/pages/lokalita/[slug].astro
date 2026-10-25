@@ -1,0 +1,12 @@
+---
+// Města a pražské obvody – stejné adresy jako taxonomie „lokalita“ na WordPressu (/lokalita/praha/)
+import LokalitaStranka from '../../components/stranky/LokalitaStranka.astro';
+import { lokality, type Lokalita } from '../../lib/data';
+
+export function getStaticPaths() {
+  return lokality().map((l) => ({ params: { slug: l.slug }, props: { l } }));
+}
+const { l } = Astro.props as { l: Lokalita };
+---
+
+<LokalitaStranka l={l} />

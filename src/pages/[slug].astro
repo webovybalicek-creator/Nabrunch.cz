@@ -1,23 +1,20 @@
 ---
 // Stránky v kořeni webu (stejné adresy jako na WordPressu):
-//   /<lokalita>/  – města a pražské obvody (praha, brno, praha-2…)
 //   /<téma>/      – tematické výpisy (veganske-snidane-a-brunche…)
 //   /<článek>/    – články blogu
-import LokalitaStranka from '../components/stranky/LokalitaStranka.astro';
 import TemaStranka from '../components/stranky/TemaStranka.astro';
 import ClanekStranka from '../components/stranky/ClanekStranka.astro';
-import { lokality, TEMATA } from '../lib/data';
+import { TEMATA } from '../lib/data';
 import { clanky } from '../lib/blog';
 
 export async function getStaticPaths() {
   const cesty = [
-    ...lokality().map((l) => ({ params: { slug: l.slug }, props: { typ: 'lokalita' as const, l } })),
     ...TEMATA.map((t) => ({ params: { slug: t.slug }, props: { typ: 'tema' as const, t } })),
     ...(await clanky()).map((c) => ({ params: { slug: c.id }, props: { typ: 'clanek' as const, c } })),
   ];
   // Pojistka: dvě stránky na stejné adrese = chyba buildu
   const videno = new Map<string, string>();
-  const vyhrazene = ['podniky', 'blog', 'mapa', 'lokality', 'o-nas', 'kontakt', 'pridat-podnik', 'podnik-byl-pridan', 'oblibene', 'casto-kladene-dotazy', 'obchodni-podminky', 'ochrana-osobnich-udaju', 'api', 'nahledy', 'wp-content'];
+  const vyhrazene = ['podniky', 'blog', 'mapa', 'lokality', 'o-nas', 'kontakt', 'pridat-podnik', 'podnik-byl-pridan', 'oblibene', 'casto-kladene-dotazy', 'obchodni-podminky', 'ochrana-osobnich-udaju', 'api', 'nahledy', 'obrazky', 'lokalita', 'kategorie', 'nezarazene', 'wp-content'];
   for (const c of cesty) {
     const s = c.params.slug;
     if (videno.has(s) || vyhrazene.includes(s)) throw new Error(`Kolize adresy /${s}/ (${c.props.typ} × ${videno.get(s) ?? 'vyhrazená stránka'})`);
@@ -29,6 +26,5 @@ export async function getStaticPaths() {
 const props = Astro.props;
 ---
 
-{props.typ === 'lokalita' && <LokalitaStranka l={props.l} />}
 {props.typ === 'tema' && <TemaStranka t={props.t} />}
 {props.typ === 'clanek' && <ClanekStranka c={props.c} />}

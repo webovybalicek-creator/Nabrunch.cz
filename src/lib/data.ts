@@ -38,7 +38,8 @@ export interface Podnik {
   galerie: string[];
 }
 
-export const PODNIKY = podnikyRaw as Podnik[];
+// Názvy jako na WordPressu (wptexturize: rovný apostrof → ’)
+export const PODNIKY = (podnikyRaw as Podnik[]).map((p) => ({ ...p, nazev: p.nazev.replace(/'/g, '’') }));
 export const url = (p: Podnik) => `/podniky/${p.slug}/`;
 
 // ---------------------------------------------------------------- obrázky
@@ -67,7 +68,8 @@ export interface Lokalita {
 const SLUGY = lokalitySlugy as Record<string, string>;
 const OBVOD = /^Praha \d+$/;
 export const lokalitaSlug = (nazev: string) => SLUGY[nazev] ?? slugify(nazev);
-export const lokalitaUrl = (l: Pick<Lokalita, 'slug'>) => `/${l.slug}/`;
+/** Stejné adresy jako taxonomie „lokalita“ na WordPressu */
+export const lokalitaUrl = (l: Pick<Lokalita, 'slug'>) => `/lokalita/${l.slug}/`;
 
 /** Nejkonkrétnější lokalita podniku (obvod má přednost před „Praha“) */
 export const hlavniLokalita = (p: Podnik) => p.lokality.find((l) => OBVOD.test(l)) ?? p.lokality[0] ?? '';

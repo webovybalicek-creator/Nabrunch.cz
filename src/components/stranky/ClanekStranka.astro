@@ -6,7 +6,7 @@ import Karta from '../Karta.astro';
 import BlogKarta from '../BlogKarta.astro';
 import { SITE } from '../../lib/config';
 import { velky, obrazkyVHtml } from '../../lib/data';
-import { clanky, clanekUrl, kategorie, kategorieUrl, casCteni, datumText, perex, souvisejici, zminenePodniky, type Clanek } from '../../lib/blog';
+import { nazev, clanky, clanekUrl, kategorie, kategorieUrl, casCteni, datumText, perex, souvisejici, zminenePodniky, type Clanek } from '../../lib/blog';
 
 interface Props {
   c: Clanek;
@@ -42,8 +42,8 @@ const jsonLd = {
   <article>
     <header class="clanek-head">
       <div class="wrap">
-        <Breadcrumb polozky={[{ nazev: 'Blog', url: '/blog/' }, { nazev: kat, url: kategorieUrl(kat) }, { nazev: c.data.title }]} />
-        <h1>{c.data.title}</h1>
+        <Breadcrumb polozky={[{ nazev: 'Blog', url: '/blog/' }, { nazev: kat, url: kategorieUrl(kat) }, { nazev: nazev(c) }]} />
+        <h1>{nazev(c)}</h1>
         <p class="meta muted">
           <time datetime={c.data.date.toISOString()}>{datumText(c.data.date)}</time> · {casCteni(c)} min čtení ·
           <a href={kategorieUrl(kat)}>{kat}</a>

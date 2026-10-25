@@ -1,0 +1,10 @@
+---
+import KategorieStranka from '../../components/stranky/KategorieStranka.astro';
+import { PODNIKY, doporucene } from '../../lib/data';
+
+// Na WordPressu: všechny podniky mimo srdcovky, od nejnovějších
+const srdcovky = new Set(doporucene());
+const nove = PODNIKY.filter((p) => !srdcovky.has(p)).sort((a, b) => b.datum.localeCompare(a.datum));
+---
+
+<KategorieStranka nadpis="Nově přidané" popis="Nová místa, nové chutě – podniky na snídani a brunch, které jsme přidali naposledy." podniky={nove} />

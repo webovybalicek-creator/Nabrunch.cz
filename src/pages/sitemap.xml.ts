@@ -14,6 +14,8 @@ export const GET: APIRoute = async () => {
     { loc: '/mapa/', lastmod: posledni },
     { loc: '/lokality/', lastmod: posledni },
     ...lokality().map((l) => ({ loc: lokalitaUrl(l), lastmod: posledni })),
+    { loc: '/kategorie/doporucene-podniky/', lastmod: posledni },
+    { loc: '/kategorie/nove-pridane/', lastmod: posledni },
     ...TEMATA.map((t) => ({ loc: temaUrl(t), lastmod: posledni })),
     ...PODNIKY.map((p) => ({ loc: url(p), lastmod: den(p.datum.replace(' ', 'T')) })),
     { loc: '/blog/', lastmod: vse[0] ? den(vse[0].data.date) : undefined },

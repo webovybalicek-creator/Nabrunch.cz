@@ -22,8 +22,13 @@ DirectoryIndex index.html
   RewriteRule ^_data(/|$) - [F,L]
 
   # Staré adresy z WordPressu
-  RewriteRule ^lokalita/([^/]+)/?$ /$1/ [L,R=301]
-  RewriteRule ^kategorie/.*$ /podniky/ [L,R=301]
+  RewriteRule ^nezarazene/?$ /blog/ [L,R=301]
+  # Stránkování, štítky, autoři a sitemapy z WordPressu
+  RewriteRule ^(.+)/page/\d+/?$ /$1/ [L,R=301]
+  RewriteRule ^page/\d+/?$ / [L,R=301]
+  RewriteRule ^(tag|author)/.*$ /blog/ [L,R=301]
+  RewriteRule ^(sitemaps|wp-sitemap|sitemap_index|[a-z_]+-sitemap\d*)\.xml$ /sitemap.xml [L,R=301]
+  RewriteRule ^wp-(admin|login\.php).*$ / [L,R=302]
   RewriteRule ^category/.*$ /blog/ [L,R=301]
   RewriteRule ^(feed|comments/feed)/?$ / [L,R=301]
   RewriteRule ^domu/?$ / [L,R=301]

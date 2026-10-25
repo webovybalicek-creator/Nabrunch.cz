@@ -1,0 +1,24 @@
+name: Kontrola URL
+
+# Vypíše stavový kód a cíl přesměrování pro zadané cesty (např. staré adresy z WordPressu).
+on:
+  workflow_dispatch:
+    inputs:
+      cesty:
+        description: 'Cesty oddělené mezerou'
+        default: '/ /lokalita/praha/'
+
+jobs:
+  url:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SITE_HOST: ${{ vars.SITE_HOST || 'new.nabrunch.cz' }}
+      CESTY: ${{ inputs.cesty }}
+    steps:
+      - run: |
+          for c in $CESTY; do
+            r=$(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' "https://$SITE_HOST$c")
+            echo "::notice title=$c::$r"
+            sleep 0.5
+          done

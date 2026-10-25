@@ -4,6 +4,7 @@ import '@fontsource-variable/montserrat';
 import '../styles/global.css';
 import { SITE } from '../lib/config';
 import { velky } from '../lib/data';
+import seoWp from '../data/seo-wp.json';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import OdberNovinek from '../components/OdberNovinek.astro';
@@ -19,11 +20,14 @@ interface Props {
   publikovano?: string;
 }
 
-const { title, description, jsonLd, noindex = false, obrazek, typ = 'website', publikovano } = Astro.props;
+const { title, jsonLd, noindex = false, obrazek, typ = 'website', publikovano } = Astro.props;
+// Stránky, které existovaly na WordPressu, si nechávají přesně stejný titulek (a popis, pokud byl) – kvůli pozicím ve vyhledávání
+const wp = (seoWp as Record<string, { t: string; d?: string }>)[decodeURI(Astro.url.pathname)];
+const description = wp?.d ?? Astro.props.description;
 const og = new URL(velky(obrazek ?? '/wp-content/uploads/2025/03/nabrunch-1.jpg'), SITE.url).href;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const robots = !SITE.indexovat || noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large';
-const fullTitle = /nabrunch/i.test(title) || title.length > 48 ? title : `${title} | ${SITE.nazev}`;
+const fullTitle = wp?.t ?? (/nabrunch/i.test(title) || title.length > 48 ? title : `${title} | ${SITE.nazev}`);
 ---
 
 <!doctype html>
