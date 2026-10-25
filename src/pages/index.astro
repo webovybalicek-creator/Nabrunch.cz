@@ -96,30 +96,6 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <span class="eyebrow">Kde hledáš?</span>
-          <h2>Brunch podle města</h2>
-        </div>
-        <a href="/lokality/" class="btn btn--ghost">Všechna města</a>
-      </div>
-      <ul class="mesta">
-        {
-          topMesta.slice(0, 16).map((m) => (
-            <li>
-              <a href={lokalitaUrl(m)}>
-                <span>{m.nazev}</span>
-                <span class="muted">{m.podniky.length}</span>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </section>
-
   <section class="section section--blush">
     <div class="wrap">
       <div class="sec-head">
@@ -287,22 +263,6 @@ const jsonLd = {
   }
   .temata .muted {
     font-size: 0.85rem;
-  }
-  .mesta {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
-    gap: 0 2rem;
-  }
-  .mesta a {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--line);
-    text-decoration: none;
-    font-weight: 500;
   }
   .karty--blog {
     grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
