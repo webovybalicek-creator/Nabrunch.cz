@@ -27,5 +27,5 @@ jobs:
           zkus "FTPS výpis" --ssl-reqd --insecure --list-only "ftp://$FTP_SERVER/"
           zkus "FTPS výpis bez EPSV" --ssl-reqd --insecure --disable-epsv --list-only "ftp://$FTP_SERVER/"
           zkus "FTPS výpis skip-pasv-ip" --ssl-reqd --insecure --disable-epsv --ftp-skip-pasv-ip --list-only "ftp://$FTP_SERVER/"
-          zkus "FTPS upload bez EPSV" --ssl-reqd --insecure --disable-epsv -T t.txt "ftp://$FTP_SERVER/new.nabrunch.cz/t.txt"
+          zkus "FTPS upload bez EPSV" --ssl-reqd --insecure --disable-epsv -T t.txt "ftp://$FTP_SERVER/t.txt"
           zkus "Implicitní FTPS 990" --insecure --list-only "ftps://$FTP_SERVER:990/"

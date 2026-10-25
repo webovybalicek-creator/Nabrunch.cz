@@ -13,8 +13,8 @@ jobs:
       FTP_SERVER: ${{ secrets.FTP_SERVER }}
       FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
       FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-      # Složka subdomény na FTP (relativně ke kořeni FTP účtu)
-      FTP_DIR: ${{ vars.FTP_DIR || 'new.nabrunch.cz' }}
+      # Cílová složka na FTP – účet new.nabrunch.cz vede rovnou do složky subdomény
+      FTP_DIR: ${{ vars.FTP_DIR || '.' }}
     steps:
       - uses: actions/checkout@v4
 
