@@ -109,7 +109,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section">
+  <section class="pridej-sekce" slot="za-newsletterem">
     <div class="wrap pridej">
       <div>
         <span class="eyebrow">Pro podniky</span>
@@ -266,6 +266,11 @@ const jsonLd = {
   }
   .karty--blog {
     grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+  /* Přidej podnik: hned pod newsletterem na stejném krémovém pozadí */
+  .pridej-sekce {
+    background: var(--cream);
+    padding-bottom: clamp(40px, 6vw, 72px);
   }
   .pridej {
     display: flex;

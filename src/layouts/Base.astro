@@ -75,6 +75,7 @@ const fullTitle = wp?.t ?? (/nabrunch/i.test(title) || title.length > 48 ? title
       <slot />
     </main>
     <OdberNovinek />
+    <slot name="za-newsletterem" />
     <Footer />
     <script>
       import { inicializujSrdicka, inicializujPocitadlo } from '../scripts/oblibene';
