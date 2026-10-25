@@ -31,6 +31,13 @@ const { c } = Astro.props;
     overflow: hidden;
     background: var(--cream);
   }
+  /* Stejné přiblížení fotky jako u karet podniků */
+  .bk__foto :global(.foto) {
+    transition: transform 0.4s ease;
+  }
+  .bk a:hover .bk__foto :global(.foto) {
+    transform: scale(1.04);
+  }
   .bk__kat {
     display: block;
     margin-top: 0.9rem;
