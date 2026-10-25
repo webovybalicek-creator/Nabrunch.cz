@@ -47,7 +47,8 @@ vytvoří náhledy `public/nahledy/…` (WebP 640 px) a commitne je. Spouští s
 Každý push do `main` (a dokončené stažení obrázků) web sestaví a přes FTPS nahraje na hosting (`.github/workflows/deploy.yml`).
 Nahrávají se jen změněné soubory, server je rozbalí dočasným PHP skriptem.
 
-Secrets: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (FTP účet, jehož kořen je složka webu `/nabrunch.cz/web`),
+Secrets: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (hlavní FTP účet hostingu; deploy sám pozná, že má nahrávat do `/nabrunch.cz/web/`,
+a funguje i s účtem, jehož kořen je přímo složka webu),
 `ECOMAIL_API_KEY` (newsletter), `SMTP_PASSWORD` (e-maily z formulářů přes smtp.websupport.cz).
 Proměnná `SITE_HOST` (výchozí `nabrunch.cz`) – doména, přes kterou se volá rozbalovač.
 
