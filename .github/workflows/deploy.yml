@@ -52,6 +52,20 @@ jobs:
         if: env.FTP_PASSWORD == ''
         run: echo "::warning::Chybí secret FTP_PASSWORD – web je sestavený, ale nenahrál se na hosting."
 
+      - name: Cílová složka na FTP
+        if: env.FTP_PASSWORD != ''
+        run: |
+          # Účet s kořenem celého hostingu (vidí složku nabrunch.cz) → nahrávat do nabrunch.cz/web/,
+          # účet s kořenem přímo ve složce webu → do kořene. Zbytky po nepovedených deployích v kořeni uklidit.
+          F="--ssl-reqd --insecure --disable-epsv --user $FTP_USERNAME:$FTP_PASSWORD"
+          LS=$(curl -sS $F --list-only "ftp://$FTP_SERVER/" || true)
+          if printf '%s\n' "$LS" | grep -qx 'nabrunch.cz'; then DIR='nabrunch.cz/web/'; else DIR=''; fi
+          echo "FTP_DIR=$DIR" >> "$GITHUB_ENV"
+          echo "::notice::Cílová složka na FTP: /${DIR}"
+          for f in $(printf '%s\n' "$LS" | grep -E '^(_site-[0-9a-f]+\.zip|_deploy-[0-9a-f]+\.php)$'); do
+            [ -n "$DIR" ] && curl -sS $F -Q "DELE $f" "ftp://$FTP_SERVER/" -o /dev/null && echo "Smazán zbytek: $f"
+          done
+
       - name: Příprava rozbalovače
         if: env.FTP_PASSWORD != ''
         run: |
@@ -65,7 +79,7 @@ jobs:
           echo "ZIP=$ZIP" >> "$GITHUB_ENV"
           echo "PHP=$PHP" >> "$GITHUB_ENV"
           echo "DEPLOY_TOKEN=$TOKEN" >> "$GITHUB_ENV"
-          curl -sS --fail --ssl-reqd --insecure --retry 3 --user "$FTP_USERNAME:$FTP_PASSWORD" -T "$PHP" "ftp://$FTP_SERVER/$PHP"
+          curl -sS --fail --ssl-reqd --insecure --retry 3 --user "$FTP_USERNAME:$FTP_PASSWORD" -T "$PHP" "ftp://$FTP_SERVER/${FTP_DIR}$PHP"
 
       - name: Porovnání se serverem (jen změněné soubory)
         if: env.FTP_PASSWORD != ''
@@ -101,7 +115,7 @@ jobs:
         run: |
           curl -sS --fail --ssl-reqd --insecure --retry 3 \
             --user "$FTP_USERNAME:$FTP_PASSWORD" \
-            -T "$ZIP" "ftp://$FTP_SERVER/$ZIP"
+            -T "$ZIP" "ftp://$FTP_SERVER/${FTP_DIR}$ZIP"
 
       - name: Rozbalení na serveru
         if: env.FTP_PASSWORD != ''
