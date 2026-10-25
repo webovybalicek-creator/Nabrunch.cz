@@ -1,0 +1,28 @@
+name: Diagnostika deploye
+
+# Ověří, kam vede FTP účet a jestli web na SITE_HOST spouští PHP z té složky (nahraje a zase smaže testovací soubor).
+on:
+  workflow_dispatch:
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      SITE_HOST: ${{ vars.SITE_HOST || 'nabrunch.cz' }}
+    steps:
+      - run: |
+          F="--ssl-reqd --insecure --disable-epsv --user $FTP_USERNAME:$FTP_PASSWORD"
+          ls=$(curl -sS $F --list-only "ftp://$FTP_SERVER/" 2>&1 | head -40 | tr '\n' ' ')
+          echo "::notice title=Obsah složky FTP účtu::$ls"
+          N="ping-$(openssl rand -hex 6).php"
+          printf '<?php echo "PONG ", __DIR__;' > "$N"
+          curl -sS --fail $F -T "$N" "ftp://$FTP_SERVER/$N" && echo "::notice title=Nahráno::$N"
+          for s in https http; do
+            r=$(curl -sS -L --max-time 20 -w ' | HTTP %{http_code} %{url_effective}' "$s://$SITE_HOST/$N" 2>&1 | tr '\n' ' ' | cut -c1-400)
+            echo "::notice title=$s://$SITE_HOST/$N::$r"
+          done
+          curl -sS $F -Q "DELE $N" "ftp://$FTP_SERVER/" -o /dev/null && echo "::notice title=Úklid::testovací soubor smazán"
