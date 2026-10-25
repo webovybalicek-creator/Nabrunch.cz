@@ -1,0 +1,97 @@
+# naBrunch.cz – pokyny pro Clauda
+
+Průvodce snídaňovými a brunchovými místy v Česku. Statický web na **Astro 7**, data v JSON a Markdownu,
+žádná databáze ani CMS. Do 25. 10. 2026 běžel na WordPressu, odkud se převzala data, adresy i SEO.
+Podrobnosti viz `README.md`.
+
+**Komunikuj česky. Texty na webu piš česky, s českými uvozovkami „…“ a správnou diakritikou.**
+
+## Jak se pracuje
+
+- Úpravy se dělají přímo v repu. **Každý push do `main` se automaticky nasadí na ostrý web** (GitHub Action `deploy.yml`, FTPS na hosting). Žádný ruční upload.
+- Před pushem vždy ověř, že web jde sestavit: `npm install` (jednou) a `npm run build`. Když build spadne, nepushuj.
+- Lokální náhled: `npm run dev`.
+- Commit zprávy piš česky a krátce popiš, co se změnilo (např. „Přidán podnik Café XY, Praha 2“).
+- Po pushu zkontroluj v záložce Actions, že workflow **Build a deploy** doběhl zeleně.
+
+## Kde co je
+
+| Co chci upravit | Soubor |
+|---|---|
+| Podniky (karty, detail, mapa) | `src/data/podniky.json` |
+| Články blogu | `src/content/blog/<slug>.md` |
+| Lokality (název → slug) | `src/data/lokality.json` |
+| Témata (vegan, pet-friendly…) | `TEMATA` v `src/lib/data.ts` |
+| Obchodní podmínky, GDPR | `src/data/stranky.json` |
+| Statické stránky (O nás, Kontakt, FAQ…) | `src/pages/*.astro` |
+| Hlavička, patička, komponenty | `src/components/` |
+| Barvy, písma, rozvržení | `src/styles/global.css` (proměnné v `:root`) |
+| E-mail, sociální sítě, AdSense, GA | `src/lib/config.ts` |
+| Přesměrování starých adres | `public/.htaccess` |
+| Formuláře (přidat podnik, newsletter, hodnocení) | `public/api/*.php` |
+
+## Přidání nebo úprava podniku
+
+Podnik je jeden objekt v poli `src/data/podniky.json`. Strukturu popisuje rozhraní `Podnik` v `src/lib/data.ts` –
+nový podnik zkopíruj z existujícího a vyplň všechna pole.
+
+- `id` – unikátní číslo (vezmi nejvyšší existující + 1).
+- `slug` – malá písmena bez diakritiky, slova oddělená pomlčkou; z něj vznikne adresa `/podniky/<slug>/`. **U existujících podniků slug neměň** (rozbilo by to adresu, kterou zná Google).
+- `datum` – ve formátu `RRRR-MM-DD HH:MM:SS`; podle něj se řadí „Nově přidané“.
+- `doporuceny: true` = „Naše srdcovka“ (kategorie Doporučené podniky).
+- `lokality` – u Prahy obvod i město, např. `["Praha 2", "Praha"]`. Nová lokalita musí mít záznam v `src/data/lokality.json`.
+- `lat` / `lon` – souřadnice pro mapu (z Google Maps).
+- `popis` a `tip` jsou HTML (`<p>`, `<h2>`, `<strong>`…).
+- `foto` a `galerie` – viz Obrázky níže.
+
+## Obrázky
+
+V datech jsou obrázky uložené pod cestou `/wp-content/uploads/RRRR/MM/nazev.jpg`, ale web zobrazuje WebP verze:
+
+- `public/obrazky/RRRR/MM/nazev.webp` – velký, max. 1400 px (detail, galerie, články)
+- `public/nahledy/RRRR/MM/nazev.webp` – náhled, šířka 640 px (karty)
+
+**Nové obrázky** (WordPress už neběží, workflow „Stažení obrázků“ pro ně nepoužívej): převeď fotku na WebP
+ve dvou velikostech, ulož do obou složek pod stejnou cestou a v datech uveď odpovídající cestu
+`/wp-content/uploads/RRRR/MM/nazev.jpg` (přípona v datech nevadí, převádí se na `.webp`).
+Na převod lze použít Python s Pillow (viz `scripts/stahni-obrazky.py`, funkce `uloz`).
+Názvy souborů bez mezer a diakritiky.
+
+## Články blogu
+
+Soubor `src/content/blog/<slug>.md`, adresa článku je `/<slug>/`. Frontmatter:
+
+```yaml
+---
+title: "Nadpis článku"
+description: "Popis pro vyhledávače (cca 150 znaků)"
+seoTitle: "Titulek pro Google – naBrunch.cz"   # nepovinné
+date: "2026-10-25T10:00:00"
+image: "/wp-content/uploads/2026/10/obrazek.jpg"
+---
+```
+
+Tělo je HTML (převzaté z WordPressu), nové články můžou být v HTML i Markdownu.
+
+## SEO – na co pozor
+
+- `src/data/seo-wp.json` obsahuje titulky a popisy převzaté z WordPressu a **má přednost** před tím, co je v datech.
+  Když chceš u existující stránky změnit `<title>` nebo meta popis, uprav záznam pro její cestu právě tady.
+- Neměň adresy (slugy) existujících stránek. Pokud je nutné, přidej přesměrování 301 do `public/.htaccess`.
+- `SITE.indexovat` v `src/lib/config.ts` musí zůstat `true`.
+
+## Co neměnit bez domluvy s Vladimírem
+
+- `.github/workflows/deploy.yml` a `deploy/deploy.php` – nasazení na hosting.
+- `public/api/_smtp.php` a odesílání e-mailů, `public/.htaccess`.
+- ID AdSense a Analytics v `src/lib/config.ts`, `public/ads.txt`.
+- **Nespouštěj `scripts/import-wxr.py` ani `scripts/seo-z-wp.py`** – sloužily k jednorázovému převodu z WordPressu
+  a přepsaly by všechna data včetně pozdějších úprav.
+- Hesla a API klíče nikdy nedávej do repa. Jsou v GitHub Secrets (`FTP_*`, `SMTP_PASSWORD`, `ECOMAIL_API_KEY`)
+  a deploy je zapisuje jen na server.
+
+## Užitečné workflow (GitHub → Actions → Run workflow)
+
+- **Screenshot živého webu** – vyfotí zadané stránky (desktop i mobil) do větve `screenshots` a vypíše chyby z konzole.
+- **Kontrola URL** – stavové kódy a přesměrování pro zadané cesty.
+- **Test SMTP** – ověří odesílání e-mailů z formulářů.
