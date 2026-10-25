@@ -1,0 +1,339 @@
+---
+import Base from '../layouts/Base.astro';
+import Karta from '../components/Karta.astro';
+import Vypis from '../components/Vypis.astro';
+import BlogKarta from '../components/BlogKarta.astro';
+import Foto from '../components/Foto.astro';
+import { SITE } from '../lib/config';
+import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podnikuText, poradi } from '../lib/data';
+import { clanky } from '../lib/blog';
+
+const srdcovky = doporucene();
+const nove = nejnovejsi(8);
+const vse = [...PODNIKY].sort(poradi);
+const topMesta = [...mesta()].sort((a, b) => b.podniky.length - a.podniky.length);
+const tipy = (await clanky()).slice(0, 6);
+const kolaz = srdcovky.slice(0, 3);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.nazev,
+  url: SITE.url,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/podniky/?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<Base
+  title="Nabrunch.cz | Průvodce nejlepšími snídaňovými a brunchovými místy v Česku."
+  description="Věříme, že snídaně a brunche nejsou jen o jídle, ale o atmosféře, zážitku a chvíli klidu. Vybíráme ty nejlepší podniky po celé České republice – od skrytých kaváren v Praze po rodinné pekárny na jižní Moravě."
+  obrazek="/wp-content/uploads/2025/03/nabrunch-1.jpg"
+  jsonLd={jsonLd}
+>
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__text">
+        <span class="eyebrow">nabrunch.cz</span>
+        <h1>Víme, kam <span>naBrunch!</span></h1>
+        <p class="lead">Objev ta nejlepší místa na snídani a brunch po celé České republice. Ručně vybraných {podnikuText(PODNIKY.length)} v {mesta().length} městech.</p>
+        <form class="hero__hledat" action="/podniky/" method="get" role="search">
+          <label class="sr-only" for="hero-q">Hledat podnik nebo město</label>
+          <input id="hero-q" type="search" name="q" placeholder="Kavárna, město nebo ulice…" autocomplete="off" />
+          <button class="btn btn--akcent" type="submit">Najdi si svůj brunch</button>
+        </form>
+        <ul class="hero__mesta" aria-label="Oblíbená města">
+          {topMesta.slice(0, 6).map((m) => <li><a class="tag" href={lokalitaUrl(m)}>{m.nazev}</a></li>)}
+          <li><a class="tag" href="/mapa/">🗺️ Mapa podniků</a></li>
+        </ul>
+      </div>
+      <div class="hero__kolaz" aria-hidden="true">
+        {kolaz.map((p, i) => <div class={`hero__f hero__f--${i}`}><Foto src={p.foto} alt="" eager={i === 0} /></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Naše srdcovky</span>
+          <h2>Doporučené podniky</h2>
+        </div>
+        <a href="/podniky/" class="btn btn--ghost">Všechny podniky</a>
+      </div>
+      <ul class="karty">{srdcovky.map((p) => <Karta p={p} />)}</ul>
+    </div>
+  </section>
+
+  <section class="section section--blush">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Nová místa, nové chutě</span>
+          <h2>Nově přidané</h2>
+        </div>
+      </div>
+      <ul class="karty">{nove.map((p) => <Karta p={p} />)}</ul>
+    </div>
+  </section>
+
+  <section class="section" id="vsechnypodniky">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Brunch podle tebe</span>
+          <h2>Všechny podniky</h2>
+          <p class="muted">Město, chuť, atmosféra? Záleží jen na tobě, co si zrovna přeješ najít.</p>
+        </div>
+      </div>
+      <Vypis podniky={vse} />
+    </div>
+  </section>
+
+  <section class="section section--blush">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Podle chuti a nálady</span>
+          <h2>Na co máš dnes chuť?</h2>
+        </div>
+      </div>
+      <ul class="temata">
+        {
+          TEMATA.map((t) => (
+            <li>
+              <a href={temaUrl(t)}>
+                <span class="temata__e" aria-hidden="true">{t.emoji}</span>
+                <strong>{t.kratce}</strong>
+                <span class="muted">{podnikuText(podnikyTematu(t).length)}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Kde hledáš?</span>
+          <h2>Brunch podle města</h2>
+        </div>
+        <a href="/lokality/" class="btn btn--ghost">Všechna města</a>
+      </div>
+      <ul class="mesta">
+        {
+          topMesta.slice(0, 16).map((m) => (
+            <li>
+              <a href={lokalitaUrl(m)}>
+                <span>{m.nazev}</span>
+                <span class="muted">{m.podniky.length}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--blush">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Co je nového</span>
+          <h2>Brunch tipy</h2>
+        </div>
+        <a href="/blog/" class="btn btn--ghost">Všechny články</a>
+      </div>
+      <ul class="karty karty--blog">{tipy.map((c) => <BlogKarta c={c} />)}</ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap pridej">
+      <div>
+        <span class="eyebrow">Pro podniky</span>
+        <h2>Přidej svůj podnik</h2>
+        <p>Vaříte a pečete srdcem? Servírujete brunch s láskou? Dejte nám o sobě vědět, ať se do vašeho brunche lidé zamilují hned po prvním soustu.</p>
+      </div>
+      <a href="/pridat-podnik/" class="btn btn--akcent">Přidat podnik</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    background: var(--blush);
+    padding-block: clamp(32px, 6vw, 80px);
+    overflow: hidden;
+  }
+  .hero__in {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.2rem);
+  }
+  .hero h1 span {
+    color: var(--accent);
+  }
+  .hero__hledat {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.75rem 0 1.25rem;
+    padding: 0.4rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgb(83 42 25 / 0.08);
+    max-width: 36rem;
+  }
+  .hero__hledat input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    padding: 0.6em 1em;
+    font: inherit;
+    background: transparent;
+    color: var(--ink);
+  }
+  .hero__hledat input:focus {
+    outline: none;
+  }
+  .hero__mesta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .hero__mesta .tag {
+    background: #fff;
+    font-size: 0.85rem;
+    padding: 0.4em 0.9em;
+  }
+  .hero__kolaz {
+    position: relative;
+    aspect-ratio: 1 / 1;
+  }
+  .hero__f {
+    position: absolute;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgb(83 42 25 / 0.16);
+    background: var(--cream);
+  }
+  .hero__f--0 {
+    inset: 0 22% 22% 0;
+  }
+  .hero__f--1 {
+    width: 46%;
+    aspect-ratio: 4 / 5;
+    right: 0;
+    top: 12%;
+    border: 6px solid #fff;
+  }
+  .hero__f--2 {
+    width: 42%;
+    aspect-ratio: 1;
+    left: 22%;
+    bottom: 0;
+    border: 6px solid #fff;
+  }
+  @media (max-width: 860px) {
+    .hero__in {
+      grid-template-columns: 1fr;
+    }
+    .hero__kolaz {
+      display: none;
+    }
+  }
+  @media (max-width: 520px) {
+    .hero__hledat {
+      flex-direction: column;
+      border-radius: var(--radius);
+    }
+  }
+  .temata {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr));
+    gap: 0.9rem;
+  }
+  .temata a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 0.9rem;
+    align-items: center;
+    padding: 1.1rem 1.25rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .temata a:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    color: inherit;
+  }
+  .temata__e {
+    grid-row: span 2;
+    font-size: 1.8rem;
+  }
+  .temata strong {
+    font-family: var(--f-display);
+    color: var(--brown-dark);
+  }
+  .temata .muted {
+    font-size: 0.85rem;
+  }
+  .mesta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
+    gap: 0 2rem;
+  }
+  .mesta a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .karty--blog {
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+  .pridej {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem 3rem;
+    padding: clamp(28px, 5vw, 56px);
+    background: var(--brown-dark);
+    border-radius: 28px;
+    color: rgb(255 255 255 / 0.85);
+  }
+  .pridej h2 {
+    color: #fff;
+  }
+  .pridej p {
+    margin: 0;
+  }
+</style>

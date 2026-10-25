@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Mapa from '../components/Mapa.astro';
+import { PODNIKY, podnikuText } from '../lib/data';
+---
+
+<Base title="Mapa podniků na snídani a brunch" description={`Všech ${podnikuText(PODNIKY.length)} na snídani a brunch na jedné mapě. Najdi brunch ve svém okolí.`}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Mapa podniků' }]} />
+      <h1>Mapa podniků</h1>
+      <p class="lead">Všechna naše brunchová místa na jedné mapě. Tmavší body jsou naše srdcovky.</p>
+      <p><button type="button" class="btn btn--ghost" data-poloha>📍 Ukázat podniky u mě</button></p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <Mapa podniky={PODNIKY} popis="Mapa všech podniků na snídani a brunch" vysoka />
+    </div>
+  </section>
+</Base>
+
+<script>
+  // „U mě“: přiblíží mapu na polohu uživatele (poloha se nikam neodesílá)
+  document.querySelector<HTMLButtonElement>('[data-poloha]')?.addEventListener('click', (e) => {
+    const b = e.currentTarget as HTMLButtonElement;
+    if (!navigator.geolocation) return;
+    b.disabled = true;
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        b.disabled = false;
+        window.dispatchEvent(new CustomEvent('nb-poloha', { detail: [pos.coords.latitude, pos.coords.longitude] }));
+        document.querySelector('[data-mapa]')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      },
+      () => {
+        b.disabled = false;
+        b.textContent = 'Polohu se nepodařilo zjistit';
+      },
+    );
+  });
+</script>

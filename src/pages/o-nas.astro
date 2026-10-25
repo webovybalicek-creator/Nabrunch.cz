@@ -1,0 +1,19 @@
+---
+import Stranka from '../components/Stranka.astro';
+import { PODNIKY, mesta, podnikuText } from '../lib/data';
+---
+
+<Stranka title="O nás" description="Projekt naBrunch.cz vznikl z jednoduché myšlenky: milujeme brunche a chceme je sdílet s ostatními. Vybíráme ty nejlepší podniky po celé ČR." lead="Projekt naBrunch.cz vznikl z jednoduché myšlenky: milujeme brunche a chceme je sdílet s ostatními.">
+  <p>Věříme, že snídaně a brunche nejsou jen o jídle, ale o atmosféře, zážitku a chvíli klidu, kterou si člověk zaslouží. Proto pro vás vybíráme ty nejlepší podniky po celé České republice – od skrytých kaváren v uličkách Prahy až po rodinné pekárny na jižní Moravě.</p>
+  <h2>Doporučujeme jen to, co bychom sami s chutí navštívili.</h2>
+  <p>Za projektem stojí tým lidí, kteří milují jídlo, design a objevování. Každý podnik, který na webu najdete, jsme buď osobně navštívili, nebo pečlivě vybrali na základě doporučení od lidí, kterým důvěřujeme.</p>
+  <h2>Co u nás najdete?</h2>
+  <ul>
+    <li>🗺️ Snídaňová a brunch místa po celé ČR – aktuálně {podnikuText(PODNIKY.length)} v {mesta().length} městech</li>
+    <li>🍽️ Filtrování podle místa, chuti i atmosféry</li>
+    <li>📝 Články, tipy a inspiraci na každý víkend</li>
+    <li>✨ Tajná místa, o kterých jinde neuslyšíš</li>
+  </ul>
+  <p>Díky, že bruncheš s námi. ❤️<br />Tým NaBrunch.cz</p>
+  <p><a class="btn" href="/podniky/">Prohlédnout podniky</a></p>
+</Stranka>

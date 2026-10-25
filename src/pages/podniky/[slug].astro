@@ -1,0 +1,502 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Foto from '../../components/Foto.astro';
+import Karta from '../../components/Karta.astro';
+import Srdce from '../../components/Srdce.astro';
+import Mapa from '../../components/Mapa.astro';
+import BlogKarta from '../../components/BlogKarta.astro';
+import { SITE } from '../../lib/config';
+import {
+  PODNIKY,
+  url,
+  mesto,
+  lokalitaPodle,
+  lokalitaUrl,
+  vLokalite,
+  vOkoli,
+  kmText,
+  TEMATA,
+  temaUrl,
+  type Podnik,
+} from '../../lib/data';
+import { clanky, clankyOPodniku } from '../../lib/blog';
+
+export function getStaticPaths() {
+  return PODNIKY.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+
+const { p } = Astro.props as { p: Podnik };
+const m = mesto(p);
+const lok = lokalitaPodle(m);
+const praha = /^Praha \d+$/.test(m) ? lokalitaPodle('Praha') : undefined;
+const okoli = vOkoli(p, 4);
+const oPodniku = clankyOPodniku(await clanky(), p).slice(0, 3);
+const temata = TEMATA.filter((t) => p[t.pole].includes(t.hodnota) && t.hodnota !== 'Klasická');
+const fotky = [p.foto, ...p.galerie];
+
+const textPopisu = p.popis.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+const description =
+  p.seoPopis?.replace(/\s*[-–|]\s*naBrunch\.cz\s*$/i, '') ||
+  `${p.nazev} – ${p.adresa}. ${textPopisu.slice(0, 120).replace(/\s+\S*$/, '')}…`;
+const title = p.seoTitulek?.replace(/\s*[-–|]\s*naBrunch\.cz\s*$/i, '') || `${p.nazev} – snídaně a brunch ${vLokalite(m)}`;
+
+const ano = (v: boolean | null) => (v === true ? 'Ano' : v === false ? 'Ne' : undefined);
+const parametry = [
+  ['Rezervace', p.rezervace && !/^https?:/.test(p.rezervace) ? p.rezervace : p.rezervace ? 'Ano, online' : undefined],
+  ['Platba', p.platba.join(', ') || undefined],
+  ['Wi-Fi', ano(p.wifi)],
+  ['WC', ano(p.wc)],
+  ['Sezení', [...new Set([...p.sezeni, ...p.atmosfera.filter((a) => a === 'Zahrádka' || a === 'Sezení uvnitř')])].join(', ') || undefined],
+].filter(([, v]) => v) as [string, string][];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CafeOrCoffeeShop',
+  name: p.nazev,
+  url: new URL(url(p), SITE.url).href,
+  image: fotky.slice(0, 4).map((f) => new URL(f, SITE.url).href),
+  address: { '@type': 'PostalAddress', streetAddress: p.adresa, addressLocality: m.replace(/ \d+$/, ''), addressCountry: 'CZ' },
+  ...(p.lat != null ? { geo: { '@type': 'GeoCoordinates', latitude: p.lat, longitude: p.lon } } : {}),
+  ...(p.telefon ? { telephone: p.telefon } : {}),
+  ...(p.web ? { sameAs: [p.web, p.instagramUrl].filter(Boolean) } : {}),
+  servesCuisine: p.kuchyne,
+  acceptsReservations: !!p.rezervace && !/^ne\b/i.test(p.rezervace),
+};
+---
+
+<Base title={title} description={description} obrazek={p.foto} jsonLd={jsonLd}>
+  <article>
+    <header class="detail-head">
+      <div class="wrap">
+        <Breadcrumb
+          polozky={[
+            { nazev: 'Podniky', url: '/podniky/' },
+            ...(praha ? [{ nazev: 'Praha', url: lokalitaUrl(praha) }] : []),
+            ...(lok ? [{ nazev: lok.nazev, url: lokalitaUrl(lok) }] : []),
+            { nazev: p.nazev },
+          ]}
+        />
+        <div class="detail-head__row">
+          <div>
+            {p.doporuceny && <span class="srdcovka">♥ Naše srdcovka</span>}
+            <h1>{p.nazev}</h1>
+            <p class="detail-adr">📍 {p.adresa}</p>
+            <p class="detail-tagy">
+              {p.kuchyne.map((k) => <span class="tag tag--zelena">{k}</span>)}
+              {p.atmosfera.filter((a) => a !== 'Sezení uvnitř').map((a) => <span class="tag">{a}</span>)}
+            </p>
+          </div>
+          <div class="detail-akce">
+            {p.googleMaps && <a class="btn btn--akcent" href={p.googleMaps} rel="noopener" target="_blank">Navigovat</a>}
+            {p.web && <a class="btn btn--ghost" href={p.web} rel="noopener nofollow" target="_blank">Web</a>}
+            {p.telefon && <a class="btn btn--ghost" href={`tel:${p.telefon}`}>Zavolat</a>}
+            <Srdce p={p} sTextem />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <div class:list={['galerie', `galerie--${Math.min(fotky.length, 5)}`]} data-galerie>
+        {
+          fotky.slice(0, 5).map((f, i) => (
+            <a href={f} class="galerie__f" data-i={i}>
+              <Foto src={f} alt={`${p.nazev} – fotka ${i + 1}`} plna={i === 0} eager={i === 0} />
+              {i === 4 && fotky.length > 5 && <span class="galerie__vic">+{fotky.length - 5}</span>}
+            </a>
+          ))
+        }
+      </div>
+      <dialog class="lightbox" data-lightbox>
+        <img alt="" data-lb-img />
+        <button type="button" class="lb-x" data-lb-zavrit aria-label="Zavřít">×</button>
+        <button type="button" class="lb-sip lb-sip--l" data-lb-krok="-1" aria-label="Předchozí fotka">‹</button>
+        <button type="button" class="lb-sip lb-sip--p" data-lb-krok="1" aria-label="Další fotka">›</button>
+      </dialog>
+      <script type="application/json" data-fotky set:html={JSON.stringify(fotky)} />
+
+      <div class="detail-grid">
+        <div>
+          {
+            p.tip && (
+              <aside class="tip">
+                <span class="tip__h">🥞 {p.tipNadpis?.replace(/:$/, '') || 'Náš brunch tip'}</span>
+                <div set:html={p.tip} />
+              </aside>
+            )
+          }
+          <div class="prose" set:html={p.popis} />
+          {
+            temata.length > 0 && (
+              <p class="detail-temata">
+                Podobná místa:{' '}
+                {temata.map((t) => (
+                  <a class="tag" href={temaUrl(t)}>
+                    {t.emoji} {t.kratce}
+                  </a>
+                ))}
+              </p>
+            )
+          }
+        </div>
+
+        <aside class="info">
+          {
+            p.oteviraciDoba.length > 0 && (
+              <section>
+                <h2>Otevírací doba</h2>
+                <ul class="info__doba">{p.oteviraciDoba.map((r) => <li>{r}</li>)}</ul>
+              </section>
+            )
+          }
+          <section>
+            <h2>Kontakt</h2>
+            <dl>
+              <dt>Adresa</dt>
+              <dd>{p.adresa}</dd>
+              {
+                p.telefon && (
+                  <>
+                    <dt>Telefon</dt>
+                    <dd><a href={`tel:${p.telefon}`}>{p.telefonText ?? p.telefon}</a></dd>
+                  </>
+                )
+              }
+              {
+                p.web && (
+                  <>
+                    <dt>Web</dt>
+                    <dd><a href={p.web} rel="noopener nofollow" target="_blank">{p.web.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</a></dd>
+                  </>
+                )
+              }
+              {
+                p.instagram && (
+                  <>
+                    <dt>Instagram</dt>
+                    <dd>{p.instagramUrl ? <a href={p.instagramUrl} rel="noopener nofollow" target="_blank">{p.instagram}</a> : p.instagram}</dd>
+                  </>
+                )
+              }
+            </dl>
+          </section>
+          {
+            parametry.length > 0 && (
+              <section>
+                <h2>Dobré vědět</h2>
+                <dl>
+                  {parametry.map(([k, v]) => (
+                    <>
+                      <dt>{k}</dt>
+                      <dd>{k === 'Rezervace' && p.rezervace && /^https?:/.test(p.rezervace) ? <a href={p.rezervace} rel="noopener nofollow" target="_blank">Rezervovat online</a> : v}</dd>
+                    </>
+                  ))}
+                </dl>
+              </section>
+            )
+          }
+          {p.lat != null && <Mapa podniky={[p]} popis={`Poloha podniku ${p.nazev}`} />}
+          <p class="info__chyba muted">
+            Něco nesedí? <a href={`mailto:${SITE.email}?subject=${encodeURIComponent(`Oprava: ${p.nazev}`)}`}>Napiš nám</a>.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  {
+    oPodniku.length > 0 && (
+      <section class="section section--blush">
+        <div class="wrap">
+          <h2>Píšeme o něm</h2>
+          <ul class="karty karty--blog">{oPodniku.map((c) => <BlogKarta c={c} />)}</ul>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    okoli.length > 0 && (
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Další brunch v okolí</h2>
+            {lok && (
+              <a class="btn btn--ghost" href={lokalitaUrl(praha ?? lok)}>
+                Vše {vLokalite((praha ?? lok).nazev)}
+              </a>
+            )}
+          </div>
+          <ul class="karty">
+            {okoli.map(({ p: o, km }) => (
+              <>
+                <Karta p={o} />
+              </>
+            ))}
+          </ul>
+          <p class="muted okoli-km">Vzdálenosti vzdušnou čarou: {okoli.map(({ p: o, km }) => `${o.nazev} ${kmText(km)}`).join(' · ')}</p>
+        </div>
+      </section>
+    )
+  }
+</Base>
+
+<script>
+  const dlg = document.querySelector<HTMLDialogElement>('[data-lightbox]');
+  const img = document.querySelector<HTMLImageElement>('[data-lb-img]');
+  const fotky = JSON.parse(document.querySelector('[data-fotky]')?.textContent ?? '[]') as string[];
+  let i = 0;
+  const ukaz = (n: number) => {
+    i = (n + fotky.length) % fotky.length;
+    if (img) img.src = fotky[i];
+  };
+  document.querySelectorAll<HTMLAnchorElement>('[data-galerie] a').forEach((a) =>
+    a.addEventListener('click', (e) => {
+      if (!dlg?.showModal) return;
+      e.preventDefault();
+      ukaz(Number(a.dataset.i));
+      dlg.showModal();
+    }),
+  );
+  document.querySelectorAll<HTMLButtonElement>('[data-lb-krok]').forEach((b) =>
+    b.addEventListener('click', () => ukaz(i + Number(b.dataset.lbKrok))),
+  );
+  document.querySelector('[data-lb-zavrit]')?.addEventListener('click', () => dlg?.close());
+  dlg?.addEventListener('click', (e) => e.target === dlg && dlg.close());
+  document.addEventListener('keydown', (e) => {
+    if (!dlg?.open) return;
+    if (e.key === 'ArrowRight') ukaz(i + 1);
+    if (e.key === 'ArrowLeft') ukaz(i - 1);
+  });
+</script>
+
+<style>
+  .detail-head {
+    padding-block: clamp(24px, 4vw, 44px) 1.5rem;
+  }
+  .detail-head__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.25rem 2rem;
+  }
+  .detail-head h1 {
+    margin-bottom: 0.25em;
+  }
+  .srdcovka {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.25em 0.8em;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font: 600 0.78rem/1.3 var(--f-display);
+  }
+  .detail-adr {
+    margin: 0 0 0.75rem;
+    color: var(--ink-soft);
+  }
+  .detail-tagy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0;
+  }
+  .detail-akce {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .galerie {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    height: clamp(260px, 42vw, 480px);
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .galerie__f {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .galerie__f:first-child {
+    grid-row: span 2;
+  }
+  .galerie--1 {
+    grid-template-columns: 1fr;
+  }
+  .galerie--2 {
+    grid-template-columns: 2fr 1fr;
+  }
+  .galerie--2 .galerie__f:nth-child(2) {
+    grid-row: span 2;
+  }
+  .galerie--3 {
+    grid-template-columns: 2fr 1fr;
+  }
+  .galerie--4 .galerie__f:nth-child(4) {
+    grid-column: span 2;
+  }
+  .galerie__vic {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgb(83 42 25 / 0.45);
+    color: #fff;
+    font: 600 1.5rem var(--f-display);
+  }
+  @media (max-width: 640px) {
+    .galerie {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr;
+      height: 420px;
+    }
+    .galerie__f:first-child {
+      grid-column: span 2;
+      grid-row: auto;
+    }
+    .galerie__f:nth-child(n + 4) {
+      display: none;
+    }
+  }
+  .lightbox {
+    width: min(96vw, 1200px);
+    max-height: 92vh;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
+    background: #1b120d;
+  }
+  .lightbox::backdrop {
+    background: rgb(20 12 8 / 0.85);
+  }
+  .lightbox img {
+    width: 100%;
+    max-height: 92vh;
+    object-fit: contain;
+  }
+  .lb-x,
+  .lb-sip {
+    position: absolute;
+    border: 0;
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: rgb(255 255 255 / 0.9);
+    color: var(--brown-dark);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .lb-x {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  .lb-sip {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .lb-sip--l {
+    left: 0.75rem;
+  }
+  .lb-sip--p {
+    right: 0.75rem;
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 22rem;
+    gap: clamp(2rem, 5vw, 4rem);
+    padding-block: clamp(32px, 5vw, 56px);
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .tip {
+    margin-bottom: 2rem;
+    padding: 1.4rem 1.6rem;
+    background: var(--blush);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--accent);
+  }
+  .tip__h {
+    display: block;
+    margin-bottom: 0.4rem;
+    font: 600 1.05rem var(--f-display);
+    color: var(--brown-dark);
+  }
+  .tip :global(p) {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+  .detail-temata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 2rem;
+    font-weight: 500;
+  }
+  .info {
+    position: sticky;
+    top: 90px;
+    display: grid;
+    gap: 1.25rem;
+  }
+  .info section {
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+  }
+  .info h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+  .info__doba {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.25rem;
+    font-size: 0.95rem;
+  }
+  .info dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.45rem 1rem;
+    font-size: 0.92rem;
+  }
+  .info dt {
+    color: var(--ink-soft);
+  }
+  .info dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .info :global(.mapa) {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+  .info__chyba {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .karty--blog {
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+  .okoli-km {
+    margin-top: 1.5rem;
+    font-size: 0.82rem;
+    max-width: none;
+  }
+</style>

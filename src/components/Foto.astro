@@ -1,0 +1,38 @@
+---
+// Fotka podniku: náhled (WebP 600 px), při chybě originál, jinak broskvový zástupný blok
+import { nahled } from '../lib/data';
+
+interface Props {
+  src: string;
+  alt: string;
+  /** Plná velikost (detail, galerie) místo náhledu */
+  plna?: boolean;
+  eager?: boolean;
+  class?: string;
+}
+const { src, alt, plna = false, eager = false, class: trida } = Astro.props;
+const prvni = plna ? src : nahled(src);
+---
+
+<img
+  class:list={['foto', trida]}
+  src={prvni}
+  alt={alt}
+  loading={eager ? 'eager' : 'lazy'}
+  decoding="async"
+  fetchpriority={eager ? 'high' : undefined}
+  data-original={plna ? undefined : src}
+  onerror="if(this.dataset.original&&this.src.indexOf(this.dataset.original)<0){this.src=this.dataset.original}else{this.onerror=null;this.classList.add('foto--chyba')}"
+/>
+
+<style>
+  .foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--cream);
+  }
+  .foto--chyba {
+    visibility: hidden;
+  }
+</style>

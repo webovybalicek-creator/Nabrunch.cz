@@ -1,0 +1,11 @@
+---
+import Stranka from '../components/Stranka.astro';
+import { SITE } from '../lib/config';
+---
+
+<Stranka title="Kontakt" nadpis="Kontaktujte nás" description="Máte dotaz nebo zájem o spolupráci s naBrunch.cz? Ozvěte se nám – rádi si přečteme každý e-mail." lead="Máte dotaz nebo zájem o spolupráci? Ozvěte se nám – rádi si přečteme každý e-mail.">
+  <p>📩 E-mail: <a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+  <p>📍 Pokud máte zájem o přidání podniku, podívejte se do sekce <a href="/pridat-podnik/">Přidat podnik</a>.</p>
+  <p>📸 Sledujte nás na <a href={SITE.instagram} rel="noopener" target="_blank">Instagramu</a> a <a href={SITE.facebook} rel="noopener" target="_blank">Facebooku</a>.</p>
+  <p>Spolupráce, nápady, připomínky i pozdravy vítáme s otevřenou náručí. ❤️</p>
+</Stranka>

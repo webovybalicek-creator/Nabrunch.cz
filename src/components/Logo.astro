@@ -1,0 +1,36 @@
+---
+// Slovní logo „naBrunch.cz“ – písmo Lexend Deca, „Brunch“ v broskvové
+interface Props {
+  svetle?: boolean;
+}
+const { svetle = false } = Astro.props;
+---
+
+<span class:list={['logo', svetle && 'logo--svetle']}>na<b>Brunch</b><small>.cz</small></span>
+
+<style>
+  .logo {
+    font-family: var(--f-display);
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--brown-dark);
+    white-space: nowrap;
+  }
+  .logo b {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .logo small {
+    font-size: 0.6em;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+  .logo--svetle {
+    color: #fff;
+  }
+  .logo--svetle small {
+    color: rgb(255 255 255 / 0.7);
+  }
+</style>

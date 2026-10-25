@@ -1,0 +1,102 @@
+---
+import Foto from './Foto.astro';
+import Srdce from './Srdce.astro';
+import { url, mesto, lokalitaSlug, type Podnik } from '../lib/data';
+
+interface Props {
+  p: Podnik;
+  /** Skrytá karta (zobrazí ji až filtr / „Načíst další“) */
+  skryta?: boolean;
+}
+const { p, skryta = false } = Astro.props;
+const lok = new Set(p.lokality);
+if (p.lokality.some((l) => /^Praha \d+$/.test(l))) lok.add('Praha');
+const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
+  .normalize('NFD')
+  .replace(/[̀-ͯ]/g, '')
+  .toLowerCase();
+---
+
+<li
+  class="karta"
+  hidden={skryta}
+  data-karta
+  data-lokality={[...lok].map(lokalitaSlug).join(' ')}
+  data-kuchyne={p.kuchyne.join('|')}
+  data-atmosfera={p.atmosfera.join('|')}
+  data-hledat={hledat}
+>
+  <Srdce p={p} />
+  <a href={url(p)}>
+    <div class="karta__foto">
+      <Foto src={p.foto} alt={p.nazev} />
+      {p.doporuceny && <span class="karta__srdcovka">♥ Naše srdcovka</span>}
+    </div>
+    <h3 class="karta__nazev">{p.nazev}</h3>
+    <p class="karta__adr">{p.adresa || mesto(p)}</p>
+    {
+      p.kuchyne.length > 0 && (
+        <p class="karta__tagy">
+          {p.kuchyne.filter((k) => k !== 'Klasická').slice(0, 2).map((k) => <span class="tag tag--zelena">{k}</span>)}
+          {p.atmosfera.includes('Pet-friendly') && <span class="tag">🐶 Pet-friendly</span>}
+        </p>
+      )
+    }
+  </a>
+</li>
+
+<style>
+  .karta {
+    position: relative;
+  }
+  .karta[hidden] {
+    display: none;
+  }
+  .karta > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .karta__foto {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .karta__foto :global(.foto) {
+    transition: transform 0.4s ease;
+  }
+  .karta > a:hover :global(.foto) {
+    transform: scale(1.04);
+  }
+  .karta__srdcovka {
+    position: absolute;
+    left: 0.6rem;
+    bottom: 0.6rem;
+    padding: 0.25em 0.7em;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font: 600 0.72rem/1.3 var(--f-display);
+  }
+  .karta__nazev {
+    font-size: 1.12rem;
+    line-height: 1.25;
+    margin: 0.85rem 0 0.2rem;
+  }
+  .karta > a:hover .karta__nazev {
+    color: var(--accent-deep);
+  }
+  .karta__adr {
+    margin: 0;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+  }
+  .karta__tagy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.55rem 0 0;
+  }
+</style>

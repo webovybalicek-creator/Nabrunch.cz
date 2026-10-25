@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Mapa from '../components/Mapa.astro';
+import { PODNIKY, mesta, lokalitaUrl, podnikuText } from '../lib/data';
+
+const vse = mesta();
+---
+
+<Base title="Snídaně a brunch podle města" description={`Kam na snídani a brunch v ${vse.length} městech Česka – Praha, Brno, Olomouc, Plzeň a další. Vyber si město a najdi svůj brunch.`}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Města' }]} />
+      <h1>Brunch podle města</h1>
+      <p class="lead">{podnikuText(PODNIKY.length)} ve {vse.length} městech. Vyber si, kde dnes snídáš.</p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <ul class="mesta">
+        {
+          vse.map((m) => (
+            <li>
+              <a href={lokalitaUrl(m)}>
+                <strong>{m.nazev}</strong>
+                <span class="muted">{podnikuText(m.podniky.length)}</span>
+              </a>
+              {m.obvody && (
+                <ul class="obvody">
+                  {m.obvody.map((o) => (
+                    <li>
+                      <a href={lokalitaUrl(o)}>
+                        {o.nazev} <span class="muted">{o.podniky.length}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+  <section class="section section--blush">
+    <div class="wrap">
+      <h2>Všechny podniky na mapě</h2>
+      <Mapa podniky={PODNIKY} popis="Mapa všech podniků" />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .mesta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 3 16rem;
+    column-gap: 2.5rem;
+  }
+  .mesta > li {
+    break-inside: avoid;
+    border-bottom: 1px solid var(--line);
+  }
+  .mesta > li > a {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    text-decoration: none;
+  }
+  .mesta strong {
+    font-family: var(--f-display);
+    font-weight: 500;
+    color: var(--brown-dark);
+  }
+  .obvody {
+    list-style: none;
+    margin: 0 0 0.75rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    font-size: 0.9rem;
+  }
+  .obvody a {
+    text-decoration: none;
+  }
+</style>

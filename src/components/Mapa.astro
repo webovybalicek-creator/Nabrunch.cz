@@ -1,0 +1,78 @@
+---
+// Mapa podniků (Leaflet + OpenStreetMap). Načte se, až když je vidět.
+import { url, type Podnik } from '../lib/data';
+
+interface Props {
+  podniky: Podnik[];
+  popis: string;
+  vysoka?: boolean;
+}
+const { podniky, popis, vysoka = false } = Astro.props;
+const body = podniky
+  .filter((p) => p.lat != null && p.lon != null)
+  .map((p) => [p.lat, p.lon, p.nazev, url(p), p.adresa, p.doporuceny ? 1 : 0]);
+---
+
+<div class:list={['mapa', vysoka && 'mapa--vysoka']} data-mapa={JSON.stringify(body)} role="region" aria-label={popis}></div>
+
+<script>
+  import 'leaflet/dist/leaflet.css';
+
+  document.querySelectorAll<HTMLElement>('[data-mapa]').forEach((el) => {
+    const nacti = async () => {
+      const L = (await import('leaflet')).default;
+      const body = JSON.parse(el.dataset.mapa!) as [number, number, string, string, string, number][];
+      const map = L.map(el, { scrollWheelZoom: false });
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+      const esc = (s: string) => s.replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
+      const vrstva = L.featureGroup(
+        body.map(([lat, lon, nazev, href, adresa, srdcovka]) =>
+          L.circleMarker([lat, lon], {
+            radius: srdcovka ? 9 : 7,
+            color: '#ffffff',
+            weight: 2,
+            fillColor: srdcovka ? '#CE693F' : '#FF8E5F',
+            fillOpacity: 1,
+          }).bindPopup(`<a href="${href}">${esc(nazev)}</a><br><small>${esc(adresa)}</small>`),
+        ),
+      ).addTo(map);
+      if (body.length) map.fitBounds(vrstva.getBounds(), { padding: [28, 28], maxZoom: 15 });
+      else map.setView([49.8, 15.5], 7);
+      el.addEventListener('click', () => map.scrollWheelZoom.enable(), { once: true });
+      // Tlačítko „U mě“ na stránce /mapa/
+      const naPolohu = ([lat, lon]: [number, number]) => {
+        L.circleMarker([lat, lon], { radius: 7, color: '#fff', weight: 3, fillColor: '#2563eb', fillOpacity: 1 }).addTo(map);
+        map.setView([lat, lon], 13);
+      };
+      if ((window as any).__nbPoloha) naPolohu((window as any).__nbPoloha);
+      window.addEventListener('nb-poloha', (e) => naPolohu((e as CustomEvent).detail));
+    };
+    window.addEventListener('nb-poloha', (e) => ((window as any).__nbPoloha = (e as CustomEvent).detail));
+    const io = new IntersectionObserver((e) => {
+      if (e[0].isIntersecting) {
+        io.disconnect();
+        nacti();
+      }
+    });
+    io.observe(el);
+  });
+</script>
+
+<style>
+  .mapa {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    min-height: 300px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--blush);
+    z-index: 0;
+  }
+  .mapa--vysoka {
+    aspect-ratio: auto;
+    height: min(72vh, 720px);
+  }
+</style>

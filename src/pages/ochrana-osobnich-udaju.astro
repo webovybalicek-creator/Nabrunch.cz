@@ -1,0 +1,10 @@
+---
+import Stranka from '../components/Stranka.astro';
+import stranky from '../data/stranky.json';
+
+const s = stranky['ochrana-osobnich-udaju'];
+---
+
+<Stranka title={s.titulek} description={`${s.titulek} webu nabrunch.cz.`}>
+  <Fragment set:html={s.obsah} />
+</Stranka>

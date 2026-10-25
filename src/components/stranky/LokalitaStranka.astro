@@ -1,0 +1,124 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../Breadcrumb.astro';
+import Vypis from '../Vypis.astro';
+import Mapa from '../Mapa.astro';
+import BlogKarta from '../BlogKarta.astro';
+import { lokalitaUrl, vLokalite, podnikuText, lokality, TEMATA, temaUrl, type Lokalita } from '../../lib/data';
+import { clanky } from '../../lib/blog';
+
+interface Props {
+  l: Lokalita;
+}
+const { l } = Astro.props;
+const kde = vLokalite(l.nazev);
+const nadrazena = l.nadrazena ? lokality().find((x) => x.slug === l.nadrazena) : undefined;
+const srdcovky = l.podniky.filter((p) => p.doporuceny).length;
+// Články, které lokalitu zmiňují v titulku (Kam na brunch v Brně…)
+const koren = l.nazev.replace(/ \d+$/, '').slice(0, Math.max(4, l.nazev.length - 2)).toLowerCase();
+const cislo = l.nazev.match(/\d+$/)?.[0];
+const clankyMesta = (await clanky())
+  .filter((c) => {
+    const t = c.data.title.toLowerCase();
+    return cislo ? t.includes(`praze ${cislo}`) || t.includes(`praha ${cislo}`) : t.includes(koren);
+  })
+  .slice(0, 3);
+const temata = TEMATA.filter((t) => t.hodnota !== 'Klasická')
+  .map((t) => ({ t, n: l.podniky.filter((p) => p[t.pole].includes(t.hodnota)).length }))
+  .filter((x) => x.n > 0);
+const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde}${srdcovky ? `, z toho ${srdcovky} naše srdcovky` : ''}. Adresy, otevírací doba, mapa a naše tipy, co si dát.`;
+---
+
+<Base title={`Kam na snídani a brunch ${kde}`} description={description}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb
+        polozky={[
+          { nazev: 'Města', url: '/lokality/' },
+          ...(nadrazena ? [{ nazev: nadrazena.nazev, url: lokalitaUrl(nadrazena) }] : []),
+          { nazev: l.nazev },
+        ]}
+      />
+      <h1>Snídaně a brunch {kde}</h1>
+      <p class="lead">
+        {podnikuText(l.podniky.length)}, které jsme vybrali {kde}. Filtruj podle kuchyně nebo atmosféry a najdi si svůj brunch.
+      </p>
+      {
+        l.obvody && l.obvody.length > 0 && (
+          <ul class="obvody" aria-label="Pražské obvody">
+            {l.obvody.map((o) => (
+              <li>
+                <a class="tag" href={lokalitaUrl(o)}>
+                  {o.nazev} <span class="muted">{o.podniky.length}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <Vypis podniky={l.podniky} filtrMesta={false} naStranku={24} />
+    </div>
+  </section>
+
+  <section class="section section--blush">
+    <div class="wrap">
+      <h2>Mapa podniků {kde}</h2>
+      <Mapa podniky={l.podniky} popis={`Mapa podniků na brunch ${kde}`} />
+      {
+        temata.length > 0 && (
+          <p class="temata">
+            {temata.map(({ t, n }) => (
+              <a class="tag" href={temaUrl(t)}>
+                {t.emoji} {t.kratce} ({n})
+              </a>
+            ))}
+          </p>
+        )
+      }
+    </div>
+  </section>
+
+  {
+    clankyMesta.length > 0 && (
+      <section class="section">
+        <div class="wrap">
+          <h2>Naše tipy {kde}</h2>
+          <ul class="karty karty--blog">{clankyMesta.map((c) => <BlogKarta c={c} />)}</ul>
+        </div>
+      </section>
+    )
+  }
+</Base>
+
+<style>
+  .obvody {
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .obvody .tag {
+    background: #fff;
+    font-size: 0.85rem;
+  }
+  .temata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1.5rem 0 0;
+    max-width: none;
+  }
+  .temata .tag {
+    background: #fff;
+  }
+  .karty--blog {
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+</style>

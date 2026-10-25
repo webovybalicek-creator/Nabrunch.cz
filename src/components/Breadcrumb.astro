@@ -1,0 +1,26 @@
+---
+import { SITE } from '../lib/config';
+
+interface Props {
+  polozky: { nazev: string; url?: string }[];
+}
+const { polozky } = Astro.props;
+const vse = [{ nazev: 'Úvod', url: '/' }, ...polozky];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: vse.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.nazev,
+    ...(p.url ? { item: new URL(p.url, SITE.url).href } : {}),
+  })),
+};
+---
+
+<nav class="breadcrumb" aria-label="Drobečková navigace">
+  <ol>
+    {vse.map((p) => <li>{p.url ? <a href={p.url}>{p.nazev}</a> : <span aria-current="page">{p.nazev}</span>}</li>)}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

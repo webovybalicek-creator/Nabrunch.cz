@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+---
+
+<Base title="Oblíbené podniky" description="Tvoje uložená místa na snídani a brunch." noindex>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Oblíbené' }]} />
+      <h1>Oblíbené podniky</h1>
+      <p class="lead">Místa, která sis uložil(a) srdíčkem. Zůstávají jen v tomto prohlížeči.</p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <ul class="karty" data-seznam></ul>
+      <div class="prazdno" data-prazdno hidden>
+        <p>Zatím tu nic není. Klikni na srdíčko u podniku, který tě zaujme.</p>
+        <a class="btn" href="/podniky/">Prohlédnout podniky</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<script>
+  import { oblibene, odeberOblibeny } from '../scripts/oblibene';
+
+  const seznam = document.querySelector<HTMLElement>('[data-seznam]')!;
+  const prazdno = document.querySelector<HTMLElement>('[data-prazdno]')!;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
+
+  function vykresli() {
+    const vse = oblibene();
+    prazdno.hidden = vse.length > 0;
+    seznam.innerHTML = vse
+      .map(
+        (s) => `<li class="ob">
+          <a href="${esc(s.u)}">
+            <div class="ob__f">${s.f ? `<img src="${esc(s.f)}" alt="" loading="lazy">` : ''}</div>
+            <h3>${esc(s.n)}</h3>
+            <p>${esc(s.a)}</p>
+          </a>
+          <button type="button" class="ob__x" data-id="${s.id}">Odebrat</button>
+        </li>`,
+      )
+      .join('');
+    seznam.querySelectorAll<HTMLButtonElement>('[data-id]').forEach((b) =>
+      b.addEventListener('click', () => {
+        odeberOblibeny(Number(b.dataset.id));
+        vykresli();
+      }),
+    );
+  }
+  vykresli();
+</script>
+
+<style>
+  .prazdno {
+    padding: 2.5rem;
+    text-align: center;
+    background: var(--blush);
+    border-radius: var(--radius);
+  }
+  .prazdno p {
+    margin-inline: auto;
+  }
+  :global(.ob a) {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  :global(.ob__f) {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--cream);
+  }
+  :global(.ob__f img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  :global(.ob h3) {
+    font-size: 1.1rem;
+    margin: 0.8rem 0 0.2rem;
+  }
+  :global(.ob p) {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  :global(.ob__x) {
+    margin-top: 0.6rem;
+    padding: 0.3em 0.9em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+</style>

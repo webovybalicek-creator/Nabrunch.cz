@@ -1,0 +1,24 @@
+---
+// Tlačítko „Do oblíbených“ – ikona na kartě nebo tlačítko s textem na profilu
+import { url, mesto, nahled, type Podnik } from '../lib/data';
+
+interface Props {
+  p: Podnik;
+  sTextem?: boolean;
+}
+const { p, sTextem = false } = Astro.props;
+const data = JSON.stringify({ id: p.id, u: url(p), n: p.nazev, a: p.adresa || mesto(p), f: nahled(p.foto) });
+---
+
+<button
+  type="button"
+  class:list={['srdce', sTextem ? 'btn btn--ghost srdce--text' : 'srdce--ikona']}
+  data-oblibene={data}
+  aria-pressed="false"
+  title="Přidat do oblíbených"
+>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 20.5s-7.5-4.6-9.3-9.4C1.4 7.6 3.6 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.6 0 5.8 3.6 4.5 7.1-1.8 4.8-9.3 9.4-9.3 9.4z"></path>
+  </svg>
+  {sTextem ? <span data-srdce-text>Do oblíbených</span> : <span class="sr-only">Do oblíbených</span>}
+</button>

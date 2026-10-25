@@ -1,0 +1,466 @@
+/* naBrunch.cz – barvy a písma podle původního webu (Lexend Deca + Montserrat, broskvová a čokoládová) */
+:root {
+  --paper: #ffffff;
+  --blush: #fff5f4;
+  --cream: #ffeee7;
+  --surface: #ffffff;
+  --ink: #2b211c;
+  --ink-soft: #7a6a62;
+  --line: #f1e3dd;
+  --accent: #ff8e5f;
+  --accent-deep: #ce693f;
+  --brown: #935035;
+  --brown-dark: #532a19;
+  --green: #618b4c;
+  --green-soft: #eef4ea;
+
+  --f-display: 'Lexend Deca Variable', system-ui, sans-serif;
+  --f-text: 'Montserrat Variable', system-ui, sans-serif;
+
+  --wrap: 72rem;
+  --gutter: clamp(16px, 4vw, 40px);
+  --radius: 18px;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-text);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--accent-deep);
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--f-display);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+  color: var(--brown-dark);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1em;
+  max-width: 68ch;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding-block: clamp(48px, 7vw, 88px);
+}
+
+.section--blush {
+  background: var(--blush);
+}
+
+.muted {
+  color: var(--ink-soft);
+}
+
+.lead {
+  font-size: 1.12rem;
+  color: var(--ink-soft);
+}
+
+/* Malý nadpis nad sekcí („NAŠE SRDCOVKY“) */
+.eyebrow {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-family: var(--f-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.sec-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.sec-head h2 {
+  margin: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.8em 1.45em;
+  border-radius: 999px;
+  border: 1px solid var(--brown-dark);
+  background: var(--brown-dark);
+  color: #fff;
+  font: 600 0.92rem/1.2 var(--f-display);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.btn:hover {
+  color: #fff;
+  background: var(--brown);
+  border-color: var(--brown);
+}
+
+.btn--akcent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn--akcent:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+}
+
+.btn--ghost {
+  background: #fff;
+  color: var(--brown-dark);
+  border-color: var(--line);
+}
+
+.btn--ghost:hover {
+  background: #fff;
+  color: var(--brown-dark);
+  border-color: var(--brown-dark);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.25em 0.75em;
+  border-radius: 999px;
+  background: var(--blush);
+  color: var(--brown);
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a.tag:hover {
+  background: var(--cream);
+  color: var(--brown-dark);
+}
+
+.tag--zelena {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.breadcrumb {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.25rem;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+}
+
+.breadcrumb li + li::before {
+  content: '/';
+  margin-right: 0.35em;
+  opacity: 0.5;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.karty {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(15rem, 46%), 1fr));
+  gap: 2rem clamp(0.75rem, 2vw, 1.5rem);
+}
+
+/* Úvodní hlavička podstránek */
+.page-head {
+  padding-block: clamp(28px, 5vw, 56px) clamp(24px, 4vw, 40px);
+  background: var(--blush);
+}
+
+.page-head h1 {
+  margin-bottom: 0.35em;
+}
+
+.page-head .lead {
+  margin: 0;
+}
+
+/* Text článků a stránek (HTML z WordPressu) */
+.prose {
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+
+.prose > * {
+  max-width: 44rem;
+}
+
+.prose h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.65rem);
+  margin-top: 1.8em;
+}
+
+.prose h3 {
+  margin-top: 1.5em;
+}
+
+.prose h2 strong,
+.prose h3 strong {
+  font-weight: inherit;
+}
+
+.prose img {
+  height: auto;
+  border-radius: var(--radius);
+  margin-block: 1.5rem;
+}
+
+.prose figure {
+  margin: 1.5rem 0;
+}
+
+.prose figcaption {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.3em;
+}
+
+.prose li {
+  margin-bottom: 0.35em;
+}
+
+.prose a {
+  color: var(--accent-deep);
+  font-weight: 500;
+}
+
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: var(--blush);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--line);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+
+.prose .wp-block-buttons,
+.prose .wp-block-button {
+  margin: 1rem 0;
+}
+
+.prose .wp-block-button__link {
+  display: inline-block;
+  padding: 0.7em 1.3em;
+  border-radius: 999px;
+  background: var(--brown-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.prose .wp-block-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: none;
+}
+
+.prose .wp-block-column {
+  flex: 1 1 16rem;
+}
+
+.prose iframe {
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* iOS přibližuje stránku při psaní do polí s písmem pod 16 px */
+@media (max-width: 760px) {
+  input:not([type='checkbox']):not([type='radio']),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Srdíčko „Do oblíbených“ */
+.srdce svg {
+  width: 1.15em;
+  height: 1.15em;
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linejoin: round;
+  transition: fill 0.15s, stroke 0.15s;
+}
+
+.srdce[aria-pressed='true'] svg {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+
+.srdce.pulz svg {
+  animation: srdce-pulz 0.45s ease;
+}
+
+@keyframes srdce-pulz {
+  30% {
+    transform: scale(1.35);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+}
+
+.srdce--ikona {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.92);
+  color: var(--brown-dark);
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgb(83 42 25 / 0.15);
+}
+
+.srdce--ikona:hover {
+  background: #fff;
+}
+
+/* Mapy: teplejší podklad, ať vyniknou broskvové značky */
+.leaflet-tile-pane {
+  filter: grayscale(0.85) sepia(0.12) brightness(1.04) contrast(0.92);
+}
+
+.leaflet-container {
+  background: #f6efec !important;
+  font-family: var(--f-text) !important;
+}
+
+.leaflet-popup-content a {
+  color: var(--brown-dark);
+  font-weight: 600;
+}

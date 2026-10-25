@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Vypis from '../../components/Vypis.astro';
+import { PODNIKY, poradi, podnikuText, mesta } from '../../lib/data';
+
+const vse = [...PODNIKY].sort(poradi);
+---
+
+<Base
+  title="Přehled podniků na snídani a brunch"
+  description={`Všech ${podnikuText(PODNIKY.length)} na snídani a brunch v ${mesta().length} městech Česka. Filtruj podle města, kuchyně a atmosféry – vegan, pet-friendly, se zahrádkou.`}
+>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Přehled podniků' }]} />
+      <h1>Přehled podniků</h1>
+      <p class="lead">Ručně vybraná místa na snídani a brunch po celé ČR. Vyber si město, chuť nebo atmosféru.</p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <Vypis podniky={vse} naStranku={24} />
+    </div>
+  </section>
+</Base>

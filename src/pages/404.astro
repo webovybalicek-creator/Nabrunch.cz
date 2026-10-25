@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Stránka nenalezena" description="Tahle stránka neexistuje." noindex>
+  <section class="section">
+    <div class="wrap nenalezeno">
+      <p class="emoji" aria-hidden="true">🍳</p>
+      <h1>Tady nic nevaříme</h1>
+      <p class="lead">Stránka neexistuje nebo se přestěhovala. Zkus vyhledat podnik nebo se vrať na úvod.</p>
+      <form action="/podniky/" method="get">
+        <input type="search" name="q" placeholder="Kavárna nebo město…" aria-label="Hledat podnik" />
+        <button class="btn btn--akcent">Hledat</button>
+      </form>
+      <p><a href="/">Zpět na úvod</a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nenalezeno {
+    text-align: center;
+  }
+  .nenalezeno p,
+  .nenalezeno form {
+    margin-inline: auto;
+  }
+  .emoji {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  form {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 28rem;
+    margin-block: 1.5rem;
+  }
+  input {
+    flex: 1;
+    padding: 0.8em 1.1em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font: inherit;
+  }
+</style>

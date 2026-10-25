@@ -1,0 +1,76 @@
+---
+import '@fontsource-variable/lexend-deca';
+import '@fontsource-variable/montserrat';
+import '../styles/global.css';
+import { SITE } from '../lib/config';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  jsonLd?: object | object[];
+  noindex?: boolean;
+  /** Náhledový obrázek pro sdílení (kořenová cesta nebo absolutní URL) */
+  obrazek?: string;
+  typ?: 'website' | 'article';
+  publikovano?: string;
+}
+
+const { title, description, jsonLd, noindex = false, obrazek, typ = 'website', publikovano } = Astro.props;
+const og = new URL(obrazek ?? '/wp-content/uploads/2025/03/nabrunch-1.jpg', SITE.url).href;
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const robots = !SITE.indexovat || noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large';
+const fullTitle = /nabrunch/i.test(title) || title.length > 48 ? title : `${title} | ${SITE.nazev}`;
+---
+
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <link rel="icon" href="/wp-content/uploads/2025/03/nabrunch-favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/wp-content/uploads/2025/03/nabrunch-favicon.png" />
+    <meta name="theme-color" content="#FFF5F4" />
+    <meta property="og:type" content={typ} />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:site_name" content={SITE.nazev} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={og} />
+    {publikovano && <meta property="article:published_time" content={publikovano} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    {
+      (SITE.adsense || SITE.analytics) && (
+        <script
+          is:inline
+          data-ostra={SITE.domena}
+          data-adsense={SITE.adsense}
+          data-ga={SITE.analytics}
+          set:html={`(function(){var s=document.currentScript,d=s.dataset;var h=location.hostname;if(h!==d.ostra&&h!=='www.'+d.ostra)return;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});function nacti(u,c){var e=document.createElement('script');e.async=true;e.src=u;if(c)e.crossOrigin='anonymous';document.head.appendChild(e)}if(d.ga){nacti('https://www.googletagmanager.com/gtag/js?id='+d.ga);gtag('js',new Date());gtag('config',d.ga)}if(d.adsense)nacti('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+d.adsense,true)})();`}
+        />
+      )
+    }
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="sr-only" href="#obsah">Přejít na obsah</a>
+    <Header />
+    <main id="obsah">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import { inicializujSrdicka, inicializujPocitadlo } from '../scripts/oblibene';
+      inicializujSrdicka();
+      inicializujPocitadlo();
+    </script>
+  </body>
+</html>

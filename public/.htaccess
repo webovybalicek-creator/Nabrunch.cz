@@ -1,0 +1,57 @@
+Options -Indexes
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Ověřování certifikátu nechat bez přesměrování
+  RewriteCond %{REQUEST_URI} ^/\.well-known/ [NC]
+  RewriteRule ^ - [L]
+
+  # http → https (doménu nevynucujeme, web běží na new.nabrunch.cz i nabrunch.cz)
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # www → bez www
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # Staré adresy z WordPressu
+  RewriteRule ^lokalita/([^/]+)/?$ /$1/ [L,R=301]
+  RewriteRule ^kategorie/.*$ /podniky/ [L,R=301]
+  RewriteRule ^category/.*$ /blog/ [L,R=301]
+  RewriteRule ^(feed|comments/feed)/?$ / [L,R=301]
+  RewriteRule ^domu/?$ / [L,R=301]
+  RewriteRule ^8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-.+$ /8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky/ [L,R=301]
+</IfModule>
+
+# Interní soubory deploye nezveřejňovat
+<FilesMatch "^\.(deploy-manifest\.txt)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "public, max-age=600, stale-while-revalidate=86400"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpe?g|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml text/plain
+</IfModule>

@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import BlogKarta from '../../components/BlogKarta.astro';
+import { clanky, KATEGORIE, kategorie, kategorieUrl } from '../../lib/blog';
+
+const vse = await clanky();
+---
+
+<Base title="Blog – brunch tipy, inspirace a průvodci" description="Kam na snídani a brunch v Praze, Brně i dalších městech, co je matcha nebo kombucha a další brunchová inspirace na každý víkend.">
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Blog' }]} />
+      <h1>Brunch tipy</h1>
+      <p class="lead">Průvodci po městech, vysvětlení brunchových pojmů a inspirace na každý víkend.</p>
+      <p class="kat">
+        {KATEGORIE.map((k) => <a class="tag" href={kategorieUrl(k)}>{k} ({vse.filter((c) => kategorie(c) === k).length})</a>)}
+      </p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <ul class="karty karty--blog">{vse.map((c) => <BlogKarta c={c} />)}</ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .kat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1.25rem 0 0;
+  }
+  .kat .tag {
+    background: #fff;
+    font-size: 0.85rem;
+  }
+  .karty--blog {
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+</style>

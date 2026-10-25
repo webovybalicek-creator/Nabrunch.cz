@@ -1,0 +1,74 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { SITE } from '../lib/config';
+
+const dotazy: [string, string][] = [
+  ['🥐 Jak funguje naBrunch.cz?', 'Projekt naBrunch.cz je průvodce těmi nejlepšími místy na snídani a brunche v Česku. Pomocí filtrů si můžeš vybrat podnik podle města, typu kuchyně nebo pohodlí – a objevit místa, kam se budeš chtít vracet.'],
+  ['📍 Musím si vytvořit účet, abych mohla/mohl procházet podniky?', 'Ne, procházet a vyhledávat můžeš zcela volně bez registrace. Oblíbená místa si můžeš uložit srdíčkem – zůstanou jen ve tvém prohlížeči.'],
+  ['📝 Jak mohu přidat svůj podnik?', `Vyplň formulář v sekci <a href="/pridat-podnik/">Přidat podnik</a>, nebo nám napiš na <a href="mailto:${SITE.email}">${SITE.email}</a>.`],
+  ['💸 Je zápis na web zdarma?', 'Momentálně ano – první podniky přidáváme bezplatně. V budoucnu plánujeme zavést prémiové zápisy s větší viditelností a dalšími výhodami.'],
+  ['🧭 Jak funguje vyhledávání?', 'Vyber si město, typ kuchyně, nebo pohodlí, které ti vyhovuje (např. zahrádka, pet-friendly…) a naBrunch.cz ti ukáže podniky, které odpovídají tvému výběru.'],
+  ['📬 Můžu dostávat novinky do e-mailu?', 'Ano! Přihlas se k odběru našich brunchových tipů a dostávej pravidelně inspiraci, nově přidané podniky i naše články – vždy s chutí.'],
+  ['🧾 Jak si můžu být jistá/jistý, že jsou podniky kvalitní?', 'Podniky na webu pečlivě vybíráme a osobně navštěvujeme. Věříme v kvalitu, atmosféru a dobrou kávu – takže doporučujeme jen to, co bychom doporučili i kamarádům.'],
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: dotazy.map(([q, a]) => ({
+    '@type': 'Question',
+    name: q.replace(/^\S+\s/, ''),
+    acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') },
+  })),
+};
+---
+
+<Base title="Často kladené dotazy" description="Jak funguje naBrunch.cz, jak přidat podnik, je zápis zdarma a jak vybíráme podniky? Odpovědi na nejčastější otázky." jsonLd={jsonLd}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Často kladené dotazy' }]} />
+      <h1>Často kladené dotazy</h1>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap faq">
+      {
+        dotazy.map(([q, a], i) => (
+          <details open={i === 0}>
+            <summary>{q}</summary>
+            <p set:html={a} />
+          </details>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .faq {
+    max-width: 48rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+  details {
+    padding: 1.1rem 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+  }
+  details[open] {
+    background: var(--blush);
+    border-color: var(--blush);
+  }
+  summary {
+    cursor: pointer;
+    font: 600 1.05rem/1.4 var(--f-display);
+    color: var(--brown-dark);
+  }
+  details p {
+    margin: 0.75rem 0 0;
+  }
+  details :global(a) {
+    color: var(--accent-deep);
+  }
+</style>

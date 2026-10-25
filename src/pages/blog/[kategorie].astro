@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import BlogKarta from '../../components/BlogKarta.astro';
+import { slugify } from '../../lib/slug';
+import { clanky, KATEGORIE, KATEGORIE_POPIS, kategorie, kategorieUrl, type Kategorie } from '../../lib/blog';
+
+export function getStaticPaths() {
+  return KATEGORIE.map((k) => ({ params: { kategorie: slugify(k) }, props: { k } }));
+}
+const { k } = Astro.props as { k: Kategorie };
+const vse = (await clanky()).filter((c) => kategorie(c) === k);
+---
+
+<Base title={`${k} – brunch blog`} description={KATEGORIE_POPIS[k]}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Blog', url: '/blog/' }, { nazev: k }]} />
+      <h1>{k}</h1>
+      <p class="lead">{KATEGORIE_POPIS[k]}</p>
+      <p class="kat">
+        {KATEGORIE.filter((x) => x !== k).map((x) => <a class="tag" href={kategorieUrl(x)}>{x}</a>)}
+      </p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <ul class="karty karty--blog">{vse.map((c) => <BlogKarta c={c} />)}</ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .kat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1.25rem 0 0;
+  }
+  .kat .tag {
+    background: #fff;
+  }
+  .karty--blog {
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+</style>

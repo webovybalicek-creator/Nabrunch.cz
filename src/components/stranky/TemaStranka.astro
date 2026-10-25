@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../Breadcrumb.astro';
+import Vypis from '../Vypis.astro';
+import Mapa from '../Mapa.astro';
+import { podnikyTematu, podnikuText, TEMATA, temaUrl, type Tema } from '../../lib/data';
+
+interface Props {
+  t: Tema;
+}
+const { t } = Astro.props;
+const podniky = podnikyTematu(t);
+const dalsi = TEMATA.filter((x) => x.slug !== t.slug);
+---
+
+<Base title={`${t.nadpis} – kam vyrazit`} description={`${t.popis} Vybrali jsme ${podnikuText(podniky.length)} po celé ČR.`}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Podniky', url: '/podniky/' }, { nazev: t.nadpis }]} />
+      <h1>{t.emoji} {t.nadpis}</h1>
+      <p class="lead">{t.popis} Vybrali jsme {podnikuText(podniky.length)}.</p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <Vypis podniky={podniky} filtry={false} naStranku={24} />
+    </div>
+  </section>
+  <section class="section section--blush">
+    <div class="wrap">
+      <h2>Na mapě</h2>
+      <Mapa podniky={podniky} popis={`Mapa: ${t.nadpis}`} />
+      <p class="dalsi">
+        {dalsi.map((x) => <a class="tag" href={temaUrl(x)}>{x.emoji} {x.kratce}</a>)}
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .dalsi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1.5rem 0 0;
+    max-width: none;
+  }
+  .dalsi .tag {
+    background: #fff;
+  }
+</style>

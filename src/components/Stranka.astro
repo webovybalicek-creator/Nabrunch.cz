@@ -1,0 +1,29 @@
+---
+// Jednoduchá textová stránka s hlavičkou
+import Base from '../layouts/Base.astro';
+import Breadcrumb from './Breadcrumb.astro';
+
+interface Props {
+  title: string;
+  nadpis?: string;
+  description: string;
+  lead?: string;
+  noindex?: boolean;
+}
+const { title, nadpis = title, description, lead, noindex } = Astro.props;
+---
+
+<Base title={title} description={description} noindex={noindex}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: nadpis }]} />
+      <h1>{nadpis}</h1>
+      {lead && <p class="lead">{lead}</p>}
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap prose">
+      <slot />
+    </div>
+  </section>
+</Base>

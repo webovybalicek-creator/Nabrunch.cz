@@ -1,0 +1,55 @@
+---
+import Foto from './Foto.astro';
+import { clanekUrl, perex, kategorie, type Clanek } from '../lib/blog';
+
+interface Props {
+  c: Clanek;
+}
+const { c } = Astro.props;
+---
+
+<li class="bk">
+  <a href={clanekUrl(c)}>
+    <div class="bk__foto">
+      {c.data.image && <Foto src={c.data.image} alt={c.data.title} />}
+    </div>
+    <span class="bk__kat">{kategorie(c)}</span>
+    <h3>{c.data.title}</h3>
+    <p>{perex(c, 140)}</p>
+  </a>
+</li>
+
+<style>
+  .bk a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .bk__foto {
+    aspect-ratio: 3 / 2;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .bk__kat {
+    display: block;
+    margin-top: 0.9rem;
+    font: 600 0.72rem/1.3 var(--f-display);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+  }
+  .bk h3 {
+    font-size: 1.12rem;
+    line-height: 1.3;
+    margin: 0.35rem 0 0.4rem;
+  }
+  .bk a:hover h3 {
+    color: var(--accent-deep);
+  }
+  .bk p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+</style>

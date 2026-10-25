@@ -1,0 +1,116 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../Breadcrumb.astro';
+import Foto from '../Foto.astro';
+import Karta from '../Karta.astro';
+import BlogKarta from '../BlogKarta.astro';
+import { SITE } from '../../lib/config';
+import { clanky, clanekUrl, kategorie, kategorieUrl, casCteni, datumText, perex, souvisejici, zminenePodniky, type Clanek } from '../../lib/blog';
+
+interface Props {
+  c: Clanek;
+}
+const { c } = Astro.props;
+const vse = await clanky();
+const kat = kategorie(c);
+const podniky = zminenePodniky(c).slice(0, 8);
+const dalsi = souvisejici(vse, c, 3);
+const popis = perex(c);
+const titulek = c.data.seoTitle?.replace(/\s*[-–|]\s*naBrunch\.cz\s*$/i, '') || c.data.title;
+// Obsah z WordPressu: první obrázek v textu nevykreslovat dvakrát, pokud je stejný jako úvodní
+let html = c.body ?? '';
+if (c.data.image) {
+  const zaklad = c.data.image.replace(/\.[a-z0-9]+$/i, '');
+  html = html.replace(new RegExp(`^\\s*<figure[^>]*>\\s*<img[^>]*${zaklad.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^>]*>\\s*</figure>`), '');
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: c.data.title,
+  description: popis,
+  datePublished: c.data.date.toISOString(),
+  ...(c.data.image ? { image: new URL(c.data.image, SITE.url).href } : {}),
+  mainEntityOfPage: new URL(clanekUrl(c), SITE.url).href,
+  author: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
+  publisher: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
+};
+---
+
+<Base title={titulek} description={popis} obrazek={c.data.image} typ="article" publikovano={c.data.date.toISOString()} jsonLd={jsonLd}>
+  <article>
+    <header class="clanek-head">
+      <div class="wrap">
+        <Breadcrumb polozky={[{ nazev: 'Blog', url: '/blog/' }, { nazev: kat, url: kategorieUrl(kat) }, { nazev: c.data.title }]} />
+        <h1>{c.data.title}</h1>
+        <p class="meta muted">
+          <time datetime={c.data.date.toISOString()}>{datumText(c.data.date)}</time> · {casCteni(c)} min čtení ·
+          <a href={kategorieUrl(kat)}>{kat}</a>
+        </p>
+      </div>
+    </header>
+    {
+      c.data.image && (
+        <div class="wrap">
+          <div class="clanek-foto">
+            <Foto src={c.data.image} alt={c.data.title} plna eager />
+          </div>
+        </div>
+      )
+    }
+    <div class="wrap">
+      <div class="prose clanek-text" set:html={html} />
+    </div>
+  </article>
+
+  {
+    podniky.length > 0 && (
+      <section class="section section--blush">
+        <div class="wrap">
+          <h2>Podniky z článku</h2>
+          <ul class="karty">{podniky.map((p) => <Karta p={p} />)}</ul>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Mohlo by tě zajímat</h2>
+        <a class="btn btn--ghost" href="/blog/">Všechny články</a>
+      </div>
+      <ul class="karty karty--blog">{dalsi.map((x) => <BlogKarta c={x} />)}</ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .clanek-head {
+    padding-block: clamp(28px, 5vw, 56px) clamp(20px, 3vw, 32px);
+  }
+  .clanek-head h1 {
+    max-width: 22ch;
+  }
+  .meta {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  .meta a {
+    color: var(--accent-deep);
+  }
+  .clanek-foto {
+    aspect-ratio: 16 / 8;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .clanek-text {
+    padding-block: clamp(32px, 5vw, 56px);
+    margin-inline: auto;
+    max-width: 44rem;
+  }
+  .karty--blog {
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+</style>

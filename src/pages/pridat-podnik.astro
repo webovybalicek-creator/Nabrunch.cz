@@ -1,0 +1,234 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { KUCHYNE, ATMOSFERA } from '../lib/data';
+import { SITE } from '../lib/config';
+---
+
+<Base title="Přidat podnik" description="Patří vaše snídaně mezi ty, na které se nezapomíná? Vyplňte formulář a rádi váš podnik zařadíme na naBrunch.cz.">
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Přidat podnik' }]} />
+      <h1>Patří vaše snídaně mezi ty, na které se nezapomíná?</h1>
+      <p class="lead">Vaříte a pečete srdcem? Servírujete brunch s láskou? Chcete, aby se o vašem podniku dozvěděli ti správní lidé? Vyplňte formulář – rádi vás zařadíme na náš web.</p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap pp">
+      <aside class="pp__info">
+        <p>Jsme místo, kde lidé hledají inspiraci, kam vyrazit na svou nejoblíbenější část dne – snídani. Pomáháme zviditelnit podniky, které si zaslouží pozornost.</p>
+        <p>Místa si pečlivě vybíráme – záleží nám na kvalitě i přístupu k hostům. <strong>Každý podnik před zveřejněním osobně zkontrolujeme.</strong></p>
+        <p class="muted">Raději e-mailem? Napište na <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+      </aside>
+
+      <form class="form" method="post" action="/api/podnik.php" enctype="multipart/form-data" data-form>
+        <fieldset>
+          <legend>Podnik</legend>
+          <label>Název podniku *<input name="nazev" required maxlength="120" /></label>
+          <label>Popis podniku *<textarea name="popis" required rows="5" maxlength="4000"></textarea></label>
+          <label>Adresa *<input name="adresa" required maxlength="200" placeholder="Ulice a číslo, město" /></label>
+          <label>Odkaz na Google Maps *<input name="googlemaps" type="url" required placeholder="https://maps.app.goo.gl/…" /></label>
+          <label>Otevírací doba *<textarea name="doba" required rows="3" placeholder="Po–Pá 8:00–16:00, So–Ne 9:00–15:00"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Fotky</legend>
+          <label>Náhledový obrázek * <small class="muted">max. 3 MB</small><input name="foto" type="file" accept="image/jpeg,image/png,image/webp" required /></label>
+          <label>Galerie <small class="muted">až 6 fotek, každá max. 3 MB – prosíme zkomprimujte je např. na tinypng.com</small><input name="galerie[]" type="file" accept="image/jpeg,image/png,image/webp" multiple /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Kontakt</legend>
+          <div class="form__2">
+            <label>Telefon *<input name="telefon" type="tel" required /></label>
+            <label>Váš e-mail * <small class="muted">nezveřejňujeme</small><input name="email" type="email" required /></label>
+            <label>Web<input name="web" type="url" placeholder="https://" /></label>
+            <label>Instagram<input name="instagram" placeholder="@vasepodnik" /></label>
+          </div>
+          <label>Rezervace *<input name="rezervace" required placeholder="Např. Ano, telefonicky / Ne" /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Jak to u vás vypadá</legend>
+          <p class="form__sk">Platba *</p>
+          <div class="form__chipy">
+            {['Kartou', 'Hotově'].map((v) => <label class="ch"><input type="checkbox" name="platba[]" value={v} /> {v}</label>)}
+          </div>
+          <div class="form__2">
+            <label>Wi-Fi *<select name="wifi" required><option value="">–</option><option>Ano</option><option>Ne</option></select></label>
+            <label>WC *<select name="wc" required><option value="">–</option><option>Ano</option><option>Ne</option></select></label>
+          </div>
+          <p class="form__sk">Kuchyně *</p>
+          <div class="form__chipy">
+            {KUCHYNE.map((v) => <label class="ch"><input type="checkbox" name="kuchyne[]" value={v} /> {v}</label>)}
+          </div>
+          <p class="form__sk">Atmosféra *</p>
+          <div class="form__chipy">
+            {ATMOSFERA.map((v) => <label class="ch"><input type="checkbox" name="atmosfera[]" value={v} /> {v}</label>)}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Váš brunch tip</legend>
+          <label>Nadpis tipu * <small class="muted">něco specifického pro váš podnik</small><input name="tipnadpis" required maxlength="80" /></label>
+          <label>Text tipu *<textarea name="tip" required rows="3" maxlength="600" placeholder="Např. Avokádový sandwich se sázeným vejcem a slaninou."></textarea></label>
+        </fieldset>
+
+        <label class="past" aria-hidden="true">Nevyplňujte<input name="web2" tabindex="-1" autocomplete="off" /></label>
+        <input type="hidden" name="t" data-cas />
+        <p class="muted form__gdpr">Odesláním souhlasíte se zpracováním údajů podle <a href="/ochrana-osobnich-udaju/">zásad ochrany osobních údajů</a>.</p>
+        <p class="form__chyba" data-chyba role="alert" hidden></p>
+        <button class="btn btn--akcent" type="submit" data-odeslat>Přidat podnik</button>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-form]')!;
+  const chyba = form.querySelector<HTMLElement>('[data-chyba]')!;
+  const btn = form.querySelector<HTMLButtonElement>('[data-odeslat]')!;
+  form.querySelector<HTMLInputElement>('[data-cas]')!.value = String(Math.floor(Date.now() / 1000));
+  const MAX = 3 * 1024 * 1024;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    chyba.hidden = true;
+    const ukaz = (t: string) => {
+      chyba.textContent = t;
+      chyba.hidden = false;
+      chyba.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+    for (const sk of ['platba[]', 'kuchyne[]', 'atmosfera[]'])
+      if (!form.querySelector(`input[name="${sk}"]:checked`)) return ukaz('Zaškrtněte prosím platbu, kuchyni i atmosféru.');
+    const soubory = [...form.querySelectorAll<HTMLInputElement>('input[type=file]')].flatMap((i) => [...(i.files ?? [])]);
+    if (soubory.some((f) => f.size > MAX)) return ukaz('Některá fotka je větší než 3 MB. Zmenšete ji prosím.');
+    if (soubory.length > 7) return ukaz('Do galerie můžete nahrát nejvýš 6 fotek.');
+    btn.disabled = true;
+    btn.textContent = 'Odesílám…';
+    try {
+      const r = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+      const d = await r.json().catch(() => ({ ok: false }));
+      if (d.ok) {
+        location.href = '/podnik-byl-pridan/';
+        return;
+      }
+      ukaz(d.chyba ?? 'Odeslání se nepovedlo. Zkuste to prosím znovu, nebo nám napište e-mail.');
+    } catch {
+      ukaz('Odeslání se nepovedlo. Zkontrolujte připojení a zkuste to znovu.');
+    }
+    btn.disabled = false;
+    btn.textContent = 'Přidat podnik';
+  });
+</script>
+
+<style>
+  .pp {
+    display: grid;
+    grid-template-columns: 18rem minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .pp {
+      grid-template-columns: 1fr;
+    }
+  }
+  .pp__info {
+    position: sticky;
+    top: 90px;
+    padding: 1.5rem;
+    background: var(--blush);
+    border-radius: var(--radius);
+  }
+  .pp__info p:last-child {
+    margin: 0;
+  }
+  .form {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 44rem;
+  }
+  fieldset {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  legend {
+    padding: 0 0.4rem;
+    font: 600 1.05rem var(--f-display);
+    color: var(--brown-dark);
+  }
+  label {
+    display: grid;
+    gap: 0.35rem;
+    font-weight: 500;
+    font-size: 0.92rem;
+  }
+  input:not([type='checkbox']),
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.75em 0.95em;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    font: inherit;
+    font-weight: 400;
+    color: var(--ink);
+  }
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgb(255 142 95 / 0.2);
+  }
+  .form__2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+    gap: 1rem;
+  }
+  .form__sk {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.92rem;
+  }
+  .form__chipy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+  .ch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 400;
+  }
+  .ch input {
+    accent-color: var(--accent-deep);
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+  .past {
+    position: absolute;
+    left: -9999px;
+  }
+  .form__gdpr {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .form__chyba {
+    margin: 0;
+    padding: 0.9rem 1.1rem;
+    border-radius: 12px;
+    background: #fdecea;
+    color: #9b2c1f;
+  }
+  .form .btn {
+    justify-self: start;
+  }
+</style>

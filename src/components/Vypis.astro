@@ -1,0 +1,246 @@
+---
+// Výpis podniků s filtry (město, kuchyně, atmosféra, hledání) a tlačítkem „Načíst další“.
+// Filtrování běží v prohlížeči nad vykreslenými kartami; stav se propisuje do adresy (?mesto=praha&kuchyne=Veganská).
+import Karta from './Karta.astro';
+import { mesta, KUCHYNE, ATMOSFERA, type Podnik } from '../lib/data';
+
+interface Props {
+  podniky: Podnik[];
+  /** Kolik karet ukázat před „Načíst další“ */
+  naStranku?: number;
+  /** Zobrazit výběr města */
+  filtrMesta?: boolean;
+  /** Zobrazit filtry kuchyně a atmosféry */
+  filtry?: boolean;
+}
+const { podniky, naStranku = 12, filtrMesta = true, filtry = true } = Astro.props;
+const pouzitaMesta = mesta().filter((m) => m.podniky.some((p) => podniky.includes(p)));
+const kuchyne = KUCHYNE.filter((k) => podniky.some((p) => p.kuchyne.includes(k)));
+const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includes(a)));
+---
+
+<div class="vypis" data-vypis data-na-stranku={naStranku}>
+  {
+    (filtry || filtrMesta) && (
+      <form class="vypis__filtry" data-filtry onsubmit="return false">
+        <div class="vypis__radek">
+          <label class="vypis__hledat">
+            <span class="sr-only">Hledat podnik</span>
+            <input type="search" name="q" placeholder="Hledat podle názvu nebo adresy…" autocomplete="off" />
+          </label>
+          {filtrMesta && pouzitaMesta.length > 1 && (
+            <label class="vypis__mesto">
+              <span class="sr-only">Město</span>
+              <select name="mesto">
+                <option value="">Všechna města</option>
+                {pouzitaMesta.map((m) => (
+                  <>
+                    <option value={m.slug}>{m.nazev}</option>
+                    {m.obvody?.map((o) => (
+                      <option value={o.slug}>&nbsp;&nbsp;{o.nazev}</option>
+                    ))}
+                  </>
+                ))}
+              </select>
+            </label>
+          )}
+        </div>
+        {filtry && (
+          <div class="vypis__chipy">
+            {kuchyne.map((k) => (
+              <label class="chip">
+                <input type="checkbox" name="kuchyne" value={k} />
+                <span>{k}</span>
+              </label>
+            ))}
+            {atmosfera.map((a) => (
+              <label class="chip chip--atm">
+                <input type="checkbox" name="atmosfera" value={a} />
+                <span>{a}</span>
+              </label>
+            ))}
+          </div>
+        )}
+      </form>
+    )
+  }
+  <p class="vypis__pocet muted" data-pocet aria-live="polite"></p>
+  <ul class="karty">
+    {podniky.map((p, i) => <Karta p={p} skryta={i >= naStranku} />)}
+  </ul>
+  <p class="vypis__prazdno" data-prazdno hidden>
+    Takovou kombinaci zatím nemáme. Zkus ubrat některý filtr, nebo nám <a href="/pridat-podnik/">tip na podnik pošli</a>.
+  </p>
+  <p class="vypis__dalsi">
+    <button type="button" class="btn btn--ghost" data-dalsi hidden>Načíst další</button>
+  </p>
+</div>
+
+<script>
+  const bezDiakritiky = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+  document.querySelectorAll<HTMLElement>('[data-vypis]').forEach((root) => {
+    const form = root.querySelector<HTMLFormElement>('[data-filtry]');
+    const karty = [...root.querySelectorAll<HTMLElement>('[data-karta]')];
+    const dalsi = root.querySelector<HTMLButtonElement>('[data-dalsi]')!;
+    const pocet = root.querySelector<HTMLElement>('[data-pocet]')!;
+    const prazdno = root.querySelector<HTMLElement>('[data-prazdno]')!;
+    const krok = Number(root.dataset.naStranku) || 12;
+    let limit = krok;
+
+    const tvar = (n: number) => (n === 1 ? 'podnik' : n >= 2 && n <= 4 ? 'podniky' : 'podniků');
+
+    function hodnoty() {
+      const fd = form ? new FormData(form) : new FormData();
+      return {
+        q: bezDiakritiky(String(fd.get('q') ?? '').trim()),
+        mesto: String(fd.get('mesto') ?? ''),
+        kuchyne: fd.getAll('kuchyne').map(String),
+        atmosfera: fd.getAll('atmosfera').map(String),
+      };
+    }
+
+    function vykresli(zapsat = true) {
+      const f = hodnoty();
+      const aktivni = !!(f.q || f.mesto || f.kuchyne.length || f.atmosfera.length);
+      const shoda = karty.filter((k) => {
+        if (f.q && !f.q.split(/\s+/).every((w) => k.dataset.hledat!.includes(w))) return false;
+        if (f.mesto && !k.dataset.lokality!.split(' ').includes(f.mesto)) return false;
+        const ku = k.dataset.kuchyne!.split('|');
+        if (f.kuchyne.length && !f.kuchyne.every((x) => ku.includes(x))) return false;
+        const at = k.dataset.atmosfera!.split('|');
+        if (f.atmosfera.length && !f.atmosfera.every((x) => at.includes(x))) return false;
+        return true;
+      });
+      const set = new Set(shoda);
+      let n = 0;
+      for (const k of karty) k.hidden = !(set.has(k) && n++ < limit);
+      dalsi.hidden = shoda.length <= limit;
+      prazdno.hidden = shoda.length > 0;
+      pocet.textContent = aktivni ? `Nalezeno ${shoda.length} ${tvar(shoda.length)}` : '';
+      if (zapsat && form) {
+        const u = new URL(location.href);
+        for (const k of ['q', 'mesto', 'kuchyne', 'atmosfera']) u.searchParams.delete(k);
+        if (f.q) u.searchParams.set('q', String(new FormData(form).get('q')).trim());
+        if (f.mesto) u.searchParams.set('mesto', f.mesto);
+        f.kuchyne.forEach((x) => u.searchParams.append('kuchyne', x));
+        f.atmosfera.forEach((x) => u.searchParams.append('atmosfera', x));
+        history.replaceState(null, '', u);
+      }
+    }
+
+    // Výchozí stav z adresy
+    if (form) {
+      const sp = new URLSearchParams(location.search);
+      const q = form.elements.namedItem('q') as HTMLInputElement | null;
+      if (q && sp.get('q')) q.value = sp.get('q')!;
+      const m = form.elements.namedItem('mesto') as HTMLSelectElement | null;
+      if (m && sp.get('mesto')) m.value = sp.get('mesto')!;
+      for (const name of ['kuchyne', 'atmosfera']) {
+        const vals = sp.getAll(name);
+        form.querySelectorAll<HTMLInputElement>(`input[name="${name}"]`).forEach((i) => (i.checked = vals.includes(i.value)));
+      }
+      form.addEventListener('input', () => {
+        limit = krok;
+        vykresli();
+      });
+      if ([...sp.keys()].some((k) => ['q', 'mesto', 'kuchyne', 'atmosfera'].includes(k))) vykresli(false);
+    }
+
+    dalsi.addEventListener('click', () => {
+      limit += krok;
+      vykresli(false);
+    });
+    vykresli(false);
+  });
+</script>
+
+<style>
+  .vypis__filtry {
+    display: grid;
+    gap: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+  .vypis__radek {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .vypis__hledat {
+    flex: 2 1 16rem;
+  }
+  .vypis__mesto {
+    flex: 1 1 12rem;
+  }
+  .vypis__filtry input[type='search'],
+  .vypis__filtry select {
+    width: 100%;
+    padding: 0.8em 1.1em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+  .vypis__filtry input[type='search']:focus,
+  .vypis__filtry select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgb(255 142 95 / 0.2);
+  }
+  .vypis__chipy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .chip input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .chip span {
+    display: inline-block;
+    padding: 0.42em 0.95em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .chip span:hover {
+    border-color: var(--accent);
+  }
+  .chip input:checked + span {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+  .chip--atm input:checked + span {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .chip input:focus-visible + span {
+    outline: 2px solid var(--accent-deep);
+    outline-offset: 2px;
+  }
+  .vypis__pocet {
+    min-height: 1.4em;
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+  }
+  .vypis__prazdno {
+    padding: 2rem;
+    text-align: center;
+    background: var(--blush);
+    border-radius: var(--radius);
+    max-width: none;
+  }
+  .vypis__dalsi {
+    text-align: center;
+    margin: 2.5rem 0 0;
+    max-width: none;
+  }
+</style>
