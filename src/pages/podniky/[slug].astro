@@ -4,6 +4,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import Foto from '../../components/Foto.astro';
 import Karta from '../../components/Karta.astro';
 import Srdce from '../../components/Srdce.astro';
+import Hodnoceni from '../../components/Hodnoceni.astro';
 import Mapa from '../../components/Mapa.astro';
 import BlogKarta from '../../components/BlogKarta.astro';
 import { SITE } from '../../lib/config';
@@ -84,6 +85,9 @@ const jsonLd = {
             {p.doporuceny && <span class="srdcovka">♥ Naše srdcovka</span>}
             <h1>{p.nazev}</h1>
             <p class="detail-adr">📍 {p.adresa}</p>
+            <a class="detail-hod" href="#hodnoceni">
+              <span class="hod-mini" data-hod-id={p.id}><span class="hv" style="--p:0%"></span><span class="hod-mini__nic">Zatím bez hodnocení – ohodnoť jako první</span></span>
+            </a>
             <p class="detail-tagy">
               {p.kuchyne.map((k) => <span class="tag tag--zelena">{k}</span>)}
               {p.atmosfera.filter((a) => a !== 'Sezení uvnitř').map((a) => <span class="tag">{a}</span>)}
@@ -141,6 +145,7 @@ const jsonLd = {
               </p>
             )
           }
+          <Hodnoceni p={p} />
         </div>
 
         <aside class="info">
@@ -295,6 +300,14 @@ const jsonLd = {
     background: var(--accent);
     color: #fff;
     font: 600 0.78rem/1.3 var(--f-display);
+  }
+  .detail-hod {
+    display: inline-block;
+    margin: -0.35rem 0 0.75rem;
+    text-decoration: none;
+  }
+  .detail-hod .hod-mini {
+    font-size: 0.9rem;
   }
   .detail-adr {
     margin: 0 0 0.75rem;

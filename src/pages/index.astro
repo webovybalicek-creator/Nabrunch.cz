@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import Karta from '../components/Karta.astro';
+import Slider from '../components/Slider.astro';
 import Vypis from '../components/Vypis.astro';
 import BlogKarta from '../components/BlogKarta.astro';
 import Foto from '../components/Foto.astro';
@@ -9,7 +9,7 @@ import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, p
 import { clanky } from '../lib/blog';
 
 const srdcovky = doporucene();
-const nove = nejnovejsi(8);
+const nove = nejnovejsi(12);
 // Ve výpisu „Všechny podniky“ abecedně (srdcovky a novinky jsou v sekcích nad ním)
 const vse = [...PODNIKY].sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs'));
 const topMesta = [...mesta()].sort((a, b) => b.podniky.length - a.podniky.length);
@@ -57,30 +57,9 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <span class="eyebrow">Naše srdcovky</span>
-          <h2>Doporučené podniky</h2>
-        </div>
-        <a href="/podniky/" class="btn btn--ghost">Všechny podniky</a>
-      </div>
-      <ul class="karty">{srdcovky.map((p) => <Karta p={p} />)}</ul>
-    </div>
-  </section>
+  <Slider podniky={srdcovky} eyebrow="Naše srdcovky" nadpis="Doporučené podniky" odkaz={{ href: '/podniky/', text: 'Všechny podniky' }} />
 
-  <section class="section section--blush">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <span class="eyebrow">Nová místa, nové chutě</span>
-          <h2>Nově přidané</h2>
-        </div>
-      </div>
-      <ul class="karty">{nove.map((p) => <Karta p={p} />)}</ul>
-    </div>
-  </section>
+  <Slider podniky={nove} eyebrow="Nová místa, nové chutě" nadpis="Nově přidané" tmavy />
 
   <section class="section" id="vsechnypodniky">
     <div class="wrap">

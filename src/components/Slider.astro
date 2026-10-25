@@ -1,0 +1,192 @@
+---
+// Vodorovný slider karet podniků: posouvání prstem/kolečkem, šipky, ukazatel průběhu.
+import Karta from './Karta.astro';
+import type { Podnik } from '../lib/data';
+
+interface Props {
+  podniky: Podnik[];
+  eyebrow: string;
+  nadpis: string;
+  odkaz?: { href: string; text: string };
+  /** Tmavá varianta (čokoládové pozadí) */
+  tmavy?: boolean;
+}
+const { podniky, eyebrow, nadpis, odkaz, tmavy = false } = Astro.props;
+---
+
+<section class:list={['slider', tmavy && 'slider--tmavy']} data-slider>
+  <div class="wrap">
+    <div class="slider__hlava">
+      <div>
+        <span class="eyebrow">{eyebrow}</span>
+        <h2>{nadpis}</h2>
+      </div>
+      <div class="slider__ovl">
+        {odkaz && <a href={odkaz.href} class="slider__odkaz">{odkaz.text} →</a>}
+        <button type="button" class="slider__sip" data-krok="-1" aria-label="Předchozí" disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+        </button>
+        <button type="button" class="slider__sip" data-krok="1" aria-label="Další">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="slider__okno">
+    <ul class="slider__drah" data-drah tabindex="0" aria-label={nadpis}>
+      {podniky.map((p) => <Karta p={p} />)}
+    </ul>
+  </div>
+  <div class="wrap">
+    <div class="slider__prubeh" aria-hidden="true"><span data-prubeh></span></div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-slider]').forEach((root) => {
+    const drah = root.querySelector<HTMLElement>('[data-drah]')!;
+    const [zpet, dal] = root.querySelectorAll<HTMLButtonElement>('[data-krok]');
+    const prubeh = root.querySelector<HTMLElement>('[data-prubeh]')!;
+    const obnov = () => {
+      const max = drah.scrollWidth - drah.clientWidth;
+      zpet.disabled = drah.scrollLeft <= 4;
+      dal.disabled = drah.scrollLeft >= max - 4;
+      const podil = drah.clientWidth / drah.scrollWidth;
+      prubeh.style.width = `${Math.min(100, podil * 100)}%`;
+      prubeh.style.transform = `translateX(${max > 0 ? (drah.scrollLeft / max) * (1 / podil - 1) * 100 : 0}%)`;
+    };
+    root.querySelectorAll<HTMLButtonElement>('[data-krok]').forEach((b) =>
+      b.addEventListener('click', () => {
+        const karta = drah.querySelector<HTMLElement>('.karta');
+        const krok = karta ? karta.offsetWidth + parseFloat(getComputedStyle(drah).columnGap || '0') : drah.clientWidth;
+        const naObrazovku = Math.max(1, Math.floor(drah.clientWidth / krok));
+        drah.scrollBy({ left: Number(b.dataset.krok) * krok * naObrazovku, behavior: 'smooth' });
+      }),
+    );
+    drah.addEventListener('scroll', obnov, { passive: true });
+    addEventListener('resize', obnov);
+    obnov();
+  });
+</script>
+
+<style>
+  .slider {
+    padding-block: clamp(48px, 7vw, 88px);
+    overflow: hidden;
+  }
+  .slider--tmavy {
+    background: var(--blush);
+  }
+  .slider__hlava {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+  }
+  .slider__hlava h2 {
+    margin: 0;
+  }
+  .slider__ovl {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .slider__odkaz {
+    margin-right: 0.75rem;
+    font: 600 0.92rem var(--f-display);
+    color: var(--brown-dark);
+    text-decoration: none;
+  }
+  .slider__odkaz:hover {
+    color: var(--accent-deep);
+  }
+  .slider__sip {
+    display: grid;
+    place-items: center;
+    width: 2.9rem;
+    height: 2.9rem;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--brown-dark);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
+  }
+  .slider__sip:hover:not(:disabled) {
+    background: var(--brown-dark);
+    border-color: var(--brown-dark);
+    color: #fff;
+  }
+  .slider__sip:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+  .slider__sip svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  /* Dráha začíná zarovnaná s obsahem stránky, ale doprava přetéká až k okraji okna */
+  .slider__okno {
+    --odsazeni: max(var(--gutter), calc((100vw - var(--wrap)) / 2 + var(--gutter)));
+  }
+  .slider__drah {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem var(--odsazeni) 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: clamp(15rem, 23vw, 18.5rem);
+    column-gap: clamp(0.9rem, 2vw, 1.5rem);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--odsazeni);
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .slider__drah::-webkit-scrollbar {
+    display: none;
+  }
+  .slider__drah:focus-visible {
+    outline: none;
+  }
+  .slider__drah :global(.karta) {
+    scroll-snap-align: start;
+  }
+  .slider__drah :global(.karta__foto) {
+    aspect-ratio: 4 / 5;
+    box-shadow: 0 14px 30px rgb(83 42 25 / 0.12);
+  }
+  .slider__prubeh {
+    height: 3px;
+    margin-top: 1.25rem;
+    border-radius: 3px;
+    background: var(--line);
+    overflow: hidden;
+  }
+  .slider__prubeh span {
+    display: block;
+    height: 100%;
+    width: 30%;
+    border-radius: 3px;
+    background: var(--accent);
+    transition: transform 0.1s linear;
+  }
+  @media (max-width: 640px) {
+    .slider__drah {
+      grid-auto-columns: 72%;
+    }
+    .slider__sip {
+      display: none;
+    }
+    .slider__odkaz {
+      margin: 0;
+    }
+  }
+</style>

@@ -25,6 +25,8 @@ const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
   data-kuchyne={p.kuchyne.join('|')}
   data-atmosfera={p.atmosfera.join('|')}
   data-hledat={hledat}
+  data-lat={p.lat ?? ''}
+  data-lon={p.lon ?? ''}
 >
   <Srdce p={p} />
   <a href={url(p)}>
@@ -34,6 +36,8 @@ const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
     </div>
     <h3 class="karta__nazev">{p.nazev}</h3>
     <p class="karta__adr">{p.adresa || mesto(p)}</p>
+    <span class="hod-mini" data-hod-id={p.id}><span class="hv" style="--p:0%"></span><span class="hod-mini__nic">Zatím bez hodnocení</span></span>
+    <span class="karta__km" data-km hidden></span>
     {
       p.kuchyne.length > 0 && (
         <p class="karta__tagy">
@@ -92,6 +96,21 @@ const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
     margin: 0;
     font-size: 0.84rem;
     color: var(--ink-soft);
+  }
+  .karta__km {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    z-index: 2;
+    padding: 0.25em 0.7em;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--brown-dark);
+    font: 600 0.75rem/1.3 var(--f-display);
+    box-shadow: 0 1px 4px rgb(83 42 25 / 0.15);
+  }
+  .karta__km[hidden] {
+    display: none;
   }
   .karta__tagy {
     display: flex;

@@ -28,6 +28,9 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
             <span class="sr-only">Hledat podnik</span>
             <input type="search" name="q" placeholder="Hledat podle názvu nebo adresy…" autocomplete="off" />
           </label>
+          <button type="button" class="vypis__okoli" data-okoli aria-pressed="false">
+            <span aria-hidden="true">📍</span> V mém okolí
+          </button>
           {filtrMesta && pouzitaMesta.length > 1 && (
             <label class="vypis__mesto">
               <span class="sr-only">Město</span>
@@ -87,6 +90,10 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
     const prazdno = root.querySelector<HTMLElement>('[data-prazdno]')!;
     const krok = Number(root.dataset.naStranku) || 12;
     let limit = krok;
+    const seznam = root.querySelector<HTMLUListElement>('.karty')!;
+    const puvodni = [...karty];
+    const okoliBtn = root.querySelector<HTMLButtonElement>('[data-okoli]');
+    let poloha: [number, number] | null = null;
 
     const tvar = (n: number) => (n === 1 ? 'podnik' : n >= 2 && n <= 4 ? 'podniky' : 'podniků');
 
@@ -117,7 +124,11 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
       for (const k of karty) k.hidden = !(set.has(k) && n++ < limit);
       dalsi.hidden = shoda.length <= limit;
       prazdno.hidden = shoda.length > 0;
-      pocet.textContent = aktivni ? `Nalezeno ${shoda.length} ${tvar(shoda.length)}` : '';
+      pocet.textContent = aktivni
+        ? `Nalezeno ${shoda.length} ${tvar(shoda.length)}${poloha ? ', od nejbližšího' : ''}`
+        : poloha
+          ? 'Seřazeno od nejbližšího k tobě'
+          : '';
       if (zapsat && form) {
         const u = new URL(location.href);
         for (const k of ['q', 'mesto', 'kuchyne', 'atmosfera']) u.searchParams.delete(k);
@@ -147,6 +158,65 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
       if ([...sp.keys()].some((k) => ['q', 'mesto', 'kuchyne', 'atmosfera'].includes(k))) vykresli(false);
     }
 
+    // „V mém okolí“: seřadí karty podle vzdálenosti od uživatele (poloha se nikam neodesílá)
+    const km = (a: [number, number], b: [number, number]) => {
+      const r = Math.PI / 180;
+      const h =
+        Math.sin(((b[0] - a[0]) * r) / 2) ** 2 +
+        Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(((b[1] - a[1]) * r) / 2) ** 2;
+      return 12742 * Math.asin(Math.sqrt(h));
+    };
+    const kmText = (k: number) =>
+      k < 1 ? `${Math.max(50, Math.round((k * 1000) / 50) * 50)} m` : `${k.toLocaleString('cs-CZ', { maximumFractionDigits: k < 10 ? 1 : 0 })} km`;
+    function seradPodleOkoli() {
+      const vzd = new Map<HTMLElement, number>();
+      for (const k of karty) {
+        const lat = parseFloat(k.dataset.lat ?? ''), lon = parseFloat(k.dataset.lon ?? '');
+        const d = poloha && !isNaN(lat) && !isNaN(lon) ? km(poloha, [lat, lon]) : Infinity;
+        vzd.set(k, d);
+        const b = k.querySelector<HTMLElement>('[data-km]');
+        if (b) {
+          b.hidden = !poloha || d === Infinity;
+          b.textContent = d === Infinity ? '' : `📍 ${kmText(d)}`;
+        }
+      }
+      karty.splice(0, karty.length, ...(poloha ? [...puvodni].sort((a, b) => vzd.get(a)! - vzd.get(b)!) : puvodni));
+      karty.forEach((k) => seznam.appendChild(k));
+    }
+    okoliBtn?.addEventListener('click', () => {
+      if (poloha) {
+        poloha = null;
+        okoliBtn.setAttribute('aria-pressed', 'false');
+        seradPodleOkoli();
+        limit = krok;
+        vykresli(false);
+        return;
+      }
+      if (!navigator.geolocation) {
+        pocet.textContent = 'Tvůj prohlížeč neumí zjistit polohu.';
+        return;
+      }
+      okoliBtn.disabled = true;
+      pocet.textContent = 'Zjišťuji polohu…';
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          okoliBtn.disabled = false;
+          poloha = [pos.coords.latitude, pos.coords.longitude];
+          okoliBtn.setAttribute('aria-pressed', 'true');
+          const m = form?.elements.namedItem('mesto') as HTMLSelectElement | null;
+          if (m) m.value = '';
+          seradPodleOkoli();
+          limit = krok;
+          vykresli();
+        },
+        () => {
+          okoliBtn.disabled = false;
+          pocet.textContent = 'Polohu se nepodařilo zjistit. Povol ji v prohlížeči, nebo vyber město.';
+        },
+        { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 },
+      );
+    });
+
     dalsi.addEventListener('click', () => {
       limit += krok;
       vykresli(false);
@@ -171,6 +241,28 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
   }
   .vypis__mesto {
     flex: 1 1 12rem;
+  }
+  .vypis__okoli {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.8em 1.2em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    font: 600 0.92rem var(--f-display);
+    color: var(--brown-dark);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .vypis__okoli:hover {
+    border-color: var(--accent);
+  }
+  .vypis__okoli[aria-pressed='true'] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
   }
   .vypis__filtry input[type='search'],
   .vypis__filtry select {

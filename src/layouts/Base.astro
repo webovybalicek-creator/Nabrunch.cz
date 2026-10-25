@@ -72,8 +72,10 @@ const fullTitle = /nabrunch/i.test(title) || title.length > 48 ? title : `${titl
     <Footer />
     <script>
       import { inicializujSrdicka, inicializujPocitadlo } from '../scripts/oblibene';
+      import { doplnHodnoceni } from '../scripts/hodnoceni-souhrn';
       inicializujSrdicka();
       inicializujPocitadlo();
+      doplnHodnoceni();
     </script>
   </body>
 </html>
