@@ -332,6 +332,20 @@ a.tag:hover {
   font-weight: 500;
 }
 
+/* Tlačítka uvnitř textu nesmí převzít barvu odkazů */
+.prose a.btn,
+.prose a.btn:hover,
+.prose .wp-block-button__link,
+.prose .wp-block-button__link:hover {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.prose a.btn--ghost,
+.prose a.btn--ghost:hover {
+  color: var(--brown-dark);
+}
+
 .prose blockquote {
   margin: 1.5rem 0;
   padding: 1rem 1.25rem;
