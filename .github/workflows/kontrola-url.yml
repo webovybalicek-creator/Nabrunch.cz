@@ -18,7 +18,10 @@ jobs:
     steps:
       - run: |
           for c in $CESTY; do
-            r=$(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' "https://$SITE_HOST$c")
-            echo "::notice title=$c::$r"
+            r=$(curl -s -D h.txt -o b.html -w '%{http_code} %{redirect_url}' "https://$SITE_HOST$c")
+            t=$(grep -o '<title>[^<]*' b.html | head -1 | sed 's/<title>//')
+            g=$(grep -o '<meta name="generator"[^>]*' b.html | head -1)
+            k=$(grep -iE '^(x-cache|age|x-varnish|cache-control|server|via):' h.txt | tr -d '\r' | tr '\n' ' ')
+            echo "::notice title=$c::$r | $t | $g | $k"
             sleep 0.5
           done
