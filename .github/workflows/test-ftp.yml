@@ -25,6 +25,7 @@ jobs:
           done
 
       - name: Výpis kořene FTP (pro kontrolu složek)
+        continue-on-error: true
         run: curl -sS --ssl-reqd --insecure --user "$FTP_USERNAME:$FTP_PASSWORD" --list-only "ftp://$FTP_SERVER/"
 
       - name: Nahrání index.html do složky subdomény
