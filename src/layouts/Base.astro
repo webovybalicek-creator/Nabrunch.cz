@@ -40,8 +40,10 @@ const fullTitle = wp?.t ?? (/nabrunch/i.test(title) || title.length > 48 ? title
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical} />
     <link rel="sitemap" href="/sitemap.xml" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="128x128" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#FFF5F4" />
     <meta property="og:type" content={typ} />
     <meta property="og:locale" content="cs_CZ" />
