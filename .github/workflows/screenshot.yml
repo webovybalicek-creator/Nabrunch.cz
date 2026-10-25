@@ -1,0 +1,67 @@
+name: Screenshot živého webu
+
+# Vyfotí stránky živého webu (desktop i mobil) do větve „screenshots“ a vypíše chyby z konzole a nenačtené soubory.
+on:
+  workflow_dispatch:
+    inputs:
+      cesty:
+        description: 'Cesty oddělené mezerou'
+        default: '/ /podniky/ /praha/'
+      mobil:
+        description: 'Fotit i mobilní zobrazení'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  shot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SITE_HOST: ${{ vars.SITE_HOST || 'new.nabrunch.cz' }}
+      CESTY: ${{ inputs.cesty }}
+      MOBIL: ${{ inputs.mobil }}
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q playwright && python -m playwright install --with-deps chromium >/dev/null
+      - name: Screenshoty
+        run: |
+          mkdir -p shots
+          python - <<'PY'
+          import os, re
+          from playwright.sync_api import sync_playwright
+          host = os.environ['SITE_HOST']
+          cesty = (os.environ.get('CESTY') or '/').split()
+          varianty = [('d', {'width': 1366, 'height': 900})]
+          if os.environ.get('MOBIL') == 'true':
+              varianty.append(('m', {'width': 390, 'height': 844}))
+          log = []
+          with sync_playwright() as pw:
+              b = pw.chromium.launch()
+              for oznaceni, vp in varianty:
+                  pg = b.new_page(viewport=vp, device_scale_factor=1)
+                  pg.on('response', lambda r: log.append(f'{r.status} {r.url}') if r.status >= 400 else None)
+                  pg.on('console', lambda m: log.append(f'console {m.type}: {m.text}') if m.type in ('error', 'warning') else None)
+                  for c in cesty:
+                      pg.goto(f'https://{host}{c}', wait_until='networkidle')
+                      for y in range(0, 12000, 700):
+                          pg.evaluate(f'window.scrollTo(0,{y})'); pg.wait_for_timeout(200)
+                      pg.wait_for_timeout(1200)
+                      pg.evaluate('window.scrollTo(0,0)'); pg.wait_for_timeout(300)
+                      n = re.sub(r'[^a-z0-9]+', '-', c.strip('/')) or 'uvod'
+                      pg.screenshot(path=f'shots/{n}-{oznaceni}.jpg', full_page=True, type='jpeg', quality=70)
+                  pg.close()
+              b.close()
+          open('shots/log.txt', 'w').write('\n'.join(sorted(set(log))) or 'bez chyb')
+          print('\n'.join(sorted(set(log))) or 'bez chyb')
+          PY
+      - name: Uložení do větve screenshots
+        run: |
+          cd shots
+          git init -q && git checkout -q -b screenshots
+          git add . && git -c user.name=bot -c user.email=bot@local commit -qm shots
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" screenshots
