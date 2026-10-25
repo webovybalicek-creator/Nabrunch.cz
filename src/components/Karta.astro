@@ -99,4 +99,13 @@ const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
     gap: 0.35rem;
     margin: 0.55rem 0 0;
   }
+  /* Úzké karty na mobilu: stačí jeden štítek */
+  @media (max-width: 560px) {
+    .karta__nazev {
+      font-size: 1rem;
+    }
+    .karta__tagy :global(.tag:nth-child(n + 2)) {
+      display: none;
+    }
+  }
 </style>

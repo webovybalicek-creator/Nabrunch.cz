@@ -5,12 +5,13 @@ import Vypis from '../components/Vypis.astro';
 import BlogKarta from '../components/BlogKarta.astro';
 import Foto from '../components/Foto.astro';
 import { SITE } from '../lib/config';
-import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podnikuText, poradi } from '../lib/data';
+import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podnikuText } from '../lib/data';
 import { clanky } from '../lib/blog';
 
 const srdcovky = doporucene();
 const nove = nejnovejsi(8);
-const vse = [...PODNIKY].sort(poradi);
+// Ve výpisu „Všechny podniky“ abecedně (srdcovky a novinky jsou v sekcích nad ním)
+const vse = [...PODNIKY].sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs'));
 const topMesta = [...mesta()].sort((a, b) => b.podniky.length - a.podniky.length);
 const tipy = (await clanky()).slice(0, 6);
 const kolaz = srdcovky.slice(0, 3);

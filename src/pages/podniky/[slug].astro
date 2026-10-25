@@ -49,7 +49,7 @@ const parametry = [
   ['Platba', p.platba.join(', ') || undefined],
   ['Wi-Fi', ano(p.wifi)],
   ['WC', ano(p.wc)],
-  ['Sezení', [...new Set([...p.sezeni, ...p.atmosfera.filter((a) => a === 'Zahrádka' || a === 'Sezení uvnitř')])].join(', ') || undefined],
+  ['Sezení', [...new Set([...p.sezeni, ...p.atmosfera.filter((a) => a === 'Zahrádka' || a === 'Sezení uvnitř')].map((s) => (s === 'Sezení uvnitř' ? 'Uvnitř' : s)))].join(', ') || undefined],
 ].filter(([, v]) => v) as [string, string][];
 
 const jsonLd = {
