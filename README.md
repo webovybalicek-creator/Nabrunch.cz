@@ -2,7 +2,7 @@
 
 Průvodce nejlepšími snídaňovými a brunchovými místy v Česku. Statický web na [Astro](https://astro.build), stejný základ jako najdikadernictvi.cz.
 
-Zatím běží na **new.nabrunch.cz** (noindex) vedle původního WordPressu na nabrunch.cz.
+Běží na **nabrunch.cz** (od 25. 10. 2026, předtím WordPress – soubory zůstaly na hostingu ve složce `/nabrunch.cz/web-wordpress`).
 
 ## Vývoj
 
@@ -47,15 +47,16 @@ vytvoří náhledy `public/nahledy/…` (WebP 640 px) a commitne je. Spouští s
 Každý push do `main` (a dokončené stažení obrázků) web sestaví a přes FTPS nahraje na hosting (`.github/workflows/deploy.yml`).
 Nahrávají se jen změněné soubory, server je rozbalí dočasným PHP skriptem.
 
-Secrets: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (FTP účet `new.nabrunch.cz` → `/nabrunch.cz/sub/new`).
-Proměnná `SITE_HOST` (výchozí `new.nabrunch.cz`) – doména, přes kterou se volá rozbalovač.
+Secrets: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (FTP účet, jehož kořen je složka webu `/nabrunch.cz/web`),
+`ECOMAIL_API_KEY` (newsletter), `SMTP_PASSWORD` (e-maily z formulářů přes smtp.websupport.cz).
+Proměnná `SITE_HOST` (výchozí `nabrunch.cz`) – doména, přes kterou se volá rozbalovač.
 
 ## Formulář „Přidat podnik“
 
 `public/api/podnik.php` pošle údaje i fotky e-mailem na karolina@nabrunch.cz.
 
-## Spuštění na nabrunch.cz
+## Provoz
 
-1. `SITE.indexovat = true` v `src/lib/config.ts` (zapne indexaci, sitemapu v robots.txt; AdSense a GA se načtou jen na nabrunch.cz).
-2. Na hostingu přepnout službu nabrunch.cz na složku webu, FTP účet a proměnnou `SITE_HOST` na `nabrunch.cz`.
-3. V AdSense nastavit zprávu o souhlasu (GDPR) – Consent Mode je ve výchozím stavu „denied“.
+- Indexace je zapnutá (`SITE.indexovat = true` v `src/lib/config.ts`), AdSense a GA4 se načítají jen na nabrunch.cz.
+- V AdSense musí být zapnutá zpráva o souhlasu (GDPR) – Consent Mode je ve výchozím stavu „denied“.
+- Hodnocení podniků: SQLite ve složce `/_data/` na serveru (deploy ji nemaže, zvenku je nepřístupná).
