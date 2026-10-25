@@ -64,6 +64,17 @@ jobs:
                   pg.wait_for_timeout(8)
               pg.wait_for_timeout(60)
               pg.screenshot(path='shots/smouha.jpg', type='jpeg', quality=75)
+              # Test drobků z tlačítka při najetí myší
+              pg.mouse.move(10, 10)
+              box = pg.locator('.hdr__cta').bounding_box()
+              pg.mouse.move(box['x'] + box['width'] / 2, box['y'] + box['height'] / 2, steps=4)
+              pg.wait_for_timeout(260)
+              pg.screenshot(path='shots/drobky.jpg', type='jpeg', quality=85,
+                            clip={'x': box['x'] - 40, 'y': box['y'] - 10, 'width': box['width'] + 80, 'height': box['height'] + 70})
+              # Newsletter
+              pg.locator('.odber').scroll_into_view_if_needed(); pg.wait_for_timeout(300)
+              pg.locator('.odber').screenshot(path='shots/newsletter.jpg', type='jpeg', quality=75)
+              pg.evaluate('window.scrollTo(0,0)'); pg.wait_for_timeout(200)
               # Test našeptávače v hledání
               for dotaz in ('pra', 'kafe'):
                   pg.fill('#q', '')

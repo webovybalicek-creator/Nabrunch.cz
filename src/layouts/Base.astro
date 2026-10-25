@@ -79,9 +79,11 @@ const fullTitle = wp?.t ?? (/nabrunch/i.test(title) || title.length > 48 ? title
     <script>
       import { inicializujSrdicka, inicializujPocitadlo } from '../scripts/oblibene';
       import { doplnHodnoceni } from '../scripts/hodnoceni-souhrn';
+      import { inicializujDrobky } from '../scripts/drobky';
       inicializujSrdicka();
       inicializujPocitadlo();
       doplnHodnoceni();
+      inicializujDrobky();
     </script>
   </body>
 </html>
