@@ -24,7 +24,7 @@ jobs:
       ECOMAIL_API_KEY: ${{ secrets.ECOMAIL_API_KEY }}
       SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       # Cílová doména – po spuštění ostrého webu nastavit proměnnou SITE_HOST na nabrunch.cz
-      SITE_HOST: ${{ vars.SITE_HOST || 'new.nabrunch.cz' }}
+      SITE_HOST: ${{ vars.SITE_HOST || 'nabrunch.cz' }}
     steps:
       - uses: actions/checkout@v4
 

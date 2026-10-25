@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
-      SITE_HOST: ${{ vars.SITE_HOST || 'new.nabrunch.cz' }}
+      SITE_HOST: ${{ vars.SITE_HOST || 'nabrunch.cz' }}
       CESTY: ${{ inputs.cesty }}
     steps:
       - run: |

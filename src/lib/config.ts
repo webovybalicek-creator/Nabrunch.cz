@@ -9,7 +9,7 @@ export const SITE = {
    * Dokud je false, všechny stránky mají noindex a robots.txt blokuje roboty
    * (web běží na new.nabrunch.cz vedle WordPressu). Přepnout na true při spuštění na nabrunch.cz.
    */
-  indexovat: false,
+  indexovat: true,
   /**
    * Google AdSense (ID vydavatele) a Google Analytics 4 (ID měření).
    * Načítají se jen na ostré doméně nabrunch.cz (ne na new.nabrunch.cz), výchozí souhlas je „denied“ (Consent Mode v2).
