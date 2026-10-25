@@ -1,0 +1,32 @@
+name: Diagnostika FTP
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/diag-ftp.yml']
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+    steps:
+      - name: Varianty spojení
+        run: |
+          echo test > t.txt
+          echo "::notice::FTP_SERVER má ${#FTP_SERVER} znaků, končí na: ${FTP_SERVER: -12}"
+          zkus() {
+            local nazev="$1"; shift
+            out=$(curl -sS -v --max-time 30 --user "$FTP_USERNAME:$FTP_PASSWORD" "$@" 2>&1); rc=$?
+            stopa=$(printf '%s\n' "$out" | grep -E '^(< [0-9]{3}|\* (Connected|Trying|SSL|TLS|Connecting|Recv failure|.*refused|.*timed out)|curl:)' | grep -v PASS | tail -6 | tr '\n' '|' | cut -c1-600)
+            echo "::notice title=$nazev (rc=$rc)::$stopa"
+          }
+          zkus "FTPS výpis" --ssl-reqd --insecure --list-only "ftp://$FTP_SERVER/"
+          zkus "FTPS výpis bez EPSV" --ssl-reqd --insecure --disable-epsv --list-only "ftp://$FTP_SERVER/"
+          zkus "FTPS výpis skip-pasv-ip" --ssl-reqd --insecure --disable-epsv --ftp-skip-pasv-ip --list-only "ftp://$FTP_SERVER/"
+          zkus "FTPS upload bez EPSV" --ssl-reqd --insecure --disable-epsv -T t.txt "ftp://$FTP_SERVER/new.nabrunch.cz/t.txt"
+          zkus "Implicitní FTPS 990" --insecure --list-only "ftps://$FTP_SERVER:990/"
