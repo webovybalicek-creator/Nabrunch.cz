@@ -133,10 +133,6 @@ import { SITE } from '../lib/config';
     .pp {
       grid-template-columns: 1fr;
     }
-    /* Na mobilu box s informacemi nepřilepovat – jinak překrývá formulář */
-    .pp__info {
-      position: static;
-    }
   }
   .pp__info {
     position: sticky;
@@ -147,6 +143,12 @@ import { SITE } from '../lib/config';
   }
   .pp__info p:last-child {
     margin: 0;
+  }
+  /* Na mobilu box s informacemi nepřilepovat – jinak překrývá formulář */
+  @media (max-width: 860px) {
+    .pp__info {
+      position: static;
+    }
   }
   .form {
     display: grid;

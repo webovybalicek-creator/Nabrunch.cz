@@ -434,9 +434,6 @@ const jsonLd = {
     .detail-grid {
       grid-template-columns: 1fr;
     }
-    .info {
-      position: static;
-    }
   }
   .tip {
     margin-bottom: 2rem;
@@ -468,6 +465,11 @@ const jsonLd = {
     top: 90px;
     display: grid;
     gap: 1.25rem;
+  }
+  @media (max-width: 900px) {
+    .info {
+      position: static;
+    }
   }
   .info section {
     padding: 1.25rem 1.4rem;
