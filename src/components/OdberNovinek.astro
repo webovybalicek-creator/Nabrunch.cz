@@ -1,0 +1,112 @@
+---
+// Přihlášení k newsletteru (Ecomail přes /api/odber.php)
+---
+
+<section class="odber">
+  <div class="wrap odber__in">
+    <div>
+      <h2>Newsletter 💌</h2>
+      <p>Miluješ snídaně a brunche stejně jako my? Přihlas se k odběru a jednou za čas ti pošleme tipy na ty nejzajímavější podniky, novinky a inspiraci.</p>
+    </div>
+    <form class="odber__form" data-odber novalidate>
+      <label class="sr-only" for="odber-email">E-mail</label>
+      <input id="odber-email" type="email" name="email" required placeholder="tvuj@email.cz" autocomplete="email" />
+      <input class="odber__past" name="web2" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <input type="hidden" name="t" data-cas />
+      <button class="btn btn--akcent" type="submit">Odebírat</button>
+      <p class="odber__zprava" data-zprava role="status" hidden></p>
+      <p class="odber__gdpr">Přihlášením souhlasíš se <a href="/ochrana-osobnich-udaju/">zpracováním e-mailu</a>. Odhlásit se můžeš jedním klikem v každém e-mailu.</p>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-odber]').forEach((form) => {
+    form.querySelector<HTMLInputElement>('[data-cas]')!.value = String(Math.floor(Date.now() / 1000));
+    const zprava = form.querySelector<HTMLElement>('[data-zprava]')!;
+    const btn = form.querySelector<HTMLButtonElement>('button')!;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = form.querySelector<HTMLInputElement>('input[type=email]')!;
+      const ukaz = (t: string, ok = false) => {
+        zprava.textContent = t;
+        zprava.hidden = false;
+        zprava.classList.toggle('ok', ok);
+      };
+      if (!email.checkValidity()) return ukaz('Zkontroluj prosím e-mail.');
+      btn.disabled = true;
+      const fd = new FormData(form);
+      fd.set('zdroj', location.pathname);
+      try {
+        const d = await (await fetch('/api/odber.php', { method: 'POST', body: fd })).json();
+        if (d.ok) {
+          ukaz('Hotovo! Mrkni do schránky a potvrď přihlášení. 🥐', true);
+          form.reset();
+        } else ukaz(d.chyba ?? 'Přihlášení se nepovedlo.');
+      } catch {
+        ukaz('Přihlášení se nepovedlo. Zkus to prosím znovu.');
+      }
+      btn.disabled = false;
+    });
+  });
+</script>
+
+<style>
+  .odber {
+    background: var(--cream);
+    padding-block: clamp(36px, 5vw, 56px);
+  }
+  .odber__in {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 26rem);
+    gap: 1.5rem 3rem;
+    align-items: center;
+  }
+  @media (max-width: 820px) {
+    .odber__in {
+      grid-template-columns: 1fr;
+    }
+  }
+  .odber h2 {
+    margin-bottom: 0.4em;
+  }
+  .odber p {
+    margin: 0;
+  }
+  .odber__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .odber__form input[type='email'] {
+    flex: 1 1 14rem;
+    padding: 0.8em 1.1em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font: inherit;
+    background: #fff;
+  }
+  .odber__form input[type='email']:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgb(255 142 95 / 0.2);
+  }
+  .odber__past {
+    position: absolute;
+    left: -9999px;
+  }
+  .odber__zprava {
+    flex-basis: 100%;
+    font-size: 0.9rem;
+    color: #9b2c1f;
+  }
+  .odber__zprava:global(.ok) {
+    color: var(--green);
+    font-weight: 600;
+  }
+  .odber__gdpr {
+    flex-basis: 100%;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+</style>

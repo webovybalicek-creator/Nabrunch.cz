@@ -31,8 +31,8 @@ DirectoryIndex index.html
   RewriteRule ^8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-.+$ /8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky/ [L,R=301]
 </IfModule>
 
-# Interní soubory deploye nezveřejňovat
-<FilesMatch "^\.(deploy-manifest\.txt)$">
+# Interní soubory nezveřejňovat (manifest deploye, konfigurace s API klíčem)
+<FilesMatch "^(\.deploy-manifest\.txt|_ecomail\.php)$">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>

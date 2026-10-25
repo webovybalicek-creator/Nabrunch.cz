@@ -21,6 +21,7 @@ jobs:
       FTP_SERVER: ${{ secrets.FTP_SERVER }}
       FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
       FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      ECOMAIL_API_KEY: ${{ secrets.ECOMAIL_API_KEY }}
       # Cílová doména – po spuštění ostrého webu nastavit proměnnou SITE_HOST na nabrunch.cz
       SITE_HOST: ${{ vars.SITE_HOST || 'new.nabrunch.cz' }}
     steps:
@@ -33,6 +34,16 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+
+      - name: Konfigurace Ecomailu (API klíč jen na serveru, ne v repozitáři)
+        if: env.ECOMAIL_API_KEY != ''
+        run: |
+          printf '<?php return [%s => %s];\n' "'klic'" "'${ECOMAIL_API_KEY//\'/}'" > dist/api/_ecomail.php
+          echo "::notice::Konfigurace Ecomailu přidána"
+
+      - name: Chybí klíč Ecomailu
+        if: env.ECOMAIL_API_KEY == ''
+        run: echo "::warning::Chybí secret ECOMAIL_API_KEY – přihlášení k newsletteru nebude fungovat."
 
       - name: Kontrola přístupových údajů
         if: env.FTP_PASSWORD == ''
