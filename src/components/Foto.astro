@@ -1,6 +1,6 @@
 ---
-// Fotka podniku: náhled (WebP 600 px), při chybě originál, jinak broskvový zástupný blok
-import { nahled } from '../lib/data';
+// Fotka: náhled (WebP 640 px) nebo velká verze (1400 px); když náhled chybí, zkusí velkou, jinak broskvový blok
+import { nahled, velky } from '../lib/data';
 
 interface Props {
   src: string;
@@ -11,7 +11,7 @@ interface Props {
   class?: string;
 }
 const { src, alt, plna = false, eager = false, class: trida } = Astro.props;
-const prvni = plna ? src : nahled(src);
+const prvni = plna ? velky(src) : nahled(src);
 ---
 
 <img
@@ -21,7 +21,7 @@ const prvni = plna ? src : nahled(src);
   loading={eager ? 'eager' : 'lazy'}
   decoding="async"
   fetchpriority={eager ? 'high' : undefined}
-  data-original={plna ? undefined : src}
+  data-original={plna ? undefined : velky(src)}
   onerror="if(this.dataset.original&&this.src.indexOf(this.dataset.original)<0){this.src=this.dataset.original}else{this.onerror=null;this.classList.add('foto--chyba')}"
 />
 

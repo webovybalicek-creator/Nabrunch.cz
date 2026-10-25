@@ -5,6 +5,7 @@ import Foto from '../Foto.astro';
 import Karta from '../Karta.astro';
 import BlogKarta from '../BlogKarta.astro';
 import { SITE } from '../../lib/config';
+import { velky, obrazkyVHtml } from '../../lib/data';
 import { clanky, clanekUrl, kategorie, kategorieUrl, casCteni, datumText, perex, souvisejici, zminenePodniky, type Clanek } from '../../lib/blog';
 
 interface Props {
@@ -30,7 +31,7 @@ const jsonLd = {
   headline: c.data.title,
   description: popis,
   datePublished: c.data.date.toISOString(),
-  ...(c.data.image ? { image: new URL(c.data.image, SITE.url).href } : {}),
+  ...(c.data.image ? { image: new URL(velky(c.data.image), SITE.url).href } : {}),
   mainEntityOfPage: new URL(clanekUrl(c), SITE.url).href,
   author: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
   publisher: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
@@ -59,7 +60,7 @@ const jsonLd = {
       )
     }
     <div class="wrap">
-      <div class="prose clanek-text" set:html={html} />
+      <div class="prose clanek-text" set:html={obrazkyVHtml(html)} />
     </div>
   </article>
 

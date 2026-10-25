@@ -1,10 +1,11 @@
 ---
 import Stranka from '../components/Stranka.astro';
 import stranky from '../data/stranky.json';
+import { obrazkyVHtml } from '../lib/data';
 
 const s = stranky['obchodni-podminky'];
 ---
 
 <Stranka title={s.titulek} description={`${s.titulek} webu nabrunch.cz.`}>
-  <Fragment set:html={s.obsah} />
+  <Fragment set:html={obrazkyVHtml(s.obsah)} />
 </Stranka>

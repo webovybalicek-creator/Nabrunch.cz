@@ -42,9 +42,16 @@ export const PODNIKY = podnikyRaw as Podnik[];
 export const url = (p: Podnik) => `/podniky/${p.slug}/`;
 
 // ---------------------------------------------------------------- obrázky
-/** Náhled obrázku pro karty (600 px, WebP) – vytváří workflow „Stažení obrázků“ */
-export const nahled = (cesta: string) =>
-  cesta.replace(/^\/wp-content\/uploads\//, '/nahledy/').replace(/\.(jpe?g|png|webp|gif|avif)$/i, '.webp');
+// Obrázky z WordPressu jsou v datech pod původní cestou /wp-content/uploads/…;
+// workflow „Stažení obrázků“ z nich dělá WebP v /obrazky/ (1400 px) a /nahledy/ (640 px).
+const PRIPONA = /\.(jpe?g|png|webp|gif|avif)$/i;
+/** Náhled obrázku pro karty (640 px, WebP) */
+export const nahled = (cesta: string) => cesta.replace(/^\/wp-content\/uploads\//, '/nahledy/').replace(PRIPONA, '.webp');
+/** Velký obrázek (1400 px, WebP) – detail, galerie, články */
+export const velky = (cesta: string) => cesta.replace(/^\/wp-content\/uploads\//, '/obrazky/').replace(PRIPONA, '.webp');
+/** HTML z WordPressu: odkazy na obrázky v /wp-content/uploads/ → WebP v /obrazky/ */
+export const obrazkyVHtml = (html: string) =>
+  html.replace(/\/wp-content\/uploads\/([^"'\s)]+?)\.(jpe?g|png|webp|gif)(?=["'\s)])/gi, '/obrazky/$1.webp');
 
 // ---------------------------------------------------------------- lokality
 export interface Lokalita {

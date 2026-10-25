@@ -1,6 +1,6 @@
 name: Stažení obrázků
 
-# Stáhne obrázky z WordPressu (nabrunch.cz) podle scripts/obrazky.json, zmenší je a commitne do repa.
+# Stáhne obrázky z WordPressu (nabrunch.cz) podle scripts/obrazky.json, převede je na WebP a commitne do repa.
 on:
   workflow_dispatch:
   push:
@@ -29,7 +29,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add public/wp-content public/nahledy
+          git add public/obrazky public/nahledy public/favicon.png
           if git diff --cached --quiet; then echo "Žádné nové obrázky"; exit 0; fi
           git commit -m "Obrázky z WordPressu ($(git diff --cached --name-only | wc -l) souborů)"
           git push

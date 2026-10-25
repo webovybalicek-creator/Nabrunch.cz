@@ -24,6 +24,10 @@ DirectoryIndex index.html
   RewriteRule ^category/.*$ /blog/ [L,R=301]
   RewriteRule ^(feed|comments/feed)/?$ / [L,R=301]
   RewriteRule ^domu/?$ / [L,R=301]
+  # Obrázky z WordPressu → WebP verze (zachová staré odkazy a obrázky ve vyhledávání)
+  RewriteRule ^wp-content/uploads/.+-\d+x\d+\.(jpe?g|png|webp|gif)$ - [S=1]
+  RewriteRule ^wp-content/uploads/(.+)\.(jpe?g|png|webp|gif)$ /obrazky/$1.webp [L,R=301]
+  RewriteRule ^wp-content/uploads/(.+)-\d+x\d+\.(jpe?g|png|webp|gif)$ /obrazky/$1.webp [L,R=301]
   RewriteRule ^8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-.+$ /8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky/ [L,R=301]
 </IfModule>
 

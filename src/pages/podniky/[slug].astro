@@ -18,6 +18,8 @@ import {
   kmText,
   TEMATA,
   temaUrl,
+  velky,
+  obrazkyVHtml,
   type Podnik,
 } from '../../lib/data';
 import { clanky, clankyOPodniku } from '../../lib/blog';
@@ -55,7 +57,7 @@ const jsonLd = {
   '@type': 'CafeOrCoffeeShop',
   name: p.nazev,
   url: new URL(url(p), SITE.url).href,
-  image: fotky.slice(0, 4).map((f) => new URL(f, SITE.url).href),
+  image: fotky.slice(0, 4).map((f) => new URL(velky(f), SITE.url).href),
   address: { '@type': 'PostalAddress', streetAddress: p.adresa, addressLocality: m.replace(/ \d+$/, ''), addressCountry: 'CZ' },
   ...(p.lat != null ? { geo: { '@type': 'GeoCoordinates', latitude: p.lat, longitude: p.lon } } : {}),
   ...(p.telefon ? { telephone: p.telefon } : {}),
@@ -101,7 +103,7 @@ const jsonLd = {
       <div class:list={['galerie', `galerie--${Math.min(fotky.length, 5)}`]} data-galerie>
         {
           fotky.slice(0, 5).map((f, i) => (
-            <a href={f} class="galerie__f" data-i={i}>
+            <a href={velky(f)} class="galerie__f" data-i={i}>
               <Foto src={f} alt={`${p.nazev} – fotka ${i + 1}`} plna={i === 0} eager={i === 0} />
               {i === 4 && fotky.length > 5 && <span class="galerie__vic">+{fotky.length - 5}</span>}
             </a>
@@ -114,7 +116,7 @@ const jsonLd = {
         <button type="button" class="lb-sip lb-sip--l" data-lb-krok="-1" aria-label="Předchozí fotka">‹</button>
         <button type="button" class="lb-sip lb-sip--p" data-lb-krok="1" aria-label="Další fotka">›</button>
       </dialog>
-      <script type="application/json" data-fotky set:html={JSON.stringify(fotky)} />
+      <script type="application/json" data-fotky set:html={JSON.stringify(fotky.map(velky))} />
 
       <div class="detail-grid">
         <div>
@@ -122,11 +124,11 @@ const jsonLd = {
             p.tip && (
               <aside class="tip">
                 <span class="tip__h">🥞 {p.tipNadpis?.replace(/:$/, '') || 'Náš brunch tip'}</span>
-                <div set:html={p.tip} />
+                <div set:html={obrazkyVHtml(p.tip)} />
               </aside>
             )
           }
-          <div class="prose" set:html={p.popis} />
+          <div class="prose" set:html={obrazkyVHtml(p.popis)} />
           {
             temata.length > 0 && (
               <p class="detail-temata">

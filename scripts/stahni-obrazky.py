@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-Stáhne obrázky ze scripts/obrazky.json z nabrunch.cz (WordPress) do public/wp-content/uploads/…
-a vytvoří náhledy do public/nahledy/… (WebP, šířka 640 px). Stažené soubory přeskakuje.
+Stáhne obrázky ze scripts/obrazky.json z nabrunch.cz (WordPress) a uloží je jako WebP:
+  public/obrazky/<cesta>.webp  – max. 1400 px (detail, články, galerie)
+  public/nahledy/<cesta>.webp  – šířka 640 px (karty)
+<cesta> = cesta pod /wp-content/uploads/ bez přípony. Hotové soubory přeskakuje.
+Favicon se navíc uloží jako public/favicon.png.
 
-Originály: max. 1600 px na delší straně, JPEG kvalita 82 (PNG zůstává PNG, jen zmenšené).
+Původní adresy /wp-content/uploads/… přesměrovává public/.htaccess na /obrazky/….webp.
 Spouští workflow „Stažení obrázků“ (sandbox na nabrunch.cz nevidí).
 """
 import io
@@ -16,41 +19,34 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 ZDROJ = 'https://nabrunch.cz'
-MAX = 1600
-NAHLED = 640
+VELKY, NAHLED = 1400, 640
+FAVICON = '/wp-content/uploads/2025/03/nabrunch-favicon.png'
+
+
+def uloz(img: Image.Image, cil: Path, max_sirka: int, max_vyska: int, kvalita: int) -> None:
+    kopie = img.copy()
+    kopie.thumbnail((max_sirka, max_vyska), Image.LANCZOS)
+    cil.parent.mkdir(parents=True, exist_ok=True)
+    kopie.save(cil, 'WEBP', quality=kvalita, method=6)
+
 
 seznam = json.loads((ROOT / 'scripts/obrazky.json').read_text())
 nove = chyby = 0
 for cesta in seznam:
-    cil = ROOT / 'public' / cesta.lstrip('/')
-    nahled = ROOT / 'public/nahledy' / Path(cesta).relative_to('/wp-content/uploads').with_suffix('.webp')
-    if cil.exists() and nahled.exists():
+    rel = Path(cesta).relative_to('/wp-content/uploads').with_suffix('.webp')
+    velky = ROOT / 'public/obrazky' / rel
+    maly = ROOT / 'public/nahledy' / rel
+    if velky.exists() and maly.exists() and (cesta != FAVICON or (ROOT / 'public/favicon.png').exists()):
         continue
     try:
-        if cil.exists():
-            data = cil.read_bytes()
-        else:
-            req = urllib.request.Request(ZDROJ + urllib.request.quote(cesta), headers={'User-Agent': 'nabrunch-migrace/1.0'})
-            data = urllib.request.urlopen(req, timeout=60).read()
-        img = Image.open(io.BytesIO(data))
-        img = ImageOps.exif_transpose(img)
-        fmt = (img.format or Path(cesta).suffix.lstrip('.')).upper()
-        cil.parent.mkdir(parents=True, exist_ok=True)
-        if fmt in ('JPEG', 'JPG', 'PNG', 'WEBP') and max(img.size) > MAX:
-            velky = img.copy()
-            velky.thumbnail((MAX, MAX), Image.LANCZOS)
-            if fmt in ('JPEG', 'JPG'):
-                velky.convert('RGB').save(cil, 'JPEG', quality=82, optimize=True, progressive=True)
-            elif fmt == 'PNG':
-                velky.save(cil, 'PNG', optimize=True)
-            else:
-                velky.save(cil, 'WEBP', quality=82)
-        else:
-            cil.write_bytes(data)
-        nahled.parent.mkdir(parents=True, exist_ok=True)
-        maly = img.convert('RGBA' if img.mode in ('RGBA', 'LA', 'P') else 'RGB')
-        maly.thumbnail((NAHLED, NAHLED * 2), Image.LANCZOS)
-        maly.save(nahled, 'WEBP', quality=78, method=6)
+        req = urllib.request.Request(ZDROJ + urllib.request.quote(cesta), headers={'User-Agent': 'nabrunch-migrace/1.0'})
+        data = urllib.request.urlopen(req, timeout=60).read()
+        img = ImageOps.exif_transpose(Image.open(io.BytesIO(data)))
+        img = img.convert('RGBA' if img.mode in ('RGBA', 'LA', 'P') else 'RGB')
+        uloz(img, velky, VELKY, VELKY, 80)
+        uloz(img, maly, NAHLED, NAHLED * 2, 76)
+        if cesta == FAVICON:
+            (ROOT / 'public/favicon.png').write_bytes(data)
         nove += 1
     except Exception as e:  # noqa: BLE001 – jeden vadný obrázek nesmí zastavit ostatní
         chyby += 1

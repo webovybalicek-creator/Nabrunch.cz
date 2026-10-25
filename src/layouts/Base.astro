@@ -3,6 +3,7 @@ import '@fontsource-variable/lexend-deca';
 import '@fontsource-variable/montserrat';
 import '../styles/global.css';
 import { SITE } from '../lib/config';
+import { velky } from '../lib/data';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -18,7 +19,7 @@ interface Props {
 }
 
 const { title, description, jsonLd, noindex = false, obrazek, typ = 'website', publikovano } = Astro.props;
-const og = new URL(obrazek ?? '/wp-content/uploads/2025/03/nabrunch-1.jpg', SITE.url).href;
+const og = new URL(velky(obrazek ?? '/wp-content/uploads/2025/03/nabrunch-1.jpg'), SITE.url).href;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const robots = !SITE.indexovat || noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large';
 const fullTitle = /nabrunch/i.test(title) || title.length > 48 ? title : `${title} | ${SITE.nazev}`;
@@ -34,8 +35,8 @@ const fullTitle = /nabrunch/i.test(title) || title.length > 48 ? title : `${titl
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical} />
     <link rel="sitemap" href="/sitemap.xml" />
-    <link rel="icon" href="/wp-content/uploads/2025/03/nabrunch-favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/wp-content/uploads/2025/03/nabrunch-favicon.png" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="theme-color" content="#FFF5F4" />
     <meta property="og:type" content={typ} />
     <meta property="og:locale" content="cs_CZ" />
