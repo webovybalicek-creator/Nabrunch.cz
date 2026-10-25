@@ -92,9 +92,22 @@
 </script>
 
 <style>
+  /* Výrazný oranžový pruh nad patičkou (stejný na všech stránkách) */
   .odber {
-    background: var(--cream);
-    padding-block: clamp(36px, 5vw, 56px);
+    position: relative;
+    padding-block: clamp(40px, 6vw, 64px);
+    /* Dole končí barvou #f7834f – na úvodu na ni plynule navazuje karta „Přidej podnik“ */
+    background:
+      radial-gradient(55% 90% at 100% 0%, rgb(255 196 160 / 0.6), transparent 70%),
+      radial-gradient(40% 80% at 0% 0%, rgb(255 170 150 / 0.45), transparent 70%),
+      linear-gradient(180deg, #ff9b6b, #f7834f);
+    color: #fff;
+  }
+  .odber h2 {
+    color: #fff;
+  }
+  .odber__in > div > p {
+    color: rgb(255 255 255 / 0.92);
   }
   .odber__in {
     display: grid;
@@ -127,7 +140,7 @@
     transition: box-shadow 0.2s;
   }
   .odber__pole:focus-within {
-    box-shadow: 0 0 0 3px rgb(255 142 95 / 0.35), 0 14px 34px rgb(83 42 25 / 0.12);
+    box-shadow: 0 0 0 3px rgb(255 255 255 / 0.55), 0 14px 34px rgb(83 42 25 / 0.18);
   }
   .odber__pole input {
     flex: 1;
@@ -148,7 +161,7 @@
     padding: 0.85em 1.4em;
     border: 0;
     border-radius: 999px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+    background: var(--brown-dark);
     color: #fff;
     font: 600 0.95rem var(--f-display);
     cursor: pointer;
@@ -157,7 +170,8 @@
   }
   .odber__btn:hover:not(:disabled) {
     transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgb(206 105 63 / 0.35);
+    background: var(--brown);
+    box-shadow: 0 8px 20px rgb(83 42 25 / 0.3);
   }
   .odber__btn svg {
     width: 1.1rem;
@@ -197,16 +211,22 @@
     padding-left: 1rem;
     font-size: 0.92rem;
     font-weight: 500;
-    color: #9b2c1f;
+    color: #fff;
   }
   .odber__zprava:global(.ok) {
-    color: var(--green);
+    color: #fff;
   }
   .odber__gdpr {
     margin: 0.8rem 0 0;
     padding-left: 1rem;
     font-size: 0.76rem;
-    color: var(--ink-soft);
+    color: rgb(255 255 255 / 0.85);
+  }
+  .odber__gdpr a {
+    color: #fff;
+  }
+  .odber__gdpr a:hover {
+    color: var(--brown-dark);
   }
   @media (max-width: 480px) {
     .odber__pole {
