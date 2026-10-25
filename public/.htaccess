@@ -27,7 +27,8 @@ DirectoryIndex index.html
   RewriteRule ^(.+)/page/\d+/?$ /$1/ [L,R=301]
   RewriteRule ^page/\d+/?$ / [L,R=301]
   RewriteRule ^(tag|author)/.*$ /blog/ [L,R=301]
-  RewriteRule ^(sitemaps|wp-sitemap|sitemap_index|[a-z_]+-sitemap\d*)\.xml$ /sitemap.xml [L,R=301]
+  # /sitemaps.xml (SEOPress) je vlastní soubor se stejným obsahem jako /sitemap.xml
+  RewriteRule ^(wp-sitemap|sitemap_index|[a-z_]+-sitemap\d*)\.xml$ /sitemap.xml [L,R=301]
   RewriteRule ^wp-(admin|login\.php).*$ / [L,R=302]
   RewriteRule ^category/.*$ /blog/ [L,R=301]
   RewriteRule ^(feed|comments/feed)/?$ / [L,R=301]
