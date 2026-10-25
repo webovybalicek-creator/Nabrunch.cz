@@ -133,6 +133,10 @@ import { SITE } from '../lib/config';
     .pp {
       grid-template-columns: 1fr;
     }
+    /* Na mobilu box s informacemi nepřilepovat – jinak překrývá formulář */
+    .pp__info {
+      position: static;
+    }
   }
   .pp__info {
     position: sticky;

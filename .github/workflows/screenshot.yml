@@ -72,6 +72,12 @@ jobs:
                   pg.wait_for_timeout(900)
                   pg.screenshot(path=f'shots/hledani-{dotaz}.jpg', type='jpeg', quality=75)
               pg.close()
+              # Mobil: formulář Přidat podnik po odrolování
+              pg = b.new_page(viewport={'width': 390, 'height': 844})
+              pg.goto(f'https://{host}/pridat-podnik/', wait_until='networkidle')
+              pg.evaluate('window.scrollTo(0, 900)'); pg.wait_for_timeout(400)
+              pg.screenshot(path='shots/pridat-mobil.jpg', type='jpeg', quality=75)
+              pg.close()
               b.close()
           open('shots/log.txt', 'w').write('\n'.join(sorted(set(log))) or 'bez chyb')
           print('\n'.join(sorted(set(log))) or 'bez chyb')
