@@ -29,6 +29,14 @@ Data vznikla z exportu WordPressu: `python3 scripts/import-wxr.py export.xml`
 Adresy zůstávají stejné jako na WordPressu: `/podniky/<slug>/`, články `/<slug>/`, lokality `/<lokalita>/`,
 obrázky `/wp-content/uploads/…`. Staré adresy taxonomií přesměrovává `public/.htaccess`.
 
+## SEO (převzato z WordPressu)
+
+- Všechny adresy z WP sitemap existují na stejné URL (podniky, články, `/lokalita/…/`, `/kategorie/…/`, stránky).
+- Titulky a popisy jsou přesně z živého WP: `src/data/seo-wp.json`. Obnovení: workflow **SEO audit WordPressu**
+  (výsledek ve větvi `seo-audit`) → `python3 scripts/seo-z-wp.py wp-seo.json`.
+- Staré adresy bez vlastní stránky přesměrovává `public/.htaccess` (stránkování, štítky, autoři, WP sitemapy, obrázky).
+- Workflow **Kontrola URL** vypíše stavové kódy a přesměrování pro zadané cesty.
+
 ## Obrázky
 
 Workflow **Stažení obrázků** stáhne obrázky z nabrunch.cz podle `scripts/obrazky.json`, zmenší je (max. 1600 px),
