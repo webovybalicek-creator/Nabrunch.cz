@@ -37,7 +37,8 @@ html = html.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_, attrs: string, vnitrek:
   let id = slugify(text).slice(0, 60) || 'cast';
   for (let i = 2; pouzite.has(id); i++) id = `${slugify(text).slice(0, 56)}-${i}`;
   pouzite.add(id);
-  nadpisy.push({ id, text });
+  // Dlouhé nadpisy (z WP bývá jako H2 celá úvodní věta) v obsahu zkrátit
+  nadpisy.push({ id, text: text.length > 55 ? `${text.slice(0, 50).replace(/\s+\S*$/, '')}…` : text });
   return `<h2${attrs.replace(/\sid="[^"]*"/, '')} id="${id}">${vnitrek}</h2>`;
 });
 const ctete = souvis.slice(0, 3);
