@@ -18,10 +18,9 @@ jobs:
       - name: Varianty spojení
         run: |
           echo test > t.txt
-          echo "::notice::FTP_SERVER má ${#FTP_SERVER} znaků, končí na: ${FTP_SERVER: -12}"
           zkus() {
             local nazev="$1"; shift
-            out=$(curl -sS -v --max-time 30 --user "$FTP_USERNAME:$FTP_PASSWORD" "$@" 2>&1); rc=$?
+            rc=0; out=$(curl -sS -v --max-time 30 --user "$FTP_USERNAME:$FTP_PASSWORD" "$@" 2>&1) || rc=$?
             stopa=$(printf '%s\n' "$out" | grep -E '^(< [0-9]{3}|\* (Connected|Trying|SSL|TLS|Connecting|Recv failure|.*refused|.*timed out)|curl:)' | grep -v PASS | tail -6 | tr '\n' '|' | cut -c1-600)
             echo "::notice title=$nazev (rc=$rc)::$stopa"
           }
