@@ -1,0 +1,21 @@
+name: Diagnostika webu
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Odpověď serveru
+        run: |
+          for u in https://new.nabrunch.cz/ http://new.nabrunch.cz/ https://new.nabrunch.cz/web/ https://new.nabrunch.cz/index.html; do
+            rc=0
+            info=$(curl -sS -L --max-time 20 -o body.html -w 'http=%{http_code} final=%{url_effective} ip=%{remote_ip} ssl_verify=%{ssl_verify_result}' "$u" 2>&1) || rc=$?
+            title=$(grep -o '<title>[^<]*' body.html 2>/dev/null | head -1 | sed 's/<title>//')
+            echo "::notice title=$u (rc=$rc)::$info | title: $title"
+          done
+          echo "::notice title=DNS::$(dig +short new.nabrunch.cz A) / $(dig +short new.nabrunch.cz AAAA)"
+          rc=0; out=$(curl -sS -vI --max-time 15 https://new.nabrunch.cz/ 2>&1) || rc=$?
+          echo "::notice title=Certifikát (rc=$rc)::$(printf '%s\n' "$out" | grep -E 'subject:|issuer:|expire|SSL certificate' | tr '\n' '|')"
