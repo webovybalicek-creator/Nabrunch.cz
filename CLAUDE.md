@@ -19,6 +19,7 @@ Podrobnosti viz `README.md`.
 | Co chci upravit | Soubor |
 |---|---|
 | Podniky (karty, detail, mapa) | `src/data/podniky.json` |
+| Neověřené kavárny (generované) | `src/data/kavarny.json` – jen přes workflow Import kaváren |
 | Články blogu | `src/content/blog/<slug>.md` |
 | Lokality (název → slug) | `src/data/lokality.json` |
 | Témata (vegan, pet-friendly…) | `TEMATA` v `src/lib/data.ts` |
@@ -90,8 +91,36 @@ Tělo je HTML (převzaté z WordPressu), nové články můžou být v HTML i Ma
 - Hesla a API klíče nikdy nedávej do repa. Jsou v GitHub Secrets (`FTP_*`, `SMTP_PASSWORD`, `ECOMAIL_API_KEY`)
   a deploy je zapisuje jen na server.
 
+## Neověřené kavárny z OpenStreetMap ☕
+
+Vedle ověřených podniků (`podniky.json`) web ukazuje i kavárny z OpenStreetMap. Jsou **oddělené**: nemění homepage,
+srdcovky, nově přidané ani témata a všude mají štítek „Neověřeno“.
+
+**Data:** `src/data/kavarny.json` – generuje workflow **Import kaváren** (`scripts/import-kavarny.mjs`), ručně neupravovat.
+Import stáhne `amenity=cafe` z OSM, doplní okolí (MHD, park), z webu kavárny vyčte jen příznaky (snídaně, brunch,
+výběrová káva, pražírna, vegan, bezlepkové…) – žádné texty. Vynechá duplicity s `podniky.json` (do 60 m + podobný název).
+U známých kaváren zachová slug a rozvrh zveřejnění. Data z Google Map se nepoužívají (porušuje podmínky).
+
+**Postupné zveřejnění:** každá kavárna má v datech čas `zverejnit`; build zobrazí jen ty, jejichž čas nastal.
+Workflow **Publikace kaváren** běží 2× denně (5:23 a 14:41 UTC) a když je něco nového na řadě, spustí deploy.
+Nejdřív vycházejí kavárny s nejvíc údaji, 8–110 denně. Nové kavárny z dalšího importu se zařadí na konec rozvrhu.
+
+**Stránky:** `/kavarny/` (přehled), `/kavarny/<město>/` (seznam, filtry, mapa), `/kavarny/<město>/<slug>/` (detail).
+Dále přepínač na `/mapa/`, výsledky ve vyhledávání a sekce „Další kavárny“ na stránkách lokalit.
+Kód: `src/lib/kavarny.ts`, `src/components/KavarnaKarta.astro`, `src/components/Neovereno.astro`, `src/pages/kavarny/`.
+
+**Ochrana proti penalizaci (neměnit bez rozmyslu):**
+- Text detailu se skládá jen z faktů (`popisKavarny`), žádné přepisované cizí texty ani hromadné AI texty.
+- Do Googlu jen detaily s dost údaji (`indexovatKavarnu`: otevírací doba + adresa + skóre údajů ≥ 9, ne řetězce);
+  ostatní `noindex` a mimo sitemapu. Stránka města se indexuje od 3 kaváren (`indexovatMesto`).
+
+**Ověření kavárny:** po osobní návštěvě ji přidej jako běžný podnik do `podniky.json`. Při dalším importu se z neověřených
+vyřadí. Pokud už byla zaindexovaná, přidej 301 ze staré adresy `/kavarny/…` na `/podniky/…` do `public/.htaccess`.
+
 ## Užitečné workflow (GitHub → Actions → Run workflow)
 
 - **Screenshot živého webu** – vyfotí zadané stránky (desktop i mobil) do větve `screenshots` a vypíše chyby z konzole.
 - **Kontrola URL** – stavové kódy a přesměrování pro zadané cesty.
 - **Test SMTP** – ověří odesílání e-mailů z formulářů.
+- **Import kaváren** – obnoví data neověřených kaváren z OpenStreetMap (spouštět ručně, cca 1× za čtvrtletí).
+- **Publikace kaváren** – běží sám 2× denně, ručně jen pro okamžité zveřejnění.
