@@ -210,6 +210,26 @@ if (in_array($akce, ['schvalit', 'zamitnout'], true) && isset($_GET['z'], $_GET[
     html_out('Schváleno', '<p>Přístup poslán na ' . htmlspecialchars($m['email']) . '.</p>');
 }
 
+// ---------------------------------------------------------------- úprava ověřeného podniku naBrunche (spravuje redakce)
+if ($akce === 'uprava' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (trim((string)($_POST['web2'] ?? '')) !== '') json_out(200, ['ok' => true]);
+    $limit('uprava', 5);
+    $email = strtolower(trim((string)($_POST['email'] ?? '')));
+    $jmeno = mb_substr(trim((string)($_POST['jmeno'] ?? '')), 0, 80);
+    $tel = mb_substr(trim((string)($_POST['telefon'] ?? '')), 0, 30);
+    $zprava = mb_substr(trim((string)($_POST['zprava'] ?? '')), 0, 3000);
+    $nazev = mb_substr(trim((string)($_POST['nazev'] ?? '')), 0, 120);
+    $url = (string)($_POST['url'] ?? '');
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) json_out(422, ['ok' => false, 'chyba' => 'Zadejte platný e-mail.']);
+    if ($jmeno === '' || mb_strlen($zprava) < 5) json_out(422, ['ok' => false, 'chyba' => 'Vyplňte jméno a napište, co chcete upravit.']);
+    if (!preg_match('~^/podniky/[a-z0-9-]+/$~', $url)) json_out(400, ['ok' => false, 'chyba' => 'Neplatný podnik.']);
+    $hl = implode("\r\n", ['From: naBrunch.cz <' . PRIJEMCE . '>', "Reply-To: $email", 'MIME-Version: 1.0', 'Content-Type: text/plain; charset=UTF-8', 'Content-Transfer-Encoding: 8bit']);
+    $ok = nb_odesli(PRIJEMCE, '=?UTF-8?B?' . base64_encode("[naBrunch] Úprava podniku: $nazev") . '?=',
+        "Podnik: $WEB$url\nOd: $jmeno, $email" . ($tel ? ", $tel" : '') . "\n\nCo upravit:\n$zprava\n\n(Odpovědí na tento e-mail napíšete přímo žadateli.)\n", $hl);
+    if (!$ok) json_out(500, ['ok' => false, 'chyba' => 'Zprávu se nepodařilo odeslat. Napište prosím na ' . PRIJEMCE . '.']);
+    json_out(200, ['ok' => true]);
+}
+
 // ---------------------------------------------------------------- nová kavárna (kterou ještě nemáme)
 function slugify(string $s): string
 {

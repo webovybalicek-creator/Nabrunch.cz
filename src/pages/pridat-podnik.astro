@@ -23,7 +23,7 @@ import { SITE } from '../lib/config';
     <div class="wrap pp">
       <aside class="pp__info">
         <p><strong>1. Najděte svůj podnik</strong><br />Napište název nebo ulici.</p>
-        <p><strong>2. Převezměte správu</strong><br />Pokud e-mail sedí s podnikem (třeba je na vašem webu), přístup dostanete hned.</p>
+        <p><strong>2. Klikněte na „Je to můj podnik“</strong><br />Vyplňte jméno a e-mail. Pokud e-mail sedí s podnikem (třeba je na vašem webu), odkaz pro úpravy dostanete hned e-mailem.</p>
         <p><strong>3. Nebo přidejte nový</strong><br />Kavárna se objeví na webu se štítkem „Ověřeno majitelem“.</p>
         <p class="muted">
           Do výběru <strong>Doporučených podniků</strong> zařazujeme jen místa, která jsme osobně navštívili. O návštěvu můžete požádat ve formuláři. Dotazy:
@@ -113,17 +113,75 @@ import { SITE } from '../lib/config';
 <script>
   import { editorDoby } from '../scripts/doba-editor';
 
-  type Idx = { s: [string, string, string, string, string][]; k?: [string, string, string][] };
+  type Idx = { s: [string, string, string, string, string][]; k?: [string, string, string, string][] };
   const $ = <T extends HTMLElement>(s: string) => document.querySelector<T>(s)!;
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const esc = (s: string) => String(s).replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
 
-  // ---------------------------------------------------------------- 1. hledání
+  // ---------------------------------------------------------------- 1. hledání a převzetí správy (vše přímo na stránce)
   let idx: Promise<Idx> | null = null;
   const vstup = $<HTMLInputElement>('[data-hl]');
   const vys = $('[data-hl-vys]');
   const nic = $('[data-hl-nic]');
   let cas = 0;
+
+  const formular = (druh: 'kavarna' | 'podnik') => `
+    <form class="hl__form" data-druh="${druh}">
+      <p class="muted">${
+        druh === 'kavarna'
+          ? 'Ověříme, že jste majitel. Pokud e-mail sedí s kavárnou (je v jejích údajích, na doméně jejího webu nebo uvedený na webu), pošleme vám odkaz pro úpravy hned. Jinak ho ověříme ručně.'
+          : 'Tento podnik jsme navštívili osobně a jeho stránku spravuje redakce. Napište nám, co upravit, a změnu provedeme.'
+      }</p>
+      <div class="form__2">
+        <label>Jméno *<input name="jmeno" required maxlength="80" autocomplete="name"></label>
+        <label>E-mail *<input name="email" type="email" required maxlength="120" autocomplete="email"></label>
+        <label>Telefon <small class="muted">nepovinné</small><input name="telefon" type="tel" maxlength="30" autocomplete="tel"></label>
+      </div>
+      ${druh === 'podnik' ? '<label>Co chcete upravit? *<textarea name="zprava" rows="3" required maxlength="3000" placeholder="Např. nová otevírací doba, nové menu, fotky…"></textarea></label>' : ''}
+      <input name="web2" tabindex="-1" autocomplete="off" class="past" aria-hidden="true">
+      <button class="btn btn--akcent" type="submit">${druh === 'kavarna' ? 'Ověřit a získat přístup' : 'Odeslat žádost'}</button>
+      <p class="hl__stav" role="status"></p>
+    </form>`;
+
+  const otevri = (li: HTMLLIElement) => {
+    vys.querySelectorAll('.hl__form').forEach((f) => f.remove());
+    vys.querySelectorAll('[data-muj]').forEach((b) => ((b as HTMLElement).hidden = false));
+    const druh = li.dataset.druh as 'kavarna' | 'podnik';
+    li.querySelector<HTMLElement>('[data-muj]')!.hidden = true;
+    li.insertAdjacentHTML('beforeend', formular(druh));
+    const f = li.querySelector<HTMLFormElement>('.hl__form')!;
+    f.querySelector('input')!.focus();
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const stav = f.querySelector<HTMLElement>('.hl__stav')!;
+      const btn = f.querySelector('button')!;
+      const fd = new FormData(f);
+      if (druh === 'kavarna') {
+        fd.set('akce', 'zadost');
+        fd.set('id', li.dataset.id!);
+      } else {
+        fd.set('akce', 'uprava');
+        fd.set('url', li.dataset.url!);
+        fd.set('nazev', li.dataset.nazev!);
+      }
+      btn.disabled = true;
+      stav.textContent = 'Odesílám…';
+      try {
+        const r = await (await fetch('/api/kavarna.php', { method: 'POST', body: fd })).json();
+        if (!r.ok) throw new Error(r.chyba || 'Odeslání se nepovedlo.');
+        f.innerHTML =
+          druh === 'podnik'
+            ? '<p class="hl__ok">Děkujeme! Žádost máme a ozveme se vám e-mailem.</p>'
+            : r.hned
+              ? '<p class="hl__ok">Hotovo! Na e-mail jsme vám poslali odkaz, přes který upravíte údaje a nahrajete fotky. Mrkněte i do spamu.</p>'
+              : '<p class="hl__ok">Děkujeme! E-mail se nepodařilo spárovat s kavárnou automaticky. Ověříme ho ručně (obvykle do 2 pracovních dnů) a pošleme vám odkaz.</p>';
+      } catch (err) {
+        stav.textContent = (err as Error).message;
+        btn.disabled = false;
+      }
+    });
+  };
+
   vstup.addEventListener('input', () => {
     clearTimeout(cas);
     cas = window.setTimeout(async () => {
@@ -142,15 +200,16 @@ import { SITE } from '../lib/config';
         podniky
           .map(
             (x) =>
-              `<li><span>${esc(x[0])}<small>${esc(x[2])} · ověřený podnik naBrunche</small></span><a class="btn btn--ghost" href="mailto:karolina@nabrunch.cz?subject=${encodeURIComponent('Úprava podniku: ' + x[0])}">Napsat o úpravu</a></li>`,
+              `<li data-druh="podnik" data-url="${esc(x[1])}" data-nazev="${esc(x[0])}"><div class="hl__radek"><span><a href="${esc(x[1])}" target="_blank">${esc(x[0])}</a><small>${esc(x[2])} · ověřený podnik naBrunche</small></span><button type="button" class="btn btn--ghost" data-muj>Je to můj podnik</button></div></li>`,
           )
           .join('') +
         kavarny
           .map(
             (x) =>
-              `<li><span>☕ ${esc(x[0])}<small>${esc(x[2])}</small></span><a class="btn btn--akcent" href="${x[1]}#majitel">To je můj podnik – převzít správu</a></li>`,
+              `<li data-druh="kavarna" data-id="${esc(x[3])}"><div class="hl__radek"><span>☕ <a href="${esc(x[1])}" target="_blank">${esc(x[0])}</a><small>${esc(x[2])}</small></span><button type="button" class="btn btn--akcent" data-muj>Je to můj podnik</button></div></li>`,
           )
           .join('');
+      vys.querySelectorAll<HTMLButtonElement>('[data-muj]').forEach((b) => b.addEventListener('click', () => otevri(b.closest('li')!)));
       nic.hidden = podniky.length + kavarny.length > 0;
       nic.textContent = 'Nic jsme nenašli. Zkuste jen název nebo ulici – nebo přidejte podnik jako nový.';
     }, 200);
@@ -291,7 +350,8 @@ import { SITE } from '../lib/config';
     font: 600 1.05rem var(--f-display);
     color: var(--brown-dark);
   }
-  label {
+  label,
+  .hl__vys :global(label) {
     display: grid;
     gap: 0.35rem;
     font-weight: 500;
@@ -299,7 +359,9 @@ import { SITE } from '../lib/config';
   }
   input:not([type='checkbox']),
   textarea,
-  select {
+  select,
+  .hl__vys :global(input:not([type='checkbox'])),
+  .hl__vys :global(textarea) {
     width: 100%;
     padding: 0.75em 0.95em;
     border: 1px solid var(--line);
@@ -316,7 +378,8 @@ import { SITE } from '../lib/config';
     border-color: var(--accent);
     box-shadow: 0 0 0 3px rgb(255 142 95 / 0.2);
   }
-  .form__2 {
+  .form__2,
+  .hl__vys :global(.form__2) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
     gap: 1rem;
@@ -342,7 +405,8 @@ import { SITE } from '../lib/config';
     width: 1.05rem;
     height: 1.05rem;
   }
-  .past {
+  .past,
+  .hl__vys :global(.past) {
     position: absolute;
     left: -9999px;
   }
@@ -381,11 +445,6 @@ import { SITE } from '../lib/config';
     gap: 0.5rem;
   }
   .hl__vys :global(li) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem 1rem;
     padding: 0.75rem 1rem;
     border: 1px solid var(--line);
     border-radius: 14px;
@@ -398,6 +457,42 @@ import { SITE } from '../lib/config';
   .hl__vys :global(.btn) {
     font-size: 0.85rem;
     padding: 0.5em 1em;
+  }
+  .hl__vys :global([data-muj][hidden]) {
+    display: none;
+  }
+  .hl__vys :global(.hl__radek) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+  .hl__vys :global(.hl__radek a) {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .hl__vys :global(.hl__form) {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--line);
+  }
+  .hl__vys :global(.hl__form p) {
+    margin: 0;
+  }
+  .hl__vys :global(.hl__form .btn) {
+    justify-self: start;
+  }
+  .hl__vys :global(.hl__stav) {
+    font-weight: 600;
+    min-height: 1.2em;
+  }
+  .hl__vys :global(.hl__ok) {
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    background: var(--green-soft);
   }
   .hl__nic {
     margin: 1rem 0 0;
