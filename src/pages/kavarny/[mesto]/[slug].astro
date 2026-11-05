@@ -139,8 +139,8 @@ const jsonLd = {
         {
           !k.overeno && (
             <details class="kd__claim" id="majitel">
-              <summary>Jste majitel? Upravte údaje zdarma</summary>
-              <p class="muted">Doplňte otevírací dobu, popis, fotky a co nabízíte. Pokud e-mail sedí s kavárnou (třeba je na vašem webu), přístup dostanete hned.</p>
+              <summary>Jste majitel? Převezměte správu kavárny zdarma</summary>
+              <p class="muted">Po ověření upravíte otevírací dobu, kontakty, popis, fotky a co nabízíte. Pokud e-mail sedí s kavárnou (je v jejích údajích, na doméně jejího webu nebo uvedený na webu), přístup dostanete hned. Jinak ho ověříme ručně.</p>
               <form data-claim data-id={k.id}>
                 <label>Jméno<input name="jmeno" required maxlength="80" autocomplete="name" /></label>
                 <label>E-mail<input name="email" type="email" required maxlength="120" autocomplete="email" /></label>
@@ -229,6 +229,12 @@ const jsonLd = {
 <script>
   import { aplikujStav } from '../../../scripts/stav';
   aplikujStav();
+  // Odkaz „převzít správu“ (#majitel) rozbalí formulář
+  const otevriClaim = () => {
+    if (location.hash === '#majitel') document.querySelector<HTMLDetailsElement>('#majitel')?.setAttribute('open', '');
+  };
+  otevriClaim();
+  window.addEventListener('hashchange', otevriClaim);
   document.querySelectorAll<HTMLFormElement>('[data-claim]').forEach((f) =>
     f.addEventListener('submit', async (e) => {
       e.preventDefault();

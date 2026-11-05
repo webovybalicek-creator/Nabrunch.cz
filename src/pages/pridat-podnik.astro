@@ -1,124 +1,247 @@
 ---
 import Base from '../layouts/Base.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
-import { KUCHYNE, ATMOSFERA } from '../lib/data';
 import { SITE } from '../lib/config';
 ---
 
-<Base title="Přidat podnik" description="Patří vaše snídaně mezi ty, na které se nezapomíná? Vyplňte formulář a rádi váš podnik zařadíme na naBrunch.cz.">
+<Base
+  title="Přidat podnik nebo převzít správu kavárny"
+  description="Najděte svou kavárnu na naBrunch.cz a upravte její údaje zdarma. Pokud u nás ještě není, přidejte ji – stačí pár minut."
+>
   <header class="page-head">
     <div class="wrap">
       <Breadcrumb polozky={[{ nazev: 'Přidat podnik' }]} />
       <h1>Přidat podnik</h1>
-      <p class="lead"><strong>Patří vaše snídaně mezi ty, na které se nezapomíná?</strong> Vaříte a pečete srdcem? Servírujete brunch s láskou? Chcete, aby se o vašem podniku dozvěděli ti správní lidé? Vyplňte formulář – rádi vás zařadíme na náš web.</p>
+      <p class="lead">
+        <strong>Máte kavárnu nebo bistro se snídaněmi?</strong> Nejdřív se podívejte, jestli u nás už nejste – pak stačí převzít správu a doplnit
+        údaje. Pokud vás nenajdete, přidejte podnik během pár minut. Vše zdarma.
+      </p>
     </div>
   </header>
+
   <section class="section">
     <div class="wrap pp">
       <aside class="pp__info">
-        <p>Jsme místo, kde lidé hledají inspiraci, kam vyrazit na svou nejoblíbenější část dne – snídani. Pomáháme zviditelnit podniky, které si zaslouží pozornost.</p>
-        <p>Místa si pečlivě vybíráme – záleží nám na kvalitě i přístupu k hostům. <strong>Každý podnik před zveřejněním osobně zkontrolujeme.</strong></p>
-        <p class="muted">Raději e-mailem? Napište na <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+        <p><strong>1. Najděte svůj podnik</strong><br />Napište název nebo ulici.</p>
+        <p><strong>2. Převezměte správu</strong><br />Pokud e-mail sedí s podnikem (třeba je na vašem webu), přístup dostanete hned.</p>
+        <p><strong>3. Nebo přidejte nový</strong><br />Kavárna se objeví na webu se štítkem „Ověřeno majitelem“.</p>
+        <p class="muted">
+          Do výběru <strong>Doporučených podniků</strong> zařazujeme jen místa, která jsme osobně navštívili. O návštěvu můžete požádat ve formuláři. Dotazy:
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+        </p>
       </aside>
 
-      <form class="form" method="post" action="/api/podnik.php" enctype="multipart/form-data" data-form>
-        <fieldset>
-          <legend>Podnik</legend>
-          <label>Název podniku *<input name="nazev" required maxlength="120" /></label>
-          <label>Popis podniku *<textarea name="popis" required rows="5" maxlength="4000"></textarea></label>
-          <label>Adresa *<input name="adresa" required maxlength="200" placeholder="Ulice a číslo, město" /></label>
-          <label>Odkaz na Google Maps *<input name="googlemaps" type="url" required placeholder="https://maps.app.goo.gl/…" /></label>
-          <label>Otevírací doba *<textarea name="doba" required rows="3" placeholder="Po–Pá 8:00–16:00, So–Ne 9:00–15:00"></textarea></label>
-        </fieldset>
+      <div>
+        <div class="krok hl">
+          <h2>Najděte svůj podnik</h2>
+          <input type="search" placeholder="Název podniku, ulice nebo město…" aria-label="Hledat podnik" data-hl autocomplete="off" />
+          <ul class="hl__vys" data-hl-vys></ul>
+          <p class="hl__nic" data-hl-nic hidden></p>
+          <p><button type="button" class="btn btn--ghost" data-novy-otevrit>Můj podnik tu není – přidat nový</button></p>
+        </div>
 
-        <fieldset>
-          <legend>Fotky</legend>
-          <label>Náhledový obrázek * <small class="muted">max. 3 MB</small><input name="foto" type="file" accept="image/jpeg,image/png,image/webp" required /></label>
-          <label>Galerie <small class="muted">až 6 fotek, každá max. 3 MB – prosíme zkomprimujte je např. na tinypng.com</small><input name="galerie[]" type="file" accept="image/jpeg,image/png,image/webp" multiple /></label>
-        </fieldset>
+        <form class="form krok" data-novy hidden>
+          <h2>Přidat nový podnik</h2>
+          <fieldset>
+            <legend>Podnik</legend>
+            <label>Název *<input name="nazev" required maxlength="100" /></label>
+            <div class="form__2">
+              <label>Ulice a číslo *<input name="ulice" required maxlength="120" data-adr /></label>
+              <label>Obec *<input name="mesto" required maxlength="80" data-adr placeholder="Např. Praha nebo Brno" /></label>
+              <label>PSČ<input name="psc" inputmode="numeric" maxlength="6" placeholder="110 00" data-adr /></label>
+            </div>
+            <p class="form__sk">Poloha na mapě * <small class="muted">– najdeme ji podle adresy, upřesněte kliknutím</small></p>
+            <div class="mapa-pick" data-pick></div>
+            <input type="hidden" name="lat" /><input type="hidden" name="lon" />
+          </fieldset>
+          <fieldset>
+            <legend>Otevírací doba</legend>
+            <table class="doba-ed" data-doba></table>
+          </fieldset>
+          <fieldset>
+            <legend>Co nabízíte</legend>
+            <div class="volby-grid" data-vlastnosti>
+              <label class="ch"><input type="checkbox" value="snidane" /> 🍳 Snídaně</label>
+              <label class="ch"><input type="checkbox" value="brunch" /> 🥞 Brunch</label>
+              <label class="ch"><input type="checkbox" value="vyberovaKava" /> ☕ Výběrová káva</label>
+              <label class="ch"><input type="checkbox" value="pekarna" /> 🥐 Vlastní pečivo</label>
+              <label class="ch"><input type="checkbox" value="dorty" /> 🍰 Dorty a zákusky</label>
+              <label class="ch"><input type="checkbox" value="vegan" /> 🌱 Veganské možnosti</label>
+              <label class="ch"><input type="checkbox" value="bezlepek" /> Bezlepkové možnosti</label>
+              <label class="ch"><input type="checkbox" value="wifi" /> Wi-Fi</label>
+              <label class="ch"><input type="checkbox" value="zahradka" /> 🌿 Zahrádka / terasa</label>
+              <label class="ch"><input type="checkbox" value="psi" /> 🐶 Psi vítáni</label>
+              <label class="ch"><input type="checkbox" value="bezbarierove" /> Bezbariérový vstup</label>
+              <label class="ch"><input type="checkbox" value="karta" /> Platba kartou</label>
+              <label class="ch"><input type="checkbox" value="deti" /> Dětský koutek</label>
+            </div>
+            <label>Pár slov o podniku <small class="muted">max. 600 znaků, bez odkazů</small><textarea name="popis" rows="4" maxlength="600"></textarea></label>
+          </fieldset>
+          <fieldset>
+            <legend>Kontakty podniku</legend>
+            <div class="form__2">
+              <label>Telefon<input name="telefon" type="tel" maxlength="30" /></label>
+              <label>Web<input name="web" type="url" maxlength="300" placeholder="https://" /></label>
+              <label>Instagram<input name="instagram" type="url" maxlength="300" placeholder="https://www.instagram.com/…" /></label>
+              <label>Online rezervace<input name="rezervace" type="url" maxlength="300" placeholder="https://" /></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Vaše údaje</legend>
+            <div class="form__2">
+              <label>Jméno *<input name="jmeno" required maxlength="80" autocomplete="name" /></label>
+              <label>E-mail * <small class="muted">nezveřejňujeme</small><input name="email" type="email" required maxlength="120" autocomplete="email" /></label>
+              <label>Telefon <small class="muted">nepovinné</small><input name="telefon_majitel" type="tel" maxlength="30" /></label>
+            </div>
+            <p class="muted form__gdpr">
+              Když e-mail sedí s doménou vašeho webu a web uvádí název podniku, přidáme podnik hned. Jinak ho rychle zkontrolujeme ručně. Fotky
+              nahrajete po přihlášení.
+            </p>
+            <label class="ch"><input type="checkbox" name="navsteva" value="1" /> Chci, aby naBrunch podnik navštívil a zvážil zařazení mezi doporučené</label>
+          </fieldset>
+          <label class="past" aria-hidden="true">Nevyplňujte<input name="web2" tabindex="-1" autocomplete="off" /></label>
+          <p class="form__chyba" data-chyba hidden></p>
+          <button class="btn btn--akcent" type="submit" data-odeslat>Přidat podnik</button>
+        </form>
 
-        <fieldset>
-          <legend>Kontakt</legend>
-          <div class="form__2">
-            <label>Telefon *<input name="telefon" type="tel" required /></label>
-            <label>Váš e-mail * <small class="muted">nezveřejňujeme</small><input name="email" type="email" required /></label>
-            <label>Web<input name="web" type="url" placeholder="https://" /></label>
-            <label>Instagram<input name="instagram" placeholder="@vasepodnik" /></label>
-          </div>
-          <label>Rezervace *<input name="rezervace" required placeholder="Např. Ano, telefonicky / Ne" /></label>
-        </fieldset>
-
-        <fieldset>
-          <legend>Jak to u vás vypadá</legend>
-          <p class="form__sk">Platba *</p>
-          <div class="form__chipy">
-            {['Kartou', 'Hotově'].map((v) => <label class="ch"><input type="checkbox" name="platba[]" value={v} /> {v}</label>)}
-          </div>
-          <div class="form__2">
-            <label>Wi-Fi *<select name="wifi" required><option value="">–</option><option>Ano</option><option>Ne</option></select></label>
-            <label>WC *<select name="wc" required><option value="">–</option><option>Ano</option><option>Ne</option></select></label>
-          </div>
-          <p class="form__sk">Kuchyně *</p>
-          <div class="form__chipy">
-            {KUCHYNE.map((v) => <label class="ch"><input type="checkbox" name="kuchyne[]" value={v} /> {v}</label>)}
-          </div>
-          <p class="form__sk">Atmosféra *</p>
-          <div class="form__chipy">
-            {ATMOSFERA.map((v) => <label class="ch"><input type="checkbox" name="atmosfera[]" value={v} /> {v}</label>)}
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Váš brunch tip</legend>
-          <label>Nadpis tipu * <small class="muted">něco specifického pro váš podnik</small><input name="tipnadpis" required maxlength="80" /></label>
-          <label>Text tipu *<textarea name="tip" required rows="3" maxlength="600" placeholder="Např. Avokádový sandwich se sázeným vejcem a slaninou."></textarea></label>
-        </fieldset>
-
-        <label class="past" aria-hidden="true">Nevyplňujte<input name="web2" tabindex="-1" autocomplete="off" /></label>
-        <input type="hidden" name="t" data-cas />
-        <p class="muted form__gdpr">Odesláním souhlasíte se zpracováním údajů podle <a href="/ochrana-osobnich-udaju/">zásad ochrany osobních údajů</a>.</p>
-        <p class="form__chyba" data-chyba role="alert" hidden></p>
-        <button class="btn btn--akcent" type="submit" data-odeslat>Přidat podnik</button>
-      </form>
+        <div class="ok-box krok" data-hotovo hidden></div>
+      </div>
     </div>
   </section>
 </Base>
 
 <script>
-  const form = document.querySelector<HTMLFormElement>('[data-form]')!;
-  const chyba = form.querySelector<HTMLElement>('[data-chyba]')!;
-  const btn = form.querySelector<HTMLButtonElement>('[data-odeslat]')!;
-  form.querySelector<HTMLInputElement>('[data-cas]')!.value = String(Math.floor(Date.now() / 1000));
-  const MAX = 3 * 1024 * 1024;
+  import { editorDoby } from '../scripts/doba-editor';
 
+  type Idx = { s: [string, string, string, string, string][]; k?: [string, string, string][] };
+  const $ = <T extends HTMLElement>(s: string) => document.querySelector<T>(s)!;
+  const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const esc = (s: string) => String(s).replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
+
+  // ---------------------------------------------------------------- 1. hledání
+  let idx: Promise<Idx> | null = null;
+  const vstup = $<HTMLInputElement>('[data-hl]');
+  const vys = $('[data-hl-vys]');
+  const nic = $('[data-hl-nic]');
+  let cas = 0;
+  vstup.addEventListener('input', () => {
+    clearTimeout(cas);
+    cas = window.setTimeout(async () => {
+      const q = norm(vstup.value.trim());
+      if (q.length < 2) {
+        vys.innerHTML = '';
+        nic.hidden = true;
+        return;
+      }
+      const d = await (idx ??= fetch('/hledat.json').then((r) => r.json()));
+      const slova = q.split(/\s+/);
+      const shoda = (t: string) => slova.every((w) => norm(t).includes(w));
+      const podniky = d.s.filter((x) => shoda(`${x[0]} ${x[4]}`)).slice(0, 4);
+      const kavarny = (d.k ?? []).filter((x) => shoda(`${x[0]} ${x[2]}`)).slice(0, 8);
+      vys.innerHTML =
+        podniky
+          .map(
+            (x) =>
+              `<li><span>${esc(x[0])}<small>${esc(x[2])} · ověřený podnik naBrunche</small></span><a class="btn btn--ghost" href="mailto:karolina@nabrunch.cz?subject=${encodeURIComponent('Úprava podniku: ' + x[0])}">Napsat o úpravu</a></li>`,
+          )
+          .join('') +
+        kavarny
+          .map(
+            (x) =>
+              `<li><span>☕ ${esc(x[0])}<small>${esc(x[2])}</small></span><a class="btn btn--akcent" href="${x[1]}#majitel">To je můj podnik – převzít správu</a></li>`,
+          )
+          .join('');
+      nic.hidden = podniky.length + kavarny.length > 0;
+      nic.textContent = 'Nic jsme nenašli. Zkuste jen název nebo ulici – nebo přidejte podnik jako nový.';
+    }, 200);
+  });
+
+  // ---------------------------------------------------------------- 2. nový podnik
+  const form = $<HTMLFormElement>('[data-novy]');
+  let prectiDobu: () => string = () => '';
+  let mapaHotova = false;
+  $('[data-novy-otevrit]').addEventListener('click', async () => {
+    form.hidden = false;
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (mapaHotova) return;
+    prectiDobu = editorDoby($<HTMLTableElement>('[data-doba]'));
+    mapaHotova = true;
+    await import('leaflet/dist/leaflet.css');
+    const L = (await import('leaflet')).default;
+    const map = L.map($('[data-pick]')).setView([49.8, 15.5], 7);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' }).addTo(map);
+    let bod: any = null;
+    const nastav = (lat: number, lon: number, zoom = 0) => {
+      (form.elements.namedItem('lat') as HTMLInputElement).value = lat.toFixed(6);
+      (form.elements.namedItem('lon') as HTMLInputElement).value = lon.toFixed(6);
+      if (bod) bod.setLatLng([lat, lon]);
+      else bod = L.circleMarker([lat, lon], { radius: 9, color: '#fff', weight: 3, fillColor: '#CE693F', fillOpacity: 1 }).addTo(map);
+      if (zoom) map.setView([lat, lon], zoom);
+    };
+    map.on('click', (e: any) => nastav(e.latlng.lat, e.latlng.lng));
+    // Poloha podle adresy (Nominatim, OpenStreetMap)
+    let tAdr = 0;
+    form.querySelectorAll<HTMLInputElement>('[data-adr]').forEach((i) =>
+      i.addEventListener('change', () => {
+        clearTimeout(tAdr);
+        tAdr = window.setTimeout(async () => {
+          const f = new FormData(form);
+          const q = `${f.get('ulice')}, ${f.get('psc')} ${f.get('mesto')}`.trim();
+          if (!f.get('ulice') || !f.get('mesto')) return;
+          try {
+            const r = await (await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=cz&q=${encodeURIComponent(q)}`)).json();
+            if (r[0]) nastav(Number(r[0].lat), Number(r[0].lon), 17);
+          } catch {
+            /* poloha jde zadat kliknutím */
+          }
+        }, 400);
+      }),
+    );
+  });
+
+  const chyba = $('[data-chyba]');
+  const btn = $<HTMLButtonElement>('[data-odeslat]');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     chyba.hidden = true;
-    const ukaz = (t: string) => {
-      chyba.textContent = t;
+    const f = new FormData(form);
+    if (!f.get('lat')) {
+      chyba.textContent = 'Označte prosím polohu podniku na mapě kliknutím.';
       chyba.hidden = false;
-      chyba.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    const data = {
+      telefon: String(f.get('telefon') ?? ''),
+      web: String(f.get('web') ?? ''),
+      instagram: String(f.get('instagram') ?? ''),
+      rezervace: String(f.get('rezervace') ?? ''),
+      popis: String(f.get('popis') ?? ''),
+      oteviraciDoba: prectiDobu(),
+      vlastnosti: [...form.querySelectorAll<HTMLInputElement>('[data-vlastnosti] input:checked')].map((c) => c.value),
     };
-    for (const sk of ['platba[]', 'kuchyne[]', 'atmosfera[]'])
-      if (!form.querySelector(`input[name="${sk}"]:checked`)) return ukaz('Zaškrtněte prosím platbu, kuchyni i atmosféru.');
-    const soubory = [...form.querySelectorAll<HTMLInputElement>('input[type=file]')].flatMap((i) => [...(i.files ?? [])]);
-    if (soubory.some((f) => f.size > MAX)) return ukaz('Některá fotka je větší než 3 MB. Zmenšete ji prosím.');
-    if (soubory.length > 7) return ukaz('Do galerie můžete nahrát nejvýš 6 fotek.');
+    const fd = new FormData();
+    fd.set('akce', 'novy');
+    for (const k of ['nazev', 'ulice', 'mesto', 'psc', 'lat', 'lon', 'jmeno', 'email', 'telefon_majitel', 'web2']) fd.set(k, String(f.get(k) ?? ''));
+    if (f.get('navsteva')) fd.set('navsteva', '1');
+    fd.set('data', JSON.stringify(data));
     btn.disabled = true;
     btn.textContent = 'Odesílám…';
     try {
-      const r = await fetch(form.action, { method: 'POST', body: new FormData(form) });
-      const d = await r.json().catch(() => ({ ok: false }));
-      if (d.ok) {
-        location.href = '/podnik-byl-pridan/';
-        return;
-      }
-      ukaz(d.chyba ?? 'Odeslání se nepovedlo. Zkuste to prosím znovu, nebo nám napište e-mail.');
-    } catch {
-      ukaz('Odeslání se nepovedlo. Zkontrolujte připojení a zkuste to znovu.');
+      const r = await (await fetch('/api/kavarna.php', { method: 'POST', body: fd })).json();
+      if (!r.ok) throw new Error(r.chyba || 'Odeslání se nepovedlo.');
+      form.hidden = true;
+      const ok = $('[data-hotovo]');
+      ok.hidden = false;
+      ok.innerHTML = r.hned
+        ? '<h2>Hotovo! 🎉</h2><p>Podnik jsme přidali, na webu se objeví do 3 hodin. Na e-mail jsme vám poslali odkaz, přes který doplníte fotky a další údaje.</p>'
+        : '<h2>Děkujeme!</h2><p>Podnik rychle zkontrolujeme (obvykle do 2 pracovních dnů). Pak vám pošleme e-mail s odkazem pro doplnění fotek a údajů.</p>';
+      ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (err) {
+      chyba.textContent = (err as Error).message;
+      chyba.hidden = false;
+      btn.disabled = false;
+      btn.textContent = 'Přidat podnik';
     }
-    btn.disabled = false;
-    btn.textContent = 'Přidat podnik';
   });
 </script>
 
@@ -236,5 +359,58 @@ import { SITE } from '../lib/config';
   }
   .form .btn {
     justify-self: start;
+  }
+  .form[hidden],
+  .ok-box[hidden] {
+    display: none;
+  }
+  .krok {
+    max-width: 44rem;
+  }
+  .krok h2 {
+    margin: 0 0 0.5rem;
+  }
+  .hl input {
+    font-size: 16px;
+  }
+  .hl__vys {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .hl__vys :global(li) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+  }
+  .hl__vys :global(small) {
+    display: block;
+    color: var(--ink-soft);
+  }
+  .hl__vys :global(.btn) {
+    font-size: 0.85rem;
+    padding: 0.5em 1em;
+  }
+  .hl__nic {
+    margin: 1rem 0 0;
+  }
+  .mapa-pick {
+    height: 300px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    z-index: 0;
+  }
+  .ok-box {
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius);
+    background: var(--green-soft);
   }
 </style>

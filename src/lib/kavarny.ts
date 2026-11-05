@@ -51,6 +51,8 @@ interface UpravaMajitele {
   oteviraciDoba?: string;
   vlastnosti?: string[];
   fotky?: string[];
+  /** Kavárna, kterou majitel založil sám (není v OSM) */
+  novy?: { nazev: string; ulice: string; mesto: string; obvod: string | null; psc: string | null; lat: number; lon: number; url: string };
 }
 const MAJITELE = ((majiteleRaw as { kavarny?: Record<string, UpravaMajitele> }).kavarny ?? {}) as Record<string, UpravaMajitele>;
 
@@ -94,8 +96,45 @@ function sUpravou(k: Kavarna): Kavarna {
 }
 
 const TED = Date.now();
-/** Všechny kavárny z importu (i ty, které ještě nejsou zveřejněné) */
-export const VSECHNY_KAVARNY: Kavarna[] = ((data as { kavarny?: Kavarna[] }).kavarny ?? []).map(sUpravou);
+/** Kavárny založené majiteli (nejsou v OSM) – základ záznamu z jejich údajů */
+const _cesty = new Set(((data as { kavarny?: Kavarna[] }).kavarny ?? []).map((k) => `${k.mestoSlug}/${k.slug}`));
+const ZALOZENE: Kavarna[] = Object.entries(MAJITELE)
+  .filter(([, u]) => u.novy)
+  .map(([id, u]) => {
+    const n = u.novy!;
+    const [, , mestoSlug, zaklad] = n.url.split('/');
+    const slug = _cesty.has(`${mestoSlug}/${zaklad}`) ? `${zaklad}-${id}` : zaklad;
+    return {
+      id,
+      slug,
+      nazev: n.nazev,
+      mesto: n.mesto,
+      mestoSlug,
+      obvod: n.obvod,
+      ctvrt: null,
+      ulice: n.ulice,
+      psc: n.psc,
+      lat: n.lat,
+      lon: n.lon,
+      oteviraciDoba: null,
+      web: null,
+      telefon: null,
+      email: null,
+      instagram: null,
+      facebook: null,
+      retezec: false,
+      znacka: null,
+      vlastnosti: { wifi: null, zahradka: null, psi: null, bezbarierove: null, karta: null, sSebou: null, vegan: null, vegetarian: null, bezlepek: null, snidane: null },
+      kuchyne: [],
+      okoli: { mhd: null, park: null },
+      zWebu: null,
+      pridano: u.overeno,
+      zverejnit: null,
+    } satisfies Kavarna;
+  });
+
+/** Všechny kavárny z importu (i ty, které ještě nejsou zveřejněné) a kavárny založené majiteli */
+export const VSECHNY_KAVARNY: Kavarna[] = [...((data as { kavarny?: Kavarna[] }).kavarny ?? []), ...ZALOZENE].map(sUpravou);
 /** Zveřejněné kavárny: čas zveřejnění už nastal, nebo je ověřil majitel */
 export const KAVARNY: Kavarna[] = VSECHNY_KAVARNY.filter((k) => k.overeno || (k.zverejnit && Date.parse(k.zverejnit) <= TED));
 export const ZDROJ = (data as { zdroj?: string }).zdroj ?? '© přispěvatelé OpenStreetMap';

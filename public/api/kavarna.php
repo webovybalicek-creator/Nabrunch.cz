@@ -85,8 +85,15 @@ $db->exec('CREATE TABLE IF NOT EXISTS profily (
     kavarna TEXT PRIMARY KEY, majitel INTEGER NOT NULL, data TEXT NOT NULL, verejna TEXT, predchozi TEXT,
     stav TEXT NOT NULL, duvod TEXT, upraveno TEXT NOT NULL, overeno TEXT NOT NULL)');
 
-// Kontakty kaváren z buildu (id → [název, url, e-mail, web])
+$db->exec('CREATE TABLE IF NOT EXISTS nove (
+    id TEXT PRIMARY KEY, data TEXT NOT NULL, stav TEXT NOT NULL, vytvoreno TEXT NOT NULL)');
+
+// Kontakty kaváren z buildu (id → [název, url, e-mail, web]) + nově založené kavárny majitelů
 $KAV = is_file(__DIR__ . '/_kavarny-kontakty.php') ? (array)require __DIR__ . '/_kavarny-kontakty.php' : [];
+foreach ($db->query('SELECT id, data FROM nove') as $r) {
+    $n = json_decode($r['data'], true) ?: [];
+    $KAV[$r['id']] = [$n['nazev'] ?? $r['id'], $n['url'] ?? '/kavarny/', '', ''];
+}
 
 $otisk = hash_hmac('sha256', 'ip:' . ($_SERVER['REMOTE_ADDR'] ?? ''), $TAJ);
 $limit = function (string $druh, int $max) use ($uloziste, $otisk): void {
@@ -192,12 +199,90 @@ if (in_array($akce, ['schvalit', 'zamitnout'], true) && isset($_GET['z'], $_GET[
     $nazev = $KAV[$m['kavarna']][0] ?? $m['kavarna'];
     if ($akce === 'zamitnout') {
         $db->prepare("UPDATE majitele SET stav = 'zamitnuto' WHERE id = ?")->execute([$o]);
+        $db->prepare("UPDATE nove SET stav = 'zamitnuto' WHERE id = ?")->execute([$m['kavarna']]);
         html_out('Zamítnuto', '<p>Žádost ' . htmlspecialchars($m['email']) . ' o kavárnu ' . htmlspecialchars($nazev) . ' je zamítnutá.</p>');
     }
     $db->prepare("UPDATE majitele SET stav = 'ok', overeni = 'ručně' WHERE id = ?")->execute([$o]);
+    $db->prepare("UPDATE nove SET stav = 'ok' WHERE id = ?")->execute([$m['kavarna']]);
+    $db->prepare("UPDATE profily SET stav = 'ok', duvod = NULL WHERE kavarna = ? AND verejna IS NOT NULL")->execute([$m['kavarna']]);
     posli($m['email'], "Přístup ke správě kavárny $nazev", "Dobrý den,\n\nvaši žádost jsme schválili. Údaje kavárny $nazev na naBrunch.cz upravíte tady:\n\n"
         . $odkazPrihlaseni($o) . "\n\nOdkaz si uložte, slouží k dalšímu přihlášení.\n\nnaBrunch.cz\n");
     html_out('Schváleno', '<p>Přístup poslán na ' . htmlspecialchars($m['email']) . '.</p>');
+}
+
+// ---------------------------------------------------------------- nová kavárna (kterou ještě nemáme)
+function slugify(string $s): string
+{
+    $s = strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $s) ?: $s);
+    $s = trim(preg_replace('/[^a-z0-9]+/', '-', str_replace('&', ' a ', $s)), '-');
+    return substr($s, 0, 80);
+}
+if ($akce === 'novy' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (trim((string)($_POST['web2'] ?? '')) !== '') json_out(200, ['ok' => true, 'hned' => false]);
+    $limit('novy', 3);
+    $email = strtolower(trim((string)($_POST['email'] ?? '')));
+    $jmeno = mb_substr(trim((string)($_POST['jmeno'] ?? '')), 0, 80);
+    $tel = mb_substr(trim((string)($_POST['telefon_majitel'] ?? '')), 0, 30);
+    $nazev = mb_substr(trim(preg_replace('/\s+/u', ' ', (string)($_POST['nazev'] ?? ''))), 0, 100);
+    $ulice = mb_substr(trim((string)($_POST['ulice'] ?? '')), 0, 120);
+    $mesto = mb_substr(trim((string)($_POST['mesto'] ?? '')), 0, 80);
+    $psc = preg_replace('/\D/', '', (string)($_POST['psc'] ?? ''));
+    $lat = (float)($_POST['lat'] ?? 0);
+    $lon = (float)($_POST['lon'] ?? 0);
+    $chyby = [];
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $chyby[] = 'Zadejte platný e-mail.';
+    if ($jmeno === '') $chyby[] = 'Vyplňte své jméno.';
+    if (mb_strlen($nazev) < 2) $chyby[] = 'Vyplňte název kavárny.';
+    if ($ulice === '' || $mesto === '') $chyby[] = 'Vyplňte ulici s číslem a obec.';
+    if ($psc !== '' && strlen($psc) !== 5) $chyby[] = 'PSČ má 5 číslic.';
+    if ($lat < 48.5 || $lat > 51.1 || $lon < 12.0 || $lon > 18.9) $chyby[] = 'Označte polohu kavárny na mapě (kliknutím).';
+    $v = json_decode((string)($_POST['data'] ?? '{}'), true);
+    [$d, $ch2] = validuj(is_array($v) ? $v : []);
+    $chyby = array_merge($chyby, $ch2);
+    if ($chyby) json_out(422, ['ok' => false, 'chyba' => implode(' ', $chyby)]);
+    if (preg_match('~https?://|www\.~i', "$nazev $ulice $mesto")) json_out(422, ['ok' => false, 'chyba' => 'Název a adresa nesmí obsahovat odkazy.']);
+
+    // Stejná kavárna už existuje? (stejný název v okolí 100 m)
+    $id = 'm' . substr(bin2hex(random_bytes(5)), 0, 9);
+    $mestoNorm = preg_match('/^Praha\b/u', $mesto) ? 'Praha' : $mesto;
+    $obvod = $mestoNorm === 'Praha' && preg_match('/^1(\d)0\d\d$/', $psc, $mm) ? 'Praha ' . ($mm[1] === '0' ? '10' : $mm[1]) : null;
+    $url = '/kavarny/' . slugify($mestoNorm) . '/' . slugify($nazev) . '/';
+    $novy = ['nazev' => $nazev, 'ulice' => $ulice, 'mesto' => $mestoNorm, 'obvod' => $obvod, 'psc' => $psc ?: null, 'lat' => round($lat, 6), 'lon' => round($lon, 6), 'url' => $url];
+
+    // Automatické ověření: e-mail na doméně webu kavárny a web kavárny opravdu zmiňuje její název
+    $overeni = null;
+    $web = $d['web'] ?? '';
+    $domEmail = substr(strrchr($email, '@'), 1);
+    if ($web && !preg_match(SDILENE, '.' . domena($web) . '.') && koren($domEmail) === koren(domena($web))) {
+        $ctx = stream_context_create(['http' => ['timeout' => 8, 'follow_location' => 1, 'user_agent' => 'nabrunch.cz-overeni/1.0 (+https://nabrunch.cz)']]);
+        $html = (string)@file_get_contents($web, false, $ctx, 0, 600000);
+        $norm = fn($x) => strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', html_entity_decode(strip_tags($x), ENT_QUOTES | ENT_HTML5, 'UTF-8')) ?: '');
+        if ($html && str_contains($norm($html), $norm($nazev))) $overeni = "e-mail na doméně webu kavárny ($domEmail), web uvádí název";
+    }
+    $duvod = podezrele($d + ['popis' => ($d['popis'] ?? '') . " $nazev"]);
+    $stav = $overeni && !$duvod ? 'ok' : 'ceka';
+    $ted = date('c');
+    $db->prepare('INSERT INTO nove (id, data, stav, vytvoreno) VALUES (?,?,?,?)')->execute([$id, json_encode($novy, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $stav, $ted]);
+    $db->prepare('INSERT INTO majitele (kavarna, email, jmeno, telefon, stav, overeni, vytvoreno, otisk) VALUES (?,?,?,?,?,?,?,?)')
+        ->execute([$id, $email, $jmeno, $tel, $stav, $overeni, $ted, $otisk]);
+    $o = (int)$db->lastInsertId();
+    $json = json_encode($d, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    $db->prepare('INSERT INTO profily (kavarna, majitel, data, verejna, stav, duvod, upraveno, overeno) VALUES (?,?,?,?,?,?,?,?)')
+        ->execute([$id, $o, $json, $json, 'ok', $duvod ?: null, $ted, $ted]);
+    $navsteva = !empty($_POST['navsteva']) ? "\n\nPODNIK CHCE, ABYCHOM HO NAVŠTÍVILI A ZAŘADILI MEZI DOPORUČENÉ.\n" : '';
+
+    if ($stav === 'ok') {
+        posli($email, "Kavárna $nazev je přidaná na naBrunch.cz", "Dobrý den,\n\nkavárnu $nazev jsme přidali, na webu se objeví do 3 hodin:\n$WEB$url\n\n"
+            . "Údaje a fotky upravíte tady:\n" . $odkazPrihlaseni($o) . "\n\nOdkaz si uložte, slouží k dalšímu přihlášení.\n\nnaBrunch.cz\n");
+        posli(PRIJEMCE, "[naBrunch] Nová kavárna (ověřeno automaticky): $nazev", "$nazev, $ulice, $mesto\nMajitel: $jmeno, $email, $tel\nOvěření: $overeni$navsteva\n"
+            . json_encode($d, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n\nZablokovat a stáhnout: $API?akce=zablokovat&o=$o&t=" . $podpis("zablokovat:$o") . "\n");
+        json_out(200, ['ok' => true, 'hned' => true]);
+    }
+    posli(PRIJEMCE, "[naBrunch] Nová kavárna ke schválení: $nazev", "$nazev, $ulice, $psc $mesto\nPoloha: https://mapy.com/?q=$lat,$lon\nMajitel: $jmeno, $email, $tel"
+        . ($duvod ? "\nPodezření: $duvod" : '') . "$navsteva\n\n" . json_encode($d, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT)
+        . "\n\nSchválit (přidat na web a poslat majiteli přístup): $API?akce=schvalit&z=$o&t=" . $podpis("schvalit:$o")
+        . "\nZamítnout: $API?akce=zamitnout&z=$o&t=" . $podpis("zamitnout:$o") . "\n");
+    json_out(200, ['ok' => true, 'hned' => false]);
 }
 
 // ---------------------------------------------------------------- načtení a uložení profilu
@@ -211,25 +296,9 @@ if ($akce === 'nacti' && $_SERVER['REQUEST_METHOD'] === 'POST') {
         'stav' => $p['stav'] ?? null, 'fotky' => $fotky($m['kavarna'])]);
 }
 
-/** Podezřelý obsah → ruční kontrola (vrací důvod, nebo '') */
-function podezrele(array $d): string
+/** Kontrola a očištění údajů od majitele → [data, chyby] */
+function validuj(array $v): array
 {
-    $text = mb_strtolower(implode(' ', [$d['popis'] ?? '', $d['instagram'] ?? '', $d['facebook'] ?? '']));
-    $bez = iconv('UTF-8', 'ASCII//TRANSLIT', $text) ?: $text;
-    if (preg_match('~\b(kurv|pic[aeiou]|kokot|debil|hovn|srac|zmrd|curak|prdel|mrd[ae]|buzn|negr|cigan|cikan|idiot|kretén|kreten|fuck|shit|bitch|dick)~', $bez)) return 'nevhodné výrazy';
-    if (preg_match('~\b(casino|kasino|viagra|crypto|bitcoin|forex|porn|escort|pujck|loan|bet365|xxx)~', $bez)) return 'podezření na spam';
-    if (preg_match('~(.)\1{5,}~u', $d['popis'] ?? '')) return 'opakované znaky';
-    $velka = preg_match_all('~\p{Lu}~u', $d['popis'] ?? '');
-    $vsech = preg_match_all('~\p{L}~u', $d['popis'] ?? '');
-    if ($vsech > 40 && $velka / $vsech > 0.5) return 'text velkými písmeny';
-    return '';
-}
-
-if ($akce === 'uloz' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-    $m = $prihlaseni();
-    $limit('uloz', 30);
-    $v = json_decode((string)($_POST['data'] ?? ''), true);
-    if (!is_array($v)) json_out(400, ['ok' => false, 'chyba' => 'Neplatná data.']);
     $txt = fn($x, int $max) => mb_substr(trim(preg_replace('/\s+/u', ' ', (string)$x)), 0, $max);
     $odkaz = function ($x) use ($txt) {
         $x = $txt($x, 300);
@@ -257,6 +326,29 @@ if ($akce === 'uloz' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($doba !== '') preg_match('/^[A-Za-z0-9 :;,\-]+$/', $doba) ? $d['oteviraciDoba'] = $doba : $chyby[] = 'Otevírací doba má neplatný formát.';
     $POVOLENE = ['snidane', 'brunch', 'vyberovaKava', 'pekarna', 'dorty', 'wifi', 'zahradka', 'psi', 'bezbarierove', 'karta', 'vegan', 'bezlepek', 'deti'];
     $d['vlastnosti'] = array_values(array_intersect((array)($v['vlastnosti'] ?? []), $POVOLENE));
+    return [$d, $chyby];
+}
+
+/** Podezřelý obsah → ruční kontrola (vrací důvod, nebo '') */
+function podezrele(array $d): string
+{
+    $text = mb_strtolower(implode(' ', [$d['popis'] ?? '', $d['instagram'] ?? '', $d['facebook'] ?? '']));
+    $bez = iconv('UTF-8', 'ASCII//TRANSLIT', $text) ?: $text;
+    if (preg_match('~\b(kurv|pic[aeiou]|kokot|debil|hovn|srac|zmrd|curak|prdel|mrd[ae]|buzn|negr|cigan|cikan|idiot|kretén|kreten|fuck|shit|bitch|dick)~', $bez)) return 'nevhodné výrazy';
+    if (preg_match('~\b(casino|kasino|viagra|crypto|bitcoin|forex|porn|escort|pujck|loan|bet365|xxx)~', $bez)) return 'podezření na spam';
+    if (preg_match('~(.)\1{5,}~u', $d['popis'] ?? '')) return 'opakované znaky';
+    $velka = preg_match_all('~\p{Lu}~u', $d['popis'] ?? '');
+    $vsech = preg_match_all('~\p{L}~u', $d['popis'] ?? '');
+    if ($vsech > 40 && $velka / $vsech > 0.5) return 'text velkými písmeny';
+    return '';
+}
+
+if ($akce === 'uloz' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $m = $prihlaseni();
+    $limit('uloz', 30);
+    $v = json_decode((string)($_POST['data'] ?? ''), true);
+    if (!is_array($v)) json_out(400, ['ok' => false, 'chyba' => 'Neplatná data.']);
+    [$d, $chyby] = validuj($v);
     if ($chyby) json_out(422, ['ok' => false, 'chyba' => implode(' ', $chyby)]);
 
     $json = json_encode($d, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
@@ -303,6 +395,7 @@ if ($akce === 'zablokovat' && isset($_GET['o'], $_GET['t'])) {
     $st->execute([$o]);
     $kav = (string)$st->fetchColumn();
     $db->prepare("UPDATE majitele SET stav = 'blokovan' WHERE id = ?")->execute([$o]);
+    $db->prepare("UPDATE nove SET stav = 'blokovan' WHERE id = ?")->execute([$kav]);
     $db->prepare("UPDATE profily SET stav = 'stazeno', verejna = NULL WHERE kavarna = ? AND majitel = ?")->execute([$kav, $o]);
     foreach (glob($fotkyDir($kav) . '/*.webp') ?: [] as $f) @unlink($f);
     html_out('Zablokováno', '<p>Majitel je zablokovaný, jeho údaje a fotky jsou stažené z webu.</p>');
@@ -371,6 +464,15 @@ if (isset($_GET['export'])) {
     // Ověření majitelé bez úprav (jen přihlášení) – kavárna je ověřená, i když zatím nic nezměnili
     foreach ($db->query("SELECT kavarna, MIN(vytvoreno) v FROM majitele WHERE stav = 'ok' GROUP BY kavarna") as $r) {
         if (!isset($out[$r['kavarna']])) $out[$r['kavarna']] = ['overeno' => substr($r['v'], 0, 10)];
+    }
+    // Nově založené kavárny: jen schválené (ostatní z exportu vypadnou)
+    $nove = [];
+    foreach ($db->query('SELECT id, data, stav FROM nove') as $r) $nove[$r['id']] = $r;
+    foreach ($out as $k => $_) {
+        if (isset($nove[$k])) {
+            if ($nove[$k]['stav'] !== 'ok') unset($out[$k]);
+            else $out[$k]['novy'] = json_decode($nove[$k]['data'], true);
+        }
     }
     foreach ($out as $k => &$d) {
         $f = $fotky((string)$k);

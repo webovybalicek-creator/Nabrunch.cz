@@ -552,3 +552,43 @@ a.tag:hover {
   grid-template-columns: repeat(auto-fill, minmax(min(19rem, 100%), 1fr));
   gap: 0.75rem;
 }
+
+/* Editor otevírací doby (správa kavárny, přidání kavárny) */
+.doba-ed {
+  border-collapse: collapse;
+  width: 100%;
+}
+.doba-ed th {
+  text-align: left;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem 0.4rem 0;
+  white-space: nowrap;
+}
+.doba-ed td {
+  padding: 0.3rem 0.5rem 0.3rem 0;
+  font-size: 0.9rem;
+}
+.doba-ed input[type='time'] {
+  font: inherit;
+  padding: 0.3em;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.doba-ed .pauza {
+  margin-left: 0.6rem;
+  opacity: 0.8;
+}
+@media (max-width: 640px) {
+  .doba-ed .pauza {
+    display: block;
+    margin: 0.3rem 0 0;
+  }
+}
+.volby-grid {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.4rem 1rem;
+}
