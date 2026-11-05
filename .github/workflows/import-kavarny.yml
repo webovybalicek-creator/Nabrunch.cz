@@ -1,0 +1,32 @@
+name: Import kaváren
+
+# Stáhne kavárny z OpenStreetMap, zkontroluje jejich weby (jen příznaky jako „snídaně“, „výběrová káva“)
+# a uloží src/data/kavarny.json. Nové kavárny dostanou rozvrh postupného zveřejnění.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-kavarny
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node scripts/import-kavarny.mjs
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add src/data/kavarny.json
+          if git diff --cached --quiet; then echo "Beze změn"; exit 0; fi
+          git commit -m "Import kaváren z OpenStreetMap"
+          git push
