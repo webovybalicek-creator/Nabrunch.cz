@@ -122,6 +122,12 @@ vyřadí. Pokud už byla zaindexovaná, přidej 301 ze staré adresy `/kavarny/�
 
 ### Správa kaváren majiteli
 
+**Vstup:** stránka `/pridat-podnik/` – 1) majitel vyhledá svůj podnik; neověřená kavárna → „převzít správu“ (vede na
+formulář `#majitel` na detailu kavárny), ověřený podnik naBrunche → e-mail redakci; 2) když podnik nenajde, založí nový
+(název, adresa, poloha na mapě, otevírací doba, vlastnosti, kontakty). Nový podnik se přidá hned, když e-mail je na doméně
+webu podniku a web uvádí jeho název; jinak ho redakce schválí jedním klikem z e-mailu. Zaškrtnutím „chci návštěvu“ dostane
+redakce žádost o zařazení mezi doporučené (ty dál vznikají jen ručně v `podniky.json`).
+
 Na detailu kavárny je „Jste majitel? Upravte údaje zdarma“ (`/api/kavarna.php`, data v SQLite v `/_data/`).
 - **Automatické ověření:** e-mail se shoduje s e-mailem kavárny v OSM, je na doméně jejího webu, nebo je uvedený na jejím webu
   (kontroluje se úvodní stránka a /kontakt) → přihlašovací odkaz přijde hned. Jinak přijde žádost na karolina@nabrunch.cz
