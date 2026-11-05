@@ -19,7 +19,7 @@
   type Mesto = [string, string, number, string]; // název, url, počet, nadřazená
   type Podnik = [string, string, string, string, string]; // název, url, místo, náhled, hledaný text
   type Tema = [string, string, number, string, string]; // název, url, počet, emoji, hledaný text
-  type Index = { m: Mesto[]; s: Podnik[]; t: Tema[]; c?: [string, string, number][]; k?: [string, string, string][] };
+  type Index = { m: Mesto[]; s: Podnik[]; t: Tema[]; c?: [string, string, number][]; k?: [string, string, string, string?, string?][] };
 
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const esc = (s: string) => s.replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
@@ -94,7 +94,13 @@
             : '') +
           (kavarny.length
             ? `<p class="srch__h">Kavárny <small>(neověřené)</small></p>` +
-              kavarny.map((k) => `<a role="option" href="${k[1]}"><span>☕ ${esc(String(k[0]))}</span><small>${esc(String(k[2]))}</small></a>`).join('')
+              kavarny
+                .map((k) =>
+                  k[4]
+                    ? `<a role="option" class="srch__podnik" href="${k[1]}"><span class="srch__th"><img src="${esc(String(k[4]))}" alt="" loading="lazy" onload="this.classList.add('ok')" onerror="this.remove()"></span><span class="srch__txt"><span>${esc(String(k[0]))}</span><small>${esc(String(k[2]))}</small></span></a>`
+                    : `<a role="option" href="${k[1]}"><span>☕ ${esc(String(k[0]))}</span><small>${esc(String(k[2]))}</small></a>`,
+                )
+                .join('')
             : '') +
           (temata.length
             ? `<p class="srch__h">Podle chuti</p>` +

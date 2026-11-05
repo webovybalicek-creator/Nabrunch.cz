@@ -32,7 +32,15 @@ const hledat = `${k.nazev} ${k.ulice ?? ''} ${k.mesto} ${k.obvod ?? ''} ${k.ctvr
 
 <li class="kk" hidden={skryta} data-kk data-hledat={hledat} data-snidane={n.snidane || n.brunch ? '1' : ''} data-zahradka={k.vlastnosti.zahradka ? '1' : ''} data-psi={k.vlastnosti.psi ? '1' : ''} data-wifi={k.vlastnosti.wifi ? '1' : ''}>
   <a href={kavarnaUrl(k)}>
-    <span class="kk__viz" style={`--bg:${bg};--fg:${fg}`} aria-hidden="true">☕</span>
+    {
+      k.fotky?.length ? (
+        <span class="kk__viz kk__viz--foto" aria-hidden="true">
+          <img src={`${k.fotky[0]}_640.webp`} alt="" loading="lazy" decoding="async" />
+        </span>
+      ) : (
+        <span class="kk__viz" style={`--bg:${bg};--fg:${fg}`} aria-hidden="true">☕</span>
+      )
+    }
     <span class="kk__txt">
       <span class="kk__nazev">{k.nazev}</span>
       <span class="kk__adr">{[k.ulice, k.obvod ?? k.mesto].filter(Boolean).join(', ')}{km && ` · ${km}`}</span>
@@ -78,6 +86,15 @@ const hledat = `${k.nazev} ${k.ulice ?? ''} ${k.mesto} ${k.obvod ?? ''} ${k.ctvr
     background: var(--bg);
     color: var(--fg);
     font-size: 1.5rem;
+  }
+  .kk__viz--foto {
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .kk__viz--foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .kk__txt {
     display: flex;

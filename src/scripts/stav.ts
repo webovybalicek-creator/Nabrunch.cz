@@ -21,7 +21,7 @@ export function stav(tyden: [number, number][][]): { open: boolean; text: string
   const { den, min } = prahaTed();
   const dnes = tyden[den] ?? [];
   const ted = dnes.find(([a, b]) => min >= a && min < b);
-  if (ted) return { open: true, text: `Otevřeno do ${hhmm(ted[1])}` };
+  if (ted) return { open: true, text: ted[1] >= 1440 ? 'Otevřeno do půlnoci' : `Otevřeno do ${hhmm(ted[1])}` };
   const pozdeji = dnes.find(([a]) => a > min);
   if (pozdeji) return { open: false, text: `Zavřeno, otevírá v ${hhmm(pozdeji[0])}` };
   for (let i = 1; i <= 7; i++) {
