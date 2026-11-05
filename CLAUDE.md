@@ -20,6 +20,7 @@ Podrobnosti viz `README.md`.
 |---|---|
 | Podniky (karty, detail, mapa) | `src/data/podniky.json` |
 | Neověřené kavárny (generované) | `src/data/kavarny.json` – jen přes workflow Import kaváren |
+| Úpravy kaváren od majitelů | `src/data/kavarny-majitele.json` – jen přes workflow Synchronizace kaváren |
 | Články blogu | `src/content/blog/<slug>.md` |
 | Lokality (název → slug) | `src/data/lokality.json` |
 | Témata (vegan, pet-friendly…) | `TEMATA` v `src/lib/data.ts` |
@@ -117,6 +118,19 @@ Kód: `src/lib/kavarny.ts`, `src/components/KavarnaKarta.astro`, `src/components
 **Ověření kavárny:** po osobní návštěvě ji přidej jako běžný podnik do `podniky.json`. Při dalším importu se z neověřených
 vyřadí. Pokud už byla zaindexovaná, přidej 301 ze staré adresy `/kavarny/…` na `/podniky/…` do `public/.htaccess`.
 
+### Správa kaváren majiteli
+
+Na detailu kavárny je „Jste majitel? Upravte údaje zdarma“ (`/api/kavarna.php`, data v SQLite v `/_data/`).
+- **Automatické ověření:** e-mail se shoduje s e-mailem kavárny v OSM, je na doméně jejího webu, nebo je uvedený na jejím webu
+  (kontroluje se úvodní stránka a /kontakt) → přihlašovací odkaz přijde hned. Jinak přijde žádost na karolina@nabrunch.cz
+  se schválením jedním klikem.
+- Majitel na `/sprava-kavarny/` upraví otevírací dobu, kontakty, vlastnosti (výběr ze seznamu), krátký popis (bez odkazů)
+  a nahraje až 6 fotek (převod na WebP, ukládají se na serveru do `/fotky-kavaren/`, mimo repo).
+- **Kontrola:** formát polí, zákaz odkazů v popisu, filtr vulgarismů a spamu, limity pokusů. Čisté změny jdou na web
+  automaticky, podezřelé čekají na schválení. Každá změna a fotka přijde e-mailem s odkazy Vrátit / Smazat / Zablokovat.
+- Workflow **Synchronizace kaváren** každé 3 h stáhne `?export=1` do `src/data/kavarny-majitele.json` a při změně nasadí web.
+  Kavárna ověřená majitelem se zveřejní hned (bez čekání na rozvrh), má štítek „Ověřeno majitelem“ a jde do indexu.
+
 ## Užitečné workflow (GitHub → Actions → Run workflow)
 
 - **Screenshot živého webu** – vyfotí zadané stránky (desktop i mobil) do větve `screenshots` a vypíše chyby z konzole.
@@ -124,3 +138,4 @@ vyřadí. Pokud už byla zaindexovaná, přidej 301 ze staré adresy `/kavarny/�
 - **Test SMTP** – ověří odesílání e-mailů z formulářů.
 - **Import kaváren** – obnoví data neověřených kaváren z OpenStreetMap (spouštět ručně, cca 1× za čtvrtletí).
 - **Publikace kaváren** – běží sám 2× denně, ručně jen pro okamžité zveřejnění.
+- **Synchronizace kaváren** – každé 3 hodiny přenese úpravy majitelů na web, ručně pro okamžité zveřejnění.

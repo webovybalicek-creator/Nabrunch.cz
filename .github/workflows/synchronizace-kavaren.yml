@@ -1,0 +1,52 @@
+name: Synchronizace kaváren
+
+# Každé 3 hodiny stáhne ze serveru údaje kaváren, které upravili ověření majitelé (/api/kavarna.php?export=1),
+# uloží je do src/data/kavarny-majitele.json a při změně spustí build a nasazení.
+on:
+  schedule:
+    - cron: '7 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: synchronizace-kavaren
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SITE_HOST: ${{ vars.SITE_HOST || 'nabrunch.cz' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export ze serveru
+        run: |
+          curl -sS --fail --max-time 60 "https://$SITE_HOST/api/kavarna.php?export=1" -o export.json
+          python3 - <<'PY'
+          import json
+          d = json.load(open('export.json'))
+          assert isinstance(d.get('kavarny'), dict), 'neplatný export'
+          out = {
+            "_popis": "Údaje kaváren upravené majiteli přes /sprava-kavarny/. Přepisuje workflow Synchronizace kaváren, ručně neupravovat.",
+            "kavarny": dict(sorted(d['kavarny'].items())),
+          }
+          json.dump(out, open('src/data/kavarny-majitele.json', 'w'), ensure_ascii=False, indent=2)
+          open('src/data/kavarny-majitele.json', 'a').write('\n')
+          print('Kaváren se správou majitele:', len(out['kavarny']))
+          PY
+          rm export.json
+      - name: Commit a nasazení
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add src/data/kavarny-majitele.json
+          if git diff --cached --quiet; then echo "Beze změn"; exit 0; fi
+          git commit -m "Údaje kaváren od majitelů"
+          git push
+          gh workflow run deploy.yml --ref main

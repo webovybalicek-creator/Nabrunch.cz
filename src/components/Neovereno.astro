@@ -2,12 +2,23 @@
 // Štítek / upozornění u kaváren, které jsme osobně neověřili
 interface Props {
   velky?: boolean;
+  /** Datum ověření majitelem */
+  overeno?: string;
 }
-const { velky = false } = Astro.props;
+const { velky = false, overeno } = Astro.props;
 ---
 
 {
-  velky ? (
+  overeno ? (
+    velky ? (
+      <aside class="neov neov--ok">
+        <strong>✓ Údaje ověřil majitel</strong> ({new Date(overeno).toLocaleDateString('cs-CZ')}). My jsme tu osobně zatím nebyli – proto kavárna
+        není mezi našimi doporučenými podniky.
+      </aside>
+    ) : (
+      <span class="neov-stitek neov-stitek--ok" title="Údaje kavárny ověřil a doplnil majitel">✓ Ověřeno majitelem</span>
+    )
+  ) : velky ? (
     <aside class="neov">
       <strong>Neověřeno</strong> – tuhle kavárnu jsme zatím osobně nenavštívili. Údaje pochází z OpenStreetMap a z webu kavárny, proto
       se můžou lišit. Byli jste tu, nebo jste majitel? <a href="/pridat-podnik/">Dejte nám vědět</a>.
@@ -37,5 +48,14 @@ const { velky = false } = Astro.props;
     color: #8a6116;
     font: 600 0.75rem/1.3 var(--f-display);
     vertical-align: middle;
+  }
+  .neov--ok {
+    background: var(--green-soft);
+    border-color: #d5e4cc;
+  }
+  .neov-stitek--ok {
+    background: var(--green-soft);
+    border-color: #d5e4cc;
+    color: var(--green);
   }
 </style>

@@ -2,6 +2,7 @@
 // Jsou oddělené od ověřených podniků: nemění homepage, srdcovky, nově přidané ani témata.
 // Zveřejňují se postupně podle pole `zverejnit` – při každém buildu jen ty, jejichž čas už nastal.
 import data from '../data/kavarny.json';
+import majiteleRaw from '../data/kavarny-majitele.json';
 import { PODNIKY, url as podnikUrl, kmText, type Podnik } from './data';
 import { parseTyden, souhrn, hhmm, type Tyden } from './oteviraci-doba';
 
@@ -31,13 +32,72 @@ export interface Kavarna {
   zWebu: Partial<Record<'snidane' | 'brunch' | 'vyberovaKava' | 'prazirna' | 'pekarna' | 'dorty' | 'vegan' | 'bezlepek' | 'rezervace' | 'hryProDeti', true>> | null;
   pridano: string;
   zverejnit: string | null;
+  /** Údaje od majitele (po ověření) */
+  overeno?: string;
+  popisMajitele?: string;
+  fotky?: string[];
+  rezervace?: string;
+}
+
+interface UpravaMajitele {
+  overeno: string;
+  telefon?: string;
+  email?: string;
+  web?: string;
+  rezervace?: string;
+  instagram?: string;
+  facebook?: string;
+  popis?: string;
+  oteviraciDoba?: string;
+  vlastnosti?: string[];
+  fotky?: string[];
+}
+const MAJITELE = ((majiteleRaw as { kavarny?: Record<string, UpravaMajitele> }).kavarny ?? {}) as Record<string, UpravaMajitele>;
+
+/** Přepíše údaje z OSM tím, co zadal ověřený majitel */
+function sUpravou(k: Kavarna): Kavarna {
+  const u = MAJITELE[k.id];
+  if (!u?.overeno) return k;
+  const v = new Set(u.vlastnosti ?? []);
+  const maVlastnosti = Array.isArray(u.vlastnosti);
+  const flag = (klic: string, puvodni: boolean | null) => (maVlastnosti ? v.has(klic) || null : puvodni);
+  return {
+    ...k,
+    telefon: u.telefon ?? k.telefon,
+    email: u.email ?? k.email,
+    web: u.web ?? k.web,
+    instagram: u.instagram ?? k.instagram,
+    facebook: u.facebook ?? k.facebook,
+    oteviraciDoba: u.oteviraciDoba ?? k.oteviraciDoba,
+    rezervace: u.rezervace,
+    popisMajitele: u.popis,
+    fotky: u.fotky,
+    overeno: u.overeno,
+    vlastnosti: maVlastnosti
+      ? {
+          ...k.vlastnosti,
+          wifi: flag('wifi', k.vlastnosti.wifi),
+          zahradka: flag('zahradka', k.vlastnosti.zahradka),
+          psi: flag('psi', k.vlastnosti.psi),
+          bezbarierove: flag('bezbarierove', k.vlastnosti.bezbarierove),
+          karta: flag('karta', k.vlastnosti.karta),
+          vegan: flag('vegan', k.vlastnosti.vegan),
+          bezlepek: flag('bezlepek', k.vlastnosti.bezlepek),
+          snidane: flag('snidane', k.vlastnosti.snidane),
+        }
+      : k.vlastnosti,
+    // Příznaky od majitele nahrazují odhad z webu
+    zWebu: maVlastnosti
+      ? Object.fromEntries(['brunch', 'vyberovaKava', 'pekarna', 'dorty', 'vegan', 'bezlepek'].filter((x) => v.has(x)).map((x) => [x, true]).concat(v.has('deti') ? [['hryProDeti', true]] : []))
+      : k.zWebu,
+  };
 }
 
 const TED = Date.now();
-/** Jen zveřejněné kavárny (čas zveřejnění už nastal) */
-export const KAVARNY: Kavarna[] = ((data as { kavarny?: Kavarna[] }).kavarny ?? []).filter(
-  (k) => k.zverejnit && Date.parse(k.zverejnit) <= TED,
-);
+/** Všechny kavárny z importu (i ty, které ještě nejsou zveřejněné) */
+export const VSECHNY_KAVARNY: Kavarna[] = ((data as { kavarny?: Kavarna[] }).kavarny ?? []).map(sUpravou);
+/** Zveřejněné kavárny: čas zveřejnění už nastal, nebo je ověřil majitel */
+export const KAVARNY: Kavarna[] = VSECHNY_KAVARNY.filter((k) => k.overeno || (k.zverejnit && Date.parse(k.zverejnit) <= TED));
 export const ZDROJ = (data as { zdroj?: string }).zdroj ?? '© přispěvatelé OpenStreetMap';
 
 export const kavarnaUrl = (k: Kavarna) => `/kavarny/${k.mestoSlug}/${k.slug}/`;
@@ -78,11 +138,14 @@ export function skore(k: Kavarna) {
     (k.telefon ? 1 : 0) +
     Object.values(k.vlastnosti).filter((x) => x != null).length +
     Object.values(n).filter(Boolean).length +
+    (k.popisMajitele ? 3 : 0) +
+    (k.fotky?.length ? 3 : 0) +
     (k.okoli.mhd || k.okoli.park ? 1 : 0)
   );
 }
 /** Do vyhledávačů jen detaily s dost vlastními údaji (jinak noindex, dokud je nedoplníme) */
-export const indexovatKavarnu = (k: Kavarna) => !k.retezec && !!tydenKavarny(k) && !!k.ulice && skore(k) >= 9;
+export const indexovatKavarnu = (k: Kavarna) =>
+  !!k.overeno ? !!(k.popisMajitele || k.fotky?.length || tydenKavarny(k)) : !k.retezec && !!tydenKavarny(k) && !!k.ulice && skore(k) >= 9;
 
 // ---------------------------------------------------------------- města
 export interface MestoKavaren {
@@ -197,7 +260,9 @@ export function popisKavarny(k: Kavarna): string[] {
   if (nab.length)
     out.push(
       k.zWebu && Object.keys(k.zWebu).length
-        ? `${vyber(k, ['Na svém webu kavárna zmiňuje', 'Podle vlastního webu nabízí', 'Kavárna na webu uvádí'], 2)} ${seznam(nab)}.${n.brunch || n.snidane ? ' Jestli snídaně podávají i o víkendu, doporučujeme ověřit předem.' : ''}`
+        ? k.overeno
+          ? `Podle majitele nabízí ${seznam(nab)}.`
+          : `${vyber(k, ['Na svém webu kavárna zmiňuje', 'Podle vlastního webu nabízí', 'Kavárna na webu uvádí'], 2)} ${seznam(nab)}.${n.brunch || n.snidane ? ' Jestli snídaně podávají i o víkendu, doporučujeme ověřit předem.' : ''}`
         : `Podle údajů z mapy nabízí ${seznam(nab)}.`,
     );
 

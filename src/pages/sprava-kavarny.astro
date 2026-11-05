@@ -1,0 +1,343 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Správa kavárny" description="Upravte údaje své kavárny na naBrunch.cz – otevírací dobu, kontakty, popis a fotky. Zdarma." noindex>
+  <header class="page-head">
+    <div class="wrap">
+      <h1 data-sk-nadpis>Správa kavárny</h1>
+      <p class="lead" data-sk-uvod>Načítám…</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap sk" data-sk hidden>
+      <form data-sk-form>
+        <h2>Otevírací doba</h2>
+        <table class="sk-doba" data-sk-doba></table>
+        <p class="muted mala">Polední pauzu zadáte jako druhý čas (např. 8:00–12:00 a 13:00–18:00).</p>
+
+        <h2>Co nabízíte</h2>
+        <fieldset class="sk-volby" data-sk-vlastnosti>
+          <label><input type="checkbox" value="snidane" /> 🍳 Snídaně</label>
+          <label><input type="checkbox" value="brunch" /> 🥞 Brunch</label>
+          <label><input type="checkbox" value="vyberovaKava" /> ☕ Výběrová káva</label>
+          <label><input type="checkbox" value="pekarna" /> 🥐 Vlastní pečivo</label>
+          <label><input type="checkbox" value="dorty" /> 🍰 Dorty a zákusky</label>
+          <label><input type="checkbox" value="vegan" /> 🌱 Veganské možnosti</label>
+          <label><input type="checkbox" value="bezlepek" /> Bezlepkové možnosti</label>
+          <label><input type="checkbox" value="wifi" /> Wi-Fi</label>
+          <label><input type="checkbox" value="zahradka" /> 🌿 Zahrádka / terasa</label>
+          <label><input type="checkbox" value="psi" /> 🐶 Psi vítáni</label>
+          <label><input type="checkbox" value="bezbarierove" /> Bezbariérový vstup</label>
+          <label><input type="checkbox" value="karta" /> Platba kartou</label>
+          <label><input type="checkbox" value="deti" /> Dětský koutek</label>
+        </fieldset>
+
+        <h2>Kontakty</h2>
+        <div class="sk-dva">
+          <label class="pole">Telefon<input name="telefon" type="tel" maxlength="30" /></label>
+          <label class="pole">E-mail kavárny<input name="email" type="email" maxlength="120" /></label>
+          <label class="pole">Web<input name="web" type="url" maxlength="300" placeholder="https://" /></label>
+          <label class="pole">Online rezervace<input name="rezervace" type="url" maxlength="300" placeholder="https://" /></label>
+          <label class="pole">Instagram<input name="instagram" type="url" maxlength="300" placeholder="https://www.instagram.com/…" /></label>
+          <label class="pole">Facebook<input name="facebook" type="url" maxlength="300" placeholder="https://www.facebook.com/…" /></label>
+        </div>
+
+        <h2>Pár slov o kavárně</h2>
+        <label class="pole"
+          ><span class="muted mala">Max. 600 znaků, bez odkazů. Zobrazí se jako „slovo majitele“.</span>
+          <textarea name="popis" rows="5" maxlength="600"></textarea></label
+        >
+
+        <p class="sk-akce">
+          <button class="btn btn--akcent" type="submit">Uložit změny</button>
+          <a class="btn btn--ghost" data-sk-odkaz href="/">Zobrazit kavárnu</a>
+        </p>
+        <p class="sk-stav" data-sk-stav role="status"></p>
+      </form>
+
+      <section class="sk-fotky-sekce">
+        <h2>Fotky</h2>
+        <p class="muted mala">Až 6 fotek interiéru, kávy nebo snídaní (JPG/PNG, aspoň 500 px). Nahrávejte jen vlastní fotky.</p>
+        <ul class="sk-fotky" data-sk-fotky></ul>
+        <label class="btn btn--ghost sk-nahrat">+ Nahrát fotku<input type="file" accept="image/jpeg,image/png,image/webp" data-sk-foto hidden /></label>
+        <p class="sk-stav" data-sk-foto-stav role="status"></p>
+      </section>
+    </div>
+  </section>
+</Base>
+
+<script>
+  type Interval = [number, number];
+  const DNY = ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota', 'Neděle'];
+  const OSM = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
+  const API = '/api/kavarna.php';
+  const q = new URLSearchParams(location.search);
+  const o = q.get('o') ?? '';
+  const t = q.get('t') ?? '';
+  const $ = <T extends HTMLElement>(s: string) => document.querySelector<T>(s)!;
+  const esc = (s: string) => String(s).replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
+  const hm = (m: number) => `${String(Math.floor(m / 60) % 24).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
+  const naMin = (v: string) => {
+    const m = v.match(/^(\d{1,2}):(\d{2})$/);
+    return m ? Number(m[1]) * 60 + Number(m[2]) : null;
+  };
+  function zOsm(s: string): Interval[][] {
+    const w: Interval[][] = [[], [], [], [], [], [], []];
+    for (const cast of s.split(';')) {
+      const m = cast.trim().match(/^([A-Za-z,\- ]+)\s+([\d:,\- ]+)$/);
+      if (!m) continue;
+      const casy = m[2].split(',').map((x) => x.trim().split('-').map(naMin)).filter((x) => x[0] != null && x[1] != null) as Interval[];
+      for (const r of m[1].split(',')) {
+        const [a, b] = r.trim().split('-').map((d) => OSM.indexOf(d.trim()));
+        if (a < 0) continue;
+        for (let i = a; i <= (b >= 0 ? b : a); i++) w[i] = casy;
+      }
+    }
+    return w;
+  }
+  function doOsm(w: Interval[][]): string {
+    const klic = w.map((d) => d.map(([a, b]) => `${hm(a)}-${hm(b)}`).join(','));
+    const casti: string[] = [];
+    let i = 0;
+    while (i < 7) {
+      let j = i;
+      while (j + 1 < 7 && klic[j + 1] === klic[i]) j++;
+      if (klic[i]) casti.push(`${OSM[i]}${j > i ? `-${OSM[j]}` : ''} ${klic[i]}`);
+      i = j + 1;
+    }
+    return casti.join('; ');
+  }
+  const post = async (data: Record<string, string> | FormData) => {
+    const fd = data instanceof FormData ? data : new FormData();
+    if (!(data instanceof FormData)) for (const [k, v] of Object.entries(data)) fd.set(k, v);
+    fd.set('o', o);
+    fd.set('t', t);
+    return (await fetch(API, { method: 'POST', body: fd })).json();
+  };
+
+  (async () => {
+    const uvod = $('[data-sk-uvod]');
+    if (!o || !t) {
+      uvod.innerHTML = 'Pro úpravu kavárny použijte odkaz z e-mailu. Přístup získáte na stránce své kavárny přes „Jste majitel?“.';
+      return;
+    }
+    const r = await post({ akce: 'nacti' });
+    if (!r.ok) {
+      uvod.textContent = r.chyba || 'Odkaz neplatí.';
+      return;
+    }
+    $('[data-sk-nadpis]').textContent = r.nazev;
+    $<HTMLAnchorElement>('[data-sk-odkaz]').href = r.url;
+    uvod.innerHTML =
+      r.stav === 'ceka'
+        ? 'Vaše poslední změna čeká na kontrolu. Můžete ji dál upravovat.'
+        : 'Upravte údaje a uložte. Změny se na webu objeví do 3 hodin.';
+
+    // Výchozí hodnoty: uložené od majitele, jinak současné údaje ze stránky kavárny
+    let zaklad: Record<string, any> = {};
+    try {
+      const html = await (await fetch(r.url)).text();
+      const m = html.match(/<script type="application\/json" id="kavarna-zaklad">([\s\S]*?)<\/script>/);
+      if (m) zaklad = JSON.parse(m[1]);
+    } catch {
+      /* stránka ještě není zveřejněná */
+    }
+    const v = { ...zaklad, ...(r.data ?? {}) };
+    const tyden: Interval[][] = r.data?.oteviraciDoba ? zOsm(r.data.oteviraciDoba) : (zaklad.tyden ?? [[], [], [], [], [], [], []]);
+
+    const form = $<HTMLFormElement>('[data-sk-form]');
+    for (const k of ['telefon', 'email', 'web', 'rezervace', 'instagram', 'facebook', 'popis'])
+      (form.elements.namedItem(k) as HTMLInputElement).value = v[k] ?? '';
+    const vl = new Set<string>(v.vlastnosti ?? []);
+    form.querySelectorAll<HTMLInputElement>('[data-sk-vlastnosti] input').forEach((c) => (c.checked = vl.has(c.value)));
+
+    const doba = $<HTMLTableElement>('[data-sk-doba]');
+    doba.innerHTML = DNY.map((den, i) => {
+      const d = tyden[i] ?? [];
+      const c = (n: number, j: 0 | 1) => (d[n] ? hm(d[n][j]) : '');
+      return `<tr><th>${den}</th><td><label><input type="checkbox" data-zavreno ${d.length ? '' : 'checked'}> zavřeno</label></td>
+        <td class="casy"><input type="time" value="${c(0, 0)}" aria-label="${den} od"> – <input type="time" value="${c(0, 1)}" aria-label="${den} do">
+        <span class="pauza"><input type="time" value="${c(1, 0)}" aria-label="${den} od (odpoledne)"> – <input type="time" value="${c(1, 1)}" aria-label="${den} do (odpoledne)"></span></td></tr>`;
+    }).join('');
+    const prepni = (tr: HTMLTableRowElement) => {
+      const z = tr.querySelector<HTMLInputElement>('[data-zavreno]')!.checked;
+      tr.querySelectorAll<HTMLInputElement>('input[type=time]').forEach((x) => (x.disabled = z));
+    };
+    doba.querySelectorAll('tr').forEach((tr) => {
+      prepni(tr);
+      tr.querySelector('[data-zavreno]')!.addEventListener('change', () => prepni(tr));
+    });
+
+    const fotkyEl = $('[data-sk-fotky]');
+    const vykresliFotky = (f: string[]) => {
+      fotkyEl.innerHTML = f
+        .map((x) => `<li><img src="${esc(x)}_640.webp" alt=""><button type="button" data-smaz="${esc(x.split('/').pop()!)}" aria-label="Smazat fotku">×</button></li>`)
+        .join('');
+      fotkyEl.querySelectorAll<HTMLButtonElement>('[data-smaz]').forEach((b) =>
+        b.addEventListener('click', async () => {
+          const res = await post({ akce: 'smazfoto', f: b.dataset.smaz! });
+          if (res.ok) vykresliFotky(res.fotky);
+        }),
+      );
+    };
+    vykresliFotky(r.fotky ?? []);
+    const fotoInput = $<HTMLInputElement>('[data-sk-foto]');
+    fotoInput.addEventListener('change', async () => {
+      const stav = $('[data-sk-foto-stav]');
+      const file = fotoInput.files?.[0];
+      if (!file) return;
+      stav.textContent = 'Nahrávám…';
+      const fd = new FormData();
+      fd.set('akce', 'foto');
+      fd.set('foto', file);
+      const res = await post(fd);
+      stav.textContent = res.ok ? 'Fotka nahrána. Na webu se objeví do 3 hodin.' : res.chyba;
+      if (res.ok) vykresliFotky(res.fotky);
+      fotoInput.value = '';
+    });
+
+    $('[data-sk]').hidden = false;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const stav = $('[data-sk-stav]');
+      const w: Interval[][] = [];
+      for (const tr of doba.querySelectorAll('tr')) {
+        if (tr.querySelector<HTMLInputElement>('[data-zavreno]')!.checked) {
+          w.push([]);
+          continue;
+        }
+        const c = [...tr.querySelectorAll<HTMLInputElement>('input[type=time]')].map((x) => naMin(x.value));
+        const den: Interval[] = [];
+        for (const k of [0, 2]) if (c[k] != null && c[k + 1] != null && c[k]! < c[k + 1]!) den.push([c[k]!, c[k + 1]!]);
+        w.push(den);
+      }
+      const fd = new FormData(form);
+      const data: Record<string, unknown> = {};
+      for (const k of ['telefon', 'email', 'web', 'rezervace', 'instagram', 'facebook', 'popis']) data[k] = String(fd.get(k) ?? '').trim();
+      data.oteviraciDoba = w.some((d) => d.length) ? doOsm(w) : '';
+      data.vlastnosti = [...form.querySelectorAll<HTMLInputElement>('[data-sk-vlastnosti] input:checked')].map((c) => c.value);
+      stav.textContent = 'Ukládám…';
+      const res = await post({ akce: 'uloz', data: JSON.stringify(data) });
+      stav.textContent = !res.ok
+        ? res.chyba || 'Uložení se nepovedlo.'
+        : res.stav === 'ceka'
+          ? 'Uloženo. Změna čeká na krátkou kontrolu, pak ji zveřejníme.'
+          : 'Uloženo! Na webu se změny objeví do 3 hodin.';
+    });
+  })();
+</script>
+
+<style>
+  .sk[hidden] {
+    display: none;
+  }
+  .sk h2 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.25rem;
+  }
+  .sk form {
+    max-width: 46rem;
+  }
+  .sk-doba {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .sk-doba :global(th) {
+    text-align: left;
+    font-weight: 500;
+    padding: 0.4rem 0.75rem 0.4rem 0;
+    white-space: nowrap;
+  }
+  .sk-doba :global(td) {
+    padding: 0.3rem 0.5rem 0.3rem 0;
+    font-size: 0.9rem;
+  }
+  .sk-doba :global(input[type='time']) {
+    font: inherit;
+    padding: 0.3em;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .sk-doba :global(.pauza) {
+    margin-left: 0.6rem;
+    opacity: 0.8;
+  }
+  .sk-volby {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 0.4rem 1rem;
+  }
+  .sk-dva {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+    gap: 0.75rem 1rem;
+  }
+  .pole {
+    display: grid;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+  }
+  .pole input,
+  .pole textarea {
+    font: inherit;
+    font-size: 16px;
+    padding: 0.55em 0.8em;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    width: 100%;
+  }
+  .sk-akce {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .sk-stav {
+    font-weight: 600;
+    min-height: 1.5em;
+  }
+  .sk-fotky-sekce {
+    max-width: 46rem;
+    margin-top: 2rem;
+  }
+  .sk-fotky {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    gap: 0.5rem;
+  }
+  .sk-fotky :global(li) {
+    position: relative;
+  }
+  .sk-fotky :global(img) {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+  .sk-fotky :global(button) {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  .sk-nahrat {
+    cursor: pointer;
+  }
+  .mala {
+    font-size: 0.85rem;
+  }
+</style>
