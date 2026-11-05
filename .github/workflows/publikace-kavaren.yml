@@ -1,0 +1,35 @@
+name: Publikace kaváren
+
+# Postupné zveřejňování neověřených kaváren: dvakrát denně (v různou dobu) zkontroluje,
+# jestli od minulého běhu nastal čas zveřejnění dalších kaváren, a pokud ano, spustí nový build a nasazení.
+on:
+  schedule:
+    - cron: '23 5 * * *'
+    - cron: '41 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  publikace:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Kolik kaváren je na řadě
+        id: rada
+        run: |
+          N=$(node -e "
+            const d = require('./src/data/kavarny.json');
+            const ted = Date.now(), od = ted - 15 * 3600e3;
+            console.log((d.kavarny || []).filter(k => k.zverejnit && Date.parse(k.zverejnit) > od && Date.parse(k.zverejnit) <= ted).length);
+          ")
+          echo "Na řadě ke zveřejnění: $N"
+          echo "n=$N" >> "$GITHUB_OUTPUT"
+      - name: Spustit build a nasazení
+        if: steps.rada.outputs.n != '0' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

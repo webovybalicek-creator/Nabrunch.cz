@@ -22,6 +22,7 @@ const rok = new Date().getFullYear();
       <ul>
         {topMesta.map((m) => <li><a href={lokalitaUrl(m)}>Brunch {m.nazev}</a></li>)}
         <li><a href="/lokality/">Všechna města →</a></li>
+        <li><a href="/kavarny/">Kavárny podle měst</a></li>
       </ul>
     </nav>
     <nav aria-label="Podle chuti">

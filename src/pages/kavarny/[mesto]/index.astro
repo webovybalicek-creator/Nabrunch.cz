@@ -1,0 +1,181 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import Mapa from '../../../components/Mapa.astro';
+import Karta from '../../../components/Karta.astro';
+import KavarnaKarta from '../../../components/KavarnaKarta.astro';
+import { lokalitaPodle, lokalitaUrl, pocetText } from '../../../lib/data';
+import { hhmm } from '../../../lib/oteviraci-doba';
+import { mestaKavaren, indexovatMesto, kavarnaUrl, adresaKavarny, tydenKavarny, nabizi, type MestoKavaren } from '../../../lib/kavarny';
+
+export function getStaticPaths() {
+  return mestaKavaren().map((m) => ({ params: { mesto: m.slug }, props: { m } }));
+}
+const { m } = Astro.props as { m: MestoKavaren };
+const s = m.kavarny;
+const n = s.length;
+const kav = (x: number) => pocetText(x, 'kavárna', 'kavárny', 'kaváren');
+const sDobou = s.filter((k) => tydenKavarny(k));
+const vNedeli = sDobou.filter((k) => tydenKavarny(k)![6].length).length;
+const rano = sDobou
+  .map((k) => ({ k, od: Math.min(...tydenKavarny(k)!.slice(0, 5).filter((d) => d.length).map((d) => d[0][0])) }))
+  .filter((x) => Number.isFinite(x.od))
+  .sort((a, b) => a.od - b.od)[0];
+const snidane = s.filter((k) => nabizi(k).snidane || nabizi(k).brunch).length;
+const zahradka = s.filter((k) => k.vlastnosti.zahradka).length;
+const psi = s.filter((k) => k.vlastnosti.psi).length;
+const wifi = s.filter((k) => k.vlastnosti.wifi).length;
+const lok = lokalitaPodle(m.nazev);
+
+const vety: string[] = [`${m.nazev}: v přehledu je ${kav(n)} z OpenStreetMap${sDobou.length ? `, u ${pocetText(sDobou.length, 'z nich', 'z nich', 'z nich')} známe otevírací dobu` : ''}.`];
+if (vNedeli) vety.push(`V neděli má otevřeno ${kav(vNedeli)}.`);
+if (rano && rano.od <= 8 * 60) vety.push(`Nejdřív ve všední dny otevírá ${rano.k.nazev} (v ${hhmm(rano.od)}).`);
+const vl = [snidane && `${snidane} se snídaní nebo brunchem`, zahradka && `${zahradka} se zahrádkou`, psi && `${psi} kam můžete se psem`, wifi && `${wifi} s wifi`].filter(Boolean);
+if (vl.length) vety.push(`Z toho ${vl.join(', ')}.`);
+
+const title = n >= 3 ? `Kavárny ${m.nazev}: ${kav(n)}, otevírací doba a mapa` : `Kavárny ${m.nazev}`;
+const description = [
+  `☕ ${m.nazev}: ${kav(n)} na jednom místě.`,
+  vNedeli ? `${pocetText(vNedeli, 'má', 'mají', 'má')} otevřeno i v neděli.` : '',
+  snidane ? `${snidane} se snídaní.` : '',
+  lok ? `Plus ${pocetText(lok.podniky.length, 'ověřený brunch', 'ověřené brunche', 'ověřených brunchů')}.` : 'Otevírací doba, kontakty a mapa.',
+]
+  .filter(Boolean)
+  .join(' ')
+  .slice(0, 158);
+const NA_STRANKU = 30;
+const body = s.map((k) => [k.lat, k.lon, k.nazev, kavarnaUrl(k), adresaKavarny(k), 2]);
+---
+
+<Base title={title} description={description} noindex={!indexovatMesto(m)}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Kavárny', url: '/kavarny/' }, { nazev: m.nazev }]} />
+      <h1>Kavárny {m.nazev}</h1>
+      <p class="lead">{vety.join(' ')}</p>
+      <p class="muted mala">Tyhle kavárny jsme zatím osobně neověřili – údaje pochází z OpenStreetMap a z webů kaváren.</p>
+    </div>
+  </header>
+
+  {
+    lok && lok.podniky.length > 0 && (
+      <section class="section section--blush">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Ověřený brunch: {m.nazev}</h2>
+            <a class="btn btn--ghost" href={lokalitaUrl(lok)}>Všechny ({lok.podniky.length})</a>
+          </div>
+          <ul class="karty">{lok.podniky.slice(0, 4).map((p) => <Karta p={p} />)}</ul>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="wrap">
+      <div class="kf" data-kf>
+        <input type="search" placeholder="Hledat kavárnu nebo ulici" aria-label="Hledat kavárnu" data-kf-q />
+        <button type="button" class="tag" data-kf-f="open">Otevřeno teď</button>
+        {snidane > 0 && <button type="button" class="tag" data-kf-f="snidane">🍳 Snídaně</button>}
+        {zahradka > 0 && <button type="button" class="tag" data-kf-f="zahradka">🌿 Zahrádka</button>}
+        {psi > 0 && <button type="button" class="tag" data-kf-f="psi">🐶 Se psem</button>}
+        {wifi > 0 && <button type="button" class="tag" data-kf-f="wifi">Wi-Fi</button>}
+      </div>
+      <ul class="kk-mrizka" data-kf-seznam>
+        {s.map((k, i) => <KavarnaKarta k={k} skryta={i >= NA_STRANKU} />)}
+      </ul>
+      <p class="kf-vice"><button type="button" class="btn btn--ghost" data-kf-vice hidden={n <= NA_STRANKU}>Načíst další</button></p>
+      <p class="muted" data-kf-nic hidden>Nic neodpovídá filtru.</p>
+    </div>
+  </section>
+
+  <section class="section section--blush">
+    <div class="wrap">
+      <h2>Mapa kaváren: {m.nazev}</h2>
+      <Mapa podniky={lok?.podniky ?? []} body={body} popis={`Mapa kaváren ${m.nazev}`} />
+      <p class="muted mala">Barevné body jsou ověřené brunch podniky, šedé neověřené kavárny.</p>
+    </div>
+  </section>
+</Base>
+
+<script>
+  import { aplikujStav } from '../../../scripts/stav';
+  aplikujStav();
+  const sez = document.querySelector<HTMLElement>('[data-kf-seznam]')!;
+  const karty = [...sez.querySelectorAll<HTMLElement>('[data-kk]')];
+  const q = document.querySelector<HTMLInputElement>('[data-kf-q]')!;
+  const vice = document.querySelector<HTMLButtonElement>('[data-kf-vice]')!;
+  const nic = document.querySelector<HTMLElement>('[data-kf-nic]')!;
+  const aktivni = new Set<string>();
+  let limit = 30;
+  const norm = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const vykresli = () => {
+    const h = norm(q.value.trim());
+    const ok = karty.filter(
+      (k) =>
+        (!h || k.dataset.hledat!.includes(h)) &&
+        [...aktivni].every((f) => (f === 'open' ? k.querySelector('[data-oh]')?.getAttribute('data-open') === '1' : k.dataset[f] === '1')),
+    );
+    const sada = new Set(ok.slice(0, limit));
+    karty.forEach((k) => (k.hidden = !sada.has(k)));
+    vice.hidden = ok.length <= limit;
+    nic.hidden = ok.length > 0;
+  };
+  q.addEventListener('input', () => {
+    limit = 30;
+    vykresli();
+  });
+  document.querySelectorAll<HTMLButtonElement>('[data-kf-f]').forEach((b) =>
+    b.addEventListener('click', () => {
+      const f = b.dataset.kfF!;
+      aktivni.has(f) ? aktivni.delete(f) : aktivni.add(f);
+      b.classList.toggle('tag--aktivni', aktivni.has(f));
+      limit = 30;
+      vykresli();
+    }),
+  );
+  vice.addEventListener('click', () => {
+    limit += 30;
+    vykresli();
+  });
+</script>
+
+<style>
+  .kf {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 0 0 1.25rem;
+    align-items: center;
+  }
+  .kf input {
+    flex: 1 1 16rem;
+    font: inherit;
+    font-size: 16px;
+    padding: 0.6em 1em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+  .kf .tag {
+    cursor: pointer;
+    border: 1px solid var(--line);
+    background: #fff;
+    font: inherit;
+    font-size: 0.85rem;
+  }
+  .kf :global(.tag--aktivni) {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+  .kf-vice [hidden] {
+    display: none;
+  }
+  .kf-vice {
+    text-align: center;
+    margin: 1.5rem 0 0;
+  }
+  .mala {
+    font-size: 0.85rem;
+  }
+</style>

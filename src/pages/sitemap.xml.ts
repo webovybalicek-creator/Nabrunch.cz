@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { SITE } from '../lib/config';
 import { PODNIKY, url, lokality, lokalitaUrl, TEMATA, temaUrl } from '../lib/data';
+import { KAVARNY, mestaKavaren, indexovatMesto, indexovatKavarnu, kavarnaUrl, mestoKavarenUrl } from '../lib/kavarny';
 import { clanky, clanekUrl, KATEGORIE, kategorieUrl } from '../lib/blog';
 
 const den = (d: string | Date) => new Date(d).toISOString().slice(0, 10);
@@ -21,6 +22,12 @@ export const GET: APIRoute = async () => {
     { loc: '/blog/', lastmod: vse[0] ? den(vse[0].data.date) : undefined },
     ...KATEGORIE.map((k) => ({ loc: kategorieUrl(k) })),
     ...vse.map((c) => ({ loc: clanekUrl(c), lastmod: den(c.data.date) })),
+    // Neověřené kavárny: jen zveřejněné a s dost údaji
+    ...(KAVARNY.length ? [{ loc: '/kavarny/' }] : []),
+    ...mestaKavaren()
+      .filter(indexovatMesto)
+      .map((m) => ({ loc: mestoKavarenUrl(m.slug), lastmod: den(m.kavarny.reduce((x, k) => (k.zverejnit! > x ? k.zverejnit! : x), '2026-01-01')) })),
+    ...KAVARNY.filter(indexovatKavarnu).map((k) => ({ loc: kavarnaUrl(k), lastmod: den(k.zverejnit!) })),
     ...['/o-nas/', '/kontakt/', '/pridat-podnik/', '/casto-kladene-dotazy/', '/obchodni-podminky/', '/ochrana-osobnich-udaju/'].map((loc) => ({ loc })),
   ];
   const body =

@@ -6,6 +6,8 @@ import Mapa from '../Mapa.astro';
 import BlogKarta from '../BlogKarta.astro';
 import { lokalitaUrl, vLokalite, podnikuText, lokality, TEMATA, temaUrl, type Lokalita } from '../../lib/data';
 import { clanky } from '../../lib/blog';
+import KavarnaKarta from '../KavarnaKarta.astro';
+import { kavarnyLokality, mestoKavarenUrl } from '../../lib/kavarny';
 
 interface Props {
   l: Lokalita;
@@ -26,6 +28,8 @@ const clankyMesta = (await clanky())
 const temata = TEMATA.filter((t) => t.hodnota !== 'Klasická')
   .map((t) => ({ t, n: l.podniky.filter((p) => p[t.pole].includes(t.hodnota)).length }))
   .filter((x) => x.n > 0);
+const kavarny = kavarnyLokality(l.nazev);
+const mestoKav = kavarny[0]?.mestoSlug;
 const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde}${srdcovky ? `, z toho ${srdcovky} naše srdcovky` : ''}. Adresy, otevírací doba, mapa a naše tipy, co si dát.`;
 ---
 
@@ -82,6 +86,21 @@ const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde
       }
     </div>
   </section>
+
+  {
+    kavarny.length > 0 && (
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Další kavárny {kde}</h2>
+            {mestoKav && <a class="btn btn--ghost" href={mestoKavarenUrl(mestoKav)}>Všechny kavárny ({kavarny.length})</a>}
+          </div>
+          <p class="muted">Tyhle kavárny jsme zatím osobně neověřili – údaje pochází z OpenStreetMap. Pro jistotu si otevírací dobu ověřte.</p>
+          <ul class="kk-mrizka">{kavarny.slice(0, 9).map((k) => <KavarnaKarta k={k} />)}</ul>
+        </div>
+      </section>
+    )
+  }
 
   {
     clankyMesta.length > 0 && (

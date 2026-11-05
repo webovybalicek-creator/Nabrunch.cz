@@ -19,7 +19,7 @@
   type Mesto = [string, string, number, string]; // název, url, počet, nadřazená
   type Podnik = [string, string, string, string, string]; // název, url, místo, náhled, hledaný text
   type Tema = [string, string, number, string, string]; // název, url, počet, emoji, hledaný text
-  type Index = { m: Mesto[]; s: Podnik[]; t: Tema[] };
+  type Index = { m: Mesto[]; s: Podnik[]; t: Tema[]; c?: [string, string, number][]; k?: [string, string, string][] };
 
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const esc = (s: string) => s.replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
@@ -30,7 +30,7 @@
 
   function vyhledej(q: string, idx: Index) {
     const t = norm(q).split(/\s+/).filter(Boolean);
-    if (!t.length) return { mesta: [], podniky: [], temata: [] };
+    if (!t.length) return { mesta: [], podniky: [], temata: [], kavarny: [] };
     const shoda = (txt: string) => {
       const n = norm(txt);
       return t.every((w) => n.includes(w));
@@ -45,7 +45,17 @@
       .sort((a, b) => Number(zacina(b[0])) - Number(zacina(a[0])))
       .slice(0, 7);
     const temata = idx.t.filter((x) => shoda(`${x[0]} ${x[4]}`)).slice(0, 3);
-    return { mesta, podniky, temata };
+    // Neověřené kavárny: města s kavárnami (jen ta, která nejsou mezi lokalitami) a jednotlivé kavárny
+    const jmenaMest = new Set(mesta.map((m) => norm(m[0])));
+    const mestaKav = (idx.c ?? [])
+      .filter((c) => shoda(c[0]) && !jmenaMest.has(norm(c[0])))
+      .sort((a, b) => Number(norm(b[0]).startsWith(t[0])) - Number(norm(a[0]).startsWith(t[0])) || b[2] - a[2])
+      .slice(0, 3);
+    const kav = (idx.k ?? [])
+      .filter((k) => shoda(`${k[0]} ${k[2]}`))
+      .sort((a, b) => Number(zacina(b[0])) - Number(zacina(a[0])))
+      .slice(0, podniky.length ? 4 : 7);
+    return { mesta, podniky, temata, kavarny: [...mestaKav.map((c) => [`Kavárny ${c[0]}`, c[1], `${c[2]} ${c[2] === 1 ? 'kavárna' : c[2] <= 4 ? 'kavárny' : 'kaváren'}`]), ...kav] };
   }
 
   document.querySelectorAll<HTMLFormElement>('[data-hledani]').forEach((form) => {
@@ -62,8 +72,8 @@
       }
       const idx = await nacti();
       if (my !== token) return;
-      const { mesta, podniky, temata } = vyhledej(q, idx);
-      if (!mesta.length && !podniky.length && !temata.length) {
+      const { mesta, podniky, temata, kavarny } = vyhledej(q, idx);
+      if (!mesta.length && !podniky.length && !temata.length && !kavarny.length) {
         box.innerHTML = `<p class="srch__empty">Pro „${esc(q)}“ jsme nic nenašli. Zkus jiný název, ulici nebo jen město.</p><a class="srch__vse" href="/podniky/">Zobrazit všechny podniky →</a>`;
       } else {
         box.innerHTML =
@@ -81,6 +91,10 @@
                     `<a role="option" class="srch__podnik" href="${s[1]}"><span class="srch__th"><img src="${s[3]}" alt="" loading="lazy" onload="this.classList.add('ok')" onerror="this.remove()"></span><span class="srch__txt"><span>${esc(s[0])}</span><small>${esc(s[2])}</small></span></a>`,
                 )
                 .join('')
+            : '') +
+          (kavarny.length
+            ? `<p class="srch__h">Kavárny <small>(neověřené)</small></p>` +
+              kavarny.map((k) => `<a role="option" href="${k[1]}"><span>☕ ${esc(String(k[0]))}</span><small>${esc(String(k[2]))}</small></a>`).join('')
             : '') +
           (temata.length
             ? `<p class="srch__h">Podle chuti</p>` +

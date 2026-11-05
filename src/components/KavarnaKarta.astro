@@ -1,0 +1,115 @@
+---
+// Karta neověřené kavárny z OpenStreetMap (bez fotky – jen grafický zástupce)
+import { kavarnaUrl, nabizi, tydenKavarny, type Kavarna } from '../lib/kavarny';
+
+interface Props {
+  k: Kavarna;
+  skryta?: boolean;
+  km?: string;
+}
+const { k, skryta = false, km } = Astro.props;
+const n = nabizi(k);
+const t = tydenKavarny(k);
+const PALETA = [
+  ['#fff1e9', '#ce693f'],
+  ['#f6efe9', '#935035'],
+  ['#eef4ea', '#618b4c'],
+  ['#fff5f4', '#ce693f'],
+  ['#f3ece6', '#532a19'],
+];
+let h = 0;
+for (const ch of k.id) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+const [bg, fg] = PALETA[h % PALETA.length];
+const tagy = [
+  n.brunch ? '🥞 Brunch' : n.snidane ? '🍳 Snídaně' : '',
+  n.vyberovaKava ? 'Výběrová káva' : '',
+  k.vlastnosti.zahradka ? '🌿 Zahrádka' : '',
+  k.vlastnosti.psi ? '🐶 Se psem' : '',
+  k.vlastnosti.wifi ? 'Wi-Fi' : '',
+].filter(Boolean).slice(0, 3);
+const hledat = `${k.nazev} ${k.ulice ?? ''} ${k.mesto} ${k.obvod ?? ''} ${k.ctvrt ?? ''}`.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+---
+
+<li class="kk" hidden={skryta} data-kk data-hledat={hledat} data-snidane={n.snidane || n.brunch ? '1' : ''} data-zahradka={k.vlastnosti.zahradka ? '1' : ''} data-psi={k.vlastnosti.psi ? '1' : ''} data-wifi={k.vlastnosti.wifi ? '1' : ''}>
+  <a href={kavarnaUrl(k)}>
+    <span class="kk__viz" style={`--bg:${bg};--fg:${fg}`} aria-hidden="true">☕</span>
+    <span class="kk__txt">
+      <span class="kk__nazev">{k.nazev}</span>
+      <span class="kk__adr">{[k.ulice, k.obvod ?? k.mesto].filter(Boolean).join(', ')}{km && ` · ${km}`}</span>
+      {t && <span class="kk__stav" data-oh={JSON.stringify(t)}><span class="stav"></span></span>}
+      {tagy.length > 0 && <span class="kk__tagy">{tagy.map((x) => <span class="tag">{x}</span>)}</span>}
+    </span>
+  </a>
+</li>
+
+<script>
+  import { aplikujStav } from '../scripts/stav';
+  aplikujStav();
+</script>
+
+<style>
+  .kk[hidden] {
+    display: none;
+  }
+  .kk a {
+    display: flex;
+    gap: 0.9rem;
+    align-items: flex-start;
+    padding: 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    height: 100%;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .kk a:hover {
+    border-color: var(--accent);
+    box-shadow: 0 6px 20px rgb(83 42 25 / 0.08);
+  }
+  .kk__viz {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 14px;
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 1.5rem;
+  }
+  .kk__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+  }
+  .kk__nazev {
+    font: 600 1rem/1.3 var(--f-display);
+  }
+  .kk__adr {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .kk__stav {
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+  .kk__stav :global([data-stav='open']) {
+    color: var(--green);
+  }
+  .kk__stav :global([data-stav='closed']) {
+    color: var(--ink-soft);
+  }
+  .kk__tagy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.2rem;
+  }
+  .kk__tagy .tag {
+    font-size: 0.72rem;
+    padding: 0.15em 0.6em;
+  }
+</style>

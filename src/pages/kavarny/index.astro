@@ -1,0 +1,90 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import Mapa from '../../components/Mapa.astro';
+import { PODNIKY, pocetText } from '../../lib/data';
+import { KAVARNY, mestaKavaren, mestoKavarenUrl } from '../../lib/kavarny';
+
+const mesta = mestaKavaren();
+const velka = mesta.filter((m) => m.kavarny.length >= 3);
+const mala = mesta.filter((m) => m.kavarny.length < 3);
+const kav = (x: number) => pocetText(x, 'kavárna', 'kavárny', 'kaváren');
+---
+
+<Base
+  title="Kavárny v Česku podle měst – otevírací doba a mapa"
+  description={`☕ ${kav(KAVARNY.length)} v ${pocetText(mesta.length, 'obci', 'obcích', 'obcích')} ČR na jednom místě. Kdo má otevřeno teď, kde je zahrádka nebo wifi – a ${PODNIKY.length} ověřených brunchů.`}
+>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Kavárny' }]} />
+      <h1>Kavárny podle měst</h1>
+      <p class="lead">
+        Kromě {PODNIKY.length} brunchových podniků, které jsme ověřili osobně, tu najdeš i {kav(KAVARNY.length)} z OpenStreetMap. U nich jsme zatím
+        nebyli – proto mají štítek „Neověřeno“. Přibývají postupně.
+      </p>
+    </div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <ul class="km">
+        {velka.map((m) => (
+          <li>
+            <a href={mestoKavarenUrl(m.slug)}>
+              {m.nazev} <span class="muted">{m.kavarny.length}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      {
+        mala.length > 0 && (
+          <details class="km-mala">
+            <summary>Další obce ({mala.length})</summary>
+            <ul class="km">
+              {mala.map((m) => (
+                <li>
+                  <a href={mestoKavarenUrl(m.slug)}>{m.nazev}</a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        )
+      }
+    </div>
+  </section>
+  <section class="section section--blush">
+    <div class="wrap">
+      <h2>Mapa</h2>
+      <Mapa podniky={PODNIKY} kavarny popis="Mapa brunch podniků a kaváren" />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .km {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 4 12rem;
+    column-gap: 2rem;
+  }
+  .km li {
+    break-inside: avoid;
+    padding: 0.25rem 0;
+  }
+  .km a {
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .km a:hover {
+    color: var(--accent-deep);
+  }
+  .km-mala {
+    margin-top: 1.5rem;
+  }
+  .km-mala summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+</style>
