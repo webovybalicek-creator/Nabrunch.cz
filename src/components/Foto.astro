@@ -14,6 +14,8 @@ const { src, alt, plna = false, eager = false, class: trida } = Astro.props;
 const prvni = plna ? velky(src) : nahled(src);
 ---
 
+<picture class="foto-p">
+<source type="image/avif" srcset={prvni.replace(/\.webp$/, '.avif')} />
 <img
   class:list={['foto', trida]}
   src={prvni}
@@ -22,10 +24,14 @@ const prvni = plna ? velky(src) : nahled(src);
   decoding="async"
   fetchpriority={eager ? 'high' : undefined}
   data-original={plna ? undefined : velky(src)}
-  onerror="if(this.dataset.original&&this.src.indexOf(this.dataset.original)<0){this.src=this.dataset.original}else{this.onerror=null;this.classList.add('foto--chyba')}"
+  onerror="var s=this.parentNode.querySelector('source');if(s){s.remove();this.src=this.src;return}if(this.dataset.original&&this.src.indexOf(this.dataset.original)<0){this.src=this.dataset.original}else{this.onerror=null;this.classList.add('foto--chyba')}"
 />
+</picture>
 
 <style>
+  .foto-p {
+    display: contents;
+  }
   .foto {
     width: 100%;
     height: 100%;

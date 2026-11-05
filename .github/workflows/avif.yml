@@ -1,0 +1,39 @@
+name: AVIF obrázky
+
+# Po přidání nových WebP fotek vytvoří jejich AVIF verze (menší, web je načítá přednostně) a commitne je.
+on:
+  push:
+    branches: [main]
+    paths: ['public/obrazky/**.webp', 'public/nahledy/**.webp']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: avif
+  cancel-in-progress: false
+
+jobs:
+  avif:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install "pillow>=11.3"
+      - run: python scripts/avif.py
+      - name: Commit a nasazení
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add public/obrazky public/nahledy
+          if git diff --cached --quiet; then echo "Žádné nové AVIF"; exit 0; fi
+          git commit -m "AVIF verze obrázků ($(git diff --cached --name-only | wc -l) souborů)"
+          git push
+          gh workflow run deploy.yml --ref main

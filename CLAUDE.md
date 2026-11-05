@@ -57,6 +57,8 @@ V datech jsou obrázky uložené pod cestou `/wp-content/uploads/RRRR/MM/nazev.j
 ve dvou velikostech, ulož do obou složek pod stejnou cestou a v datech uveď odpovídající cestu
 `/wp-content/uploads/RRRR/MM/nazev.jpg` (přípona v datech nevadí, převádí se na `.webp`).
 Na převod lze použít Python s Pillow (viz `scripts/stahni-obrazky.py`, funkce `uloz`).
+AVIF verze (`.avif` vedle každého `.webp`, web je načítá přednostně přes `<picture>`) vytvoří po pushi sám workflow
+**AVIF obrázky** (`scripts/avif.py`), ručně je dělat není potřeba.
 Názvy souborů bez mezer a diakritiky.
 
 ## Články blogu

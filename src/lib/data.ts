@@ -52,7 +52,9 @@ export const nahled = (cesta: string) => cesta.replace(/^\/wp-content\/uploads\/
 export const velky = (cesta: string) => cesta.replace(/^\/wp-content\/uploads\//, '/obrazky/').replace(PRIPONA, '.webp');
 /** HTML z WordPressu: odkazy na obrázky v /wp-content/uploads/ → WebP v /obrazky/ */
 export const obrazkyVHtml = (html: string) =>
-  html.replace(/\/wp-content\/uploads\/([^"'\s)]+?)\.(jpe?g|png|webp|gif)(?=["'\s)])/gi, '/obrazky/$1.webp');
+  html.replace(/\/wp-content\/uploads\/([^"'\s)]+?)\.(jpe?g|png|webp|gif)(?=["'\s)])/gi, '/obrazky/$1.webp')
+    // <img> s WebP → <picture> s AVIF (menší) a WebP jako zálohou
+    .replace(/<img\b([^>]*?)\ssrc="(\/obrazky\/[^"]+)\.webp"([^>]*)>/gi, '<picture><source type="image/avif" srcset="$2.avif"><img$1 src="$2.webp"$3></picture>');
 
 // ---------------------------------------------------------------- lokality
 export interface Lokalita {
