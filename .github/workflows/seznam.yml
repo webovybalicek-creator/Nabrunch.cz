@@ -1,0 +1,43 @@
+name: Seznam Webmaster
+
+# Denně: přehled indexace v Seznamu (výsledek v souhrnu běhu) a žádost o reindexaci nových URL ze sitemapy
+# (max. 450 denně). Skript: scripts/seznam.mjs, klíč: secret SEZNAM_WMT_API_KEY.
+on:
+  schedule:
+    - cron: '17 16 * * *'
+  workflow_dispatch:
+    inputs:
+      reindex:
+        description: 'Odeslat nové URL k reindexaci'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seznam
+  cancel-in-progress: false
+
+jobs:
+  seznam:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache/restore@v4
+        with:
+          path: .seznam
+          key: seznam-${{ github.run_id }}
+          restore-keys: seznam-
+      - name: Seznam Webmaster API
+        env:
+          SEZNAM_WMT_API_KEY: ${{ secrets.SEZNAM_WMT_API_KEY }}
+          SITE_HOST: ${{ vars.SITE_HOST || 'nabrunch.cz' }}
+          REINDEX: ${{ github.event_name == 'schedule' || inputs.reindex }}
+        run: node scripts/seznam.mjs
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .seznam
+          key: seznam-${{ github.run_id }}

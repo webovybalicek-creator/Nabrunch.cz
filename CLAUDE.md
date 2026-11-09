@@ -147,3 +147,6 @@ Na detailu kavárny je „Jste majitel? Upravte údaje zdarma“ (`/api/kavarna.
 - **Import kaváren** – obnoví data neověřených kaváren z OpenStreetMap (spouštět ručně, cca 1× za čtvrtletí).
 - **Publikace kaváren** – běží sám 2× denně, ručně jen pro okamžité zveřejnění.
 - **Synchronizace kaváren** – každé 3 hodiny přenese úpravy majitelů na web, ručně pro okamžité zveřejnění.
+- **Seznam Webmaster** – denně vypíše do souhrnu běhu stav indexace v Seznamu a pošle nové URL ze sitemapy
+  k reindexaci (max. 450/den, odeslané si pamatuje v cache). Klíč v secretu `SEZNAM_WMT_API_KEY` (musí mít právo zápisu).
+  Ověření webu: `public/seznam-wmt-….txt` a meta `seznam-wmt` v `src/layouts/Base.astro` – nemazat.
