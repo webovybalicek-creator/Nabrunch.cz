@@ -1,6 +1,7 @@
 import podnikyRaw from '../data/podniky.json';
 import lokalitySlugy from '../data/lokality.json';
 import { slugify } from './slug';
+import { parseCesky, type Tyden } from './oteviraci-doba';
 
 export interface Podnik {
   id: number;
@@ -41,6 +42,13 @@ export interface Podnik {
 // Názvy jako na WordPressu (wptexturize: rovný apostrof → ’)
 export const PODNIKY = (podnikyRaw as Podnik[]).map((p) => ({ ...p, nazev: p.nazev.replace(/'/g, '’') }));
 export const url = (p: Podnik) => `/podniky/${p.slug}/`;
+
+/** Otevírací doba jako týden (null, když ji z textu nejde spolehlivě převést) */
+const tydenCache = new Map<number, Tyden | null>();
+export const tydenPodniku = (p: Podnik) => {
+  if (!tydenCache.has(p.id)) tydenCache.set(p.id, parseCesky(p.oteviraciDoba));
+  return tydenCache.get(p.id)!;
+};
 
 // ---------------------------------------------------------------- obrázky
 // Obrázky z WordPressu jsou v datech pod původní cestou /wp-content/uploads/…;

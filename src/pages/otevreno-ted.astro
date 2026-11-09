@@ -1,0 +1,536 @@
+---
+// „Kam teď na snídani?“ – nejbližší místa, která mají právě otevřeno.
+// Poloha se zjišťuje jen v prohlížeči a nikam se neodesílá; data se načtou z /otevreno.json.
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { PODNIKY, url, mesto, mesta, tydenPodniku, lokalitaUrl, lokalitaSlug, podnikuText, type Podnik } from '../lib/data';
+import { KAVARNY, tydenKavarny, mestaKavaren } from '../lib/kavarny';
+import { hhmm, type Tyden } from '../lib/oteviraci-doba';
+
+const sDobou = PODNIKY.filter((p) => tydenPodniku(p));
+const kavarenSDobou = KAVARNY.filter((k) => tydenKavarny(k)).length;
+
+// Kdy podnik otevírá (interval od 0:00 je jen pokračování předchozí noci)
+const otevira = (t: Tyden, dny: number[]) => {
+  const casy = dny.flatMap((d) => t[d].filter(([a]) => a > 0).map(([a]) => a));
+  return casy.length ? Math.min(...casy) : null;
+};
+const zebricek = (dny: number[], max: number) =>
+  sDobou
+    .map((p) => ({ p, od: otevira(tydenPodniku(p)!, dny) }))
+    .filter((x): x is { p: Podnik; od: number } => x.od != null && x.od <= max)
+    .sort((a, b) => a.od - b.od || a.p.nazev.localeCompare(b.p.nazev, 'cs'))
+    .slice(0, 10);
+const vsedni = zebricek([0, 1, 2, 3, 4], 8 * 60);
+const nedele = zebricek([6], 9 * 60);
+
+// Města pro výběr bez polohy: střed podle ověřených podniků, doplněný o větší města z kaváren
+const bodyMest = new Map<string, { nazev: string; lat: number; lon: number; n: number }>();
+for (const m of mesta()) {
+  const b = m.podniky.filter((p) => p.lat != null);
+  if (!b.length) continue;
+  bodyMest.set(lokalitaSlug(m.nazev), {
+    nazev: m.nazev,
+    lat: b.reduce((s, p) => s + p.lat!, 0) / b.length,
+    lon: b.reduce((s, p) => s + p.lon!, 0) / b.length,
+    n: b.length,
+  });
+}
+for (const m of mestaKavaren()) {
+  const b = m.kavarny.filter((k) => tydenKavarny(k));
+  if (b.length < 5 || bodyMest.has(m.slug)) continue;
+  bodyMest.set(m.slug, {
+    nazev: m.nazev,
+    lat: b.reduce((s, k) => s + k.lat, 0) / b.length,
+    lon: b.reduce((s, k) => s + k.lon, 0) / b.length,
+    n: b.length,
+  });
+}
+const vyberMest = [...bodyMest.entries()]
+  .map(([slug, m]) => ({ slug, ...m }))
+  .sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs'));
+const topMesta = mesta()
+  .filter((m) => m.podniky.length >= 3)
+  .sort((a, b) => b.podniky.length - a.podniky.length)
+  .slice(0, 6);
+---
+
+<Base
+  title="Otevřeno teď: kam na snídani a brunch v okolí"
+  description={`Kde mají právě teď otevřeno? Najdi nejbližší snídaňová místa, brunche a kavárny podle své polohy – ${podnikuText(sDobou.length)} ověřených naBrunchem a další kavárny po celém Česku.`}
+>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb polozky={[{ nazev: 'Otevřeno teď' }]} />
+      <h1>Kam teď na snídani?</h1>
+      <p class="lead">Ukážeme ti nejbližší místa na snídani, brunch nebo kávu, která mají <strong>právě teď otevřeno</strong>. Stačí jedno klepnutí.</p>
+    </div>
+  </header>
+
+  <section class="section ted" data-ted data-mesta={JSON.stringify(vyberMest.map((m) => [m.slug, m.nazev, m.lat, m.lon]))}>
+    <div class="wrap">
+      <div class="ted__ovladani">
+        <button type="button" class="btn btn--akcent ted__poloha" data-ted-poloha>📍 Najít otevřené u mě</button>
+        <label class="ted__mesto">
+          <span class="sr-only">Nebo vyber město</span>
+          <select data-ted-mesto>
+            <option value="">…nebo vyber město</option>
+            {vyberMest.map((m) => <option value={m.slug}>{m.nazev}</option>)}
+          </select>
+        </label>
+      </div>
+      <div class="ted__prepinace">
+        <label class="ted__chip"><input type="checkbox" data-ted-otevreno checked /> <span>Jen otevřené teď</span></label>
+        <label class="ted__chip"><input type="checkbox" data-ted-kavarny checked /> <span>I neověřené kavárny</span></label>
+        <label class="ted__chip"><input type="checkbox" data-ted-snidane /> <span>🍳 Jen se snídaní</span></label>
+      </div>
+      <p class="ted__info" data-ted-info aria-live="polite">
+        Poloha zůstane jen v tvém prohlížeči, nikam ji neposíláme.
+      </p>
+
+      <div class="ted__vysledky" data-ted-vysledky hidden>
+        <ul class="ted__seznam" data-ted-seznam></ul>
+        <p class="ted__vice"><button type="button" class="btn btn--ghost" data-ted-vice hidden>Ukázat další</button></p>
+        <div class="ted__mapa" data-ted-mapa role="region" aria-label="Mapa otevřených míst v okolí"></div>
+        <p class="muted ted__pozn">
+          Stav počítáme z otevírací doby v naší databázi a podle času v Česku. Svátky a mimořádné zavření neznáme – když jdeš na jistotu, zavolej.
+          Šedé „Neověřeno“ jsou kavárny z OpenStreetMap, ve kterých jsme ještě nebyli.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--blush">
+    <div class="wrap ted__staticke">
+      <div>
+        <h2>Nejdřív ráno otevírají</h2>
+        <p class="muted">Ověřené podniky, kde se dá ve všední den nasnídat nejdřív.</p>
+        <ol class="ted__zeb">
+          {vsedni.map(({ p, od }) => (
+            <li>
+              <a href={url(p)}>{p.nazev}</a> <span class="muted">· {mesto(p)}</span>
+              <span class="ted__cas">od {hhmm(od)}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div>
+        <h2>Snídaně v neděli ráno</h2>
+        <p class="muted">Kde mají v neděli otevřeno nejpozději od devíti.</p>
+        <ol class="ted__zeb">
+          {nedele.map(({ p, od }) => (
+            <li>
+              <a href={url(p)}>{p.nazev}</a> <span class="muted">· {mesto(p)}</span>
+              <span class="ted__cas">od {hhmm(od)}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap ted__text">
+      <h2>Jak to funguje</h2>
+      <p>
+        U {podnikuText(sDobou.length)}, které jsme osobně navštívili, a u dalších {kavarenSDobou.toLocaleString('cs-CZ')} kaváren známe otevírací dobu.
+        Když nám povolíš polohu, seřadíme je od nejbližšího a ukážeme jen ta, kde mají zrovna otevřeno, i s tím, do kdy. Bez polohy si vyber město.
+      </p>
+      <p>Hledáš spíš podle města? Mrkni na nejoblíbenější lokality:</p>
+      <ul class="ted__mesta">
+        {topMesta.map((m) => <li><a class="tag" href={lokalitaUrl(m)}>{m.nazev}</a></li>)}
+        <li><a class="tag" href="/mapa/">🗺️ Mapa podniků</a></li>
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<script>
+  import 'leaflet/dist/leaflet.css';
+  import { stav } from '../scripts/stav';
+
+  type Misto = [number, number, string, string, string, number, [number, number][][], string, number];
+  type Mesto = [string, string, number, number];
+
+  const root = document.querySelector<HTMLElement>('[data-ted]')!;
+  const mesta = JSON.parse(root.dataset.mesta!) as Mesto[];
+  const $ = <T extends HTMLElement>(s: string) => root.querySelector<T>(s)!;
+  const btnPoloha = $<HTMLButtonElement>('[data-ted-poloha]');
+  const selMesto = $<HTMLSelectElement>('[data-ted-mesto]');
+  const chOtevreno = $<HTMLInputElement>('[data-ted-otevreno]');
+  const chKavarny = $<HTMLInputElement>('[data-ted-kavarny]');
+  const chSnidane = $<HTMLInputElement>('[data-ted-snidane]');
+  const info = $('[data-ted-info]');
+  const vysledky = $('[data-ted-vysledky]');
+  const seznam = $<HTMLUListElement>('[data-ted-seznam]');
+  const vice = $<HTMLButtonElement>('[data-ted-vice]');
+  const mapaEl = $('[data-ted-mapa]');
+
+  const KROK = 12;
+  let limit = KROK;
+  let stred: [number, number] | null = null;
+  let odkud = '';
+  let data: Misto[] | null = null;
+  let nacitani: Promise<Misto[]> | null = null;
+  const nacti = () => (nacitani ??= fetch('/otevreno.json').then((r) => r.json() as Promise<Misto[]>).then((d) => (data = d)));
+
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
+  const km = (a: [number, number], b: [number, number]) => {
+    const r = Math.PI / 180;
+    const h = Math.sin(((b[0] - a[0]) * r) / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(((b[1] - a[1]) * r) / 2) ** 2;
+    return 12742 * Math.asin(Math.sqrt(h));
+  };
+  const kmText = (k: number) =>
+    k < 1 ? `${Math.max(50, Math.round((k * 1000) / 50) * 50)} m` : `${k.toLocaleString('cs-CZ', { maximumFractionDigits: k < 10 ? 1 : 0 })} km`;
+  const tvar = (n: number) => (n === 1 ? 'místo' : n >= 2 && n <= 4 ? 'místa' : 'míst');
+  const STITEK: Record<number, string> = { 1: '♥ Srdcovka', 0: '✓ Ověřeno naBrunchem', 2: 'Neověřeno', 3: 'Ověřeno majitelem' };
+
+  // Mapa (Leaflet se načte až při prvních výsledcích)
+  let L: any = null;
+  let mapa: any = null;
+  let vrstva: any = null;
+  async function kresliMapu(body: { m: Misto; open: boolean }[]) {
+    if (!body.length) return;
+    L ??= (await import('leaflet')).default;
+    if (!mapa) {
+      mapa = L.map(mapaEl, { scrollWheelZoom: false, preferCanvas: true });
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(mapa);
+      mapaEl.addEventListener('click', () => mapa.scrollWheelZoom.enable(), { once: true });
+    }
+    vrstva?.remove();
+    const znacky = body.map(({ m, open }) =>
+      L.circleMarker([m[0], m[1]], {
+        radius: m[5] === 2 ? 6 : 8,
+        color: '#fff',
+        weight: 2,
+        fillColor: !open ? '#b9aea8' : m[5] === 2 ? '#618b4c' : '#FF8E5F',
+        fillOpacity: 1,
+      }).bindPopup(`<a href="${m[3]}">${esc(m[2])}</a><br><small>${esc(m[4])}</small>`),
+    );
+    if (stred) znacky.push(L.circleMarker(stred, { radius: 7, color: '#fff', weight: 3, fillColor: '#2563eb', fillOpacity: 1 }).bindPopup(odkud));
+    vrstva = L.featureGroup(znacky).addTo(mapa);
+    mapa.fitBounds(vrstva.getBounds(), { padding: [28, 28], maxZoom: 15 });
+  }
+
+  function vykresli() {
+    if (!data || !stred) return;
+    const jenOtevrene = chOtevreno.checked;
+    const vse = data
+      .filter((m) => (chKavarny.checked || m[5] !== 2) && (!chSnidane.checked || m[8] === 1))
+      .map((m) => ({ m, d: km(stred!, [m[0], m[1]]), s: stav(m[6]) }))
+      .filter((x) => !jenOtevrene || x.s.open)
+      .sort((a, b) => a.d - b.d);
+    // Ověřené podniky naBrunche do 5 km jdou nahoru (max. 3), ať se neztratí mezi kavárnami z OSM
+    const tipy = vse.filter((x) => x.m[5] !== 2 && x.d <= 5).slice(0, 3);
+    const poradi = [...tipy, ...vse.filter((x) => !tipy.includes(x))];
+    const zobrazit = poradi.slice(0, limit);
+    seznam.innerHTML = zobrazit
+      .map(
+        ({ m, d, s }, i) => `<li class="tk${m[5] === 2 ? ' tk--kav' : ''}${i < tipy.length ? ' tk--tip' : ''}">
+          <a href="${m[3]}">
+            ${m[7] ? `<img class="tk__foto" src="${esc(m[7])}" alt="" loading="lazy" decoding="async" width="96" height="72">` : '<span class="tk__foto tk__foto--kav" aria-hidden="true">☕</span>'}
+            <span class="tk__txt">
+              <span class="tk__nazev">${esc(m[2])}</span>
+              <span class="tk__adr">${esc(m[4])}</span>
+              <span class="tk__stav" data-stav="${s.open ? 'open' : 'closed'}">${esc(s.text)}</span>
+              <span class="tk__stitek tk__stitek--${m[5]}">${STITEK[m[5]]}</span>
+            </span>
+            <span class="tk__km">${kmText(d)}</span>
+          </a>
+        </li>`,
+      )
+      .join('');
+    vice.hidden = vse.length <= limit;
+    vysledky.hidden = false;
+    const blizko = vse.filter((x) => x.d <= 3).length;
+    info.textContent = vse.length
+      ? `${odkud}: ${jenOtevrene ? 'teď má otevřeno' : 'nalezeno'} ${vse.length} ${tvar(vse.length)}${blizko ? `, z toho ${blizko} do 3 km` : ''}.`
+      : jenOtevrene
+        ? `${odkud}: teď bohužel nikde nemají otevřeno. Vypni „Jen otevřené teď“ a uvidíš, kdy kde otevírají.`
+        : `${odkud}: nic jsme nenašli.`;
+    kresliMapu(zobrazit.map(({ m, s }) => ({ m, open: s.open })));
+  }
+
+  async function nastav(bod: [number, number], popis: string) {
+    stred = bod;
+    odkud = popis;
+    limit = KROK;
+    info.textContent = 'Načítám místa…';
+    try {
+      await nacti();
+    } catch {
+      info.textContent = 'Data se nepodařilo načíst. Zkus stránku obnovit.';
+      return;
+    }
+    vykresli();
+  }
+
+  btnPoloha.addEventListener('click', () => {
+    if (!navigator.geolocation) {
+      info.textContent = 'Tvůj prohlížeč neumí zjistit polohu – vyber prosím město.';
+      return;
+    }
+    btnPoloha.disabled = true;
+    info.textContent = 'Zjišťuji polohu…';
+    nacti().catch(() => {});
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        btnPoloha.disabled = false;
+        selMesto.value = '';
+        const u = new URL(location.href);
+        u.searchParams.delete('mesto');
+        history.replaceState(null, '', u);
+        nastav([pos.coords.latitude, pos.coords.longitude], 'Ve tvém okolí');
+      },
+      () => {
+        btnPoloha.disabled = false;
+        info.textContent = 'Polohu se nepodařilo zjistit. Povol ji v prohlížeči, nebo vyber město.';
+      },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
+    );
+  });
+
+  const zvolMesto = (slug: string) => {
+    const m = mesta.find((x) => x[0] === slug);
+    if (!m) return;
+    nastav([m[2], m[3]], m[1]);
+  };
+  selMesto.addEventListener('change', () => {
+    const u = new URL(location.href);
+    if (selMesto.value) u.searchParams.set('mesto', selMesto.value);
+    else u.searchParams.delete('mesto');
+    history.replaceState(null, '', u);
+    zvolMesto(selMesto.value);
+  });
+  for (const ch of [chOtevreno, chKavarny, chSnidane])
+    ch.addEventListener('change', () => {
+      limit = KROK;
+      vykresli();
+    });
+  vice.addEventListener('click', () => {
+    limit += KROK;
+    vykresli();
+  });
+  // stav se mění s časem
+  setInterval(vykresli, 60_000);
+
+  // Odkaz s ?mesto=praha (např. ze stránky města)
+  const pMesto = new URLSearchParams(location.search).get('mesto');
+  if (pMesto && mesta.some((x) => x[0] === pMesto)) {
+    selMesto.value = pMesto;
+    zvolMesto(pMesto);
+  }
+</script>
+
+<style>
+  .ted {
+    padding-top: 1.5rem;
+  }
+  .ted__ovladani {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .ted__poloha {
+    font-size: 1.02rem;
+  }
+  .ted__poloha:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
+  .ted__mesto {
+    flex: 0 1 16rem;
+  }
+  .ted__mesto select {
+    width: 100%;
+    padding: 0.8em 1.1em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+  .ted__prepinace {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1rem 0 0;
+  }
+  .ted__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.4em 0.95em;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    font-size: 0.86rem;
+    cursor: pointer;
+  }
+  @media (max-width: 560px) {
+    .ted__chip {
+      font-size: 0.8rem;
+      padding: 0.35em 0.8em;
+    }
+    .ted__mesto {
+      flex: 1 1 100%;
+    }
+  }
+  .ted__chip input {
+    accent-color: var(--green);
+  }
+  .ted__info {
+    min-height: 1.4em;
+    margin: 1rem 0;
+    font-weight: 600;
+    color: var(--brown-dark);
+    max-width: none;
+  }
+  .ted__vysledky[hidden] {
+    display: none;
+  }
+  .ted__seznam {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+    gap: 0.75rem;
+  }
+  .ted__seznam :global(.tk a) {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    height: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .ted__seznam :global(.tk--tip a) {
+    border-color: var(--accent);
+    background: var(--blush);
+  }
+  .ted__seznam :global(.tk a:hover) {
+    border-color: var(--accent);
+    box-shadow: 0 6px 20px rgb(83 42 25 / 0.08);
+  }
+  .ted__seznam :global(.tk__foto) {
+    flex: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 12px;
+    object-fit: cover;
+    background: var(--cream);
+  }
+  .ted__seznam :global(.tk__foto--kav) {
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    background: var(--green-soft);
+  }
+  .ted__seznam :global(.tk__txt) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+    flex: 1;
+  }
+  .ted__seznam :global(.tk__nazev) {
+    font: 600 1rem/1.3 var(--f-display);
+  }
+  .ted__seznam :global(.tk__adr) {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+  .ted__seznam :global(.tk__stav) {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .ted__seznam :global(.tk__stav[data-stav='open']) {
+    color: var(--green);
+  }
+  .ted__seznam :global(.tk__stav[data-stav='closed']) {
+    color: var(--ink-soft);
+  }
+  .ted__seznam :global(.tk__stitek) {
+    align-self: flex-start;
+    margin-top: 0.15rem;
+    padding: 0.1em 0.6em;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: var(--blush);
+    color: var(--accent-deep);
+  }
+  .ted__seznam :global(.tk__stitek--2) {
+    background: #f3efe9;
+    color: var(--ink-soft);
+  }
+  .ted__seznam :global(.tk__km) {
+    flex: none;
+    font: 600 0.8rem/1.3 var(--f-display);
+    color: var(--brown-dark);
+    white-space: nowrap;
+  }
+  .ted__vice {
+    text-align: center;
+    margin: 1.25rem 0;
+    max-width: none;
+  }
+  .ted__vice [hidden] {
+    display: none;
+  }
+  .ted__mapa {
+    width: 100%;
+    height: min(60vh, 520px);
+    min-height: 300px;
+    margin-top: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--blush);
+    z-index: 0;
+  }
+  .ted__pozn {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    max-width: none;
+  }
+  .ted__staticke {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+    gap: 2rem 3rem;
+  }
+  .ted__zeb {
+    margin: 1rem 0 0;
+    padding-left: 1.4rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+  .ted__zeb li {
+    padding-right: 4.5rem;
+    position: relative;
+  }
+  .ted__cas {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: 600;
+    color: var(--green);
+  }
+  .ted__mesta {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+</style>

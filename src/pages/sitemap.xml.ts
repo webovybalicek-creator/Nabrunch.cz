@@ -13,6 +13,7 @@ export const GET: APIRoute = async () => {
     { loc: '/', lastmod: posledni },
     { loc: '/podniky/', lastmod: posledni },
     { loc: '/mapa/', lastmod: posledni },
+    { loc: '/otevreno-ted/', lastmod: posledni },
     { loc: '/lokality/', lastmod: posledni },
     ...lokality().map((l) => ({ loc: lokalitaUrl(l), lastmod: posledni })),
     ...kombinace().map((k) => ({ loc: kombinaceUrl(k), lastmod: posledni })),

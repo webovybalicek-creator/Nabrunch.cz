@@ -75,3 +75,78 @@ export function schemaSpec(t: Tyden) {
     })),
   );
 }
+
+// ---------------------------------------------------------------------------
+// Otevírací doba ověřených podniků je volný český text („Po - Pá: 8:00 - 18:00“).
+// Převod do týdne; když si převod není jistý (sezónní doba, nesmyslný čas,
+// neznámý zápis), vrátí null a web stav „otevřeno / zavřeno“ nezobrazí.
+
+const DEN_KLIC: [RegExp, number][] = [
+  [/^po(ndělí)?\.?$/, 0],
+  [/^út(erý)?\.?$/, 1],
+  [/^st(ř|ředa)?\.?$/, 2],
+  [/^čt(v|vrtek)?\.?$/, 3],
+  [/^pá(tek)?\.?$/, 4],
+  [/^so(bota)?\.?$/, 5],
+  [/^ne(děle)?\.?$/, 6],
+];
+const den = (s: string) => DEN_KLIC.find(([re]) => re.test(s))?.[1];
+
+function minuty(s: string): number | null {
+  const m = /^(\d{1,2})(?::(\d{2}))?$/.exec(s);
+  if (!m) return null;
+  const h = Number(m[1]), min = Number(m[2] ?? 0);
+  if (h > 24 || min > 59 || (h === 24 && min > 0)) return null;
+  return h * 60 + min;
+}
+
+export function parseCesky(radky: string[]): Tyden | null {
+  if (!radky.length) return null;
+  const tyden: Tyden = [[], [], [], [], [], [], []];
+  const intervaly: [number, number, number][] = []; // [den, od, do] – do může přesáhnout 1440
+  let neco = false;
+  for (const surovy of radky) {
+    const r = surovy
+      .toLowerCase()
+      .replace(/\([^)]*\)/g, ' ') // poznámky v závorce
+      .replace(/[–—]/g, '-')
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (!r) continue;
+    const m = /^([a-zěščřžýáíéůú.]+)(?:\s*-\s*([a-zěščřžýáíéůú.]+))?\s*:?\s+(.+)$/.exec(r);
+    if (!m) return null;
+    const a = den(m[1]), b = m[2] ? den(m[2]) : a;
+    if (a == null || b == null) return null;
+    const dny: number[] = [];
+    for (let d = a; ; d = (d + 1) % 7) {
+      dny.push(d);
+      if (d === b || dny.length > 7) break;
+    }
+    // pozdější řádek přepisuje dřívější („Út - Ne: 9–18, Čtv: 9–17“)
+    for (const d of dny) for (let i = intervaly.length - 1; i >= 0; i--) if (intervaly[i][0] === d) intervaly.splice(i, 1);
+    const cas = m[3].replace(/\.$/, '').trim();
+    if (/^zavřeno$/.test(cas)) {
+      neco = true;
+      continue;
+    }
+    for (const usek of cas.split(/\s*,\s*/)) {
+      // „14:00/15:00 nebo do vyprodání“ → bereme dřívější čas
+      const t = /^(\d{1,2}(?::\d{2})?)\s*-\s*(\d{1,2}(?::\d{2})?)(?:\/\d{1,2}(?::\d{2})?)?(?:\s+nebo do vyprodání)?$/.exec(usek);
+      if (!t) return null;
+      const od = minuty(t[1]);
+      let doo = minuty(t[2]);
+      if (od == null || doo == null || od >= 1440) return null;
+      if (doo <= od) doo += 1440; // přes půlnoc
+      if (doo - od > 1440) return null;
+      for (const d of dny) intervaly.push([d, od, doo]);
+    }
+    neco = true;
+  }
+  if (!neco) return null;
+  for (const [d, od, doo] of intervaly) {
+    tyden[d].push([od, Math.min(doo, 1440)]);
+    if (doo > 1440) tyden[(d + 1) % 7].push([0, doo - 1440]);
+  }
+  for (const d of tyden) d.sort((x, y) => x[0] - y[0]);
+  return tyden.some((d) => d.length) ? tyden : null;
+}

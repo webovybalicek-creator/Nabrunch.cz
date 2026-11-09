@@ -70,6 +70,7 @@ const jsonLd = {
         <div class="hero__hledat"><Hledani /></div>
         <ul class="hero__mesta" aria-label="Oblíbená města">
           {topMesta.slice(0, 6).map((m) => <li><a class="tag" href={lokalitaUrl(m)}>{m.nazev}</a></li>)}
+          <li><a class="tag" href="/otevreno-ted/">🕘 Otevřeno teď</a></li>
           <li><a class="tag" href="/mapa/">🗺️ Mapa podniků</a></li>
         </ul>
       </div>

@@ -31,6 +31,9 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
           <button type="button" class="vypis__okoli" data-okoli aria-pressed="false">
             <span aria-hidden="true">📍</span> V mém okolí
           </button>
+          <button type="button" class="vypis__okoli vypis__ted" data-ted aria-pressed="false">
+            <span class="vypis__tecka" aria-hidden="true"></span> Otevřeno teď
+          </button>
           {filtrMesta && pouzitaMesta.length > 1 && (
             <label class="vypis__mesto">
               <span class="sr-only">Město</span>
@@ -80,9 +83,11 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
 </div>
 
 <script>
+  import { aplikujStav } from '../scripts/stav';
   const bezDiakritiky = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
   document.querySelectorAll<HTMLElement>('[data-vypis]').forEach((root) => {
+    aplikujStav(root);
     const form = root.querySelector<HTMLFormElement>('[data-filtry]');
     const karty = [...root.querySelectorAll<HTMLElement>('[data-karta]')];
     const dalsi = root.querySelector<HTMLButtonElement>('[data-dalsi]')!;
@@ -94,6 +99,9 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
     const puvodni = [...karty];
     const okoliBtn = root.querySelector<HTMLButtonElement>('[data-okoli]');
     let poloha: [number, number] | null = null;
+    const tedBtn = root.querySelector<HTMLButtonElement>('[data-ted]');
+    let jenOtevrene = false;
+    const otevrena = (k: HTMLElement) => k.querySelector<HTMLElement>('[data-oh]')?.dataset.open === '1';
 
     const tvar = (n: number) => (n === 1 ? 'podnik' : n >= 2 && n <= 4 ? 'podniky' : 'podniků');
 
@@ -109,8 +117,9 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
 
     function vykresli(zapsat = true) {
       const f = hodnoty();
-      const aktivni = !!(f.q || f.mesto || f.kuchyne.length || f.atmosfera.length);
+      const aktivni = !!(f.q || f.mesto || f.kuchyne.length || f.atmosfera.length || jenOtevrene);
       const shoda = karty.filter((k) => {
+        if (jenOtevrene && !otevrena(k)) return false;
         if (f.q && !f.q.split(/\s+/).every((w) => k.dataset.hledat!.includes(w))) return false;
         if (f.mesto && !k.dataset.lokality!.split(' ').includes(f.mesto)) return false;
         const ku = k.dataset.kuchyne!.split('|');
@@ -125,13 +134,14 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
       dalsi.hidden = shoda.length <= limit;
       prazdno.hidden = shoda.length > 0;
       pocet.textContent = aktivni
-        ? `Nalezeno ${shoda.length} ${tvar(shoda.length)}${poloha ? ', od nejbližšího' : ''}`
+        ? `${jenOtevrene ? 'Teď má otevřeno' : 'Nalezeno'} ${shoda.length} ${tvar(shoda.length)}${poloha ? ', od nejbližšího' : ''}`
         : poloha
           ? 'Seřazeno od nejbližšího k tobě'
           : '';
       if (zapsat && form) {
         const u = new URL(location.href);
-        for (const k of ['q', 'mesto', 'kuchyne', 'atmosfera']) u.searchParams.delete(k);
+        for (const k of ['q', 'mesto', 'kuchyne', 'atmosfera', 'otevreno']) u.searchParams.delete(k);
+        if (jenOtevrene) u.searchParams.set('otevreno', '1');
         if (f.q) u.searchParams.set('q', String(new FormData(form).get('q')).trim());
         if (f.mesto) u.searchParams.set('mesto', f.mesto);
         f.kuchyne.forEach((x) => u.searchParams.append('kuchyne', x));
@@ -217,6 +227,20 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
       );
     });
 
+    // „Otevřeno teď“: jen podniky, které mají podle otevírací doby právě otevřeno (čas v Praze)
+    tedBtn?.addEventListener('click', () => {
+      jenOtevrene = !jenOtevrene;
+      tedBtn.setAttribute('aria-pressed', String(jenOtevrene));
+      limit = krok;
+      vykresli();
+    });
+    if (new URLSearchParams(location.search).get('otevreno') === '1' && tedBtn) {
+      jenOtevrene = true;
+      tedBtn.setAttribute('aria-pressed', 'true');
+    }
+    // stav „otevřeno“ se mění s časem – při zapnutém filtru výpis průběžně přepočítat
+    setInterval(() => jenOtevrene && vykresli(false), 60_000);
+
     // Odkaz „V mém okolí“ z hledání na úvodu (/podniky/?okoli=1)
     if (new URLSearchParams(location.search).get('okoli') === '1') okoliBtn?.click();
 
@@ -262,7 +286,21 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
   .vypis__okoli:hover {
     border-color: var(--accent);
   }
-  .vypis__okoli[aria-pressed='true'] {
+  .vypis__tecka {
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    background: var(--green);
+  }
+  .vypis__ted[aria-pressed='true'] {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+  .vypis__ted[aria-pressed='true'] .vypis__tecka {
+    background: #fff;
+  }
+  .vypis__okoli:not(.vypis__ted)[aria-pressed='true'] {
     background: var(--accent);
     border-color: var(--accent);
     color: #fff;

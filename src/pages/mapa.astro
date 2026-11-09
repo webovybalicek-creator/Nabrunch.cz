@@ -11,7 +11,10 @@ import { PODNIKY, podnikuText } from '../lib/data';
       <Breadcrumb polozky={[{ nazev: 'Mapa podniků' }]} />
       <h1>Mapa podniků</h1>
       <p class="lead">Všechna naše brunchová místa na jedné mapě. Tmavší body jsou naše srdcovky.</p>
-      <p><button type="button" class="btn btn--ghost" data-poloha>📍 Ukázat podniky u mě</button></p>
+      <p class="mapa-akce">
+        <button type="button" class="btn btn--ghost" data-poloha>📍 Ukázat podniky u mě</button>
+        <a class="btn btn--akcent" href="/otevreno-ted/">🕘 Kde mají otevřeno teď</a>
+      </p>
     </div>
   </header>
   <section class="section">
@@ -40,3 +43,11 @@ import { PODNIKY, podnikuText } from '../lib/data';
     );
   });
 </script>
+
+<style>
+  .mapa-akce {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+</style>

@@ -24,7 +24,9 @@ import {
   obrazkyVHtml,
   type Podnik,
   altFoto,
+  tydenPodniku,
 } from '../../lib/data';
+import { schemaSpec } from '../../lib/oteviraci-doba';
 import { clanky, clankyOPodniku } from '../../lib/blog';
 
 export function getStaticPaths() {
@@ -39,6 +41,7 @@ const okoli = vOkoli(p, 4);
 const oPodniku = clankyOPodniku(await clanky(), p).slice(0, 3);
 const temata = TEMATA.filter((t) => p[t.pole].includes(t.hodnota) && t.hodnota !== 'Klasická');
 const fotky = [p.foto, ...p.galerie];
+const tyden = tydenPodniku(p);
 
 const textPopisu = p.popis.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 const description =
@@ -69,6 +72,7 @@ const jsonLd = {
   ...(p.lat != null ? { geo: { '@type': 'GeoCoordinates', latitude: p.lat, longitude: p.lon } } : {}),
   ...(p.telefon ? { telephone: p.telefon } : {}),
   ...(p.web ? { sameAs: [p.web, p.instagramUrl].filter(Boolean) } : {}),
+  ...(tyden ? { openingHoursSpecification: schemaSpec(tyden) } : {}),
   servesCuisine: p.kuchyne,
   acceptsReservations: !!p.rezervace && !/^ne\b/i.test(p.rezervace),
 };
@@ -159,6 +163,7 @@ const jsonLd = {
             p.oteviraciDoba.length > 0 && (
               <section>
                 <h2>Otevírací doba</h2>
+                {tyden && <p class="info__stav" data-oh={JSON.stringify(tyden)}><span class="stav"></span></p>}
                 <ul class="info__doba">{p.oteviraciDoba.map((r) => <li>{r}</li>)}</ul>
               </section>
             )
@@ -256,6 +261,8 @@ const jsonLd = {
 </Base>
 
 <script>
+  import { aplikujStav } from '../../scripts/stav';
+  aplikujStav();
   const dlg = document.querySelector<HTMLDialogElement>('[data-lightbox]');
   const img = document.querySelector<HTMLImageElement>('[data-lb-img]');
   const fotky = JSON.parse(document.querySelector('[data-fotky]')?.textContent ?? '[]') as string[];
@@ -489,6 +496,18 @@ const jsonLd = {
   .info h2 {
     font-size: 1.05rem;
     margin-bottom: 0.75rem;
+  }
+  .info__stav {
+    margin: -0.35rem 0 0.6rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-height: 1.4em;
+  }
+  .info__stav :global([data-stav='open']) {
+    color: var(--green);
+  }
+  .info__stav :global([data-stav='closed']) {
+    color: var(--accent-deep);
   }
   .info__doba {
     list-style: none;

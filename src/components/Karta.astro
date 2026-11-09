@@ -1,7 +1,7 @@
 ---
 import Foto from './Foto.astro';
 import Srdce from './Srdce.astro';
-import { url, mesto, lokalitaSlug, type Podnik, altFoto } from '../lib/data';
+import { url, mesto, lokalitaSlug, tydenPodniku, type Podnik, altFoto } from '../lib/data';
 
 interface Props {
   p: Podnik;
@@ -9,6 +9,7 @@ interface Props {
   skryta?: boolean;
 }
 const { p, skryta = false } = Astro.props;
+const tyden = tydenPodniku(p);
 const lok = new Set(p.lokality);
 if (p.lokality.some((l) => /^Praha \d+$/.test(l))) lok.add('Praha');
 const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
@@ -36,6 +37,7 @@ const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
     </div>
     <h3 class="karta__nazev">{p.nazev}</h3>
     <p class="karta__adr">{p.adresa || mesto(p)}</p>
+    {tyden && <p class="karta__stav" data-oh={JSON.stringify(tyden)}><span class="stav"></span></p>}
     <span class="hod-mini" data-hod-id={p.id}><span class="hv" style="--p:0%"></span><span class="hod-mini__nic">Zatím bez hodnocení</span></span>
     <span class="karta__km" data-km hidden></span>
     {
@@ -48,6 +50,13 @@ const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
     }
   </a>
 </li>
+
+<script>
+  import { aplikujStav } from '../scripts/stav';
+  aplikujStav();
+  // stav se během dne mění – obnovit každou minutu
+  setInterval(() => aplikujStav(), 60_000);
+</script>
 
 <style>
   .karta {
@@ -96,6 +105,29 @@ const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
     margin: 0;
     font-size: 0.84rem;
     color: var(--ink-soft);
+  }
+  .karta__stav {
+    margin: 0.15rem 0 0;
+    min-height: 1.3em;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .karta__stav :global([data-stav='open']) {
+    color: var(--green);
+  }
+  .karta__stav :global([data-stav='open'])::before {
+    content: '';
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    margin-right: 0.4em;
+    border-radius: 50%;
+    background: currentColor;
+    vertical-align: 0.08em;
+  }
+  .karta__stav :global([data-stav='closed']) {
+    color: var(--ink-soft);
+    font-weight: 500;
   }
   .karta__km {
     position: absolute;
