@@ -110,7 +110,7 @@
   "lat": 50.0890127,
   "lon": 14.3967808,
   "oteviraciDoba": [
-   "po - ne: 8:00 - 18:00"
+   "Po - Ne: 9:00 - 19:00"
   ],
   "web": "https://mysak.prazskyhrad.ambi.cz/",
   "instagram": "@cukrarna.mysak",
@@ -625,11 +625,7 @@
   "lat": 50.0879384,
   "lon": 14.4193325,
   "oteviraciDoba": [
-   "po - út: 10:30 - 22:00",
-   "stř: 10:30 - 23:00",
-   "čtv: 10:30 - 24:00",
-   "pá - so: 10:30 - 01:00",
-   "neděle: 10:30 - 22:00"
+   "Po - Ne: 10:00 - 24:00"
   ],
   "web": "https://www.kafkoff.cz/",
   "instagram": "@kafkoff_prague",
@@ -935,8 +931,10 @@
   "lat": 49.9920813,
   "lon": 14.6552133,
   "oteviraciDoba": [
-   "po - so: 9:00 - 19:00",
-   "ne: zavřeno"
+   "Po - Čt: 9:00 - 19:00",
+   "Pá: 9:00 - 23:00",
+   "So: 9:00 - 19:00",
+   "Ne: zavřeno"
   ],
   "web": "https://www.spotricany.cz/",
   "instagram": "@spot_ricany",
@@ -1042,13 +1040,9 @@
   "lat": 50.0722519,
   "lon": 14.4066715,
   "oteviraciDoba": [
-   "pondělí 11-22",
-   "úterý 11-23",
-   "středa 11-23",
-   "čtvrtek 11-23",
-   "pátek 8-23",
-   "sobota 9-23",
-   "neděle 9-22"
+   "Po: 11:00 - 22:00",
+   "Út - So: 11:00 - 23:00",
+   "Ne: 11:00 - 22:00"
   ],
   "web": "https://dimsumspot.cz/andel.html",
   "instagram": "@dimsumspotandel",
@@ -1154,12 +1148,9 @@
   "lat": 50.0820519,
   "lon": 14.4132308,
   "oteviraciDoba": [
-   "po: 9:00 - 21:00",
-   "út: 9:00 - 20:00",
-   "stř - čtv: 9:00 - 21:00",
-   "pá: 9:00 - 22:00",
-   "so: 9:00 - 22:00",
-   "ne: 9:00 - 20:00"
+   "Po - Čt: 9:00 - 21:00",
+   "Pá - So: 9:00 - 22:00",
+   "Ne: 9:00 - 20:00"
   ],
   "web": "https://smetanaq.cz/#cafe-bistro",
   "instagram": "@smetanaq_cafe",
@@ -1212,7 +1203,7 @@
   "lat": 49.1941105,
   "lon": 16.6108279,
   "oteviraciDoba": [
-   "po - ne: 8:00 - 20:00"
+   "Po - Ne: 7:30 - 18:00"
   ],
   "web": "https://cafeplaczek.cz/",
   "instagram": "@cafeplaczek",
@@ -1316,11 +1307,10 @@
   "lat": 49.7476166,
   "lon": 13.375358,
   "oteviraciDoba": [
-   "po - út: 8:00 - 21:00",
-   "stř - čtv: 8:00 - 22:00",
-   "pá: 8:00 - 24:00",
-   "so: 9:00 - 24:00",
-   "ne: 9:00 - 20:00"
+   "Po - Čt: 8:00 - 17:00",
+   "Pá: 8:00 - 22:00",
+   "So: 10:00 - 22:00",
+   "Ne: 8:00 - 17:00"
   ],
   "web": "https://www.cavino.cz",
   "instagram": "@cavino_plzen",
@@ -1639,9 +1629,9 @@
   "lat": 50.0696877,
   "lon": 14.456697,
   "oteviraciDoba": [
-   "Po - Pá: 7:00 - 20:00",
-   "So: 8:00 - 20:00",
-   "Ne: 8:00 - 15:00"
+   "Po - Pá: 7:00 - 18:30",
+   "So: 8:00 - 18:30",
+   "Ne: 8:00 - 17:30"
   ],
   "web": "https://cafesestava.cz/",
   "instagram": "@sestava_vrsovice",
@@ -1691,8 +1681,8 @@
   "lat": 50.0442581,
   "lon": 14.4495313,
   "oteviraciDoba": [
-   "Po - Čtv: 7:00 - 18:00",
-   "Pá: 7:00 - 16:00",
+   "Po - Čt: 7:00 - 18:00",
+   "Pá: 7:00 - 15:00",
    "So - Ne: zavřeno"
   ],
   "web": "https://www.bistrob.cz/",
@@ -2382,10 +2372,10 @@
   "lat": 50.101011,
   "lon": 14.4182003,
   "oteviraciDoba": [
-   "Po - Út: zavřeno",
-   "Stř: 8:00 - 16:00",
-   "Čtv - So: 8:00 - 22:00",
-   "Ne: 8:00 - 16:00"
+   "Po: zavřeno",
+   "Út - Pá: 8:00 - 22:00",
+   "So: 9:00 - 22:00",
+   "Ne: 9:00 - 16:00"
   ],
   "web": "https://www.matildaprague.com/",
   "instagram": "@matildaprague",
@@ -2644,9 +2634,11 @@
   "lat": 49.5968576,
   "lon": 17.2614819,
   "oteviraciDoba": [
-   "Po - Čtv: 8:00 - 20:00",
-   "Pá - So: 8:00 - 21:00",
-   "Ne: 8:00 - 20:00"
+   "Po: zavřeno",
+   "Út - Čt: 8:00 - 19:00",
+   "Pá: 8:00 - 20:00",
+   "So: 9:00 - 20:00",
+   "Ne: 9:00 - 19:00"
   ],
   "web": "https://nmdesserts.cz",
   "instagram": "@nmdesserts",
@@ -2697,8 +2689,8 @@
   "lat": 49.9663724,
   "lon": 16.973032,
   "oteviraciDoba": [
-   "Po - Čtv: 9:00 - 21:00",
-   "Pá - So: 9:00 - 22:00",
+   "Po - Čt: 10:30 - 21:30",
+   "Pá - So: 10:30 - 22:30",
    "Ne: zavřeno"
   ],
   "web": "https://www.bistrojjsumperk.cz/",
@@ -2805,8 +2797,8 @@
   "lat": 50.0880202,
   "lon": 14.4299781,
   "oteviraciDoba": [
-   "Po - Pá: 8:30 - 22:00",
-   "So - Ne: 9:30 - 22:00"
+   "Po - Pá: 8:30 - 23:00",
+   "So - Ne: 9:30 - 23:00"
   ],
   "web": "https://cacaoprague.cz/",
   "instagram": "@cacaoprague",
@@ -2859,8 +2851,7 @@
   "lat": 50.6657142,
   "lon": 14.027281,
   "oteviraciDoba": [
-   "Po: zavřeno",
-   "Út - Pá: 8:00 - 19:00",
+   "Po - Pá: 8:00 - 19:00",
    "So - Ne: 9:00 - 19:00"
   ],
   "web": "https://kavarnacoffeeup.cz/",
@@ -3175,8 +3166,8 @@
   "lat": 50.0797838,
   "lon": 14.4467285,
   "oteviraciDoba": [
-   "Po - Stř: 7:30 - 19:00",
-   "Čtv - Ne: 8:30 - 19:00"
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: 8:30 - 18:00"
   ],
   "web": "https://tisse.cz/",
   "instagram": "@tissebakery",
@@ -3385,9 +3376,10 @@
   "lat": 50.1756411,
   "lon": 14.4128498,
   "oteviraciDoba": [
-   "Po: Zavřeno",
-   "Út - Ne: 9:00 - 18:00",
-   "Čtv: 9:00 - 17:00"
+   "Po: zavřeno",
+   "Út - St: 9:00 - 18:00",
+   "Čt: 9:00 - 21:00",
+   "Pá - Ne: 9:00 - 18:00"
   ],
   "web": "https://kavarnaklicka.cz/",
   "instagram": "@kavarna_klicka",
@@ -4681,8 +4673,8 @@
   "lat": 49.5958783,
   "lon": 17.2597084,
   "oteviraciDoba": [
-   "Po - Pá: 8:00 - 19:00",
-   "So - Ne: 9:00 - 17:00"
+   "Po - Pá: 7:30 - 19:00",
+   "So - Ne: 9:00 - 18:00"
   ],
   "web": "https://www.coffeelibrary.cz/",
   "instagram": "@coffee_library_bistro",
@@ -4851,7 +4843,7 @@
    "Po - Čt: 8:00 - 19:00",
    "Pá: 8:00 - 22:00",
    "So: 8:00 - 19:00",
-   "Ne: 9:00 - 19:00"
+   "Ne: 9:00 - 17:00"
   ],
   "web": "https://www.bistretto.cz/",
   "instagram": "@bistretto_liberec",
@@ -4907,8 +4899,8 @@
   "lat": 50.0913817,
   "lon": 14.4545739,
   "oteviraciDoba": [
-   "Po - Pá: 8:00 - 19:00",
-   "So - Ne: 9:00 - 19:00"
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: 9:00 - 18:00"
   ],
   "web": "https://www.eskakarlin.cz/",
   "instagram": "@eska_pekarna",
