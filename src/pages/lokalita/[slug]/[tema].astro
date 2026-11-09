@@ -1,0 +1,175 @@
+---
+// Lokalita × téma: „Veganské snídaně a brunche v Praze“ – /lokalita/praha/veganske-snidane-a-brunche/
+// Jen ověřené podniky; které kombinace vzniknou, určuje kombinace() v src/lib/data.ts.
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import Vypis from '../../../components/Vypis.astro';
+import Mapa from '../../../components/Mapa.astro';
+import { SITE } from '../../../lib/config';
+import {
+  kombinace,
+  kombinaceUrl,
+  kombinaceNadpis,
+  lokalitaUrl,
+  lokality,
+  temaUrl,
+  vLokalite,
+  podnikuText,
+  pocetText,
+  url,
+  TEMATA,
+  type Kombinace,
+} from '../../../lib/data';
+
+export function getStaticPaths() {
+  return kombinace().map((k) => ({ params: { slug: k.l.slug, tema: k.t.slug }, props: { k } }));
+}
+
+const { k } = Astro.props as { k: Kombinace };
+const { l, t, podniky } = k;
+const kde = vLokalite(l.nazev);
+const nadpis = kombinaceNadpis(k);
+const nadrazena = l.nadrazena ? lokality().find((x) => x.slug === l.nadrazena) : undefined;
+const srdcovky = podniky.filter((p) => p.doporuceny).length;
+
+// Fakta pro úvod – každá stránka má jiná čísla i jiné kombinace vlastností
+const obvody =
+  l.obvody?.length
+    ? l.obvody
+        .map((o) => ({ o, n: podniky.filter((p) => p.lokality.includes(o.nazev)).length }))
+        .filter((x) => x.n > 0)
+        .sort((a, b) => b.n - a.n)
+        .slice(0, 3)
+    : [];
+const PRIZNAK: Record<string, (n: number) => string> = {
+  Zahrádka: (n) => `${pocetText(n, 'má', 'mají', 'má')} zahrádku nebo terasu`,
+  'Pet-friendly': (n) => `${pocetText(n, 'je', 'jsou', 'je')} pet-friendly`,
+  Veganská: (n) => `${pocetText(n, 'nabízí', 'nabízejí', 'nabízí')} i veganská jídla`,
+  'Zdravá/fitness': (n) => `${pocetText(n, 'má', 'mají', 'má')} zdravou nebo fitness nabídku`,
+  Orientální: (n) => `${pocetText(n, 'vaří', 'vaří', 'vaří')} orientálně`,
+};
+const prekryvy = TEMATA.filter((x) => x.slug !== t.slug && PRIZNAK[x.hodnota])
+  .map((x) => ({ x, n: podniky.filter((p) => p[x.pole].includes(x.hodnota)).length }))
+  .filter((v) => v.n > 0)
+  .sort((a, b) => b.n - a.n)
+  .slice(0, 2)
+  .map((v) => PRIZNAK[v.x.hodnota](v.n));
+const fakta = [
+  srdcovky ? `${pocetText(srdcovky, 'podnik patří', 'podniky patří', 'podniků patří')} mezi naše srdcovky` : '',
+  ...prekryvy,
+].filter(Boolean);
+
+const dalsiTemata = kombinace().filter((x) => x.l.slug === l.slug && x.t.slug !== t.slug);
+const dalsiMista = kombinace().filter((x) => x.t.slug === t.slug && x.l.slug !== l.slug);
+
+const description = `${nadpis}: ${podnikuText(podniky.length)}, které jsme osobně ověřili. Adresy, otevírací doba, mapa a naše tipy, co si dát.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: nadpis,
+  numberOfItems: podniky.length,
+  itemListElement: podniky.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: new URL(url(p), SITE.url).href,
+    name: p.nazev,
+  })),
+};
+---
+
+<Base title={nadpis} description={description} jsonLd={jsonLd}>
+  <header class="page-head">
+    <div class="wrap">
+      <Breadcrumb
+        polozky={[
+          { nazev: 'Města', url: '/lokality/' },
+          ...(nadrazena ? [{ nazev: nadrazena.nazev, url: lokalitaUrl(nadrazena) }] : []),
+          { nazev: l.nazev, url: lokalitaUrl(l) },
+          { nazev: t.kratce },
+        ]}
+      />
+      <h1>{t.emoji} {nadpis}</h1>
+      <p class="lead">
+        {t.popis} {kde.charAt(0).toUpperCase() + kde.slice(1)} jsme vybrali {podnikuText(podniky.length)}.
+        {fakta.length > 0 && <>{' '}Z toho {fakta.join(', ')}.</>}
+      </p>
+      {
+        obvody.length > 1 && (
+          <p class="muted obvody-text">
+            Nejvíc jich najdeš {obvody.map((x) => `${vLokalite(x.o.nazev)} (${x.n})`).join(', ').replace(/, ([^,]*)$/, ' a $1')}.
+          </p>
+        )
+      }
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <Vypis podniky={podniky} filtry={false} filtrMesta={false} naStranku={24} />
+    </div>
+  </section>
+
+  <section class="section section--blush">
+    <div class="wrap">
+      <h2>{nadpis} na mapě</h2>
+      <Mapa podniky={podniky} popis={`Mapa: ${nadpis}`} />
+      <div class="odkazy">
+        <p>
+          <a class="tag" href={lokalitaUrl(l)}>Všechny podniky {kde} ({l.podniky.length})</a>
+          <a class="tag" href={temaUrl(t)}>{t.emoji} {t.kratce} v celé ČR</a>
+        </p>
+        {
+          dalsiTemata.length > 0 && (
+            <p>
+              <span class="odkazy__h">Další výběry {kde}:</span>
+              {dalsiTemata.map((x) => (
+                <a class="tag" href={kombinaceUrl(x)}>
+                  {x.t.emoji} {x.t.kratce} ({x.podniky.length})
+                </a>
+              ))}
+            </p>
+          )
+        }
+        {
+          dalsiMista.length > 0 && (
+            <p>
+              <span class="odkazy__h">{t.kratce} jinde:</span>
+              {dalsiMista.map((x) => (
+                <a class="tag" href={kombinaceUrl(x)}>
+                  {x.l.nazev} ({x.podniky.length})
+                </a>
+              ))}
+            </p>
+          )
+        }
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .obvody-text {
+    margin: 0.75rem 0 0;
+  }
+  .odkazy {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .odkazy p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    max-width: none;
+  }
+  .odkazy__h {
+    font-weight: 600;
+    margin-right: 0.25rem;
+  }
+  .odkazy .tag {
+    background: #fff;
+  }
+</style>

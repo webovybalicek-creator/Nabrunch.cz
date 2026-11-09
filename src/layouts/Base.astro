@@ -23,7 +23,9 @@ interface Props {
 const { title, jsonLd, noindex = false, obrazek, typ = 'website', publikovano } = Astro.props;
 // Stránky, které existovaly na WordPressu, si nechávají přesně stejný titulek (a popis, pokud byl) – kvůli pozicím ve vyhledávání
 const wp = (seoWp as Record<string, { t: string; d?: string }>)[decodeURI(Astro.url.pathname)];
-const description = wp?.d ?? Astro.props.description;
+const popisCely = (wp?.d ?? Astro.props.description).replace(/\s+/g, ' ').trim();
+// Google zobrazí cca 155–160 znaků; delší popis (např. první odstavec stránky) zkrátit na celé slovo
+const description = popisCely.length > 160 ? `${popisCely.slice(0, 155).replace(/[\s,;:–-]+\S*$/, '')}…` : popisCely;
 const og = new URL(velky(obrazek ?? '/wp-content/uploads/2025/03/nabrunch-1.jpg'), SITE.url).href;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
 const robots = !SITE.indexovat || noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large';

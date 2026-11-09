@@ -352,7 +352,9 @@ export function metaKavarny(k: Kavarna) {
   ].filter(Boolean) as string[];
   let d = '';
   for (const v of vety) if ((d ? `${d} ${v}` : v).length <= 158) d = d ? `${d} ${v}` : v;
-  const title = `${k.nazev} – kavárna ${k.obvod ?? k.mesto}${t ? ', otevírací doba' : ''}`;
+  // Pobočky se stejným názvem ve stejném městě by měly stejný titulek → přidat ulici
+  const pobocka = k.ulice && KAVARNY.some((x) => x !== k && x.nazev === k.nazev && x.mesto === k.mesto);
+  const title = `${k.nazev}${pobocka ? `, ${k.ulice}` : ''} – kavárna ${k.obvod ?? k.mesto}${t ? ', otevírací doba' : ''}`;
   return { title, description: d };
 }
 

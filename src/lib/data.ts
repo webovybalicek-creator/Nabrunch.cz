@@ -279,3 +279,35 @@ const LOKATIV: Record<string, string> = {
 };
 export const vLokalite = (nazev: string) =>
   LOKATIV[nazev] ?? (/^Praha \d+$/.test(nazev) ? `na ${nazev.replace('Praha', 'Praze')}` : `v lokalitě ${nazev}`);
+
+// ---------------------------------------------------------------- lokalita × téma
+// Stránky typu „Veganské snídaně a brunche v Praze“ (/lokalita/praha/veganske-snidane-a-brunche/).
+// Jen ověřené podniky a jen tam, kde má výběr smysl: aspoň 3 podniky a zároveň ne skoro všechny podniky lokality
+// (jinak by stránka jen kopírovala výpis lokality – tenký / duplicitní obsah).
+export interface Kombinace {
+  l: Lokalita;
+  t: Tema;
+  podniky: Podnik[];
+}
+const KOMBINACE_MIN = 3;
+const KOMBINACE_MAX_PODIL = 0.8;
+/** Hodnoty, které mají skoro všechny podniky – samostatná stránka by nic nepřinesla */
+const KOMBINACE_BEZ = ['Klasická', 'Vegetariánská'];
+
+let _komb: Kombinace[] | undefined;
+export function kombinace(): Kombinace[] {
+  if (_komb) return _komb;
+  _komb = [];
+  for (const l of lokality()) {
+    for (const t of TEMATA) {
+      if (KOMBINACE_BEZ.includes(t.hodnota)) continue;
+      const podniky = l.podniky.filter((p) => p[t.pole].includes(t.hodnota));
+      if (podniky.length >= KOMBINACE_MIN && podniky.length <= l.podniky.length * KOMBINACE_MAX_PODIL) _komb.push({ l, t, podniky });
+    }
+  }
+  return _komb;
+}
+export const kombinaceUrl = (k: Kombinace) => `${lokalitaUrl(k.l)}${k.t.slug}/`;
+export const kombinacePro = (l: Lokalita, t: Tema) => kombinace().find((k) => k.l.slug === l.slug && k.t.slug === t.slug);
+/** „Veganské snídaně a brunche v Praze“ */
+export const kombinaceNadpis = (k: Kombinace) => `${k.t.nadpis} ${vLokalite(k.l.nazev)}`;

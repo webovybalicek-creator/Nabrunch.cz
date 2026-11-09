@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { SITE } from '../lib/config';
-import { PODNIKY, url, lokality, lokalitaUrl, TEMATA, temaUrl } from '../lib/data';
+import { PODNIKY, url, lokality, lokalitaUrl, TEMATA, temaUrl, kombinace, kombinaceUrl } from '../lib/data';
 import { KAVARNY, mestaKavaren, indexovatMesto, indexovatKavarnu, kavarnaUrl, mestoKavarenUrl } from '../lib/kavarny';
 import { clanky, clanekUrl, KATEGORIE, kategorieUrl } from '../lib/blog';
 
@@ -15,6 +15,7 @@ export const GET: APIRoute = async () => {
     { loc: '/mapa/', lastmod: posledni },
     { loc: '/lokality/', lastmod: posledni },
     ...lokality().map((l) => ({ loc: lokalitaUrl(l), lastmod: posledni })),
+    ...kombinace().map((k) => ({ loc: kombinaceUrl(k), lastmod: posledni })),
     { loc: '/kategorie/doporucene-podniky/', lastmod: posledni },
     { loc: '/kategorie/nove-pridane/', lastmod: posledni },
     ...TEMATA.map((t) => ({ loc: temaUrl(t), lastmod: posledni })),

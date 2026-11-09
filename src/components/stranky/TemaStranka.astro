@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Breadcrumb from '../Breadcrumb.astro';
 import Vypis from '../Vypis.astro';
 import Mapa from '../Mapa.astro';
-import { podnikyTematu, podnikuText, TEMATA, temaUrl, type Tema } from '../../lib/data';
+import { podnikyTematu, podnikuText, TEMATA, temaUrl, kombinace, kombinaceUrl, type Tema } from '../../lib/data';
 
 interface Props {
   t: Tema;
@@ -11,6 +11,7 @@ interface Props {
 const { t } = Astro.props;
 const podniky = podnikyTematu(t);
 const dalsi = TEMATA.filter((x) => x.slug !== t.slug);
+const mista = kombinace().filter((k) => k.t.slug === t.slug);
 ---
 
 <Base title={`${t.nadpis} – kam vyrazit`} description={`${t.popis} Vybrali jsme ${podnikuText(podniky.length)} po celé ČR.`}>
@@ -30,6 +31,14 @@ const dalsi = TEMATA.filter((x) => x.slug !== t.slug);
     <div class="wrap">
       <h2>Na mapě</h2>
       <Mapa podniky={podniky} popis={`Mapa: ${t.nadpis}`} />
+      {
+        mista.length > 0 && (
+          <p class="dalsi">
+            <strong>Podle města:</strong>
+            {mista.map((k) => <a class="tag" href={kombinaceUrl(k)}>{k.l.nazev} ({k.podniky.length})</a>)}
+          </p>
+        )
+      }
       <p class="dalsi">
         {dalsi.map((x) => <a class="tag" href={temaUrl(x)}>{x.emoji} {x.kratce}</a>)}
       </p>
@@ -41,6 +50,7 @@ const dalsi = TEMATA.filter((x) => x.slug !== t.slug);
   .dalsi {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 0.45rem;
     margin: 1.5rem 0 0;
     max-width: none;

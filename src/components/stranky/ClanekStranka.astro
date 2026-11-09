@@ -22,7 +22,7 @@ const dalsi = souvis.slice(3);
 const popis = perex(c);
 const titulek = c.data.seoTitle?.replace(/\s*[-–|]\s*naBrunch\.cz\s*$/i, '') || c.data.title;
 // Obsah z WordPressu: první obrázek v textu nevykreslovat dvakrát, pokud je stejný jako úvodní
-let html = c.body ?? '';
+let html = (c.body ?? '').replace(/<h1(\s[^>]*)?>([\s\S]*?)<\/h1>/gi, '<h2$1>$2</h2>');
 if (c.data.image) {
   const zaklad = c.data.image.replace(/\.[a-z0-9]+$/i, '');
   html = html.replace(new RegExp(`^\\s*<figure[^>]*>\\s*<img[^>]*${zaklad.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^>]*>\\s*</figure>`), '');

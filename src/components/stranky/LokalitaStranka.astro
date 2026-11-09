@@ -4,7 +4,7 @@ import Breadcrumb from '../Breadcrumb.astro';
 import Vypis from '../Vypis.astro';
 import Mapa from '../Mapa.astro';
 import BlogKarta from '../BlogKarta.astro';
-import { lokalitaUrl, vLokalite, podnikuText, lokality, TEMATA, temaUrl, type Lokalita } from '../../lib/data';
+import { lokalitaUrl, vLokalite, podnikuText, pocetText, lokality, TEMATA, temaUrl, kombinacePro, kombinaceUrl, type Lokalita } from '../../lib/data';
 import { clanky } from '../../lib/blog';
 import KavarnaKarta from '../KavarnaKarta.astro';
 import { kavarnyLokality, mestoKavarenUrl } from '../../lib/kavarny';
@@ -30,10 +30,11 @@ const temata = TEMATA.filter((t) => t.hodnota !== 'Klasická')
   .filter((x) => x.n > 0);
 const kavarny = kavarnyLokality(l.nazev);
 const mestoKav = kavarny[0]?.mestoSlug;
-const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde}${srdcovky ? `, z toho ${srdcovky} naše srdcovky` : ''}. Adresy, otevírací doba, mapa a naše tipy, co si dát.`;
+const titulek = `Kam na brunch a snídani ${kde}${l.podniky.length >= 3 ? ` – ${l.podniky.length} ověřených míst` : ''}`;
+const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde}${srdcovky ? `, z toho ${pocetText(srdcovky, 'naše srdcovka', 'naše srdcovky', 'našich srdcovek')}` : ''}. Adresy, otevírací doba, mapa a naše tipy, co si dát.`;
 ---
 
-<Base title={`Kam na snídani a brunch ${kde}`} description={description}>
+<Base title={titulek} description={description}>
   <header class="page-head">
     <div class="wrap">
       <Breadcrumb
@@ -77,7 +78,7 @@ const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde
         temata.length > 0 && (
           <p class="temata">
             {temata.map(({ t, n }) => (
-              <a class="tag" href={temaUrl(t)}>
+              <a class="tag" href={kombinacePro(l, t) ? kombinaceUrl(kombinacePro(l, t)!) : temaUrl(t)}>
                 {t.emoji} {t.kratce} ({n})
               </a>
             ))}
