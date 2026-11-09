@@ -5,6 +5,7 @@ import Foto from '../../components/Foto.astro';
 import Karta from '../../components/Karta.astro';
 import Srdce from '../../components/Srdce.astro';
 import Hodnoceni from '../../components/Hodnoceni.astro';
+import { souhrnHodnoceni } from '../../lib/hodnoceni';
 import Mapa from '../../components/Mapa.astro';
 import BlogKarta from '../../components/BlogKarta.astro';
 import { SITE } from '../../lib/config';
@@ -22,6 +23,7 @@ import {
   velky,
   obrazkyVHtml,
   type Podnik,
+  altFoto,
 } from '../../lib/data';
 import { clanky, clankyOPodniku } from '../../lib/blog';
 
@@ -53,9 +55,13 @@ const parametry = [
   ['Sezení', [...new Set([...p.sezeni, ...p.atmosfera.filter((a) => a === 'Zahrádka' || a === 'Sezení uvnitř')].map((s) => (s === 'Sezení uvnitř' ? 'Uvnitř' : s)))].join(', ') || undefined],
 ].filter(([, v]) => v) as [string, string][];
 
+const hod = (await souhrnHodnoceni())[String(p.id)];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CafeOrCoffeeShop',
+  ...(hod && hod[1] > 0
+    ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: hod[0], ratingCount: hod[1], bestRating: 5, worstRating: 1 } }
+    : {}),
   name: p.nazev,
   url: new URL(url(p), SITE.url).href,
   image: fotky.slice(0, 4).map((f) => new URL(velky(f), SITE.url).href),
@@ -108,14 +114,14 @@ const jsonLd = {
         {
           fotky.slice(0, 5).map((f, i) => (
             <a href={velky(f)} class="galerie__f" data-i={i}>
-              <Foto src={f} alt={`${p.nazev} – fotka ${i + 1}`} plna={i === 0} eager={i === 0} />
+              <Foto src={f} alt={altFoto(p, i)} plna={i === 0} eager={i === 0} />
               {i === 4 && fotky.length > 5 && <span class="galerie__vic">+{fotky.length - 5}</span>}
             </a>
           ))
         }
       </div>
       <dialog class="lightbox" data-lightbox>
-        <img alt="" data-lb-img />
+        <img alt={altFoto(p)} data-lb-img data-alt={altFoto(p)} />
         <button type="button" class="lb-x" data-lb-zavrit aria-label="Zavřít">×</button>
         <button type="button" class="lb-sip lb-sip--l" data-lb-krok="-1" aria-label="Předchozí fotka">‹</button>
         <button type="button" class="lb-sip lb-sip--p" data-lb-krok="1" aria-label="Další fotka">›</button>
@@ -145,7 +151,7 @@ const jsonLd = {
               </p>
             )
           }
-          <Hodnoceni p={p} />
+          <Hodnoceni p={p} ldVHtml={!!(hod && hod[1] > 0)} />
         </div>
 
         <aside class="info">
@@ -231,7 +237,7 @@ const jsonLd = {
             <h2>Další brunch v okolí</h2>
             {lok && (
               <a class="btn btn--ghost" href={lokalitaUrl(praha ?? lok)}>
-                Vše {vLokalite((praha ?? lok).nazev)}
+                Brunch a snídaně {vLokalite((praha ?? lok).nazev)}
               </a>
             )}
           </div>
@@ -256,7 +262,10 @@ const jsonLd = {
   let i = 0;
   const ukaz = (n: number) => {
     i = (n + fotky.length) % fotky.length;
-    if (img) img.src = fotky[i];
+    if (img) {
+      img.src = fotky[i];
+      img.alt = `${img.dataset.alt ?? ''} (${i + 1}/${fotky.length})`;
+    }
   };
   document.querySelectorAll<HTMLAnchorElement>('[data-galerie] a').forEach((a) =>
     a.addEventListener('click', (e) => {

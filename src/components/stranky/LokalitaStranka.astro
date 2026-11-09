@@ -7,7 +7,7 @@ import BlogKarta from '../BlogKarta.astro';
 import { lokalitaUrl, vLokalite, podnikuText, pocetText, lokality, TEMATA, temaUrl, kombinacePro, kombinaceUrl, type Lokalita } from '../../lib/data';
 import { clanky } from '../../lib/blog';
 import KavarnaKarta from '../KavarnaKarta.astro';
-import { kavarnyLokality, mestoKavarenUrl } from '../../lib/kavarny';
+import { kavarnyLokality, mestoKavarenUrl, nabizi } from '../../lib/kavarny';
 
 interface Props {
   l: Lokalita;
@@ -28,9 +28,14 @@ const clankyMesta = (await clanky())
 const temata = TEMATA.filter((t) => t.hodnota !== 'Klasická')
   .map((t) => ({ t, n: l.podniky.filter((p) => p[t.pole].includes(t.hodnota)).length }))
   .filter((x) => x.n > 0);
-const kavarny = kavarnyLokality(l.nazev);
+// Neověřené kavárny: napřed ty, které podle webu nabízí snídani nebo brunch
+const kavarny = [...kavarnyLokality(l.nazev)].sort((a, b) => {
+  const s = (k: typeof a) => (nabizi(k).brunch ? 2 : 0) + (nabizi(k).snidane ? 1 : 0);
+  return s(b) - s(a);
+});
+const seSnidani = kavarny.filter((k) => nabizi(k).snidane || nabizi(k).brunch).length;
 const mestoKav = kavarny[0]?.mestoSlug;
-const titulek = `Kam na brunch a snídani ${kde}${l.podniky.length >= 3 ? ` – ${l.podniky.length} ověřených míst` : ''}`;
+const titulek = `Kam na brunch a snídani ${kde}${l.podniky.length >= 3 ? ` – ${pocetText(l.podniky.length, 'ověřené místo', 'ověřená místa', 'ověřených míst')}` : ''}`;
 const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde}${srdcovky ? `, z toho ${pocetText(srdcovky, 'naše srdcovka', 'naše srdcovky', 'našich srdcovek')}` : ''}. Adresy, otevírací doba, mapa a naše tipy, co si dát.`;
 ---
 
@@ -46,7 +51,13 @@ const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde
       />
       <h1>Snídaně a brunch {kde}</h1>
       <p class="lead">
-        {podnikuText(l.podniky.length)}, které jsme vybrali {kde}. Filtruj podle kuchyně nebo atmosféry a najdi si svůj brunch.
+        {podnikuText(l.podniky.length)}, {l.podniky.length === 1 ? 'který' : 'které'} jsme vybrali {kde}. Filtruj podle kuchyně nebo atmosféry a najdi si svůj brunch.
+        {kavarny.length > 0 && (
+          <>
+            {' '}Navíc tu najdeš {pocetText(kavarny.length, 'další kavárnu', 'další kavárny', 'dalších kaváren')}
+            {seSnidani > 0 && <>, z toho {seSnidani} se snídaní nebo brunchem</>}.
+          </>
+        )}
       </p>
       {
         l.obvody && l.obvody.length > 0 && (
@@ -97,7 +108,7 @@ const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde
             {mestoKav && <a class="btn btn--ghost" href={mestoKavarenUrl(mestoKav)}>Všechny kavárny ({kavarny.length})</a>}
           </div>
           <p class="muted">Tyhle kavárny jsme zatím osobně neověřili – údaje pochází z OpenStreetMap. Pro jistotu si otevírací dobu ověřte.</p>
-          <ul class="kk-mrizka">{kavarny.slice(0, 9).map((k) => <KavarnaKarta k={k} />)}</ul>
+          <ul class="kk-mrizka">{kavarny.slice(0, 12).map((k) => <KavarnaKarta k={k} />)}</ul>
         </div>
       </section>
     )

@@ -1,7 +1,7 @@
 ---
 import Foto from './Foto.astro';
 import Srdce from './Srdce.astro';
-import { url, mesto, lokalitaSlug, type Podnik } from '../lib/data';
+import { url, mesto, lokalitaSlug, type Podnik, altFoto } from '../lib/data';
 
 interface Props {
   p: Podnik;
@@ -31,7 +31,7 @@ const hledat = `${p.nazev} ${p.adresa} ${p.lokality.join(' ')}`
   <Srdce p={p} />
   <a href={url(p)}>
     <div class="karta__foto">
-      <Foto src={p.foto} alt={p.nazev} />
+      <Foto src={p.foto} alt={altFoto(p)} />
       {p.doporuceny && <span class="karta__srdcovka">♥ Naše srdcovka</span>}
     </div>
     <h3 class="karta__nazev">{p.nazev}</h3>

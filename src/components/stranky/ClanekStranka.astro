@@ -5,7 +5,7 @@ import Foto from '../Foto.astro';
 import Karta from '../Karta.astro';
 import BlogKarta from '../BlogKarta.astro';
 import { SITE } from '../../lib/config';
-import { velky, obrazkyVHtml } from '../../lib/data';
+import { velky, obrazkyVHtml, PODNIKY, altFoto } from '../../lib/data';
 import { slugify } from '../../lib/slug';
 import { nazev, clanky, clanekUrl, kategorie, kategorieUrl, casCteni, datumText, perex, souvisejici, zminenePodniky, type Clanek } from '../../lib/blog';
 
@@ -42,6 +42,22 @@ html = html.replace(/<h2([^>]*)>([\s\S]*?)<\/h2>/gi, (_, attrs: string, vnitrek:
   return `<h2${attrs.replace(/\sid="[^"]*"/, '')} id="${id}">${vnitrek}</h2>`;
 });
 const ctete = souvis.slice(0, 3);
+
+// Obrázky z WordPressu mají prázdný alt: doplnit podnik, na který obrázek odkazuje, jinak nejbližší nadpis nebo titulek článku
+{
+  let posledni = nazev(c);
+  let cislo = 0;
+  html = html.replace(/<h2[^>]*>([\s\S]*?)<\/h2>|(<a [^>]*href="\/podniky\/([^"/]+)\/?"[^>]*>\s*)?<img\b([^>]*?)\salt=""/gi, (cele, h2, odkaz, slug, pred) => {
+    if (h2 !== undefined) {
+      const t = h2.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/👉🏼|\d+\.\s/g, '').replace(/\s+/g, ' ').trim();
+      if (t) posledni = t;
+      return cele;
+    }
+    const podnik = slug ? PODNIKY.find((x) => x.slug === slug) : undefined;
+    const alt = podnik ? altFoto(podnik) : `${posledni}${++cislo > 1 ? ` – foto ${cislo}` : ''}`;
+    return `${odkaz ?? ''}<img${pred} alt="${alt.replace(/"/g, '&quot;')}"`;
+  });
+}
 
 const jsonLd = {
   '@context': 'https://schema.org',

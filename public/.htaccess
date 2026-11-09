@@ -43,6 +43,9 @@ DirectoryIndex index.html
   RewriteRule ^wp-content/uploads/(.+)\.(jpe?g|png|webp|gif)$ /obrazky/$1.webp [L,R=301]
   RewriteRule ^wp-content/uploads/(.+)-\d+x\d+\.(jpe?g|png|webp|gif)$ /obrazky/$1.webp [L,R=301]
   RewriteRule ^8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-.+$ /8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky/ [L,R=301]
+  # Sloučené články (11/2026): kanibalizace stejných dotazů
+  RewriteRule ^brunch-vs-snidane-tady-je-rozdil/?$ /co-je-to-brunch/ [L,R=301]
+  RewriteRule ^novy-matcha-spot-v-praze-jun-matcha-bar-vas-okouzli-nejen-matchou/?$ /podniky/jun-matcha-bar-praha/ [L,R=301]
 </IfModule>
 
 # Interní soubory nezveřejňovat (manifest deploye, konfigurace s API klíčem)

@@ -6,7 +6,7 @@ import Vypis from '../components/Vypis.astro';
 import BlogKarta from '../components/BlogKarta.astro';
 import Foto from '../components/Foto.astro';
 import { SITE } from '../lib/config';
-import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podnikuText } from '../lib/data';
+import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podnikuText, altFoto } from '../lib/data';
 import { clanky } from '../lib/blog';
 
 const srdcovky = doporucene();
@@ -50,7 +50,7 @@ const jsonLd = {
         </ul>
       </div>
       <div class="hero__kolaz" aria-hidden="true">
-        {kolaz.map((p, i) => <div class={`hero__f hero__f--${i}`}><Foto src={p.foto} alt="" eager={i === 0} /></div>)}
+        {kolaz.map((p, i) => <div class={`hero__f hero__f--${i}`}><Foto src={p.foto} alt={altFoto(p)} eager={i === 0} /></div>)}
       </div>
     </div>
   </section>

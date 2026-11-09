@@ -62,6 +62,6 @@ image: "/wp-content/uploads/2026/06/img_87711-1536x1024-1-1200x800-1.jpg"
 
 <h2>Sváteční brunch doma</h2>
 
-<p>Když se ven nechce, dá se brunch udělat i doma. Stačí pár osvědčených jídel – inspiraci najdeš v článku o <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenějších brunch jídlech</a> a v návodu, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a>. Pokud nevíš, jaký je vlastně rozdíl mezi snídaní a brunchem, vysvětlujeme ho <a href="/brunch-vs-snidane-tady-je-rozdil/">tady</a>.</p>
+<p>Když se ven nechce, dá se brunch udělat i doma. Stačí pár osvědčených jídel – inspiraci najdeš v článku o <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenějších brunch jídlech</a> a v návodu, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a>. Pokud nevíš, jaký je vlastně rozdíl mezi snídaní a brunchem, vysvětlujeme ho <a href="/co-je-to-brunch/">tady</a>.</p>
 
 <p>Krásné svátky a dobrou chuť! 🎄</p>

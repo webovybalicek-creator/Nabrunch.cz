@@ -311,3 +311,11 @@ export const kombinaceUrl = (k: Kombinace) => `${lokalitaUrl(k.l)}${k.t.slug}/`;
 export const kombinacePro = (l: Lokalita, t: Tema) => kombinace().find((k) => k.l.slug === l.slug && k.t.slug === t.slug);
 /** „Veganské snídaně a brunche v Praze“ */
 export const kombinaceNadpis = (k: Kombinace) => `${k.t.nadpis} ${vLokalite(k.l.nazev)}`;
+
+// ---------------------------------------------------------------- alt texty fotek
+/** „Spojka Karlín, Praha 8 – snídaně a brunch“ (+ pořadí fotky v galerii) */
+export const altFoto = (p: Podnik, i?: number) => {
+  const lok = hlavniLokalita(p);
+  const mestoVNazvu = p.nazev.toLowerCase().includes(lok.replace(/ \d+$/, '').toLowerCase());
+  return `${p.nazev}${mestoVNazvu ? '' : `, ${lok}`} – snídaně a brunch${i ? `, fotka ${i + 1}` : ''}`;
+};

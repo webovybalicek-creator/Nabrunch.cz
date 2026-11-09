@@ -5,8 +5,10 @@ import { SITE } from '../lib/config';
 
 interface Props {
   p: Podnik;
+  /** Souhrnné hodnocení už je ve strukturovaných datech stránky (stažené při buildu) */
+  ldVHtml?: boolean;
 }
-const { p } = Astro.props;
+const { p, ldVHtml = false } = Astro.props;
 ---
 
 <section
@@ -17,6 +19,7 @@ const { p } = Astro.props;
   data-nazev={p.nazev}
   data-typ="CafeOrCoffeeShop"
   data-abs={new URL(url(p), SITE.url).href}
+  data-ld-html={ldVHtml ? '1' : undefined}
 >
   <div class="hod__hlava">
     <h2>Hodnocení</h2>
@@ -88,7 +91,7 @@ const { p } = Astro.props;
           )
           .join('');
         // Strukturovaná data pro vyhledávače (souhrnné hodnocení)
-        if (!document.getElementById('ld-hodnoceni')) {
+        if (!sek.dataset.ldHtml && !document.getElementById('ld-hodnoceni')) {
           const ld = document.createElement('script');
           ld.type = 'application/ld+json';
           ld.id = 'ld-hodnoceni';

@@ -8,7 +8,7 @@ image: "/wp-content/uploads/2026/02/ChatGPT-Image-4.-2.-2026-20_42_06.png"
 
 <h2 class="wp-block-heading">Co je sourdough (kváskový chleba) a proč je tak oblíbený?</h2>
 
-<p><strong>Sourdough</strong> je anglický název pro <strong>kváskový chleba</strong>, tedy pečivo, které se nekyne pomocí droždí, ale pomocí <strong>přírodního kvásku</strong>. Kváskový chleba je dnes jedním z největších trendů v pekárnách, kavárnách i <a href="/brunch-vs-snidane-tady-je-rozdil/" target="_blank" rel="noreferrer noopener"><strong>brunch </strong></a>podnicích – a není divu. Má výraznou chuť, krásně křupavou kůrku, vláčnou střídku a často se považuje za kvalitnější alternativu ke klasickému pečivu.</p>
+<p><strong>Sourdough</strong> je anglický název pro <strong>kváskový chleba</strong>, tedy pečivo, které se nekyne pomocí droždí, ale pomocí <strong>přírodního kvásku</strong>. Kváskový chleba je dnes jedním z největších trendů v pekárnách, kavárnách i <a href="/co-je-to-brunch/" target="_blank" rel="noreferrer noopener"><strong>brunch </strong></a>podnicích – a není divu. Má výraznou chuť, krásně křupavou kůrku, vláčnou střídku a často se považuje za kvalitnější alternativu ke klasickému pečivu.</p>
 
 <p>Pokud se ptáte <strong>co je sourdough</strong>, jednoduchá odpověď zní: je to chleba z mouky, vody, soli a kvásku – bez chemie a bez urychlovačů.</p>
 
@@ -46,7 +46,7 @@ image: "/wp-content/uploads/2026/02/ChatGPT-Image-4.-2.-2026-20_42_06.png"
 <li>pomazánky (vajíčková, hummus, tuňáková)</li>
 </ul>
 
-<p>Díky pevnější struktuře a chuti se sourdough skvěle hodí právě jako základ pro <a href="/brunch-vs-snidane-tady-je-rozdil/" target="_blank" rel="noreferrer noopener"><strong>snídaně a brunch</strong>.</a> Často ho najdete v kavárnách jako „kváskový chleba s vejci“ nebo „toast na sourdough“.</p>
+<p>Díky pevnější struktuře a chuti se sourdough skvěle hodí právě jako základ pro <a href="/co-je-to-brunch/" target="_blank" rel="noreferrer noopener"><strong>snídaně a brunch</strong>.</a> Často ho najdete v kavárnách jako „kváskový chleba s vejci“ nebo „toast na sourdough“.</p>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
@@ -90,4 +90,4 @@ image: "/wp-content/uploads/2026/02/ChatGPT-Image-4.-2.-2026-20_42_06.png"
 
 <h2 class="wp-block-heading">Shrnutí</h2>
 
-<p>Pokud se ptáte <strong>co je sourdough (kváskový chleba)</strong>, jde o chleba kynutý přírodním kváskem, který má výraznější chuť, lepší strukturu a je perfektní jako základ pro <a href="/brunch-vs-snidane-tady-je-rozdil/" target="_blank" rel="noreferrer noopener"><strong>snídani i brunch.</strong></a> Ať už si ho dáte s avokádem, vejci nebo jen s máslem, sourdough je jedna z nejlepších věcí, které se v posledních letech v gastronomii znovu objevily. 🥖✨</p>
+<p>Pokud se ptáte <strong>co je sourdough (kváskový chleba)</strong>, jde o chleba kynutý přírodním kváskem, který má výraznější chuť, lepší strukturu a je perfektní jako základ pro <a href="/co-je-to-brunch/" target="_blank" rel="noreferrer noopener"><strong>snídani i brunch.</strong></a> Ať už si ho dáte s avokádem, vejci nebo jen s máslem, sourdough je jedna z nejlepších věcí, které se v posledních letech v gastronomii znovu objevily. 🥖✨</p>
