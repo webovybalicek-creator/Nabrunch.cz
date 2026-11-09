@@ -3,6 +3,7 @@ title: "Za brunchem mimo město: Mikulov & KUK Bistro"
 description: "Někdy člověk potřebuje utéct z ruchu velkoměsta, trochu zpomalit a dopřát si dobré jídlo s výhledem. A právě Mikulov je ideálním místem."
 date: "2025-03-30T14:46:39"
 image: "/wp-content/uploads/2025/03/Za-brunchem-mimo-mesto.jpg"
+obdobi: [jaro, leto]
 ---
 
 <h2 class="wp-block-heading">Mikulov: město, kde se zastavil čas</h2>

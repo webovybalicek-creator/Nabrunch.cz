@@ -4,6 +4,7 @@ description: "Shakshuka jsou vejce pošírovaná v kořeněné rajčatové omá�
 seoTitle: "Co je shakshuka? Původ, chuť a kde si ji dát | naBrunch.cz"
 date: "2026-11-09T13:00:00"
 image: "/wp-content/uploads/2025/03/eggsit1.jpg"
+obdobi: [podzim, zima]
 ---
 
 <p><strong>Shakshuka</strong> (česky se píše i šakšuka) je jedno z nejoblíbenějších brunchových jídel posledních let. Jde o <strong>vejce pošírovaná přímo v husté rajčatové omáčce</strong> s paprikou, cibulí, česnekem a kořením. Podává se v pánvi, ve které se vařila, a k ní pečivo na vytírání.</p>

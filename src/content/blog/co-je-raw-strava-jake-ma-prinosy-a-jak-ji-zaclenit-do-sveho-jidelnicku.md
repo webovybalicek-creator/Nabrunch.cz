@@ -3,6 +3,7 @@ title: "Co je raw strava: Jaké má přínosy a jak ji začlenit do svého jíde
 description: "Raw strava se vyznačuje vysokým obsahem živin, ale také vyvolává otázky ohledně její výživové hodnoty a možných rizik."
 date: "2025-05-03T18:42:14"
 image: "/wp-content/uploads/2025/05/Navrh-bez-nazvu-2025-05-03T184118.396.jpg"
+obdobi: [jaro]
 ---
 
 <h2 class="wp-block-heading">Raw strava, nebo také <strong>syrová strava</strong>, je způsob stravování, při kterém se potraviny konzumují v jejich <strong>přirozené syrové podobě</strong>. </h2>

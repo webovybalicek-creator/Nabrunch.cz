@@ -7,14 +7,38 @@ import BlogKarta from '../components/BlogKarta.astro';
 import Foto from '../components/Foto.astro';
 import { SITE } from '../lib/config';
 import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podnikuText, altFoto } from '../lib/data';
-import { clanky } from '../lib/blog';
+import { clanky, kategorie } from '../lib/blog';
+import { oknaData, vyber, obdobiDne, OBDOBI_NADPIS, type SezonniClanek } from '../lib/sezona';
 
 const srdcovky = doporucene();
 const nove = nejnovejsi(12);
 // Ve výpisu „Všechny podniky“ abecedně (srdcovky a novinky jsou v sekcích nad ním)
 const vse = [...PODNIKY].sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs'));
 const topMesta = [...mesta()].sort((a, b) => b.podniky.length - a.podniky.length);
-const tipy = (await clanky()).slice(0, 6);
+// Brunch tipy: sezónní výběr (logika v src/lib/sezona.ts). Do HTML jde „zásobník“ kandidátů,
+// viditelných je 6 podle data buildu; skript níže výběr přepočítá podle dnešního data v prohlížeči.
+const vsechny = (await clanky()).filter((c) => c.data.naHp !== false);
+const TIPU = 6;
+const rok = new Date().getFullYear();
+const zasobnik = [
+  ...vsechny.filter((c) => c.data.sezona?.length || c.data.obdobi?.length),
+  ...vsechny.filter((c) => !c.data.sezona?.length && !c.data.obdobi?.length).slice(0, 12),
+];
+const sezonni: SezonniClanek[] = zasobnik.map((c) => ({
+  okna: oknaData(c.data.sezona, rok - 1, rok + 2),
+  sezonni: !!c.data.sezona?.length,
+  obdobi: c.data.obdobi ?? [],
+  kat: kategorie(c),
+  datum: c.data.date.toISOString().slice(0, 10),
+}));
+const dnes = new Date();
+const poradi = vyber(sezonni, dnes, TIPU);
+const tipy = [...poradi, ...zasobnik.map((_, i) => i).filter((i) => !poradi.includes(i))].map((i) => ({
+  c: zasobnik[i],
+  data: sezonni[i],
+  viditelny: poradi.includes(i),
+}));
+const tipyNadpis = OBDOBI_NADPIS[obdobiDne(dnes)];
 const kolaz = srdcovky.slice(0, 3);
 
 const jsonLd = {
@@ -100,12 +124,18 @@ const jsonLd = {
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="eyebrow">Co je nového</span>
+          <span class="eyebrow" data-tipy-nadpis>{tipyNadpis}</span>
           <h2>Brunch tipy</h2>
         </div>
         <a href="/blog/" class="btn btn--ghost">Všechny články</a>
       </div>
-      <ul class="karty karty--blog">{tipy.map((c) => <BlogKarta c={c} />)}</ul>
+      <ul class="karty karty--blog" data-tipy={TIPU}>
+        {
+          tipy.map(({ c, data, viditelny }) => (
+            <BlogKarta c={c} hidden={!viditelny} sezona={JSON.stringify(data)} />
+          ))
+        }
+      </ul>
     </div>
   </section>
 
@@ -290,3 +320,23 @@ const jsonLd = {
     margin: 0;
   }
 </style>
+
+<script>
+  import { vyber, obdobiDne, OBDOBI_NADPIS, type SezonniClanek } from '../lib/sezona';
+
+  // Přepočet sezónních tipů podle dnešního data (HTML bylo sestaveno v den buildu)
+  const seznam = document.querySelector<HTMLUListElement>('[data-tipy]');
+  if (seznam) {
+    const karty = [...seznam.querySelectorAll<HTMLLIElement>(':scope > li[data-sezona]')];
+    const data = karty.map((k) => JSON.parse(k.dataset.sezona!) as SezonniClanek);
+    const dnes = new Date();
+    const poradi = vyber(data, dnes, Number(seznam.dataset.tipy) || 6);
+    karty.forEach((k) => (k.hidden = true));
+    for (const i of poradi) {
+      karty[i].hidden = false;
+      seznam.appendChild(karty[i]);
+    }
+    const nadpis = document.querySelector('[data-tipy-nadpis]');
+    if (nadpis) nadpis.textContent = OBDOBI_NADPIS[obdobiDne(dnes)];
+  }
+</script>

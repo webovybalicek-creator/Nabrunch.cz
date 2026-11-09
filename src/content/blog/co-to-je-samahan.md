@@ -4,6 +4,7 @@ description: "Čaj Samahan: co to je, co obsahuje a k čemu je dobrý? Jak se Sa
 seoTitle: "Čaj Samahan: co to je, co obsahuje? - naBrunch.cz"
 date: "2026-02-04T20:22:58"
 image: "/wp-content/uploads/2026/02/samahan-caj.png"
+obdobi: [podzim, zima]
 ---
 
 <h1 class="wp-block-heading">Čaj Samahan: co to je, co obsahuje a k čemu je dobrý?</h1>

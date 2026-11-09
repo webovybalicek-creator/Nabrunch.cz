@@ -11,8 +11,8 @@
   "d": "🥐 Jak funguje naBrunch.cz? Projekt naBrunch.cz je průvodce těmi nejlepšími místy na snídani a brunche v Česku. Pomocí filtrů si můžeš vybrat podnik podle města, typu kuchyně nebo pohodlí – a objevit místa, kam se budeš chtít vracet. 📍 Musím si vytvořit účet, abych mohla/mohl procházet podniky? Ne, procházet a…"
  },
  "/co-je-chai-latte/": {
-  "t": "Chai latte: co to je, z čeho se dělá a jak chutná",
-  "d": "Co je chai latte, z čeho se připravuje, jak chutná a je zdravé? Rozdíl oproti kávě a proč se hodí ke snídani i brunchi."
+  "t": "Co je chai latte? Z čeho je, jak chutná a má kofein",
+  "d": "Chai latte je černý čaj s mlékem a kořením – skořicí, kardamomem a zázvorem. Z čeho se dělá, jak chutná, kolik má kofeinu oproti kávě a kde si ho dát."
  },
  "/co-je-espresso-tonic-a-proc-je-tak-popularni/": {
   "t": "Co je espresso tonic a proč je tak populární? - naBrunch.cz",
@@ -23,8 +23,8 @@
   "d": "Víte, co znamenají čepice Gault&Millau a proč je restaurace tolik chtějí získat? To se dozvíte v našem článku."
  },
  "/co-je-kombucha/": {
-  "t": "Co je to kombucha a na co je dobrá? - naBrunch.cz",
-  "d": "Co je to kombucha a na co je dobrá? Jak kombucha vzniká a jak chutná? Proč je populární? - naBrunch.cz"
+  "t": "Co je kombucha a na co je dobrá? | naBrunch.cz",
+  "d": "Kombucha je kvašený čaj s jemnými bublinkami. Co to je, jak vzniká, jak chutná, na co je dobrá, kolik má cukru a alkoholu a proč se hodí k brunchi."
  },
  "/co-je-raw-strava-jake-ma-prinosy-a-jak-ji-zaclenit-do-sveho-jidelnicku/": {
   "t": "Co je raw strava: Jaké má přínosy a jak ji začlenit do svého jídelníčku? | Nabrunch.cz",
@@ -82,25 +82,21 @@
   "t": "Kam na snídani či brunch v Říčanech u Prahy? - naBrunch.cz",
   "d": "Kam na snídani či brunch v Říčanech u Prahy? Vybrali jsme pro vás 3 top podniky na snídani a brunch v Říčanech, které patří mezi TOP i oblíbené tipy na víkend."
  },
- "/kam-na-snidani-nebo-brunch-v-brne-2-cast/": {
-  "t": "Kam na snídani nebo brunch v Brně: 3 super tipy - naBrunch.cz",
-  "d": "Přemýšlíte, kam na snídani nebo brunch v Brně? Máme pro vás 3 úžasné kavárny, které stojí za návštěvu. - naBrunch.cz"
- },
  "/kam-na-snidani-nebo-brunch-v-brne/": {
-  "t": "Brunch Brno: kam na snídani a brunch – 5 ověřených tipů",
-  "d": "Hledáš brunch v Brně? 5 ověřených podniků na snídani a brunch – co si v nich dát, kde je najdeš a proč tam zajít."
+  "t": "Brunch Brno: kam na snídani a brunch – 9 ověřených tipů",
+  "d": "Hledáš brunch v Brně? 9 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
  },
  "/kam-na-snidani-nebo-brunch-v-olomouci/": {
   "t": "Kam na snídani nebo brunch v Olomouci? - naBrunch.cz",
   "d": "Hledáš inspiraci, kam na snídani nebo brunch v Olomouci? Máme pro tebe 5 tipů, kam v Olomouci na snídani či brunch."
  },
  "/kam-na-snidani-nebo-brunch-v-plzni/": {
-  "t": "Kam na snídani nebo brunch v Plzni: 3 TOP tipy - naBrunch.cz",
-  "d": "Přemýšlíte, kam na snídani nebo brunch v Plzni? Máme pro vás TOP 3 kavárny, které stojí za návštěvu. - naBrunch.cz"
+  "t": "Snídaně a brunch v Plzni: 4 ověřené tipy | naBrunch.cz",
+  "d": "Kam na snídani nebo brunch v Plzni? 4 ověřené kavárny v centru – Enjoy coffee & brunch, Le Frenchie, Walter a Cavino. Co si dát a kde mají zahrádku."
  },
  "/kam-na-snidani-nebo-brunch-v-praze-karlin/": {
-  "t": "Kam na snídani nebo brunch v Praze - Karlín? | Nabrunch.cz",
-  "d": "Karlín dnes patří mezi nejlepší adresy na snídani, brunch i výběrovou kávu. Máme pro vás 5 tipů, kam zajít."
+  "t": "Snídaně a brunch Karlín: 7 nejlepších míst | naBrunch.cz",
+  "d": "Kam na snídani nebo brunch v Karlíně? 7 ověřených podniků – Spojka, Eska, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
  },
  "/kam-na-snidani-v-hradci-kralove-s-detmi-mame-pro-vas-tip/": {
   "t": "Kam na snídani v Hradci Králové s dětmi? Máme pro vás tip! - naBrunch.cz",
@@ -136,8 +132,8 @@
   "d": "Tipy na nejlepší brunche v centru Prahy: Mistral Café, Chloe Café a Pauseteria. Snídaně, styl, výběrová káva i dětský koutek v jednom článku."
  },
  "/nejlepsi-matcha-v-praze/": {
-  "t": "Matcha Praha: kde mají nejlepší matchu (Matcha Crew, Sensu…)",
-  "d": "Kde v Praze na nejlepší matchu? Matcha Crew, Sensu Cafe a Atomic Matcha – matcha latte, dezerty a naše tipy."
+  "t": "Nejlepší matcha v Praze: Matcha Crew, Jun, Sensu a další",
+  "d": "Kde je v Praze nejlepší matcha? Matcha Crew, Jun Matcha Bar, Sensu Cafe, Atomic Matcha a další – matcha latte, iced matcha, coldfoam i matcha dezerty."
  },
  "/nejoblibenejsi-brunch-jidla/": {
   "t": "Nejoblíbenější brunch jídla | Nabrunch.cz",

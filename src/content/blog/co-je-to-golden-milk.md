@@ -4,6 +4,7 @@ description: "Co je to golden milk (kurkumové latté) a proč si ho dát ke sn�
 seoTitle: "Co je to golden milk (kurkumové latté) - naBrunch.cz"
 date: "2025-08-16T18:48:49"
 image: "/wp-content/uploads/2026/01/goldenmilk_nabrunch.cz_.png"
+obdobi: [podzim, zima]
 ---
 
 <h2 class="wp-block-heading">Co je to golden milk (kurkumové latté) a proč si ho dát ke snídani nebo brunchi</h2>

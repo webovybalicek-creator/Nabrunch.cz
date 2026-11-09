@@ -4,6 +4,7 @@ description: "Kam na snídani či brunch v Říčanech u Prahy? Vybrali jsme pro
 seoTitle: "Kam na snídani či brunch v Říčanech u Prahy? - naBrunch.cz"
 date: "2026-01-30T18:22:24"
 image: "/wp-content/uploads/2026/01/49cc25e9-5d3a-4b8b-95ea-1de68dd92704.png"
+obdobi: [jaro, leto]
 ---
 
 <h2 class="wp-block-heading">Kam na snídani či brunch v Říčanech u Prahy? Máme pro vás 3 ověřené tipy!</h2>

@@ -12,7 +12,7 @@ export type Kategorie = (typeof KATEGORIE)[number];
 export function kategorie(c: Clanek): Kategorie {
   const t = c.data.title;
   if (/^co (je|jsou|to)\b|\bvs\.?\b|rozdíl/i.test(t)) return 'Co je co';
-  if (/kam na|nejlepší|\btop\b|mimo město|s dětmi|café|cafe|bistro|shelter|spot|brunch praha|pro děti/i.test(t)) return 'Kam na brunch';
+  if (/kam na|nejlepší|kavárny v|bufet|brunch (ostrava|české)|\btop\b|mimo město|s dětmi|café|cafe|bistro|shelter|spot|brunch praha|pro děti/i.test(t)) return 'Kam na brunch';
   return 'Inspirace';
 }
 

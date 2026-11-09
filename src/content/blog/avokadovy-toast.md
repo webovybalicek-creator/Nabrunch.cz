@@ -4,6 +4,7 @@ description: "Avokádový toast (avocado toast) je brunchová klasika. Jaký chl
 seoTitle: "Avokádový toast: recept, kombinace a kde si ho dát | naBrunch.cz"
 date: "2026-11-09T13:10:00"
 image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-19.35.59.png"
+obdobi: [jaro, leto]
 ---
 
 <p><strong>Avokádový toast</strong> (anglicky <em>avocado toast</em>) je možná nejjednodušší brunchové jídlo – a přesto ho najdeš skoro na každém brunchovém lístku. Opečený chléb, rozmačkané avokádo, sůl, citron. Dobře udělaný je ale překvapivě těžké překonat.</p>

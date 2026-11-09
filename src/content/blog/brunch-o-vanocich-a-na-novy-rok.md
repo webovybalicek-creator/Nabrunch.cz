@@ -4,6 +4,9 @@ description: "Kam na brunch mezi svátky, na Štěpána nebo na Nový rok? Naše
 seoTitle: "Brunch o Vánocích a na Nový rok 2026 – kam vyrazit | naBrunch.cz"
 date: "2026-11-09T12:00:00"
 image: "/wp-content/uploads/2026/06/img_87711-1536x1024-1-1200x800-1.jpg"
+sezona:
+  - od: "11-15"
+    do: "01-02"
 ---
 
 <p>Dny mezi Vánoci a Novým rokem jsou na brunch jako stvořené. Nikdo nikam nespěchá, rodina je pohromadě a po týdnu cukroví přijde vhod <strong>vejce Benedikt</strong> nebo pořádná <strong>shakshuka</strong>. Sepsali jsme, na co při plánování svátečního brunche myslet a kam se vypravit.</p>

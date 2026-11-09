@@ -4,11 +4,14 @@ import { clanekUrl, perex, kategorie, nazev, type Clanek } from '../lib/blog';
 
 interface Props {
   c: Clanek;
+  hidden?: boolean;
+  /** JSON pro sezónní výběr na HP (src/lib/sezona.ts) */
+  sezona?: string;
 }
-const { c } = Astro.props;
+const { c, hidden = false, sezona } = Astro.props;
 ---
 
-<li class="bk">
+<li class="bk" hidden={hidden} data-sezona={sezona}>
   <a href={clanekUrl(c)}>
     <div class="bk__foto">
       {c.data.image && <Foto src={c.data.image} alt={c.data.title} />}
@@ -20,6 +23,9 @@ const { c } = Astro.props;
 </li>
 
 <style>
+  .bk[hidden] {
+    display: none;
+  }
   .bk a {
     display: block;
     text-decoration: none;

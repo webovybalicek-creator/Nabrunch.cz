@@ -1,63 +1,58 @@
 ---
-title: "Kam na snídani nebo brunch v Brně?"
-description: "Kam na snídani nebo brunch v Brně? 5 TOP osvědčených tipů! Snídaně a brunch v Brně."
-seoTitle: "Kam na snídani nebo brunch v Brně? - naBrunch.cz"
+title: "Brunch Brno: kam na snídani a brunch – 9 ověřených tipů"
+description: "Hledáš brunch v Brně? 9 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
+seoTitle: "Brunch Brno: kam na snídani a brunch – 9 ověřených tipů"
 date: "2025-11-15T17:45:21"
 image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 ---
 
-<h1 class="wp-block-heading">Kam na snídani nebo brunch v Brně: 5 osvědčených tipů </h1>
+<p>Brno má skvělou kavárenskou scénu a <strong>brunch</strong> tu dnes najdeš v centru i v klidnějších čtvrtích. Vybrali jsme <strong>9 podniků, kam na snídani nebo brunch v Brně</strong> – každý trochu jiný, takže si vybereš podle lokality, nálady i chuti. U každého je tip, co si dát.</p>
 
-<p>Přemýšlíte, kam na skvělou <strong>snídani</strong> nebo pohodový <strong>brunch v Brně?</strong> Máme pro vás pět výborných kaváren, které stojí za návštěvu. Každý podnik nabízí něco trochu jiného – vyberte si podle lokality, nálady nebo chuti.</p>
+<h2>Brunch v centru Brna</h2>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">1. <strong>Brunche’s Bistro</strong> Brno - Královo Pole</a> </h2>
+<h3>👉🏼 <a href="/podniky/skog-brno/">SKØG Urban Hub</a> – Dominikánské náměstí</h3>
+<p>Kavárna, pražírna, bar a coworking v jednom, se skandinávsko-industriálním designem. Brunch menu běží ve všední dny od 8 do 14 hodin, o víkendu od 9 – lívance, focaccia i vejce Benedikt ve vegetariánské a veganské podobě.</p>
+<p>🍳 <strong>Co si dát:</strong> shakshuka hot dog. Zní to divně, chutná to skvěle.</p>
 
-<p><strong>Brunche’s Bistro</strong> je útulné brunch místo v Brně, kde se potkává kvalitní káva, čerstvé suroviny a domácí atmosféra. Příjemný <strong>dog-friendly</strong> interiér, vstřícná obsluha a pohodová atmosféra dělají z Brunche’s Bistro ideální místo pro <strong>víkendový brunch</strong>, setkání s přáteli nebo práci u kávy během dne. </p>
+<h3>👉🏼 <a href="/podniky/bavard-cafe-brno/">Bavard Cafe</a> – Poštovská</h3>
+<p>Útulný a světlý prostor s lehce uměleckou atmosférou kousek od náměstí Svobody. Vyhlášené jsou snídaňové klasiky a vejce Benedikt s avokádem nebo slaninou.</p>
+<p>🍳 <strong>Co si dát:</strong> turecká vejce – česnekový jogurt, domácí chilli máslo s kešu, smažený hrášek, kopr, ztracené vejce a křupavý chleba.</p>
 
-<p>Pokud hledáte stylové místo na snídani či brunch v Brně, tohle bistro by nemělo uniknout vaší pozornosti.</p>
+<h3>👉🏼 <a href="/podniky/cafe-placzek-brno/">Café Placzek</a> – Minoritská</h3>
+<p>Útulná kavárna se stylovým interiérem, kde se dobře sedí u dlouhé konverzace i s laptopem. Avokádové toasty, míchaná vejce a francouzské toasty se sezónním ovocem.</p>
+<p>🍳 <strong>Co si dát:</strong> švestky marinované v Amarettu s jogurtem a křupavými mandlemi.</p>
 
-<figure class="wp-block-image aligncenter size-full"><a href="/podniky/brunches-bistro-brno/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/11/brunchesbistrobrno.jpg" alt="" class="wp-image-1825"/></a></figure>
+<h3>👉🏼 <a href="/podniky/cafe-momenta-brno/">Café Momenta</a> – Zelný trh</h3>
+<p>Kavárna postavená na poctivé cukrařině, domácích dezertech a limonádách z čerstvých surovin. Má zahrádku přímo na Zelném trhu a pejsci jsou vítáni.</p>
+<p>🍳 <strong>Co si dát:</strong> turecká vejce nebo veggie avokádový toast – a domácí dezert na závěr.</p>
 
-<h2 class="wp-block-heading"><a href="/podniky/skog-brno/" data-type="link" data-id="/podniky/skog-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/skog-brno/" data-type="link" data-id="/podniky/skog-brno/" target="_blank" rel="noreferrer noopener">2. <strong>SKØG Urban Hub Brno</strong> - střed</a></h2>
+<h3>👉🏼 <a href="/podniky/maybe-coffee-bistro/">Maybe coffee &amp; bistro</a> – Vídeňská</h3>
+<p>Kavárna s výběrovou kávou z malé pražírny v Křížovicích, celodenními snídaněmi a zahrádkou. Lívance se slaným karamelem nebo anglická snídaně.</p>
+<p>🍳 <strong>Co si dát:</strong> avokádový chlebík s cheddarem, guacamole, rukolou, granátovým jablkem a mozzarellou, k tomu flat white na zahrádce.</p>
 
-<p>V samém srdci Brna najdete <strong>SKØG Urban Hub</strong> – moderní koncept, který <strong>spojuje kavárnu, pražírnu, bar i coworkingový prostor.</strong></p>
+<h2>Brunch v Králově Poli a okolí Lužánek</h2>
 
-<p>Ráno v SKØG začíná příjemně u snídaně a šálku výběrové kávy a bohatého brunch menu – můžete si dopřát například lívance, focaccu, nebo vejce benedikt ve svěží vegetariánské a veganské podobě.</p>
+<h3>👉🏼 <a href="/podniky/brunches-bistro-brno/">Brunche’s Bistro</a> – Vodova ♥</h3>
+<p>Naše brněnská srdcovka. Útulné místo se snídaněmi po celý den, vegetariánskými i veganskými variantami a dog-friendly interiérem.</p>
+<p>🍳 <strong>Co si dát:</strong> lívance s dubajskou čokoládou – ty prostě musíš zkusit.</p>
 
-<p>Poledne a odpoledne nabízí SKØG prostor pro neformální setkání, práci s laptopem nebo jen klidné posezení – je to místo, kde snídaně přechází v brunch a brunch v pohodové odpoledne. A až večer se atmosféra promění — rozsvítí se bar, zahraje hudba, nabídka drinků a koktejlů získá hlavní roli.</p>
+<h3>👉🏼 <a href="/podniky/poppy-beans-coffee-brno/">Poppy Beans Coffee</a> – Staňkova</h3>
+<p>Kavárna kousek od parku Lužánky se snídaněmi inspirovanými mimoevropskými kuchyněmi a vážně míněnou kávou: dva espresso mlýnky, V60 a občas i soutěžní kávy.</p>
+<p>🍳 <strong>Co si dát:</strong> kváskový chléb s vaječnou pomazánkou s mrkví, nakládanou mrkví, slanou granolou a microgreens.</p>
 
-<figure class="wp-block-gallery aligncenter has-nested-images columns-default is-cropped">
-<figure class="wp-block-image size-full"><a href="/podniky/skog-brno/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg" alt="" class="wp-image-1824"/></a></figure>
-</figure>
+<h3>👉🏼 <a href="/podniky/coffee-trail-bar-brno/">Coffee Trail Bar</a> – Štefánikova</h3>
+<p>Dog-friendly kavárna s pečivem z řemeslných pekáren a kávou od lokálních i zahraničních pražíren. Coffee Trail má po Brně víc poboček.</p>
+<p>🍳 <strong>Co si dát:</strong> croque madame s dijonskou hořčicí, šunkou od kosti, bešamelem, gruyère a volským okem.</p>
 
-<h2 class="wp-block-heading"><a href="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">3. <strong>Bavard cafe Brno</strong> - střed</a></h2>
+<h2>Jak si vybrat</h2>
 
-<p><strong>Bavard cafe Brno</strong> je vyhlášené svými snídaňovými klasikami a brunch pokrmy, které jsou vždy čerstvé, hezky vybalancované a chuťově výrazné. Eggs Benedict patří mezi nejoblíbenější – připravované s avokádem nebo slaninou – a doplňují je skvělé toasty, sladké i slané variace snídaňových talířů a výborná káva. Pokud chcete strávit pohodové dopoledne, je to místo jako stvořené.</p>
+<ul>
+<li><strong>Chceš sladký brunch?</strong> Brunche’s Bistro (lívance) nebo Café Placzek.</li>
+<li><strong>Slaný a výrazný?</strong> Bavard (turecká vejce) nebo SKØG.</li>
+<li><strong>Na kávu jako zážitek?</strong> Poppy Beans nebo Maybe coffee.</li>
+<li><strong>Venku?</strong> Maybe coffee a Café Momenta mají zahrádku.</li>
+<li><strong>S pejskem?</strong> Brunche’s Bistro, Coffee Trail, Café Momenta a Maybe coffee.</li>
+<li><strong>Vegan?</strong> SKØG, Bavard, Poppy Beans a Coffee Trail mají veganské varianty.</li>
+</ul>
 
-<p>Jestli hledáte místo v Brně na <strong>snídani či brunch</strong>, kde se dobře najíte, odpočinete si a zažijete příjemnou atmosféru, Bavard café je skvělá volba. Je to přesně ten typ kavárny, kam se rádi vrátíte.</p>
-
-<figure class="wp-block-image aligncenter size-full"><a href="/podniky/bavard-cafe-brno/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/11/bavardcafebrno.jpg" alt="" class="wp-image-1828"/></a></figure>
-
-<h2 class="wp-block-heading"><strong><a href="/podniky/coffee-trail-bar-brno/" data-type="link" data-id="/podniky/coffee-trail-bar-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a></strong> <strong><a href="/podniky/coffee-trail-bar-brno/" data-type="link" data-id="/podniky/coffee-trail-bar-brno/" target="_blank" rel="noreferrer noopener">4. Coffee Trail Bar Brno - Královo Pole</a></strong></h2>
-
-<p>Coffee Trail Brno je dog-friendly útulná kavárna, kde se snoubí vůně kvalitní výběrové kávy s relaxovanou atmosférou a poctivým přístupem k surovinám. Ideální místo pro pomalé ráno, kde si vychutnáš <strong>skvělé snídaně nebo brunch</strong> — od avokádového toastu a čerstvých bowlů až po nadýchané croissanty a další dobroty. </p>
-
-<p>A co je super? Tuhle dobrou náladu a špičkovou kávu najdeš na <strong>několika pobočkách po Brně</strong>, takže si svůj oblíbený brunch můžeš dopřát tam, kde se ti to zrovna hodí.</p>
-
-<figure class="wp-block-image aligncenter size-full"><a href="/podniky/coffee-trail-bar-brno/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/11/coffeetrailbarbrno.jpg" alt="" class="wp-image-1826"/></a></figure>
-
-<h2 class="wp-block-heading"><a href="/podniky/maybe-coffee-bistro/" data-type="link" data-id="/podniky/maybe-coffee-bistro/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/maybe-coffee-bistro/" data-type="link" data-id="/podniky/maybe-coffee-bistro/" target="_blank" rel="noreferrer noopener">5. Maybe coffee &amp; bistro Brno - střed</a></h2>
-
-<p>Maybe coffee &amp; bistro je útulná kavárna v Brně na Vídeňské ulici, známá svou výběrovou kávou z malé pražírny v Křížovicích a domácími zákusky. Nabízí celodenní snídaně a brunch s pokrmy jako lívance se slaným karamelem či anglickou snídani, podávané v příjemném prostředí s milou obsluhou.</p>
-
-<figure class="wp-block-image aligncenter size-full"><a href="/podniky/maybe-coffee-bistro/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/11/maybecoffeebrno.jpg" alt="" class="wp-image-1830"/></a></figure>
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-<p></p>
-
-<p>Pokud si chcete vybrat z kompletní nabídky všech podniků po ČR, kde si dát skvělou <strong>snídani</strong> nebo <strong>brunch</strong>, <a href="/#vsechnypodniky" data-type="link" data-id="/#vsechnypodniky" target="_blank" rel="noreferrer noopener"><strong>mrkněte SEM.</strong></a></p>
-
-<p>A pokud máte <strong>tip na další místo</strong>, které bychom měli do výběru zařadit, napište nám — budeme rádi za každý nápad: <strong><a>karolina@nabrunch.cz</a></strong>!</p>
-
-<p></p>
+<p>Všechny ověřené podniky najdeš na stránce <a href="/lokalita/brno/">kam na brunch a snídani v Brně</a>, další kavárny v přehledu <a href="/kavarny/brno/">kavárny v Brně</a>. Máš tip na další místo? Napiš nám na <a href="mailto:karolina@nabrunch.cz">karolina@nabrunch.cz</a>. ☕</p>

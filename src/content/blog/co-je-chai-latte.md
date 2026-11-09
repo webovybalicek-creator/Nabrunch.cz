@@ -1,31 +1,53 @@
 ---
-title: "Co je chai latté?"
-description: "Co je chai latté a proč patří ke snídani i brunchi? - naBrunch.c"
-seoTitle: "Co je chai latté? - naBrunch.cz"
+title: "Co je chai latte? Z čeho je, jak chutná a má kofein"
+description: "Chai latte je černý čaj s mlékem a kořením – skořicí, kardamomem, zázvorem a hřebíčkem. Z čeho se dělá, jak chutná, kolik má kofeinu oproti kávě a kde si ho dát."
+seoTitle: "Co je chai latte? Z čeho je, chuť a kofein | naBrunch.cz"
 date: "2026-01-16T18:44:28"
 image: "/wp-content/uploads/2026/01/chailatte_nabrunch.cz_.png"
+obdobi: [podzim, zima]
 ---
 
-<h2 class="wp-block-heading">Co je chai latté a proč patří ke snídani i brunchi</h2>
+<p><strong>Chai latte je černý čaj s napěněným mlékem a směsí koření.</strong> Je jemně sladký, krémový a voní skořicí, kardamomem a zázvorem. Pije se teplý i ledový a v kavárnách se stal oblíbenou alternativou ke kávě – hlavně na podzim a v zimě.</p>
 
-<p><strong>Chai latté</strong> je aromatický teplý (nebo ledový) nápoj, který spojuje <strong>čaj, mléko a směs koření</strong>. Původ má v Indii, kde se tradičně pije jako <strong>masala chai</strong> – silný černý čaj vařený s mlékem, cukrem a kořením. V moderní kavárenské podobě se z něj stalo oblíbené <strong>chai latté</strong>, které si našlo pevné místo nejen u <strong>snídaně</strong>, ale i na <strong>brunch menu</strong> po celém světě.</p>
+<h2>Odkud chai latte pochází</h2>
+<p>Slovo <em>chai</em> znamená v hindštině prostě „čaj“. V Indii se pije <strong>masala chai</strong> – silný černý čaj vařený přímo v mléce s cukrem a kořením. Kavárenské chai latte je jeho západní verze: místo vaření v mléce se čaj nebo chai sirup spojí s napěněným mlékem, podobně jako u caffè latte.</p>
 
-<h3 class="wp-block-heading">Z čeho je chai latté?</h3>
+<h2>Z čeho se chai latte dělá</h2>
+<ul>
+<li><strong>Černý čaj</strong> – nejčastěji Assam, silný a sladový.</li>
+<li><strong>Koření</strong> – skořice, kardamom, zázvor, hřebíček, badyán a černý pepř.</li>
+<li><strong>Mléko</strong> – kravské nebo rostlinné (ovesné se k chai hodí výborně).</li>
+<li><strong>Sladidlo</strong> – cukr, med nebo sirup.</li>
+</ul>
+<p>Kavárny používají buď <strong>sypanou chai směs</strong> (nejlepší chuť), <strong>sirup</strong>, nebo <strong>prášek</strong>. Sirupy a prášky bývají hodně sladké – pokud chceš méně cukru, zeptej se, z čeho chai připravují.</p>
 
-<p>Základem chai latté je <strong>černý čaj</strong> (nejčastěji Assam), <strong>mléko</strong> a typická <strong>kořeněná směs</strong>. Mezi nejčastější ingredience patří skořice, kardamom, zázvor, hřebíček a černý pepř. Právě kombinace těchto chutí dává chai latté jeho charakteristickou vůni a lehce nasládlou, hřejivou chuť. V kavárnách se často připravuje z <strong>chai koncentrátu nebo sirupu</strong>, zalitého horkým či napěněným mlékem – klasickým nebo rostlinným (ovesné, mandlové, sójové).</p>
+<h2>Jak chai latte chutná</h2>
+<p>Kořeněně, sladce a krémově – trochu jako vánoční perník v hrnku. Zázvor a pepř dávají jemnou pálivost, kardamom svěžest a skořice sladkost.</p>
 
-<h3 class="wp-block-heading">Chai latté vs. káva</h3>
+<h2>Má chai latte kofein? Chai vs. káva</h2>
+<p><strong>Ano, chai latte obsahuje kofein</strong>, protože základem je černý čaj. Bývá ho ale <strong>zhruba o polovinu méně než v šálku kávy</strong> – přesné množství záleží na síle čaje a velikosti porce. Chai je proto dobrá volba, když chceš povzbudit, ale ne tolik jako kávou. Existuje i „dirty chai“ – chai latte s panákem espressa – pro ty, kdo chtějí obojí.</p>
 
-<p>Velkou výhodou chai latté je, že obsahuje <strong>méně kofeinu než káva</strong>, a proto je oblíbenou volbou pro ty, kdo chtějí jemnější povzbuzení. Díky koření má navíc <strong>zahřívací a povzbuzující účinek</strong>, který je ideální pro pomalé ráno, dlouhou snídani nebo pohodový brunch s přáteli. Chai latté je tak skvělou alternativou pro ty, kteří si chtějí dát něco jiného než espresso nebo cappuccino.</p>
+<figure class="wp-block-table"><table><thead><tr><th></th><th><strong>Chai latte</strong></th><th><strong>Caffè latte</strong></th></tr></thead><tbody>
+<tr><td><strong>Základ</strong></td><td>Černý čaj + koření</td><td>Espresso</td></tr>
+<tr><td><strong>Kofein</strong></td><td>Méně</td><td>Více</td></tr>
+<tr><td><strong>Chuť</strong></td><td>Kořeněná, sladká</td><td>Kávová, mléčná</td></tr>
+<tr><td><strong>Sladkost</strong></td><td>Obvykle slazené</td><td>Neslazené, pokud si nepřisladíš</td></tr>
+</tbody></table></figure>
 
-<h3 class="wp-block-heading">Proč se chai latté hodí k brunchi</h3>
+<h2>Je chai latte zdravé?</h2>
+<p>Koření jako zázvor a skořice dodává chuť i pocit zahřátí. Zdravotní stránku ale nejvíc ovlivňuje <strong>množství cukru</strong> – kavárenské chai ze sirupu může mít cukru jako sladká limonáda. Nejlepší je chai ze sypané směsi, kde si sladkost určíš sám.</p>
 
-<p>Chuť chai latté perfektně ladí se <strong>sladkými brunch pokrmy</strong> – palačinkami, lívanci, banánovým chlebem nebo granolou. Zároveň si rozumí i se slanými jídly, jako jsou vaječné pokrmy nebo toasty. Právě díky své univerzálnosti patří chai latté mezi <strong>nejoblíbenější alternativní nápoje k brunchi</strong>. V létě navíc boduje i <strong>iced chai latté</strong>, které osvěží a přitom zachová typickou kořeněnou chuť.</p>
+<h2>Chai latte doma</h2>
+<ol>
+<li>Do hrnce dej 250 ml vody, 2 lžičky černého čaje, kousek skořice, 3 rozdrcené kardamomy, plátek zázvoru a 2 hřebíčky.</li>
+<li>Povař 5 minut, přidej 200 ml mléka a zahřej těsně pod bod varu.</li>
+<li>Přeceď, oslaď medem a napěň.</li>
+</ol>
 
-<h3 class="wp-block-heading">Je chai latté zdravé?</h3>
+<h2>Kde si dát dobrý chai latte</h2>
+<ul>
+<li><a href="/podniky/chloe-cafe-praha/"><strong>CHLOÉ café</strong></a> (Praha 1) – chai latte, který recenze řadí mezi nejlepší ve městě.</li>
+<li><a href="/podniky/enjoy-coffee-brunch-plzen/"><strong>Enjoy coffee &amp; brunch</strong></a> (Plzeň) – chai i matcha latte k brunchi každý den.</li>
+</ul>
 
-<p>Díky obsahu koření, jako je zázvor nebo skořice, je chai latté často vnímáno jako <strong>zdravější volba ke snídani nebo brunchi</strong>. Koření může podpořit trávení a zahřát organismus. Záleží ale na složení – některé chai sirupy obsahují více cukru, proto se vyplatí sledovat kvalitu použitých surovin nebo si chai latté připravit doma.</p>
-
-<h3 class="wp-block-heading">Shrnutí</h3>
-
-<p><strong>Chai latté</strong> je voňavý, jemně kořeněný nápoj, který skvěle zapadá do konceptu <strong>snídaně a brunchi</strong>. Nabízí alternativu ke kávě, příjemně zahřeje a dodá brunchi nový chuťový rozměr. Není divu, že se stal stálicí moderních kaváren i víkendových brunch menu.</p>
+<p>Chai se skvěle hodí ke sladkému brunchi – <a href="/livance-palacinky-pancakes-jaky-je-rozdil/">lívancům, palačinkám</a> nebo banánovému chlebu. Další zahřívací nápoje: <a href="/co-je-to-golden-milk/">golden milk</a> a <a href="/co-to-je-samahan/">samahan</a>. Podzimní tipy najdeš v článku <a href="/podzimni-brunch/">podzimní brunch</a>. ☕</p>

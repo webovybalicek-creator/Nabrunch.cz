@@ -4,6 +4,7 @@ description: "Lívance, palačinky a americké pancakes vypadají podobně, ale 
 seoTitle: "Lívance vs. palačinky vs. pancakes: jaký je rozdíl? | naBrunch.cz"
 date: "2026-11-09T13:15:00"
 image: "/wp-content/uploads/2025/11/479718059_1053126836833654_2811039050279643205_n.jpg"
+obdobi: [zima]
 ---
 
 <p>Na brunchovém lístku se potkávají <strong>lívance</strong>, <strong>palačinky</strong> i americké <strong>pancakes</strong>. Všechno jsou to placky z těsta na pánvi – ale každá je jiná. Tady je přehled, ať víš, co si objednat.</p>

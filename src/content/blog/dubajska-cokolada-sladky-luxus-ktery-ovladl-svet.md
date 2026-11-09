@@ -4,6 +4,7 @@ description: "Dubajská čokoláda s pistáciovým vnitřkem a vrstvami kataifi 
 seoTitle: "Dubajská čokoláda s pistáciemi a kataifi. - naBrunch.cz"
 date: "2025-11-16T08:49:28"
 image: "/wp-content/uploads/2025/11/ddee3039-119c-4ee0-9ca0-3f391f9e358d.png"
+obdobi: [zima]
 ---
 
 <p>Dubaj je město, které si potrpí na výjimečnost. Ať už jde o architekturu, zážitky, gastronomii nebo nákupy — vždy čekejte něco víc. Poslední roky se mezi tamními ikonami začal objevovat i nečekaný hráč: <strong>dubajská čokoláda</strong>.</p>

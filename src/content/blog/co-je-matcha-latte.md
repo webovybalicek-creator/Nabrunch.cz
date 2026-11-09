@@ -4,6 +4,7 @@ description: "Matcha latte je japonský práškový zelený čaj s mlékem. Jak 
 seoTitle: "Co je matcha latte? Chuť, kofein a kde si ji dát | naBrunch.cz"
 date: "2026-11-09T13:05:00"
 image: "/wp-content/uploads/2025/04/2025-02-21-1-scaled.jpg"
+obdobi: [jaro, leto]
 ---
 
 <p><strong>Matcha latte</strong> je nápoj z <strong>matchy</strong> – jemně mletého japonského zeleného čaje – a napěněného mléka. Má výraznou zelenou barvu, krémovou texturu a v kavárnách se z něj během pár let stala stálice vedle cappuccina nebo flat white.</p>

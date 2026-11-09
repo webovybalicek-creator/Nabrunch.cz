@@ -4,6 +4,9 @@ description: "Kam na Valentýna na brunch? Romantické a stylové podniky v Praz
 seoTitle: "Brunch na Valentýna 2027: kam vyrazit ve dvou | naBrunch.cz"
 date: "2026-11-09T13:20:00"
 image: "/wp-content/uploads/2025/05/475097597_18057699544951452_2078562216678727395_n.jpg"
+sezona:
+  - od: "01-15"
+    do: "02-14"
 ---
 
 <p>Valentýnská večeře je klasika, ale <strong>valentýnský brunch</strong> má něco do sebe. Žádný stres s rezervací na osmou večer, žádné předražené menu – jen pomalé ráno, dobrá káva a čas na sebe. Valentýn 2027 navíc vychází na <strong>neděli</strong>, takže na pozdní snídani ve dvou je ideální den.</p>
