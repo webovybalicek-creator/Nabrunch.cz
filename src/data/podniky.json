@@ -3683,59 +3683,6 @@
   ]
  },
  {
-  "id": 1358,
-  "slug": "charlies-cafe-praha-uhrineves",
-  "nazev": "Charlie's Cafe Praha Uhříněves",
-  "datum": "2025-04-09 18:51:05",
-  "doporuceny": false,
-  "lokality": [
-   "Praha 10",
-   "Praha"
-  ],
-  "adresa": "Křešínská 155/9, Praha - Uhříněves",
-  "lat": 50.0319551,
-  "lon": 14.5979637,
-  "oteviraciDoba": [
-   "Po - So: 10:00 - 19:00",
-   "Ne: 10:00 - 17:00"
-  ],
-  "web": "https://charliescafe.cz/",
-  "instagram": "@charliescafeuhrineves",
-  "instagramUrl": "https://www.instagram.com/charliescafeuhrineves",
-  "telefon": "+420774223722",
-  "telefonText": "+420 774 223 722",
-  "googleMaps": "https://maps.app.goo.gl/hNNdV1HAounRXVeD8",
-  "rezervace": "Ano, telefonicky",
-  "platba": [
-   "Kartou",
-   "Hotově"
-  ],
-  "wifi": true,
-  "wc": true,
-  "kuchyne": [
-   "Klasická",
-   "Vegetariánská"
-  ],
-  "atmosfera": [
-   "Sezení uvnitř",
-   "Zahrádka",
-   "Pet-friendly"
-  ],
-  "sezeni": [],
-  "tipNadpis": "Náš brunch tip",
-  "tip": "<p>„Zkus míchaná vejce a párky, nebo si pochutnej na domácích dezertech, které v Charlie's Cafe Uhříněves připravili s láskou. Skvělý způsob, jak si zpříjemnit ráno!“</p>",
-  "popis": "<p>Nově otevření malá rodinná kavárna v srdci Uhříněvsi, kde jídlo dělají <strong>s láskou</strong> a osobním přístupem. Nabízejí <strong>chutné snídaně</strong>, lehké obědy a po celý den si můžete vybrat z široké nabídky – od dezertů a polévek až po prkýnka s italskými uzeninami a sýry. K tomu si můžete vychutnat nealkoholické nápoje, ale také italské víno, Prosecco nebo točenou orosenou Plzeň. </p>\n\n<p>Pokud hledáte kam zajít na <strong>brunch v okolí Uhříněvsi</strong>, <strong>Charlie's Cafe Uhříněves je jasná volba.</strong></p>\n\n<p></p>",
-  "seoTitulek": "Charlie's Cafe Praha Uhříněves - naBrunch.cz",
-  "seoPopis": "Charlie's Cafe Praha Uhříněves je rodinná kavárna v Uhříněvsi, která nabízí super snídaně, brunche, lehké obědy, italské uzeniny a točenou Plzeň.",
-  "foto": "/wp-content/uploads/2025/04/474034325_122118989792610871_561532769792238302_n.jpg",
-  "galerie": [
-   "/wp-content/uploads/2025/04/485178772_122128015490610871_3078248950219027493_n.jpg",
-   "/wp-content/uploads/2025/04/481915446_122125129622610871_2758295570117571199_n.jpg",
-   "/wp-content/uploads/2025/04/485187446_122128015412610871_5975011010349746988_n.jpg",
-   "/wp-content/uploads/2025/04/485177571_122128015352610871_3936799948447261444_n.jpg"
-  ]
- },
- {
   "id": 1350,
   "slug": "antoninovo-pekarstvi",
   "nazev": "Antonínovo pekařství Praha",

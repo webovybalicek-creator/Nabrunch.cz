@@ -47,6 +47,8 @@ DirectoryIndex index.html
   RewriteRule ^brunch-vs-snidane-tady-je-rozdil/?$ /co-je-to-brunch/ [L,R=301]
   RewriteRule ^kam-na-snidani-nebo-brunch-v-brne-2-cast/?$ /kam-na-snidani-nebo-brunch-v-brne/ [L,R=301]
   RewriteRule ^novy-matcha-spot-v-praze-jun-matcha-bar-vas-okouzli-nejen-matchou/?$ /podniky/jun-matcha-bar-praha/ [L,R=301]
+  # Trvale zavřené podniky (odebrané z webu) → stránka lokality
+  RewriteRule ^podniky/charlies-cafe-praha-uhrineves/?$ /lokalita/praha-10/ [L,R=301]
 </IfModule>
 
 # Interní soubory nezveřejňovat (manifest deploye, konfigurace s API klíčem)
