@@ -148,7 +148,7 @@ export const kmText = (k: number) =>
   k < 1 ? `${Math.max(50, Math.round((k * 1000) / 50) * 50)} m` : `${k.toLocaleString('cs-CZ', { maximumFractionDigits: 1 })} km`;
 
 // ---------------------------------------------------------------- filtry a tematické stránky
-export const KUCHYNE = ['Klasická', 'Veganská', 'Vegetariánská', 'Zdravá/fitness', 'Orientální'] as const;
+export const KUCHYNE = ['Klasická', 'Veganská', 'Zdravá/fitness', 'Orientální'] as const;
 export const ATMOSFERA = ['Sezení uvnitř', 'Zahrádka', 'Pet-friendly', 'Instagram-friendly místo'] as const;
 
 export interface Tema {
@@ -171,15 +171,6 @@ export const TEMATA: Tema[] = [
     kratce: 'Veganské',
     emoji: '🌱',
     popis: 'Podniky, kde si dáš snídani nebo brunch úplně bez živočišných produktů – od tofu scramble po rostlinné palačinky.',
-  },
-  {
-    slug: 'vegetarianske-snidane-a-brunche',
-    hodnota: 'Vegetariánská',
-    pole: 'kuchyne',
-    nadpis: 'Vegetariánské snídaně a brunche',
-    kratce: 'Vegetariánské',
-    emoji: '🥑',
-    popis: 'Místa s vegetariánskou nabídkou na snídani a brunch – vejce, avokádo, sýry, pečivo i sladké talíře.',
   },
   {
     slug: 'zdrave-snidane-a-brunche',
@@ -300,7 +291,7 @@ export interface Kombinace {
 const KOMBINACE_MIN = 3;
 const KOMBINACE_MAX_PODIL = 0.8;
 /** Hodnoty, které mají skoro všechny podniky – samostatná stránka by nic nepřinesla */
-const KOMBINACE_BEZ = ['Klasická', 'Vegetariánská'];
+const KOMBINACE_BEZ = ['Klasická'];
 
 let _komb: Kombinace[] | undefined;
 export function kombinace(): Kombinace[] {
