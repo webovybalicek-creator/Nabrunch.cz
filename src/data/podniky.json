@@ -1,5 +1,50 @@
 [
  {
+  "id": 2345,
+  "slug": "coffee-bird-praha",
+  "nazev": "Coffee Bird Praha",
+  "datum": "2026-11-12 10:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 1",
+   "Praha"
+  ],
+  "adresa": "Pštrossova 1924/8, Praha 1",
+  "lat": 50.0781859,
+  "lon": 14.4162952,
+  "oteviraciDoba": [
+   "Po - Ne: 8:30 - 19:30"
+  ],
+  "web": null,
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Coffee+Bird,+Pštrossova+1924/8,+Praha",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Snídaně a brunch se podávají do 14:00. Ochutnej krupicovou kaši s čokoládou nebo french toast s borůvkovým rozvarem, který podle CzechCrunche chutná skoro jako borůvkové knedlíky.</p>",
+  "popis": "<p>Coffee Bird je malá snídaňová kavárna v Pštrossově ulici, hned vedle známého knihkupectví a kavárny Globe. Otevřeli ji v létě 2026 manželé Adéla a Bruno Krausovi a o víkendech se sem podle <a href=\"https://cc.cz/mladi-manzele-rozjeli-vysnenou-kavarnu-vypada-jako-obyvak-a-na-jejich-krupicovou-kasi-se-stoji-fronty/\">CzechCrunche</a> stojí fronty.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch do 14:00</h2>\n\n<p>Menu sestavila Adéla Krausová, která dřív působila v karlínské Etapě a vedla kuchyni ve vršovické Sestavě. Najdeš tu <strong>vaječná jídla, domácí granolu, krupicovou kaši s čokoládou</strong> a french toast s borůvkovým rozvarem. Kávu dodává pražírna Doubleshot, pečivo pekárna Zrno a Zrnko, buchty a sušenky pečou na místě.</p>\n\n<h2 class=\"wp-block-heading\">Jako u kamarádů v obýváku</h2>\n\n<p>Prostor pro zhruba dvacet hostů působí domácky: velký dřevěný stůl, retro nábytek, knihovna a komoda se žlutými šuplíky. Klasický bar tu chybí, obsluha se pohybuje volně mezi hosty. O kavárně psal i <a href=\"https://forbes.cz/jako-kdyz-prijdou-kamaradi-mlady-par-otevrel-kavarnu-ktera-pripomina-obyvak/\">Forbes</a>.</p>",
+  "seoTitulek": "Coffee Bird Praha – snídaně a brunch v Pštrossově ulici",
+  "seoPopis": "Coffee Bird v Praze 1: nová snídaňová kavárna vedle Globe. Vajíčka, krupicová kaše, french toast a káva z Doubleshotu, brunch denně do 14:00.",
+  "foto": "/wp-content/uploads/2026/11/coffee-bird-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/coffee-bird-praha-2.jpg",
+   "/wp-content/uploads/2026/11/coffee-bird-praha-3.jpg"
+  ]
+ },
+ {
   "id": 2342,
   "slug": "und-kaffee-praha",
   "nazev": "Ünd Kaffee Praha",
