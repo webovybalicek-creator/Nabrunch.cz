@@ -1,5 +1,51 @@
 [
  {
+  "id": 2344,
+  "slug": "la-forme-rytirska-praha",
+  "nazev": "La Forme Rytířská Praha",
+  "datum": "2026-11-12 10:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 1",
+   "Praha"
+  ],
+  "adresa": "Rytířská 528/1, Praha 1",
+  "lat": 50.0840525,
+  "lon": 14.4207066,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 19:00",
+   "So - Ne: 8:00 - 19:00"
+  ],
+  "web": null,
+  "instagram": "@laformebakery",
+  "instagramUrl": "https://www.instagram.com/laformebakery/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=La+Forme,+Rytířská+1,+Praha",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijď spíš dopoledne – na starších pobočkách La Forme bývá pečivo brzy vyprodané. Vyber si plněný croissant nebo danish a k tomu výběrovou kávu či matchu.</p>",
+  "popis": "<p>La Forme patří mezi nejlépe hodnocené pražské pekárny a v srpnu 2026 otevřela třetí a zatím největší pobočku přímo v centru, v Rytířské ulici kousek od Můstku. Na rozdíl od dejvické minipekárny se tu dá v klidu posedět – kavárna má zhruba dvacet míst a pekárnu přímo na místě.</p>\n\n<h2 class=\"wp-block-heading\">Croissanty, danishe a skandinávský styl</h2>\n\n<p>Pečivo vzniká přímo v Rytířské: <strong>plněné croissanty, hravé danishe a sladké motance</strong>. K tomu výběrová káva a matcha. Interiér je světlý a minimalistický, inspirovaný Skandinávií. Zakladatel Vladislav Bogdanov podle <a href=\"https://cc.cz/jedna-z-nejlepe-hodnocenych-prazskych-pekaren-otevrela-novou-pobocku-stesti-zkousi-i-v-centru/\">CzechCrunche</a> chce, aby pobočka sloužila hlavně místním.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně v centru Prahy</h2>\n\n<p>Díky otevírací době od 7:30 ve všední dny se hodí na rychlou snídani cestou do práce i na pomalejší víkendové ráno se sladkým pečivem.</p>",
+  "seoTitulek": "La Forme Rytířská – pekárna a kavárna v centru Prahy",
+  "seoPopis": "Nová pobočka pekárny La Forme v Rytířské ulici v Praze 1: croissanty a danishe z vlastní pekárny, výběrová káva a matcha. Otevřeno denně od 7:30.",
+  "foto": "/wp-content/uploads/2026/11/la-forme-rytirska-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/la-forme-rytirska-2.jpg",
+   "/wp-content/uploads/2026/11/la-forme-rytirska-3.jpg",
+   "/wp-content/uploads/2026/11/la-forme-rytirska-4.jpg"
+  ]
+ },
+ {
   "id": 2343,
   "slug": "hans-coffee-praha",
   "nazev": "Hans coffee Praha",
