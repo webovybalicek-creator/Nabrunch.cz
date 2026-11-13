@@ -58,9 +58,23 @@ const PRIPONA = /\.(jpe?g|png|webp|gif|avif)$/i;
 export const nahled = (cesta: string) => cesta.replace(/^\/wp-content\/uploads\//, '/nahledy/').replace(PRIPONA, '.webp');
 /** Velký obrázek (1400 px, WebP) – detail, galerie, články */
 export const velky = (cesta: string) => cesta.replace(/^\/wp-content\/uploads\//, '/obrazky/').replace(PRIPONA, '.webp');
+/** Odkazy v obsahu (popisy, tipy, články, stránky) otevírat v novém okně.
+ *  Kotvy (#…), e-maily a telefony zůstávají v aktuálním okně. */
+export const odkazyVNovemOkne = (html: string) =>
+  html.replace(/<a\b([^>]*)>/gi, (cele, attrs: string) => {
+    const href = /\shref\s*=\s*["']([^"']*)["']/i.exec(attrs)?.[1]?.trim() ?? '';
+    if (!href || /^(#|mailto:|tel:|javascript:)/i.test(href)) return cele;
+    let a = attrs.replace(/\starget\s*=\s*(["'])[^"']*\1/gi, '');
+    const rel = /\srel\s*=\s*(["'])([^"']*)\1/i.exec(a);
+    const hodnoty = new Set((rel?.[2] ?? '').split(/\s+/).filter(Boolean));
+    hodnoty.add('noopener');
+    a = rel ? a.replace(rel[0], ` rel="${[...hodnoty].join(' ')}"`) : `${a} rel="noopener"`;
+    return `<a${a} target="_blank">`;
+  });
+
 /** HTML z WordPressu: odkazy na obrázky v /wp-content/uploads/ → WebP v /obrazky/ */
 export const obrazkyVHtml = (html: string) =>
-  html.replace(/\/wp-content\/uploads\/([^"'\s)]+?)\.(jpe?g|png|webp|gif)(?=["'\s)])/gi, '/obrazky/$1.webp')
+  odkazyVNovemOkne(html).replace(/\/wp-content\/uploads\/([^"'\s)]+?)\.(jpe?g|png|webp|gif)(?=["'\s)])/gi, '/obrazky/$1.webp')
     // <img> s WebP → <picture> s AVIF (menší) a WebP jako zálohou
     .replace(/<img\b([^>]*?)\ssrc="(\/obrazky\/[^"]+)\.webp"([^>]*)>/gi, '<picture><source type="image/avif" srcset="$2.avif"><img$1 src="$2.webp"$3></picture>');
 

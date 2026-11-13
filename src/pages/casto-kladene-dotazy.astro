@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import { SITE } from '../lib/config';
+import { odkazyVNovemOkne } from '../lib/data';
 
 const dotazy: [string, string][] = [
   ['🥐 Jak funguje naBrunch.cz?', 'Projekt naBrunch.cz je průvodce těmi nejlepšími místy na snídani a brunche v Česku. Pomocí filtrů si můžeš vybrat podnik podle města, typu kuchyně nebo pohodlí – a objevit místa, kam se budeš chtít vracet.'],
@@ -36,7 +37,7 @@ const jsonLd = {
         dotazy.map(([q, a], i) => (
           <details open={i === 0}>
             <summary>{q}</summary>
-            <p set:html={a} />
+            <p set:html={odkazyVNovemOkne(a)} />
           </details>
         ))
       }
