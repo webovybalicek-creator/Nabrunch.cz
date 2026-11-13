@@ -30,7 +30,7 @@ Podrobnosti viz `README.md`.
 | Barvy, písma, rozvržení | `src/styles/global.css` (proměnné v `:root`) |
 | E-mail, sociální sítě, AdSense, GA | `src/lib/config.ts` |
 | Přesměrování starých adres | `public/.htaccess` |
-| Formuláře (přidat podnik, newsletter, hodnocení) | `public/api/*.php` |
+| Formuláře (přidat podnik, newsletter, správa kaváren) | `public/api/*.php` |
 
 ## Přidání nebo úprava podniku
 

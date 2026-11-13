@@ -479,36 +479,6 @@ a.tag:hover {
   font-weight: 600;
 }
 
-/* Hvězdičky: <span class="hv" style="--p:80%"> */
-.hv {
-  display: inline-block;
-  width: 5.4em;
-  height: 1em;
-  vertical-align: -0.12em;
-  background: linear-gradient(90deg, var(--accent) var(--p, 0%), #ecdcd5 var(--p, 0%));
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z'/%3E%3C/svg%3E") 0 0 / 1.08em 1em repeat-x;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z'/%3E%3C/svg%3E") 0 0 / 1.08em 1em repeat-x;
-}
-
-/* Malé hodnocení na kartách (doplní src/scripts/hodnoceni-souhrn.ts) */
-.hod-mini {
-  display: flex;
-  align-items: center;
-  gap: 0.3em;
-  min-height: 1.3em;
-  margin-top: 0.3rem;
-  font-size: 0.8rem;
-  color: var(--ink-soft);
-  white-space: nowrap;
-}
-.hod-mini strong {
-  color: var(--brown-dark);
-  font-weight: 600;
-}
-.hod-mini__nic {
-  font-size: 0.76rem;
-}
-
 /* Tlačítka: decentní nadzvednutí při najetí (drobky padají přes src/scripts/drobky.ts) */
 .btn {
   will-change: transform;
