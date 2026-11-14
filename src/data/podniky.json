@@ -12,7 +12,12 @@
   "adresa": "Slavíkova 6, Praha 3",
   "lat": 50.0788941,
   "lon": 14.4484717,
-  "oteviraciDoba": [],
+  "oteviraciDoba": [
+   "Po - Út: 8:00 - 18:00",
+   "St - Pá: 8:00 - 22:00",
+   "So: 9:00 - 22:00",
+   "Ne: 9:00 - 18:00"
+  ],
   "web": null,
   "instagram": null,
   "instagramUrl": null,
@@ -32,7 +37,7 @@
   "sezeni": [],
   "tipNadpis": "Náš brunch tip",
   "tip": "<p>K snídani ochutnej chleba s tvarohem a vajíčkem nebo stracciatellu se švestkami, broskvemi a shisem. A nezapomeň na pečivo z vlastní pekárny Kin & K – proslavily ji kardamomové pletence.</p>",
-  "popis": "<p>Pomalu pomalu je celodenní bistro na rohu Slavíkovy a Ondříčkovy ulice, pár kroků od náměstí Jiřího z Poděbrad. Otevřelo na podzim 2026 a stojí za ním tým pekárny <strong>Kin & K Bakery</strong> v čele s Haithamem Al-Shoriym, který založil i pražírnu Tribes of Mokha. Psal o něm <a href=\"https://cc.cz/chleba-pecou-v-obchodaku-a-zasobi-jim-prazske-podniky-ted-na-vinohradech-rozjeli-vlastni-bistro/\">CzechCrunch</a>.</p>\n\n<h2 class=\"wp-block-heading\">Pečivo, káva a brunch</h2>\n\n<p>Pečivo pochází z vlastní pekárny Kin & K, která zásobuje i známé pražské kavárny jako Slavia, Louvre nebo SmetanaQ. K snídani tu dostaneš třeba <strong>chleba s tvarohem a vajíčkem</strong> nebo <strong>stracciatellu se švestkami a broskvemi</strong>. V kuchyni vaří Jakub Hais, který prošel zahraničními michelinskými podniky, pražskou La Degustation a Bistrem Karel.</p>\n\n<h2 class=\"wp-block-heading\">Ráno brunch, večer víno</h2>\n\n<p>Večer se podnik mění v bistro s ústřicemi, tatarákem nebo steakem a naturálními víny. Menu se má obměňovat každý měsíc. Které dny jsou věnované rannímu a které večernímu provozu, je dobré ověřit na sociálních sítích podniku.</p>",
+  "popis": "<p>Pomalu pomalu je celodenní bistro na rohu Slavíkovy a Ondříčkovy ulice, pár kroků od náměstí Jiřího z Poděbrad. Otevřelo na podzim 2026 a stojí za ním tým pekárny <strong>Kin & K Bakery</strong> v čele s Haithamem Al-Shoriym, který založil i pražírnu Tribes of Mokha. Psal o něm <a href=\"https://cc.cz/chleba-pecou-v-obchodaku-a-zasobi-jim-prazske-podniky-ted-na-vinohradech-rozjeli-vlastni-bistro/\">CzechCrunch</a>.</p>\n\n<h2 class=\"wp-block-heading\">Pečivo, káva a brunch</h2>\n\n<p>Pečivo pochází z vlastní pekárny Kin & K, která zásobuje i známé pražské kavárny jako Slavia, Louvre nebo SmetanaQ. K snídani tu dostaneš třeba <strong>chleba s tvarohem a vajíčkem</strong> nebo <strong>stracciatellu se švestkami a broskvemi</strong>. V kuchyni vaří Jakub Hais, který prošel zahraničními michelinskými podniky, pražskou La Degustation a Bistrem Karel.</p>\n\n<h2 class=\"wp-block-heading\">Ráno brunch, večer víno</h2>\n\n<p>Večer se podnik mění v bistro s ústřicemi, tatarákem nebo steakem a naturálními víny. Menu se má obměňovat každý měsíc. Od středy do soboty má otevřeno až do 22:00.</p>",
   "seoTitulek": "Pomalu pomalu Praha – bistro od Kin & K u Jiřího z Poděbrad",
   "seoPopis": "Pomalu pomalu na Vinohradech u Jiřího z Poděbrad: nové bistro od pekárny Kin & K. Brunch s vlastním pečivem a kávou, večer ústřice a naturální víno.",
   "foto": "/wp-content/uploads/2026/11/pomalu-pomalu-praha-1.jpg",
