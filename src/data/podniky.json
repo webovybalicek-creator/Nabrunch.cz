@@ -1,5 +1,51 @@
 [
  {
+  "id": 2348,
+  "slug": "cokafe-dolni-vitkovice-ostrava",
+  "nazev": "CØKAFE Dolní Vítkovice Ostrava",
+  "datum": "2026-11-14 21:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Ostrava"
+  ],
+  "adresa": "Vítkovická 3369, Ostrava",
+  "lat": 49.8216736,
+  "lon": 18.2778041,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 19:00",
+   "So: 8:00 - 20:00",
+   "Ne: 8:00 - 19:00"
+  ],
+  "web": "https://cokafe.com/kavarna-dov",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=CØKAFE+Dolní+Vítkovice,+Vítkovická+3369,+Ostrava",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Spoj snídani s procházkou po Dolních Vítkovicích. Na výběr máš vejce Benedikt nebo Florentine, french toast i granolu s jogurtem – a podle Forbesu se snídaně podávají až do dvou odpoledne.</p>",
+  "popis": "<p>CØKAFE Dolní Vítkovice je prostorná kavárna přímo v areálu bývalých železáren, jedné z nejnavštěvovanějších památek Ostravy. Patří do ostravské sítě kaváren CØKAFE, kterou vybudoval bývalý profesionální volejbalista Richard Mauler – začínal s pojízdnou kavárnou na kole a dnes má několik poboček v Ostravě i okolí (<a href=\"https://forbes.cz/vybudoval-kavarensky-lovebrand-ted-chce-mauler-ozivit-ostravu-food-marketem/\">Forbes</a>).</p>\n\n<h2 class=\"wp-block-heading\">Snídaně v Dolních Vítkovicích</h2>\n\n<p>Na snídaňovém menu najdeš <strong>vejce Benedikt a Florentine</strong>, <strong>french toast</strong>, granolu, tousty, lívance i sendviče. Podle <a href=\"https://forbes.cz/brunch-v-ostrave-pet-ultimatnich-gastro-tipu-ve-meste-s-ocelovym-srdcem/\">Forbesu</a> se snídaně podávají až do dvou odpoledne, k obědu je lehčí denní nabídka. Kávu i pečivo dělá CØKAFE ve vlastní režii.</p>\n\n<h2 class=\"wp-block-heading\">Velký prostor i pro partu</h2>\n\n<p>Interiér navrhlo ostravské studio Ark architekta Petra Kundráta a míst je tu dost i pro větší skupinu. Otevřeno je každý den od 8:00. Hned vedle je velké parkoviště, tramvají dojedeš na zastávku Dolní Vítkovice Hlubina.</p>",
+  "seoTitulek": "CØKAFE Dolní Vítkovice – snídaně a brunch v Ostravě",
+  "seoPopis": "CØKAFE v Dolních Vítkovicích v Ostravě: vejce Benedikt, french toast a granola, snídaně až do odpoledne, otevřeno denně od 8:00. Velký prostor a parkoviště.",
+  "foto": "/wp-content/uploads/2026/11/cokafe-dolni-vitkovice-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/cokafe-dolni-vitkovice-2.jpg",
+   "/wp-content/uploads/2026/11/cokafe-dolni-vitkovice-3.jpg",
+   "/wp-content/uploads/2026/11/cokafe-dolni-vitkovice-4.jpg"
+  ]
+ },
+ {
   "id": 2349,
   "slug": "buchta-b-brno",
   "nazev": "Buchta B Brno",
@@ -46,52 +92,6 @@
    "/wp-content/uploads/2026/11/buchta-b-brno-2.jpg",
    "/wp-content/uploads/2026/11/buchta-b-brno-3.jpg",
    "/wp-content/uploads/2026/11/buchta-b-brno-4.jpg"
-  ]
- },
- {
-  "id": 2348,
-  "slug": "cokafe-dolni-vitkovice-ostrava",
-  "nazev": "CØKAFE Dolní Vítkovice Ostrava",
-  "datum": "2026-11-14 21:00:00",
-  "doporuceny": false,
-  "lokality": [
-   "Ostrava"
-  ],
-  "adresa": "Vítkovická 3369, Ostrava",
-  "lat": 49.8216736,
-  "lon": 18.2778041,
-  "oteviraciDoba": [
-   "Po - Pá: 8:00 - 19:00",
-   "So: 8:00 - 20:00",
-   "Ne: 8:00 - 19:00"
-  ],
-  "web": "https://cokafe.com/kavarna-dov",
-  "instagram": null,
-  "instagramUrl": null,
-  "telefon": null,
-  "telefonText": null,
-  "googleMaps": "https://www.google.com/maps/search/?api=1&query=CØKAFE+Dolní+Vítkovice,+Vítkovická+3369,+Ostrava",
-  "rezervace": null,
-  "platba": [],
-  "wifi": null,
-  "wc": null,
-  "kuchyne": [
-   "Klasická"
-  ],
-  "atmosfera": [
-   "Sezení uvnitř"
-  ],
-  "sezeni": [],
-  "tipNadpis": "Náš brunch tip",
-  "tip": "<p>Spoj snídani s procházkou po Dolních Vítkovicích. Na výběr máš vejce Benedikt nebo Florentine, french toast i granolu s jogurtem – a podle Forbesu se snídaně podávají až do dvou odpoledne.</p>",
-  "popis": "<p>CØKAFE Dolní Vítkovice je prostorná kavárna přímo v areálu bývalých železáren, jedné z nejnavštěvovanějších památek Ostravy. Patří do ostravské sítě kaváren CØKAFE, kterou vybudoval bývalý profesionální volejbalista Richard Mauler – začínal s pojízdnou kavárnou na kole a dnes má několik poboček v Ostravě i okolí (<a href=\"https://forbes.cz/vybudoval-kavarensky-lovebrand-ted-chce-mauler-ozivit-ostravu-food-marketem/\">Forbes</a>).</p>\n\n<h2 class=\"wp-block-heading\">Snídaně v Dolních Vítkovicích</h2>\n\n<p>Na snídaňovém menu najdeš <strong>vejce Benedikt a Florentine</strong>, <strong>french toast</strong>, granolu, tousty, lívance i sendviče. Podle <a href=\"https://forbes.cz/brunch-v-ostrave-pet-ultimatnich-gastro-tipu-ve-meste-s-ocelovym-srdcem/\">Forbesu</a> se snídaně podávají až do dvou odpoledne, k obědu je lehčí denní nabídka. Kávu i pečivo dělá CØKAFE ve vlastní režii.</p>\n\n<h2 class=\"wp-block-heading\">Velký prostor i pro partu</h2>\n\n<p>Interiér navrhlo ostravské studio Ark architekta Petra Kundráta a míst je tu dost i pro větší skupinu. Otevřeno je každý den od 8:00. Hned vedle je velké parkoviště, tramvají dojedeš na zastávku Dolní Vítkovice Hlubina.</p>",
-  "seoTitulek": "CØKAFE Dolní Vítkovice – snídaně a brunch v Ostravě",
-  "seoPopis": "CØKAFE v Dolních Vítkovicích v Ostravě: vejce Benedikt, french toast a granola, snídaně až do odpoledne, otevřeno denně od 8:00. Velký prostor a parkoviště.",
-  "foto": "/wp-content/uploads/2026/11/cokafe-dolni-vitkovice-1.jpg",
-  "galerie": [
-   "/wp-content/uploads/2026/11/cokafe-dolni-vitkovice-2.jpg",
-   "/wp-content/uploads/2026/11/cokafe-dolni-vitkovice-3.jpg",
-   "/wp-content/uploads/2026/11/cokafe-dolni-vitkovice-4.jpg"
   ]
  },
  {
