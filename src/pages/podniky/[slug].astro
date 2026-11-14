@@ -26,6 +26,7 @@ import {
 } from '../../lib/data';
 import { schemaSpec } from '../../lib/oteviraci-doba';
 import { clanky, clankyOPodniku } from '../../lib/blog';
+import { dotazyPodniku } from '../../lib/dotazy';
 
 export function getStaticPaths() {
   return PODNIKY.map((p) => ({ params: { slug: p.slug }, props: { p } }));
@@ -56,20 +57,45 @@ const parametry = [
   ['Sezení', [...new Set([...p.sezeni, ...p.atmosfera.filter((a) => a === 'Zahrádka' || a === 'Sezení uvnitř')].map((s) => (s === 'Sezení uvnitř' ? 'Uvnitř' : s)))].join(', ') || undefined],
 ].filter(([, v]) => v) as [string, string][];
 
-const jsonLd = {
+const dotazy = dotazyPodniku(p);
+const adresaWeb = new URL(url(p), SITE.url).href;
+const vybaveni = [
+  p.wifi === true && 'Wi-Fi',
+  (p.atmosfera.includes('Zahrádka') || p.sezeni.includes('Zahrádka')) && 'Venkovní zahrádka',
+  p.atmosfera.includes('Pet-friendly') && 'Vstup se psy',
+  p.wc === true && 'WC',
+].filter(Boolean) as string[];
+const podnikLd = {
   '@context': 'https://schema.org',
   '@type': 'CafeOrCoffeeShop',
+  '@id': `${adresaWeb}#podnik`,
   name: p.nazev,
-  url: new URL(url(p), SITE.url).href,
+  url: adresaWeb,
+  description,
   image: fotky.slice(0, 4).map((f) => new URL(velky(f), SITE.url).href),
   address: { '@type': 'PostalAddress', streetAddress: p.adresa, addressLocality: m.replace(/ \d+$/, ''), addressCountry: 'CZ' },
   ...(p.lat != null ? { geo: { '@type': 'GeoCoordinates', latitude: p.lat, longitude: p.lon } } : {}),
   ...(p.telefon ? { telephone: p.telefon } : {}),
-  ...(p.web ? { sameAs: [p.web, p.instagramUrl].filter(Boolean) } : {}),
+  ...(p.web || p.instagramUrl ? { sameAs: [p.web, p.instagramUrl].filter(Boolean) } : {}),
+  ...(p.googleMaps ? { hasMap: p.googleMaps } : {}),
+  ...(p.platba.length ? { paymentAccepted: p.platba.map((x) => (x === 'Kartou' ? 'Platební karta' : x === 'Hotově' ? 'Hotovost' : x)).join(', ') } : {}),
+  ...(vybaveni.length
+    ? { amenityFeature: vybaveni.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })) }
+    : {}),
   ...(tyden ? { openingHoursSpecification: schemaSpec(tyden) } : {}),
   servesCuisine: p.kuchyne,
   acceptsReservations: !!p.rezervace && !/^ne\b/i.test(p.rezervace),
 };
+const jsonLd = dotazy.length
+  ? [
+      podnikLd,
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: dotazy.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+      },
+    ]
+  : podnikLd;
 ---
 
 <Base title={title} description={description} obrazek={p.foto} jsonLd={jsonLd}>
@@ -144,6 +170,19 @@ const jsonLd = {
                   </a>
                 ))}
               </p>
+            )
+          }
+          {
+            dotazy.length > 0 && (
+              <section class="dotazy">
+                <h2>Časté dotazy</h2>
+                {dotazy.map(([q, a]) => (
+                  <div class="dotazy__polozka">
+                    <h3>{q}</h3>
+                    <p>{a}</p>
+                  </div>
+                ))}
+              </section>
             )
           }
         </div>
@@ -306,6 +345,31 @@ const jsonLd = {
     background: var(--accent);
     color: #fff;
     font: 600 0.78rem/1.3 var(--f-display);
+  }
+  .dotazy {
+    margin-top: 2.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--line);
+  }
+  .dotazy h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+  .dotazy__polozka {
+    padding: 0.85rem 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .dotazy__polozka:last-child {
+    border-bottom: 0;
+  }
+  .dotazy h3 {
+    font-size: 1rem;
+    margin: 0 0 0.3rem;
+  }
+  .dotazy p {
+    margin: 0;
+    color: var(--ink-soft);
+    max-width: none;
   }
   .detail-adr {
     margin: 0 0 0.75rem;
