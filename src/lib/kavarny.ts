@@ -4,6 +4,7 @@
 import data from '../data/kavarny.json';
 import majiteleRaw from '../data/kavarny-majitele.json';
 import { PODNIKY, url as podnikUrl, kmText, type Podnik } from './data';
+import { slugify } from './slug';
 import { parseTyden, souhrn, hhmm, type Tyden } from './oteviraci-doba';
 
 export interface Kavarna {
@@ -135,8 +136,26 @@ const ZALOZENE: Kavarna[] = Object.entries(MAJITELE)
 
 /** Všechny kavárny z importu (i ty, které ještě nejsou zveřejněné) a kavárny založené majiteli */
 export const VSECHNY_KAVARNY: Kavarna[] = [...((data as { kavarny?: Kavarna[] }).kavarny ?? []), ...ZALOZENE].map(sUpravou);
+/** Stejné pravidlo jako při importu (scripts/import-kavarny.mjs): do 60 m od ověřeného podniku s podobným názvem,
+ *  nebo do 15 m → je to duplicita. Díky tomu kavárna zmizí hned po přidání podniku, ne až při dalším importu. */
+const normNazev = (s: string) => slugify(s).replace(/-(cafe|kavarna|coffee|bistro|praha|brno)$/g, '');
+const metry = (aLat: number, aLon: number, bLat: number, bLon: number) => {
+  const r = Math.PI / 180;
+  const h = Math.sin(((bLat - aLat) * r) / 2) ** 2 + Math.cos(aLat * r) * Math.cos(bLat * r) * Math.sin(((bLon - aLon) * r) / 2) ** 2;
+  return 12742000 * Math.asin(Math.sqrt(h));
+};
+const jeDuplicitaPodniku = (k: Kavarna) =>
+  PODNIKY.some((p) => {
+    if (p.lat == null || p.lon == null) return false;
+    const m = metry(k.lat, k.lon, p.lat, p.lon);
+    if (m > 60) return false;
+    const a = normNazev(k.nazev), b = normNazev(p.nazev);
+    return m <= 15 || b.includes(a.slice(0, 6)) || a.includes(b.slice(0, 6));
+  });
 /** Zveřejněné kavárny: čas zveřejnění už nastal, nebo je ověřil majitel */
-export const KAVARNY: Kavarna[] = VSECHNY_KAVARNY.filter((k) => k.overeno || (k.zverejnit && Date.parse(k.zverejnit) <= TED));
+export const KAVARNY: Kavarna[] = VSECHNY_KAVARNY.filter(
+  (k) => (k.overeno || (k.zverejnit && Date.parse(k.zverejnit) <= TED)) && (k.overeno || !jeDuplicitaPodniku(k)),
+);
 export const ZDROJ = (data as { zdroj?: string }).zdroj ?? '© přispěvatelé OpenStreetMap';
 
 export const kavarnaUrl = (k: Kavarna) => `/kavarny/${k.mestoSlug}/${k.slug}/`;

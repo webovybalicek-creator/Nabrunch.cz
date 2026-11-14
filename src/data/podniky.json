@@ -1,5 +1,54 @@
 [
  {
+  "id": 2349,
+  "slug": "buchta-b-brno",
+  "nazev": "Buchta B Brno",
+  "datum": "2026-11-14 21:10:00",
+  "doporuceny": false,
+  "lokality": [
+   "Brno"
+  ],
+  "adresa": "Štefánikova 85/16, Brno",
+  "lat": 49.2090961,
+  "lon": 16.6038115,
+  "oteviraciDoba": [
+   "Po: 6:30 - 19:00",
+   "Út: 6:30 - 19:00",
+   "St - Pá: 6:30 - 20:30",
+   "So: 8:00 - 20:30",
+   "Ne: 8:00 - 18:00"
+  ],
+  "web": null,
+  "instagram": "@buchta_b",
+  "instagramUrl": "https://www.instagram.com/buchta_b/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Buchta+B,+Štefánikova+16,+Brno",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická",
+   "Veganská"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnej lívance – podle Forbesu jsou stálicí menu s javorovým sirupem, slaninou, banánem a šlehanou ricottou. A ke kávě si vezmi buchtu, podle které má podnik jméno.</p>",
+  "popis": "<p>Buchta B je snídaňová kavárna na Štefánikově ulici v Brně, kousek od Lužánek. Otevírá už v 6:30, takže se hodí na snídani cestou do práce i na pomalý víkendový brunch. Vede ji mladý pár, který si podle <a href=\"https://forbes.cz/buchty-komari-i-veganske-utulno-kam-na-nejlepsi-brunch-v-brne/\">Forbesu</a> přivezl ze Skotska lásku k britské brunchové kultuře a tamní pohostinnost.</p>\n\n<h2 class=\"wp-block-heading\">Brunch pro každého</h2>\n\n<p>Buchta B se snaží, aby se dobře najedl každý bez ohledu na dietu. V nabídce jsou <strong>bezlepkové a veganské varianty</strong>, včetně lívanců. Menu se mění podle sezóny, stálicí jsou <strong>lívance s javorovým sirupem</strong>, slaninou, banánem a ricottou – a samozřejmě <strong>české buchty</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Káva z evropských pražíren</h2>\n\n<p>Kávu připravují ze zrn různých evropských i českých pražíren, které se střídají. Pokud držíš přísnou bezlepkovou dietu, ověř si podmínky přípravy přímo na místě – kavárna není čistě bezlepkový provoz.</p>",
+  "seoTitulek": "Buchta B Brno – snídaně od 6:30 a brunch bez lepku",
+  "seoPopis": "Buchta B na Štefánikově v Brně: snídaně už od 6:30, víkendový brunch, lívance s javorovým sirupem, bezlepkové a veganské varianty a domácí buchty.",
+  "foto": "/wp-content/uploads/2026/11/buchta-b-brno-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/buchta-b-brno-2.jpg",
+   "/wp-content/uploads/2026/11/buchta-b-brno-3.jpg",
+   "/wp-content/uploads/2026/11/buchta-b-brno-4.jpg"
+  ]
+ },
+ {
   "id": 2347,
   "slug": "dabl-bistro-praha",
   "nazev": "Dabl. bistro Praha",
