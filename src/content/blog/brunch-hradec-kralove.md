@@ -19,8 +19,8 @@ image: "/wp-content/uploads/2025/03/eggsit1.jpg"
 <p>🍳 <strong>Co si dát:</strong> víkendový brunch s výhledem na náměstí.</p>
 
 <h3>👉🏼 <a href="/podniky/la-cafe-hradec-kralove/">La Café</a> – V Kopečku</h3>
-<p>Útulný bistro bar kousek pod Velkým náměstím, u zastávky Adalbertinum. Snídaně, brunch, výběrová káva a domácí dorty. Otevřeno je každý den, v neděli do 16:00.</p>
-<p>🍳 <strong>Co si dát:</strong> snídani a ke kávě kousek domácího dortu.</p>
+<p>Útulný bistro bar kousek pod Velkým náměstím, u zastávky Adalbertinum. Snídaně, brunch, výběrová káva a domácí dorty, v létě i s terasou. Otevřeno je každý den, v neděli do 16:00.</p>
+<p>🍳 <strong>Co si dát:</strong> anglickou snídani, nebo sladký french toast s lesním ovocem.</p>
 
 <h2>Mimo centrum</h2>
 
@@ -39,7 +39,7 @@ image: "/wp-content/uploads/2025/03/eggsit1.jpg"
 <li><strong>Brunch v neděli:</strong> La Café (od 9:00) nebo Localis (od 9:30).</li>
 <li><strong>Brzy ráno před prací:</strong> Eggsit a V Pekárně otevírají v 7:30.</li>
 <li><strong>S dětmi:</strong> TimePlay s dětskými koutky.</li>
-<li><strong>Se psem a venku:</strong> Eggsit café má zahrádku a pejsky vítá.</li>
+<li><strong>Se psem a venku:</strong> Eggsit café má zahrádku a pejsky vítá, venku se dá sedět i v La Café a V Pekárně.</li>
 </ul>
 
 <p>Všechny podniky najdeš i na stránce <a href="/lokalita/hradec-kralove/">snídaně a brunch v Hradci Králové</a> s mapou a otevírací dobou. Další hradecké kavárny jsou v přehledu <a href="/kavarny/hradec-kralove/">kavárny v Hradci Králové</a>. Znáš v Hradci skvělý brunch, který tu chybí? Napiš nám na <a href="mailto:karolina@nabrunch.cz">karolina@nabrunch.cz</a>. ☕</p>
