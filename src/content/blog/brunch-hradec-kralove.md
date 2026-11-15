@@ -26,7 +26,7 @@ image: "/wp-content/uploads/2025/03/eggsit1.jpg"
 
 <h3>👉🏼 <a href="/podniky/cafe-bistro-v-pekarne-hradec-kralove/">Café &amp; Bistro V Pekárně</a> – Františka Halase</h3>
 <p>Oblíbená kavárna mimo historické centrum se snídaněmi a brunchem, domácími limonádami, dezerty a poke bowly. Otevírá už v 7:30 a v létě se dá sedět na zahrádce.</p>
-<p>🍳 <strong>Co si dát:</strong> snídani s domácí limonádou.</p>
+<p>🍳 <strong>Co si dát:</strong> sendvič s volským okem a slaninou, toast s lososem a na závěr něco z vitríny s dezerty.</p>
 
 <h3>👉🏼 <a href="/podniky/timeplay-hradec-kralove/">TimePlay</a> – Havlíčkova</h3>
 <p>Rodinná kavárna se dvěma dětskými koutky – zatímco si děti hrají, ty si v klidu dáš snídani a kávu. Víc o ní píšeme v článku <a href="/kam-na-snidani-v-hradci-kralove-s-detmi-mame-pro-vas-tip/">Kam na snídani v Hradci Králové s dětmi</a>.</p>
