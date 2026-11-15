@@ -54,6 +54,8 @@ DirectoryIndex index.html
   RewriteRule ^podniky/charlies-cafe-praha-uhrineves/?$ /lokalita/praha-10/ [L,R=301]
   # Podniky odebrané ještě na WordPressu, Google je pořád zobrazuje
   RewriteRule ^podniky/(cafe-podnebi-brno|cha-do-brno)/?$ /lokalita/brno/ [L,R=301]
+  # Neověřené kavárny, ze kterých se staly ověřené podniky
+  RewriteRule ^kavarny/hradec-kralove/la-cafe/?$ /podniky/la-cafe-hradec-kralove/ [L,R=301]
   # Zrušené téma (štítek měly skoro všechny podniky) → přehled podniků
   RewriteRule ^vegetarianske-snidane-a-brunche/?$ /podniky/ [L,R=301]
 </IfModule>

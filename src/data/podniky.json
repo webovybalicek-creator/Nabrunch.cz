@@ -1,5 +1,145 @@
 [
  {
+  "id": 2352,
+  "slug": "localis-hradec-kralove",
+  "nazev": "Localis Hradec Králové",
+  "datum": "2026-11-15 12:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Hradec Králové"
+  ],
+  "adresa": "Velké náměstí 145/14, Hradec Králové",
+  "lat": 50.209739,
+  "lon": 15.8333786,
+  "oteviraciDoba": [
+   "Po - Čt: 8:00 - 22:00",
+   "Pá: 8:00 - 24:00",
+   "So: 9:30 - 24:00",
+   "Ne: 9:30 - 16:00"
+  ],
+  "web": "https://www.localis.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420495588153",
+  "telefonText": "+420 495 588 153",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Localis,+Velké+náměstí+145/14,+Hradec+Králové",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijď o víkendu na brunch – v sobotu se otevírá v 9:30, v neděli brunchem den končí už v 16:00. Ve všední dny se tu dá dobře nasnídat od osmi.</p>",
+  "popis": "<p>Localis je restaurace a kavárna přímo na Velkém náměstí v historickém centru Hradce Králové. Jak napovídá název, stojí na <strong>lokálních surovinách</strong>. Podle <a href=\"https://www.kudyznudy.cz/aktivity/restaurace-localis\">Kudy z nudy</a> tu najdeš snídaně, týdenní menu, večeře i <strong>víkendové brunche</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně na Velkém náměstí</h2>\n\n<p>Otevírá se každý den už ráno – ve všední dny od 8:00, o víkendu od 9:30. Je to tak jedno z mála míst, kde se dá v centru Hradce nasnídat v klidu i v neděli. Ve všední dny navíc vaří polední menu (11:00–14:30) a večer funguje jako restaurace.</p>\n\n<h2 class=\"wp-block-heading\">Pro koho se hodí</h2>\n\n<p>Na víkendový brunch s přáteli, na snídani při procházce historickým centrem i na pracovní schůzku. Rezervaci doporučujeme hlavně na víkend – telefon najdeš v kontaktech.</p>",
+  "seoTitulek": "Localis Hradec Králové – snídaně a víkendový brunch na Velkém náměstí",
+  "seoPopis": "Localis na Velkém náměstí v Hradci Králové: snídaně z lokálních surovin, víkendový brunch, polední menu. Otevírací doba, adresa a tipy.",
+  "foto": "/wp-content/uploads/2026/11/localis-hradec-kralove-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/localis-hradec-kralove-2.jpg",
+   "/wp-content/uploads/2026/11/localis-hradec-kralove-3.jpg",
+   "/wp-content/uploads/2026/11/localis-hradec-kralove-4.jpg"
+  ]
+ },
+ {
+  "id": 2351,
+  "slug": "la-cafe-hradec-kralove",
+  "nazev": "La Café Hradec Králové",
+  "datum": "2026-11-15 12:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Hradec Králové"
+  ],
+  "adresa": "V Kopečku 81, Hradec Králové",
+  "lat": 50.210511,
+  "lon": 15.830602,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 20:00",
+   "So: 9:00 - 20:00",
+   "Ne: 9:00 - 16:00"
+  ],
+  "web": "https://www.lacafe-hk.cz/",
+  "instagram": "@la.cafe_bistrobar",
+  "instagramUrl": "https://www.instagram.com/la.cafe_bistrobar/",
+  "telefon": "+420777345531",
+  "telefonText": "+420 777 345 531",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=La+Café,+V+Kopečku+81,+Hradec+Králové",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Zastav se tu na snídani cestou na Velké náměstí – je to doslova pár kroků. Ke kávě si dej něco z domácích dortů.</p>",
+  "popis": "<p>La Café je útulný bistro bar v centru Hradce Králové, kousek pod Velkým náměstím a u zastávky Adalbertinum. Nabízí <strong>snídaně</strong>, brunch, výběrovou kávu a domácí dezerty.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně v centru</h2>\n\n<p>Ve všední dny otevírá v 8:00, o víkendu v 9:00, takže se hodí na snídani před prací i na pomalé sobotní ráno. Prostor je bezbariérový a v nabídce jsou i vegetariánská jídla.</p>\n\n<h2 class=\"wp-block-heading\">Kde ho najdeš</h2>\n\n<p>Ulice V Kopečku vede z centra na Velké náměstí, La Café je tak ideální zastávka při procházce historickým centrem. Aktuální menu najdeš na webu nebo Instagramu podniku.</p>",
+  "seoTitulek": "La Café Hradec Králové – snídaně a brunch pod Velkým náměstím",
+  "seoPopis": "La Café v Hradci Králové: snídaně, brunch, výběrová káva a domácí dorty kousek pod Velkým náměstím. Otevírací doba, adresa a tipy.",
+  "foto": "/wp-content/uploads/2026/11/la-cafe-hradec-kralove-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/la-cafe-hradec-kralove-2.jpg",
+   "/wp-content/uploads/2026/11/la-cafe-hradec-kralove-3.jpg",
+   "/wp-content/uploads/2026/11/la-cafe-hradec-kralove-4.jpg"
+  ]
+ },
+ {
+  "id": 2350,
+  "slug": "cafe-bistro-v-pekarne-hradec-kralove",
+  "nazev": "Café & Bistro V Pekárně Hradec Králové",
+  "datum": "2026-11-15 12:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Hradec Králové"
+  ],
+  "adresa": "Františka Halase 1887/12a, Hradec Králové",
+  "lat": 50.1999,
+  "lon": 15.849312,
+  "oteviraciDoba": [
+   "Po - So: 7:30 - 19:00",
+   "Ne: zavřeno"
+  ],
+  "web": null,
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Café+&+Bistro+V+Pekárně,+Františka+Halase+1887/12a,+Hradec+Králové",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická",
+   "Zdravá/fitness"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Otevírá už v 7:30, takže je ideální na snídani před prací. K snídani si dej domácí limonádu a na později si vezmi dezert.</p>",
+  "popis": "<p>Café &amp; Bistro V Pekárně je oblíbená kavárna mimo historické centrum Hradce Králové, na ulici Františka Halase. Seznam Zprávy ji řadí mezi <a href=\"https://www.seznamzpravy.cz/clanek/magazin-jidlo-nejlepsi-kavarny-hradec-kralove-259046\">nejoblíbenější hradecké kavárny</a>.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch od rána</h2>\n\n<p>Nabízí <strong>snídaně a brunch</strong>, výběrovou kávu, domácí limonády a dezerty. Na oběd se hodí polévky a poke bowly. Otevírá od pondělí do soboty už v 7:30.</p>\n\n<h2 class=\"wp-block-heading\">Posezení venku</h2>\n\n<p>V teplých měsících se dá sedět venku na zahrádce. Kavárna je dobrou volbou, pokud bydlíš nebo pracuješ mimo centrum a nechceš kvůli snídani na náměstí.</p>",
+  "seoTitulek": "Café & Bistro V Pekárně Hradec Králové – snídaně a brunch od 7:30",
+  "seoPopis": "Café & Bistro V Pekárně v Hradci Králové: snídaně a brunch od 7:30, výběrová káva, domácí limonády, dezerty a poke bowly. Otevírací doba a adresa.",
+  "foto": "/wp-content/uploads/2026/11/cafe-bistro-v-pekarne-hk-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/cafe-bistro-v-pekarne-hk-2.jpg",
+   "/wp-content/uploads/2026/11/cafe-bistro-v-pekarne-hk-3.jpg",
+   "/wp-content/uploads/2026/11/cafe-bistro-v-pekarne-hk-4.jpg"
+  ]
+ },
+ {
   "id": 2348,
   "slug": "cokafe-dolni-vitkovice-ostrava",
   "nazev": "CØKAFE Dolní Vítkovice Ostrava",
