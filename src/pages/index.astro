@@ -43,9 +43,21 @@ const tipyNadpis = OBDOBI_NADPIS[obdobiDne(dnes)];
 const den = Math.floor(Date.now() / 864e5);
 const kolaz = srdcovky.length > 3 ? [0, 1, 2].map((i) => srdcovky[(den * 3 + i) % srdcovky.length]) : srdcovky.slice(0, 3);
 
-const jsonLd = {
+const organizace = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE.url}/#organizace`,
+  name: SITE.nazev,
+  url: SITE.url,
+  logo: `${SITE.url}/apple-touch-icon.png`,
+  email: SITE.email,
+  sameAs: [SITE.instagram, SITE.facebook],
+  description: 'Průvodce snídaňovými a brunchovými místy v Česku. Podniky osobně ověřené redakcí, s adresou, otevírací dobou a tipy.',
+};
+const webLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  publisher: { '@id': `${SITE.url}/#organizace` },
   name: SITE.nazev,
   url: SITE.url,
   potentialAction: {
@@ -54,6 +66,7 @@ const jsonLd = {
     'query-input': 'required name=search_term_string',
   },
 };
+const jsonLd = [organizace, webLd];
 ---
 
 <Base
@@ -95,7 +108,7 @@ const jsonLd = {
           <p class="muted">Město, chuť, atmosféra? Záleží jen na tobě, co si zrovna přeješ najít.</p>
         </div>
       </div>
-      <Vypis podniky={vse} />
+      <Vypis podniky={vse} ld={false} />
     </div>
   </section>
 

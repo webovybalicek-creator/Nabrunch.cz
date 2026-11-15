@@ -49,7 +49,7 @@ image: "/wp-content/uploads/2025/03/Snidane-s-detmi.jpg"
 
 <h2 class="wp-block-heading">📍 Kde najdete Mistral Café?</h2>
 
-<p><strong>Adresa:</strong> Valentinská 11, Praha 1<br><strong>Otevřeno:</strong> každý den od 9:00<br><strong>Web:</strong><a href="http://www.mistralcafe.cz"> www.mistralcafe.cz<br></a><strong>Instagram:</strong><a href="https://www.instagram.com/mistral_cafe/"> @mistral_cafe</a></p>
+<p><strong>Adresa:</strong> Valentinská 11, Praha 1<br><strong>Otevřeno:</strong> každý den od 9:00<br><strong>Web:</strong><a href="https://mistralcafe.cz"> www.mistralcafe.cz<br></a><strong>Instagram:</strong><a href="https://www.instagram.com/mistral_cafe/"> @mistral_cafe</a></p>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 

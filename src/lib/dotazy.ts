@@ -1,7 +1,7 @@
 // Časté dotazy k podniku – skládají se jen z faktů v datech (žádné vymyšlené texty).
 // Když údaj chybí, otázka se vynechá. Používá detail podniku (viditelná sekce + FAQPage)
 // a /llms.txt (přehled pro AI vyhledávače).
-import { mesto, vOkoli, kmText, tydenPodniku, type Podnik } from './data';
+import { mesto, vOkoli, kmText, tydenPodniku, vLokalite, podnikuText, type Podnik, type Lokalita } from './data';
 import { souhrn, hhmm } from './oteviraci-doba';
 
 /** „Po–Pá 8:00–18:00, So–Ne zavřeno“ (null, když dobu neznáme) */
@@ -86,5 +86,65 @@ export function dotazyPodniku(p: Podnik): [string, string][] {
       v.charAt(0).toUpperCase() + v.slice(1) + '.',
     ]);
   }
+  return out;
+}
+
+// ---------------------------------------------------------------- dotazy ke stránce města / obvodu
+const vycet = (jmena: string[], max = 3) => {
+  const v = jmena.slice(0, max);
+  const zbytek = jmena.length - v.length;
+  if (v.length === 1) return v[0];
+  const zaklad = `${v.slice(0, -1).join(', ')} a ${v[v.length - 1]}`;
+  return zbytek === 1 ? `${v.join(', ')} a jeden další` : zbytek > 1 ? `${v.join(', ')} a ${zbytek} dalších` : zaklad;
+};
+/** Kdy podnik v daných dnech otevírá nejdřív (interval od 0:00 je pokračování předchozí noci) */
+const otevira = (p: Podnik, dny: number[]) => {
+  const t = tydenPodniku(p);
+  if (!t) return null;
+  const c = dny.flatMap((d) => t[d].filter(([a]) => a > 0).map(([a]) => a));
+  return c.length ? Math.min(...c) : null;
+};
+
+export function dotazyLokality(l: Lokalita): [string, string][] {
+  const out: [string, string][] = [];
+  const P = l.podniky;
+  if (P.length < 2) return out;
+  // „v Praze 1“ (vLokalite dává hovorové „na Praze 1“)
+  const kde = /^Praha \d+$/.test(l.nazev) ? `v ${l.nazev.replace('Praha', 'Praze')}` : vLokalite(l.nazev);
+  const srdcovky = P.filter((p) => p.doporuceny).map((p) => p.nazev);
+  out.push([
+    `Kde je nejlepší brunch ${kde}?`,
+    srdcovky.length
+      ? `${srdcovky.length === 1 ? `Naše srdcovka ${kde} je` : `Naše srdcovky ${kde} jsou`} ${vycet(srdcovky)}. Celkem jsme ${kde} vybrali ${podnikuText(P.length)} na snídani a brunch.`
+      : `${kde.charAt(0).toUpperCase() + kde.slice(1)} jsme vybrali ${podnikuText(P.length)} na snídani a brunch, například ${vycet(P.map((p) => p.nazev))}.`,
+  ]);
+
+  const rano = P.map((p) => ({ p, od: otevira(p, [0, 1, 2, 3, 4]) }))
+    .filter((x): x is { p: Podnik; od: number } => x.od != null)
+    .sort((a, b) => a.od - b.od);
+  if (rano.length >= 2)
+    out.push([
+      `Kde se ${kde} nasnídat brzy ráno?`,
+      `Ve všední dny otevírá nejdřív ${rano[0].p.nazev} (od ${hhmm(rano[0].od)}), dále ${vycet(rano.slice(1, 3).map((x) => `${x.p.nazev} (od ${hhmm(x.od)})`))}.`,
+    ]);
+
+  const nedele = P.map((p) => ({ p, od: otevira(p, [6]) }))
+    .filter((x): x is { p: Podnik; od: number } => x.od != null)
+    .sort((a, b) => a.od - b.od);
+  const sDobou = P.filter((p) => tydenPodniku(p)).length;
+  if (sDobou >= 2)
+    out.push([
+      `Kam ${kde} na brunch v neděli?`,
+      nedele.length
+        ? `V neděli má otevřeno ${nedele.length} z ${sDobou} podniků, u kterých známe otevírací dobu. Nejdřív otevírá ${nedele[0].p.nazev} (od ${hhmm(nedele[0].od)})${nedele.length > 1 ? `, dále ${vycet(nedele.slice(1, 3).map((x) => `${x.p.nazev} (od ${hhmm(x.od)})`))}` : ''}.`
+        : `Podniky, které ${kde} sledujeme, mají v neděli zavřeno. Mrkni na okolní města nebo na stránku Otevřeno teď.`,
+    ]);
+
+  const psi = P.filter((p) => p.atmosfera.includes('Pet-friendly')).map((p) => p.nazev);
+  if (psi.length) out.push([`Kam ${kde} na brunch se psem?`, `Pejsci jsou vítáni v ${psi.length === 1 ? 'podniku' : 'podnicích'} ${vycet(psi, 4)}.`]);
+  const zahradka = P.filter((p) => p.atmosfera.includes('Zahrádka') || p.sezeni.includes('Zahrádka')).map((p) => p.nazev);
+  if (zahradka.length) out.push([`Kde ${kde} posedět na zahrádce?`, `Venkovní zahrádku ${zahradka.length === 1 ? 'má' : 'mají'} ${vycet(zahradka, 4)}.`]);
+  const vegan = P.filter((p) => p.kuchyne.includes('Veganská')).map((p) => p.nazev);
+  if (vegan.length) out.push([`Kde ${kde} najdu veganskou snídani?`, `Veganská jídla ${vegan.length === 1 ? 'nabízí' : 'nabízejí'} ${vycet(vegan, 4)}.`]);
   return out;
 }

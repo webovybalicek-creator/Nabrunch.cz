@@ -2,7 +2,8 @@
 // Výpis podniků s filtry (město, kuchyně, atmosféra, hledání) a tlačítkem „Načíst další“.
 // Filtrování běží v prohlížeči nad vykreslenými kartami; stav se propisuje do adresy (?mesto=praha&kuchyne=Veganská).
 import Karta from './Karta.astro';
-import { mesta, KUCHYNE, ATMOSFERA, type Podnik } from '../lib/data';
+import { mesta, KUCHYNE, ATMOSFERA, url, type Podnik } from '../lib/data';
+import { SITE } from '../lib/config';
 
 interface Props {
   podniky: Podnik[];
@@ -12,13 +13,22 @@ interface Props {
   filtrMesta?: boolean;
   /** Zobrazit filtry kuchyně a atmosféry */
   filtry?: boolean;
+  /** Strukturovaná data ItemList (seznam podniků pro Google a AI vyhledávače) */
+  ld?: boolean;
 }
-const { podniky, naStranku = 12, filtrMesta = true, filtry = true } = Astro.props;
+const { podniky, naStranku = 12, filtrMesta = true, filtry = true, ld = true } = Astro.props;
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  numberOfItems: podniky.length,
+  itemListElement: podniky.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(url(p), SITE.url).href, name: p.nazev })),
+};
 const pouzitaMesta = mesta().filter((m) => m.podniky.some((p) => podniky.includes(p)));
 const kuchyne = KUCHYNE.filter((k) => podniky.some((p) => p.kuchyne.includes(k)));
 const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includes(a)));
 ---
 
+{ld && podniky.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(itemList)} />}
 <div class="vypis" data-vypis data-na-stranku={naStranku}>
   {
     (filtry || filtrMesta) && (
