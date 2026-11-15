@@ -39,7 +39,9 @@ const tipy = [...poradi, ...zasobnik.map((_, i) => i).filter((i) => !poradi.incl
   viditelny: poradi.includes(i),
 }));
 const tipyNadpis = OBDOBI_NADPIS[obdobiDne(dnes)];
-const kolaz = srdcovky.slice(0, 3);
+// Koláž v hlavičce: každý den jiné tři srdcovky (web se sestavuje několikrát denně)
+const den = Math.floor(Date.now() / 864e5);
+const kolaz = srdcovky.length > 3 ? [0, 1, 2].map((i) => srdcovky[(den * 3 + i) % srdcovky.length]) : srdcovky.slice(0, 3);
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -80,7 +82,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <Slider podniky={srdcovky} eyebrow="Naše srdcovky" nadpis="Doporučené podniky" odkaz={{ href: '/podniky/', text: 'Všechny podniky' }} />
+  <Slider podniky={srdcovky} eyebrow="Naše srdcovky" nadpis="Doporučené podniky" odkaz={{ href: '/podniky/', text: 'Všechny podniky' }} zamichat />
 
   <Slider podniky={nove} eyebrow="Nová místa, nové chutě" nadpis="Nově přidané" tmavy />
 

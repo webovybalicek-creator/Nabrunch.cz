@@ -10,11 +10,13 @@ interface Props {
   odkaz?: { href: string; text: string };
   /** Tmavá varianta (čokoládové pozadí) */
   tmavy?: boolean;
+  /** Při každé návštěvě karty náhodně zamíchat (aby nebyly vidět pořád ty samé) */
+  zamichat?: boolean;
 }
-const { podniky, eyebrow, nadpis, odkaz, tmavy = false } = Astro.props;
+const { podniky, eyebrow, nadpis, odkaz, tmavy = false, zamichat = false } = Astro.props;
 ---
 
-<section class:list={['slider', tmavy && 'slider--tmavy']} data-slider>
+<section class:list={['slider', tmavy && 'slider--tmavy']} data-slider data-zamichat={zamichat ? '' : undefined}>
   <div class="wrap">
     <div class="slider__hlava">
       <div>
@@ -43,6 +45,14 @@ const { podniky, eyebrow, nadpis, odkaz, tmavy = false } = Astro.props;
   document.querySelectorAll<HTMLElement>('[data-slider]').forEach((root) => {
     const drah = root.querySelector<HTMLElement>('[data-drah]')!;
     const [zpet, dal] = root.querySelectorAll<HTMLButtonElement>('[data-krok]');
+    if (root.hasAttribute('data-zamichat')) {
+      const karty = [...drah.children];
+      for (let i = karty.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [karty[i], karty[j]] = [karty[j], karty[i]];
+      }
+      karty.forEach((k) => drah.appendChild(k));
+    }
     const obnov = () => {
       const max = drah.scrollWidth - drah.clientWidth;
       zpet.disabled = drah.scrollLeft <= 4;
