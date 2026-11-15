@@ -47,6 +47,15 @@ export function dotazyPodniku(p: Podnik): [string, string][] {
     out.push([`Kde najdu ${n}?`, vecny(`${n} sídlí na adrese ${adresa}.${blizko}`)]);
   }
 
+  // Menu (lidé často hledají „<podnik> menu“) – naše tipy z návštěvy + odkaz, kde je aktuální nabídka
+  const tip = (p.tip ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const kdeMenu = p.web ? 'na webu podniku' : p.instagram ? `na Instagramu ${/^@/.test(p.instagram) ? p.instagram : 'podniku'}` : '';
+  if (tip || kdeMenu)
+    out.push([
+      `Jaké má ${n} menu a co si dát?`,
+      vecny(`${tip ? `Náš tip: ${tip.length > 220 ? tip.slice(0, 220).replace(/\s+\S*$/, '') + '…' : tip}` : ''} ${kdeMenu ? `Aktuální menu a ceny najdeš ${kdeMenu}, odkaz je v kontaktech na této stránce.` : ''}`),
+    ]);
+
   // Rezervace
   const r = (p.rezervace ?? '').trim();
   if (r) {

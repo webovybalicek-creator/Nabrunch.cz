@@ -52,6 +52,8 @@ DirectoryIndex index.html
   RewriteRule ^novy-matcha-spot-v-praze-jun-matcha-bar-vas-okouzli-nejen-matchou/?$ /podniky/jun-matcha-bar-praha/ [L,R=301]
   # Trvale zavřené podniky (odebrané z webu) → stránka lokality
   RewriteRule ^podniky/charlies-cafe-praha-uhrineves/?$ /lokalita/praha-10/ [L,R=301]
+  # Podniky odebrané ještě na WordPressu, Google je pořád zobrazuje
+  RewriteRule ^podniky/(cafe-podnebi-brno|cha-do-brno)/?$ /lokalita/brno/ [L,R=301]
   # Zrušené téma (štítek měly skoro všechny podniky) → přehled podniků
   RewriteRule ^vegetarianske-snidane-a-brunche/?$ /podniky/ [L,R=301]
 </IfModule>

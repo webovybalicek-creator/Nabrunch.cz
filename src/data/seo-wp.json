@@ -83,8 +83,8 @@
   "d": "Kam na snídani či brunch v Říčanech u Prahy? Vybrali jsme pro vás 3 top podniky na snídani a brunch v Říčanech, které patří mezi TOP i oblíbené tipy na víkend."
  },
  "/kam-na-snidani-nebo-brunch-v-brne/": {
-  "t": "Brunch Brno: kam na snídani a brunch – 9 ověřených tipů",
-  "d": "Hledáš brunch v Brně? 9 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
+  "t": "Brunch Brno 2026: kam na snídani a brunch – 10 ověřených tipů",
+  "d": "Hledáš brunch v Brně? 10 ověřených podniků na snídani a brunch v centru i u Lužánek – co si dát, kde otevírají nejdřív, kde mají zahrádku a kam vzít pejska."
  },
  "/kam-na-snidani-nebo-brunch-v-olomouci/": {
   "t": "Kam na snídani nebo brunch v Olomouci? - naBrunch.cz",
@@ -198,7 +198,7 @@
   "d": "Barista Café Chrudim – výborná snídaně nebo brunch v Chrudimi. Skvělá káva, domácí dobroty a příjemná atmosféra v centru Chrudimi."
  },
  "/podniky/bavard-cafe-brno/": {
-  "t": "Bavard cafe Brno – recenze, co si dát a otevírací doba",
+  "t": "Bavard cafe Brno – menu, recenze a otevírací doba",
   "d": "Bavard cafe Brno nabízí skvělé snídaně a brunch v útulném prostoru s výborným jídlem, příjemnou atmosférou a přátelským zázemím."
  },
  "/podniky/bistretto-liberec/": {
@@ -210,7 +210,7 @@
   "d": "Bistro B Praha je moderní bistro a kavárna v Praze u výstupu z metra Budějovická nabízející poctivé snídaně, brunch, výběrovou kávu a lehká jídla."
  },
  "/podniky/bistro-cafe-laskava/": {
-  "t": "Bistro Cafe Laskavá, Vinohrady – recenze a otevírací doba",
+  "t": "Bistro Cafe Laskavá, Vinohrady – menu, recenze a otevírací doba",
   "d": "Bistro Café Laskavá v Praze: útulné bistro, kavárna, celodenní snídaně a brunche, domácí dezerty a výborná káva v příjemné atmosféře se zahrádkou"
  },
  "/podniky/bistro-central-olomouc/": {
@@ -230,7 +230,7 @@
   "d": "Bistro Topinka Český Krumlov nabízí top snídaně, brunche a výběrovou kávu. Příjemné posezení s výhledem na řeku a historické střechy Krumlova."
  },
  "/podniky/bistro-u-sykorky-beroun/": {
-  "t": "Bistro U Sýkorky Beroun – recenze, co si dát a otevírací doba",
+  "t": "Bistro U Sýkorky Beroun – menu, recenze a otevírací doba",
   "d": "Bistro U Sýkorky je útulné bistro v Berouně s důrazem na klidnou atmosféru, poctivou kuchyni a pohodové snídaně a brunch."
  },
  "/podniky/botaniqa-bistro-cafe-opava/": {
@@ -278,7 +278,7 @@
   "d": "Café Placzek Brno je oblíbená kavárna v Brně s příjemnou atmosférou, výběrovou kávou, ideální místo kam na snídani a brunch v Brně."
  },
  "/podniky/cafefin-praha/": {
-  "t": "CAFEFIN Praha – recenze, co si dát a otevírací doba",
+  "t": "CAFEFIN Praha – menu, recenze a otevírací doba",
   "d": "Cafefin Praha je oblíbená kavárna na Praze 3 ideální na snídani i brunch. Skvělá káva, originální jídla a pohodová atmosféra na Vinohradech."
  },
  "/podniky/cavino-plzen/": {
@@ -349,7 +349,7 @@
   "d": "Gabi Café Říčany je Pet-friendly kavárna s venkovním posezením, dokonalými brunchemi a domácími dezerty. Gabi Café je ideální místo na brunch."
  },
  "/podniky/jun-matcha-bar-praha/": {
-  "t": "Jun Matcha Bar Praha – recenze, co si dát a otevírací doba",
+  "t": "Jun Matcha Bar Praha – menu, recenze a otevírací doba",
   "d": "Jun Matcha Bar Praha je specializovaná kavárna na prémiovou matchu a kreativní matcha dezerty. Top Instagram friendly místo pro milovníky kvalitní matcha."
  },
  "/podniky/kafe-doma-litomerice/": {
@@ -395,7 +395,7 @@
   "d": "La Petite Conversation Ostrava zkráceně Lapeco je belgická kavárna a bistro v Ostravě s brunchovým menu, signature jídly a skvělou atmosférou."
  },
  "/podniky/le-frenchie-cafe-plzen/": {
-  "t": "Le Frenchie café Plzeň – Nabrunch.cz – recenze"
+  "t": "Le Frenchie café Plzeň – menu, recenze a otevírací doba"
  },
  "/podniky/mama-shelter-praha/": {
   "t": "Mama Shelter Praha – recenze, co si dát a otevírací doba",
@@ -461,7 +461,7 @@
   "d": "Pikola Šumperk. Rodinná kavárna v Šumperku s výběrovou kávou, domácími dezerty a skvělými snídaněmi. Pet-friendly místo, snídaně, brunche."
  },
  "/podniky/pleiku-coffee-praha/": {
-  "t": "Pleiku Coffee Praha – recenze, co si dát a otevírací doba",
+  "t": "Pleiku Coffee Praha – menu, recenze a otevírací doba",
   "d": "Pleiku Coffee Praha je vietnamská kavárna aměřená na autentickou výběrovou kávu z Vietnamu, originální snídaně a brunch s asijským twistem."
  },
  "/podniky/poppy-beans-coffee-brno/": {
@@ -473,7 +473,7 @@
   "d": "Kavárna Kafrárna Ostrava Poruba nabízí výběrovou kávu, domácí dezerty a čerstvé snídaně, brunche. Příjemné prostředí pro rodiny i přátele."
  },
  "/podniky/sensu-cafe-praha/": {
-  "t": "Sensu Cafe Praha – recenze, co si dát a otevírací doba",
+  "t": "Sensu Cafe Praha – menu, recenze a otevírací doba",
   "d": "Sensu Cafe Praha, Matcha kavárna, Sensu Cafe nabízí teplé i ledové Matcha latté, Matcha dezerty v designovém prostředí. Zkuste Sensu Cafe Praha."
  },
  "/podniky/sestava-vrsovice/": {
@@ -481,7 +481,7 @@
   "d": "Sestava Vršovice Praha je sousedská kavárna ve Vršovicích zaměřená na výběrovou kávu z vlastní pražírny, snídaně, brunch a sezónní menu."
  },
  "/podniky/skog-brno/": {
-  "t": "SKØG Urban Hub Brno – recenze, co si dát a otevírací doba",
+  "t": "SKØG Urban Hub Brno – menu, recenze a otevírací doba",
   "d": "SKØG Urban Hub Brno nabízí výběrovou kávu, božské snídaně a moderní brunch menu. Ideální místo na ranní snídani či víkendový brunch v Brně."
  },
  "/podniky/smetanaq-cafe-bistro-praha/": {
@@ -531,7 +531,7 @@
   "t": "Ünd Kaffee Praha – Nabrunch.cz – recenze a otevírací doba"
  },
  "/podniky/walter-plzen/": {
-  "t": "Walter Mitty Brunch Plzeň – recenze a otevírací doba",
+  "t": "Walter Mitty Brunch Plzeň – menu, recenze a otevírací doba",
   "d": "Walter Brunch Plzeň. Stylová kavárna v Plzni. Snídaně, brunch, výběrová káva, víkendový brunch a útulná atmosféra. Walter Plzeň inspiruje."
  },
  "/podniky/yaki-pan-praha/": {
