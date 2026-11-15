@@ -19,7 +19,7 @@ image: "/wp-content/uploads/2025/03/eggsit1.jpg"
 <p>🍳 <strong>Co si dát:</strong> víkendový brunch s výhledem na náměstí.</p>
 
 <h3>👉🏼 <a href="/podniky/la-cafe-hradec-kralove/">La Café</a> – V Kopečku</h3>
-<p>Útulný bistro bar kousek pod Velkým náměstím, u zastávky Adalbertinum. Snídaně, brunch, výběrová káva a domácí dorty. Otevřeno je každý den, v neděli do 16:00.</p>
+<p>Útulný bistro bar kousek pod Velkým náměstím, u zastávky Adalbertinum. Snídaně, brunch, výběrová káva a domácí dorty. Otevřeno je každý den, v neděli od 8:00 do 16:00.</p>
 <p>🍳 <strong>Co si dát:</strong> snídani a ke kávě kousek domácího dortu.</p>
 
 <h2>Mimo centrum</h2>
@@ -36,7 +36,7 @@ image: "/wp-content/uploads/2025/03/eggsit1.jpg"
 
 <ul>
 <li><strong>Snídaně z vajec a vejce Benedikt:</strong> Eggsit café – ale přijď do oběda.</li>
-<li><strong>Brunch v neděli:</strong> Localis (od 9:30) nebo La Café (od 9:00).</li>
+<li><strong>Brunch v neděli:</strong> La Café (od 8:00) nebo Localis (od 9:30).</li>
 <li><strong>Brzy ráno před prací:</strong> Eggsit a V Pekárně otevírají v 7:30.</li>
 <li><strong>S dětmi:</strong> TimePlay s dětskými koutky.</li>
 <li><strong>Se psem a venku:</strong> Eggsit café má zahrádku a pejsky vítá.</li>
