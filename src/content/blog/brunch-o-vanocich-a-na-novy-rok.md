@@ -1,7 +1,7 @@
 ---
 title: "Brunch o Vánocích a na Nový rok: kam vyrazit a na co myslet"
 description: "Kam na brunch mezi svátky, na Štěpána nebo na Nový rok? Naše srdcovky v Praze, Brně i dalších městech a praktické tipy, jak si sváteční brunch naplánovat."
-seoTitle: "Brunch o Vánocích a na Nový rok 2026 – kam vyrazit | naBrunch.cz"
+seoTitle: "Brunch o Vánocích 2026 a na Nový rok 2027 – kam vyrazit | naBrunch.cz"
 date: "2026-11-09T12:00:00"
 image: "/wp-content/uploads/2026/06/img_87711-1536x1024-1-1200x800-1.jpg"
 sezona:
@@ -34,7 +34,7 @@ sezona:
 <li><strong>Jdi dřív.</strong> Kdo dorazí do 9:30, má většinou klid a celou nabídku.</li>
 <li><strong>S dětmi i se psem</strong> se vyplatí vybrat podnik předem – podívej se na <a href="/pet-friendly-brunch/">pet-friendly podniky</a>, kam vezmeš i psího parťáka.</li>
 <li><strong>Zkus něco lehčího.</strong> Po svátečním jídle přijdou vhod <a href="/zdrave-snidane-a-brunche/">zdravé snídaně a bowly</a> nebo <a href="/veganske-snidane-a-brunche/">veganský brunch</a>.</li>
-<li><strong>Dárek na poslední chvíli:</strong> řada kaváren prodává dárkové poukazy. Společný brunch je dárek, který nikdy neskončí v šuplíku.</li>
+<li><strong>Dárek na poslední chvíli:</strong> řada kaváren prodává dárkové poukazy. Společný brunch je dárek, který nikdy neskončí v šuplíku – přehled najdeš v článku <a href="/darkovy-poukaz-na-brunch/">Dárkový poukaz na brunch</a>.</li>
 </ul>
 
 <h2>Naše srdcovky v Praze</h2>
@@ -50,6 +50,17 @@ sezona:
 <li><a href="/podniky/kocici-kavarna-praha/"><strong>Kočičí kavárna</strong></a> (Praha 1) – bagel s uzeným lososem nebo lívance s tvarohem ve společnosti koček. Děti budou nadšené.</li>
 </ul>
 
+<h2>Novinky, které stojí za vyzkoušení</h2>
+
+<p>Podniky, které letos v Praze otevřely nebo se přestěhovaly a o kterých se mluví:</p>
+
+<ul>
+<li><a href="/podniky/coffee-bird-praha/"><strong>Coffee Bird</strong></a> (Praha 1) – útulná snídaňová kavárna vedle Globe, krupicová kaše a french toast s borůvkami.</li>
+<li><a href="/podniky/dabl-bistro-praha/"><strong>Dabl.</strong></a> (Praha 1) – nové bistro od majitelů Laskavé a Grønu v Rybné ulici, tiramisu french toast.</li>
+<li><a href="/podniky/pomalu-pomalu-praha/"><strong>Pomalu pomalu</strong></a> (Praha 3) – celodenní bistro pekárny Kin &amp; K u Jiřího z Poděbrad.</li>
+<li><a href="/podniky/la-forme-rytirska-praha/"><strong>La Forme Rytířská</strong></a> (Praha 1) – největší pobočka vyhlášené pekárny, croissanty a danishe kousek od Můstku. Ideální zastávka při procházce po vánočních trzích.</li>
+</ul>
+
 <p>Další tipy najdeš ve výběru <a href="/lokalita/praha/">snídaně a brunch v Praze</a> nebo podle čtvrti, například <a href="/lokalita/praha/brunch-se-zahradkou/">brunch se zahrádkou v Praze</a> pro slunečné zimní dny.</p>
 
 <h2>Mimo Prahu</h2>
@@ -59,6 +70,8 @@ sezona:
 <li><a href="/podniky/eggsit-cafe-hradec-kralove/"><strong>Eggsit café</strong></a> (Hradec Králové) – voňavá, pořádně kořeněná shakshuka na líné ráno.</li>
 <li><a href="/podniky/kafe-doma-litomerice/"><strong>Kafe doma</strong></a> (Litoměřice) – americký bagel s uzeným lososem.</li>
 <li><a href="/podniky/kupkafe-opava/"><strong>Kupkafe</strong></a> (Opava) – sendvič s vejcem Benedikt, snídaňová klasika.</li>
+<li><a href="/podniky/buchta-b-brno/"><strong>Buchta B</strong></a> (Brno) – lívance s javorovým sirupem, bezlepkové a veganské varianty, otevřeno už od 6:30.</li>
+<li><a href="/podniky/cokafe-dolni-vitkovice-ostrava/"><strong>CØKAFE Dolní Vítkovice</strong></a> (Ostrava) – vejce Benedikt a sváteční procházka po industriálním areálu.</li>
 </ul>
 
 <p>Jedeš o svátcích za rodinou jinam? Mrkni do <a href="/lokality/">přehledu měst</a> nebo na <a href="/mapa/">mapu podniků</a> – najdeš na ní i kavárny poblíž místa, kde zrovna budeš.</p>
@@ -66,5 +79,7 @@ sezona:
 <h2>Sváteční brunch doma</h2>
 
 <p>Když se ven nechce, dá se brunch udělat i doma. Stačí pár osvědčených jídel – inspiraci najdeš v článku o <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenějších brunch jídlech</a> a v návodu, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a>. Pokud nevíš, jaký je vlastně rozdíl mezi snídaní a brunchem, vysvětlujeme ho <a href="/co-je-to-brunch/">tady</a>.</p>
+
+<p>Plánuješ brunch i na konec roku? Tipy, kam vyrazit na Silvestra a 1. ledna, najdeš v článku <a href="/brunch-na-silvestra-a-novy-rok/">Brunch na Silvestra a na Nový rok</a>.</p>
 
 <p>Krásné svátky a dobrou chuť! 🎄</p>
