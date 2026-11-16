@@ -16,12 +16,12 @@ obdobi: [jaro, leto]
 <p>Samotné acai chutná jemně, trochu jako lesní ovoce s tóny kakaa. Do bowlu se proto mixuje s <strong>banánem</strong> a dalším ovocem, které dodá sladkost a krémovou texturu. Výsledek připomíná ovocný sorbet.</p>
 
 <h2>Je acai bowl zdravý?</h2>
-<p>Acai obsahuje vlákninu, zdravé tuky a antioxidanty (antokyany – odtud ta fialová barva). Bowl je plný ovoce a vlákniny, ale pozor na <strong>cukr</strong>: banán, slazená granola, med nebo sirup a ovocné šťávy z něj můžou udělat docela sladké jídlo. Pokud chceš lehčí verzi, požádej o neslazenou bázi a méně granoly.</p>
+<p>Acai obsahuje vlákninu, zdravé tuky a antioxidanty (antokyany – odtud ta fialová barva). Bowl je plný ovoce a vlákniny, ale pozor na <strong>cukr</strong>: banán, slazená granola, med nebo sirup a ovocné šťávy z něj můžou udělat docela sladké jídlo. Pokud chcete lehčí verzi, požádejte o neslazenou bázi a méně granoly.</p>
 
 <h2>Acai bowl doma</h2>
 <ol>
-<li>Rozmixuj 100 g mraženého acai pyré, 1 mražený banán a trochu mléka nebo rostlinného nápoje – jen tolik, aby se směs promixovala a zůstala hustá.</li>
-<li>Přelij do misky.</li>
+<li>Rozmixujte 100 g mraženého acai pyré, 1 mražený banán a trochu mléka nebo rostlinného nápoje – jen tolik, aby se směs promixovala a zůstala hustá.</li>
+<li>Přelijte do misky.</li>
 <li>Ozdob granolou, plátky banánu, borůvkami, jahodami, chia semínky a kokosem.</li>
 </ol>
 
@@ -31,4 +31,4 @@ obdobi: [jaro, leto]
 <li><a href="/podniky/coffee-trail-bar-brno/"><strong>Coffee Trail Bar</strong></a> (Brno) – čerstvé bowly k výběrové kávě.</li>
 </ul>
 
-<p>Další lehké snídaně najdeš mezi <a href="/zdrave-snidane-a-brunche/">zdravými a fitness brunchi</a>. Rozdíl mezi granolou a müsli vysvětlujeme <a href="/granola-vs-musli-jaky-je-rozdil/">tady</a>, letní tipy v článku <a href="/letni-brunch-ledova-kava/">letní brunch</a>. 🫐</p>
+<p>Další lehké snídaně najdete mezi <a href="/zdrave-snidane-a-brunche/">zdravými a fitness brunchi</a>. Rozdíl mezi granolou a müsli vysvětlujeme <a href="/granola-vs-musli-jaky-je-rozdil/">tady</a>, letní tipy v článku <a href="/letni-brunch-ledova-kava/">letní brunch</a>. 🫐</p>

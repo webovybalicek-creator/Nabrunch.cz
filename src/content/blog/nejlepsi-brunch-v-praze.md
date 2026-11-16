@@ -7,7 +7,7 @@ image: "/wp-content/uploads/2026/06/img_87711-1536x1024-1-1200x800-1.jpg"
 naHp: false
 ---
 
-<p>Praha má dnes jednu z nejlepších brunchových scén ve střední Evropě. Vejce Benedikt, kváskový chléb, výběrová káva a pomalá víkendová dopoledne najdeš skoro v každé čtvrti. Aby se v tom dalo vyznat, sepsali jsme <strong>průvodce po nejlepších brunchích v Praze</strong> – podle čtvrtí i podle toho, s kým a na co máš chuť. Všechny podniky jsme osobně vybrali; ty s ♥ jsou naše srdcovky.</p>
+<p>Praha má dnes jednu z nejlepších brunchových scén ve střední Evropě. Vejce Benedikt, kváskový chléb, výběrová káva a pomalá víkendová dopoledne najdete skoro v každé čtvrti. Aby se v tom dalo vyznat, sepsali jsme <strong>průvodce po nejlepších brunchích v Praze</strong> – podle čtvrtí i podle toho, s kým a na co máte chuť. Všechny podniky jsme osobně vybrali; ty s ♥ jsou naše srdcovky.</p>
 
 <h2>Naše pražské srdcovky ♥</h2>
 
@@ -26,7 +26,7 @@ naHp: false
 <p>Karlín je dnes brunchové hlavní město Prahy. Kromě Spojky sem patří <a href="/podniky/muj-salek-kavy-praha/">Můj šálek kávy</a> (výběrová káva a dýňový hummus), <a href="/podniky/eska-karlin/">Eska</a> s vlastní pekárnou a poctivou českou snídaní a <a href="/podniky/etapa-karlin-praha/">Etapa</a> se sezónní zeleninovou kuchyní. Podrobně v článku <a href="/kam-na-snidani-nebo-brunch-v-praze-karlin/">snídaně a brunch v Karlíně</a>.</p>
 
 <h3>Letná a Holešovice</h3>
-<p>Na Letné kromě Matildy vyzkoušej <a href="/podniky/cafe-letka-praha/">Café Letka</a> (french toast s pošírovanou hruškou) a <a href="/podniky/und-kaffee-praha/">Ünd Kaffee</a> s laminovaným pečivem. V Holešovicích je nedělní brunch bufet v <a href="/podniky/mama-shelter-praha/">Mama Shelter</a>.</p>
+<p>Na Letné kromě Matildy vyzkoušejte <a href="/podniky/cafe-letka-praha/">Café Letka</a> (french toast s pošírovanou hruškou) a <a href="/podniky/und-kaffee-praha/">Ünd Kaffee</a> s laminovaným pečivem. V Holešovicích je nedělní brunch bufet v <a href="/podniky/mama-shelter-praha/">Mama Shelter</a>.</p>
 
 <h3>Vinohrady a Jiřák</h3>
 <p>Vinohrady jsou plné kaváren: <a href="/podniky/cafefin-praha/">CAFEFIN</a> s terasou na náměstí Jiřího z Poděbrad, <a href="/podniky/tisse-bakery-praha/">TISSE Bakery</a> s pistáciovým croissantem, <a href="/podniky/meme-brunch-praha/">mèmè &amp; brunch</a> nebo <a href="/podniky/o-mai-coffee-brunch-praha/">ô-mai</a>. Víc v článku <a href="/kam-na-snidani-ci-brunch-na-praze-2/">snídaně a brunch na Praze 2</a>.</p>
@@ -52,15 +52,15 @@ naHp: false
 <h2>Časté otázky</h2>
 
 <h3>Do kolika se v Praze podává brunch?</h3>
-<p>Většina podniků podává brunch zhruba <strong>do 13–15 hodin</strong>, některé kavárny ale nabízejí snídaně celý den. Přesnou otevírací dobu najdeš u každého podniku na naBrunch.cz.</p>
+<p>Většina podniků podává brunch zhruba <strong>do 13–15 hodin</strong>, některé kavárny ale nabízejí snídaně celý den. Přesnou otevírací dobu najdete u každého podniku na naBrunch.cz.</p>
 
 <h3>Kolik stojí brunch v Praze?</h3>
-<p>Cena se hodně liší podle podniku. Jedno brunchové jídlo s kávou vyjde obvykle na pár stovek korun, nedělní bufety s neomezenou konzumací stojí víc. Aktuální ceny si ověř v menu podniku.</p>
+<p>Cena se hodně liší podle podniku. Jedno brunchové jídlo s kávou vyjde obvykle na pár stovek korun, nedělní bufety s neomezenou konzumací stojí víc. Aktuální ceny si ověřte v menu podniku.</p>
 
 <h3>Je potřeba rezervace?</h3>
-<p>O víkendu u oblíbených podniků ano, nebo přijď hned po otevření. Řada kaváren ale rezervace nebere vůbec – pak pomůže dorazit do 9:30.</p>
+<p>O víkendu u oblíbených podniků ano, nebo přijďte hned po otevření. Řada kaváren ale rezervace nebere vůbec – pak pomůže dorazit do 9:30.</p>
 
 <h3>Co je to vlastně brunch?</h3>
 <p>Spojení snídaně a oběda, které se jí pozdě dopoledne a v klidu. Víc v článku <a href="/co-je-to-brunch/">co je to brunch</a>.</p>
 
-<p>Všechny ověřené podniky najdeš na stránce <a href="/lokalita/praha/">kam na brunch a snídani v Praze</a> nebo na <a href="/mapa/">mapě</a>. 🥑</p>
+<p>Všechny ověřené podniky najdete na stránce <a href="/lokalita/praha/">kam na brunch a snídani v Praze</a> nebo na <a href="/mapa/">mapě</a>. 🥑</p>

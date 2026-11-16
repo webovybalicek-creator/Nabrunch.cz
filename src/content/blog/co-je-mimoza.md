@@ -19,7 +19,7 @@ image: "/wp-content/uploads/2026/01/mamashelter1.png"
 <ol>
 <li>Do sklenice nalij nejdřív <strong>šumivé víno</strong> (jinak se pění přes okraj).</li>
 <li>Pomalu dolij <strong>pomerančový džus</strong>.</li>
-<li>Nemíchej – bublinky by vyprchaly.</li>
+<li>Nemíchejte – bublinky by vyprchaly.</li>
 </ol>
 <p><strong>Poměr:</strong> klasicky 1 : 1. Kdo chce lehčí drink, dá víc džusu, kdo slavnostnější, víc vína.</p>
 
@@ -40,6 +40,6 @@ image: "/wp-content/uploads/2026/01/mamashelter1.png"
 </ul>
 
 <h2>Kde si dát brunch s bublinkami</h2>
-<p>Bezedné prosecco je součástí nedělního brunche v <a href="/podniky/kafkoff-praha/">Kafkoff</a>, welcome drink dostaneš na Mama Brunchi v <a href="/podniky/mama-shelter-praha/">Mama Shelter</a> – víc v článku <a href="/nedelni-brunch-bufet-praha/">nedělní brunch bufet v Praze</a>. Šumivé víno k brunchi nabízí i <a href="/podniky/bistro-central-olomouc/">Bistro Central</a> v Olomouci, kávu i víno <a href="/podniky/cavino-plzen/">Cavino</a> v Plzni nebo <a href="/podniky/balance-coffee-wine-znojmo/">BALANCE coffee &amp; wine</a> ve Znojmě. 🥂</p>
+<p>Bezedné prosecco je součástí nedělního brunche v <a href="/podniky/kafkoff-praha/">Kafkoff</a>, welcome drink dostanete na Mama Brunchi v <a href="/podniky/mama-shelter-praha/">Mama Shelter</a> – víc v článku <a href="/nedelni-brunch-bufet-praha/">nedělní brunch bufet v Praze</a>. Šumivé víno k brunchi nabízí i <a href="/podniky/bistro-central-olomouc/">Bistro Central</a> v Olomouci, kávu i víno <a href="/podniky/cavino-plzen/">Cavino</a> v Plzni nebo <a href="/podniky/balance-coffee-wine-znojmo/">BALANCE coffee &amp; wine</a> ve Znojmě. 🥂</p>
 
-<p><em>Alkohol pij s mírou a ne, pokud řídíš.</em></p>
+<p><em>Alkohol pij s mírou a ne, pokud řídíte.</em></p>

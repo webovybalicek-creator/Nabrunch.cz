@@ -21,10 +21,10 @@ obdobi: [podzim, zima]
 
 <h2>Recept na French toast</h2>
 <ol>
-<li>Rozšlehej 2 vejce, 150 ml mléka, lžíci cukru, špetku soli, vanilku a skořici.</li>
+<li>Rozšlehejte 2 vejce, 150 ml mléka, lžíci cukru, špetku soli, vanilku a skořici.</li>
 <li>Namoč 4 silnější plátky briošky – z každé strany asi 20 sekund.</li>
 <li>Opeč na pánvi s máslem na středním ohni dozlatova, z každé strany 2–3 minuty.</li>
-<li>Podávej s ovocem, javorovým sirupem, jogurtem nebo mascarpone.</li>
+<li>Podávejte s ovocem, javorovým sirupem, jogurtem nebo mascarpone.</li>
 </ol>
 
 <h2>Kde si dát skvělý French toast</h2>
@@ -35,4 +35,4 @@ obdobi: [podzim, zima]
 <li><a href="/podniky/cafe-placzek-brno/"><strong>Café Placzek</strong></a> (Brno) – francouzské toasty s ovocem a sezónními doplňky.</li>
 </ul>
 
-<p>Mezi sladkými brunchovými jídly nesmí chybět ani <a href="/livance-palacinky-pancakes-jaky-je-rozdil/">lívance a pancakes</a>. Hledáš slanou verzi toastu? Přečti si o <a href="/croque-monsieur-vs-croque-madame/">croque monsieur a croque madame</a>. 🍞</p>
+<p>Mezi sladkými brunchovými jídly nesmí chybět ani <a href="/livance-palacinky-pancakes-jaky-je-rozdil/">lívance a pancakes</a>. Hledáte slanou verzi toastu? Přečtěte si o <a href="/croque-monsieur-vs-croque-madame/">croque monsieur a croque madame</a>. 🍞</p>

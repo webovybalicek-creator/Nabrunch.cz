@@ -60,10 +60,10 @@ const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde
       />
       <h1>Snídaně a brunch {kde}</h1>
       <p class="lead">
-        {podnikuText(l.podniky.length)}, {l.podniky.length === 1 ? 'který' : 'které'} jsme vybrali {kde}. Filtruj podle kuchyně nebo atmosféry a najdi si svůj brunch.
+        {podnikuText(l.podniky.length)}, {l.podniky.length === 1 ? 'který' : 'které'} jsme vybrali {kde}. Filtrujte podle kuchyně nebo atmosféry a najděte si svůj brunch.
         {kavarny.length > 0 && (
           <>
-            {' '}Navíc tu najdeš {pocetText(kavarny.length, 'další kavárnu', 'další kavárny', 'dalších kaváren')}
+            {' '}Navíc tu najdete {pocetText(kavarny.length, 'další kavárnu', 'další kavárny', 'dalších kaváren')}
             {seSnidani > 0 && <>, z toho {seSnidani} se snídaní nebo brunchem</>}.
           </>
         )}

@@ -49,8 +49,8 @@ obdobi: [leto]
 
 <ul>
 <li>V létě se vyplatí vyrazit <strong>dřív</strong> – v 9 je venku ještě příjemně.</li>
-<li>Hledej <strong>zahrádku ve stínu nebo vnitroblok</strong> – přehled je v článku <a href="/brunch-na-zahradce/">brunch na zahrádce</a>.</li>
-<li>K ledové kávě si dej i <strong>sklenici vody</strong>.</li>
+<li>Hledejte <strong>zahrádku ve stínu nebo vnitroblok</strong> – přehled je v článku <a href="/brunch-na-zahradce/">brunch na zahrádce</a>.</li>
+<li>K ledové kávě si dejte i <strong>sklenici vody</strong>.</li>
 </ul>
 
-<p>Další letní tipy najdeš mezi <a href="/zdrave-snidane-a-brunche/">zdravými snídaněmi</a> a <a href="/brunch-se-zahradkou/">podniky se zahrádkou</a>. 🧊</p>
+<p>Další letní tipy najdete mezi <a href="/zdrave-snidane-a-brunche/">zdravými snídaněmi</a> a <a href="/brunch-se-zahradkou/">podniky se zahrádkou</a>. 🧊</p>

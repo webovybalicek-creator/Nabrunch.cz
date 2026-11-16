@@ -53,14 +53,14 @@ export function dotazyPodniku(p: Podnik): [string, string][] {
   if (tip || kdeMenu)
     out.push([
       `Jaké má ${n} menu a co si dát?`,
-      vecny(`${tip ? `Náš tip: ${tip.length > 220 ? tip.slice(0, 220).replace(/\s+\S*$/, '') + '…' : tip}` : ''} ${kdeMenu ? `Aktuální menu a ceny najdeš ${kdeMenu}, odkaz je v kontaktech na této stránce.` : ''}`),
+      vecny(`${tip ? `Náš tip: ${tip.length > 220 ? tip.slice(0, 220).replace(/\s+\S*$/, '') + '…' : tip}` : ''} ${kdeMenu ? `Aktuální menu a ceny najdete ${kdeMenu}, odkaz je v kontaktech na této stránce.` : ''}`),
     ]);
 
   // Rezervace
   const r = (p.rezervace ?? '').trim();
   if (r) {
     const odpoved = /^https?:/i.test(r) || /online/i.test(r)
-      ? 'Ano, stůl si můžeš rezervovat online.'
+      ? 'Ano, stůl si můžete rezervovat online.'
       : /telefon/i.test(r)
         ? `Ano, rezervovat lze telefonicky${p.telefonText || p.telefon ? ` na čísle ${p.telefonText ?? p.telefon}` : ''}.`
         : /^ne\b/i.test(r)
@@ -146,7 +146,7 @@ export function dotazyLokality(l: Lokalita): [string, string][] {
       `Kam ${kde} na brunch v neděli?`,
       nedele.length
         ? `V neděli má otevřeno ${nedele.length} z ${sDobou} podniků, u kterých známe otevírací dobu. Nejdřív otevírá ${nedele[0].p.nazev} (od ${hhmm(nedele[0].od)})${nedele.length > 1 ? `, dále ${vycet(nedele.slice(1, 3).map((x) => `${x.p.nazev} (od ${hhmm(x.od)})`))}` : ''}.`
-        : `Podniky, které ${kde} sledujeme, mají v neděli zavřeno. Mrkni na okolní města nebo na stránku Otevřeno teď.`,
+        : `Podniky, které ${kde} sledujeme, mají v neděli zavřeno. Mrkněte na okolní města nebo na stránku Otevřeno teď.`,
     ]);
 
   const psi = P.filter((p) => p.atmosfera.includes('Pet-friendly')).map((p) => p.nazev);

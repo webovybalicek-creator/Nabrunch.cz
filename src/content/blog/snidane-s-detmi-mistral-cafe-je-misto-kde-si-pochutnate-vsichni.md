@@ -53,9 +53,9 @@ image: "/wp-content/uploads/2025/03/Snidane-s-detmi.jpg"
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-<h2 class="wp-block-heading">✨ <strong>Chceš vědět víc o Mistral Café?</strong></h2>
+<h2 class="wp-block-heading">✨ <strong>Chcete vědět víc o Mistral Café?</strong></h2>
 
-<p>Klikni na odkaz a objev všechny detaily, fotky a další informace o tomto skvělém místě!</p>
+<p>Klikněte na odkaz a objev všechny detaily, fotky a další informace o tomto skvělém místě!</p>
 
 <p><a href="/podniky/mistral-cafe-praha/"><strong>🔗 Podívejte se na podnik Mistral Café v naší nabídce podniků.</strong></a></p>
 

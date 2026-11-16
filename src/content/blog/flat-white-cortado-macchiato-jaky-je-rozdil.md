@@ -29,9 +29,9 @@ image: "/wp-content/uploads/2025/03/maybecoffeebistro2.jpg"
 
 <h2>Kterou si vybrat?</h2>
 <ul>
-<li><strong>Chceš hlavně kávu?</strong> Macchiato nebo cortado.</li>
-<li><strong>Chceš kávu s mlékem, ale aby byla cítit?</strong> Flat white.</li>
-<li><strong>Chceš velký, jemný mléčný nápoj?</strong> Latte – rozdíl oproti cappuccinu vysvětlujeme v článku <a href="/latte-vs-cappuccino-vs-flat-white-jaky-je-rozdil/">cappuccino vs. latte</a>.</li>
+<li><strong>Chcete hlavně kávu?</strong> Macchiato nebo cortado.</li>
+<li><strong>Chcete kávu s mlékem, ale aby byla cítit?</strong> Flat white.</li>
+<li><strong>Chcete velký, jemný mléčný nápoj?</strong> Latte – rozdíl oproti cappuccinu vysvětlujeme v článku <a href="/latte-vs-cappuccino-vs-flat-white-jaky-je-rozdil/">cappuccino vs. latte</a>.</li>
 </ul>
 
 <h2>Kde si dát skvělý flat white</h2>

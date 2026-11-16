@@ -7,7 +7,7 @@ image: "/wp-content/uploads/2025/11/479718059_1053126836833654_28110390502796432
 obdobi: [zima]
 ---
 
-<p>Na brunchovém lístku se potkávají <strong>lívance</strong>, <strong>palačinky</strong> i americké <strong>pancakes</strong>. Všechno jsou to placky z těsta na pánvi – ale každá je jiná. Tady je přehled, ať víš, co si objednat.</p>
+<p>Na brunchovém lístku se potkávají <strong>lívance</strong>, <strong>palačinky</strong> i americké <strong>pancakes</strong>. Všechno jsou to placky z těsta na pánvi – ale každá je jiná. Tady je přehled, ať víte, co si objednat.</p>
 
 <h2>Palačinky</h2>
 
@@ -33,17 +33,17 @@ obdobi: [zima]
 
 <h2>Které si dát na brunch?</h2>
 
-<p>Na sladký brunch se nejčastěji hodí lívance nebo pancakes – jsou syté a dobře nasají sirup i tvaroh. Palačinky jsou lehčí a víc „dezertní“. A pokud máš chuť spíš na slané, zkus místo nich třeba <a href="/co-je-shakshuka/">shakshuku</a> nebo <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">vejce Benedikt</a>.</p>
+<p>Na sladký brunch se nejčastěji hodí lívance nebo pancakes – jsou syté a dobře nasají sirup i tvaroh. Palačinky jsou lehčí a víc „dezertní“. A pokud máte chuť spíš na slané, zkuste místo nich třeba <a href="/co-je-shakshuka/">shakshuku</a> nebo <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">vejce Benedikt</a>.</p>
 
 <h2>Kde si dát skvělé lívance</h2>
 
 <ul>
 <li><a href="/podniky/barista-cafe-chrudim/"><strong>Barista Café</strong></a> (Chrudim) – náš tip: špaldové lívance s tvarohem, hruškou ve skořici a slaným karamelem.</li>
-<li><a href="/podniky/brunches-bistro-brno/"><strong>Brunche’s Bistro</strong></a> (Brno) – lívance s dubajskou čokoládou, které musíš zkusit.</li>
+<li><a href="/podniky/brunches-bistro-brno/"><strong>Brunche’s Bistro</strong></a> (Brno) – lívance s dubajskou čokoládou, které musíte zkusit.</li>
 <li><a href="/podniky/kocici-kavarna-praha/"><strong>Kočičí kavárna</strong></a> (Praha 1) – lívance s tvarohem ve společnosti koček.</li>
 <li><a href="/podniky/enjoy-coffee-brunch-plzen/"><strong>Enjoy coffee &amp; brunch</strong></a> (Plzeň) – čokoládové i ovocné lívance.</li>
 <li><a href="/podniky/coffeeup-usti-nad-labem/"><strong>Coffeeup</strong></a> (Ústí nad Labem) – lívance s javorovým sirupem.</li>
 <li><a href="/podniky/kafkoff-praha/"><strong>Kafkoff</strong></a> (Praha 1) – nedělní brunch bufet s lívancovým barem.</li>
 </ul>
 
-<p>Další sladké tipy najdeš v článku <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenější brunch jídla</a>.</p>
+<p>Další sladké tipy najdete v článku <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenější brunch jídla</a>.</p>

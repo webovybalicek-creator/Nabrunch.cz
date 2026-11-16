@@ -13,7 +13,7 @@ obdobi: [jaro, leto]
 
 <p>Matcha se vyrábí z čajových lístků, které se před sklizní několik týdnů <strong>stíní</strong>. Rostlina pak tvoří víc chlorofylu (odtud sytě zelená barva) a aminokyseliny L-theaninu, která dává matche jemně sladkou, „umami“ chuť. Lístky se zbaví žilek a semelou na jemný prášek.</p>
 
-<p>Na rozdíl od běžného čaje, kde lístky jen louhuješ, matchu <strong>piješ celou</strong> – prášek se rozšlehá ve vodě bambusovou metličkou (chasen). Proto má výraznější chuť i účinky.</p>
+<p>Na rozdíl od běžného čaje, kde lístky jen louhujete, matchu <strong>pijete celou</strong> – prášek se rozšlehá ve vodě bambusovou metličkou (chasen). Proto má výraznější chuť i účinky.</p>
 
 <h2>Jak matcha latte chutná</h2>
 
@@ -35,10 +35,10 @@ obdobi: [jaro, leto]
 <h2>Jak si matcha latte udělat doma</h2>
 
 <ol>
-<li>Prosej 1–2 g matchy (zhruba lžičku) do misky.</li>
-<li>Přilij asi 50 ml vody o teplotě 70–80 °C – vroucí voda matchu spálí a zhořkne.</li>
+<li>Prosejte 1–2 g matchy (zhruba lžičku) do misky.</li>
+<li>Přilijte asi 50 ml vody o teplotě 70–80 °C – vroucí voda matchu spálí a zhořkne.</li>
 <li>Metličkou nebo napěňovačem šlehej do hladka, dokud se neudělá jemná pěna.</li>
-<li>Do hrnku nalij napěněné teplé mléko (nebo studené s ledem) a matchu přelij navrch.</li>
+<li>Do hrnku nalij napěněné teplé mléko (nebo studené s ledem) a matchu přelijte navrch.</li>
 </ol>
 
 <p>Variací je spousta – s vanilkou, medem, jahodovým coldfoamem nebo sezamovým krémem.</p>
@@ -53,4 +53,4 @@ obdobi: [jaro, leto]
 <li><a href="/podniky/cavino-plzen/"><strong>Cavino</strong></a> (Plzeň) a <a href="/podniky/kookie-by-nikol-zlin/"><strong>Kookie by Nikol</strong></a> (Zlín) – matcha latte i mimo Prahu.</li>
 </ul>
 
-<p>Víc tipů najdeš v článku <a href="/nejlepsi-matcha-v-praze/">nejlepší matcha v Praze</a>. Zajímá tě rozdíl mezi matchou a praženou hojichou? Ten vysvětlujeme v článku <a href="/hojicha-vs-matcha-ktery-caj-si-zamilujete-vic/">hojicha vs. matcha</a>.</p>
+<p>Víc tipů najdete v článku <a href="/nejlepsi-matcha-v-praze/">nejlepší matcha v Praze</a>. Zajímá vás rozdíl mezi matchou a praženou hojichou? Ten vysvětlujeme v článku <a href="/hojicha-vs-matcha-ktery-caj-si-zamilujete-vic/">hojicha vs. matcha</a>.</p>

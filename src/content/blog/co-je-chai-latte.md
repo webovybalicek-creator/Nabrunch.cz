@@ -19,29 +19,29 @@ obdobi: [podzim, zima]
 <li><strong>Mléko</strong> – kravské nebo rostlinné (ovesné se k chai hodí výborně).</li>
 <li><strong>Sladidlo</strong> – cukr, med nebo sirup.</li>
 </ul>
-<p>Kavárny používají buď <strong>sypanou chai směs</strong> (nejlepší chuť), <strong>sirup</strong>, nebo <strong>prášek</strong>. Sirupy a prášky bývají hodně sladké – pokud chceš méně cukru, zeptej se, z čeho chai připravují.</p>
+<p>Kavárny používají buď <strong>sypanou chai směs</strong> (nejlepší chuť), <strong>sirup</strong>, nebo <strong>prášek</strong>. Sirupy a prášky bývají hodně sladké – pokud chcete méně cukru, zeptejte se, z čeho chai připravují.</p>
 
 <h2>Jak chai latte chutná</h2>
 <p>Kořeněně, sladce a krémově – trochu jako vánoční perník v hrnku. Zázvor a pepř dávají jemnou pálivost, kardamom svěžest a skořice sladkost.</p>
 
 <h2>Má chai latte kofein? Chai vs. káva</h2>
-<p><strong>Ano, chai latte obsahuje kofein</strong>, protože základem je černý čaj. Bývá ho ale <strong>zhruba o polovinu méně než v šálku kávy</strong> – přesné množství záleží na síle čaje a velikosti porce. Chai je proto dobrá volba, když chceš povzbudit, ale ne tolik jako kávou. Existuje i „dirty chai“ – chai latte s panákem espressa – pro ty, kdo chtějí obojí.</p>
+<p><strong>Ano, chai latte obsahuje kofein</strong>, protože základem je černý čaj. Bývá ho ale <strong>zhruba o polovinu méně než v šálku kávy</strong> – přesné množství záleží na síle čaje a velikosti porce. Chai je proto dobrá volba, když chcete povzbudit, ale ne tolik jako kávou. Existuje i „dirty chai“ – chai latte s panákem espressa – pro ty, kdo chtějí obojí.</p>
 
 <figure class="wp-block-table"><table><thead><tr><th></th><th><strong>Chai latte</strong></th><th><strong>Caffè latte</strong></th></tr></thead><tbody>
 <tr><td><strong>Základ</strong></td><td>Černý čaj + koření</td><td>Espresso</td></tr>
 <tr><td><strong>Kofein</strong></td><td>Méně</td><td>Více</td></tr>
 <tr><td><strong>Chuť</strong></td><td>Kořeněná, sladká</td><td>Kávová, mléčná</td></tr>
-<tr><td><strong>Sladkost</strong></td><td>Obvykle slazené</td><td>Neslazené, pokud si nepřisladíš</td></tr>
+<tr><td><strong>Sladkost</strong></td><td>Obvykle slazené</td><td>Neslazené, pokud si nepřisladíte</td></tr>
 </tbody></table></figure>
 
 <h2>Je chai latte zdravé?</h2>
-<p>Koření jako zázvor a skořice dodává chuť i pocit zahřátí. Zdravotní stránku ale nejvíc ovlivňuje <strong>množství cukru</strong> – kavárenské chai ze sirupu může mít cukru jako sladká limonáda. Nejlepší je chai ze sypané směsi, kde si sladkost určíš sám.</p>
+<p>Koření jako zázvor a skořice dodává chuť i pocit zahřátí. Zdravotní stránku ale nejvíc ovlivňuje <strong>množství cukru</strong> – kavárenské chai ze sirupu může mít cukru jako sladká limonáda. Nejlepší je chai ze sypané směsi, kde si sladkost určíte sami.</p>
 
 <h2>Chai latte doma</h2>
 <ol>
-<li>Do hrnce dej 250 ml vody, 2 lžičky černého čaje, kousek skořice, 3 rozdrcené kardamomy, plátek zázvoru a 2 hřebíčky.</li>
-<li>Povař 5 minut, přidej 200 ml mléka a zahřej těsně pod bod varu.</li>
-<li>Přeceď, oslaď medem a napěň.</li>
+<li>Do hrnce dejte 250 ml vody, 2 lžičky černého čaje, kousek skořice, 3 rozdrcené kardamomy, plátek zázvoru a 2 hřebíčky.</li>
+<li>Povař 5 minut, přidejte 200 ml mléka a zahřejte těsně pod bod varu.</li>
+<li>Přeceďte, oslaď medem a napěň.</li>
 </ol>
 
 <h2>Kde si dát dobrý chai latte</h2>
@@ -50,4 +50,4 @@ obdobi: [podzim, zima]
 <li><a href="/podniky/enjoy-coffee-brunch-plzen/"><strong>Enjoy coffee &amp; brunch</strong></a> (Plzeň) – chai i matcha latte k brunchi každý den.</li>
 </ul>
 
-<p>Chai se skvěle hodí ke sladkému brunchi – <a href="/livance-palacinky-pancakes-jaky-je-rozdil/">lívancům, palačinkám</a> nebo banánovému chlebu. Další zahřívací nápoje: <a href="/co-je-to-golden-milk/">golden milk</a> a <a href="/co-to-je-samahan/">samahan</a>. Podzimní tipy najdeš v článku <a href="/podzimni-brunch/">podzimní brunch</a>. ☕</p>
+<p>Chai se skvěle hodí ke sladkému brunchi – <a href="/livance-palacinky-pancakes-jaky-je-rozdil/">lívancům, palačinkám</a> nebo banánovému chlebu. Další zahřívací nápoje: <a href="/co-je-to-golden-milk/">golden milk</a> a <a href="/co-to-je-samahan/">samahan</a>. Podzimní tipy najdete v článku <a href="/podzimni-brunch/">podzimní brunch</a>. ☕</p>

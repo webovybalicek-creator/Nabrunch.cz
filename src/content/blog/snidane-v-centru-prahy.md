@@ -6,7 +6,7 @@ date: "2026-11-09T21:35:00"
 image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-20-v-10.37.50.png"
 ---
 
-<p>V centru Prahy je snadné narazit na předraženou snídani pro turisty. Přitom pár minut od památek najdeš <strong>kavárny, kam chodí i Pražané</strong>. Seřadili jsme je podle toho, u které památky zrovna jsi.</p>
+<p>V centru Prahy je snadné narazit na předraženou snídani pro turisty. Přitom pár minut od památek najdete <strong>kavárny, kam chodí i Pražané</strong>. Seřadili jsme je podle toho, u které památky zrovna jste.</p>
 
 <h2>Pražský hrad a Hradčany</h2>
 <ul>
@@ -38,9 +38,9 @@ image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-20-v-10.37.50.png"
 
 <h2>Tipy pro snídani v centru</h2>
 <ul>
-<li><strong>Vyhni se kavárnám přímo na náměstích</strong> s menu v deseti jazycích – o ulici vedle bývá líp a levněji.</li>
+<li><strong>Vyhněte se kavárnám přímo na náměstích</strong> s menu v deseti jazycích – o ulici vedle bývá líp a levněji.</li>
 <li><strong>Snídaně do 10:00</strong> je v centru nejklidnější, pak přijdou skupiny.</li>
-<li><strong>Kartou</strong> zaplatíš skoro všude.</li>
+<li><strong>Kartou</strong> zaplatíte skoro všude.</li>
 </ul>
 
-<p>Kompletní výběr najdeš v článku <a href="/nejlepsi-brunche-na-praze-1/">nejlepší brunche na Praze 1</a>, na stránce <a href="/lokalita/praha-1/">snídaně a brunch na Praze 1</a> a v průvodci <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>. 🏰</p>
+<p>Kompletní výběr najdete v článku <a href="/nejlepsi-brunche-na-praze-1/">nejlepší brunche na Praze 1</a>, na stránce <a href="/lokalita/praha-1/">snídaně a brunch na Praze 1</a> a v průvodci <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>. 🏰</p>

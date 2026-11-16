@@ -7,7 +7,7 @@ image: "/wp-content/uploads/2026/06/bea605b8-b609-4711-9e55-48db9b434584.png"
 
 <h2 class="wp-block-heading"><strong>Co je Gault&amp;Millau? Průvodce, který hodnotí nejlepší restaurace světa</strong></h2>
 
-<p>Pokud se zajímáš o gastronomii, pravděpodobně už jsi slyšel o michelinských hvězdách. Vedle slavného <strong>Michelin Guide </strong>ale existuje ještě jedno velmi respektované gastronomické hodnocení – <strong>Gault&amp;Millau</strong>. Právě tento francouzský průvodce dnes patří mezi nejvýznamnější autority v gastronomii a nově hodnotí také restaurace v České republice. po celém světě. podobně jako michelinské hvězdy. ěř nedosažitelná. istence výkonu</p>
+<p>Pokud se zajímáte o gastronomii, pravděpodobně už jste slyšeli o michelinských hvězdách. Vedle slavného <strong>Michelin Guide </strong>ale existuje ještě jedno velmi respektované gastronomické hodnocení – <strong>Gault&amp;Millau</strong>. Právě tento francouzský průvodce dnes patří mezi nejvýznamnější autority v gastronomii a nově hodnotí také restaurace v České republice. po celém světě. podobně jako michelinské hvězdy. ěř nedosažitelná. istence výkonu</p>
 
 <ul class="wp-block-list">
 <li>harmonie chutí</li>
@@ -53,4 +53,4 @@ image: "/wp-content/uploads/2026/06/bea605b8-b609-4711-9e55-48db9b434584.png"
 
 <p><strong>„Go Mijó“</strong> <em>(francouzsky: [go mijo])</em>.</p>
 
-<p>V Česku se ale často setkáš i s variantami jako <strong>„Golt Mijo“</strong>, <strong>„Gó Mijo“</strong> nebo jednoduše <strong>„Gault Millau“ vyslovené po česku</strong>. Pokud chceš znít jako gastronomický insider, drž se výslovnosti <strong>„Go Mijó“</strong>.</p>
+<p>V Česku se ale často setkáte i s variantami jako <strong>„Golt Mijo“</strong>, <strong>„Gó Mijo“</strong> nebo jednoduše <strong>„Gault Millau“ vyslovené po česku</strong>. Pokud chcete znít jako gastronomický insider, drž se výslovnosti <strong>„Go Mijó“</strong>.</p>

@@ -184,7 +184,7 @@ export const TEMATA: Tema[] = [
     nadpis: 'Veganské snídaně a brunche',
     kratce: 'Veganské',
     emoji: '🌱',
-    popis: 'Podniky, kde si dáš snídani nebo brunch úplně bez živočišných produktů – od tofu scramble po rostlinné palačinky.',
+    popis: 'Podniky, kde si dáte snídani nebo brunch úplně bez živočišných produktů – od tofu scramble po rostlinné palačinky.',
   },
   {
     slug: 'zdrave-snidane-a-brunche',
@@ -229,7 +229,7 @@ export const TEMATA: Tema[] = [
     nadpis: 'Pet-friendly podniky na brunch',
     kratce: 'Pet-friendly',
     emoji: '🐶',
-    popis: 'Podniky, kam můžeš na snídani nebo brunch vzít i svého psího parťáka.',
+    popis: 'Podniky, kam můžete na snídani nebo brunch vzít i svého psího parťáka.',
   },
   {
     slug: 'instagramove-podniky-na-brunch',

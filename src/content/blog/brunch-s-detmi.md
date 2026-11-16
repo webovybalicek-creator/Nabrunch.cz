@@ -30,11 +30,11 @@ image: "/wp-content/uploads/2025/04/mistral-cafe_upscaled.jpeg"
 <h2>Jak si brunch s dětmi užít</h2>
 
 <ul>
-<li><strong>Jdi brzy.</strong> Děti mají hlad dřív a v 9 je v kavárnách klid.</li>
-<li><strong>Rezervuj stůl blízko koutku</strong>, ať máš děti na očích.</li>
-<li><strong>Objednej dětem hned.</strong> Lívance, palačinky nebo jogurt s granolou bývají hotové rychle.</li>
-<li><strong>Kočárek?</strong> Zeptej se dopředu, jestli se do podniku vejde – v centru bývají schody.</li>
-<li><strong>Zahrádka je kamarád.</strong> Venku se děti nemusí tolik krotit – vyber si z <a href="/brunch-se-zahradkou/">podniků se zahrádkou</a>.</li>
+<li><strong>Jděte brzy.</strong> Děti mají hlad dřív a v 9 je v kavárnách klid.</li>
+<li><strong>Rezervujte stůl blízko koutku</strong>, ať máte děti na očích.</li>
+<li><strong>Objednejte dětem hned.</strong> Lívance, palačinky nebo jogurt s granolou bývají hotové rychle.</li>
+<li><strong>Kočárek?</strong> Zeptejte se dopředu, jestli se do podniku vejde – v centru bývají schody.</li>
+<li><strong>Zahrádka je kamarád.</strong> Venku se děti nemusí tolik krotit – vyberte si z <a href="/brunch-se-zahradkou/">podniků se zahrádkou</a>.</li>
 </ul>
 
-<p>Další rodinné tipy najdeš v průvodci <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>. 👶</p>
+<p>Další rodinné tipy najdete v průvodci <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>. 👶</p>

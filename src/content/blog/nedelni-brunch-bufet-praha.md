@@ -6,13 +6,13 @@ date: "2026-11-09T21:25:00"
 image: "/wp-content/uploads/2026/01/mamashelter1.png"
 ---
 
-<p><strong>Nedělní brunch bufet</strong> je ideální, když nechceš vybírat jedno jídlo z menu, ale ochutnat od všeho trochu. V Praze jsou dva podniky, které nedělní <strong>all you can eat brunch</strong> dělají pravidelně a které jsme si ověřili.</p>
+<p><strong>Nedělní brunch bufet</strong> je ideální, když nechcete vybírat jedno jídlo z menu, ale ochutnat od všeho trochu. V Praze jsou dva podniky, které nedělní <strong>all you can eat brunch</strong> dělají pravidelně a které jsme si ověřili.</p>
 
 <h2>👉🏼 <a href="/podniky/kafkoff-praha/">Kafkoff</a> – Brunch, Beats &amp; Kids (Praha 1)</h2>
 
 <p>Kafkoff na náměstí Franze Kafky pořádá každou neděli <strong>od 11:00 do 15:00</strong> koncept Brunch, Beats &amp; Kids: all you can eat bufet se snídaňovými i obědovými položkami – lososový tatarák, hummus, lívancový a ovocný bar a mnoho dalšího. V ceně je <strong>bezedné prosecco</strong> a atmosféru doplňuje DJ set.</p>
 
-<p>Děti mezitím zabaví skákací hrad, Montessori hračky, kreativní dílničky nebo malování na obličej. Podle našich posledních informací stojí brunch 1 190 Kč pro dospělého (bufet + prosecco) a 590 Kč pro dítě (bufet + hernička + program). Aktuální cenu a volná místa si ověř přímo u podniku.</p>
+<p>Děti mezitím zabaví skákací hrad, Montessori hračky, kreativní dílničky nebo malování na obličej. Podle našich posledních informací stojí brunch 1 190 Kč pro dospělého (bufet + prosecco) a 590 Kč pro dítě (bufet + hernička + program). Aktuální cenu a volná místa si ověřte přímo u podniku.</p>
 
 <p>Víc v článku <a href="/rodinny-brunch-pro-deti-v-kafkoff/">rodinný brunch pro děti v Kafkoff</a>.</p>
 
@@ -34,9 +34,9 @@ image: "/wp-content/uploads/2026/01/mamashelter1.png"
 
 <h2>Tipy na brunch bufet</h2>
 <ul>
-<li><strong>Rezervuj</strong> – nedělní bufety se plní hlavně ve větších skupinách.</li>
-<li><strong>Přijď na začátek</strong> – bufet je nejbohatší a nemusíš spěchat.</li>
-<li><strong>Nesnídej předem</strong> – a začni slaným, sladké nikam neuteče.</li>
+<li><strong>Rezervujte</strong> – nedělní bufety se plní hlavně ve větších skupinách.</li>
+<li><strong>Přijďte na začátek</strong> – bufet je nejbohatší a nemusíte spěchat.</li>
+<li><strong>Nesnídejte předem</strong> – a začněte slaným, sladké nikam neuteče.</li>
 </ul>
 
-<p>Raději menu než bufet? Mrkni na průvodce <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>. 🥂</p>
+<p>Raději menu než bufet? Mrkněte na průvodce <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>. 🥂</p>

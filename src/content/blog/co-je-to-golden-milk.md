@@ -21,7 +21,7 @@ obdobi: [podzim, zima]
 
 <h3 class="wp-block-heading">Proč se golden milk hodí k brunchi</h3>
 
-<p>Chuťově si golden milk skvěle rozumí se <strong>sladkými brunch pokrmy</strong>, jako jsou lívance, banánový chléb, kaše nebo granola, ale překvapivě dobře funguje i se slanými snídaňovými jídly. Díky koření podporuje trávení a působí lehce zahřívacím efektem, což oceníš hlavně během chladnějších měsíců. I proto patří golden milk mezi stále populárnější <strong>zdravější alternativní nápoje k brunchi</strong>.</p>
+<p>Chuťově si golden milk skvěle rozumí se <strong>sladkými brunch pokrmy</strong>, jako jsou lívance, banánový chléb, kaše nebo granola, ale překvapivě dobře funguje i se slanými snídaňovými jídly. Díky koření podporuje trávení a působí lehce zahřívacím efektem, což oceníte hlavně během chladnějších měsíců. I proto patří golden milk mezi stále populárnější <strong>zdravější alternativní nápoje k brunchi</strong>.</p>
 
 <h3 class="wp-block-heading">Je golden milk zdravé?</h3>
 
@@ -29,4 +29,4 @@ obdobi: [podzim, zima]
 
 <h3 class="wp-block-heading">Shrnutí</h3>
 
-<p><strong>Golden milk (kurkumové latté)</strong> je voňavý, bezkofeinový nápoj, který si našel své místo na <strong>brunch menu</strong> i v domácích snídaních. Nabízí alternativu ke kávě, zahřeje, potěší chuťové buňky a zapadá do trendu zdravějších brunch nápojů. Pokud hledáš něco jiného než matchu nebo chai, golden milk je ideální volba.</p>
+<p><strong>Golden milk (kurkumové latté)</strong> je voňavý, bezkofeinový nápoj, který si našel své místo na <strong>brunch menu</strong> i v domácích snídaních. Nabízí alternativu ke kávě, zahřeje, potěší chuťové buňky a zapadá do trendu zdravějších brunch nápojů. Pokud hledáte něco jiného než matchu nebo chai, golden milk je ideální volba.</p>

@@ -15,8 +15,8 @@ obdobi: [jaro]
 <h2>Jak brunch na Den matek naplánovat</h2>
 
 <ul>
-<li><strong>Rezervuj aspoň týden dopředu.</strong> Neděle na Den matek patří k nejrušnějším brunchovým dnům v roce.</li>
-<li><strong>Vyber místo podle maminky.</strong> Má ráda sladké? Vyber cukrárnu nebo kavárnu s domácími dezerty. Je fanynka zdravého jídla? Sáhni po bowlech a avokádových toastech.</li>
+<li><strong>Rezervujte aspoň týden dopředu.</strong> Neděle na Den matek patří k nejrušnějším brunchovým dnům v roce.</li>
+<li><strong>Vyberte místo podle maminky.</strong> Má ráda sladké? Vyberte cukrárnu nebo kavárnu s domácími dezerty. Je fanynka zdravého jídla? Sáhněte po bowlech a avokádových toastech.</li>
 <li><strong>Jdete s dětmi?</strong> Hodí se podnik s dětským koutkem, aby si maminka mohla v klidu vypít kávu.</li>
 <li><strong>Spoj brunch s procházkou.</strong> V květnu bývá krásně – park, zahrada nebo výhled stojí za to.</li>
 <li><strong>Dárek navíc:</strong> dárkový poukaz do oblíbené kavárny na další společné ráno.</li>
@@ -42,7 +42,7 @@ obdobi: [jaro]
 <li><a href="/podniky/kookie-by-nikol-zlin/"><strong>Kookie by Nikol</strong></a> (Zlín) – domácí dortíky a zahrádka pro rodiny s dětmi.</li>
 </ul>
 
-<p>Další nápady najdeš mezi <a href="/brunch-se-zahradkou/">podniky se zahrádkou</a> a <a href="/instagramove-podniky-na-brunch/">stylovými místy na brunch</a>. Na brunch s dětmi se hodí náš <a href="/brunch-s-detmi/">přehled podniků pro rodiny</a>.</p>
+<p>Další nápady najdete mezi <a href="/brunch-se-zahradkou/">podniky se zahrádkou</a> a <a href="/instagramove-podniky-na-brunch/">stylovými místy na brunch</a>. Na brunch s dětmi se hodí náš <a href="/brunch-s-detmi/">přehled podniků pro rodiny</a>.</p>
 
 <h2>Brunch pro maminku doma</h2>
 

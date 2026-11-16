@@ -25,14 +25,14 @@ obdobi: [jaro, leto]
 </tbody></table></figure>
 
 <h2>Co je zdravější?</h2>
-<p>Obecně má <strong>neslazené müsli méně cukru a tuku</strong>, protože se nepeče s medem a olejem. Granola je energeticky bohatší – a chutnější. Kupované směsi se ale hodně liší, takže nejlepší je podívat se na složení: první by měly být vločky a ořechy, ne cukr. Domácí granolu si osladíš, jak chceš.</p>
+<p>Obecně má <strong>neslazené müsli méně cukru a tuku</strong>, protože se nepeče s medem a olejem. Granola je energeticky bohatší – a chutnější. Kupované směsi se ale hodně liší, takže nejlepší je podívat se na složení: první by měly být vločky a ořechy, ne cukr. Domácí granolu si osladíte, jak chcete.</p>
 
 <h2>Domácí granola</h2>
 <ol>
-<li>Smíchej 300 g ovesných vloček, 100 g nasekaných ořechů a 50 g semínek.</li>
-<li>Přidej 4 lžíce medu nebo javorového sirupu, 3 lžíce rozpuštěného kokosového oleje, špetku soli a skořici.</li>
-<li>Rozprostři na plech a peč při 160 °C asi 20–25 minut, v polovině promíchej.</li>
-<li>Nech vychladnout – teprve pak ztuhne do křupava. Přimíchej sušené ovoce.</li>
+<li>Smíchejte 300 g ovesných vloček, 100 g nasekaných ořechů a 50 g semínek.</li>
+<li>Přidejte 4 lžíce medu nebo javorového sirupu, 3 lžíce rozpuštěného kokosového oleje, špetku soli a skořici.</li>
+<li>Rozprostři na plech a peč při 160 °C asi 20–25 minut, v polovině promíchejte.</li>
+<li>Nechte vychladnout – teprve pak ztuhne do křupava. Přimíchejte sušené ovoce.</li>
 </ol>
 
 <h2>Kde si dát jogurt s granolou</h2>
@@ -43,4 +43,4 @@ obdobi: [jaro, leto]
 <li><a href="/podniky/poppy-beans-coffee-brno/"><strong>Poppy Beans Coffee</strong></a> (Brno) – slaná granola na kváskovém chlebu, netradiční a výborná.</li>
 </ul>
 
-<p>Granola patří i do <a href="/co-je-acai-bowl/">acai bowlu</a>. Další lehké snídaně najdeš mezi <a href="/zdrave-snidane-a-brunche/">zdravými snídaněmi a brunchi</a>. 🥣</p>
+<p>Granola patří i do <a href="/co-je-acai-bowl/">acai bowlu</a>. Další lehké snídaně najdete mezi <a href="/zdrave-snidane-a-brunche/">zdravými snídaněmi a brunchi</a>. 🥣</p>

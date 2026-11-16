@@ -35,17 +35,17 @@ obdobi: [podzim, zima]
 <ul>
 <li><strong>Zelená shakshuka</strong> – místo rajčat špenát, kapusta nebo hrášek.</li>
 <li><strong>S masem</strong> – s klobásou nebo kořeněnou merguez.</li>
-<li><strong>Veganská</strong> – místo vajec tofu nebo cizrna. Hledáš-li veganský brunch, mrkni na <a href="/veganske-snidane-a-brunche/">veganské podniky</a>.</li>
+<li><strong>Veganská</strong> – místo vajec tofu nebo cizrna. Hledáte-li veganský brunch, mrkněte na <a href="/veganske-snidane-a-brunche/">veganské podniky</a>.</li>
 </ul>
 
 <h2>Jak si shakshuku udělat doma</h2>
 
 <ol>
 <li>Na olivovém oleji orestuj cibuli, papriku a česnek.</li>
-<li>Přidej kmín, papriku a chilli, krátce osmahni.</li>
-<li>Vlij rajčata (z plechovky klidně), osol a nech 10–15 minut zhoustnout.</li>
-<li>Lžící udělej důlky, rozklepni do nich vejce a pod pokličkou nech 5–8 minut dojít.</li>
-<li>Posyp bylinkami, sýrem a podávej s pečivem.</li>
+<li>Přidejte kmín, papriku a chilli, krátce osmahni.</li>
+<li>Vlijte rajčata (z plechovky klidně), osol a nechte 10–15 minut zhoustnout.</li>
+<li>Lžící udělejte důlky, rozklepněte do nich vejce a pod pokličkou nechte 5–8 minut dojít.</li>
+<li>Posyp bylinkami, sýrem a podávejte s pečivem.</li>
 </ol>
 
 <h2>Kde si dát shakshuku</h2>
@@ -56,4 +56,4 @@ obdobi: [podzim, zima]
 <li><a href="/podniky/skog-brno/"><strong>SKØG</strong></a> (Brno) – originální shakshuka hot dog, který stojí za to.</li>
 </ul>
 
-<p>Další tipy najdeš v přehledu <a href="/orientalni-snidane-a-brunche/">orientálních snídaní a brunchů</a>. A pokud tě zajímají i jiná klasická brunchová jídla, přečti si, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a>, nebo náš přehled <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenějších brunch jídel</a>.</p>
+<p>Další tipy najdete v přehledu <a href="/orientalni-snidane-a-brunche/">orientálních snídaní a brunchů</a>. A pokud vás zajímají i jiná klasická brunchová jídla, přečtěte si, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a>, nebo náš přehled <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenějších brunch jídel</a>.</p>

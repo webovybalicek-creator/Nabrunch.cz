@@ -14,8 +14,8 @@ sezona:
 <h2>Jak naplánovat valentýnský brunch</h2>
 
 <ul>
-<li><strong>Rezervuj s předstihem.</strong> O víkendu kolem Valentýna se oblíbené podniky plní rychle. Kde to jde, zarezervuj stůl aspoň týden dopředu.</li>
-<li><strong>Vyber si čas.</strong> Kolem 10. hodiny bývá klid. Po poledni se začínají tvořit fronty.</li>
+<li><strong>Rezervujte s předstihem.</strong> O víkendu kolem Valentýna se oblíbené podniky plní rychle. Kde to jde, zarezervujte stůl aspoň týden dopředu.</li>
+<li><strong>Vyberte si čas.</strong> Kolem 10. hodiny bývá klid. Po poledni se začínají tvořit fronty.</li>
 <li><strong>Myslete na náladu místa.</strong> Na rande se hodí spíš menší kavárna s útulným interiérem než rušné bistro s dlouhými stoly.</li>
 <li><strong>Spojte brunch s procházkou.</strong> Hradčany, Petřín, Letenské sady nebo brněnský Špilberk jsou kousek od několika našich tipů.</li>
 <li><strong>Dárek navíc:</strong> dárkový poukaz do oblíbené kavárny je hezký dárek na další společné ráno.</li>
@@ -41,7 +41,7 @@ sezona:
 <li><a href="/podniky/bistro-u-sykorky-beroun/"><strong>Bistro U Sýkorky</strong></a> (Beroun) – klidné místo, kde jako by se zastavil čas. Na výlet za Prahu ideální.</li>
 </ul>
 
-<p>Další stylová místa najdeš ve výběru <a href="/instagramove-podniky-na-brunch/">instagramových podniků na brunch</a>. Pokud máte psa, který s vámi slaví taky, mrkněte na <a href="/pet-friendly-brunch/">pet-friendly podniky</a>.</p>
+<p>Další stylová místa najdete ve výběru <a href="/instagramove-podniky-na-brunch/">instagramových podniků na brunch</a>. Pokud máte psa, který s vámi slaví taky, mrkněte na <a href="/pet-friendly-brunch/">pet-friendly podniky</a>.</p>
 
 <h2>Brunch na Valentýna doma</h2>
 

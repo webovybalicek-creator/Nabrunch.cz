@@ -7,12 +7,12 @@ import { PODNIKY, mesta, lokalitaUrl, podnikuText } from '../lib/data';
 const vse = mesta();
 ---
 
-<Base title="Snídaně a brunch podle města" description={`Kam na snídani a brunch v ${vse.length} městech Česka – Praha, Brno, Olomouc, Plzeň a další. Vyber si město a najdi svůj brunch.`}>
+<Base title="Snídaně a brunch podle města" description={`Kam na snídani a brunch v ${vse.length} městech Česka – Praha, Brno, Olomouc, Plzeň a další. Vyberte si město a najděte svůj brunch.`}>
   <header class="page-head">
     <div class="wrap">
       <Breadcrumb polozky={[{ nazev: 'Města' }]} />
       <h1>Brunch podle města</h1>
-      <p class="lead">{podnikuText(PODNIKY.length)} ve {vse.length} městech. Vyber si, kde dnes snídáš.</p>
+      <p class="lead">{podnikuText(PODNIKY.length)} ve {vse.length} městech. Vyberte si, kde dnes snídáte.</p>
     </div>
   </header>
   <section class="section">

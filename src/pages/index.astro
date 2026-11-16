@@ -81,7 +81,7 @@ const jsonLd = [organizace, webLd];
       <div class="hero__text">
         <span class="eyebrow">nabrunch.cz</span>
         <h1>Víme, kam <span>naBrunch!</span></h1>
-        <p class="lead">Objev ta nejlepší místa na snídani a brunch po celé České republice. Ručně vybraných {podnikuText(PODNIKY.length)} v {mesta().length} městech.</p>
+        <p class="lead">Objevte ta nejlepší místa na snídani a brunch po celé České republice. Ručně vybraných {podnikuText(PODNIKY.length)} v {mesta().length} městech.</p>
         <div class="hero__hledat"><Hledani /></div>
         <ul class="hero__mesta" aria-label="Oblíbená města">
           {topMesta.slice(0, 6).map((m) => <li><a class="tag" href={lokalitaUrl(m)}>{m.nazev}</a></li>)}
@@ -103,9 +103,9 @@ const jsonLd = [organizace, webLd];
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="eyebrow">Brunch podle tebe</span>
+          <span class="eyebrow">Brunch podle vás</span>
           <h2>Všechny podniky</h2>
-          <p class="muted">Město, chuť, atmosféra? Záleží jen na tobě, co si zrovna přeješ najít.</p>
+          <p class="muted">Město, chuť, atmosféra? Záleží jen na vás, co si zrovna přejete najít.</p>
         </div>
       </div>
       <Vypis podniky={vse} ld={false} />
@@ -117,7 +117,7 @@ const jsonLd = [organizace, webLd];
       <div class="sec-head">
         <div>
           <span class="eyebrow">Podle chuti a nálady</span>
-          <h2>Na co máš dnes chuť?</h2>
+          <h2>Na co máte dnes chuť?</h2>
         </div>
       </div>
       <ul class="temata">
@@ -159,7 +159,7 @@ const jsonLd = [organizace, webLd];
     <div class="wrap pridej">
       <div>
         <span class="eyebrow">Pro podniky</span>
-        <h2>Přidej svůj podnik</h2>
+        <h2>Přidejte svůj podnik</h2>
         <p>Vaříte a pečete srdcem? Servírujete brunch s láskou? Dejte nám o sobě vědět, ať se do vašeho brunche lidé zamilují hned po prvním soustu.</p>
       </div>
       <a href="/pridat-podnik/" class="btn btn--akcent">Přidat podnik</a>

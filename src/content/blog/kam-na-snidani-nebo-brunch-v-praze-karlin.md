@@ -7,14 +7,14 @@ image: "/wp-content/uploads/2026/06/725f5036-f593-440d-bfe1-c1a1f61e7322.png"
 
 <p>Karlín už dávno není jen kancelářská čtvrť. Za poslední roky se proměnil v jednu z nejzajímavějších gastro lokalit v Praze a dnes patří mezi nejlepší adresy na <strong>snídani, brunch i výběrovou kávu</strong>.</p>
 
-<p>Najdeš tu ikonické pekárny, moderní bistra i podniky, kam se chodí na pomalé víkendové brunche s přáteli.</p>
+<p>Najdete tu ikonické pekárny, moderní bistra i podniky, kam se chodí na pomalé víkendové brunche s přáteli.</p>
 
 
-<p>Pokud přemýšlíš, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme sedm podniků, které podle nás stojí za návštěvu. U každého najdeš i tip, co si dát, a jestli můžeš vzít pejska.</p>
+<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme sedm podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/"></a> 👉🏼 <a href="/podniky/eska-karlin/">1. Eska Karlín Praha</a></h2>
 
-<p>Eska je dnes už karlínská legenda. Spojuje moderní českou gastronomii, vlastní pekárnu a minimalistický industriální prostor, který si zamiluješ hned při první návštěvě.</p>
+<p>Eska je dnes už karlínská legenda. Spojuje moderní českou gastronomii, vlastní pekárnu a minimalistický industriální prostor, který si zamilujete hned při první návštěvě.</p>
 <p>🍳 <strong>Co si dát:</strong> poctivou českou snídani s vejcem naměkko, pražskou šunkou a domácím chlebem, k tomu fermentovanou limonádu.</p>
 
 <p>🐶 <strong>Dog friendly:</strong> Ne – psi bohužel nemají vstup ani do restaurace, ani na zahrádku.<br>☀️ <strong>Venkovní sezení:</strong> Ano, v letní sezoně je k dispozici terasa.</p>
@@ -63,14 +63,14 @@ image: "/wp-content/uploads/2026/06/725f5036-f593-440d-bfe1-c1a1f61e7322.png"
 <p>🍳 <strong>Co si dát:</strong> jemné palačinky s malinovo-mascarponovým krémem a lesními plody, nebo avokádový toast s fetou a rajčaty.</p>
 
 <h2 class="wp-block-heading">👉🏼 <a href="/podniky/tea-field-praha/">7. Tea Field Praha</a></h2>
-<p>Čajovna a kavárna, kde se čaj připravuje přímo před tebou. Ideální pro ty, kdo místo kávy hledají matchu nebo čajové speciality.</p>
+<p>Čajovna a kavárna, kde se čaj připravuje přímo před vámi. Ideální pro ty, kdo místo kávy hledají matchu nebo čajové speciality.</p>
 <p>🍳 <strong>Co si dát:</strong> Mango Matcha – zelená energie matchy se sladkostí manga.</p>
 
-<h2 class="wp-block-heading">Kde si dáš brunch v Karlíně ty?</h2>
+<h2 class="wp-block-heading">Kde si dáte brunch v Karlíně vy?</h2>
 
-<p>Další tipy najdeš na stránce <a href="/lokalita/praha-8/">snídaně a brunch na Praze 8</a> a v průvodci <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>.</p>
-<p>Karlín patří mezi čtvrti, kde můžeš každý víkend objevit nový podnik na snídani nebo brunch. Ať už hledáš poctivá vejce Benedikt, domácí pečivo, výběrovou kávu nebo klidnou zahrádku na slunné ráno, v Karlíně si rozhodně vybereš.</p>
+<p>Další tipy najdete na stránce <a href="/lokalita/praha-8/">snídaně a brunch na Praze 8</a> a v průvodci <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>.</p>
+<p>Karlín patří mezi čtvrti, kde můžete každý víkend objevit nový podnik na snídani nebo brunch. Ať už hledáte poctivá vejce Benedikt, domácí pečivo, výběrovou kávu nebo klidnou zahrádku na slunné ráno, v Karlíně si rozhodně vyberete.</p>
 
-<p>Naši favoriti? Na pohodový víkendový brunch doporučujeme <strong>Spojku Karlín</strong>, milovníci výběrové kávy by neměli vynechat <strong>Můj šálek kávy</strong> a pokud si chceš dopřát opravdu výjimečný gastronomický zážitek, zamiř do <strong>Esky</strong>.</p>
+<p>Naši favoriti? Na pohodový víkendový brunch doporučujeme <strong>Spojku Karlín</strong>, milovníci výběrové kávy by neměli vynechat <strong>Můj šálek kávy</strong> a pokud si chcete dopřát opravdu výjimečný gastronomický zážitek, zamiř do <strong>Esky</strong>.</p>
 
-<p>Objevuj další podniky na snídani a brunch na <strong><a href="/" data-type="link" data-id="/">nabrunch.cz</a></strong> a dej nám vědět, který je tvůj nejoblíbenější karlínský brunch spot.</p>
+<p>Objevujte další podniky na snídani a brunch na <strong><a href="/" data-type="link" data-id="/">nabrunch.cz</a></strong> a dejte nám vědět, který je váš nejoblíbenější karlínský brunch spot.</p>

@@ -57,13 +57,13 @@ const topMesta = mesta()
 
 <Base
   title="Otevřeno teď: kam na snídani a brunch v okolí"
-  description={`Kde mají právě teď otevřeno? Najdi nejbližší snídaňová místa, brunche a kavárny podle své polohy – ${podnikuText(sDobou.length)} ověřených naBrunchem a další kavárny po celém Česku.`}
+  description={`Kde mají právě teď otevřeno? Najděte nejbližší snídaňová místa, brunche a kavárny podle své polohy – ${podnikuText(sDobou.length)} ověřených naBrunchem a další kavárny po celém Česku.`}
 >
   <header class="page-head">
     <div class="wrap">
       <Breadcrumb polozky={[{ nazev: 'Otevřeno teď' }]} />
       <h1>Kam teď na snídani?</h1>
-      <p class="lead">Ukážeme ti nejbližší místa na snídani, brunch nebo kávu, která mají <strong>právě teď otevřeno</strong>. Stačí jedno klepnutí.</p>
+      <p class="lead">Ukážeme vám nejbližší místa na snídani, brunch nebo kávu, která mají <strong>právě teď otevřeno</strong>. Stačí jedno klepnutí.</p>
     </div>
   </header>
 
@@ -72,9 +72,9 @@ const topMesta = mesta()
       <div class="ted__ovladani">
         <button type="button" class="btn btn--akcent ted__poloha" data-ted-poloha>📍 Najít otevřené u mě</button>
         <label class="ted__mesto">
-          <span class="sr-only">Nebo vyber město</span>
+          <span class="sr-only">Nebo vyberte město</span>
           <select data-ted-mesto>
-            <option value="">…nebo vyber město</option>
+            <option value="">…nebo vyberte město</option>
             {vyberMest.map((m) => <option value={m.slug}>{m.nazev}</option>)}
           </select>
         </label>
@@ -85,7 +85,7 @@ const topMesta = mesta()
         <label class="ted__chip"><input type="checkbox" data-ted-snidane /> <span>🍳 Jen se snídaní</span></label>
       </div>
       <p class="ted__info" data-ted-info aria-live="polite">
-        Poloha zůstane jen v tvém prohlížeči, nikam ji neposíláme.
+        Poloha zůstane jen ve vašem prohlížeči, nikam ji neposíláme.
       </p>
 
       <div class="ted__vysledky" data-ted-vysledky hidden>
@@ -93,7 +93,7 @@ const topMesta = mesta()
         <p class="ted__vice"><button type="button" class="btn btn--ghost" data-ted-vice hidden>Ukázat další</button></p>
         <div class="ted__mapa" data-ted-mapa role="region" aria-label="Mapa otevřených míst v okolí"></div>
         <p class="muted ted__pozn">
-          Stav počítáme z otevírací doby v naší databázi a podle času v Česku. Svátky a mimořádné zavření neznáme – když jdeš na jistotu, zavolej.
+          Stav počítáme z otevírací doby v naší databázi a podle času v Česku. Svátky a mimořádné zavření neznáme – když jdete na jistotu, zavolejte.
           Šedé „Neověřeno“ jsou kavárny z OpenStreetMap, ve kterých jsme ještě nebyli.
         </p>
       </div>
@@ -134,9 +134,9 @@ const topMesta = mesta()
       <h2>Jak to funguje</h2>
       <p>
         U {podnikuText(sDobou.length)}, které jsme osobně navštívili, a u dalších {kavarenSDobou.toLocaleString('cs-CZ')} kaváren známe otevírací dobu.
-        Když nám povolíš polohu, seřadíme je od nejbližšího a ukážeme jen ta, kde mají zrovna otevřeno, i s tím, do kdy. Bez polohy si vyber město.
+        Když nám povolíte polohu, seřadíme je od nejbližšího a ukážeme jen ta, kde mají zrovna otevřeno, i s tím, do kdy. Bez polohy si vyberte město.
       </p>
-      <p>Hledáš spíš podle města? Mrkni na nejoblíbenější lokality:</p>
+      <p>Hledáte spíš podle města? Mrkněte na nejoblíbenější lokality:</p>
       <ul class="ted__mesta">
         {topMesta.map((m) => <li><a class="tag" href={lokalitaUrl(m)}>{m.nazev}</a></li>)}
         <li><a class="tag" href="/mapa/">🗺️ Mapa podniků</a></li>
@@ -249,7 +249,7 @@ const topMesta = mesta()
     info.textContent = vse.length
       ? `${odkud}: ${jenOtevrene ? 'teď má otevřeno' : 'nalezeno'} ${vse.length} ${tvar(vse.length)}${blizko ? `, z toho ${blizko} do 3 km` : ''}.`
       : jenOtevrene
-        ? `${odkud}: teď bohužel nikde nemají otevřeno. Vypni „Jen otevřené teď“ a uvidíš, kdy kde otevírají.`
+        ? `${odkud}: teď bohužel nikde nemají otevřeno. Vypněte „Jen otevřené teď“ a uvidíte, kdy kde otevírají.`
         : `${odkud}: nic jsme nenašli.`;
     kresliMapu(zobrazit.map(({ m, s }) => ({ m, open: s.open })));
   }
@@ -262,7 +262,7 @@ const topMesta = mesta()
     try {
       await nacti();
     } catch {
-      info.textContent = 'Data se nepodařilo načíst. Zkus stránku obnovit.';
+      info.textContent = 'Data se nepodařilo načíst. Zkuste stránku obnovit.';
       return;
     }
     vykresli();
@@ -270,7 +270,7 @@ const topMesta = mesta()
 
   btnPoloha.addEventListener('click', () => {
     if (!navigator.geolocation) {
-      info.textContent = 'Tvůj prohlížeč neumí zjistit polohu – vyber prosím město.';
+      info.textContent = 'Váš prohlížeč neumí zjistit polohu – vyberte prosím město.';
       return;
     }
     btnPoloha.disabled = true;
@@ -283,11 +283,11 @@ const topMesta = mesta()
         const u = new URL(location.href);
         u.searchParams.delete('mesto');
         history.replaceState(null, '', u);
-        nastav([pos.coords.latitude, pos.coords.longitude], 'Ve tvém okolí');
+        nastav([pos.coords.latitude, pos.coords.longitude], 'Ve vašem okolí');
       },
       () => {
         btnPoloha.disabled = false;
-        info.textContent = 'Polohu se nepodařilo zjistit. Povol ji v prohlížeči, nebo vyber město.';
+        info.textContent = 'Polohu se nepodařilo zjistit. Povolte ji v prohlížeči, nebo vyberte město.';
       },
       { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 },
     );

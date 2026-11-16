@@ -10,27 +10,27 @@ sezona:
 obdobi: [zima]
 ---
 
-<p>Silvestr a Nový rok jsou na brunch jako stvořené. Na Silvestra se hodí pozdní snídaně, která tě udrží v kondici až do půlnoci. A 1. ledna není nic lepšího než se po oslavě v klidu nasnídat s přáteli. Sepsali jsme, na co myslet a kde mají otevřeno i v pátek, na který Nový rok 2027 připadá.</p>
+<p>Silvestr a Nový rok jsou na brunch jako stvořené. Na Silvestra se hodí pozdní snídaně, která vás udrží v kondici až do půlnoci. A 1. ledna není nic lepšího než se po oslavě v klidu nasnídat s přáteli. Sepsali jsme, na co myslet a kde mají otevřeno i v pátek, na který Nový rok 2027 připadá.</p>
 
 <h2>Mají kavárny na Nový rok otevřeno?</h2>
 
 <p>Zákon o prodejní době, kvůli kterému jsou o vybraných svátcích zavřené velké obchody, se <strong>restaurací a kaváren netýká</strong>. Jestli bude 31. 12. a 1. 1. otevřeno, rozhoduje majitel. Hodně podniků na Silvestra zavírá dřív a na Nový rok otevírá později, některé si dají volno.</p>
 
-<p>Níže uvedené podniky mají <strong>běžně otevřeno sedm dní v týdnu</strong>, takže je velká šance, že poběží i o svátcích. Svátkovou otevírací dobu si ale vždy ověř na jejich Instagramu nebo webu – odkazy najdeš na profilu každého podniku. Pozor, naše stránka <a href="/otevreno-ted/">Otevřeno teď</a> počítá s běžnou otevírací dobou a svátky nezná.</p>
+<p>Níže uvedené podniky mají <strong>běžně otevřeno sedm dní v týdnu</strong>, takže je velká šance, že poběží i o svátcích. Svátkovou otevírací dobu si ale vždy ověřte na jejich Instagramu nebo webu – odkazy najdete na profilu každého podniku. Pozor, naše stránka <a href="/otevreno-ted/">Otevřeno teď</a> počítá s běžnou otevírací dobou a svátky nezná.</p>
 
 <h2>Silvestr: pozdní snídaně před dlouhou nocí</h2>
 
 <ul>
-<li><strong>Vyraz dopoledne.</strong> Odpoledne už podniky často zavírají dřív a večer se chystají na oslavy.</li>
-<li><strong>Dej si něco vydatného.</strong> Vejce, kváskový chléb, avokádo nebo lívance – energie se bude hodit.</li>
-<li><strong>Připij si na konec roku.</strong> K brunchi se hodí <a href="/co-je-mimoza/">mimóza</a>, lehký drink z prosecca a pomerančového džusu.</li>
+<li><strong>Vyrazte dopoledne.</strong> Odpoledne už podniky často zavírají dřív a večer se chystají na oslavy.</li>
+<li><strong>Dejte si něco vydatného.</strong> Vejce, kváskový chléb, avokádo nebo lívance – energie se bude hodit.</li>
+<li><strong>Připijte si na konec roku.</strong> K brunchi se hodí <a href="/co-je-mimoza/">mimóza</a>, lehký drink z prosecca a pomerančového džusu.</li>
 </ul>
 
 <h2>Nový rok: brunch jako lék</h2>
 
 <ul>
-<li><strong>Nespěchej.</strong> Na Nový rok se otevírá spíš později, počítej s 10. nebo 11. hodinou.</li>
-<li><strong>Rezervuj, kde to jde.</strong> 1. ledna vyráží na brunch celé party a stoly mizí rychle.</li>
+<li><strong>Nespěchejte.</strong> Na Nový rok se otevírá spíš později, počítejte s 10. nebo 11. hodinou.</li>
+<li><strong>Rezervujte, kde to jde.</strong> 1. ledna vyráží na brunch celé party a stoly mizí rychle.</li>
 <li><strong>Co zabírá po oslavě?</strong> Pikantní <a href="/co-je-shakshuka/">shakshuka</a>, poctivé <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">vejce Benedikt</a>, hodně vody a čerstvý džus. Žaludek ocení i <a href="/co-je-kombucha/">kombuchu</a>.</li>
 </ul>
 
@@ -57,7 +57,7 @@ obdobi: [zima]
 <li><a href="/podniky/cafe-placzek-brno/"><strong>Café Placzek</strong></a> – od 7:30, kavárna v centru na Minoritské.</li>
 <li><a href="/podniky/bavard-cafe-brno/"><strong>Bavard Cafe</strong></a> – od 8:00, jedno z nejznámějších brunchových míst ve městě.</li>
 <li><a href="/podniky/coffee-trail-bar-brno/"><strong>Coffee Trail Bar</strong></a> – od 8:00, kavárna známá tematickými brunchi.</li>
-<li><a href="/podniky/skog-brno/"><strong>SKØG</strong></a> – od 8:00 a v pátek otevřeno až do 1:00, takže stihneš snídani i večer.</li>
+<li><a href="/podniky/skog-brno/"><strong>SKØG</strong></a> – od 8:00 a v pátek otevřeno až do 1:00, takže stihnete snídani i večer.</li>
 </ul>
 
 <h2>Ostrava, Olomouc a Plzeň</h2>
@@ -70,10 +70,10 @@ obdobi: [zima]
 <li><a href="/podniky/le-frenchie-cafe-plzen/"><strong>Le Frenchie café</strong></a> (Plzeň) – od 8:00.</li>
 </ul>
 
-<p>Slavíš jinde? Podívej se do <a href="/lokality/">přehledu měst</a> nebo na <a href="/mapa/">mapu podniků</a>.</p>
+<p>Slavíte jinde? Podívejte se do <a href="/lokality/">přehledu měst</a> nebo na <a href="/mapa/">mapu podniků</a>.</p>
 
 <h2>Brunch jako dárek</h2>
 
-<p>Novoroční brunch se dá i darovat – stačí pod stromeček dát poukaz. Přehled kaváren, které je prodávají, najdeš v článku <a href="/darkovy-poukaz-na-brunch/">Dárkový poukaz na brunch</a>. A tipy na sváteční brunch mezi svátky jsou v článku <a href="/brunch-o-vanocich-a-na-novy-rok/">Brunch o Vánocích a na Nový rok</a>.</p>
+<p>Novoroční brunch se dá i darovat – stačí pod stromeček dát poukaz. Přehled kaváren, které je prodávají, najdete v článku <a href="/darkovy-poukaz-na-brunch/">Dárkový poukaz na brunch</a>. A tipy na sváteční brunch mezi svátky jsou v článku <a href="/brunch-o-vanocich-a-na-novy-rok/">Brunch o Vánocích a na Nový rok</a>.</p>
 
 <p>Šťastný nový rok a dobrou chuť! 🥂</p>

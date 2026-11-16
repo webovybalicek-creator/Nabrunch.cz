@@ -6,7 +6,7 @@
   <div class="wrap odber__in">
     <div>
       <h2>Newsletter 💌</h2>
-      <p>Miluješ snídaně a brunche stejně jako my? Přihlas se k odběru a jednou za čas ti pošleme tipy na ty nejzajímavější podniky, novinky a inspiraci.</p>
+      <p>Milujete snídaně a brunche stejně jako my? Přihlaste se k odběru a jednou za čas vám pošleme tipy na ty nejzajímavější podniky, novinky a inspiraci.</p>
     </div>
     <form class="odber__form" data-odber novalidate>
       <div class="odber__pole">
@@ -20,7 +20,7 @@
       <input class="odber__past" name="web2" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <input type="hidden" name="t" data-cas />
       <p class="odber__zprava" data-zprava role="status" hidden></p>
-      <p class="odber__gdpr">Přihlášením souhlasíš se <a href="/ochrana-osobnich-udaju/">zpracováním e-mailu</a>. Odhlásit se můžeš jedním klikem.</p>
+      <p class="odber__gdpr">Přihlášením souhlasíte se <a href="/ochrana-osobnich-udaju/">zpracováním e-mailu</a>. Odhlásit se můžete jedním klikem.</p>
     </form>
   </div>
 </section>
@@ -65,7 +65,7 @@
         form.classList.remove('zatres');
         void form.offsetWidth;
         form.classList.add('zatres');
-        return ukaz('Zkontroluj prosím e-mail.');
+        return ukaz('Zkontrolujte prosím e-mail.');
       }
       btn.disabled = true;
       btnText.textContent = 'Přihlašuji…';
@@ -74,7 +74,7 @@
       try {
         const d = await (await fetch('/api/odber.php', { method: 'POST', body: fd })).json();
         if (d.ok) {
-          ukaz('Hotovo! Mrkni do schránky a potvrď přihlášení. 🥐', true);
+          ukaz('Hotovo! Mrkněte do schránky a potvrďte přihlášení. 🥐', true);
           form.classList.add('hotovo');
           btnText.textContent = 'Jsi v tom!';
           oslava(btn);
@@ -83,7 +83,7 @@
         }
         ukaz(d.chyba ?? 'Přihlášení se nepovedlo.');
       } catch {
-        ukaz('Přihlášení se nepovedlo. Zkus to prosím znovu.');
+        ukaz('Přihlášení se nepovedlo. Zkuste to prosím znovu.');
       }
       btn.disabled = false;
       btnText.textContent = 'Chci tipy';

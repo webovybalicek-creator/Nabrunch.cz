@@ -12,7 +12,7 @@ obdobi: [jaro, leto]
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-<h2 class="wp-block-heading">☕ KUK Bistro: atmosféra, do které se zamiluješ</h2>
+<h2 class="wp-block-heading">☕ KUK Bistro: atmosféra, do které se zamilujete</h2>
 
 <p>KUK Bistro najdete přímo v centru Mikulova, na krásném náměstí. Je to podnik s duší – moderní, stylový, ale zároveň útulný. Důraz tu dávají na <strong>kvalitní suroviny</strong>, <strong>vlastní pečení</strong> a <strong>dobrou kávu</strong>.</p>
 
@@ -42,16 +42,16 @@ obdobi: [jaro, leto]
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-<h2 class="wp-block-heading">📍 Kde najdeš KUK Café?</h2>
+<h2 class="wp-block-heading">📍 Kde najdete KUK Café?</h2>
 
 <p><strong>Adresa:</strong> Náměstí 24, Mikulov<br><strong>Instagram:</strong> <a href="https://www.instagram.com/kukbistro/?hl=cs">@kukbistro</a></p>
 
-<h2 class="wp-block-heading">✨ <strong>Chceš vědět víc o KUK Bistru?</strong></h2>
+<h2 class="wp-block-heading">✨ <strong>Chcete vědět víc o KUK Bistru?</strong></h2>
 
-<p>Klikni na odkaz a objev všechny detaily, fotky a další informace o tomto skvělém místě!</p>
+<p>Klikněte na odkaz a objev všechny detaily, fotky a další informace o tomto skvělém místě!</p>
 
 <p><a href="/podniky/kuk-bistro-mikulov/"><strong>🔗 Podívejte se na podnik KUK Bistro v naší nabídce podniků.</strong></a></p>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-<p>Spojení výletu a dobrého jídla je prostě neodolatelné. A Mikulov s KUK Café patří mezi místa, kam se budeš chtít vracet – i bez speciální příležitosti.</p>
+<p>Spojení výletu a dobrého jídla je prostě neodolatelné. A Mikulov s KUK Café patří mezi místa, kam se budete chtít vracet – i bez speciální příležitosti.</p>

@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-14-v-9.59.04.png"
 
 <h3 class="wp-block-heading">Matcha – zelená hvězda brunch menu</h3>
 
-<p><strong>Matcha latte</strong> patří mezi nejoblíbenější <strong>alternativní nápoje k brunchi</strong>. Jemně nasládlá, krémová a plná antioxidantů – ideální volba pro ty, kteří chtějí povzbuzení bez silné chuti kávy. Matcha se skvěle hodí ke <strong>sladké snídani</strong>, jako jsou lívance, palačinky nebo granola, ale čím dál častěji ji najdeš i v <strong>iced variantě</strong> jako osvěžující brunch drink. Klíčovým benefitem matchy je pozvolný přísun energie, díky kterému si brunch užiješ bez náhlého útlumu.</p>
+<p><strong>Matcha latte</strong> patří mezi nejoblíbenější <strong>alternativní nápoje k brunchi</strong>. Jemně nasládlá, krémová a plná antioxidantů – ideální volba pro ty, kteří chtějí povzbuzení bez silné chuti kávy. Matcha se skvěle hodí ke <strong>sladké snídani</strong>, jako jsou lívance, palačinky nebo granola, ale čím dál častěji ji najdete i v <strong>iced variantě</strong> jako osvěžující brunch drink. Klíčovým benefitem matchy je pozvolný přísun energie, díky kterému si brunch užijete bez náhlého útlumu.</p>
 
 <h3 class="wp-block-heading">Chai latte – kořeněná klasika k brunchi</h3>
 

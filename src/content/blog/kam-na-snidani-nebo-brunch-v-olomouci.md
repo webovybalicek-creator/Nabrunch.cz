@@ -1,18 +1,18 @@
 ---
 title: "Kam na snídani nebo brunch v Olomouci?"
-description: "Hledáš inspiraci, kam na snídani nebo brunch v Olomouci? Máme pro tebe 5 tipů, kam v Olomouci na snídani či brunch."
+description: "Hledáte inspiraci, kam na snídani nebo brunch v Olomouci? Máme pro vás 5 tipů, kam v Olomouci na snídani či brunch."
 seoTitle: "Kam na snídani nebo brunch v Olomouci? - naBrunch.cz"
 date: "2026-01-11T20:13:53"
 image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-20.02.58.png"
 ---
 
-<p>Hledáš inspiraci, <strong>kam na snídani nebo brunch v Olomouci</strong>? Ať už máš chuť na poctivou snídani s kávou, nebo si chceš užít pohodový víkendový brunch s přáteli, Olomouc nabízí spoustu skvělých míst, kde si přijdeš na své. </p>
+<p>Hledáte inspiraci, <strong>kam na snídani nebo brunch v Olomouci</strong>? Ať už máte chuť na poctivou snídani s kávou, nebo si chcete užít pohodový víkendový brunch s přáteli, Olomouc nabízí spoustu skvělých míst, kde si přijdete na své. </p>
 
-<p>Abychom ti výběr usnadnili, máme pro tebe <strong>5 tipů na snídani a brunch v Olomouci</strong>.</p>
+<p>Abychom vám výběr usnadnili, máme pro vás <strong>5 tipů na snídani a brunch v Olomouci</strong>.</p>
 
 <h2 class="wp-block-heading"><a href="/podniky/cafe-new-one-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼  1.  Cafe New One Olomouc</strong></a></h2>
 
-<p><strong>Café New One</strong> je <strong>stylová kavárna v Olomouc</strong>i, kde si můžeš užít snídani, brunch, <strong>výběrovou kávu i italsky inspirované pokrmy a dezerty</strong> v příjemném prostředí s moderním designem.</p>
+<p><strong>Café New One</strong> je <strong>stylová kavárna v Olomouc</strong>i, kde si můžete užít snídani, brunch, <strong>výběrovou kávu i italsky inspirované pokrmy a dezerty</strong> v příjemném prostředí s moderním designem.</p>
 
 <figure class="wp-block-image size-full"><a href="/podniky/cafe-new-one-olomouc/"><img src="/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-19.18.15.png" alt="" class="wp-image-1910"/></a></figure>
 
@@ -42,7 +42,7 @@ image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-20.02.58.png"
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-<p>Doufáme, že jsme ti tímto článkem <strong>pomohli s výběrem, kam na snídani nebo brunch v Olomouci</strong>, a že si mezi našimi tipy najdeš své nové oblíbené místo. Olomouc má v oblasti snídaní a brunchů opravdu co nabídnout – stačí si jen vybrat podle chuti a nálady.</p>
+<p>Doufáme, že jsme vám tímto článkem <strong>pomohli s výběrem, kam na snídani nebo brunch v Olomouci</strong>, a že si mezi našimi tipy najdete své nové oblíbené místo. Olomouc má v oblasti snídaní a brunchů opravdu co nabídnout – stačí si jen vybrat podle chuti a nálady.</p>
 
 <p>Pokud si chcete vybrat z kompletní nabídky všech podniků po ČR, kde si dát skvělou&nbsp;<strong>snídani</strong>&nbsp;nebo&nbsp;<strong>brunch</strong>,&nbsp;<a href="/#vsechnypodniky" target="_blank" rel="noreferrer noopener"><strong>mrkněte SEM.</strong></a></p>
 

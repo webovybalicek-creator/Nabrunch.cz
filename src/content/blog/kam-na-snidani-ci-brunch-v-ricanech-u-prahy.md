@@ -15,7 +15,7 @@ obdobi: [jaro, leto]
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/gabi-cafe-ricany/" data-type="link" data-id="/podniky/gabi-cafe-ricany/" target="_blank" rel="noreferrer noopener">1. Gabi Café Říčany</a></h2>
 
-<p><strong>Gabi Café</strong>&nbsp;v Říčanech je kavárna, která tě přivítá s otevřenou náručí – nejen pro milovníky kávy, ale i pro tvé čtyřnohé přátele.&nbsp;<strong>Pet-friendly kavárna</strong>&nbsp;s útulným interiérem a&nbsp;<strong>venkovním posezením</strong>, kde si můžeš užít <strong>dokonalý brunch</strong> nebo si vychutnat čerstvé dezerty na čerstvém vzduchu.</p>
+<p><strong>Gabi Café</strong>&nbsp;v Říčanech je kavárna, která vás přivítá s otevřenou náručí – nejen pro milovníky kávy, ale i pro vaše čtyřnohé přátele.&nbsp;<strong>Pet-friendly kavárna</strong>&nbsp;s útulným interiérem a&nbsp;<strong>venkovním posezením</strong>, kde si můžete užít <strong>dokonalý brunch</strong> nebo si vychutnat čerstvé dezerty na čerstvém vzduchu.</p>
 
 <figure class="wp-block-image size-full"><a href="/podniky/gabi-cafe-ricany/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/04/480972950_1223154956486143_7397406477354635701_n.jpg" alt="" class="wp-image-1312"/></a></figure>
 
@@ -31,7 +31,7 @@ obdobi: [jaro, leto]
 
 <p><strong>Pečeme Říčany</strong>&nbsp;je oblíbené&nbsp;<strong>řemeslné pekařství s kavárnou</strong>, kde se potkává vůně čerstvě upečeného pečiva s příjemným místem k posezení. </p>
 
-<p>Už od rána tu najdeš&nbsp;<strong>křupavé sladké i slané pečivo, koláče a další pekařské dobroty</strong>, které skvěle doplní&nbsp;<strong>výběrová káva, matcha nebo domácí limonády</strong>. Díky propojení pekárny a kavárny je to ideální místo na&nbsp;<strong>snídani nebo lehký brunch</strong>.</p>
+<p>Už od rána tu najdete&nbsp;<strong>křupavé sladké i slané pečivo, koláče a další pekařské dobroty</strong>, které skvěle doplní&nbsp;<strong>výběrová káva, matcha nebo domácí limonády</strong>. Díky propojení pekárny a kavárny je to ideální místo na&nbsp;<strong>snídani nebo lehký brunch</strong>.</p>
 
 <figure class="wp-block-image size-large"><a href="/podniky/peceme-ricany/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/600366932_122117621127010775_1022385899329423917_n.jpg" alt="" class="wp-image-2124"/></a></figure>
 

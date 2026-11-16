@@ -5,7 +5,7 @@ date: "2026-06-15T08:42:35"
 image: "/wp-content/uploads/2026/06/f67ef0ef-7d36-4360-ab0e-fe57696a7b5e.png"
 ---
 
-<p>Pokud jsi někdy listoval jídelním lístkem restaurace nebo vybíral rybu v supermarketu, možná jsi narazil na název <strong>tilápie</strong>. Přestože v Česku není tak známá jako losos, treska nebo pstruh, patří mezi nejčastěji chované ryby na světě a díky své jemné chuti si získává stále více příznivců.</p>
+<p>Pokud jste někdy listovali jídelním lístkem restaurace nebo vybírali rybu v supermarketu, možná jste narazili na název <strong>tilápie</strong>. Přestože v Česku není tak známá jako losos, treska nebo pstruh, patří mezi nejčastěji chované ryby na světě a díky své jemné chuti si získává stále více příznivců.</p>
 
 <p>Co je vlastně tilápie, odkud pochází a proč kolem ní občas vznikají kontroverze?</p>
 
@@ -57,7 +57,7 @@ image: "/wp-content/uploads/2026/06/f67ef0ef-7d36-4360-ab0e-fe57696a7b5e.png"
 
 <p>Ve srovnání s lososem nebo makrelou však obsahuje méně omega-3 mastných kyselin.</p>
 
-<p>Pokud hledáš rybu s vysokým obsahem zdravých tuků, budou vhodnější tučnější druhy. Pokud ale chceš lehké a dietní jídlo s vysokým podílem bílkovin, tilápie je velmi dobrá volba.</p>
+<p>Pokud hledáte rybu s vysokým obsahem zdravých tuků, budou vhodnější tučnější druhy. Pokud ale chcete lehké a dietní jídlo s vysokým podílem bílkovin, tilápie je velmi dobrá volba.</p>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
@@ -103,12 +103,12 @@ image: "/wp-content/uploads/2026/06/f67ef0ef-7d36-4360-ab0e-fe57696a7b5e.png"
 
 <h2 class="wp-block-heading">Zajímavost: Biblická ryba</h2>
 
-<p>Tilápii se někdy přezdívá <strong>„ryba svatého Petra“</strong>. Podle legendy právě tento druh ryby ulovil apoštol Petr v Galilejském jezeře. Ačkoli historici nemají stoprocentní důkaz, označení se používá dodnes a v některých zemích ho najdeš i na jídelních lístcích.</p>
+<p>Tilápii se někdy přezdívá <strong>„ryba svatého Petra“</strong>. Podle legendy právě tento druh ryby ulovil apoštol Petr v Galilejském jezeře. Ačkoli historici nemají stoprocentní důkaz, označení se používá dodnes a v některých zemích ho najdete i na jídelních lístcích.</p>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
 <h2 class="wp-block-heading">Vyplatí se tilápie vyzkoušet?</h2>
 
-<p>Pokud hledáš rybu s jemnou chutí, vysokým obsahem bílkovin a jednoduchou přípravou, rozhodně ano. Tilápie sice nenabízí tolik omega-3 mastných kyselin jako losos, ale díky své univerzálnosti a dostupnosti patří mezi nejoblíbenější ryby na světě.</p>
+<p>Pokud hledáte rybu s jemnou chutí, vysokým obsahem bílkovin a jednoduchou přípravou, rozhodně ano. Tilápie sice nenabízí tolik omega-3 mastných kyselin jako losos, ale díky své univerzálnosti a dostupnosti patří mezi nejoblíbenější ryby na světě.</p>
 
-<p>Ať už si ji připravíš doma, nebo ji objevíš v menu restaurace, je to ryba, která dokáže příjemně překvapit i ty, kteří běžně mořské plody příliš nevyhledávají. </p>
+<p>Ať už si ji připravíte doma, nebo ji objevíte v menu restaurace, je to ryba, která dokáže příjemně překvapit i ty, kteří běžně mořské plody příliš nevyhledávají. </p>

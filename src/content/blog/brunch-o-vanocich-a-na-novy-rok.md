@@ -15,35 +15,35 @@ sezona:
 
 <p>Zákon o prodejní době, kvůli kterému jsou o vybraných svátcích zavřené velké obchody, se <strong>restaurací a kaváren netýká</strong>. Jestli bude otevřeno 24. 12., na Boží hod, na Štěpána nebo 1. 1., je tedy čistě na majiteli. Řada podniků mezi svátky jede v upraveném režimu, zkracuje otevírací dobu nebo si dává pár dní dovolenou.</p>
 
-<p>Proto platí jednoduché pravidlo: <strong>před cestou si ověř aktuální otevírací dobu</strong> na Instagramu nebo webu podniku. Svátky se tam obvykle oznamují s předstihem. Na našich profilech podniků najdeš odkazy na obojí.</p>
+<p>Proto platí jednoduché pravidlo: <strong>před cestou si ověřte aktuální otevírací dobu</strong> na Instagramu nebo webu podniku. Svátky se tam obvykle oznamují s předstihem. Na našich profilech podniků najdete odkazy na obojí.</p>
 
 <h2>Kdy na sváteční brunch vyrazit</h2>
 
 <ul>
 <li><strong>Štědrý den dopoledne</strong> – kdo otevírá, ten obvykle jen do oběda. Krátký brunch před vánočním úklidem je ale skvělá tradice.</li>
-<li><strong>25. a 26. prosince</strong> – nejvíc zavřených podniků. Pokud nějaký vyhlédneš, rezervuj si stůl předem.</li>
+<li><strong>25. a 26. prosince</strong> – nejvíc zavřených podniků. Pokud nějaký vyhlédnete, rezervujte si stůl předem.</li>
 <li><strong>27.–30. prosince</strong> – nejlepší termín. Většina podniků už jede, lidé mají volno a atmosféra je pohodová.</li>
 <li><strong>Silvestr</strong> – ideální na pozdní snídani, než se začne chystat večer.</li>
-<li><strong>Nový rok</strong> – brunch jako lék na Silvestra. Otevírá se spíš později, počítej s tím, že od 10 nebo 11 hodin.</li>
+<li><strong>Nový rok</strong> – brunch jako lék na Silvestra. Otevírá se spíš později, počítejte s tím, že od 10 nebo 11 hodin.</li>
 </ul>
 
 <h2>Tipy, aby sváteční brunch vyšel</h2>
 
 <ul>
-<li><strong>Rezervuj.</strong> Ve dnech mezi svátky se do oblíbených podniků chodí ve větších skupinách a volné stoly rychle mizí.</li>
-<li><strong>Jdi dřív.</strong> Kdo dorazí do 9:30, má většinou klid a celou nabídku.</li>
-<li><strong>S dětmi i se psem</strong> se vyplatí vybrat podnik předem – podívej se na <a href="/pet-friendly-brunch/">pet-friendly podniky</a>, kam vezmeš i psího parťáka.</li>
-<li><strong>Zkus něco lehčího.</strong> Po svátečním jídle přijdou vhod <a href="/zdrave-snidane-a-brunche/">zdravé snídaně a bowly</a> nebo <a href="/veganske-snidane-a-brunche/">veganský brunch</a>.</li>
-<li><strong>Dárek na poslední chvíli:</strong> řada kaváren prodává dárkové poukazy. Společný brunch je dárek, který nikdy neskončí v šuplíku – přehled najdeš v článku <a href="/darkovy-poukaz-na-brunch/">Dárkový poukaz na brunch</a>.</li>
+<li><strong>Rezervujte.</strong> Ve dnech mezi svátky se do oblíbených podniků chodí ve větších skupinách a volné stoly rychle mizí.</li>
+<li><strong>Jděte dřív.</strong> Kdo dorazí do 9:30, má většinou klid a celou nabídku.</li>
+<li><strong>S dětmi i se psem</strong> se vyplatí vybrat podnik předem – podívejte se na <a href="/pet-friendly-brunch/">pet-friendly podniky</a>, kam vezmete i psího parťáka.</li>
+<li><strong>Zkuste něco lehčího.</strong> Po svátečním jídle přijdou vhod <a href="/zdrave-snidane-a-brunche/">zdravé snídaně a bowly</a> nebo <a href="/veganske-snidane-a-brunche/">veganský brunch</a>.</li>
+<li><strong>Dárek na poslední chvíli:</strong> řada kaváren prodává dárkové poukazy. Společný brunch je dárek, který nikdy neskončí v šuplíku – přehled najdete v článku <a href="/darkovy-poukaz-na-brunch/">Dárkový poukaz na brunch</a>.</li>
 </ul>
 
 <h2>Naše srdcovky v Praze</h2>
 
-<p>Podniky, které jsme osobně navštívili a kam se rádi vracíme. Otevírací dobu o svátcích si u nich ověř předem.</p>
+<p>Podniky, které jsme osobně navštívili a kam se rádi vracíme. Otevírací dobu o svátcích si u nich ověřte předem.</p>
 
 <ul>
 <li><a href="/podniky/spojka-karlin/"><strong>Spojka Karlín</strong></a> (Praha 8) – vejce Benedikt s lososovým gravlaxem, které na brunchovém menu nikdy nezklame.</li>
-<li><a href="/podniky/mysak-prazsky-hrad/"><strong>Myšák Pražský Hrad</strong></a> (Praha 1) – české chutě kousek od Hradu, zkus pražské vejce se šunkou a křenem. Ideální zastávka při vánoční procházce Hradčany.</li>
+<li><a href="/podniky/mysak-prazsky-hrad/"><strong>Myšák Pražský Hrad</strong></a> (Praha 1) – české chutě kousek od Hradu, zkuste pražské vejce se šunkou a křenem. Ideální zastávka při vánoční procházce Hradčany.</li>
 <li><a href="/podniky/matilda-praha/"><strong>Matilda Praha</strong></a> (Praha 7) – italská míchaná vejce cacio e pepe s hnědým máslem a focaccií.</li>
 <li><a href="/podniky/bistro-cafe-laskava/"><strong>Bistro Cafe Laskavá</strong></a> (Praha 2) – brunchový talíř a hříšné buchtičky s vanilkovým krémem.</li>
 <li><a href="/podniky/kavarna-muna-praha/"><strong>Kavárna Muna</strong></a> (Praha 1) – argentinské medialunas, vláčnější a jemně sladší sestřenice croissantu.</li>
@@ -61,7 +61,7 @@ sezona:
 <li><a href="/podniky/la-forme-rytirska-praha/"><strong>La Forme Rytířská</strong></a> (Praha 1) – největší pobočka vyhlášené pekárny, croissanty a danishe kousek od Můstku. Ideální zastávka při procházce po vánočních trzích.</li>
 </ul>
 
-<p>Další tipy najdeš ve výběru <a href="/lokalita/praha/">snídaně a brunch v Praze</a> nebo podle čtvrti, například <a href="/lokalita/praha/brunch-se-zahradkou/">brunch se zahrádkou v Praze</a> pro slunečné zimní dny.</p>
+<p>Další tipy najdete ve výběru <a href="/lokalita/praha/">snídaně a brunch v Praze</a> nebo podle čtvrti, například <a href="/lokalita/praha/brunch-se-zahradkou/">brunch se zahrádkou v Praze</a> pro slunečné zimní dny.</p>
 
 <h2>Mimo Prahu</h2>
 
@@ -74,12 +74,12 @@ sezona:
 <li><a href="/podniky/cokafe-dolni-vitkovice-ostrava/"><strong>CØKAFE Dolní Vítkovice</strong></a> (Ostrava) – vejce Benedikt a sváteční procházka po industriálním areálu.</li>
 </ul>
 
-<p>Jedeš o svátcích za rodinou jinam? Mrkni do <a href="/lokality/">přehledu měst</a> nebo na <a href="/mapa/">mapu podniků</a> – najdeš na ní i kavárny poblíž místa, kde zrovna budeš.</p>
+<p>Jedete o svátcích za rodinou jinam? Mrkněte do <a href="/lokality/">přehledu měst</a> nebo na <a href="/mapa/">mapu podniků</a> – najdete na ní i kavárny poblíž místa, kde zrovna budete.</p>
 
 <h2>Sváteční brunch doma</h2>
 
-<p>Když se ven nechce, dá se brunch udělat i doma. Stačí pár osvědčených jídel – inspiraci najdeš v článku o <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenějších brunch jídlech</a> a v návodu, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a>. Pokud nevíš, jaký je vlastně rozdíl mezi snídaní a brunchem, vysvětlujeme ho <a href="/co-je-to-brunch/">tady</a>.</p>
+<p>Když se ven nechce, dá se brunch udělat i doma. Stačí pár osvědčených jídel – inspiraci najdete v článku o <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenějších brunch jídlech</a> a v návodu, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a>. Pokud nevíte, jaký je vlastně rozdíl mezi snídaní a brunchem, vysvětlujeme ho <a href="/co-je-to-brunch/">tady</a>.</p>
 
-<p>Plánuješ brunch i na konec roku? Tipy, kam vyrazit na Silvestra a 1. ledna, najdeš v článku <a href="/brunch-na-silvestra-a-novy-rok/">Brunch na Silvestra a na Nový rok</a>.</p>
+<p>Plánujete brunch i na konec roku? Tipy, kam vyrazit na Silvestra a 1. ledna, najdete v článku <a href="/brunch-na-silvestra-a-novy-rok/">Brunch na Silvestra a na Nový rok</a>.</p>
 
 <p>Krásné svátky a dobrou chuť! 🎄</p>

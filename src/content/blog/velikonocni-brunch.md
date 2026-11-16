@@ -15,7 +15,7 @@ obdobi: [jaro]
 <h2>Kdy na velikonoční brunch</h2>
 
 <ul>
-<li><strong>Velký pátek a Velikonoční pondělí</strong> jsou státní svátky. Velké obchody mají zavřeno, kavárny a bistra ale otevírají podle vlastního uvážení – otevírací dobu si proto vždy ověř předem na Instagramu nebo webu podniku.</li>
+<li><strong>Velký pátek a Velikonoční pondělí</strong> jsou státní svátky. Velké obchody mají zavřeno, kavárny a bistra ale otevírají podle vlastního uvážení – otevírací dobu si proto vždy ověřte předem na Instagramu nebo webu podniku.</li>
 <li><strong>Bílá sobota</strong> je pro brunch ideální: většina podniků má otevřeno a lidé ještě nevyrazili na pomlázku.</li>
 <li><strong>Velikonoční neděle</strong> je typický rodinný den. Pokud jdete ve větší skupině, rezervujte.</li>
 </ul>
@@ -47,7 +47,7 @@ obdobi: [jaro]
 <li><a href="/podniky/bistro-topinka-cesky-krumlov/"><strong>Bistro Topinka</strong></a> (Český Krumlov) – terasa s výhledem na řeku a staré město, ideální na velikonoční výlet.</li>
 </ul>
 
-<p>Pokud bude hezky, vyber si z <a href="/brunch-se-zahradkou/">podniků se zahrádkou</a>. Bereš psa? Mrkni na <a href="/pet-friendly-brunch/">pet-friendly podniky</a>.</p>
+<p>Pokud bude hezky, vyberte si z <a href="/brunch-se-zahradkou/">podniků se zahrádkou</a>. Berete psa? Mrkněte na <a href="/pet-friendly-brunch/">pet-friendly podniky</a>.</p>
 
 <h2>Velikonoční brunch doma</h2>
 

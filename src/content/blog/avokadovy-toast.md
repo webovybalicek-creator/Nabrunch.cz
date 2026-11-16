@@ -7,7 +7,7 @@ image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-19.35.59.png"
 obdobi: [jaro, leto]
 ---
 
-<p><strong>Avokádový toast</strong> (anglicky <em>avocado toast</em>) je možná nejjednodušší brunchové jídlo – a přesto ho najdeš skoro na každém brunchovém lístku. Opečený chléb, rozmačkané avokádo, sůl, citron. Dobře udělaný je ale překvapivě těžké překonat.</p>
+<p><strong>Avokádový toast</strong> (anglicky <em>avocado toast</em>) je možná nejjednodušší brunchové jídlo – a přesto ho najdete skoro na každém brunchovém lístku. Opečený chléb, rozmačkané avokádo, sůl, citron. Dobře udělaný je ale překvapivě těžké překonat.</p>
 
 <h2>Odkud se avokádový toast vzal</h2>
 
@@ -38,8 +38,8 @@ obdobi: [jaro, leto]
 <ol>
 <li>Opeč krajíc kváskového chleba (na pánvi s kapkou olivového oleje nebo v toustovači).</li>
 <li>Půlku zralého avokáda rozmačkej s citronovou šťávou, solí a pepřem.</li>
-<li>Natři na chléb, pokapej olivovým olejem a posyp chilli vločkami.</li>
-<li>Přidej zastřené vejce: do vody těsně pod bodem varu s lžící octa vpusť vejce a nech 3 minuty.</li>
+<li>Natři na chléb, pokapejte olivovým olejem a posyp chilli vločkami.</li>
+<li>Přidejte zastřené vejce: do vody těsně pod bodem varu s lžící octa vpusť vejce a nechte 3 minuty.</li>
 </ol>
 
 <h2>Kde si dát avokádový toast</h2>
@@ -53,4 +53,4 @@ obdobi: [jaro, leto]
 <li><a href="/podniky/peceme-ricany/"><strong>Pečeme</strong></a> (Říčany) – obložené chleby s avokádem z řemeslné pekárny.</li>
 </ul>
 
-<p>Hledáš lehčí snídani? Projdi si <a href="/zdrave-snidane-a-brunche/">zdravé a fitness snídaně</a> nebo <a href="/veganske-snidane-a-brunche/">veganské brunche</a>.</p>
+<p>Hledáte lehčí snídani? Projděte si <a href="/zdrave-snidane-a-brunche/">zdravé a fitness snídaně</a> nebo <a href="/veganske-snidane-a-brunche/">veganské brunche</a>.</p>

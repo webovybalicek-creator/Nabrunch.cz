@@ -41,4 +41,4 @@ obdobi: [podzim]
 
 <p>Doma se na podzim nejlíp hodí jedna velká pánev: <a href="/co-je-shakshuka/">shakshuka</a> s pečenou dýní, nebo <a href="/co-je-french-toast/">french toast</a> s jablky a skořicí. K tomu konvice chai a deka na gauči. 🍂</p>
 
-<p>Tipy na další roční období najdeš v článcích <a href="/brunch-o-vanocich-a-na-novy-rok/">brunch o Vánocích</a> a <a href="/brunch-na-zahradce/">brunch na zahrádce</a>.</p>
+<p>Tipy na další roční období najdete v článcích <a href="/brunch-o-vanocich-a-na-novy-rok/">brunch o Vánocích</a> a <a href="/brunch-na-zahradce/">brunch na zahrádce</a>.</p>

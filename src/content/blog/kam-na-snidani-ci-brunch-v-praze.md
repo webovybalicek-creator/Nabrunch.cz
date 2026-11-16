@@ -21,9 +21,9 @@ image: "/wp-content/uploads/2026/01/brunchpraha.png"
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/umamy-cafe-narodni-praha/" data-type="link" data-id="/podniky/umamy-cafe-narodni-praha/" target="_blank" rel="noreferrer noopener">2. Umámy Café Národní Praha</a></h2>
 
-<p><strong>Umámy Café</strong>&nbsp;je&nbsp;<strong>útulná kavárna a brunch místo v Praze</strong>&nbsp;na Národní, které tě vítá na&nbsp;<strong>snídani, brunch, lehký oběd i kávu s dezertem</strong>.</p>
+<p><strong>Umámy Café</strong>&nbsp;je&nbsp;<strong>útulná kavárna a brunch místo v Praze</strong>&nbsp;na Národní, které vás vítá na&nbsp;<strong>snídani, brunch, lehký oběd i kávu s dezertem</strong>.</p>
 
-<p>Prostor kavárny je schovaný ve dvoře a působí jako&nbsp;<strong>příjemné útočiště od ruchu města</strong>, kde si můžeš odpočinout u šálku pečlivě připravené kávy nebo domácího pečiva a dortů.</p>
+<p>Prostor kavárny je schovaný ve dvoře a působí jako&nbsp;<strong>příjemné útočiště od ruchu města</strong>, kde si můžete odpočinout u šálku pečlivě připravené kávy nebo domácího pečiva a dortů.</p>
 
 <figure class="wp-block-image size-large"><a href="/podniky/umamy-cafe-narodni-praha/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-20-v-10.52.48.png" alt="" class="wp-image-2086"/></a></figure>
 

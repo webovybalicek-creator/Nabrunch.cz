@@ -15,9 +15,9 @@ obdobi: [zima]
 
 <h2 class="wp-block-heading">Co je kataifi (kadaifi)?</h2>
 
-<p>Kataifi, známé také jako kadaifi, je tenounké vláknité filo těsto používané v arabských a řeckých dezertech. Je křupavé, lehké a perfektně doplňuje hutnost čokolády i pistáciové náplně. Právě tenhle kontrast — krémová jemnost uvnitř, čokoláda na povrchu a křupavé kataifi mezi tím — vytvořil z dubajské čokolády virální objev, který dnes najdeš po celém světě.</p>
+<p>Kataifi, známé také jako kadaifi, je tenounké vláknité filo těsto používané v arabských a řeckých dezertech. Je křupavé, lehké a perfektně doplňuje hutnost čokolády i pistáciové náplně. Právě tenhle kontrast — krémová jemnost uvnitř, čokoláda na povrchu a křupavé kataifi mezi tím — vytvořil z dubajské čokolády virální objev, který dnes najdete po celém světě.</p>
 
-<p>Chuťově jde o dokonalý mix sladké čokolády, lehce slaných pistácií, máslového nádechu tahini a voňavých orientálních tónů. Přesně to, co si spojuješ s Dubají: elegance, výraznost a luxus v jediné tabulce. </p>
+<p>Chuťově jde o dokonalý mix sladké čokolády, lehce slaných pistácií, máslového nádechu tahini a voňavých orientálních tónů. Přesně to, co si spojujete s Dubají: elegance, výraznost a luxus v jediné tabulce. </p>
 
 <p>A právě proto si tahle čokoláda získala obrovskou popularitu i mimo Blízký východ. Je to dezert, který nejen dobře chutná, ale zároveň má silný „wow efekt“. Už samotné rozkrojení tabulky je malý rituál: čokoláda jemně praskne, pistáciový krém se krásně roztéká a mezi vrstvami se objeví křupavé nitky kataifi. Každé sousto je jinak strukturované, ale vždy intenzivní a překvapivě harmonické.</p>
 

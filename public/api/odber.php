@@ -26,12 +26,12 @@ $cas = (int)($_POST['t'] ?? 0);
 if (trim((string)($_POST['web2'] ?? '')) !== '' || ($cas > 0 && time() - $cas < 2)) out(200, ['ok' => true]);
 
 $email = trim((string)($_POST['email'] ?? ''));
-if (!filter_var($email, FILTER_VALIDATE_EMAIL) || mb_strlen($email) > 120) out(422, ['ok' => false, 'chyba' => 'Zkontroluj prosím e-mail.']);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL) || mb_strlen($email) > 120) out(422, ['ok' => false, 'chyba' => 'Zkontrolujte prosím e-mail.']);
 
 $otisk = hash_hmac('sha256', ($_SERVER['REMOTE_ADDR'] ?? '') . date('YmdH'), __FILE__);
 $limitSoubor = sys_get_temp_dir() . '/nabrunch-odber-' . substr($otisk, 0, 24);
 $pocet = is_file($limitSoubor) ? (int)file_get_contents($limitSoubor) : 0;
-if ($pocet >= LIMIT_ZA_HODINU) out(429, ['ok' => false, 'chyba' => 'Příliš mnoho pokusů. Zkus to prosím později.']);
+if ($pocet >= LIMIT_ZA_HODINU) out(429, ['ok' => false, 'chyba' => 'Příliš mnoho pokusů. Zkuste to prosím později.']);
 @file_put_contents($limitSoubor, (string)($pocet + 1));
 
 $konfig = is_file(__DIR__ . '/_konfig.php') ? (array)require __DIR__ . '/_konfig.php' : [];
@@ -61,4 +61,4 @@ curl_close($ch);
 
 if ($kod >= 200 && $kod < 300) out(200, ['ok' => true]);
 error_log("nabrunch odber: Ecomail HTTP $kod " . substr((string)$odpoved, 0, 300));
-out(502, ['ok' => false, 'chyba' => 'Přihlášení se nepovedlo. Zkus to prosím za chvíli.']);
+out(502, ['ok' => false, 'chyba' => 'Přihlášení se nepovedlo. Zkuste to prosím za chvíli.']);

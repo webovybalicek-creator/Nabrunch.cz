@@ -24,9 +24,9 @@ obdobi: [podzim, zima]
 
 <h2>Recept na croque madame</h2>
 <ol>
-<li>Připrav bešamel: na 20 g másla osmahni 20 g hladké mouky, přilij 200 ml mléka a vař do zhoustnutí. Osol, opepři, přidej muškátový oříšek.</li>
+<li>Připravte bešamel: na 20 g másla osmahni 20 g hladké mouky, přilijte 200 ml mléka a vař do zhoustnutí. Osol, opepři, přidejte muškátový oříšek.</li>
 <li>Dva plátky chleba nebo briošky potři dijonskou hořčicí a bešamelem.</li>
-<li>Na jeden dej šunku a strouhaný gruyère, přiklop druhým plátkem.</li>
+<li>Na jeden dejte šunku a strouhaný gruyère, přiklop druhým plátkem.</li>
 <li>Navrch rozetři zbytek bešamelu a posyp sýrem.</li>
 <li>Zapeč v troubě (200 °C) 8–10 minut dozlatova.</li>
 <li>Navrch polož sázené vejce.</li>

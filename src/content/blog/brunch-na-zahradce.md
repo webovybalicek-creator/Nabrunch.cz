@@ -21,7 +21,7 @@ obdobi: [jaro, leto]
 <li><a href="/podniky/spojka-karlin/"><strong>Spojka Karlín</strong></a> – velká zahrádka, jedno z nejoblíbenějších míst na brunch na slunci v Karlíně.</li>
 <li><a href="/podniky/bistro-cafe-laskava/"><strong>Bistro Cafe Laskavá</strong></a> – klidná zahrádka ve vnitrobloku na Vinohradech.</li>
 <li><a href="/podniky/cafefin-praha/"><strong>CAFEFIN</strong></a> – v létě se snídaně přesouvají na terasu přímo na náměstí Jiřího z Poděbrad.</li>
-<li><a href="/podniky/dim-sum-spot-pub-andel/"><strong>Dim Sum Spot &amp; Pub</strong></a> – sezení ve vnitrobloku, kde si brunch užiješ v klidu mimo ruch Anděla.</li>
+<li><a href="/podniky/dim-sum-spot-pub-andel/"><strong>Dim Sum Spot &amp; Pub</strong></a> – sezení ve vnitrobloku, kde si brunch užijete v klidu mimo ruch Anděla.</li>
 <li><a href="/podniky/pauseteria-cafe-garden-praha/"><strong>Pauseteria café garden</strong></a> – kavárna se zahradou kousek od Staroměstského náměstí.</li>
 </ul>
 
@@ -50,10 +50,10 @@ obdobi: [jaro, leto]
 <h2>Tipy na brunch venku</h2>
 
 <ul>
-<li><strong>Přijď brzy.</strong> Místa venku mizí jako první, o víkendu klidně už v 9:30.</li>
-<li><strong>Ověř si, jestli venkovní místa rezervují.</strong> Někde se zahrádka nerezervuje vůbec.</li>
-<li><strong>Vezmi si vrstvu navíc.</strong> Na jaře bývají rána ve stínu chladná.</li>
-<li><strong>Pejsek?</strong> Venku bývají psi vítaní častěji než uvnitř – vyber si z <a href="/pet-friendly-brunch/">pet-friendly podniků</a>.</li>
+<li><strong>Přijďte brzy.</strong> Místa venku mizí jako první, o víkendu klidně už v 9:30.</li>
+<li><strong>Ověřte si, jestli venkovní místa rezervují.</strong> Někde se zahrádka nerezervuje vůbec.</li>
+<li><strong>Vezměte si vrstvu navíc.</strong> Na jaře bývají rána ve stínu chladná.</li>
+<li><strong>Pejsek?</strong> Venku bývají psi vítaní častěji než uvnitř – vyberte si z <a href="/pet-friendly-brunch/">pet-friendly podniků</a>.</li>
 </ul>
 
-<p>Kompletní seznam najdeš na stránce <a href="/brunch-se-zahradkou/">brunch se zahrádkou</a>, nebo si vyber podle města – třeba <a href="/lokalita/praha/brunch-se-zahradkou/">brunch se zahrádkou v Praze</a>. ☀️</p>
+<p>Kompletní seznam najdete na stránce <a href="/brunch-se-zahradkou/">brunch se zahrádkou</a>, nebo si vyberte podle města – třeba <a href="/lokalita/praha/brunch-se-zahradkou/">brunch se zahrádkou v Praze</a>. ☀️</p>

@@ -1,12 +1,12 @@
 ---
 title: "Brunch Brno: kam na snídani a brunch – 10 ověřených tipů"
-description: "Hledáš brunch v Brně? 10 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
+description: "Hledáte brunch v Brně? 10 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
 seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 10 ověřených tipů"
 date: "2025-11-15T17:45:21"
 image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 ---
 
-<p>Brno má skvělou kavárenskou scénu a <strong>brunch</strong> tu dnes najdeš v centru i v klidnějších čtvrtích. Vybrali jsme <strong>10 podniků, kam na snídani nebo brunch v Brně</strong> – každý trochu jiný, takže si vybereš podle lokality, nálady i chuti. U každého je tip, co si dát.</p>
+<p>Brno má skvělou kavárenskou scénu a <strong>brunch</strong> tu dnes najdete v centru i v klidnějších čtvrtích. Vybrali jsme <strong>10 podniků, kam na snídani nebo brunch v Brně</strong> – každý trochu jiný, takže si vyberete podle lokality, nálady i chuti. U každého je tip, co si dát.</p>
 
 <h2>Brunch v centru Brna</h2>
 
@@ -34,7 +34,7 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 
 <h3>👉🏼 <a href="/podniky/brunches-bistro-brno/">Brunche’s Bistro</a> – Vodova ♥</h3>
 <p>Naše brněnská srdcovka. Útulné místo se snídaněmi po celý den, vegetariánskými i veganskými variantami a dog-friendly interiérem.</p>
-<p>🍳 <strong>Co si dát:</strong> lívance s dubajskou čokoládou – ty prostě musíš zkusit.</p>
+<p>🍳 <strong>Co si dát:</strong> lívance s dubajskou čokoládou – ty prostě musíte zkusit.</p>
 
 <h3>👉🏼 <a href="/podniky/poppy-beans-coffee-brno/">Poppy Beans Coffee</a> – Staňkova</h3>
 <p>Kavárna kousek od parku Lužánky se snídaněmi inspirovanými mimoevropskými kuchyněmi a vážně míněnou kávou: dva espresso mlýnky, V60 a občas i soutěžní kávy.</p>
@@ -51,7 +51,7 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <h2>Jak si vybrat</h2>
 
 <ul>
-<li><strong>Chceš sladký brunch?</strong> Brunche’s Bistro (lívance) nebo Café Placzek.</li>
+<li><strong>Chcete sladký brunch?</strong> Brunche’s Bistro (lívance) nebo Café Placzek.</li>
 <li><strong>Slaný a výrazný?</strong> Bavard (turecká vejce) nebo SKØG.</li>
 <li><strong>Na kávu jako zážitek?</strong> Poppy Beans nebo Maybe coffee.</li>
 <li><strong>Brzy ráno nebo bez lepku?</strong> Buchta B otevírá v 6:30 a má bezlepkové i veganské varianty.</li>
@@ -60,4 +60,4 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <li><strong>Vegan?</strong> Buchta B, SKØG, Bavard, Poppy Beans a Coffee Trail mají veganské varianty.</li>
 </ul>
 
-<p>Všechny ověřené podniky najdeš na stránce <a href="/lokalita/brno/">kam na brunch a snídani v Brně</a>, další kavárny v přehledu <a href="/kavarny/brno/">kavárny v Brně</a>. Máš tip na další místo? Napiš nám na <a href="mailto:karolina@nabrunch.cz">karolina@nabrunch.cz</a>. ☕</p>
+<p>Všechny ověřené podniky najdete na stránce <a href="/lokalita/brno/">kam na brunch a snídani v Brně</a>, další kavárny v přehledu <a href="/kavarny/brno/">kavárny v Brně</a>. Máte tip na další místo? Napište nám na <a href="mailto:karolina@nabrunch.cz">karolina@nabrunch.cz</a>. ☕</p>

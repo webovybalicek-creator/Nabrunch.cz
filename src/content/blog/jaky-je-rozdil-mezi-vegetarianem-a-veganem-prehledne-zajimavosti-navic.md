@@ -1,11 +1,11 @@
 ---
 title: "Jaký je rozdíl mezi vegetariánem a veganem? Přehledně + zajímavosti navíc"
-description: "Při výběru snídaně nebo brunche dnes často narazíš na označení vegetariánské nebo veganské jídlo. Spousta lidí tyto pojmy zaměňuje, přitom mezi nimi existuje zásadní rozdíl."
+description: "Při výběru snídaně nebo brunche dnes často narazíte na označení vegetariánské nebo veganské jídlo. Spousta lidí tyto pojmy zaměňuje, přitom mezi nimi existuje zásadní rozdíl."
 date: "2026-01-29T18:11:14"
 image: "/wp-content/uploads/2026/01/ee21f049-7f16-4576-8211-74708b6aa9d7.png"
 ---
 
-<p>Při výběru <strong>snídaně nebo brunch</strong>e dnes často narazíš na označení <strong>vegetariánské</strong> nebo <strong>veganské</strong> jídlo. Spousta lidí tyto pojmy zaměňuje, přitom mezi nimi existuje <strong>zásadní rozdíl</strong>. Pokud se chceš lépe orientovat v menu kaváren (a vědět, co si objednat), tady je jednoduché a srozumitelné vysvětlení – plus pár zajímavostí, které tě možná překvapí.</p>
+<p>Při výběru <strong>snídaně nebo brunch</strong>e dnes často narazíte na označení <strong>vegetariánské</strong> nebo <strong>veganské</strong> jídlo. Spousta lidí tyto pojmy zaměňuje, přitom mezi nimi existuje <strong>zásadní rozdíl</strong>. Pokud se chcete lépe orientovat v menu kaváren (a vědět, co si objednat), tady je jednoduché a srozumitelné vysvětlení – plus pár zajímavostí, které vás možná překvapí.</p>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
@@ -13,7 +13,7 @@ image: "/wp-content/uploads/2026/01/ee21f049-7f16-4576-8211-74708b6aa9d7.png"
 
 <h3 class="wp-block-heading">Kdo je vegetarián?</h3>
 
-<p><strong>Vegetarián</strong> nejí maso ani ryby, ale <strong>živočišné produkty konzumovat může</strong>. Existuje několik typů vegetariánství, ale v kavárnách se nejčastěji setkáš s těmito variantami:</p>
+<p><strong>Vegetarián</strong> nejí maso ani ryby, ale <strong>živočišné produkty konzumovat může</strong>. Existuje několik typů vegetariánství, ale v kavárnách se nejčastěji setkáte s těmito variantami:</p>
 
 <ul class="wp-block-list">
 <li><strong>Lakto-ovo vegetarián</strong> – jí mléčné výrobky i vejce (nejběžnější varianta)</li>
@@ -59,7 +59,7 @@ image: "/wp-content/uploads/2026/01/ee21f049-7f16-4576-8211-74708b6aa9d7.png"
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-<h3 class="wp-block-heading">Zajímavosti, které tě možná překvapí</h3>
+<h3 class="wp-block-heading">Zajímavosti, které vás možná překvapí</h3>
 
 <ul class="wp-block-list">
 <li>🌱 Spousta lidí není striktně vegetarián ani vegan, ale vybírá si <strong>rostlinná jídla jen občas</strong> (tzv. flexitariáni).</li>
@@ -75,6 +75,6 @@ image: "/wp-content/uploads/2026/01/ee21f049-7f16-4576-8211-74708b6aa9d7.png"
 
 <h3 class="wp-block-heading">Co si vybrat?</h3>
 
-<p>Záleží jen na tobě. <strong>Vegetariánský brunch</strong> je skvělý, pokud máš rád/a vejce a sýry. <strong>Veganský brunch</strong> je ideální, pokud chceš zkusit něco nového, lehčího nebo rostlinného. Na <strong>nabrunch.cz</strong> najdeš tipy na obojí – a právě to je na brunch kultuře krásné: každý si přijde na své.</p>
+<p>Záleží jen na vás. <strong>Vegetariánský brunch</strong> je skvělý, pokud máte rádi vejce a sýry. <strong>Veganský brunch</strong> je ideální, pokud chcete zkusit něco nového, lehčího nebo rostlinného. Na <strong>nabrunch.cz</strong> najdete tipy na obojí – a právě to je na brunch kultuře krásné: každý si přijde na své.</p>
 
-<p><a href="/blog/" target="_blank" rel="noreferrer noopener"><strong>Další zajímavé články si přečti ZDE.</strong></a></p>
+<p><a href="/blog/" target="_blank" rel="noreferrer noopener"><strong>Další zajímavé články si přečtěte ZDE.</strong></a></p>

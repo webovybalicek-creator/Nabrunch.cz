@@ -21,16 +21,16 @@ obdobi: [leto]
 <p>Hladce, jemně, s tóny čokolády, ořechů nebo ovoce podle zvolené kávy. Většina lidí ho pije bez cukru, protože je přirozeně méně hořký. Podává se s ledem, s mlékem, nebo jako <strong>cold brew tonic</strong>.</p>
 
 <h2>Kolik má cold brew kofeinu?</h2>
-<p>Záleží na poměru kávy a vody. Cold brew koncentrát bývá silný, po naředění má jedna porce kofeinu podobně nebo o něco víc než běžná káva. Pokud jsi citlivý na kofein, ptej se v kavárně, jak silný je.</p>
+<p>Záleží na poměru kávy a vody. Cold brew koncentrát bývá silný, po naředění má jedna porce kofeinu podobně nebo o něco víc než běžná káva. Pokud jste citliví na kofein, ptejte se v kavárně, jak silný je.</p>
 
 <h2>Jak udělat cold brew doma</h2>
 <ol>
 <li>Namel kávu <strong>nahrubo</strong> (jako na french press) – asi 80–100 g na 1 litr vody.</li>
-<li>Zalij studenou nebo pokojovou vodou a promíchej.</li>
-<li>Nech louhovat <strong>12–18 hodin v lednici</strong> (nebo zhruba 12 hodin při pokojové teplotě).</li>
-<li>Přeceď přes filtr nebo jemné sítko.</li>
-<li>Podávej s ledem, případně nařeď vodou nebo mlékem. V lednici vydrží několik dní.</li>
+<li>Zalijte studenou nebo pokojovou vodou a promíchejte.</li>
+<li>Nechte louhovat <strong>12–18 hodin v lednici</strong> (nebo zhruba 12 hodin při pokojové teplotě).</li>
+<li>Přeceďte přes filtr nebo jemné sítko.</li>
+<li>Podávejte s ledem, případně nařeď vodou nebo mlékem. V lednici vydrží několik dní.</li>
 </ol>
 
 <h2>Kam na letní kávu</h2>
-<p>Cold brew i další letní kávy najdeš v kavárnách s výběrovou kávou – tipy jsou v článku <a href="/letni-brunch-ledova-kava/">letní brunch: ledová káva a matcha</a>. Hořko-sladkou alternativou je <a href="/co-je-espresso-tonic-a-proc-je-tak-popularni/">espresso tonic</a>, nealko osvěžením <a href="/co-je-kombucha/">kombucha</a>. Rozdíly mezi kávami s mlékem vysvětlujeme v článku <a href="/flat-white-cortado-macchiato-jaky-je-rozdil/">flat white vs. cortado vs. macchiato</a>. 🧊</p>
+<p>Cold brew i další letní kávy najdete v kavárnách s výběrovou kávou – tipy jsou v článku <a href="/letni-brunch-ledova-kava/">letní brunch: ledová káva a matcha</a>. Hořko-sladkou alternativou je <a href="/co-je-espresso-tonic-a-proc-je-tak-popularni/">espresso tonic</a>, nealko osvěžením <a href="/co-je-kombucha/">kombucha</a>. Rozdíly mezi kávami s mlékem vysvětlujeme v článku <a href="/flat-white-cortado-macchiato-jaky-je-rozdil/">flat white vs. cortado vs. macchiato</a>. 🧊</p>

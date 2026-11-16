@@ -74,7 +74,7 @@
       if (my !== token) return;
       const { mesta, podniky, temata, kavarny } = vyhledej(q, idx);
       if (!mesta.length && !podniky.length && !temata.length && !kavarny.length) {
-        box.innerHTML = `<p class="srch__empty">Pro „${esc(q)}“ jsme nic nenašli. Zkus jiný název, ulici nebo jen město.</p><a class="srch__vse" href="/podniky/">Zobrazit všechny podniky →</a>`;
+        box.innerHTML = `<p class="srch__empty">Pro „${esc(q)}“ jsme nic nenašli. Zkuste jiný název, ulici nebo jen město.</p><a class="srch__vse" href="/podniky/">Zobrazit všechny podniky →</a>`;
       } else {
         box.innerHTML =
           (mesta.length

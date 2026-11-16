@@ -85,7 +85,7 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
     {podniky.map((p, i) => <Karta p={p} skryta={i >= naStranku} />)}
   </ul>
   <p class="vypis__prazdno" data-prazdno hidden>
-    Takovou kombinaci zatím nemáme. Zkus ubrat některý filtr, nebo nám <a href="/pridat-podnik/">tip na podnik pošli</a>.
+    Takovou kombinaci zatím nemáme. Zkuste ubrat některý filtr, nebo nám <a href="/pridat-podnik/">tip na podnik pošlete</a>.
   </p>
   <p class="vypis__dalsi">
     <button type="button" class="btn btn--ghost" data-dalsi hidden>Načíst další</button>
@@ -146,7 +146,7 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
       pocet.textContent = aktivni
         ? `${jenOtevrene ? 'Teď má otevřeno' : 'Nalezeno'} ${shoda.length} ${tvar(shoda.length)}${poloha ? ', od nejbližšího' : ''}`
         : poloha
-          ? 'Seřazeno od nejbližšího k tobě'
+          ? 'Seřazeno od nejbližšího k vám'
           : '';
       if (zapsat && form) {
         const u = new URL(location.href);
@@ -231,7 +231,7 @@ const atmosfera = ATMOSFERA.filter((a) => podniky.some((p) => p.atmosfera.includ
         },
         () => {
           okoliBtn.disabled = false;
-          pocet.textContent = 'Polohu se nepodařilo zjistit. Povol ji v prohlížeči, nebo vyber město.';
+          pocet.textContent = 'Polohu se nepodařilo zjistit. Povolte ji v prohlížeči, nebo vyberte město.';
         },
         { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 },
       );

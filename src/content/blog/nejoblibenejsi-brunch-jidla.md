@@ -5,7 +5,7 @@ date: "2026-01-14T17:24:42"
 image: "/wp-content/uploads/2025/04/image-upscaled.png"
 ---
 
-<p>Brunch je ideální kombinací <strong>snídaně a oběda</strong> – pomalé víkendové jídlo, které si vychutnáš bez spěchu, často s přáteli nebo rodinou. Nabídka brunchů se může lišit podle kavárny či bistra, ale některé pokrmy a nápoje se objevují téměř všude. Pojďme se podívat na ty <strong>nejčastější brunchové klasiky</strong>, které si lidé objednávají nejraději.</p>
+<p>Brunch je ideální kombinací <strong>snídaně a oběda</strong> – pomalé víkendové jídlo, které si vychutnáte bez spěchu, často s přáteli nebo rodinou. Nabídka brunchů se může lišit podle kavárny či bistra, ale některé pokrmy a nápoje se objevují téměř všude. Pojďme se podívat na ty <strong>nejčastější brunchové klasiky</strong>, které si lidé objednávají nejraději.</p>
 
 <h3 class="wp-block-heading">Nejoblíbenější brunchová jídla</h3>
 
@@ -17,4 +17,4 @@ image: "/wp-content/uploads/2025/04/image-upscaled.png"
 
 <h3 class="wp-block-heading">Proč je brunch tak oblíbený</h3>
 
-<p>Brunch není jen o jídle, ale o <strong>atmosféře</strong>. Spojuje to nejlepší ze snídaně i oběda, nabízí prostor experimentovat s chutěmi a zároveň si dopřát čas pro sebe. Ať už máš raději sladké, slané, vegetariánské nebo vydatnější varianty, brunch menu dnes uspokojí téměř každého – a právě proto patří k nejoblíbenějším víkendovým rituálům.</p>
+<p>Brunch není jen o jídle, ale o <strong>atmosféře</strong>. Spojuje to nejlepší ze snídaně i oběda, nabízí prostor experimentovat s chutěmi a zároveň si dopřát čas pro sebe. Ať už máte raději sladké, slané, vegetariánské nebo vydatnější varianty, brunch menu dnes uspokojí téměř každého – a právě proto patří k nejoblíbenějším víkendovým rituálům.</p>

@@ -7,7 +7,7 @@ wpSlug: "8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-%e2
 
 <p>Pražská gastro scéna se mění rychleji než kdy dřív. Zatímco před pár lety dominovaly avocado toasty a vejce Benedikt, dnes se do kaváren dostávají chutě a ingredience inspirované <strong>Asií, Jižní Amerikou i moderní pekárenskou scénou. </strong></p>
 
-<p>Pokud sleduješ, co je právě trendy ve světě snídaní, kávy a brunchů, těchto osm pojmů teď uvidíš v menu stále častěji.</p>
+<p>Pokud sledujete, co je právě trendy ve světě snídaní, kávy a brunchů, těchto osm pojmů teď uvidíte v menu stále častěji.</p>
 
 <h2 class="wp-block-heading">1. Miso – nová tajná ingredience brunch menu 🧈</h2>
 
@@ -31,7 +31,7 @@ wpSlug: "8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-%e2
 
 <h2 class="wp-block-heading">2. Yuzu dobývá kávové a dezertní menu 🍋</h2>
 
-<p>Pokud jsi v poslední době viděl v menu slovo <em>yuzu</em>, nejsi sám.</p>
+<p>Pokud jste v poslední době viděli v menu slovo <em>yuzu</em>, nejste sami.</p>
 
 <p>Tento japonský citrus se objevuje v:</p>
 
@@ -93,7 +93,7 @@ wpSlug: "8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-%e2
 
 <p>Kváskový chleba se stal základem moderní snídaňové scény.</p>
 
-<p>Dnes ho najdeš skoro všude:</p>
+<p>Dnes ho najdete skoro všude:</p>
 
 <ul class="wp-block-list">
 <li>avocado toast</li>
@@ -181,4 +181,4 @@ wpSlug: "8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-%e2
 
 <p>Brunch už není jen o požitku, ale stále častěji i o funkčním jídle.</p>
 
-<p><a href="/" data-type="link" data-id="/" target="_blank" rel="noreferrer noopener"><strong>Vyber si svoje brunch místo z naší nabídky. </strong></a></p>
+<p><a href="/" data-type="link" data-id="/" target="_blank" rel="noreferrer noopener"><strong>Vyberte si svoje brunch místo z naší nabídky. </strong></a></p>
