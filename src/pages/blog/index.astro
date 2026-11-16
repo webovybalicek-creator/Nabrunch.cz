@@ -2,9 +2,13 @@
 import Base from '../../layouts/Base.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import BlogKarta from '../../components/BlogKarta.astro';
-import { clanky, KATEGORIE, kategorie, kategorieUrl } from '../../lib/blog';
+import Foto from '../../components/Foto.astro';
+import { clanky, KATEGORIE, kategorie, kategorieUrl, clanekUrl, nazev, perex } from '../../lib/blog';
 
 const vse = await clanky();
+// První článek jako hlavní přes celou šířku; ve mřížce je každá sedmá karta barevná bez fotky (rozbije rytmus)
+const [hlavni, ...dalsi] = vse;
+const SIPKA = 'M5 12h14 M13 6l6 6-6 6';
 ---
 
 <Base title="Blog – brunch tipy, inspirace a průvodci" description="Kam na snídani a brunch v Praze, Brně i dalších městech, co je matcha nebo kombucha a další brunchová inspirace na každý víkend.">
@@ -20,7 +24,42 @@ const vse = await clanky();
   </header>
   <section class="section">
     <div class="wrap">
-      <ul class="karty karty--blog">{vse.map((c) => <BlogKarta c={c} />)}</ul>
+      {
+        hlavni && (
+          <a class="hl" href={clanekUrl(hlavni)}>
+            <div class="hl__foto">{hlavni.data.image && <Foto src={hlavni.data.image} alt={hlavni.data.title} plna eager />}</div>
+            <div class="hl__text">
+              <span class="hl__kat">{kategorie(hlavni)}</span>
+              <h2>{nazev(hlavni)}</h2>
+              <p>{perex(hlavni, 220)}</p>
+              <span class="hl__vic">
+                Číst článek
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={SIPKA} /></svg>
+              </span>
+            </div>
+          </a>
+        )
+      }
+      <ul class="karty karty--blog">
+        {
+          dalsi.map((c, i) =>
+            i % 7 === 1 ? (
+              <li class="bt">
+                <a href={clanekUrl(c)}>
+                  <span class="bt__kat">{kategorie(c)}</span>
+                  <h3>{nazev(c)}</h3>
+                  <span class="bt__dole">
+                    <span>{perex(c, 120)}</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={SIPKA} /></svg>
+                  </span>
+                </a>
+              </li>
+            ) : (
+              <BlogKarta c={c} />
+            )
+          )
+        }
+      </ul>
     </div>
   </section>
 </Base>
@@ -38,5 +77,114 @@ const vse = await clanky();
   }
   .karty--blog {
     grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+  .hl {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--blush);
+    color: inherit;
+    text-decoration: none;
+  }
+  .hl__foto {
+    position: relative;
+    min-height: 380px;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .hl__foto :global(.foto) {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.3s ease-out;
+  }
+  .hl__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+  }
+  .hl__kat,
+  .bt__kat {
+    font: 600 0.72rem/1.3 var(--f-display);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .hl__kat {
+    color: var(--brown);
+  }
+  .hl h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    line-height: 1.14;
+  }
+  .hl p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+  .hl__vic {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--brown-dark);
+  }
+  .bt a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    height: 100%;
+    min-height: 320px;
+    padding: 1.75rem;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: var(--brown-dark);
+    text-decoration: none;
+  }
+  .bt h3 {
+    margin: 0.9rem 0 0;
+    font-size: 1.85rem;
+    line-height: 1.12;
+    color: var(--brown-dark);
+  }
+  .bt__dole {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  .bt__dole svg {
+    flex: none;
+  }
+  @media (hover: hover) {
+    .hl:hover {
+      color: inherit;
+    }
+    .hl:hover .hl__foto :global(.foto) {
+      transform: scale(1.03);
+    }
+    .bt a:hover {
+      color: var(--brown-dark);
+      background: #ff9d73;
+    }
+  }
+  @media (max-width: 800px) {
+    .hl {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .hl__foto {
+      min-height: 0;
+      aspect-ratio: 3 / 2;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hl__foto :global(.foto) {
+      transition: none;
+    }
   }
 </style>

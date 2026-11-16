@@ -18,7 +18,7 @@ const topMesta = [...mesta()].sort((a, b) => b.podniky.length - a.podniky.length
 // Brunch tipy: sezónní výběr (logika v src/lib/sezona.ts). Do HTML jde „zásobník“ kandidátů,
 // viditelných je 6 podle data buildu; skript níže výběr přepočítá podle dnešního data v prohlížeči.
 const vsechny = (await clanky()).filter((c) => c.data.naHp !== false);
-const TIPU = 6;
+const TIPU = 5;
 const rok = new Date().getFullYear();
 const zasobnik = [
   ...vsechny.filter((c) => c.data.sezona?.length || c.data.obdobi?.length),
@@ -42,6 +42,17 @@ const tipyNadpis = OBDOBI_NADPIS[obdobiDne(dnes)];
 // Koláž v hlavičce: každý den jiné tři srdcovky (web se sestavuje několikrát denně)
 const den = Math.floor(Date.now() / 864e5);
 const kolaz = srdcovky.length > 3 ? [0, 1, 2].map((i) => srdcovky[(den * 3 + i) % srdcovky.length]) : srdcovky.slice(0, 3);
+
+// Dlaždice témat: největší téma jako velká dlaždice, ke každému fotka jiného podniku
+const pouzite = new Set<number>();
+const temataFoto = [...TEMATA]
+  .map((t) => ({ t, podniky: podnikyTematu(t) }))
+  .sort((a, b) => b.podniky.length - a.podniky.length)
+  .map(({ t, podniky }, i) => {
+    const p = podniky.find((x) => !pouzite.has(x.id)) ?? podniky[0];
+    if (p) pouzite.add(p.id);
+    return { t, pocet: podniky.length, foto: p?.foto, velka: i === 0 };
+  });
 
 const organizace = {
   '@context': 'https://schema.org',
@@ -121,12 +132,15 @@ const jsonLd = [organizace, webLd];
       </div>
       <ul class="temata">
         {
-          TEMATA.map((t) => (
-            <li>
+          temataFoto.map(({ t, pocet, foto, velka }) => (
+            <li class:list={{ 'temata__velka': velka }}>
               <a href={temaUrl(t)}>
-                <span class="temata__e" aria-hidden="true">{t.emoji}</span>
-                <strong>{t.kratce}</strong>
-                <span class="muted">{podnikuText(podnikyTematu(t).length)}</span>
+                {foto && <Foto src={foto} alt="" />}
+                <span class="temata__text">
+                  <strong>{t.kratce}</strong>
+                  <span>{podnikuText(pocet)}</span>
+                </span>
+                <svg class="temata__sipka" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></svg>
               </a>
             </li>
           ))
@@ -144,7 +158,7 @@ const jsonLd = [organizace, webLd];
         </div>
         <a href="/blog/" class="btn btn--ghost">Všechny články</a>
       </div>
-      <ul class="karty karty--blog" data-tipy={TIPU}>
+      <ul class="tipy" data-tipy={TIPU}>
         {
           tipy.map(({ c, data, viditelny }) => (
             <BlogKarta c={c} hidden={!viditelny} sezona={JSON.stringify(data)} />
@@ -262,40 +276,89 @@ const jsonLd = [organizace, webLd];
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: minmax(170px, auto);
     gap: 0.9rem;
   }
-  .temata a {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    column-gap: 0.9rem;
-    align-items: center;
-    padding: 1.1rem 1.25rem;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    text-decoration: none;
-    transition: border-color 0.15s, transform 0.15s;
-  }
-  .temata a:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-    color: inherit;
-  }
-  .temata__e {
+  .temata__velka {
     grid-row: span 2;
-    font-size: 1.8rem;
+  }
+  .temata a {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.75rem;
+    height: 100%;
+    min-height: 170px;
+    padding: 1rem 1.1rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--brown-dark);
+    color: #fff;
+    text-decoration: none;
+  }
+  .temata a :global(.foto) {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.3s ease-out;
+  }
+  .temata a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(43, 33, 28, 0.86) 0%, rgba(43, 33, 28, 0.35) 45%, rgba(43, 33, 28, 0.05) 75%);
+  }
+  .temata__text,
+  .temata__sipka {
+    position: relative;
+    z-index: 2;
+  }
+  .temata__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 0.82rem;
+    font-weight: 500;
   }
   .temata strong {
-    font-family: var(--f-display);
-    color: var(--brown-dark);
+    font: 600 1.15rem/1.15 var(--f-display);
   }
-  .temata .muted {
-    font-size: 0.85rem;
+  .temata__velka strong {
+    font-size: 1.85rem;
   }
-  .karty--blog {
-    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  .temata__sipka {
+    flex: none;
+  }
+  @media (hover: hover) {
+    .temata a:hover {
+      color: #fff;
+    }
+    .temata a:hover :global(.foto) {
+      transform: scale(1.04);
+    }
+  }
+  @media (max-width: 900px) {
+    .temata {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: minmax(140px, auto);
+    }
+    .temata__velka {
+      grid-row: auto;
+      grid-column: span 2;
+    }
+    .temata a {
+      min-height: 140px;
+    }
+    .temata li:not(.temata__velka) strong {
+      font-size: 1rem;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .temata a :global(.foto) {
+      transition: none;
+    }
   }
   /* Přidej podnik: hned pod newsletterem na stejném krémovém pozadí */
   .pridej-sekce {
@@ -318,6 +381,107 @@ const jsonLd = [organizace, webLd];
   }
   .pridej p {
     margin: 0;
+  }
+</style>
+
+<style is:global>
+  /* Brunch tipy na úvodní stránce: první viditelný článek velký s fotkou, další jako řádky */
+  .tipy {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    column-gap: clamp(1.25rem, 3vw, 2.5rem);
+  }
+  .tipy.tipy.tipy > .bk {
+    grid-column: 2;
+    border-bottom: 1px solid var(--line);
+  }
+  .tipy.tipy.tipy > .bk a {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    column-gap: 1.1rem;
+    align-items: center;
+    padding: 1.1rem 0;
+  }
+  .tipy.tipy.tipy > .bk .bk__foto {
+    grid-row: span 2;
+    width: 112px;
+    aspect-ratio: 1;
+    border-radius: 14px;
+  }
+  .tipy.tipy.tipy > .bk .bk__kat {
+    margin-top: 0;
+    align-self: end;
+  }
+  .tipy.tipy.tipy > .bk h3 {
+    margin: 0.3rem 0 0;
+    align-self: start;
+  }
+  .tipy.tipy.tipy > .bk p {
+    display: none;
+  }
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    border-bottom: 0;
+  }
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    min-height: 420px;
+    padding: 1.75rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--brown-dark);
+    color: #fff;
+  }
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) .bk__foto {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    aspect-ratio: auto;
+    border-radius: 0;
+  }
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) .bk__foto::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(43, 33, 28, 0.9) 0%, rgba(43, 33, 28, 0.45) 50%, rgba(43, 33, 28, 0.05) 80%);
+  }
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) .bk__kat,
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) h3,
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) p {
+    position: relative;
+    align-self: auto;
+    color: #fff;
+  }
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) h3 {
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    line-height: 1.15;
+    margin: 0.5rem 0 0.6rem;
+  }
+  .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) p {
+    display: block;
+    max-width: 34rem;
+    font-size: 0.95rem;
+  }
+  @media (max-width: 800px) {
+    .tipy {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .tipy.tipy.tipy > .bk,
+    .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+    .tipy.tipy.tipy > .bk:nth-child(1 of :not([hidden])) a {
+      min-height: 320px;
+    }
   }
 </style>
 
