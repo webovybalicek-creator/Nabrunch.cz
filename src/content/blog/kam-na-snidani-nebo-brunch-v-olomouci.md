@@ -3,7 +3,7 @@ title: "Kam na snídani nebo brunch v Olomouci?"
 description: "Hledáte inspiraci, kam na snídani nebo brunch v Olomouci? Máme pro vás 5 tipů, kam v Olomouci na snídani či brunch."
 seoTitle: "Kam na snídani nebo brunch v Olomouci? - naBrunch.cz"
 date: "2026-01-11T20:13:53"
-image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-20.02.58.png"
+image: "/wp-content/uploads/2026/01/kam-na-snidani-nebo-brunch-v-olomouci-foto-1.png"
 ---
 
 <p>Hledáte inspiraci, <strong>kam na snídani nebo brunch v Olomouci</strong>? Ať už máte chuť na poctivou snídani s kávou, nebo si chcete užít pohodový víkendový brunch s přáteli, Olomouc nabízí spoustu skvělých míst, kde si přijdete na své. </p>
@@ -14,25 +14,25 @@ image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-20.02.58.png"
 
 <p><strong>Café New One</strong> je <strong>stylová kavárna v Olomouc</strong>i, kde si můžete užít snídani, brunch, <strong>výběrovou kávu i italsky inspirované pokrmy a dezerty</strong> v příjemném prostředí s moderním designem.</p>
 
-<figure class="wp-block-image size-full"><a href="/podniky/cafe-new-one-olomouc/"><img src="/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-19.18.15.png" alt="" class="wp-image-1910"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/podniky/cafe-new-one-olomouc/"><img src="/wp-content/uploads/2026/01/cafe-new-one-olomouc-foto-1.png" alt="" class="wp-image-1910"/></a></figure>
 
 <h2 class="wp-block-heading"><a href="/podniky/sophies-cafe-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼  2. Sophie’s Café Olomouc</strong></a></h2>
 
 <p><strong>Sophie’s Café</strong> je <strong>útulná kavárna v historickém centru Olomouce</strong>, která láká místní i návštěvníky města na snídaně, brunch, skvělou <strong>kávu, domácí sladkosti a příjemné prostředí se zahrádkou ve dvoře</strong>.</p>
 
-<figure class="wp-block-image size-full"><a href="/podniky/sophies-cafe-olomouc/"><img src="/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-16.45.45.png" alt="" class="wp-image-1906"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/podniky/sophies-cafe-olomouc/"><img src="/wp-content/uploads/2026/01/sophies-cafe-olomouc-foto-3.png" alt="" class="wp-image-1906"/></a></figure>
 
 <h2 class="wp-block-heading"><a href="/podniky/sophies-cafe-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼</strong></a> <a href="/podniky/cafe-la-fee-olomouc/" target="_blank" rel="noreferrer noopener"><strong>3. Café La Fée Olomouc</strong></a></h2>
 
 <p><strong>Café La Fée</strong> je malá a útulná pet-friendly kavárna v Olomouci s jemným francouzským nádechem, která si získala oblibu díky příjemné atmosféře a kvalitní nabídce snídaní a brunchů. </p>
 
-<figure class="wp-block-image size-large"><a href="/podniky/cafe-la-fee-olomouc/"><img src="/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-19.35.59.png" alt="" class="wp-image-1922"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/podniky/cafe-la-fee-olomouc/"><img src="/wp-content/uploads/2026/01/cafe-la-fee-olomouc-foto-4.png" alt="" class="wp-image-1922"/></a></figure>
 
 <h2 class="wp-block-heading"><a href="/podniky/sophies-cafe-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼</strong></a> <a href="/podniky/coffee-library-olomouc/" target="_blank" rel="noreferrer noopener">4. Coffee Library Olomouc</a></h2>
 
 <p><strong>Coffee Library</strong> je stylová kavárna v samém srdci Olomouce, kde to voní po kávě, croissantech a pohodové atmosféře. <strong>Coffee Library</strong> <strong>Olomouc </strong>je ideální místo na klidný brunch, snídani, kávovou pauzu nebo sladkou odměnu během dne.</p>
 
-<figure class="wp-block-image size-full is-resized"><a href="/podniky/coffee-library-olomouc/"><img src="/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-20.02.58.png" alt="" class="wp-image-1926" style="width:657px;height:auto"/></a></figure>
+<figure class="wp-block-image size-full is-resized"><a href="/podniky/coffee-library-olomouc/"><img src="/wp-content/uploads/2026/01/kam-na-snidani-nebo-brunch-v-olomouci-foto-1.png" alt="" class="wp-image-1926" style="width:657px;height:auto"/></a></figure>
 
 <h2 class="wp-block-heading"><a href="/podniky/sophies-cafe-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼</strong></a> <a href="/podniky/nm-desserts-cafe-olomouc/" target="_blank" rel="noreferrer noopener">5. NM desserts cafe Olomouc</a></h2>
 

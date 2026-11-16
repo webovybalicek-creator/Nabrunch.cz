@@ -2,7 +2,7 @@
 title: "Snídaně a brunch v Karlíně: 7 míst, kam zajít"
 description: "Kam na snídani nebo brunch v Karlíně? 7 ověřených podniků – Spojka, Eska, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
 date: "2026-06-01T16:17:08"
-image: "/wp-content/uploads/2026/06/725f5036-f593-440d-bfe1-c1a1f61e7322.png"
+image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-foto-1.png"
 ---
 
 <p>Karlín už dávno není jen kancelářská čtvrť. Za poslední roky se proměnil v jednu z nejzajímavějších gastro lokalit v Praze a dnes patří mezi nejlepší adresy na <strong>snídani, brunch i výběrovou kávu</strong>.</p>
@@ -30,7 +30,7 @@ image: "/wp-content/uploads/2026/06/725f5036-f593-440d-bfe1-c1a1f61e7322.png"
 
 <p>🐶 <strong>Dog friendly:</strong> Ano, pejsci jsou vítáni.<br>☀️ <strong>Venkovní sezení:</strong> Ano, podnik má vlastní zahrádku.</p>
 
-<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2026/03/Snimek-obrazovky-2026-03-03-v-19.10.23.png" alt="" class="wp-image-2252"/></figure>
+<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2026/03/muj-salek-kavy-praha-foto-3.png" alt="" class="wp-image-2252"/></figure>
 
 <h2 class="wp-block-heading">👉🏼 <a href="/podniky/spojka-karlin/">3. Spojka Karlín Praha</a></h2>
 
@@ -56,7 +56,7 @@ image: "/wp-content/uploads/2026/06/725f5036-f593-440d-bfe1-c1a1f61e7322.png"
 
 <p>🐶 <strong>Dog friendly:</strong> Ano.<br>☀️ <strong>Venkovní sezení:</strong> Ano, kavárna nabízí venkovní posezení.</p>
 
-<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-22-v-20.39.52.png" alt="" class="wp-image-2222"/></figure>
+<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2026/02/pleiku-coffee-praha-foto-1.png" alt="" class="wp-image-2222"/></figure>
 
 <h2 class="wp-block-heading">👉🏼 <a href="/podniky/family-bistro-praha/">6. Family Bistro Praha</a></h2>
 <p>Rodinné bistro kousek od Karlína se snídaněmi, poledním menu a domácími dezerty z čerstvých lokálních surovin.</p>

@@ -2,7 +2,7 @@
 title: "Nejoblíbenější brunch jídla"
 description: "Pojďme se podívat na ty nejčastější brunchové klasiky, které si lidé objednávají nejraději."
 date: "2026-01-14T17:24:42"
-image: "/wp-content/uploads/2025/04/image-upscaled.png"
+image: "/wp-content/uploads/2025/04/nejoblibenejsi-brunch-jidla-foto-1.png"
 ---
 
 <p>Brunch je ideální kombinací <strong>snídaně a oběda</strong> – pomalé víkendové jídlo, které si vychutnáte bez spěchu, často s přáteli nebo rodinou. Nabídka brunchů se může lišit podle kavárny či bistra, ale některé pokrmy a nápoje se objevují téměř všude. Pojďme se podívat na ty <strong>nejčastější brunchové klasiky</strong>, které si lidé objednávají nejraději.</p>

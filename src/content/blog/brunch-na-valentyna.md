@@ -3,7 +3,7 @@ title: "Brunch na Valentýna: romantické tipy, kam vyrazit ve dvou"
 description: "Kam na Valentýna na brunch? Romantické a stylové podniky v Praze, Brně, Plzni i Olomouci, kde si užijete pomalé ráno ve dvou – a tipy, jak rande u brunche naplánovat."
 seoTitle: "Brunch na Valentýna 2027: kam vyrazit ve dvou | naBrunch.cz"
 date: "2026-11-09T13:20:00"
-image: "/wp-content/uploads/2025/05/475097597_18057699544951452_2078562216678727395_n.jpg"
+image: "/wp-content/uploads/2025/05/bistro-cafe-laskava-foto-4.jpg"
 sezona:
   - od: "01-15"
     do: "02-14"

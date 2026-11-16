@@ -3,7 +3,7 @@ title: "Brunch na Den matek: kam vzít maminku"
 description: "Kam vzít maminku na Den matek? Tipy na brunch v Praze i jinde – útulné kavárny, sladké dobroty, místa se zahrádkou i pro rodiny s dětmi. A jak brunch naplánovat."
 seoTitle: "Brunch na Den matek: kam vzít maminku | naBrunch.cz"
 date: "2026-11-09T20:45:00"
-image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-14-v-10.15.54.png"
+image: "/wp-content/uploads/2026/01/paloma-pruhonice-foto-2.png"
 sezona:
   - od: "denmatek-21"
     do: "denmatek"

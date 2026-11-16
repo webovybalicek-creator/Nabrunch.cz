@@ -3,7 +3,7 @@ title: "Dubajská čokoláda: sladký luxus, který ovládl svět"
 description: "Dubajská čokoláda s pistáciovým vnitřkem a vrstvami kataifi se stala jedním z největších sladkých trendů posledních měsíců. - naBrunch.cz"
 seoTitle: "Dubajská čokoláda s pistáciemi a kataifi. - naBrunch.cz"
 date: "2025-11-16T08:49:28"
-image: "/wp-content/uploads/2025/11/ddee3039-119c-4ee0-9ca0-3f391f9e358d.png"
+image: "/wp-content/uploads/2025/11/dubajska-cokolada-sladky-luxus-ktery-ovladl-svet-foto-1.png"
 obdobi: [zima]
 ---
 

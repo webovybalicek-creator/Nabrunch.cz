@@ -3,7 +3,7 @@ title: "Scio Kuchyně: když školní jídlo dostane nový rozměr"
 description: "Scio Kuchyně: když školní jídlo dostane nový rozměr. Co je Scio kuchyně? Kvalita a zkušenost? Co se vaří ve Scio kuchyni? - naBrunch.cz"
 seoTitle: "Scio Kuchyně: když školní jídlo dostane nový rozměr"
 date: "2026-03-03T18:53:04"
-image: "/wp-content/uploads/2026/03/05.jpg"
+image: "/wp-content/uploads/2026/03/scio-kuchyne-kdyz-skolni-jidlo-dostane-novy-rozmer-foto-1.jpg"
 ---
 
 <p>Většina lidí si pod pojmem <strong>školní jídelna</strong> představí typický „učňák s UHO“. Projekt <strong>Scio Kuchyně</strong> ale ukazuje, že může být i jinak – chutně, zdravě a s jasným cílem nabídnout dětem kvalitní každodenní stravu, která je zároveň výživná i inspirující.</p>

@@ -3,7 +3,7 @@ title: "Croque monsieur vs. croque madame: jaký je rozdíl"
 description: "Croque monsieur je zapečený toast se šunkou, sýrem a bešamelem. Croque madame má navíc sázené vejce. Původ, recept a kde si dát nejlepší croque madame v Česku."
 seoTitle: "Croque monsieur vs. croque madame: rozdíl a recept | naBrunch.cz"
 date: "2026-11-09T22:05:00"
-image: "/wp-content/uploads/2025/11/Snimek-obrazovky-2025-11-03-v-11.20.32.png"
+image: "/wp-content/uploads/2025/11/coffee-trail-bar-brno-foto-4.png"
 obdobi: [podzim, zima]
 ---
 

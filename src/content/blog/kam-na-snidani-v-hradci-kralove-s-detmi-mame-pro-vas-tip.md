@@ -3,7 +3,7 @@ title: "Kam na snídani v Hradci Králové s dětmi? Máme pro vás tip!"
 description: "Pokud hledáte tip, kam vyrazit v Hradci Králové na snídani či brunch s dětmi i bez nich, TimePlay HK je místo, které stojí za to objevit."
 seoTitle: "Kam na snídani v Hradci Králové s dětmi? Máme pro vás tip! - naBrunch.cz"
 date: "2025-09-04T20:50:01"
-image: "/wp-content/uploads/2025/09/Snimek-obrazovky-2025-09-04-v-20.46.32.png"
+image: "/wp-content/uploads/2025/09/timeplay-hradec-kralove-foto-3.png"
 ---
 
 <h2 class="wp-block-heading">Najít kavárnu, kde si užijete dokonalou snídani či brunch v Hradci Králové a zároveň si vaše děti můžou hrát v dětském koutku, není vždy jednoduché. V Hradci Králové se ale objevilo místo, které to zvládá na jedničku – <strong><a href="/podniky/timeplay-hradec-kralove/" data-type="link" data-id="/podniky/timeplay-hradec-kralove/" target="_blank" rel="noreferrer noopener">TimePlay HK</a></strong>.</h2>
@@ -39,7 +39,7 @@ image: "/wp-content/uploads/2025/09/Snimek-obrazovky-2025-09-04-v-20.46.32.png"
 <p>👉 Pokud hledáte tip, kam vyrazit v Hradci Králové na brunch s dětmi i bez nich, <strong><a href="/podniky/timeplay-hradec-kralove/" data-type="link" data-id="/podniky/timeplay-hradec-kralove/" target="_blank" rel="noreferrer noopener">TimePlay HK je místo, které stojí za to objevit.</a></strong></p>
 
 <figure class="wp-block-gallery has-nested-images columns-default is-cropped">
-<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2025/09/Snimek-obrazovky-2025-09-04-v-20.46.32.png" alt="" class="wp-image-1757"/></figure>
+<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2025/09/timeplay-hradec-kralove-foto-3.png" alt="" class="wp-image-1757"/></figure>
 
-<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2025/09/Snimek-obrazovky-2025-09-04-v-20.46.18.png" alt="" class="wp-image-1758"/></figure>
+<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2025/09/timeplay-hradec-kralove-foto-2.png" alt="" class="wp-image-1758"/></figure>
 </figure>

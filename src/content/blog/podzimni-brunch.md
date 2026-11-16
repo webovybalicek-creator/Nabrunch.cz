@@ -3,7 +3,7 @@ title: "Podzimní brunch: dýně, švestky a hřejivé nápoje"
 description: "Co si dát na brunch na podzim? Dýňové dobroty, švestky, skořice, chai latte a hřejivé snídaně – a podniky, kde je na podzim nejútulněji."
 seoTitle: "Podzimní brunch: dýně, švestky a hřejivé nápoje | naBrunch.cz"
 date: "2026-11-09T21:00:00"
-image: "/wp-content/uploads/2025/11/Snimek-obrazovky-2025-11-16-v-16.13.08.png"
+image: "/wp-content/uploads/2025/11/soma-praha-foto-1.png"
 sezona:
   - od: "09-10"
     do: "11-20"

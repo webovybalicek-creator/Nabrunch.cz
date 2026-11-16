@@ -3,7 +3,7 @@ title: "Granola, nebo müsli? Jaký je mezi nimi rozdíl"
 description: "Granola je zapečená a křupavá, müsli syrové a lehčí. Rozdíl v přípravě, chuti, kaloriích a cukru, co je zdravější a jak si udělat domácí granolu."
 seoTitle: "Granola vs. müsli: jaký je rozdíl a co je zdravější? | naBrunch.cz"
 date: "2026-11-09T21:55:00"
-image: "/wp-content/uploads/2025/05/Snimek-obrazovky-2025-05-18-v-19.21.01.png"
+image: "/wp-content/uploads/2025/05/cacao-praha-foto-2.png"
 obdobi: [jaro, leto]
 ---
 

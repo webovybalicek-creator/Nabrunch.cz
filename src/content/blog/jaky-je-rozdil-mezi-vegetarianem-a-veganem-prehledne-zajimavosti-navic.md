@@ -2,7 +2,7 @@
 title: "Jaký je rozdíl mezi vegetariánem a veganem? Přehledně + zajímavosti navíc"
 description: "Při výběru snídaně nebo brunche dnes často narazíte na označení vegetariánské nebo veganské jídlo. Spousta lidí tyto pojmy zaměňuje, přitom mezi nimi existuje zásadní rozdíl."
 date: "2026-01-29T18:11:14"
-image: "/wp-content/uploads/2026/01/ee21f049-7f16-4576-8211-74708b6aa9d7.png"
+image: "/wp-content/uploads/2026/01/jaky-je-rozdil-mezi-vegetarianem-a-veganem-prehledne-zajimavosti-navic-foto-1.png"
 ---
 
 <p>Při výběru <strong>snídaně nebo brunch</strong>e dnes často narazíte na označení <strong>vegetariánské</strong> nebo <strong>veganské</strong> jídlo. Spousta lidí tyto pojmy zaměňuje, přitom mezi nimi existuje <strong>zásadní rozdíl</strong>. Pokud se chcete lépe orientovat v menu kaváren (a vědět, co si objednat), tady je jednoduché a srozumitelné vysvětlení – plus pár zajímavostí, které vás možná překvapí.</p>

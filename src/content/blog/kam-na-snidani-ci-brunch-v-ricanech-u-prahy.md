@@ -3,7 +3,7 @@ title: "Kam na snídani či brunch v Říčanech u Prahy?"
 description: "Kam na snídani či brunch v Říčanech u Prahy? Vybrali jsme pro vás 3 top podniky na snídani a brunch v Říčanech, které patří mezi TOP i oblíbené tipy na víkend."
 seoTitle: "Kam na snídani či brunch v Říčanech u Prahy? - naBrunch.cz"
 date: "2026-01-30T18:22:24"
-image: "/wp-content/uploads/2026/01/49cc25e9-5d3a-4b8b-95ea-1de68dd92704.png"
+image: "/wp-content/uploads/2026/01/kam-na-snidani-ci-brunch-v-ricanech-u-prahy-foto-2.png"
 obdobi: [jaro, leto]
 ---
 
@@ -17,7 +17,7 @@ obdobi: [jaro, leto]
 
 <p><strong>Gabi Café</strong>&nbsp;v Říčanech je kavárna, která vás přivítá s otevřenou náručí – nejen pro milovníky kávy, ale i pro vaše čtyřnohé přátele.&nbsp;<strong>Pet-friendly kavárna</strong>&nbsp;s útulným interiérem a&nbsp;<strong>venkovním posezením</strong>, kde si můžete užít <strong>dokonalý brunch</strong> nebo si vychutnat čerstvé dezerty na čerstvém vzduchu.</p>
 
-<figure class="wp-block-image size-full"><a href="/podniky/gabi-cafe-ricany/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/04/480972950_1223154956486143_7397406477354635701_n.jpg" alt="" class="wp-image-1312"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/podniky/gabi-cafe-ricany/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/04/kam-na-snidani-ci-brunch-v-ricanech-u-prahy-foto-1.jpg" alt="" class="wp-image-1312"/></a></figure>
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/spot-bistro-ricany/" data-type="link" data-id="/podniky/spot-bistro-ricany/" target="_blank" rel="noreferrer noopener">2. SPOT Bistro Říčany</a></h2>
 
@@ -33,7 +33,7 @@ obdobi: [jaro, leto]
 
 <p>Už od rána tu najdete&nbsp;<strong>křupavé sladké i slané pečivo, koláče a další pekařské dobroty</strong>, které skvěle doplní&nbsp;<strong>výběrová káva, matcha nebo domácí limonády</strong>. Díky propojení pekárny a kavárny je to ideální místo na&nbsp;<strong>snídani nebo lehký brunch</strong>.</p>
 
-<figure class="wp-block-image size-large"><a href="/podniky/peceme-ricany/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/600366932_122117621127010775_1022385899329423917_n.jpg" alt="" class="wp-image-2124"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/podniky/peceme-ricany/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/peceme-ricany-foto-2.jpg" alt="" class="wp-image-2124"/></a></figure>
 
 <h3 class="wp-block-heading">Proč vyrazit na snídani nebo brunch právě do Říčan?</h3>
 

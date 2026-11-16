@@ -3,7 +3,7 @@ title: "Rodinný brunch pro děti v Kafkoff Praha"
 description: "Rodinný brunch v Praze? Kafkoff má koncept, který si zamilují děti i rodiče. Každou neděli od 11:00 do 15:00 probíhá v Kafkoff brunch pro děti i rodiče."
 seoTitle: "Rodinný brunch pro děti v Kafkoff - naBrunch.cz"
 date: "2026-02-20T11:18:54"
-image: "/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-20-v-10.57.43.png"
+image: "/wp-content/uploads/2026/02/kafkoff-praha-foto-1.png"
 ---
 
 <h2 class="wp-block-heading">Rodinný brunch v Praze? Kafkoff má koncept, který si zamilují děti i rodiče</h2>

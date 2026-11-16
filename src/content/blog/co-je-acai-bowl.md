@@ -3,7 +3,7 @@ title: "Co je acai bowl? Z čeho je, jak chutná a je zdravý"
 description: "Acai bowl je hustý smoothie z mražených bobulí acai podávaný v misce s granolou a ovocem. Co je acai, jak chutná, jestli je zdravý a kde si dát acai bowl v Praze."
 seoTitle: "Co je acai bowl? Chuť, složení a kde si ho dát | naBrunch.cz"
 date: "2026-11-09T22:10:00"
-image: "/wp-content/uploads/2025/05/Snimek-obrazovky-2025-05-18-v-19.21.01.png"
+image: "/wp-content/uploads/2025/05/cacao-praha-foto-2.png"
 obdobi: [jaro, leto]
 ---
 

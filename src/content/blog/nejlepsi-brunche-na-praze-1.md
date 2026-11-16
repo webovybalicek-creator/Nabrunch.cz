@@ -30,7 +30,7 @@ image: "/wp-content/uploads/2025/04/brunchpraha1.png"
 
 <p><a href="/podniky/chloe-cafe-praha/" target="_blank" rel="noreferrer noopener">🔗 <strong>Více info o kavárně a fotky najdete tady</strong></a></p>
 
-<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2025/04/IMG_9857.jpg" alt="" class="wp-image-1167"/></figure>
+<figure class="wp-block-image size-large"><img src="/wp-content/uploads/2025/04/chloe-cafe-praha-foto-2.jpg" alt="" class="wp-image-1167"/></figure>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
@@ -42,7 +42,7 @@ image: "/wp-content/uploads/2025/04/brunchpraha1.png"
 
 <p><a href="/podniky/pauseteria-cafe-garden-praha/" data-type="link" data-id="/podniky/pauseteria-cafe-garden-praha/" target="_blank" rel="noreferrer noopener">🔗 <strong>Více info o kavárně a fotky najdete tady</strong></a></p>
 
-<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2025/04/43296951_583246198758049_6057719705043468288_n.jpg" alt="" class="wp-image-1116"/></figure>
+<figure class="wp-block-image size-full"><img src="/wp-content/uploads/2025/04/pauseteria-cafe-garden-praha-foto-2.jpg" alt="" class="wp-image-1116"/></figure>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 

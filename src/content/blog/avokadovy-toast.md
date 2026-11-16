@@ -3,7 +3,7 @@ title: "Avokádový toast: jak ho udělat dokonale a kde si ho dát"
 description: "Avokádový toast (avocado toast) je brunchová klasika. Jaký chléb a avokádo vybrat, nejlepší kombinace s vejcem i lososem a podniky, kde ho dělají výborně."
 seoTitle: "Avokádový toast: recept, kombinace a kde si ho dát | naBrunch.cz"
 date: "2026-11-09T13:10:00"
-image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-11-v-19.35.59.png"
+image: "/wp-content/uploads/2026/01/cafe-la-fee-olomouc-foto-4.png"
 obdobi: [jaro, leto]
 ---
 

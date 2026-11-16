@@ -2,7 +2,7 @@
 title: "Yorkmut Café Praha: oblíbená kavárna s pejsky"
 description: "Yorkmut Café Praha je vyhlášená psí kavárna, která spojuje brunch, kávu a společnost psích kamarádů."
 date: "2026-02-03T14:11:58"
-image: "/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-03-v-13.58.34.png"
+image: "/wp-content/uploads/2026/02/yorkmut-cafe-praha-foto-2.png"
 ---
 
 <p>Pokud hledáte <strong>netradiční místo na snídani nebo brunch v Praze</strong>, kde nejde jen o jídlo, ale i o zážitek, <strong><a href="/podniky/yorkmut-cafe-praha/" data-type="link" data-id="/podniky/yorkmut-cafe-praha/" target="_blank" rel="noreferrer noopener">Yorkmut Café</a></strong> by vám rozhodně neměla uniknout. </p>

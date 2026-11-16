@@ -2,7 +2,7 @@
 title: "Co je Gault&Millau?"
 description: "Víte, co znamenají čepice Gault&Millau a proč je restaurace tolik chtějí získat? To se dozvíte v našem článku."
 date: "2026-06-11T12:13:25"
-image: "/wp-content/uploads/2026/06/bea605b8-b609-4711-9e55-48db9b434584.png"
+image: "/wp-content/uploads/2026/06/co-je-gaultmillau-foto-1.png"
 ---
 
 <h2 class="wp-block-heading"><strong>Co je Gault&amp;Millau? Průvodce, který hodnotí nejlepší restaurace světa</strong></h2>

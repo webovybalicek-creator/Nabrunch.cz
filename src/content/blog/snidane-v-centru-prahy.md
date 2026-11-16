@@ -3,7 +3,7 @@ title: "Snídaně v centru Prahy: kam na snídani u památek"
 description: "Kam na snídani v centru Prahy? Ověřené kavárny u Staroměstského náměstí, Pražského hradu, Národní a Náměstí Republiky – místo turistických pastí poctivá snídaně a dobrá káva."
 seoTitle: "Snídaně v centru Prahy: kam na snídani u památek | naBrunch.cz"
 date: "2026-11-09T21:35:00"
-image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-20-v-10.37.50.png"
+image: "/wp-content/uploads/2026/01/smetanaq-cafe-bistro-praha-foto-3.png"
 ---
 
 <p>V centru Prahy je snadné narazit na předraženou snídani pro turisty. Přitom pár minut od památek najdete <strong>kavárny, kam chodí i Pražané</strong>. Seřadili jsme je podle toho, u které památky zrovna jste.</p>

@@ -2,7 +2,7 @@
 title: "Tilápie: Nenápadná ryba, která dobývá restaurace i domácí kuchyně"
 description: "Co je tilápie, odkud pochází a proč se stala jednou z nejprodávanějších ryb na světě?"
 date: "2026-06-15T08:42:35"
-image: "/wp-content/uploads/2026/06/f67ef0ef-7d36-4360-ab0e-fe57696a7b5e.png"
+image: "/wp-content/uploads/2026/06/tilapie-nenapadna-ryba-ktera-dobyva-restaurace-i-domaci-kuchyne-foto-1.png"
 ---
 
 <p>Pokud jste někdy listovali jídelním lístkem restaurace nebo vybírali rybu v supermarketu, možná jste narazili na název <strong>tilápie</strong>. Přestože v Česku není tak známá jako losos, treska nebo pstruh, patří mezi nejčastěji chované ryby na světě a díky své jemné chuti si získává stále více příznivců.</p>

@@ -3,7 +3,7 @@ title: "Snídaně a brunch v Plzni: 4 ověřené tipy"
 description: "Kam na snídani nebo brunch v Plzni? 4 ověřené kavárny v centru – Enjoy coffee & brunch, Le Frenchie, Walter a Cavino. Co si dát, kde mají zahrádku a kam se psem."
 seoTitle: "Snídaně a brunch v Plzni: 4 ověřené tipy | naBrunch.cz"
 date: "2026-01-19T09:50:40"
-image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-19-v-9.22.54-e1768812795787.png"
+image: "/wp-content/uploads/2026/01/kam-na-snidani-nebo-brunch-v-plzni-foto-1.png"
 ---
 
 <p>Přemýšlíte, <strong>kam na snídani nebo brunch v Plzni</strong>? Vybrali jsme čtyři kavárny v centru, které stojí za návštěvu. Každá nabízí něco trochu jiného – vyberte si podle chuti, nálady nebo toho, jestli chcete sedět venku.</p>

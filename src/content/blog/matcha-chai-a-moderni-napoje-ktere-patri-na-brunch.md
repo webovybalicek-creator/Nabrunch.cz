@@ -2,7 +2,7 @@
 title: "Matcha, chai a moderní nápoje, které patří na brunch"
 description: "Stále více kaváren dnes rozšiřuje nabídku o matchu, chai a alternativní nápoje k brunchi."
 date: "2026-01-14T17:29:25"
-image: "/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-14-v-9.59.04.png"
+image: "/wp-content/uploads/2026/01/cafe-letka-praha-foto-5.png"
 ---
 
 <h2 class="wp-block-heading">Matcha, chai a alternativní brunch nápoje</h2>

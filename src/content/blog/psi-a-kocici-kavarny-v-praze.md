@@ -3,7 +3,7 @@ title: "Psí a kočičí kavárny v Praze: kde si dát snídani se zvířaty"
 description: "Psí kavárna i kočičí kavárna v Praze: Yorkmut Café s pejsky a Kočičí kavárna v centru. Jak to tam funguje, pravidla pro návštěvu a pet-friendly podniky, kam vzít vlastního psa."
 seoTitle: "Psí a kočičí kavárna Praha: snídaně se zvířaty | naBrunch.cz"
 date: "2026-11-09T21:20:00"
-image: "/wp-content/uploads/2026/02/Snimek-obrazovky-2026-02-03-v-13.58.34.png"
+image: "/wp-content/uploads/2026/02/yorkmut-cafe-praha-foto-2.png"
 ---
 
 <p>Snídaně ve společnosti pejsků nebo koček? V Praze to jde. <strong>Psí a kočičí kavárny</strong> jsou místa, kde zvířata přímo „bydlí“ a hosté si s nimi můžou u kávy pohrát. Je to jiný zážitek než běžná pet-friendly kavárna, kam si berete vlastního psa – proto obojí rozlišujeme.</p>

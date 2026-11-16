@@ -1,7 +1,7 @@
 ---
 title: "8 food trendů, které právě ovládají pražské kavárny a brunch podniky ☕🥐"
 date: "2026-06-01T16:40:24"
-image: "/wp-content/uploads/2026/06/a9cae4a4-a6f6-4051-bdc1-512814a180f8.png"
+image: "/wp-content/uploads/2026/06/8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-foto-1.png"
 wpSlug: "8-food-trendu-ktere-prave-ovladaji-prazske-kavarny-a-brunch-podniky-%e2%98%95%f0%9f%a5%90"
 ---
 

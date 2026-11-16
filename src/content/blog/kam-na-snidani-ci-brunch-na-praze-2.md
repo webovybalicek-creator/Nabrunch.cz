@@ -31,7 +31,7 @@ image: "/wp-content/uploads/2025/07/brunch_1-1.jpg"
 
 <p>Menu <strong>Bistro Café Laskavá</strong> se pravidelně obměňuje a nabízí široký výběr snídaní a brunchových pokrmů.</p>
 
-<figure class="wp-block-image size-large"><a href="/podniky/bistro-cafe-laskava/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/05/484971144_18062606233951452_5439094205013833183_n.jpg" alt="" class="wp-image-1576"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/podniky/bistro-cafe-laskava/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/05/bistro-cafe-laskava-foto-5.jpg" alt="" class="wp-image-1576"/></a></figure>
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/cafefin-praha/" data-type="link" data-id="/podniky/cafefin-praha/" target="_blank" rel="noreferrer noopener">3. CAFEFIN Praha</a></h2>
 
@@ -39,7 +39,7 @@ image: "/wp-content/uploads/2025/07/brunch_1-1.jpg"
 
 <p>Tato <strong>kavárna a bistro-style</strong> podnik je vyhlášený svou nabídkou <strong>snídaňových klasik i kreativních brunch</strong> pokrmů, které lákají místní i návštěvníky města.</p>
 
-<figure class="wp-block-image size-large"><a href="/podniky/cafefin-praha/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-09-v-14.00.01.png" alt="" class="wp-image-1890"/></a></figure>
+<figure class="wp-block-image size-large"><a href="/podniky/cafefin-praha/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/cafefin-praha-foto-2.png" alt="" class="wp-image-1890"/></a></figure>
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/tisse-bakery-praha/" data-type="link" data-id="/podniky/tisse-bakery-praha/" target="_blank" rel="noreferrer noopener">4. TISSE Bakery Praha</a></h2>
 
@@ -55,7 +55,7 @@ image: "/wp-content/uploads/2025/07/brunch_1-1.jpg"
 
 <p>Kavárna klade důraz na&nbsp;<strong>poctivou snídani i brunch</strong>, čerstvě připravené pokrmy a výběrovou kávu, přičemž menu často kombinuje klasické brunch klasiky s moderními a kreativními variacemi.&nbsp;</p>
 
-<figure class="wp-block-image size-full"><a href="/podniky/meme-brunch-praha/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/Snimek-obrazovky-2026-01-29-v-8.33.26.png" alt="" class="wp-image-2104"/></a></figure>
+<figure class="wp-block-image size-full"><a href="/podniky/meme-brunch-praha/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/meme-brunch-praha-foto-1.png" alt="" class="wp-image-2104"/></a></figure>
 
 <p><strong>Snídaně Praha 2, Brunch Praha 2</strong></p>
 

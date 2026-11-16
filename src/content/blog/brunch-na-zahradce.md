@@ -3,7 +3,7 @@ title: "Brunch na zahrádce: nejhezčí terasy a zahrádky na snídani"
 description: "Kde si dát brunch venku? Tipy na podniky se zahrádkou a terasou v Praze, Brně, Plzni, Olomouci i mimo města – výhledy, vnitrobloky i místa pro pejsky."
 seoTitle: "Brunch na zahrádce: terasy a zahrádky na snídani | naBrunch.cz"
 date: "2026-11-09T20:50:00"
-image: "/wp-content/uploads/2025/04/485743050_1195084339288904_2484800289842811780_n_upscaled-scaled.jpg"
+image: "/wp-content/uploads/2025/04/bistro-topinka-cesky-krumlov-foto-3.jpg"
 sezona:
   - od: "04-01"
     do: "09-15"

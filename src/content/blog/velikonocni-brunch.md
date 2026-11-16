@@ -3,7 +3,7 @@ title: "Velikonoční brunch: kam vyrazit a co si dát"
 description: "Tipy na velikonoční brunch – kam vyrazit o Velikonocích v Praze i jinde, co patří na sváteční stůl a jak si brunch připravit doma. Vajíčka, mazanec i sladké dobroty."
 seoTitle: "Velikonoční brunch: kam vyrazit a co si dát | naBrunch.cz"
 date: "2026-11-09T20:40:00"
-image: "/wp-content/uploads/2026/06/cf-image.avif"
+image: "/wp-content/uploads/2026/06/mysak-prazsky-hrad-foto-1.avif"
 sezona:
   - od: "velikonoce-24"
     do: "velikonoce+1"

@@ -3,7 +3,7 @@ title: "Lívance, palačinky, nebo pancakes? Jaký je rozdíl"
 description: "Lívance, palačinky a americké pancakes vypadají podobně, ale liší se těstem, tloušťkou i podáváním. Přehledné srovnání a podniky, kde mají lívance nejlepší."
 seoTitle: "Lívance vs. palačinky vs. pancakes: jaký je rozdíl? | naBrunch.cz"
 date: "2026-11-09T13:15:00"
-image: "/wp-content/uploads/2025/11/479718059_1053126836833654_2811039050279643205_n.jpg"
+image: "/wp-content/uploads/2025/11/barista-cafe-chrudim-foto-6.jpg"
 obdobi: [zima]
 ---
 

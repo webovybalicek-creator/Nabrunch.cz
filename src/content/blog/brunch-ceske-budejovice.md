@@ -3,7 +3,7 @@ title: "Brunch České Budějovice: kam na snídani a brunch"
 description: "Kam na snídani nebo brunch v Českých Budějovicích? Náš ověřený tip Café Datel v centru, co si tam dát, a další kavárny se snídaní v Budějovicích i okolí."
 seoTitle: "Brunch České Budějovice: kam na snídani | naBrunch.cz"
 date: "2026-11-09T21:15:00"
-image: "/wp-content/uploads/2025/03/1f8a2b90-6bf9-46b2-a731-c0d3b7b7d19d-scaled.jpg"
+image: "/wp-content/uploads/2025/03/cafe-datel-ceske-budejovice-foto-1.jpg"
 ---
 
 <p>Hledáte <strong>brunch nebo snídani v Českých Budějovicích</strong>? Jihočeská metropole má pár výborných kaváren a jednu z nich jsme si oblíbili natolik, že ji doporučujeme bez váhání.</p>
