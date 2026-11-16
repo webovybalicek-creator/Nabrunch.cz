@@ -6,7 +6,7 @@ import Vypis from '../components/Vypis.astro';
 import BlogKarta from '../components/BlogKarta.astro';
 import Foto from '../components/Foto.astro';
 import { SITE } from '../lib/config';
-import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podnikuText } from '../lib/data';
+import { PODNIKY, doporucene, nejnovejsi, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podnikuText, velky, url } from '../lib/data';
 import { clanky, kategorie } from '../lib/blog';
 import { oknaData, vyber, obdobiDne, OBDOBI_NADPIS, type SezonniClanek } from '../lib/sezona';
 
@@ -39,12 +39,20 @@ const tipy = [...poradi, ...zasobnik.map((_, i) => i).filter((i) => !poradi.incl
   viditelny: poradi.includes(i),
 }));
 const tipyNadpis = OBDOBI_NADPIS[obdobiDne(dnes)];
-// Fotka v úvodu: každý den jiná ze srdcovek, bez jména podniku (web se sestavuje několikrát denně)
-const den = Math.floor(Date.now() / 864e5);
-// Jen podniky, jejichž hlavní fotka ukazuje jídlo (ne interiér, budovu nebo zvířata) – seznam upravujte ručně
-const UVODNI_FOTKY = ['mysak-prazsky-hrad', 'spojka-karlin', 'kavarna-muna-praha', 'brunches-bistro-brno', 'matilda-praha', 'bistro-cafe-laskava', 'eggsit-cafe-hradec-kralove'];
-const sJidlem = UVODNI_FOTKY.map((s) => PODNIKY.find((p) => p.slug === s)).filter((p) => !!p);
-const uvodniFoto = sJidlem.length ? sJidlem[den % sJidlem.length] : srdcovky[0] ?? PODNIKY[0];
+// Úvod: při každém načtení náhodná srdcovka (vybírá skript v prohlížeči), s proklikem na detail.
+// Ukazuje se jen jídlo: kde hlavní fotka jídlo není, bere se fotka z galerie; podnik bez fotky jídla se v úvodu neukazuje.
+const UVOD_JINA_FOTKA: Record<string, string> = {
+  'kafe-doma-litomerice': '/wp-content/uploads/2025/03/kafedoma4.jpg',
+  'kupkafe-opava': '/wp-content/uploads/2025/03/kupkafe1.jpg',
+};
+const UVOD_BEZ_JIDLA = ['kocici-kavarna-praha'];
+const uvodni = srdcovky
+  .filter((p) => !UVOD_BEZ_JIDLA.includes(p.slug))
+  .map((p) => {
+    const webp = velky(UVOD_JINA_FOTKA[p.slug] ?? p.foto);
+    return { u: url(p), n: p.nazev, a: p.lokality[0] ?? '', f: webp, v: webp.replace(/\.webp$/, '.avif') };
+  });
+const uvodniFoto = uvodni[0];
 
 // Dlaždice témat: největší téma jako velká dlaždice, ke každému fotka jiného podniku
 const pouzite = new Set<number>();
@@ -106,11 +114,54 @@ const jsonLd = [organizace, webLd];
           <div><dt>{mesta().length}</dt><dd>měst po celém Česku</dd></div>
         </dl>
       </div>
-      {uvodniFoto && <div class="hero__foto" aria-hidden="true"><Foto src={uvodniFoto.foto} alt="" plna eager /></div>}
+      {
+        uvodniFoto && (
+          <a class="hero__foto" href={uvodniFoto.u} data-uvod>
+            <picture>
+              <source type="image/avif" data-uvod-avif />
+              <img class="foto" alt={uvodniFoto.n} data-uvod-img decoding="async" fetchpriority="high" />
+            </picture>
+            <noscript><img class="foto" src={uvodniFoto.f} alt={uvodniFoto.n} /></noscript>
+            <span class="hero__karta">
+              <span class="hero__stitek">Naše srdcovka</span>
+              <strong data-uvod-nazev>{uvodniFoto.n}</strong>
+              <span data-uvod-adresa>{uvodniFoto.a}</span>
+            </span>
+          </a>
+          <script is:inline define:vars={{ uvodni }}>
+            (() => {
+              const p = uvodni[Math.floor(Math.random() * uvodni.length)];
+              const a = document.querySelector('[data-uvod]');
+              if (!p || !a) return;
+              window.__uvodniPodnik = p.u;
+              a.href = p.u;
+              a.querySelector('[data-uvod-avif]').srcset = p.v;
+              const img = a.querySelector('[data-uvod-img]');
+              img.onerror = () => {
+                const s = a.querySelector('source');
+                if (s) { s.remove(); img.src = p.f; }
+              };
+              img.src = p.f;
+              img.alt = p.n;
+              a.querySelector('[data-uvod-nazev]').textContent = p.n;
+              a.querySelector('[data-uvod-adresa]').textContent = p.a;
+            })();
+          </script>
+        )
+      }
     </div>
   </section>
 
   <Slider podniky={srdcovky} eyebrow="Naše srdcovky" nadpis="Doporučené podniky" odkaz={{ href: '/podniky/', text: 'Všechny podniky' }} zamichat />
+  <script is:inline>
+    /* Srdcovka z úvodu se ve slideru pod ním neopakuje */
+    (() => {
+      const u = window.__uvodniPodnik;
+      const s = document.querySelector('[data-slider][data-zamichat]');
+      if (!u || !s) return;
+      s.querySelectorAll('a[href="' + u + '"]').forEach((a) => a.closest('li')?.remove());
+    })();
+  </script>
 
   <Slider podniky={nove} eyebrow="Nová místa, nové chutě" nadpis="Nově přidané" tmavy />
 
@@ -261,9 +312,55 @@ const jsonLd = [organizace, webLd];
     overflow: hidden;
     background: var(--cream);
   }
-  .hero__foto :global(.foto) {
+  .hero__foto {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  .hero__foto .foto {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+  }
+  .hero__karta {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    max-width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.85rem 1.1rem;
+    border-radius: 16px;
+    background: #fff;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .hero__karta strong {
+    font: 600 1.1rem/1.25 var(--f-display);
+    color: var(--brown-dark);
+  }
+  .hero__stitek {
+    font: 600 0.7rem/1.3 var(--f-display);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brown);
+  }
+  @media (hover: hover) {
+    .hero__foto:hover {
+      color: inherit;
+    }
+    .hero__foto:hover .foto {
+      transform: scale(1.03);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__foto .foto {
+      transition: none;
+    }
   }
   @media (max-width: 860px) {
     .hero__in {
