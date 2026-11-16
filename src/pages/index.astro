@@ -75,8 +75,7 @@ const jsonLd = [organizace, webLd];
   obrazek="/wp-content/uploads/2025/03/nabrunch-1.jpg"
   jsonLd={jsonLd}
 >
-  <section class="hero" data-hero>
-    <canvas class="hero__smouha" data-smouha aria-hidden="true"></canvas>
+  <section class="hero">
     <div class="wrap hero__in">
       <div class="hero__text">
         <span class="eyebrow">nabrunch.cz</span>
@@ -167,13 +166,6 @@ const jsonLd = [organizace, webLd];
   </section>
 </Base>
 
-<script>
-  import { smouha } from '../scripts/smouha';
-  const hero = document.querySelector<HTMLElement>('[data-hero]');
-  const platno = document.querySelector<HTMLCanvasElement>('[data-smouha]');
-  if (hero && platno) smouha(platno, hero);
-</script>
-
 <style>
   /* Úvod: jemný broskvovo-růžový gradient, pod průhlednou hlavičkou (70 px) */
   .hero {
@@ -196,14 +188,6 @@ const jsonLd = [organizace, webLd];
     background: linear-gradient(to bottom, transparent, rgb(255 255 255 / 0.6));
     z-index: -1;
     pointer-events: none;
-  }
-  .hero__smouha {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    filter: blur(6px);
-    mix-blend-mode: multiply;
   }
   .hero__in {
     position: relative;
