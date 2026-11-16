@@ -41,7 +41,10 @@ const tipy = [...poradi, ...zasobnik.map((_, i) => i).filter((i) => !poradi.incl
 const tipyNadpis = OBDOBI_NADPIS[obdobiDne(dnes)];
 // Fotka v úvodu: každý den jiná ze srdcovek, bez jména podniku (web se sestavuje několikrát denně)
 const den = Math.floor(Date.now() / 864e5);
-const uvodniFoto = srdcovky.length ? srdcovky[den % srdcovky.length] : PODNIKY[0];
+// Jen podniky, jejichž hlavní fotka ukazuje jídlo (ne interiér, budovu nebo zvířata) – seznam upravujte ručně
+const UVODNI_FOTKY = ['mysak-prazsky-hrad', 'spojka-karlin', 'kavarna-muna-praha', 'brunches-bistro-brno', 'matilda-praha', 'bistro-cafe-laskava', 'eggsit-cafe-hradec-kralove'];
+const sJidlem = UVODNI_FOTKY.map((s) => PODNIKY.find((p) => p.slug === s)).filter((p) => !!p);
+const uvodniFoto = sJidlem.length ? sJidlem[den % sJidlem.length] : srdcovky[0] ?? PODNIKY[0];
 
 // Dlaždice témat: největší téma jako velká dlaždice, ke každému fotka jiného podniku
 const pouzite = new Set<number>();
@@ -185,12 +188,12 @@ const jsonLd = [organizace, webLd];
 </Base>
 
 <style>
-  /* Úvod: bílé pozadí, text s vyhledáváním vlevo a jedna fotka vpravo; pod průhlednou hlavičkou (70 px) */
+  /* Úvod: světle růžové pozadí (sekce se pak střídají: růžová, bílá, růžová…), text s vyhledáváním vlevo a jedna fotka vpravo; pod průhlednou hlavičkou (70 px) */
   .hero {
     position: relative;
     z-index: 2; /* našeptávač hledání přesahuje přes další sekci */
     padding-block: calc(70px + clamp(28px, 5vw, 56px)) clamp(40px, 6vw, 72px);
-    background: var(--paper);
+    background: var(--blush);
   }
   .hero__in {
     display: grid;
