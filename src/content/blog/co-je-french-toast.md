@@ -3,7 +3,7 @@ title: "Co je French toast? Recept a kde si dát ten nejlepší"
 description: "French toast je pečivo namočené ve vajíčkách s mlékem a opečené dozlatova – sladká brunchová klasika. Odkud pochází, jak ho udělat doma a kde si dát ten nejlepší."
 seoTitle: "Co je French toast? Recept a kde si ho dát | naBrunch.cz"
 date: "2026-11-09T22:00:00"
-image: "/wp-content/uploads/2026/01/cafe-letka-praha-foto-2.png"
+image: "/wp-content/uploads/2026/11/french-toast-1.jpg"
 obdobi: [podzim, zima]
 ---
 
