@@ -2425,10 +2425,11 @@
   "datum": "2026-01-09 14:13:30",
   "doporuceny": false,
   "lokality": [
+   "Praha 3",
    "Praha 2",
    "Praha"
   ],
-  "adresa": "nám. J. z Poděbrad 4, Praha 2",
+  "adresa": "nám. Jiřího z Poděbrad 1407/4, Praha 3",
   "lat": 50.078163,
   "lon": 14.448395,
   "oteviraciDoba": [
