@@ -10,7 +10,7 @@
 declare(strict_types=1);
 const NB_ADMIN = true;
 /** Kdo si může nechat poslat přihlašovací odkaz */
-const SPRAVCI = ['karolina@nabrunch.cz'];
+const SPRAVCI = ['karolina@nabrunch.cz', 'fischer.vlada@gmail.com'];
 const COOKIE = 'nb_spravce';
 const COOKIE_DNY = 30;
 const VLASTNOSTI = ['snidane' => 'snídaně', 'brunch' => 'brunch', 'vyberovaKava' => 'výběrová káva', 'pekarna' => 'pekárna', 'dorty' => 'dorty',
