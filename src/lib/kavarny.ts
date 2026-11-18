@@ -152,9 +152,13 @@ const jeDuplicitaPodniku = (k: Kavarna) =>
     const a = normNazev(k.nazev), b = normNazev(p.nazev);
     return m <= 15 || b.includes(a.slice(0, 6)) || a.includes(b.slice(0, 6));
   });
+/** Kavárny z OSM, které prokazatelně skončily (OSM to zatím neví) – na webu je neukazovat */
+const ZRUSENE = new Set([
+  'n12705361153', // Dobrý Kafe, Pardubice – web 11/2026: „Provozovna uzavřena“
+]);
 /** Zveřejněné kavárny: čas zveřejnění už nastal, nebo je ověřil majitel */
 export const KAVARNY: Kavarna[] = VSECHNY_KAVARNY.filter(
-  (k) => (k.overeno || (k.zverejnit && Date.parse(k.zverejnit) <= TED)) && (k.overeno || !jeDuplicitaPodniku(k)),
+  (k) => (k.overeno || (k.zverejnit && Date.parse(k.zverejnit) <= TED)) && !ZRUSENE.has(k.id) && (k.overeno || !jeDuplicitaPodniku(k)),
 );
 export const ZDROJ = (data as { zdroj?: string }).zdroj ?? '© přispěvatelé OpenStreetMap';
 
