@@ -100,52 +100,6 @@
   ]
  },
  {
-  "id": 2353,
-  "slug": "tady-a-ted-coffee-bar-pardubice",
-  "nazev": "Tady a teď coffee & bar Pardubice",
-  "datum": "2026-11-18 12:00:00",
-  "doporuceny": false,
-  "lokality": [
-   "Pardubice"
-  ],
-  "adresa": "třída Míru 60, Pardubice",
-  "lat": 50.0368892,
-  "lon": 15.7749623,
-  "oteviraciDoba": [
-   "Po - Pá: 7:30 - 22:00",
-   "So: 8:30 - 22:00"
-  ],
-  "web": null,
-  "instagram": null,
-  "instagramUrl": null,
-  "telefon": null,
-  "telefonText": null,
-  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Tady+a+teď+coffee+&+bar,+třída+Míru+60,+Pardubice",
-  "rezervace": null,
-  "platba": [],
-  "wifi": null,
-  "wc": null,
-  "kuchyne": [
-   "Klasická"
-  ],
-  "atmosfera": [
-   "Sezení uvnitř",
-   "Zahrádka"
-  ],
-  "sezeni": [],
-  "tipNadpis": "Náš brunch tip",
-  "tip": "<p>Dopoledne si dejte vaječný toast a k němu matchu nebo domácí limonádu. Ve všední dny se otevírá už v 7:30, takže stihnete snídani i před prací.</p>",
-  "popis": "<p>Tady a teď coffee &amp; bar sídlí v prvorepublikové <strong>Machoňově pasáži</strong>, která spojuje třídu Míru se sídlištěm Karlovina a od roku 1958 je kulturní památkou. Podle <a href=\"https://www.seznamzpravy.cz/clanek/magazin-jidlo-nejlepsi-kavarny-pardubice-272504\">Seznam Zpráv</a> patří mezi oblíbené pardubické kavárny.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně dopoledne, tapas odpoledne</h2>\n\n<p>Během dopoledne se tu podávají <strong>snídaně</strong>, třeba vaječný toast. Odpoledne si můžete dát tapas k pivu nebo vínu a dezerty, které se pravidelně obměňují. Vedle kávy sem lidé chodí i na matchu, nealko drinky a limonády.</p>\n\n<h2 class=\"wp-block-heading\">Posezení v pasáži i venku</h2>\n\n<p>Kavárna má i venkovní posezení. Ve všední dny otevírá v 7:30, v sobotu v 8:30, takže se hodí na snídani cestou do práce i na sobotní ráno ve městě.</p>",
-  "seoTitulek": "Tady a teď coffee & bar Pardubice – snídaně v Machoňově pasáži",
-  "seoPopis": "Tady a teď coffee & bar v Machoňově pasáži v Pardubicích: snídaně od 7:30, vaječný toast, matcha, limonády a tapas. Otevírací doba a adresa.",
-  "foto": "/wp-content/uploads/2026/11/tady-a-ted-pardubice-1.jpg",
-  "galerie": [
-   "/wp-content/uploads/2026/11/tady-a-ted-pardubice-2.jpg",
-   "/wp-content/uploads/2026/11/tady-a-ted-pardubice-3.jpg",
-   "/wp-content/uploads/2026/11/tady-a-ted-pardubice-4.jpg"
-  ]
- },
- {
   "id": 2352,
   "slug": "localis-hradec-kralove",
   "nazev": "Localis Hradec Králové",
