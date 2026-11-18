@@ -1,5 +1,56 @@
 [
  {
+  "id": 2355,
+  "slug": "galerie-cafe-pardubice",
+  "nazev": "Galerie Café Pardubice",
+  "datum": "2026-11-18 13:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Pardubice"
+  ],
+  "adresa": "Sukova třída, Tyršovy sady, Pardubice",
+  "lat": 50.0393936,
+  "lon": 15.7738058,
+  "oteviraciDoba": [
+   "Po - Út: 9:00 - 22:00",
+   "St - So: 9:00 - 23:00",
+   "Ne: 9:00 - 22:00"
+  ],
+  "web": "https://www.galeriecafepardubice.cz/",
+  "instagram": "@galerie_cafe_park_restaurant",
+  "instagramUrl": "https://www.instagram.com/galerie_cafe_park_restaurant/",
+  "telefon": "+420773011021",
+  "telefonText": "+420 773 011 021",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Galerie+Caf%C3%A9+Park+Restaurant+Pardubice",
+  "rezervace": "https://galeriecafe.guestplan.io/",
+  "platba": [
+   "Kartou",
+   "Hotově"
+  ],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte vejce Benedikt na máslovém croissantu nebo turecká vejce s jogurtem a chilli olejem. Za hezkého počasí si sedněte do parkové zahrady pod staré stromy.</p>",
+  "popis": "<p>Galerie Café je parková restaurace v hlavním vstupu do nově zrekonstruovaných <strong>Tyršových sadů</strong> – zhruba deseti hektarů zeleně přímo v centru Pardubic. Navazuje na tradici třicátých let, kdy v parku fungovala restaurace s tanečním pavilonem, kam Pardubičané chodili tančit a na odpolední čaj.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně od otevření</h2>\n\n<p>Snídaňové menu se podává každý den od otevření v 9:00. Vybrat si můžete <strong>vejce Benedikt</strong> s holandskou omáčkou na máslovém croissantu, <strong>turecká vejce</strong>, velkou snídani Galerie Café s vejci, slaninou a fazolemi, croque madame i monsieur, omeletu s goudou nebo vejce do skla. Pečivo si pečou sami a ve vitríně jsou denně čerstvé zákusky.</p>\n\n<h2 class=\"wp-block-heading\">Dvě patra a terasa do parku</h2>\n\n<p>V přízemí je bistro s otevřenou kuchyní v holandském květinovém designu a sezónní zahrada v parku. V prvním patře najdete Rhipsalis Bar a květinovou sluneční terasu s výhledem do zámeckého parku, které se otevírají odpoledne. Na víkend doporučujeme stůl <a href=\"https://galeriecafe.guestplan.io/\">rezervovat online</a>. Restaurace půjčuje i piknikový košík s dekou do parku.</p>",
+  "seoTitulek": "Galerie Café Pardubice – snídaně a brunch v Tyršových sadech",
+  "seoPopis": "Galerie Café v Tyršových sadech v Pardubicích: snídaně denně od 9:00, vejce Benedikt, turecká vejce, vlastní pečivo a terasa s výhledem do parku.",
+  "foto": "/wp-content/uploads/2026/11/galerie-cafe-pardubice-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/galerie-cafe-pardubice-2.jpg",
+   "/wp-content/uploads/2026/11/galerie-cafe-pardubice-3.jpg",
+   "/wp-content/uploads/2026/11/galerie-cafe-pardubice-4.jpg"
+  ]
+ },
+ {
   "id": 2354,
   "slug": "epee-pardubice",
   "nazev": "epeé Pardubice",
