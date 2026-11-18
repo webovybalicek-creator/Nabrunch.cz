@@ -7,7 +7,7 @@
  * POST podnik, url, hvezdy, text, jmeno, web2 (past), t (čas načtení v ms)
  *                                  → hvězdy platí hned, text po schválení
  * GET  ?akce=schvalit|zamitnout&id=<id>&t=<podpis>  → moderace z e-mailu
- * GET  ?admin=<podpis>             → přesměruje do administrace /sprava/ (api/admin.php)
+ * GET  ?admin=<podpis>             → přesměruje do administrace /prihlaseni/ (api/admin.php)
  *
  * Data: SQLite v /_data/ (mimo dosah deploye, přímý přístup zakazuje .htaccess).
  * Ukládá se jen anonymní otisk IP (HMAC), ne IP adresa.
@@ -112,11 +112,11 @@ if (isset($_GET['akce'], $_GET['id'], $_GET['t'])) {
         $akce === 'schvalit' ? 'Recenze schválena' : 'Text recenze zamítnut',
         '<p>' . ($akce === 'schvalit' ? 'Text je teď na webu vidět.' : 'Text se nezobrazí, hvězdičky zůstávají započítané.') . '</p>'
         . ($r && $r['url'] ? '<p><a href="' . htmlspecialchars($WEB . $r['url']) . '">Zobrazit podnik</a></p>' : '')
-        . '<p><a href="' . htmlspecialchars($WEB) . '/sprava/">Další ke schválení v administraci</a></p>'
+        . '<p><a href="' . htmlspecialchars($WEB) . '/prihlaseni/">Další ke schválení v administraci</a></p>'
     );
 }
 
-// Přehled je v administraci (/sprava/); starý odkaz z e-mailu rovnou přihlásí
+// Přehled je v administraci (/prihlaseni/); starý odkaz z e-mailu rovnou přihlásí
 if (isset($_GET['admin'])) {
     header('Location: ' . $WEB . '/api/admin.php?admin=' . rawurlencode((string)$_GET['admin']) . '&z=hodnoceni', true, 302);
     exit;

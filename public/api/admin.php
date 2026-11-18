@@ -1,6 +1,6 @@
 <?php
 /**
- * Administrace naBrunch.cz – schvalování hodnocení a správy kaváren bez proklikávání e-mailů. Adresa: /sprava/ (přepis v .htaccess; /admin/ hosting někdy blokuje kvůli robotům).
+ * Administrace naBrunch.cz – schvalování hodnocení a správy kaváren bez proklikávání e-mailů. Adresa: /prihlaseni/ (přepis v .htaccess; /sprava/ a /admin/ jsou aliasy, /admin/ hosting někdy blokuje kvůli robotům).
  *
  * Přihlášení (bez hesla v repu):
  *  - odkaz „Přehled všech majitelů a změn“ na konci e-mailů pro správce (?admin=<podpis>), nebo
@@ -96,7 +96,7 @@ header('Cache-Control: no-store');
 header('X-Frame-Options: DENY');
 header("Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline'; frame-ancestors 'none'; form-action 'self'");
 
-$ADMIN = $WEB . '/sprava/';
+$ADMIN = $WEB . '/prihlaseni/';
 $e = fn($s): string => htmlspecialchars((string)$s, ENT_QUOTES);
 
 // ---------------------------------------------------------------- přihlášení
