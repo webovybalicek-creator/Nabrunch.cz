@@ -1,0 +1,52 @@
+---
+import Stranka from '../components/Stranka.astro';
+import { SITE } from '../lib/config';
+---
+
+<Stranka
+  title="Spolupráce s naBrunch.cz – zvýraznění podniku a reklama"
+  nadpis="Spolupráce"
+  description="Zviditelněte svou kavárnu nebo bistro na naBrunch.cz: zvýraznění ve městě, rozšířený profil, sponzorovaný článek nebo tip v newsletteru."
+  lead="Základní profil podniku je na naBrunch.cz vždy zdarma. Pokud chcete být vidět víc, nabízíme několik možností spolupráce."
+  noindex
+>
+  <h2>Proč naBrunch.cz</h2>
+  <p>
+    naBrunch.cz je průvodce snídaněmi a brunchi po celém Česku. Lidé k nám chodí ve chvíli, kdy hledají, kam na snídani nebo brunch – v Praze,
+    Brně, Ostravě i v menších městech. Vaše nabídka se tak ukáže přesně těm, kdo se právě rozhodují, kam vyrazit.
+  </p>
+
+  <h2>Možnosti spolupráce</h2>
+
+  <h3>⭐ Zvýraznění ve městě</h3>
+  <p>
+    Váš podnik se ukáže na prvních místech na stránce svého města a bude zvýrazněný na mapě. Zvýrazněné podniky jsou vždy označené jako
+    „Partner“. <strong>Od 490 Kč měsíčně.</strong>
+  </p>
+
+  <h3>📸 Rozšířený profil</h3>
+  <p>
+    Víc fotek, odkaz na menu a rezervace a prostor pro vaše akce, třeba nedělní brunch nebo sezonní menu. <strong>Od 290 Kč měsíčně.</strong>
+  </p>
+
+  <h3>📝 Sponzorovaný článek</h3>
+  <p>
+    Článek o vašem podniku, novém menu nebo akci, který napíšeme my a sdílíme na Instagramu a Facebooku. Článek je vždy označený jako
+    spolupráce. <strong>Od 2 000 Kč jednorázově.</strong>
+  </p>
+
+  <h3>📬 Tip v newsletteru</h3>
+  <p>Zmínka o vašem podniku nebo akci v pravidelném e-mailu našim odběratelům. <strong>Od 500 Kč.</strong></p>
+
+  <h2>Co se koupit nedá</h2>
+  <p>
+    Výběr <a href="/kategorie/doporucene-podniky/">Doporučených podniků</a> (naše srdcovky) i texty o podnicích zůstávají nezávislé. Zařazujeme do
+    nich jen místa, která jsme osobně navštívili a která nás nadchla. Placený obsah je na webu vždy viditelně označený.
+  </p>
+
+  <h2>Máte zájem?</h2>
+  <p>
+    Napište nám na <a href={`mailto:${SITE.email}?subject=Spolupráce s naBrunch.cz`}>{SITE.email}</a> – název podniku, město a co vás zajímá.
+    Ozveme se s nabídkou na míru. Pokud váš podnik u nás ještě není, nejdřív ho <a href="/pridat-podnik/">přidejte zdarma</a>.
+  </p>
+</Stranka>
