@@ -137,7 +137,7 @@
   "tipNadpis": "Náš brunch tip",
   "tip": "<p>Přijďte o víkendu na brunch – v sobotu se otevírá v 9:30, v neděli brunchem den končí už v 16:00. Ve všední dny se tu dá dobře nasnídat od osmi.</p>",
   "popis": "<p>Localis je restaurace a kavárna přímo na Velkém náměstí v historickém centru Hradce Králové. Jak napovídá název, stojí na <strong>lokálních surovinách</strong>. Podle <a href=\"https://www.kudyznudy.cz/aktivity/restaurace-localis\">Kudy z nudy</a> tu najdete snídaně, týdenní menu, večeře i <strong>víkendové brunche</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně na Velkém náměstí</h2>\n\n<p>Otevírá se každý den už ráno – ve všední dny od 8:00, o víkendu od 9:30. Je to tak jedno z mála míst, kde se dá v centru Hradce nasnídat v klidu i v neděli. Ve všední dny navíc vaří polední menu (11:00–14:30) a večer funguje jako restaurace.</p>\n\n<h2 class=\"wp-block-heading\">Pro koho se hodí</h2>\n\n<p>Na víkendový brunch s přáteli, na snídani při procházce historickým centrem i na pracovní schůzku. Rezervaci doporučujeme hlavně na víkend – telefon najdete v kontaktech.</p>",
-  "seoTitulek": "Localis Hradec Králové – snídaně a víkendový brunch na Velkém náměstí",
+  "seoTitulek": "Localis Hradec Králové – snídaně a brunch na Velkém náměstí",
   "seoPopis": "Localis na Velkém náměstí v Hradci Králové: snídaně z lokálních surovin, víkendový brunch, polední menu. Otevírací doba, adresa a tipy.",
   "foto": "/wp-content/uploads/2026/11/localis-hradec-kralove-1.jpg",
   "galerie": [
@@ -1166,7 +1166,7 @@
   ],
   "sezeni": [],
   "tipNadpis": null,
-  "tip": null,
+  "tip": "<p>Ochutnejte vietnamskou kávu s kondenzovaným mlékem – sladkou, silnou a úplně jinou než klasické espresso. K ní se hodí některá z jejich snídaní inspirovaných vietnamskou kuchyní.</p>",
   "popis": "<h2 class=\"wp-block-heading\"><strong>Pleiku Praha</strong> je <strong>unikátní vietnamská kavárna v Praze</strong>, která přináší do místní kavárenské scény nový a inspirativní zážitek. </h2>\n\n<p>Spojuje <strong>výběrovou kávu z Vietnamu</strong>, tradiční vietnamské chutě a moderní brunchové prvky v prostředí, které působí zároveň svěže i autenticky. Kavárna je ideální pro ty, kdo chtějí objevit něco jiného než klasickou evropskou kávu – a zároveň si pochutnat na originálních snídaních a lehčích brunchových jídlech.</p>\n\n<p>V Pleiku stojí za to ochutnat jejich specialty, které často vycházejí z vietnamské tradice – od <strong>vietnamské kávy s kondenzovaným mlékem</strong> přes filtrované přípravy až po jiné originální kombinace. Součástí nabídky jsou i <strong>snídaňové a brunch položky</strong>, které se elegantně prolínají se silnými chutěmi a vůněmi vietnamské kuchyně. Můžete tu narazit jak na lehká pečiva a sendviče, tak i na netradiční slané i sladké variace, které fungují skvěle k dobré kávě.</p>\n\n<p>Atmosféra kavárny je klidná a inspirativní – kromě pití a jídla tu má smysl se chvíli zastavit, nasáknout vůni čerstvě pražené kávy a trochu se „dovzdelat“ o vietnamském kávovém světě. Pleiku tak láká jak milovníky <strong>kvalitní kávy</strong>, tak ty, kteří hledají <strong>zajímavé brunch místo v Praze</strong> s osobitým charakterem a příběhem.</p>",
   "seoTitulek": "Pleiku Coffee Praha - naBrunch.cz",
   "seoPopis": "Pleiku Coffee Praha je vietnamská kavárna aměřená na autentickou výběrovou kávu z Vietnamu, originální snídaně a brunch s asijským twistem.",
@@ -2429,8 +2429,8 @@
    "Praha"
   ],
   "adresa": "nám. J. z Poděbrad 4, Praha 2",
-  "lat": null,
-  "lon": null,
+  "lat": 50.078163,
+  "lon": 14.448395,
   "oteviraciDoba": [
    "Po - So: 9:00 - 20:00",
    "Ne: 9:00 - 19:00"
@@ -3420,8 +3420,8 @@
    "Písek"
   ],
   "adresa": "Jungmannova 34/11, Písek",
-  "lat": 49.3074158,
-  "lon": 14.1474883,
+  "lat": 49.307179,
+  "lon": 14.148288,
   "oteviraciDoba": [
    "Po - So: 8:00 - 20:00",
    "Ne: 9:00 - 16:00"
@@ -5637,7 +5637,7 @@
   ],
   "tipNadpis": "Náš brunch tip:",
   "tip": "<p>„Avokádový chlebík s cheddarem, avokádovým guacamole, rukolou, granátovým jablkem a mozarellou vás dostane! K tomu flat white na zahrádce a den může začít.“</p>",
-  "popis": "<p>Maybe coffee &amp; bistro je útulná kavárna v Brně na Vídeňské ulici, známá svou výběrovou kávou z malé pražírny v Křížovicích a domácími zákusky. Nabízí celodenní snídaně a brunch s pokrmy jako lívance se slaným karamelem či anglickou snídani, podávané v příjemném prostředí s milou obsluhou.</p>\n\n<p></p>",
+  "popis": "<p>Maybe coffee &amp; bistro je útulná kavárna v Brně na Vídeňské ulici, známá svou výběrovou kávou z malé pražírny v Křížovicích a domácími zákusky. Nabízí celodenní snídaně a brunch s pokrmy jako lívance se slaným karamelem či anglickou snídani, podávané v příjemném prostředí s milou obsluhou.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně celý den, i o víkendu</h2>\n\n<p>Ve všední dny je otevřeno <strong>od 8:00 do 20:00</strong>, o víkendu <strong>od 9:00 do 16:00</strong>. Snídaně se podávají po celou otevírací dobu, takže si brunch dáte i odpoledne. Kromě lívanců a anglické snídaně tu stojí za ochutnání avokádový chlebík s cheddarem, guacamole, rukolou a granátovým jablkem, k tomu flat white na zahrádce.</p>\n\n<h2 class=\"wp-block-heading\">Rezervace jen ve všední dny</h2>\n\n<p>Stůl si můžete rezervovat přes formulář na webu nejméně den předem, ale <strong>jen na všední dny</strong>. O víkendu rezervace nepřijímají, takže přijďte spíš dřív. Na rezervaci na tentýž den je potřeba zavolat.</p>",
   "seoTitulek": "Maybe coffee & bistro Brno - naBrunch.cz",
   "seoPopis": "Maybe coffee & bistro Brno. Výběrová káva, poctivé snídaně a brunche. Avokádový toast, co má styl. Ideální místo na snídani, brunch, posezení venku.",
   "foto": "/wp-content/uploads/2025/03/maybecoffeebistro2.jpg",
@@ -5693,7 +5693,7 @@
   ],
   "tipNadpis": "Náš brunch tip:",
   "tip": "<p>„Walterovy buchtičky s lesním ovocem a vanilkovým krémem je must-try! Kavárna má příjemnou zahrádku a skvělou Matchu.“</p>",
-  "popis": "<p><strong>Walter Mitty • Brunch Coffee Drinks</strong> v Plzni nabízí skvělé brunche, výběrovou kávu a stylový interiér, kde se snoubí pohoda s kvalitou. Víkendová snídaně tady chutná stejně dobře, jako vypadá – navíc s úsměvem a dokonalým servisem.</p>",
+  "popis": "<p><strong>Walter Mitty • Brunch Coffee Drinks</strong> v Plzni nabízí skvělé brunche, výběrovou kávu a stylový interiér, kde se snoubí pohoda s kvalitou. Víkendová snídaně tady chutná stejně dobře, jako vypadá – navíc s úsměvem a dokonalým servisem.</p>\n\n<h2 class=\"wp-block-heading\">Brunch ve Smetanových sadech</h2>\n\n<p>Kavárnu najdete na adrese Smetanovy sady 12, v centru Plzně pár kroků od náměstí Republiky. Ve všední dny otevírá <strong>už v 7:30</strong>, takže se tu nasnídáte i před prací, o víkendu od 9:00. Otevřeno je každý den do 19:00.</p>\n\n<h2 class=\"wp-block-heading\">Co si dát</h2>\n\n<p>Hitem jsou <strong>Walterovy buchtičky</strong> s lesním ovocem a vanilkovým krémem. Kromě výběrové kávy tu připravují i skvělou matchu a večer drinky. V létě se sedí na příjemné zahrádce.</p>",
   "seoTitulek": "Walter Mitty Brunch Plzeň - naBrunch.cz",
   "seoPopis": "Walter Brunch Plzeň. Stylová kavárna v Plzni. Snídaně, brunch, výběrová káva, víkendový brunch a útulná atmosféra. Walter Plzeň inspiruje.",
   "foto": "/wp-content/uploads/2025/03/walter-plzen-foto-1.jpg",
@@ -5743,7 +5743,7 @@
   "tipNadpis": "Náš brunch tip",
   "tip": "<p>Snídaně se tu podávají celý den. Dejte si bagel s vejcem a slaninou, klasiku s lososem, smetanovým sýrem a kapary, nebo snídaňový talíř s volskými oky, párky a bagelem.</p>",
   "popis": "<p>Bagel Lounge je kavárna a bistro na pěší zóně T. G. Masaryka v centru Karlových Varů, pár minut chůze od Hotelu Thermal a kolonád. Byl jedním z prvních podniků, které do Varů přinesly moderní gastro koncept, a značka se odtud rozrostla i do Prahy.</p>\n\n<h2 class=\"wp-block-heading\">Bagely a snídaně celý den</h2>\n\n<p>Hlavní roli tu hrají <strong>bagely z vlastní výroby</strong> v mnoha variantách: se smetanovým sýrem a avokádem, s uzeným lososem, červenou cibulí a kapary, s roastbeefem a rukolou nebo s vejcem a slaninou. Na hlad je tu <strong>snídaňový talíř</strong> s vejci, párky a salátem a pro větší chuť i bagel ve stylu burgeru v černé sezamové bulce. Snídaně se podávají po celý den, takže brunch stihnete i odpoledne.</p>\n\n<h2 class=\"wp-block-heading\">Káva, dezerty a otevřeno každý den</h2>\n\n<p>K bagelu si můžete dát kávu, domácí limonádu nebo něco sladkého. Otevřeno je <strong>každý den od 8:00</strong>, v pátek a v sobotu do 18:00. V nabídce jsou i bezlepkové a veganské varianty. Stůl si můžete zarezervovat online na webu.</p>",
-  "seoTitulek": "Bagel Lounge Karlovy Vary – snídaně a bagely celý den, menu a otevírací doba",
+  "seoTitulek": "Bagel Lounge Karlovy Vary – snídaně celý den a otevírací doba",
   "seoPopis": "Bagel Lounge na T. G. Masaryka v Karlových Varech: snídaně celý den, bagely z vlastní výroby, snídaňový talíř a káva. Otevřeno denně od 8:00.",
   "foto": "/wp-content/uploads/2026/11/bagel-lounge-karlovy-vary-1.jpg",
   "galerie": [
@@ -5790,7 +5790,7 @@
   "tipNadpis": "Náš brunch tip",
   "tip": "<p>Na slano si dejte vejce zapečená se zeleninou a koriandrem s grilovaným kváskovým chlebem, na sladko tvarohové lívanečky s jahodami a zmrzlinou.</p>",
   "popis": "<p>Republica Coffee je kavárna na pěší zóně T. G. Masaryka v centru Karlových Varů, kousek od Hotelu Thermal, kde se koná filmový festival. Patří k nejoblíbenějším kavárnám ve městě a místní i návštěvníci sem chodí hlavně na snídaně a výběrovou kávu. Prostředí je lehce industriální a v teplých měsících se sedí venku.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně každý den od rána</h2>\n\n<p>Snídaně se tu podávají ve všední dny od 8:00 a o víkendu od 9:00. Hosté chválí hlavně <strong>vejce Benedikt</strong> a <strong>anglickou snídani</strong>. Na slano jsou tu i vejce zapečená se zeleninou a koriandrem s grilovaným kváskovým chlebem, na sladko <strong>tvarohové lívanečky</strong> s jahodami a vanilkovou zmrzlinou.</p>\n\n<h2 class=\"wp-block-heading\">Káva a sladké</h2>\n\n<p>Kávu připravují pečlivě, ať už jde o espresso, nebo filtr. K ní se hodí domácí koláčky a zákusky, oblíbený je hlavně medovo-skořicový dort. Otevřeno je každý den do 18:00.</p>",
-  "seoTitulek": "Republica Coffee Karlovy Vary – snídaně, vejce Benedikt a otevírací doba",
+  "seoTitulek": "Republica Coffee Karlovy Vary – snídaně a otevírací doba",
   "seoPopis": "Republica Coffee na T. G. Masaryka v Karlových Varech: snídaně denně, vejce Benedikt, anglická snídaně, tvarohové lívanečky a výběrová káva. Otevírací doba a adresa.",
   "foto": "/wp-content/uploads/2026/11/republica-coffee-karlovy-vary-1.jpg",
   "galerie": [
@@ -5836,7 +5836,7 @@
   "tipNadpis": "Náš brunch tip",
   "tip": "<p>Dejte si toast s avokádem, rajčaty a vejcem nebo granolu s jogurtem a čerstvým ovocem, k tomu filtrovanou kávu z City Roasters. Na sladko jsou tu rolované palačinky.</p>",
   "popis": "<p>Lékárna by City Roasters je stylová kavárna v prostorách bývalé lékárny na pěší zóně T. G. Masaryka v centru Karlových Varů. Provozuje ji místní pražírna City Roasters, která jako první přivezla do Varů výběrovou kávu. Kavárna se pravidelně objevuje v průvodci European Coffee Trip a většinu hostů tvoří místní.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně od 7:30</h2>\n\n<p>Otevírá <strong>ve všední dny už v 7:30</strong>, o víkendu v 8:00, takže je to jedna z mála kaváren ve Varech, kde se nasnídáte opravdu brzy. Na snídani si můžete dát <strong>toast s avokádem, rajčaty a vejcem</strong>, míchaná vejce, granolu s jogurtem a ovocem nebo vyhlášený lososový sendvič. Na sladko jsou tu rolované palačinky s ovocem.</p>\n\n<h2 class=\"wp-block-heading\">Výběrová káva a domácí dorty</h2>\n\n<p>Káva je z vlastní pražírny, k mání je espresso i filtr a zrna si můžete koupit domů. Ke kávě se hodí domácí dorty a zákusky, třeba trubičky se šlehačkou. Otevřeno je každý den, v pátek a v sobotu do 20:00.</p>",
-  "seoTitulek": "Lékárna by City Roasters Karlovy Vary – snídaně od 7:30, káva a otevírací doba",
+  "seoTitulek": "Lékárna by City Roasters Karlovy Vary – snídaně od 7:30",
   "seoPopis": "Kavárna Lékárna by City Roasters v Karlových Varech: snídaně od 7:30, avokádový toast, granola, lososový sendvič a výběrová káva z vlastní pražírny.",
   "foto": "/wp-content/uploads/2026/11/lekarna-city-roasters-karlovy-vary-1.jpg",
   "galerie": [
