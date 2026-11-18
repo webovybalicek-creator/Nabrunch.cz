@@ -5985,5 +5985,52 @@
    "/wp-content/uploads/2026/11/bistro-pacholek-kladno-3.jpg",
    "/wp-content/uploads/2026/11/bistro-pacholek-kladno-4.jpg"
   ]
+ },
+ {
+  "id": 2362,
+  "slug": "cafe-love-veronica-kladno",
+  "nazev": "Café & Love Veronica Kladno",
+  "datum": "2026-11-18 23:30:00",
+  "doporuceny": false,
+  "lokality": [
+   "Kladno"
+  ],
+  "adresa": "Jateční 3404, Kladno",
+  "lat": 50.1342789,
+  "lon": 14.0959476,
+  "oteviraciDoba": [
+   "Po - Ne: 8:00 - 18:00"
+  ],
+  "web": "https://cafelove.cz/kavarna-cafe-a-love-veronica-kladno/",
+  "instagram": "@veronicakvetinykavarnakladno",
+  "instagramUrl": "https://www.instagram.com/veronicakvetinykavarnakladno/",
+  "telefon": "+420724324955",
+  "telefonText": "+420 724 324 955",
+  "googleMaps": "https://maps.app.goo.gl/fu9CxK8o8pcfmrA2A",
+  "rezervace": "Ano, telefonicky",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijďte na teplou snídani mezi květiny – na sladko i na slano – a ke kávě si dejte domácí cheesecake. V létě si sedněte ven na terasu před květinářstvím.</p>",
+  "popis": "<p>Café &amp; Love je kavárna, která je součástí <strong>květinářství Veronica</strong> v Kladně. Sedíte tu doslova v květinové džungli mezi palmami, fíkusy a čerstvými květinami, v létě i venku na terase obklopené rostlinami. Na Googlu má kavárna hodnocení 4,8 z více než 300 recenzí a hosté chválí hlavně snídaně a milou obsluhu.</p>\n\n<h2 class=\"wp-block-heading\">Teplé snídaně každý den</h2>\n\n<p>Otevřeno je <strong>každý den od 8:00 do 18:00</strong>. Ráno tu podávají <strong>teplé sladké i slané snídaně</strong> a čerstvé toasty, přes den denní nabídku zákusků, cheesecake a domácí sušenky. Pečou si sami, sladké i slané, a vše vám zabalí i s sebou.</p>\n\n<h2 class=\"wp-block-heading\">Káva a drinky</h2>\n\n<p>Káva je ze 100% brazilské arabiky, k dispozici je i bezkofeinová varianta a alternativní mléka. Dále tu najdete italskou horkou čokoládu, sypané čaje, domácí ledové čaje a sezonní limonády, odpoledne i drinky s kapkou alkoholu. Kavárna bývá plná, stůl si proto můžete zarezervovat telefonicky.</p>",
+  "seoTitulek": "Café & Love Veronica Kladno – snídaně v květinářství",
+  "seoPopis": "Café & Love v květinářství Veronica v Kladně: teplé snídaně denně od 8:00, domácí cheesecake a káva mezi květinami. Otevírací doba, adresa a tipy.",
+  "foto": "/wp-content/uploads/2026/11/cafe-love-veronica-kladno-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/cafe-love-veronica-kladno-2.jpg",
+   "/wp-content/uploads/2026/11/cafe-love-veronica-kladno-3.jpg",
+   "/wp-content/uploads/2026/11/cafe-love-veronica-kladno-4.jpg",
+   "/wp-content/uploads/2026/11/cafe-love-veronica-kladno-5.jpg"
+  ]
  }
 ]
