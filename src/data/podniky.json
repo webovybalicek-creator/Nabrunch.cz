@@ -5937,5 +5937,53 @@
    "/wp-content/uploads/2026/11/cafe-savorsky-jihlava-3.jpg",
    "/wp-content/uploads/2026/11/cafe-savorsky-jihlava-4.jpg"
   ]
+ },
+ {
+  "id": 2361,
+  "slug": "bistro-pacholek-kladno",
+  "nazev": "Bistro Pacholek Kladno",
+  "datum": "2026-11-18 23:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Kladno"
+  ],
+  "adresa": "Šulcova 1630, Kladno-Kročehlavy",
+  "lat": 50.1378463,
+  "lon": 14.1182063,
+  "oteviraciDoba": [
+   "Po - Čt: 8:00 - 21:30",
+   "Pá - So: 8:00 - 24:00",
+   "Ne: 8:00 - 15:00"
+  ],
+  "web": null,
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bistro+Pacholek,+Šulcova+1630,+Kladno",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte nadýchanou briošku s mortadellou a sýrem podle legendárního receptu Anthonyho Bourdaina. Podle Forbesu si podobnou možná nedáte ani v Praze. Kdo má raději vejce, ať si dá turecká vejce s jogurtem a koprem.</p>",
+  "popis": "<p>Bistro Pacholek v kladenských Kročehlavech otevřeli dva bývalí hokejisté, David Chládek a František Matula. Vzniklo v prostorách hospody, která si v pořadu Ano, šéfe! vysloužila pověst jedné z nejhorších vůbec. Po rekonstrukci je z ní moderní bistro s velkou zahradou, kam se podle <a href=\"https://forbes.cz/byvali-hokejiste-otevreli-bistro-na-kladne-a-stala-se-z-nej-mistni-gastro-atrakce/\">Forbesu</a> chodí na snídani, smash burger, víno i kávu a které se stalo místní gastro atrakcí.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch každý den od 8:00</h2>\n\n<p>Kuchyni vede František Matula, dříve šéfkuchař vyhlášeného výletního místa Lívanec v Horním Bezděkově. Na snídani a brunch si dáte <strong>turecká vejce</strong>, krémová míchaná vejce, <strong>vejce Benedikt</strong>, krupicovou kaši, smoothie bowl s granolou nebo <strong>briošku s mortadellou a sýrem</strong> podle receptu Anthonyho Bourdaina. K tomu kváskový chléb, kávu a čerstvý džus.</p>\n\n<h2 class=\"wp-block-heading\">Pro rodiny i na večer</h2>\n\n<p>Majitelé chtěli místo, kam můžou přijít mámy s dětmi i chlapi na pivo, a ceny drží tak, aby si návštěvu mohl dovolit každý. V létě se sedí na kryté terase a v zahradě. Odpoledne vede smash burger a steak, večer víno a drinky, v pátek a v sobotu je otevřeno až do půlnoci. V neděli se zavírá už v 15:00.</p>",
+  "seoTitulek": "Bistro Pacholek Kladno – snídaně, brunch a otevírací doba",
+  "seoPopis": "Bistro Pacholek v Kladně: snídaně denně od 8:00, turecká vejce, vejce Benedikt a brioška s mortadellou podle Bourdaina. Zahrada a otevírací doba.",
+  "foto": "/wp-content/uploads/2026/11/bistro-pacholek-kladno-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/bistro-pacholek-kladno-2.jpg",
+   "/wp-content/uploads/2026/11/bistro-pacholek-kladno-3.jpg",
+   "/wp-content/uploads/2026/11/bistro-pacholek-kladno-4.jpg"
+  ]
  }
 ]
