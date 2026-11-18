@@ -5892,5 +5892,50 @@
    "/wp-content/uploads/2026/11/kavarna-paseka-jihlava-3.jpg",
    "/wp-content/uploads/2026/11/kavarna-paseka-jihlava-4.jpg"
   ]
+ },
+ {
+  "id": 2360,
+  "slug": "cafe-savorsky-jihlava",
+  "nazev": "Café Savorsky Jihlava",
+  "datum": "2026-11-18 22:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Jihlava"
+  ],
+  "adresa": "Komenského 1326/11, Jihlava",
+  "lat": 49.397226,
+  "lon": 15.589182,
+  "oteviraciDoba": [
+   "Po - Ne: 8:00 - 19:00"
+  ],
+  "web": "https://cafesavorsky.cz/",
+  "instagram": "@savorsky_cz",
+  "instagramUrl": "https://www.instagram.com/savorsky_cz/",
+  "telefon": "+420774440226",
+  "telefonText": "+420 774 440 226",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Café+Savorsky,+Komenského+1326/11,+Jihlava",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Na slano si dejte vejce Benedikt s lososem nebo slaninou, na sladko buchtičky se šodó a jahodami. Ke kávě nevynechejte některý z autorských dezertů, třeba lískooříškový Paris-Brest.</p>",
+  "popis": "<p>Café Savorsky je kavárna v centru Jihlavy, kousek od Masarykova náměstí. Najdete ji v modrém, nově opraveném domě v Komenského ulici cestou k Horáckému divadlu. Spojuje kvalitní kávu, promyšlené snídaně, poctivé jídlo a autorské dezerty.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně po celý den</h2>\n\n<p>Snídaně se tu podávají <strong>celý den, sedm dní v týdnu od 8:00 do 19:00</strong>. Na výběr je <strong>vejce Benedikt</strong> na domácí bulce se slaninou, šunkou od kosti nebo lososem, vejce do skla s přepuštěným máslem a parmazánem, omelety, sendviče, bowly i avokádové chleby. Na sladko jsou tu smoothie bowly s ovocem a granolou nebo buchtičky se šodó. K snídani patří máslové croissanty, klasické i plněné.</p>\n\n<h2 class=\"wp-block-heading\">Dezerty od vítězky Peče celá země</h2>\n\n<p>Dezertní kolekci pro Savorsky tvoří <strong>Eliška Hlaváčová, vítězka soutěže Peče celá země</strong>. V nabídce jsou éclairy, tartaletky, lískooříškový Paris-Brest, medový dort nebo bezlepkový pistáciovo-malinový dort. Stůl si můžete zarezervovat online na webu.</p>",
+  "seoTitulek": "Café Savorsky Jihlava – snídaně celý den, menu a otevírací doba",
+  "seoPopis": "Café Savorsky v centru Jihlavy: snídaně celý den a denně od 8:00, vejce Benedikt, croissanty a autorské dezerty od vítězky Peče celá země.",
+  "foto": "/wp-content/uploads/2026/11/cafe-savorsky-jihlava-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/cafe-savorsky-jihlava-2.jpg",
+   "/wp-content/uploads/2026/11/cafe-savorsky-jihlava-3.jpg",
+   "/wp-content/uploads/2026/11/cafe-savorsky-jihlava-4.jpg"
+  ]
  }
 ]
