@@ -23,8 +23,11 @@ DirectoryIndex index.html
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
-  # Data hodnocení (SQLite) nejsou veřejná
+  # Data správy kaváren (SQLite) nejsou veřejná
   RewriteRule ^_data(/|$) - [F,L]
+
+  # Administrace (schvalování majitelů, úprav a fotek)
+  RewriteRule ^admin/?$ /api/admin.php [L]
 
   # Staré adresy z WordPressu
   RewriteRule ^nezarazene/?$ /blog/ [L,R=301]

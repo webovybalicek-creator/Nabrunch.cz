@@ -15,7 +15,7 @@
  * GET  akce=pustit|vratit&s=<id>&t=            → změna profilu: zveřejnit / vrátit předchozí verzi
  * GET  akce=smazatfoto&s=&f=&t=                → smazání fotky správcem
  * GET  akce=zablokovat&o=&t=                   → zablokovat majitele a stáhnout profil
- * GET  admin=<podpis>                          → přehled
+ * GET  admin=<podpis>                          → přesměruje do /admin/ (správa v api/admin.php)
  */
 declare(strict_types=1);
 require __DIR__ . '/_smtp.php';
@@ -72,7 +72,7 @@ if (!is_file($tajSoubor)) {
 }
 $TAJ = trim((string)file_get_contents($tajSoubor));
 $podpis = fn(string $s): string => substr(hash_hmac('sha256', $s, $TAJ), 0, 32);
-$ADMIN_ODKAZ = $API . '?admin=' . $podpis('kavarny-admin');
+$ADMIN_ODKAZ = $WEB . '/api/admin.php?admin=' . $podpis('kavarny-admin');
 
 $db = new PDO("sqlite:$uloziste/kavarny-majitele.sqlite", null, null, [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -120,6 +120,62 @@ $fotky = function (string $k) use ($fotkyDir): array {
     return array_values($out);
 };
 $akce = (string)($_GET['akce'] ?? $_POST['akce'] ?? '');
+
+/**
+ * Zásahy správce – společné pro odkazy z e-mailu i pro /admin/.
+ * schvalit|zamitnout|zablokovat: $id = id majitele; pustit|vratit: $id = id kavárny; smazatfoto: $id = kavárna, $f = fotka.
+ * Vrací [titulek, html].
+ */
+$spravce = function (string $akce, string $id, string $f = '') use ($db, $KAV, $fotkyDir, $odkazPrihlaseni): array {
+    if (in_array($akce, ['schvalit', 'zamitnout'], true)) {
+        $o = (int)$id;
+        $st = $db->prepare('SELECT * FROM majitele WHERE id = ?');
+        $st->execute([$o]);
+        $m = $st->fetch();
+        if (!$m) return ['Žádost nenalezena', ''];
+        $nazev = $KAV[$m['kavarna']][0] ?? $m['kavarna'];
+        if ($akce === 'zamitnout') {
+            $db->prepare("UPDATE majitele SET stav = 'zamitnuto' WHERE id = ?")->execute([$o]);
+            $db->prepare("UPDATE nove SET stav = 'zamitnuto' WHERE id = ?")->execute([$m['kavarna']]);
+            return ['Zamítnuto', '<p>Žádost ' . htmlspecialchars($m['email']) . ' o kavárnu ' . htmlspecialchars($nazev) . ' je zamítnutá.</p>'];
+        }
+        if ($m['stav'] === 'ok') return ['Už schváleno', '<p>Žádost ' . htmlspecialchars($m['email']) . ' už byla schválená dřív.</p>'];
+        $db->prepare("UPDATE majitele SET stav = 'ok', overeni = 'ručně' WHERE id = ?")->execute([$o]);
+        $db->prepare("UPDATE nove SET stav = 'ok' WHERE id = ?")->execute([$m['kavarna']]);
+        $db->prepare("UPDATE profily SET stav = 'ok', duvod = NULL WHERE kavarna = ? AND verejna IS NOT NULL")->execute([$m['kavarna']]);
+        posli($m['email'], "Přístup ke správě kavárny $nazev", "Dobrý den,\n\nvaši žádost jsme schválili. Údaje kavárny $nazev na naBrunch.cz upravíte tady:\n\n"
+            . $odkazPrihlaseni($o) . "\n\nOdkaz si uložte, slouží k dalšímu přihlášení.\n\nnaBrunch.cz\n");
+        return ['Schváleno', '<p>Přístup poslán na ' . htmlspecialchars($m['email']) . '.</p>'];
+    }
+    if ($akce === 'pustit') {
+        $db->prepare("UPDATE profily SET verejna = data, stav = 'ok', duvod = NULL WHERE kavarna = ?")->execute([$id]);
+        return ['Zveřejněno', '<p>Změna se na webu objeví při další synchronizaci.</p>'];
+    }
+    if ($akce === 'vratit') {
+        $db->prepare("UPDATE profily SET verejna = predchozi, data = COALESCE(predchozi, data), stav = 'ok', duvod = 'vráceno správcem' WHERE kavarna = ?")->execute([$id]);
+        return ['Vráceno', '<p>Na webu zůstane předchozí verze (nebo původní údaje z OpenStreetMap).</p>'];
+    }
+    if ($akce === 'zablokovat') {
+        $o = (int)$id;
+        $st = $db->prepare('SELECT kavarna FROM majitele WHERE id = ?');
+        $st->execute([$o]);
+        $kav = (string)$st->fetchColumn();
+        $db->prepare("UPDATE majitele SET stav = 'blokovan' WHERE id = ?")->execute([$o]);
+        $db->prepare("UPDATE nove SET stav = 'blokovan' WHERE id = ?")->execute([$kav]);
+        $db->prepare("UPDATE profily SET stav = 'stazeno', verejna = NULL WHERE kavarna = ? AND majitel = ?")->execute([$kav, $o]);
+        if ($kav !== '') foreach (glob($fotkyDir($kav) . '/*.webp') ?: [] as $x) @unlink($x);
+        return ['Zablokováno', '<p>Majitel je zablokovaný, jeho údaje a fotky jsou stažené z webu.</p>'];
+    }
+    if ($akce === 'smazatfoto') {
+        $jm = preg_replace('/[^a-f0-9]/', '', $f);
+        foreach ([1400, 640] as $x) @unlink($fotkyDir($id) . "/{$jm}_$x.webp");
+        return ['Smazáno', '<p>Fotka je smazaná, z webu zmizí při další synchronizaci.</p>'];
+    }
+    return ['Neznámá akce', ''];
+};
+
+// /api/admin.php načítá tento soubor kvůli úložišti a funkcím, akce níž jsou jen pro přímé volání
+if (defined('NB_ADMIN')) return;
 
 // ---------------------------------------------------------------- automatické ověření e-mailu
 function domena(string $url): string
@@ -192,22 +248,7 @@ if ($akce === 'zadost' && $_SERVER['REQUEST_METHOD'] === 'POST') {
 if (in_array($akce, ['schvalit', 'zamitnout'], true) && isset($_GET['z'], $_GET['t'])) {
     $o = (int)$_GET['z'];
     if (!hash_equals($podpis("$akce:$o"), (string)$_GET['t'])) html_out('Neplatný odkaz', '');
-    $st = $db->prepare('SELECT * FROM majitele WHERE id = ?');
-    $st->execute([$o]);
-    $m = $st->fetch();
-    if (!$m) html_out('Žádost nenalezena', '');
-    $nazev = $KAV[$m['kavarna']][0] ?? $m['kavarna'];
-    if ($akce === 'zamitnout') {
-        $db->prepare("UPDATE majitele SET stav = 'zamitnuto' WHERE id = ?")->execute([$o]);
-        $db->prepare("UPDATE nove SET stav = 'zamitnuto' WHERE id = ?")->execute([$m['kavarna']]);
-        html_out('Zamítnuto', '<p>Žádost ' . htmlspecialchars($m['email']) . ' o kavárnu ' . htmlspecialchars($nazev) . ' je zamítnutá.</p>');
-    }
-    $db->prepare("UPDATE majitele SET stav = 'ok', overeni = 'ručně' WHERE id = ?")->execute([$o]);
-    $db->prepare("UPDATE nove SET stav = 'ok' WHERE id = ?")->execute([$m['kavarna']]);
-    $db->prepare("UPDATE profily SET stav = 'ok', duvod = NULL WHERE kavarna = ? AND verejna IS NOT NULL")->execute([$m['kavarna']]);
-    posli($m['email'], "Přístup ke správě kavárny $nazev", "Dobrý den,\n\nvaši žádost jsme schválili. Údaje kavárny $nazev na naBrunch.cz upravíte tady:\n\n"
-        . $odkazPrihlaseni($o) . "\n\nOdkaz si uložte, slouží k dalšímu přihlášení.\n\nnaBrunch.cz\n");
-    html_out('Schváleno', '<p>Přístup poslán na ' . htmlspecialchars($m['email']) . '.</p>');
+    html_out(...$spravce($akce, (string)$o));
 }
 
 // ---------------------------------------------------------------- úprava ověřeného podniku naBrunche (spravuje redakce)
@@ -400,25 +441,13 @@ if ($akce === 'uloz' && $_SERVER['REQUEST_METHOD'] === 'POST') {
 if (in_array($akce, ['pustit', 'vratit'], true) && isset($_GET['s'], $_GET['t'])) {
     $s = (string)$_GET['s'];
     if (!hash_equals($podpis("$akce:$s"), (string)$_GET['t'])) html_out('Neplatný odkaz', '');
-    if ($akce === 'pustit') {
-        $db->prepare("UPDATE profily SET verejna = data, stav = 'ok', duvod = NULL WHERE kavarna = ?")->execute([$s]);
-        html_out('Zveřejněno', '<p>Změna se na webu objeví při další synchronizaci.</p>');
-    }
-    $db->prepare("UPDATE profily SET verejna = predchozi, data = COALESCE(predchozi, data), stav = 'ok', duvod = 'vráceno správcem' WHERE kavarna = ?")->execute([$s]);
-    html_out('Vráceno', '<p>Na webu zůstane předchozí verze (nebo původní údaje z OpenStreetMap).</p>');
+    html_out(...$spravce($akce, $s));
 }
 
 if ($akce === 'zablokovat' && isset($_GET['o'], $_GET['t'])) {
     $o = (int)$_GET['o'];
     if (!hash_equals($podpis("zablokovat:$o"), (string)$_GET['t'])) html_out('Neplatný odkaz', '');
-    $st = $db->prepare('SELECT kavarna FROM majitele WHERE id = ?');
-    $st->execute([$o]);
-    $kav = (string)$st->fetchColumn();
-    $db->prepare("UPDATE majitele SET stav = 'blokovan' WHERE id = ?")->execute([$o]);
-    $db->prepare("UPDATE nove SET stav = 'blokovan' WHERE id = ?")->execute([$kav]);
-    $db->prepare("UPDATE profily SET stav = 'stazeno', verejna = NULL WHERE kavarna = ? AND majitel = ?")->execute([$kav, $o]);
-    foreach (glob($fotkyDir($kav) . '/*.webp') ?: [] as $f) @unlink($f);
-    html_out('Zablokováno', '<p>Majitel je zablokovaný, jeho údaje a fotky jsou stažené z webu.</p>');
+    html_out(...$spravce('zablokovat', (string)$o));
 }
 
 // ---------------------------------------------------------------- fotky
@@ -469,8 +498,7 @@ if ($akce === 'smazatfoto' && isset($_GET['s'], $_GET['f'], $_GET['t'])) {
     $s = (string)$_GET['s'];
     $jm = preg_replace('/[^a-f0-9]/', '', (string)$_GET['f']);
     if (!hash_equals($podpis("smazatfoto:$s:$jm"), (string)$_GET['t'])) html_out('Neplatný odkaz', '');
-    foreach ([1400, 640] as $x) @unlink($fotkyDir($s) . "/{$jm}_$x.webp");
-    html_out('Smazáno', '<p>Fotka je smazaná, z webu zmizí při další synchronizaci.</p>');
+    html_out(...$spravce('smazatfoto', $s, $jm));
 }
 
 // ---------------------------------------------------------------- export pro build
@@ -502,29 +530,10 @@ if (isset($_GET['export'])) {
     json_out(200, ['kavarny' => (object)$out]);
 }
 
-// ---------------------------------------------------------------- přehled pro správce
+// ---------------------------------------------------------------- přehled pro správce → /admin/ (starý odkaz z e-mailů přihlásí)
 if (isset($_GET['admin'])) {
-    if (!hash_equals($podpis('kavarny-admin'), (string)$_GET['admin'])) html_out('Neplatný odkaz', '');
-    $e = fn($s) => htmlspecialchars((string)$s);
-    $h = '<h2>Žádosti čekající na ověření</h2>';
-    $z = $db->query("SELECT * FROM majitele WHERE stav = 'ceka' ORDER BY id DESC LIMIT 100")->fetchAll();
-    if (!$z) $h .= '<p>Žádné.</p>';
-    foreach ($z as $m) {
-        $k = $KAV[$m['kavarna']] ?? [$m['kavarna'], '/'];
-        $h .= '<p><a href="' . $e($WEB . $k[1]) . '">' . $e($k[0]) . '</a> · ' . $e($m['jmeno']) . ' · ' . $e($m['email']) . ' · ' . $e($m['telefon']) . '<br>'
-            . '<a href="?akce=schvalit&z=' . $m['id'] . '&t=' . $podpis('schvalit:' . $m['id']) . '">Schválit</a> · '
-            . '<a href="?akce=zamitnout&z=' . $m['id'] . '&t=' . $podpis('zamitnout:' . $m['id']) . '">Zamítnout</a></p>';
-    }
-    $h .= '<h2>Profily</h2>';
-    foreach ($db->query('SELECT * FROM profily ORDER BY upraveno DESC LIMIT 300') as $p) {
-        $k = $KAV[$p['kavarna']] ?? [$p['kavarna'], '/'];
-        $s = $p['kavarna'];
-        $h .= '<p><a href="' . $e($WEB . $k[1]) . '">' . $e($k[0]) . '</a> · ' . $e(substr($p['upraveno'], 0, 16)) . ' · <strong>' . $e($p['stav']) . '</strong>'
-            . ($p['duvod'] ? ' (' . $e($p['duvod']) . ')' : '') . '<br>'
-            . ($p['stav'] === 'ceka' ? '<a href="?akce=pustit&s=' . $e($s) . '&t=' . $podpis("pustit:$s") . '">Zveřejnit</a> · ' : '')
-            . '<a href="?akce=vratit&s=' . $e($s) . '&t=' . $podpis("vratit:$s") . '">Vrátit předchozí</a></p>';
-    }
-    html_out('Správa kaváren – majitelé', $h);
+    header('Location: ' . $WEB . '/api/admin.php?admin=' . rawurlencode((string)$_GET['admin']), true, 302);
+    exit;
 }
 
 json_out(400, ['ok' => false]);
