@@ -30,8 +30,8 @@ Podrobnosti viz `README.md`.
 | Barvy, písma, rozvržení | `src/styles/global.css` (proměnné v `:root`) |
 | E-mail, sociální sítě, AdSense, GA | `src/lib/config.ts` |
 | Přesměrování starých adres | `public/.htaccess` |
-| Formuláře (přidat podnik, newsletter, správa kaváren) | `public/api/*.php` |
-| Administrace (schvalování majitelů, úprav, fotek) | `public/api/admin.php`, adresa `/admin/` |
+| Formuláře (přidat podnik, newsletter, hodnocení, správa kaváren) | `public/api/*.php` |
+| Administrace (schvalování hodnocení, majitelů, úprav, fotek) | `public/api/admin.php`, adresa `/admin/` |
 
 ## Přidání nebo úprava podniku
 
@@ -137,7 +137,8 @@ Na detailu kavárny je „Jste majitel? Upravte údaje zdarma“ (`/api/kavarna.
   a nahraje až 6 fotek (převod na WebP, ukládají se na serveru do `/fotky-kavaren/`, mimo repo).
 - **Kontrola:** formát polí, zákaz odkazů v popisu, filtr vulgarismů a spamu, limity pokusů. Čisté změny jdou na web
   automaticky, podezřelé čekají na schválení. Každá změna a fotka přijde e-mailem s odkazy Vrátit / Smazat / Zablokovat.
-- **Administrace `/admin/`** (`public/api/admin.php`): schvalování žádostí o správu a nových kaváren, zadržené úpravy
+- **Administrace `/admin/`** (`public/api/admin.php`): schvalování textů hodnocení podniků (záložka Hodnocení: skrýt text, smazat i hvězdičky),
+  žádostí o správu a nových kaváren, zadržené úpravy
   (se zvýrazněním změn), fotky, majitelé (blokace) a historie změn (vrátit předchozí). Přihlášení bez hesla: e-mail ze seznamu
   `SPRAVCI` v `admin.php` dostane odkaz na 30 minut, nebo odkaz „Přehled všech majitelů a změn“ z konce e-mailu pro správce.
   Přihlášení platí 30 dní (cookie). Logika zásahů je v `$spravce` v `kavarna.php` – sdílí ji admin i odkazy z e-mailů.

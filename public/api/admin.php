@@ -1,6 +1,6 @@
 <?php
 /**
- * Administrace naBrunch.cz – schvalování bez proklikávání e-mailů. Adresa: /admin/ (přepis v .htaccess).
+ * Administrace naBrunch.cz – schvalování hodnocení a správy kaváren bez proklikávání e-mailů. Adresa: /admin/ (přepis v .htaccess).
  *
  * Přihlášení (bez hesla v repu):
  *  - odkaz „Přehled všech majitelů a změn“ na konci e-mailů pro správce (?admin=<podpis>), nebo
@@ -49,6 +49,8 @@ summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:.5rem;align-items:baselin
 summary time{margin-left:auto}
 .typ{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--akcent);font-weight:600}
 .kdo{margin:.6rem 0 0}
+.hvezdy{color:#e8893f;letter-spacing:.05em}.hvezdy span{color:#ecdcd5}
+.recenze{white-space:pre-wrap;margin:.3rem 0 0;overflow-wrap:anywhere}
 .udaje{display:grid;grid-template-columns:max-content 1fr;gap:.25rem 1rem;margin:.5rem 0;font-size:14px}
 .udaje dt{color:var(--slaba)}.udaje dd{margin:0;overflow-wrap:anywhere}
 .udaje dd.zmena{background:#fff3cd;border-radius:4px;padding:0 .3rem}
@@ -101,14 +103,16 @@ $e = fn($s): string => htmlspecialchars((string)$s, ENT_QUOTES);
 $prihlas = function () use ($podpis, $ADMIN): void {
     $exp = time() + COOKIE_DNY * 86400;
     setcookie(COOKIE, $exp . '.' . $podpis("spravce:$exp"), ['expires' => $exp, 'path' => '/', 'secure' => true, 'httponly' => true, 'samesite' => 'Lax']);
-    header('Location: ' . $ADMIN, true, 303);
+    $z = preg_replace('/[^a-z]/', '', (string)($_GET['z'] ?? ''));
+    header('Location: ' . $ADMIN . ($z ? "?z=$z" : ''), true, 303);
     exit;
 };
 $cookie = (string)($_COOKIE[COOKIE] ?? '');
 [$cExp, $cPodpis] = array_pad(explode('.', $cookie, 2), 2, '');
 $prihlasen = ctype_digit($cExp) && (int)$cExp > time() && hash_equals($podpis("spravce:$cExp"), $cPodpis);
 
-if (isset($_GET['admin']) && hash_equals($podpis('kavarny-admin'), (string)$_GET['admin'])) $prihlas();
+// Odkazy z e-mailů: správa kaváren (kavarny-admin) i hodnocení (admin)
+if (isset($_GET['admin']) && (hash_equals($podpis('kavarny-admin'), (string)$_GET['admin']) || hash_equals($podpis('admin'), (string)$_GET['admin']))) $prihlas();
 if (isset($_GET['vstup'], $_GET['t']) && ctype_digit((string)$_GET['vstup'])) {
     $exp = (int)$_GET['vstup'];
     if ($exp > time() && hash_equals($podpis("vstup:$exp"), (string)$_GET['t'])) $prihlas();
@@ -138,11 +142,28 @@ if (!$prihlasen) {
         . '<p class="pozn">Nebo použijte odkaz „Přehled všech majitelů a změn“ z konce e-mailu o kavárně.</p>', false);
 }
 
+// ---------------------------------------------------------------- hodnocení podniků (data z api/hodnoceni.php)
+$hodSoubor = "$uloziste/hodnoceni.sqlite";
+$hdb = is_file($hodSoubor) ? new PDO("sqlite:$hodSoubor", null, null, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]) : null;
+$hodAkce = function (string $a, int $id) use ($hdb, $uloziste): array {
+    if (!$hdb || $id < 1) return ['Hodnocení nenalezeno'];
+    if ($a === 'hod-schvalit') $hdb->prepare("UPDATE hodnoceni SET stav = 'ok' WHERE id = ?")->execute([$id]);
+    elseif ($a === 'hod-zamitnout') $hdb->prepare("UPDATE hodnoceni SET stav = 'zamitnuto' WHERE id = ?")->execute([$id]);
+    elseif ($a === 'hod-smazat') $hdb->prepare('DELETE FROM hodnoceni WHERE id = ?')->execute([$id]);
+    else return ['Neznámá akce'];
+    // Souhrn pro karty a strukturovaná data (stejný formát jako obnov_souhrn v hodnoceni.php)
+    $out = new stdClass();
+    foreach ($hdb->query('SELECT podnik, ROUND(AVG(hvezdy), 1) p, COUNT(*) n FROM hodnoceni GROUP BY podnik') as $r) $out->{$r['podnik']} = [(float)$r['p'], (int)$r['n']];
+    file_put_contents("$uloziste/souhrn.json", json_encode($out), LOCK_EX);
+    return [['hod-schvalit' => 'Recenze schválena', 'hod-zamitnout' => 'Text recenze zamítnut', 'hod-smazat' => 'Hodnocení smazáno'][$a]];
+};
+
 // ---------------------------------------------------------------- akce (POST + CSRF)
 $csrf = $podpis("csrf:$cookie");
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!hash_equals($csrf, (string)($_POST['csrf'] ?? ''))) stranka('Neplatný požadavek', '<p>Obnovte stránku a zkuste to znovu.</p>');
-    [$titulek] = $spravce((string)($_POST['akce'] ?? ''), (string)($_POST['id'] ?? ''), (string)($_POST['f'] ?? ''));
+    $a = (string)($_POST['akce'] ?? '');
+    [$titulek] = str_starts_with($a, 'hod-') ? $hodAkce($a, (int)($_POST['id'] ?? 0)) : $spravce($a, (string)($_POST['id'] ?? ''), (string)($_POST['f'] ?? ''));
     $zalozka = preg_replace('/[^a-z]/', '', (string)($_POST['zalozka'] ?? ''));
     header('Location: ' . $ADMIN . '?' . http_build_query(array_filter(['z' => $zalozka, 'hotovo' => $titulek])), true, 303);
     exit;
@@ -154,6 +175,7 @@ $url = fn(string $k): string => $WEB . ($KAV[$k][1] ?? '/');
 $nove = [];
 foreach ($db->query('SELECT * FROM nove') as $r) $nove[$r['id']] = $r + ['d' => json_decode($r['data'], true) ?: []];
 
+$recenzeCeka = $hdb ? $hdb->query("SELECT * FROM hodnoceni WHERE stav = 'ceka' ORDER BY id DESC")->fetchAll() : [];
 $zadosti = $db->query("SELECT * FROM majitele WHERE stav = 'ceka' ORDER BY id DESC")->fetchAll();
 $zmeny = $db->query("SELECT p.*, m.email FROM profily p LEFT JOIN majitele m ON m.id = p.majitel WHERE p.stav = 'ceka' ORDER BY p.upraveno DESC")->fetchAll();
 $majitele = $db->query('SELECT * FROM majitele ORDER BY id DESC LIMIT 500')->fetchAll();
@@ -193,8 +215,8 @@ $STAVY = ['ok' => 'aktivní', 'ceka' => 'čeká', 'zamitnuto' => 'zamítnuto', '
 $stav = fn($s): string => '<span class="stav stav-' . $e($s) . '">' . $e($STAVY[$s] ?? $s) . '</span>';
 
 $zal = (string)($_GET['z'] ?? 'schvalit');
-$cekaPocet = count($zadosti) + count($zmeny);
-$ZALOZKY = ['schvalit' => 'Ke schválení' . ($cekaPocet ? " <b>$cekaPocet</b>" : ''), 'fotky' => 'Fotky', 'majitele' => 'Majitelé', 'profily' => 'Změny kaváren'];
+$cekaPocet = count($recenzeCeka) + count($zadosti) + count($zmeny);
+$ZALOZKY = ['schvalit' => 'Ke schválení' . ($cekaPocet ? " <b>$cekaPocet</b>" : ''), 'hodnoceni' => 'Hodnocení', 'fotky' => 'Fotky', 'majitele' => 'Majitelé', 'profily' => 'Změny kaváren'];
 if (!isset($ZALOZKY[$zal])) $zal = 'schvalit';
 
 $h = '<nav class="zalozky">';
@@ -202,7 +224,25 @@ foreach ($ZALOZKY as $k => $n) $h .= '<a href="?z=' . $k . '"' . ($k === $zal ? 
 $h .= '<a class="odhlasit" href="?odhlasit=1">Odhlásit</a></nav>';
 if (isset($_GET['hotovo'])) $h .= '<p class="ok" role="status">' . $e($_GET['hotovo']) . '</p>';
 
+$PODNIKY = is_file(__DIR__ . '/_podniky-nazvy.php') ? (array)require __DIR__ . '/_podniky-nazvy.php' : [];
+$podnikOdkaz = fn(array $r): string => '<a href="' . $e($WEB . $r['url']) . '" target="_blank" rel="noopener">'
+    . $e($PODNIKY[$r['podnik']] ?? ucfirst(str_replace('-', ' ', trim(preg_replace('~^/podniky/~', '', (string)$r['url']), '/')))) . '</a>';
+$recenze = function (array $r, string $zal) use ($e, $kdy, $tlacitko, $podnikOdkaz): string {
+    $n = (int)$r['hvezdy'];
+    return '<article class="karta"><header><span class="hvezdy" aria-label="' . $n . ' z 5">' . str_repeat('★', $n) . '<span>' . str_repeat('★', 5 - $n) . '</span></span>'
+        . '<h3>' . $podnikOdkaz($r) . '</h3>' . ($r['stav'] !== 'ceka' && $r['text'] ? '<span class="stav stav-' . $e($r['stav']) . '">' . ($r['stav'] === 'ok' ? 'zveřejněno' : 'text skrytý') . '</span>' : '') . '<time>' . $kdy($r['vytvoreno']) . '</time></header>'
+        . ($r['text'] ? '<p class="recenze">' . nl2br($e($r['text'])) . '</p>' : '<p class="prazdne">Jen hvězdičky, bez textu.</p>')
+        . '<p class="kdo">' . $e($r['jmeno'] ?: 'Anonym') . '</p><div class="akce">'
+        . ($r['text'] && $r['stav'] !== 'ok' ? $tlacitko('hod-schvalit', (string)$r['id'], 'Schválit text', $zal, 'hlavni') : '')
+        . ($r['text'] && $r['stav'] !== 'zamitnuto' ? $tlacitko('hod-zamitnout', (string)$r['id'], $r['stav'] === 'ok' ? 'Skrýt text' : 'Zamítnout text', $zal) : '')
+        . $tlacitko('hod-smazat', (string)$r['id'], 'Smazat i hvězdičky', $zal, 'nebezpecne', '', 'Smazat celé hodnocení včetně hvězdiček?')
+        . '</div></article>';
+};
+
 if ($zal === 'schvalit') {
+    $h .= '<h2>Recenze podniků</h2><p class="pozn">Hvězdičky se počítají hned, na schválení čeká jen text.</p>';
+    if (!$recenzeCeka) $h .= '<p class="prazdne">Nic nečeká.</p>';
+    foreach ($recenzeCeka as $r) $h .= $recenze($r, $zal);
     $h .= '<h2>Nové kavárny a žádosti o správu</h2>';
     if (!$zadosti) $h .= '<p class="prazdne">Nic nečeká.</p>';
     foreach ($zadosti as $m) {
@@ -240,6 +280,18 @@ if ($zal === 'schvalit') {
             . $tlacitko('zablokovat', (string)$p['majitel'], 'Zablokovat majitele', $zal, 'nebezpecne', '', 'Zablokovat majitele a stáhnout jeho údaje i fotky z webu?')
             . '</div></article>';
     }
+}
+
+if ($zal === 'hodnoceni') {
+    $h .= '<h2>Hodnocení podniků</h2>';
+    if ($hdb) {
+        $s = $hdb->query("SELECT COUNT(*) n, ROUND(AVG(hvezdy), 2) p, COUNT(DISTINCT podnik) k, SUM(stav = 'ceka') c FROM hodnoceni")->fetch();
+        $h .= '<p class="pozn">' . (int)$s['n'] . ' hodnocení u ' . (int)$s['k'] . ' podniků, průměr ' . str_replace('.', ',', (string)($s['p'] ?? 0)) . ' z 5'
+            . ((int)$s['c'] ? ' · ke schválení ' . (int)$s['c'] : '') . '.</p>';
+        $vse = $hdb->query('SELECT * FROM hodnoceni ORDER BY id DESC LIMIT 300')->fetchAll();
+    }
+    if (empty($vse)) $h .= '<p class="prazdne">Zatím žádná hodnocení.</p>';
+    foreach ($vse ?? [] as $r) $h .= $recenze($r, $zal);
 }
 
 if ($zal === 'fotky') {

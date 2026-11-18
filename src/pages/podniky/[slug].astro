@@ -4,6 +4,8 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import Foto from '../../components/Foto.astro';
 import Karta from '../../components/Karta.astro';
 import Srdce from '../../components/Srdce.astro';
+import Hodnoceni from '../../components/Hodnoceni.astro';
+import { souhrnHodnoceni } from '../../lib/hodnoceni';
 import Mapa from '../../components/Mapa.astro';
 import BlogKarta from '../../components/BlogKarta.astro';
 import { SITE } from '../../lib/config';
@@ -57,6 +59,7 @@ const parametry = [
   ['Sezení', [...new Set([...p.sezeni, ...p.atmosfera.filter((a) => a === 'Zahrádka' || a === 'Sezení uvnitř')].map((s) => (s === 'Sezení uvnitř' ? 'Uvnitř' : s)))].join(', ') || undefined],
 ].filter(([, v]) => v) as [string, string][];
 
+const hod = (await souhrnHodnoceni())[String(p.id)];
 const dotazy = dotazyPodniku(p);
 const adresaWeb = new URL(url(p), SITE.url).href;
 const vybaveni = [
@@ -69,6 +72,9 @@ const podnikLd = {
   '@context': 'https://schema.org',
   '@type': 'CafeOrCoffeeShop',
   '@id': `${adresaWeb}#podnik`,
+  ...(hod && hod[1] > 0
+    ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: hod[0], ratingCount: hod[1], bestRating: 5, worstRating: 1 } }
+    : {}),
   name: p.nazev,
   url: adresaWeb,
   description,
@@ -115,6 +121,9 @@ const jsonLd = dotazy.length
             {p.doporuceny && <span class="srdcovka">♥ Naše srdcovka</span>}
             <h1>{p.nazev}</h1>
             <p class="detail-adr">📍 {p.adresa}</p>
+            <a class="detail-hod" href="#hodnoceni">
+              <span class="hod-mini" data-hod-id={p.id}><span class="hv" style="--p:0%"></span><span class="hod-mini__nic">Zatím bez hodnocení – ohodnoťte jako první</span></span>
+            </a>
             <p class="detail-tagy">
               {p.kuchyne.map((k) => <span class="tag tag--zelena">{k}</span>)}
               {p.atmosfera.filter((a) => a !== 'Sezení uvnitř').map((a) => <span class="tag">{a}</span>)}
@@ -172,6 +181,7 @@ const jsonLd = dotazy.length
               </p>
             )
           }
+          <Hodnoceni p={p} ldVHtml={!!(hod && hod[1] > 0)} />
           {
             dotazy.length > 0 && (
               <section class="dotazy">
@@ -370,6 +380,14 @@ const jsonLd = dotazy.length
     margin: 0;
     color: var(--ink-soft);
     max-width: none;
+  }
+  .detail-hod {
+    display: inline-block;
+    margin: -0.35rem 0 0.75rem;
+    text-decoration: none;
+  }
+  .detail-hod .hod-mini {
+    font-size: 0.9rem;
   }
   .detail-adr {
     margin: 0 0 0.75rem;

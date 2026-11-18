@@ -60,4 +60,4 @@ Proměnná `SITE_HOST` (výchozí `nabrunch.cz`) – doména, přes kterou se vo
 
 - Indexace je zapnutá (`SITE.indexovat = true` v `src/lib/config.ts`), AdSense a GA4 se načítají jen na nabrunch.cz.
 - V AdSense musí být zapnutá zpráva o souhlasu (GDPR) – Consent Mode je ve výchozím stavu „denied“.
-- Hodnocení podniků bylo v 11/2026 z webu odebráno; stará data zůstala v SQLite ve složce `/_data/` na serveru (deploy ji nemaže, zvenku je nepřístupná).
+- Hodnocení podniků: SQLite ve složce `/_data/` na serveru (deploy ji nemaže, zvenku je nepřístupná).
