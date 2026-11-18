@@ -24,6 +24,11 @@ document.addEventListener('submit', (e) => {
   const b = f.querySelector('button');
   if (b) { b.disabled = true; b.setAttribute('aria-busy', 'true'); }
 });
+document.querySelectorAll('input[data-hledat-v]').forEach((i) => {
+  const radky = document.querySelectorAll(i.dataset.hledatV);
+  const bez = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  i.addEventListener('input', () => { const q = bez(i.value.trim()); radky.forEach((r) => { r.hidden = q !== '' && !bez(r.textContent).includes(q); }); });
+});
 JS;
 const CSS = <<<'CSS'
 :root{--hneda:#532a19;--text:#2b211c;--slaba:#7a6a62;--pozadi:#fff5f4;--karta:#fff;--linka:#f0dcd7;--akcent:#c8553d;--zelena:#2f7a4f;--cervena:#b3261e;color-scheme:light}
@@ -92,6 +97,26 @@ tr:last-child td{border-bottom:0}
 .uprava input:not([type=checkbox]){color:var(--text)}
 .uprava .vlastnosti{display:grid;grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));gap:.2rem .8rem}
 .uprava .vlastnosti label{flex-direction:row;align-items:center;gap:.4rem;color:var(--text);font-size:14px;margin:0;min-width:0}
+.hlavicka{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.hlavicka h2{margin-bottom:.75rem}
+.tlacitko.hlavni-odkaz{background:var(--zelena);border-color:var(--zelena);color:#fff}
+.hledat{width:100%;max-width:24rem;margin:0 0 .75rem}
+img.mini{width:44px;height:33px;object-fit:cover;border-radius:6px;vertical-align:middle;margin-right:.6rem;background:#f3e6e2}
+.uprava select{font:inherit;color:var(--text);padding:.5rem .6rem;border:1px solid var(--linka);border-radius:8px;background:#fff}
+.uprava .popisek{display:block;font-size:13px;color:var(--slaba);margin:.4rem 0 .3rem}
+.uprava .vlastnosti{margin-bottom:.7rem}
+.uprava label.radek-check{flex-direction:row;align-items:center;gap:.45rem;color:var(--text);font-size:14px}
+.uprava small{color:var(--slaba);font-size:12px}
+.uprava textarea{font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+.uprava input[type=file]{padding:.4rem 0;border:0;background:none}
+.fotky-edit{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.6rem;margin-bottom:.8rem}
+.fotky-edit figure{margin:0;border:1px solid var(--linka);border-radius:10px;overflow:hidden;background:#fff}
+.fotky-edit img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.fotky-edit label{flex-direction:row!important;align-items:center;gap:.35rem;margin:.35rem .5rem!important;min-width:0!important;color:var(--text)!important}
+.nahled-clanku{display:block;max-width:320px;border-radius:10px;margin-bottom:.6rem}
+.lepkave{position:sticky;bottom:0;background:linear-gradient(transparent,var(--pozadi) 30%);padding:1rem 0 .8rem}
+code{font-size:.9em;background:#f6ebe8;padding:.05rem .3rem;border-radius:4px}
+tr[hidden]{display:none}
 .prihlaseni{display:flex;flex-direction:column;gap:.75rem;max-width:22rem}
 .prihlaseni label{display:flex;flex-direction:column;gap:.3rem;font-size:14px;color:var(--slaba)}
 input{font:inherit;padding:.55rem .7rem;border:1px solid var(--linka);border-radius:8px;background:#fff}
@@ -104,7 +129,8 @@ require __DIR__ . '/kavarna.php';
 
 header('Cache-Control: no-store');
 header('X-Frame-Options: DENY');
-header("Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline'; frame-ancestors 'none'; form-action 'self'");
+define('CSP_NONCE', base64_encode(random_bytes(16)));
+header("Content-Security-Policy: default-src 'self'; script-src 'nonce-" . CSP_NONCE . "'; img-src 'self' data:; style-src 'unsafe-inline'; frame-ancestors 'none'; form-action 'self'");
 
 $ADMIN = $WEB . '/prihlaseni/';
 $e = fn($s): string => htmlspecialchars((string)$s, ENT_QUOTES);
@@ -219,10 +245,14 @@ $upravit = function (string $k, array $post) use ($db): array {
 // ---------------------------------------------------------------- akce (POST + CSRF)
 $csrf = $podpis("csrf:$cookie");
 $chybyUpravy = [];
+require __DIR__ . '/_admin-obsah.php'; // editor podniků a článků ($obsahPost, $obsahStranka)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!hash_equals($csrf, (string)($_POST['csrf'] ?? ''))) stranka('Neplatný požadavek', '<p>Obnovte stránku a zkuste to znovu.</p>');
     $a = (string)($_POST['akce'] ?? '');
-    if ($a === 'upravit') {
+    if (str_starts_with($a, 'obsah-')) {
+        $obsahPost($a); // při úspěchu přesměruje, při chybě znovu ukáže formulář s chybami
+        $_GET['z'] = ['obsah-podnik' => 'podnik', 'obsah-clanek' => 'clanek', 'obsah-token' => 'nastaveni'][$a] ?? 'schvalit';
+    } elseif ($a === 'upravit') {
         $k = (string)($_POST['id'] ?? '');
         $chybyUpravy = $upravit($k, $_POST);
         if (!$chybyUpravy) {
@@ -328,13 +358,16 @@ if ($zal === 'upravit') {
     stranka('Upravit: ' . ($n['nazev'] ?? $nazev($k)), $h);
 }
 $cekaPocet = count($recenzeCeka) + count($zadosti) + count($zmeny);
-$ZALOZKY = ['schvalit' => 'Ke schválení' . ($cekaPocet ? " <b>$cekaPocet</b>" : ''), 'hodnoceni' => 'Hodnocení', 'fotky' => 'Fotky', 'majitele' => 'Majitelé', 'profily' => 'Změny kaváren'];
-if (!isset($ZALOZKY[$zal])) $zal = 'schvalit';
+$ZALOZKY = ['schvalit' => 'Ke schválení' . ($cekaPocet ? " <b>$cekaPocet</b>" : ''), 'hodnoceni' => 'Hodnocení', 'fotky' => 'Fotky', 'majitele' => 'Majitelé', 'profily' => 'Změny kaváren',
+    'podniky' => 'Podniky', 'clanky' => 'Články', 'nastaveni' => 'Nastavení'];
+if (!isset($ZALOZKY[$zal]) && !in_array($zal, OBSAH_ZALOZKY, true)) $zal = 'schvalit';
+$aktivni = ['podnik' => 'podniky', 'clanek' => 'clanky'][$zal] ?? $zal;
 
 $h = '<nav class="zalozky">';
-foreach ($ZALOZKY as $k => $n) $h .= '<a href="?z=' . $k . '"' . ($k === $zal ? ' aria-current="page"' : '') . '>' . $n . '</a>';
+foreach ($ZALOZKY as $k => $n) $h .= '<a href="?z=' . $k . '"' . ($k === $aktivni ? ' aria-current="page"' : '') . '>' . $n . '</a>';
 $h .= '<a class="odhlasit" href="?odhlasit=1">Odhlásit</a></nav>';
 if (isset($_GET['hotovo'])) $h .= '<p class="ok" role="status">' . $e($_GET['hotovo']) . '</p>';
+if (in_array($zal, OBSAH_ZALOZKY, true)) $obsahStranka($zal, $h, '');
 
 $PODNIKY = is_file(__DIR__ . '/_podniky-nazvy.php') ? (array)require __DIR__ . '/_podniky-nazvy.php' : [];
 $podnikOdkaz = fn(array $r): string => '<a href="' . $e($WEB . $r['url']) . '" target="_blank" rel="noopener">'
@@ -462,6 +495,6 @@ function stranka(string $titulek, string $obsah, bool $menu = true): void
     echo '<!doctype html><html lang="cs"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         . '<meta name="robots" content="noindex,nofollow"><title>' . htmlspecialchars($titulek) . ' – naBrunch.cz</title><style>' . CSS . '</style>'
         . '<body><main><p class="znacka">naBrunch.cz · správa</p><h1>' . htmlspecialchars($titulek) . '</h1>' . $obsah . '</main>'
-        . '<script>' . JS . '</script></body></html>';
+        . '<script nonce="' . CSP_NONCE . '">' . JS . '</script></body></html>';
     exit;
 }

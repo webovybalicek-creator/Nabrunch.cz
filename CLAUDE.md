@@ -35,6 +35,11 @@ Podrobnosti viz `README.md`.
 
 ## Přidání nebo úprava podniku
 
+Podniky a články jde upravovat i v administraci (`/prihlaseni/` → záložky **Podniky** a **Články**, kód `public/api/_admin-obsah.php`).
+Editor uloží změnu jedním commitem do `main` přes GitHub API (token v administraci na záložce Nastavení, uložený jen na serveru
+v `/_data/github-token.txt`) a web se nasadí jako po každém pushi. Fotky převede na WebP (obě velikosti). JSON zapisuje ve stejném
+formátu jako soubory v repu, takže v diffu jsou jen skutečné změny. **Před vlastní úpravou v repu si proto vždy stáhni aktuální `main`.**
+
 Podnik je jeden objekt v poli `src/data/podniky.json`. Strukturu popisuje rozhraní `Podnik` v `src/lib/data.ts` –
 nový podnik zkopíruj z existujícího a vyplň všechna pole.
 

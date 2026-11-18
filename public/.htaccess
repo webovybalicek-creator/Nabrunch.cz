@@ -421,7 +421,7 @@ DirectoryIndex index.html
 </IfModule>
 
 # Interní soubory nezveřejňovat (manifest deploye, konfigurace s API klíčem)
-<FilesMatch "^(\.deploy-manifest\.txt|_konfig\.php|_smtp\.php|_kavarny-kontakty\.php|_podniky-nazvy\.php)$">
+<FilesMatch "^(\.deploy-manifest\.txt|_konfig\.php|_smtp\.php|_kavarny-kontakty\.php|_podniky-nazvy\.php|_clanky-seznam\.php|_github\.php|_admin-obsah\.php)$">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
