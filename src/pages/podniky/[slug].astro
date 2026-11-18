@@ -181,7 +181,7 @@ const jsonLd = dotazy.length
               </p>
             )
           }
-          <Hodnoceni p={p} ldVHtml={!!(hod && hod[1] > 0)} />
+          <Hodnoceni id={p.id} url={url(p)} nazev={p.nazev} ldVHtml={!!(hod && hod[1] > 0)} />
           {
             dotazy.length > 0 && (
               <section class="dotazy">

@@ -338,11 +338,12 @@ if (isset($_GET['hotovo'])) $h .= '<p class="ok" role="status">' . $e($_GET['hot
 
 $PODNIKY = is_file(__DIR__ . '/_podniky-nazvy.php') ? (array)require __DIR__ . '/_podniky-nazvy.php' : [];
 $podnikOdkaz = fn(array $r): string => '<a href="' . $e($WEB . $r['url']) . '" target="_blank" rel="noopener">'
-    . $e($PODNIKY[$r['podnik']] ?? ucfirst(str_replace('-', ' ', trim(preg_replace('~^/podniky/~', '', (string)$r['url']), '/')))) . '</a>';
+    . $e($PODNIKY[$r['podnik']] ?? $KAV[$r['podnik']][0] ?? ($nove[$r['podnik']]['d']['nazev'] ?? null) ?? ucfirst(str_replace('-', ' ', trim(preg_replace('~^/podniky/~', '', (string)$r['url']), '/')))) . '</a>';
 $recenze = function (array $r, string $zal) use ($e, $kdy, $tlacitko, $podnikOdkaz): string {
+    $kav = str_starts_with((string)$r['url'], '/kavarny/');
     $n = (int)$r['hvezdy'];
     return '<article class="karta"><header><span class="hvezdy" aria-label="' . $n . ' z 5">' . str_repeat('★', $n) . '<span>' . str_repeat('★', 5 - $n) . '</span></span>'
-        . '<h3>' . $podnikOdkaz($r) . '</h3>' . ($r['stav'] !== 'ceka' && $r['text'] ? '<span class="stav stav-' . $e($r['stav']) . '">' . ($r['stav'] === 'ok' ? 'zveřejněno' : 'text skrytý') . '</span>' : '') . '<time>' . $kdy($r['vytvoreno']) . '</time></header>'
+        . ($kav ? '<span class="typ">Kavárna</span>' : '') . '<h3>' . $podnikOdkaz($r) . '</h3>' . ($r['stav'] !== 'ceka' && $r['text'] ? '<span class="stav stav-' . $e($r['stav']) . '">' . ($r['stav'] === 'ok' ? 'zveřejněno' : 'text skrytý') . '</span>' : '') . '<time>' . $kdy($r['vytvoreno']) . '</time></header>'
         . ($r['text'] ? '<p class="recenze">' . nl2br($e($r['text'])) . '</p>' : '<p class="prazdne">Jen hvězdičky, bez textu.</p>')
         . '<p class="kdo">' . $e($r['jmeno'] ?: 'Anonym') . '</p><div class="akce">'
         . ($r['text'] && $r['stav'] !== 'ok' ? $tlacitko('hod-schvalit', (string)$r['id'], 'Schválit text', $zal, 'hlavni') : '')
@@ -352,7 +353,7 @@ $recenze = function (array $r, string $zal) use ($e, $kdy, $tlacitko, $podnikOdk
 };
 
 if ($zal === 'schvalit') {
-    $h .= '<h2>Recenze podniků</h2><p class="pozn">Hvězdičky se počítají hned, na schválení čeká jen text.</p>';
+    $h .= '<h2>Recenze podniků a kaváren</h2><p class="pozn">Hvězdičky se počítají hned, na schválení čeká jen text.</p>';
     if (!$recenzeCeka) $h .= '<p class="prazdne">Nic nečeká.</p>';
     foreach ($recenzeCeka as $r) $h .= $recenze($r, $zal);
     $h .= '<h2>Nové kavárny a žádosti o správu</h2>';
@@ -396,7 +397,7 @@ if ($zal === 'schvalit') {
 }
 
 if ($zal === 'hodnoceni') {
-    $h .= '<h2>Hodnocení podniků</h2>';
+    $h .= '<h2>Hodnocení podniků a kaváren</h2>';
     if ($hdb) {
         $s = $hdb->query("SELECT COUNT(*) n, ROUND(AVG(hvezdy), 2) p, COUNT(DISTINCT podnik) k, SUM(stav = 'ceka') c FROM hodnoceni")->fetch();
         $h .= '<p class="pozn">' . (int)$s['n'] . ' hodnocení u ' . (int)$s['k'] . ' podniků, průměr ' . str_replace('.', ',', (string)($s['p'] ?? 0)) . ' z 5'

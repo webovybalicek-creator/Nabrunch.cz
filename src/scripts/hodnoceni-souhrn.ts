@@ -15,6 +15,7 @@ export function doplnHodnoceni(root: ParentNode = document) {
       const t = String(p).replace('.', ',');
       el.innerHTML = `<span class="hv" style="--p:${(p / 5) * 100}%"></span><strong>${t}</strong> (${n})`;
       el.setAttribute('aria-label', `Hodnocení ${t} z 5, ${n}×`);
+      el.hidden = false; // karty kaváren mají hvězdičky skryté, dokud nemají hodnocení
     });
   });
 }

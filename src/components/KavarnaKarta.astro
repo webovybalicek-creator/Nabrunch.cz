@@ -44,6 +44,7 @@ const hledat = `${k.nazev} ${k.ulice ?? ''} ${k.mesto} ${k.obvod ?? ''} ${k.ctvr
     <span class="kk__txt">
       <span class="kk__nazev">{k.nazev}</span>
       <span class="kk__adr">{[k.ulice, k.obvod ?? k.mesto].filter(Boolean).join(', ')}{km && ` · ${km}`}</span>
+      <span class="hod-mini" data-hod-id={k.id} data-hod-skryt hidden></span>
       {t && <span class="kk__stav" data-oh={JSON.stringify(t)}><span class="stav"></span></span>}
       {tagy.length > 0 && <span class="kk__tagy">{tagy.map((x) => <span class="tag">{x}</span>)}</span>}
     </span>

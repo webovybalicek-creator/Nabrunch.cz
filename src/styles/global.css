@@ -505,6 +505,9 @@ a.tag:hover {
   color: var(--brown-dark);
   font-weight: 600;
 }
+.hod-mini[hidden] {
+  display: none;
+}
 .hod-mini__nic {
   font-size: 0.76rem;
 }

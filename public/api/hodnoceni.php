@@ -1,6 +1,7 @@
 <?php
 /**
- * Hodnocení podniků (hvězdičky 1–5 + volitelný text se schvalováním).
+ * Hodnocení podniků a kaváren (hvězdičky 1–5 + volitelný text se schvalováním).
+ * id: číslo podniku z podniky.json, nebo id kavárny (n123 / w123 / r123 z OSM, m1a2b3 od majitele).
  *
  * GET  ?podnik=<id>                → průměr, počet a schválené recenze jednoho podniku
  * GET  ?souhrn=1                   → { id: [průměr, počet] } pro všechny hodnocené podniky
@@ -95,7 +96,7 @@ function obnov_souhrn(PDO $db, string $soubor): void
     file_put_contents($soubor, json_encode($out), LOCK_EX);
 }
 
-$platneId = fn($s): bool => is_string($s) && preg_match('/^\d{1,9}$/', $s) === 1;
+$platneId = fn($s): bool => is_string($s) && preg_match('/^(\d{1,9}|[nwr]\d{1,15}|m[0-9a-f]{6,12})$/', $s) === 1;
 
 // ---------------------------------------------------------------- moderace
 if (isset($_GET['akce'], $_GET['id'], $_GET['t'])) {
@@ -134,11 +135,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $podnik = (string)($_GET['podnik'] ?? '');
     if (!$platneId($podnik)) json_out(400, ['ok' => false]);
     $st = $db->prepare('SELECT ROUND(AVG(hvezdy), 1) p, COUNT(*) n FROM hodnoceni WHERE podnik = ?');
-    $st->execute([(int)$podnik]);
+    $st->execute([$podnik]);
     $s = $st->fetch();
     $st = $db->prepare("SELECT hvezdy, text, jmeno, substr(vytvoreno, 1, 10) datum FROM hodnoceni
         WHERE podnik = ? AND stav = 'ok' AND text IS NOT NULL AND text != '' ORDER BY id DESC LIMIT 50");
-    $st->execute([(int)$podnik]);
+    $st->execute([$podnik]);
     json_out(200, ['prumer' => (float)$s['p'], 'pocet' => (int)$s['n'], 'recenze' => $st->fetchAll()], 60);
 }
 
@@ -158,7 +159,7 @@ $url = (string)($_POST['url'] ?? '');
 $hvezdy = (int)($_POST['hvezdy'] ?? 0);
 $text = $v('text', MAX_TEXT);
 $jmeno = $v('jmeno', MAX_JMENO);
-if (!$platneId($podnik) || !preg_match('~^/podniky/[a-z0-9\-]{2,120}/$~', $url)) json_out(400, ['ok' => false, 'chyba' => 'Neplatný podnik.']);
+if (!$platneId($podnik) || !preg_match('~^/(podniky/[a-z0-9\-]{2,120}|kavarny/[a-z0-9\-]{1,80}/[a-z0-9\-]{1,120})/$~', $url)) json_out(400, ['ok' => false, 'chyba' => 'Neplatný podnik.']);
 if ($hvezdy < 1 || $hvezdy > 5) json_out(422, ['ok' => false, 'chyba' => 'Vyberte počet hvězdiček.']);
 if ($text !== '' && mb_strlen($text) < 10) json_out(422, ['ok' => false, 'chyba' => 'Text je moc krátký (aspoň 10 znaků), nebo ho nechte prázdný.']);
 if (preg_match('~https?://|www\.~i', $text)) json_out(422, ['ok' => false, 'chyba' => 'Text nesmí obsahovat odkazy.']);
@@ -173,7 +174,7 @@ if ((int)$st->fetchColumn() >= LIMIT_ZA_HODINU) json_out(429, ['ok' => false, 'c
 $stav = $text === '' ? 'ok' : 'ceka';
 try {
     $db->prepare('INSERT INTO hodnoceni (podnik, url, hvezdy, text, jmeno, stav, otisk, otisk_ip, vytvoreno) VALUES (?,?,?,?,?,?,?,?,?)')
-        ->execute([(int)$podnik, $url, $hvezdy, $text ?: null, $jmeno ?: null, $stav, $otisk, $otiskIp, date('c')]);
+        ->execute([ctype_digit($podnik) ? (int)$podnik : $podnik, $url, $hvezdy, $text ?: null, $jmeno ?: null, $stav, $otisk, $otiskIp, date('c')]);
 } catch (PDOException $e) {
     json_out(409, ['ok' => false, 'chyba' => 'Tento podnik jste už hodnotili. Děkujeme!']);
 }

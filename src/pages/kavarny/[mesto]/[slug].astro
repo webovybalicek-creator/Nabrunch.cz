@@ -5,6 +5,8 @@ import Mapa from '../../../components/Mapa.astro';
 import Karta from '../../../components/Karta.astro';
 import KavarnaKarta from '../../../components/KavarnaKarta.astro';
 import Neovereno from '../../../components/Neovereno.astro';
+import Hodnoceni from '../../../components/Hodnoceni.astro';
+import { souhrnHodnoceni } from '../../../lib/hodnoceni';
 import { SITE } from '../../../lib/config';
 import { kmText } from '../../../lib/data';
 import { DNY, denText, schemaSpec } from '../../../lib/oteviraci-doba';
@@ -60,10 +62,14 @@ const stitky = [
   n.bezlepek ? 'Bezlepkové' : '',
 ].filter(Boolean);
 
+const hod = (await souhrnHodnoceni())[k.id];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CafeOrCoffeeShop',
   name: k.nazev,
+  ...(hod && hod[1] > 0
+    ? { aggregateRating: { '@type': 'AggregateRating', ratingValue: hod[0], ratingCount: hod[1], bestRating: 5, worstRating: 1 } }
+    : {}),
   url: new URL(kavarnaUrl(k), SITE.url).href,
   address: { '@type': 'PostalAddress', streetAddress: k.ulice ?? undefined, postalCode: k.psc ?? undefined, addressLocality: k.mesto, addressCountry: 'CZ' },
   geo: { '@type': 'GeoCoordinates', latitude: k.lat, longitude: k.lon },
@@ -96,6 +102,9 @@ const jsonLd = {
         <p class="kd__typ"><span class="tag">☕ Kavárna</span> <Neovereno overeno={k.overeno} /></p>
         <h1>{k.nazev}</h1>
         <p class="kd__adr">📍 {adr || k.mesto}</p>
+        <a class="kd__hod" href="#hodnoceni">
+          <span class="hod-mini" data-hod-id={k.id}><span class="hv" style="--p:0%"></span><span class="hod-mini__nic">Zatím bez hodnocení – ohodnoťte jako první</span></span>
+        </a>
         {t && <p class="kd__stav" data-oh={JSON.stringify(t)}><span class="stav"></span></p>}
         {stitky.length > 0 && <p class="kd__tagy">{stitky.map((s) => <span class="tag tag--zelena">{s}</span>)}</p>}
         <p class="kd__akce">
@@ -152,6 +161,7 @@ const jsonLd = {
             </details>
           )
         }
+        <Hodnoceni id={k.id} url={kavarnaUrl(k)} nazev={k.nazev} ldVHtml={!!(hod && hod[1] > 0)} />
         {
           overene.length > 0 && (
             <section class="kd__overene">
@@ -266,6 +276,14 @@ const jsonLd = {
     gap: 0.5rem;
     align-items: center;
     margin: 0 0 0.6rem;
+  }
+  .kd__hod {
+    display: inline-block;
+    margin: -0.35rem 0 0.75rem;
+    text-decoration: none;
+  }
+  .kd__hod .hod-mini {
+    font-size: 0.9rem;
   }
   .kd__adr {
     margin: 0 0 0.4rem;
