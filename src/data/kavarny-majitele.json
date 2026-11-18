@@ -1,4 +1,56 @@
 {
   "_popis": "Údaje kaváren upravené majiteli přes /sprava-kavarny/. Přepisuje workflow Synchronizace kaváren, ručně neupravovat.",
-  "kavarny": {}
+  "kavarny": {
+    "m0e4cfe5ee": {
+      "telefon": "+420 725 069 213",
+      "web": "https://www.buddha-bar.cz/",
+      "popis": "Asijská fusion restaurace a sushi bar v Jakubské ulici na Starém Městě, součást světové sítě Buddha-Bar. Nedělní brunch od 12 do 16 h (říjen až duben) s asijskými specialitami a sushi. Pro rodiny je tu dětský koutek a děti do 5 let mají brunch zdarma. Večer (úterý až sobota) autorské sushi rolky, koktejly a DJ. Od června do září je v neděli zavřeno.",
+      "oteviraciDoba": "Su 12:00-16:00",
+      "vlastnosti": [
+        "brunch",
+        "dorty",
+        "karta",
+        "deti"
+      ],
+      "overeno": "2026-11-16",
+      "novy": {
+        "nazev": "Buddha-Bar Prague",
+        "ulice": "Jakubská 649/8",
+        "mesto": "Praha",
+        "obvod": "Praha 1",
+        "psc": "11000",
+        "lat": 50.088217,
+        "lon": 14.425799,
+        "url": "/kavarny/praha/buddha-bar-prague/"
+      }
+    },
+    "mae8eea6fb": {
+      "telefon": "+420 736 243 150",
+      "web": "https://offlinebar.cz/",
+      "rezervace": "https://offlinebar.cz/",
+      "instagram": "https://www.instagram.com/offline.zlin/",
+      "popis": "OFFLINE je matcha bar v srdci Zlína, kde si můžeš na chvíli odpočinout a vypnout. Čeká tě více než 20 druhů matcha drinků, od klasiky až po originální kombinace, výběrová káva, čerstvé pečivo a skvělý brunch. Dej si vajíčka na tři způsoby, French toast nebo něco sladkého z naší vitríny. Ať už vyrážíš na brunch s kamarády, na rychlé kafe nebo si chceš jen udělat radost, u nás jsi správně. Najdeš nás v přízemí OC Zlaté Jablko ve Zlíně. Na chvíli vypni. Buď OFFLINE. 💙",
+      "oteviraciDoba": "Mo-Fr 08:00-21:00; Sa-Su 09:00-21:00",
+      "vlastnosti": [
+        "snidane",
+        "brunch",
+        "vyberovaKava",
+        "dorty",
+        "wifi",
+        "bezbarierove",
+        "karta"
+      ],
+      "overeno": "2026-11-08",
+      "novy": {
+        "nazev": "Offline bar",
+        "ulice": "Náměstí Míru 174",
+        "mesto": "Zlín",
+        "obvod": null,
+        "psc": "76001",
+        "lat": 49.2263,
+        "lon": 17.668165,
+        "url": "/kavarny/zlin/offline-bar/"
+      }
+    }
+  }
 }
