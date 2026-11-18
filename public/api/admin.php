@@ -61,7 +61,8 @@ summary time{margin-left:auto}
 .udaje dd.zmena{background:#fff3cd;border-radius:4px;padding:0 .3rem}
 .udaje small{display:block}
 .akce{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
-td.akce{margin:0}
+td.akce{display:table-cell;margin:0;white-space:nowrap;text-align:right}
+td.akce>*{display:inline-flex;vertical-align:middle;margin:.15rem 0 .15rem .4rem}
 form{margin:0}
 button{font:inherit;font-size:14px;padding:.45rem .9rem;border-radius:8px;border:1px solid var(--linka);background:#fff;color:var(--text);cursor:pointer;transition:transform .1s ease,background-color .15s ease}
 button:hover{background:#fbf0ee}
