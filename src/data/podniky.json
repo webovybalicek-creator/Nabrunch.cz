@@ -5704,5 +5704,52 @@
    "/wp-content/uploads/2025/03/walter3.jpg",
    "/wp-content/uploads/2025/03/walter6.jpg"
   ]
+ },
+ {
+  "id": 2356,
+  "slug": "bagel-lounge-karlovy-vary",
+  "nazev": "Bagel Lounge Karlovy Vary",
+  "datum": "2026-11-18 18:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Karlovy Vary"
+  ],
+  "adresa": "T. G. Masaryka 825/45, Karlovy Vary",
+  "lat": 50.2300049,
+  "lon": 12.8683299,
+  "oteviraciDoba": [
+   "Po - Čt: 8:00 - 17:00",
+   "Pá - So: 8:00 - 18:00",
+   "Ne: 8:00 - 17:00"
+  ],
+  "web": "https://bagellounge.cz/menu/karlovy_vary",
+  "instagram": "@bagellounge_karlovyvary",
+  "instagramUrl": "https://www.instagram.com/bagellounge_karlovyvary/",
+  "telefon": "+420720022123",
+  "telefonText": "+420 720 022 123",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bagel+Lounge,+T.+G.+Masaryka+825/45,+Karlovy+Vary",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Snídaně se tu podávají celý den. Dejte si bagel s vejcem a slaninou, klasiku s lososem, smetanovým sýrem a kapary, nebo snídaňový talíř s volskými oky, párky a bagelem.</p>",
+  "popis": "<p>Bagel Lounge je kavárna a bistro na pěší zóně T. G. Masaryka v centru Karlových Varů, pár minut chůze od Hotelu Thermal a kolonád. Byl jedním z prvních podniků, které do Varů přinesly moderní gastro koncept, a značka se odtud rozrostla i do Prahy.</p>\n\n<h2 class=\"wp-block-heading\">Bagely a snídaně celý den</h2>\n\n<p>Hlavní roli tu hrají <strong>bagely z vlastní výroby</strong> v mnoha variantách: se smetanovým sýrem a avokádem, s uzeným lososem, červenou cibulí a kapary, s roastbeefem a rukolou nebo s vejcem a slaninou. Na hlad je tu <strong>snídaňový talíř</strong> s vejci, párky a salátem a pro větší chuť i bagel ve stylu burgeru v černé sezamové bulce. Snídaně se podávají po celý den, takže brunch stihnete i odpoledne.</p>\n\n<h2 class=\"wp-block-heading\">Káva, dezerty a otevřeno každý den</h2>\n\n<p>K bagelu si můžete dát kávu, domácí limonádu nebo něco sladkého. Otevřeno je <strong>každý den od 8:00</strong>, v pátek a v sobotu do 18:00. V nabídce jsou i bezlepkové a veganské varianty. Stůl si můžete zarezervovat online na webu.</p>",
+  "seoTitulek": "Bagel Lounge Karlovy Vary – snídaně a bagely celý den, menu a otevírací doba",
+  "seoPopis": "Bagel Lounge na T. G. Masaryka v Karlových Varech: snídaně celý den, bagely z vlastní výroby, snídaňový talíř a káva. Otevřeno denně od 8:00.",
+  "foto": "/wp-content/uploads/2026/11/bagel-lounge-karlovy-vary-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/bagel-lounge-karlovy-vary-2.jpg",
+   "/wp-content/uploads/2026/11/bagel-lounge-karlovy-vary-3.jpg",
+   "/wp-content/uploads/2026/11/bagel-lounge-karlovy-vary-4.jpg"
+  ]
  }
 ]
