@@ -5796,5 +5796,53 @@
   "galerie": [
    "/wp-content/uploads/2026/11/republica-coffee-karlovy-vary-2.jpg"
   ]
+ },
+ {
+  "id": 2358,
+  "slug": "lekarna-city-roasters-karlovy-vary",
+  "nazev": "Lékárna by City Roasters Karlovy Vary",
+  "datum": "2026-11-18 20:30:00",
+  "doporuceny": false,
+  "lokality": [
+   "Karlovy Vary"
+  ],
+  "adresa": "T. G. Masaryka 941/47, Karlovy Vary",
+  "lat": 50.2299932,
+  "lon": 12.8680661,
+  "oteviraciDoba": [
+   "Po - Čt: 7:30 - 19:00",
+   "Pá: 7:30 - 20:00",
+   "So: 8:00 - 20:00",
+   "Ne: 8:00 - 19:00"
+  ],
+  "web": null,
+  "instagram": "@lekarnacityroasters",
+  "instagramUrl": "https://www.instagram.com/lekarnacityroasters/",
+  "telefon": "+420720347166",
+  "telefonText": "+420 720 347 166",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Kavárna+Lékárna+by+City+Roasters,+T.+G.+Masaryka+941/47,+Karlovy+Vary",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si toast s avokádem, rajčaty a vejcem nebo granolu s jogurtem a čerstvým ovocem, k tomu filtrovanou kávu z City Roasters. Na sladko jsou tu rolované palačinky.</p>",
+  "popis": "<p>Lékárna by City Roasters je stylová kavárna v prostorách bývalé lékárny na pěší zóně T. G. Masaryka v centru Karlových Varů. Provozuje ji místní pražírna City Roasters, která jako první přivezla do Varů výběrovou kávu. Kavárna se pravidelně objevuje v průvodci European Coffee Trip a většinu hostů tvoří místní.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně od 7:30</h2>\n\n<p>Otevírá <strong>ve všední dny už v 7:30</strong>, o víkendu v 8:00, takže je to jedna z mála kaváren ve Varech, kde se nasnídáte opravdu brzy. Na snídani si můžete dát <strong>toast s avokádem, rajčaty a vejcem</strong>, míchaná vejce, granolu s jogurtem a ovocem nebo vyhlášený lososový sendvič. Na sladko jsou tu rolované palačinky s ovocem.</p>\n\n<h2 class=\"wp-block-heading\">Výběrová káva a domácí dorty</h2>\n\n<p>Káva je z vlastní pražírny, k mání je espresso i filtr a zrna si můžete koupit domů. Ke kávě se hodí domácí dorty a zákusky, třeba trubičky se šlehačkou. Otevřeno je každý den, v pátek a v sobotu do 20:00.</p>",
+  "seoTitulek": "Lékárna by City Roasters Karlovy Vary – snídaně od 7:30, káva a otevírací doba",
+  "seoPopis": "Kavárna Lékárna by City Roasters v Karlových Varech: snídaně od 7:30, avokádový toast, granola, lososový sendvič a výběrová káva z vlastní pražírny.",
+  "foto": "/wp-content/uploads/2026/11/lekarna-city-roasters-karlovy-vary-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/lekarna-city-roasters-karlovy-vary-2.jpg",
+   "/wp-content/uploads/2026/11/lekarna-city-roasters-karlovy-vary-3.jpg",
+   "/wp-content/uploads/2026/11/lekarna-city-roasters-karlovy-vary-4.jpg"
+  ]
  }
 ]
