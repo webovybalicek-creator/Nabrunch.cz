@@ -118,6 +118,8 @@ img.mini{width:44px;height:33px;object-fit:cover;border-radius:6px;vertical-alig
 .lepkave{position:sticky;bottom:0;background:linear-gradient(transparent,var(--pozadi) 30%);padding:1rem 0 .8rem}
 code{font-size:.9em;background:#f6ebe8;padding:.05rem .3rem;border-radius:4px}
 tr[hidden]{display:none}
+form.smazat{margin:1.5rem 0 0;padding-top:1rem;border-top:1px dashed var(--linka)}
+form.smazat small{color:var(--slaba)}
 .prihlaseni{display:flex;flex-direction:column;gap:.75rem;max-width:22rem}
 .prihlaseni label{display:flex;flex-direction:column;gap:.3rem;font-size:14px;color:var(--slaba)}
 input{font:inherit;padding:.55rem .7rem;border:1px solid var(--linka);border-radius:8px;background:#fff}
@@ -252,7 +254,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $a = (string)($_POST['akce'] ?? '');
     if (str_starts_with($a, 'obsah-')) {
         $obsahPost($a); // při úspěchu přesměruje, při chybě znovu ukáže formulář s chybami
-        $_GET['z'] = ['obsah-podnik' => 'podnik', 'obsah-clanek' => 'clanek', 'obsah-token' => 'nastaveni'][$a] ?? 'schvalit';
+        $_GET['z'] = ['obsah-podnik' => 'podnik', 'obsah-clanek' => 'clanek', 'obsah-token' => 'nastaveni', 'obsah-podnik-smazat' => 'podnik', 'obsah-clanek-smazat' => 'clanek'][$a] ?? 'schvalit';
     } elseif ($a === 'upravit') {
         $k = (string)($_POST['id'] ?? '');
         $chybyUpravy = $upravit($k, $_POST);
@@ -359,7 +361,7 @@ if ($zal === 'upravit') {
     stranka('Upravit: ' . ($n['nazev'] ?? $nazev($k)), $h);
 }
 $cekaPocet = count($recenzeCeka) + count($zadosti) + count($zmeny);
-$ZALOZKY = ['schvalit' => 'Ke schválení' . ($cekaPocet ? " <b>$cekaPocet</b>" : ''), 'hodnoceni' => 'Hodnocení', 'fotky' => 'Fotky', 'majitele' => 'Majitelé', 'profily' => 'Změny kaváren',
+$ZALOZKY = ['schvalit' => 'Ke schválení' . ($cekaPocet ? " <b>$cekaPocet</b>" : ''), 'hodnoceni' => 'Hodnocení', 'fotky' => 'Fotky majitelů', 'majitele' => 'Majitelé', 'profily' => 'Změny kaváren',
     'podniky' => 'Podniky', 'clanky' => 'Články', 'nastaveni' => 'Nastavení'];
 if (!isset($ZALOZKY[$zal]) && !in_array($zal, OBSAH_ZALOZKY, true)) $zal = 'schvalit';
 $aktivni = ['podnik' => 'podniky', 'clanek' => 'clanky'][$zal] ?? $zal;
@@ -443,7 +445,7 @@ if ($zal === 'hodnoceni') {
 }
 
 if ($zal === 'fotky') {
-    $h .= '<h2>Fotky od majitelů</h2><p class="pozn">Nejnovější nahoře. Na web jdou při další synchronizaci (každé 3 hodiny).</p>';
+    $h .= '<h2>Fotky od majitelů kaváren</h2><p class="pozn">Fotky, které nahráli majitelé na /sprava-kavarny/. Nejnovější nahoře, na web jdou při další synchronizaci (každé 3 hodiny). Fotky ověřených podniků se mění v záložce Podniky.</p>';
     if (!$fotkyVse) $h .= '<p class="prazdne">Zatím žádné fotky.</p>';
     $h .= '<div class="fotky">';
     foreach ($fotkyVse as $f) {

@@ -12,6 +12,20 @@ const CESTA_PODNIKY = 'src/data/podniky.json';
 const CESTA_LOKALITY = 'src/data/lokality.json';
 const CESTA_SEO = 'src/data/seo-wp.json';
 const CESTA_BLOG = 'src/content/blog/';
+const CESTA_HTACCESS = 'public/.htaccess';
+
+/** Přidá přesměrování 301 smazané stránky do .htaccess (do bloku mod_rewrite, sekce „Smazané v administraci“) */
+function htaccess_presmeruj(string $ht, string $cesta, string $kam): string
+{
+    $pravidlo = 'RewriteRule ^' . trim($cesta, '/') . '/?$ ' . $kam . ' [L,R=301]';
+    if (str_contains($ht, $pravidlo)) return $ht;
+    $znacka = '  # Smazané v administraci (přesměrování 301)';
+    if (str_contains($ht, $znacka)) return str_replace($znacka, $znacka . "\n  " . $pravidlo, $ht);
+    $zac = strpos($ht, '<IfModule mod_rewrite.c>');
+    $konec = $zac === false ? false : strpos($ht, '</IfModule>', $zac);
+    if ($konec === false) throw new GitHubChyba('V .htaccess chybí blok mod_rewrite, přesměrování nejde přidat.');
+    return substr($ht, 0, $konec) . "\n" . $znacka . "\n  " . $pravidlo . "\n" . substr($ht, $konec);
+}
 const KUCHYNE = ['Klasická', 'Zdravá/fitness', 'Veganská', 'Orientální'];
 const ATMOSFERA = ['Sezení uvnitř', 'Zahrádka', 'Instagram-friendly místo', 'Pet-friendly'];
 const SEZENI = ['Uvnitř', 'Zahrádka'];
@@ -272,6 +286,61 @@ $obsahPost = function (string $a) use (&$obsahChyby, $gh, $tokenSoubor, $zpracuj
         $hotovo('podniky', ($novy ? 'Podnik přidán' : 'Podnik uložen') . " (/podniky/{$vysledek['slug']}/).", $sha);
     }
 
+    // ---- smazání podniku
+    if ($a === 'obsah-podnik-smazat') {
+        $id = (string)($_POST['id'] ?? '');
+        $info = [];
+        try {
+            $sha = $g->uprav('Smazán podnik (administrace)', function (callable $cti) use ($id, &$info): array {
+                $podniky = json_decode((string)$cti(CESTA_PODNIKY), true);
+                $i = null;
+                foreach ((array)$podniky as $k => $p) if ((string)$p['id'] === $id) $i = $k;
+                if ($i === null) throw new GitHubChyba('Podnik nenalezen (už smazán?).');
+                $p = $podniky[$i];
+                array_splice($podniky, $i, 1);
+                // Kam přesměrovat: lokalita, která po smazání pořád má podniky, jinak přehled podniků
+                $lok = json_decode((string)$cti(CESTA_LOKALITY), true) ?: [];
+                $zbyle = array_merge(...array_map(fn($x) => $x['lokality'], $podniky ?: [['lokality' => []]]));
+                $kam = '/podniky/';
+                $poradi = $p['lokality'];
+                usort($poradi, fn($a, $b) => (int)!preg_match('/^Praha \d+$/', $a) <=> (int)!preg_match('/^Praha \d+$/', $b));
+                foreach ($poradi as $l) if (in_array($l, $zbyle, true)) { $kam = '/lokalita/' . ($lok[$l] ?? nb_slug($l)) . '/'; break; }
+                $cesta = '/podniky/' . $p['slug'] . '/';
+                $out = [CESTA_PODNIKY => nb_json($podniky) . "\n", CESTA_HTACCESS => htaccess_presmeruj((string)$cti(CESTA_HTACCESS), $cesta, $kam)];
+                $seo = json_decode((string)$cti(CESTA_SEO), true) ?: [];
+                if (isset($seo[$cesta])) { unset($seo[$cesta]); $out[CESTA_SEO] = nb_json($seo) . "\n"; }
+                $info = ['nazev' => $p['nazev'], 'kam' => $kam];
+                return $out;
+            });
+        } catch (GitHubChyba $ex) {
+            $obsahChyby[] = $ex->getMessage();
+            return;
+        }
+        $hotovo('podniky', "Podnik {$info['nazev']} smazán, stará adresa přesměruje na {$info['kam']}.", $sha);
+    }
+
+    // ---- smazání článku
+    if ($a === 'obsah-clanek-smazat') {
+        $slug = preg_replace('/[^a-z0-9-]/', '', (string)($_POST['slug_puvodni'] ?? ''));
+        $nazev = '';
+        try {
+            $sha = $g->uprav("Smazán článek /$slug/ (administrace)", function (callable $cti) use ($slug, &$nazev): array {
+                $cesta = CESTA_BLOG . "$slug.md";
+                $md = $slug !== '' ? $cti($cesta) : null;
+                if ($md === null) throw new GitHubChyba('Článek nenalezen (už smazán?).');
+                $nazev = fm_hodnota(fm_rozdel($md)[0], 'title') ?? $slug;
+                $out = [$cesta => null, CESTA_HTACCESS => htaccess_presmeruj((string)$cti(CESTA_HTACCESS), "/$slug/", '/blog/')];
+                $seo = json_decode((string)$cti(CESTA_SEO), true) ?: [];
+                if (isset($seo["/$slug/"])) { unset($seo["/$slug/"]); $out[CESTA_SEO] = nb_json($seo) . "\n"; }
+                return $out;
+            });
+        } catch (GitHubChyba $ex) {
+            $obsahChyby[] = $ex->getMessage();
+            return;
+        }
+        $hotovo('clanky', "Článek „{$nazev}“ smazán, stará adresa přesměruje na blog.", $sha);
+    }
+
     // ---- článek
     if ($a === 'obsah-clanek') {
         $slug = (string)($_POST['slug_puvodni'] ?? '');
@@ -461,7 +530,10 @@ $obsahStranka = function (string $zal, string $nav, string $hotovoHtml) use (&$o
             . '<fieldset><legend>Vyhledávače</legend>' . ($seoWp ? '<p class="pozn">Titulek a popis jsou v <code>seo-wp.json</code> (převzaté z WordPressu) – upravují se tam.</p>' : '')
             . $pole('seo_t', 'Titulek pro Google', $seoT, 'text', ' maxlength="200"', 'prázdné = „Název – snídaně a brunch v …“')
             . $oblast('seo_d', 'Popis pro Google', $seoD, 2, 'cca 150 znaků') . '</fieldset>'
-            . '<div class="akce lepkave"><button class="hlavni">' . ($id === 'novy' ? 'Přidat podnik' : 'Uložit a nasadit') . '</button><a class="tlacitko" href="?z=podniky">Zrušit</a></div></form>';
+            . '<div class="akce lepkave"><button class="hlavni">' . ($id === 'novy' ? 'Přidat podnik' : 'Uložit a nasadit') . '</button><a class="tlacitko" href="?z=podniky">Zrušit</a></div></form>'
+            . ($id !== 'novy' ? '<form method="post" class="smazat" data-potvrdit="' . $e('Opravdu smazat podnik „' . $p['nazev'] . '“? Stránka zmizí z webu a stará adresa se přesměruje.') . '">'
+                . '<input type="hidden" name="csrf" value="' . $e($csrf) . '"><input type="hidden" name="akce" value="obsah-podnik-smazat"><input type="hidden" name="id" value="' . $e($id) . '">'
+                . '<button class="nebezpecne">Smazat podnik</button> <small>Stará adresa se přesměruje na stránku lokality. Vrátit jde z historie na GitHubu.</small></form>' : '');
         stranka($id === 'novy' ? 'Nový podnik' : 'Upravit: ' . $p['nazev'], $h);
     }
 
@@ -527,7 +599,10 @@ $obsahStranka = function (string $zal, string $nav, string $hotovoHtml) use (&$o
             . '<fieldset><legend>Vyhledávače</legend>' . $oblast('description', 'Popis pro Google', $c['description'], 2, 'cca 150 znaků')
             . $pole('seoTitle', 'Titulek pro Google', $c['seoTitle'], 'text', ' maxlength="200"', 'nepovinné, jinak nadpis')
             . ($seoWp ? '<p class="pozn">Pro tuto stránku platí titulek a popis ze <code>seo-wp.json</code> (mají přednost):</p>' . $pole('seo_t', 'Titulek (seo-wp.json)', $seoT) . $oblast('seo_d', 'Popis (seo-wp.json)', $seoD, 2) : '')
-            . '</fieldset><div class="akce lepkave"><button class="hlavni">' . ($slug === '' ? 'Přidat článek' : 'Uložit a nasadit') . '</button><a class="tlacitko" href="?z=clanky">Zrušit</a></div></form>';
+            . '</fieldset><div class="akce lepkave"><button class="hlavni">' . ($slug === '' ? 'Přidat článek' : 'Uložit a nasadit') . '</button><a class="tlacitko" href="?z=clanky">Zrušit</a></div></form>'
+            . ($slug !== '' ? '<form method="post" class="smazat" data-potvrdit="' . $e('Opravdu smazat článek „' . $c['title'] . '“? Stará adresa se přesměruje na blog.') . '">'
+                . '<input type="hidden" name="csrf" value="' . $e($csrf) . '"><input type="hidden" name="akce" value="obsah-clanek-smazat"><input type="hidden" name="slug_puvodni" value="' . $e($slug) . '">'
+                . '<button class="nebezpecne">Smazat článek</button> <small>Stará adresa se přesměruje na blog. Vrátit jde z historie na GitHubu.</small></form>' : '');
         stranka($slug === '' ? 'Nový článek' : 'Upravit: ' . $c['title'], $h);
     }
 };
