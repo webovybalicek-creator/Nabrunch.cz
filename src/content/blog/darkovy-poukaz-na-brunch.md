@@ -50,10 +50,16 @@ obdobi: [zima]
 <li><a href="/podniky/bistro-central-olomouc/"><strong>Bistro Central</strong></a> – <a href="https://www.bistrocentral.cz/poukaz">poukaz</a> do italského bistra, kde den začíná snídaní.</li>
 </ul>
 
+<h2>Pardubice</h2>
+
+<ul>
+<li><a href="/podniky/galerie-cafe-pardubice/"><strong>Galerie Café</strong></a> – parková restaurace v Tyršových sadech. Tištěné poukazy v hodnotě 500, 1 000 a 1 500 Kč si vyzvednete přímo v restauraci, platí 6 měsíců od vystavení.</li>
+</ul>
+
 <h2>Mimo velká města</h2>
 
 <ul>
-<li><a href="/podniky/paloma-pruhonice/"><strong>Paloma Průhonice</strong></a> – <a href="https://www.palomapruhonice.cz/vouchery">vouchery</a> do cukrárny a pekárny u průhonického parku. Spoj dárek s procházkou.</li>
+<li><a href="/podniky/paloma-pruhonice/"><strong>Paloma Průhonice</strong></a> – <a href="https://www.palomapruhonice.cz/vouchery">vouchery</a> do cukrárny a pekárny u průhonického parku. Spojte dárek s procházkou.</li>
 <li><a href="/podniky/flek-na-kafe-celakovice/"><strong>Flek na kafe</strong></a> (Čelákovice) – <a href="https://www.fleknakafe.cz/darkove-poukazy/">dárkové poukazy</a> i dárkové předměty v e-shopu.</li>
 <li><a href="/podniky/kafe-doma-litomerice/"><strong>Kafe doma</strong></a> (Litoměřice) – e-vouchery objednáte přes jejich web.</li>
 <li><a href="/podniky/dvorek-boretice/"><strong>Dvorek Bořetice</strong></a> – poukazy v hodnotě 200, 500, 700 a 1 000 Kč. Pozor, od poloviny prosince do poloviny února má Dvorek zimní pauzu, poukaz se tedy hodí spíš na jaro.</li>
