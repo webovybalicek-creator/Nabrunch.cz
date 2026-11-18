@@ -27,7 +27,7 @@ DirectoryIndex index.html
   RewriteRule ^_data(/|$) - [F,L]
 
   # Administrace (schvalování majitelů, úprav a fotek)
-  RewriteRule ^admin/?$ /api/admin.php [L]
+  RewriteRule ^(sprava|admin)/?$ /api/admin.php [L]
 
   # Staré adresy z WordPressu
   RewriteRule ^nezarazene/?$ /blog/ [L,R=301]

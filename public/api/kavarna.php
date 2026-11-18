@@ -15,7 +15,7 @@
  * GET  akce=pustit|vratit&s=<id>&t=            → změna profilu: zveřejnit / vrátit předchozí verzi
  * GET  akce=smazatfoto&s=&f=&t=                → smazání fotky správcem
  * GET  akce=zablokovat&o=&t=                   → zablokovat majitele a stáhnout profil
- * GET  admin=<podpis>                          → přesměruje do /admin/ (správa v api/admin.php)
+ * GET  admin=<podpis>                          → přesměruje do /sprava/ (správa v api/admin.php)
  */
 declare(strict_types=1);
 require __DIR__ . '/_smtp.php';
@@ -122,7 +122,7 @@ $fotky = function (string $k) use ($fotkyDir): array {
 $akce = (string)($_GET['akce'] ?? $_POST['akce'] ?? '');
 
 /**
- * Zásahy správce – společné pro odkazy z e-mailu i pro /admin/.
+ * Zásahy správce – společné pro odkazy z e-mailu i pro /sprava/.
  * schvalit|zamitnout|zablokovat: $id = id majitele; pustit|vratit: $id = id kavárny; smazatfoto: $id = kavárna, $f = fotka.
  * Vrací [titulek, html].
  */
@@ -530,7 +530,7 @@ if (isset($_GET['export'])) {
     json_out(200, ['kavarny' => (object)$out]);
 }
 
-// ---------------------------------------------------------------- přehled pro správce → /admin/ (starý odkaz z e-mailů přihlásí)
+// ---------------------------------------------------------------- přehled pro správce → /sprava/ (starý odkaz z e-mailů přihlásí)
 if (isset($_GET['admin'])) {
     header('Location: ' . $WEB . '/api/admin.php?admin=' . rawurlencode((string)$_GET['admin']), true, 302);
     exit;
