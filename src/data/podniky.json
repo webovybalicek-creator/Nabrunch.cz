@@ -3263,11 +3263,11 @@
   "lokality": [
    "Poděbrady"
   ],
-  "adresa": "T.G. Masaryka 655, Poděbrady",
-  "lat": 50.150988,
-  "lon": 15.1346249,
+  "adresa": "T. G. Masaryka 655, Poděbrady",
+  "lat": 50.14609,
+  "lon": 15.12148,
   "oteviraciDoba": [
-   "Po - Čtv: 8:30 - 23:00",
+   "Po - Čt: 8:30 - 23:00",
    "Pá - So: 8:30 - 23:30",
    "Ne: 8:30 - 23:00"
   ],
@@ -3289,14 +3289,15 @@
   ],
   "atmosfera": [
    "Sezení uvnitř",
+   "Zahrádka",
    "Instagram-friendly místo"
   ],
   "sezeni": [],
   "tipNadpis": "Náš brunch tip",
-  "tip": "<p>Míchaná vejce v bulce se sýrem, karamelizovanou cibulí a majonézou v Café Oliver jsou TOP!</p>",
-  "popis": "<h2 class=\"wp-block-heading\"><strong>Café Oliver Poděbrady</strong> je útulná kavárna v srdci lázeňského města.</h2>\n\n<p>Okouzlí vás příjemnou atmosférou a prvotřídní nabídkou. Ideální místo pro pomalé ráno nebo víkendový odpočinek, kde si můžete vychutnat vydatnou <strong>snídani</strong> či pestrý <strong>brunch</strong> s přáteli. V nabídce nechybí čerstvě připravené vejce na různé způsoby, domácí pečivo, sladké palačinky ani kvalitní káva z místní pražírny. Café Oliver je místem, kde začíná váš den s úsměvem.</p>\n\n<p></p>",
-  "seoTitulek": "Café Oliver Poděbrady - naBrunch.cz",
-  "seoPopis": "Café Oliver Poděbrady. Snídaně a brunche, domácí pečivo, káva z místní pražírny a pohodová atmosféra v centru lázeňského města Poděbrad.",
+  "tip": "<p>Snídaně se podávají každý den od 8:30 do 10:30. Dejte si <strong>vejce Benedikt</strong> nebo bagel se slaninou, cheddarem a vejcem a k tomu máslový croissant z Vilémova pekařství.</p>",
+  "popis": "<h2 class=\"wp-block-heading\"><strong>Café Oliver Poděbrady</strong> je kavárna a restaurace v srdci lázeňského města.</h2>\n\n<p>Najdete ji na náměstí T. G. Masaryka u poděbradské kolonády. Otevřela v roce 2011 a je vlajkovou lodí místní skupiny La Place, pod kterou patří i Vilémovo pekařství, restaurace Cucina nebo Náš Hostinec. Inspektoři průvodce Gault&amp;Millau ocenili atmosféru francouzské kavárny a profesionální obsluhu.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně každý den do 10:30</h2>\n\n<p>Snídaňové menu se podává <strong>denně od otevření v 8:30 do 10:30</strong>, i o víkendu. Vybírat můžete z vajec na různé způsoby (míchaná se slaninou, omelety, vejce do skla, ham &amp; eggs), <strong>vejce Benedikt</strong>, anglické snídaně, bagelu s vejcem a cheddarem, bowlu z pohanky se zastřenými vejci a avokádem nebo kváskového chleba s avokádem. Na sladko je krupicová kaše s čerstvým ovocem. Veškeré pečivo pochází z <strong>Vilémova pekařství</strong> o pár kroků dál.</p>\n\n<h2 class=\"wp-block-heading\">Káva, dorty a celý den jídla</h2>\n\n<p>Káva se mele z vlastní značky La Place Coffee, k ní se hodí domácí dorty, jejichž nabídka se mění každý den. Od 11:30 platí stálé menu a ve všední dny i polední nabídka. Rezervace přijímají jen telefonicky.</p>",
+  "seoTitulek": "Café Oliver Poděbrady – snídaně do 10:30, menu a otevírací doba",
+  "seoPopis": "Café Oliver u kolonády v Poděbradech: snídaně denně 8:30–10:30, vejce Benedikt, anglická snídaně, pečivo z Vilémova pekařství. Menu, otevírací doba a tipy.",
   "foto": "/wp-content/uploads/2025/05/pribeh-2.jpg",
   "galerie": [
    "/wp-content/uploads/2025/05/galerie-3.jpg",
