@@ -5751,5 +5751,50 @@
    "/wp-content/uploads/2026/11/bagel-lounge-karlovy-vary-3.jpg",
    "/wp-content/uploads/2026/11/bagel-lounge-karlovy-vary-4.jpg"
   ]
+ },
+ {
+  "id": 2357,
+  "slug": "republica-coffee-karlovy-vary",
+  "nazev": "Republica Coffee Karlovy Vary",
+  "datum": "2026-11-18 20:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Karlovy Vary"
+  ],
+  "adresa": "T. G. Masaryka 894/28, Karlovy Vary",
+  "lat": 50.2300782,
+  "lon": 12.8690829,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: 9:00 - 18:00"
+  ],
+  "web": null,
+  "instagram": "@republicacoffeecz",
+  "instagramUrl": "https://www.instagram.com/republicacoffeecz/",
+  "telefon": "+420608383657",
+  "telefonText": "+420 608 383 657",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Republica+Coffee,+T.+G.+Masaryka+894/28,+Karlovy+Vary",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Na slano si dejte vejce zapečená se zeleninou a koriandrem s grilovaným kváskovým chlebem, na sladko tvarohové lívanečky s jahodami a zmrzlinou.</p>",
+  "popis": "<p>Republica Coffee je kavárna na pěší zóně T. G. Masaryka v centru Karlových Varů, kousek od Hotelu Thermal, kde se koná filmový festival. Patří k nejoblíbenějším kavárnám ve městě a místní i návštěvníci sem chodí hlavně na snídaně a výběrovou kávu. Prostředí je lehce industriální a v teplých měsících se sedí venku.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně každý den od rána</h2>\n\n<p>Snídaně se tu podávají ve všední dny od 8:00 a o víkendu od 9:00. Hosté chválí hlavně <strong>vejce Benedikt</strong> a <strong>anglickou snídani</strong>. Na slano jsou tu i vejce zapečená se zeleninou a koriandrem s grilovaným kváskovým chlebem, na sladko <strong>tvarohové lívanečky</strong> s jahodami a vanilkovou zmrzlinou.</p>\n\n<h2 class=\"wp-block-heading\">Káva a sladké</h2>\n\n<p>Kávu připravují pečlivě, ať už jde o espresso, nebo filtr. K ní se hodí domácí koláčky a zákusky, oblíbený je hlavně medovo-skořicový dort. Otevřeno je každý den do 18:00.</p>",
+  "seoTitulek": "Republica Coffee Karlovy Vary – snídaně, vejce Benedikt a otevírací doba",
+  "seoPopis": "Republica Coffee na T. G. Masaryka v Karlových Varech: snídaně denně, vejce Benedikt, anglická snídaně, tvarohové lívanečky a výběrová káva. Otevírací doba a adresa.",
+  "foto": "/wp-content/uploads/2026/11/republica-coffee-karlovy-vary-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/republica-coffee-karlovy-vary-2.jpg"
+  ]
  }
 ]
