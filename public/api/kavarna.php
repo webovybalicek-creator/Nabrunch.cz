@@ -133,7 +133,10 @@ $spravce = function (string $akce, string $id, string $f = '') use ($db, $KAV, $
         $st->execute([$o]);
         $m = $st->fetch();
         if (!$m) return ['Žádost nenalezena', ''];
-        $nazev = $KAV[$m['kavarna']][0] ?? $m['kavarna'];
+        // Název čerstvě z databáze – správce ho mohl u nové kavárny právě opravit
+        $st = $db->prepare('SELECT data FROM nove WHERE id = ?');
+        $st->execute([$m['kavarna']]);
+        $nazev = (json_decode((string)$st->fetchColumn(), true) ?: [])['nazev'] ?? $KAV[$m['kavarna']][0] ?? $m['kavarna'];
         if ($akce === 'zamitnout') {
             $db->prepare("UPDATE majitele SET stav = 'zamitnuto' WHERE id = ?")->execute([$o]);
             $db->prepare("UPDATE nove SET stav = 'zamitnuto' WHERE id = ?")->execute([$m['kavarna']]);
@@ -142,7 +145,9 @@ $spravce = function (string $akce, string $id, string $f = '') use ($db, $KAV, $
         if ($m['stav'] === 'ok') return ['Už schváleno', '<p>Žádost ' . htmlspecialchars($m['email']) . ' už byla schválená dřív.</p>'];
         $db->prepare("UPDATE majitele SET stav = 'ok', overeni = 'ručně' WHERE id = ?")->execute([$o]);
         $db->prepare("UPDATE nove SET stav = 'ok' WHERE id = ?")->execute([$m['kavarna']]);
-        $db->prepare("UPDATE profily SET stav = 'ok', duvod = NULL WHERE kavarna = ? AND verejna IS NOT NULL")->execute([$m['kavarna']]);
+        // Jen u nově založené kavárny: schválením se zveřejní i její údaje. U kavárny z OSM by to bez zveřejnění
+        // „vyřídilo“ čekající úpravu jiného majitele, takže ji necháme ve frontě.
+        $db->prepare("UPDATE profily SET stav = 'ok', duvod = NULL WHERE kavarna = ? AND verejna IS NOT NULL AND kavarna IN (SELECT id FROM nove)")->execute([$m['kavarna']]);
         posli($m['email'], "Přístup ke správě kavárny $nazev", "Dobrý den,\n\nvaši žádost jsme schválili. Údaje kavárny $nazev na naBrunch.cz upravíte tady:\n\n"
             . $odkazPrihlaseni($o) . "\n\nOdkaz si uložte, slouží k dalšímu přihlášení.\n\nnaBrunch.cz\n");
         return ['Schváleno', '<p>Přístup poslán na ' . htmlspecialchars($m['email']) . '.</p>'];

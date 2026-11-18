@@ -82,6 +82,16 @@ tr:last-child td{border-bottom:0}
 .fotky img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
 .fotky figcaption{padding:.5rem .7rem 0;font-size:14px;display:flex;flex-direction:column}
 .fotky form{padding:.5rem .7rem .7rem}
+.tlacitko{display:inline-flex;align-items:center;font-size:14px;padding:.45rem .9rem;border-radius:8px;border:1px solid var(--linka);background:#fff;color:var(--text);text-decoration:none}
+.tlacitko:hover{background:#fbf0ee}
+.uprava fieldset{border:1px solid var(--linka);border-radius:12px;background:#fff;padding:1rem 1.1rem;margin:0 0 1rem}
+.uprava legend{font-weight:600;color:var(--hneda);padding:0 .3rem}
+.uprava label{display:flex;flex-direction:column;gap:.25rem;font-size:13px;color:var(--slaba);margin-bottom:.7rem;flex:1;min-width:12rem}
+.uprava .radek{display:flex;flex-wrap:wrap;gap:0 .8rem}
+.uprava textarea{font:inherit;color:var(--text);padding:.55rem .7rem;border:1px solid var(--linka);border-radius:8px;resize:vertical}
+.uprava input:not([type=checkbox]){color:var(--text)}
+.uprava .vlastnosti{display:grid;grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));gap:.2rem .8rem}
+.uprava .vlastnosti label{flex-direction:row;align-items:center;gap:.4rem;color:var(--text);font-size:14px;margin:0;min-width:0}
 .prihlaseni{display:flex;flex-direction:column;gap:.75rem;max-width:22rem}
 .prihlaseni label{display:flex;flex-direction:column;gap:.3rem;font-size:14px;color:var(--slaba)}
 input{font:inherit;padding:.55rem .7rem;border:1px solid var(--linka);border-radius:8px;background:#fff}
@@ -158,15 +168,77 @@ $hodAkce = function (string $a, int $id) use ($hdb, $uloziste): array {
     return [['hod-schvalit' => 'Recenze schválena', 'hod-zamitnout' => 'Text recenze zamítnut', 'hod-smazat' => 'Hodnocení smazáno'][$a]];
 };
 
+// ---------------------------------------------------------------- úprava kavárny správcem
+/** Uloží údaje kavárny od správce a hned je zveřejní (u nové kavárny až po schválení). Vrací chyby, nebo []. */
+$upravit = function (string $k, array $post) use ($db): array {
+    $st = $db->prepare("SELECT id FROM majitele WHERE kavarna = ? AND stav != 'blokovan' ORDER BY (stav = 'ok') DESC, id DESC LIMIT 1");
+    $st->execute([$k]);
+    $majitel = (int)$st->fetchColumn();
+    if (!$majitel) return ['Kavárna nemá majitele.'];
+    $v = $post;
+    $v['vlastnosti'] = (array)($post['vlastnosti'] ?? []);
+    [$d, $chyby] = validuj($v);
+    $st = $db->prepare('SELECT * FROM nove WHERE id = ?');
+    $st->execute([$k]);
+    $n = $st->fetch();
+    if ($n) {
+        $txt = fn($x, $max) => mb_substr(trim(preg_replace('/\s+/u', ' ', (string)$x)), 0, $max);
+        $nazev = $txt($post['nazev'] ?? '', 100);
+        $ulice = $txt($post['ulice'] ?? '', 120);
+        $mesto = $txt($post['mesto'] ?? '', 80);
+        $psc = preg_replace('/\D/', '', (string)($post['psc'] ?? ''));
+        $lat = (float)str_replace(',', '.', (string)($post['lat'] ?? ''));
+        $lon = (float)str_replace(',', '.', (string)($post['lon'] ?? ''));
+        if (mb_strlen($nazev) < 2) $chyby[] = 'Vyplňte název kavárny.';
+        if ($ulice === '' || $mesto === '') $chyby[] = 'Vyplňte ulici a obec.';
+        if ($psc !== '' && strlen($psc) !== 5) $chyby[] = 'PSČ má 5 číslic.';
+        if ($lat < 48.5 || $lat > 51.1 || $lon < 12.0 || $lon > 18.9) $chyby[] = 'Souřadnice nejsou v Česku.';
+    }
+    if ($chyby) return $chyby;
+    $ted = date('c');
+    if ($n) {
+        $puv = json_decode($n['data'], true) ?: [];
+        $mestoNorm = preg_match('/^Praha\b/u', $mesto) ? 'Praha' : $mesto;
+        $obvod = $mestoNorm === 'Praha' && preg_match('/^1(\d)0\d\d$/', $psc, $mm) ? 'Praha ' . ($mm[1] === '0' ? '10' : $mm[1]) : ($puv['obvod'] ?? null);
+        // Adresa zveřejněné kavárny se nemění (zná ji Google), jinak podle nového názvu a obce
+        $url = $n['stav'] === 'ok' && !empty($puv['url']) ? $puv['url'] : '/kavarny/' . slugify($mestoNorm) . '/' . slugify($nazev) . '/';
+        $novy = ['nazev' => $nazev, 'ulice' => $ulice, 'mesto' => $mestoNorm, 'obvod' => $obvod, 'psc' => $psc ?: null, 'lat' => round($lat, 6), 'lon' => round($lon, 6), 'url' => $url];
+        $db->prepare('UPDATE nove SET data = ? WHERE id = ?')->execute([json_encode($novy, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), $k]);
+    }
+    $json = json_encode($d, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    $st = $db->prepare('SELECT 1 FROM profily WHERE kavarna = ?');
+    $st->execute([$k]);
+    if ($st->fetchColumn()) {
+        $db->prepare("UPDATE profily SET data = ?, predchozi = verejna, verejna = ?, stav = 'ok', duvod = 'upraveno správcem', upraveno = ? WHERE kavarna = ?")->execute([$json, $json, $ted, $k]);
+    } else {
+        $db->prepare("INSERT INTO profily (kavarna, majitel, data, verejna, stav, duvod, upraveno, overeno) VALUES (?,?,?,?,'ok','upraveno správcem',?,?)")->execute([$k, $majitel, $json, $json, $ted, $ted]);
+    }
+    return [];
+};
+
 // ---------------------------------------------------------------- akce (POST + CSRF)
 $csrf = $podpis("csrf:$cookie");
+$chybyUpravy = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!hash_equals($csrf, (string)($_POST['csrf'] ?? ''))) stranka('Neplatný požadavek', '<p>Obnovte stránku a zkuste to znovu.</p>');
     $a = (string)($_POST['akce'] ?? '');
+    if ($a === 'upravit') {
+        $k = (string)($_POST['id'] ?? '');
+        $chybyUpravy = $upravit($k, $_POST);
+        if (!$chybyUpravy) {
+            $titulek = 'Uloženo, na webu do 3 hodin';
+            if (!empty($_POST['schvalit'])) [$titulek] = $spravce('schvalit', (string)(int)$_POST['schvalit']);
+            header('Location: ' . $ADMIN . '?' . http_build_query(['z' => preg_replace('/[^a-z]/', '', (string)($_POST['zalozka'] ?? '')) ?: 'schvalit', 'hotovo' => $titulek]), true, 303);
+            exit;
+        }
+        $_GET['z'] = 'upravit';
+        $_GET['k'] = $k;
+    } else {
     [$titulek] = str_starts_with($a, 'hod-') ? $hodAkce($a, (int)($_POST['id'] ?? 0)) : $spravce($a, (string)($_POST['id'] ?? ''), (string)($_POST['f'] ?? ''));
     $zalozka = preg_replace('/[^a-z]/', '', (string)($_POST['zalozka'] ?? ''));
     header('Location: ' . $ADMIN . '?' . http_build_query(array_filter(['z' => $zalozka, 'hotovo' => $titulek])), true, 303);
     exit;
+    }
 }
 
 // ---------------------------------------------------------------- data
@@ -210,11 +282,51 @@ $udaje = function (array $d, array $puvodni = []) use ($POPISKY, $e): string {
     }
     return $h . '</dl>';
 };
+$odkazUpravit = fn(string $k, string $zal): string => '<a class="tlacitko" href="?z=upravit&k=' . rawurlencode($k) . '&zpet=' . $zal . '">Upravit</a>';
 $kdy = fn($c): string => $c ? date('j. n. Y H:i', is_numeric($c) ? (int)$c : strtotime((string)$c)) : '';
 $STAVY = ['ok' => 'aktivní', 'ceka' => 'čeká', 'zamitnuto' => 'zamítnuto', 'blokovan' => 'zablokován', 'stazeno' => 'staženo'];
 $stav = fn($s): string => '<span class="stav stav-' . $e($s) . '">' . $e($STAVY[$s] ?? $s) . '</span>';
 
 $zal = (string)($_GET['z'] ?? 'schvalit');
+if ($zal === 'upravit') {
+    $k = (string)($_GET['k'] ?? '');
+    $zpet = preg_replace('/[^a-z]/', '', (string)($_GET['zpet'] ?? $_POST['zalozka'] ?? 'schvalit')) ?: 'schvalit';
+    $st = $db->prepare('SELECT data FROM profily WHERE kavarna = ?');
+    $st->execute([$k]);
+    $d = json_decode((string)$st->fetchColumn(), true) ?: [];
+    $n = $nove[$k]['d'] ?? null;
+    $st = $db->prepare("SELECT id FROM majitele WHERE kavarna = ? AND stav = 'ceka' ORDER BY id DESC LIMIT 1");
+    $st->execute([$k]);
+    $cekajici = (int)$st->fetchColumn();
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') { // po chybě ukázat, co správce vyplnil
+        $d = array_merge($d, array_intersect_key($_POST, $POPISKY));
+        $d['vlastnosti'] = (array)($_POST['vlastnosti'] ?? []);
+        if ($n) $n = array_merge($n, array_intersect_key($_POST, array_flip(['nazev', 'ulice', 'psc', 'mesto', 'lat', 'lon'])));
+    }
+    $pole = fn(string $jm, string $popisek, $hodnota, string $typ = 'text', string $extra = '') =>
+        '<label><span>' . $e($popisek) . '</span><input type="' . $typ . '" name="' . $jm . '" value="' . $e($hodnota ?? '') . '"' . $extra . '></label>';
+    $h = '<p><a href="?z=' . $zpet . '">← Zpět</a></p>';
+    if ($chybyUpravy) $h .= '<p class="varovani" role="alert">' . $e(implode(' ', $chybyUpravy)) . '</p>';
+    $h .= '<form method="post" class="uprava"><input type="hidden" name="csrf" value="' . $e($csrf) . '"><input type="hidden" name="akce" value="upravit">'
+        . '<input type="hidden" name="id" value="' . $e($k) . '"><input type="hidden" name="zalozka" value="' . $e($zpet) . '">';
+    if ($n) {
+        $h .= '<fieldset><legend>Kavárna a adresa</legend>' . $pole('nazev', 'Název', $n['nazev'] ?? '', 'text', ' required maxlength="100"')
+            . '<div class="radek">' . $pole('ulice', 'Ulice a číslo', $n['ulice'] ?? '', 'text', ' required') . $pole('psc', 'PSČ', $n['psc'] ?? '', 'text', ' inputmode="numeric" maxlength="6"') . '</div>'
+            . '<div class="radek">' . $pole('mesto', 'Obec', $n['mesto'] ?? '', 'text', ' required') . $pole('lat', 'Zeměpisná šířka', $n['lat'] ?? '') . $pole('lon', 'Zeměpisná délka', $n['lon'] ?? '') . '</div>'
+            . (($nove[$k]['stav'] ?? '') === 'ok' ? '<p class="pozn">Adresa stránky na webu zůstane stejná, i když změníte název.</p>' : '') . '</fieldset>';
+    }
+    $h .= '<fieldset><legend>Kontakty a otevírací doba</legend><div class="radek">' . $pole('telefon', 'Telefon', $d['telefon'] ?? '', 'tel') . $pole('email', 'E-mail kavárny', $d['email'] ?? '', 'email') . '</div>'
+        . '<div class="radek">' . $pole('web', 'Web', $d['web'] ?? '') . $pole('rezervace', 'Rezervace', $d['rezervace'] ?? '') . '</div>'
+        . '<div class="radek">' . $pole('instagram', 'Instagram', $d['instagram'] ?? '') . $pole('facebook', 'Facebook', $d['facebook'] ?? '') . '</div>'
+        . $pole('oteviraciDoba', 'Otevírací doba (formát OSM, např. Mo-Fr 08:00-18:00; Sa 09:00-14:00)', $d['oteviraciDoba'] ?? '')
+        . '<label><span>Popis (max. ' . MAX_POPIS . ' znaků, bez odkazů)</span><textarea name="popis" rows="4" maxlength="' . MAX_POPIS . '">' . $e($d['popis'] ?? '') . '</textarea></label></fieldset>'
+        . '<fieldset><legend>Vlastnosti</legend><div class="vlastnosti">';
+    foreach (VLASTNOSTI as $kl => $nm) $h .= '<label><input type="checkbox" name="vlastnosti[]" value="' . $kl . '"' . (in_array($kl, (array)($d['vlastnosti'] ?? []), true) ? ' checked' : '') . '> ' . $e($nm) . '</label>';
+    $h .= '</div></fieldset><div class="akce">'
+        . ($cekajici ? '<button class="hlavni" name="schvalit" value="' . $cekajici . '">Uložit a schválit</button><button>Jen uložit</button>' : '<button class="hlavni">Uložit a zveřejnit</button>')
+        . '</div></form>';
+    stranka('Upravit: ' . ($n['nazev'] ?? $nazev($k)), $h);
+}
 $cekaPocet = count($recenzeCeka) + count($zadosti) + count($zmeny);
 $ZALOZKY = ['schvalit' => 'Ke schválení' . ($cekaPocet ? " <b>$cekaPocet</b>" : ''), 'hodnoceni' => 'Hodnocení', 'fotky' => 'Fotky', 'majitele' => 'Majitelé', 'profily' => 'Změny kaváren'];
 if (!isset($ZALOZKY[$zal])) $zal = 'schvalit';
@@ -265,6 +377,7 @@ if ($zal === 'schvalit') {
         $h .= '<p class="kdo"><strong>' . $e($m['jmeno']) . '</strong> · <a href="mailto:' . $e($m['email']) . '">' . $e($m['email']) . '</a>'
             . ($m['telefon'] ? ' · <a href="tel:' . $e(preg_replace('/\s/', '', $m['telefon'])) . '">' . $e($m['telefon']) . '</a>' : '') . '</p>'
             . '<div class="akce">' . $tlacitko('schvalit', (string)$m['id'], $n ? 'Schválit a přidat na web' : 'Schválit a poslat přístup', $zal, 'hlavni')
+            . ($n ? $odkazUpravit($k, $zal) : '')
             . $tlacitko('zamitnout', (string)$m['id'], 'Zamítnout', $zal, '', '', 'Opravdu zamítnout?') . '</div></article>';
     }
     $h .= '<h2>Úpravy zadržené kontrolou</h2>';
@@ -276,7 +389,7 @@ if ($zal === 'schvalit') {
             . ($p['duvod'] ? '<p class="varovani">Zadrženo: ' . $e($p['duvod']) . '</p>' : '')
             . $udaje(json_decode($p['data'], true) ?: [], json_decode((string)$p['verejna'], true) ?: [])
             . '<p class="kdo">' . $e($p['email']) . '</p><div class="akce">'
-            . $tlacitko('pustit', $k, 'Zveřejnit', $zal, 'hlavni') . $tlacitko('vratit', $k, 'Zahodit změnu', $zal)
+            . $tlacitko('pustit', $k, 'Zveřejnit', $zal, 'hlavni') . $odkazUpravit($k, $zal) . $tlacitko('vratit', $k, 'Zahodit změnu', $zal)
             . $tlacitko('zablokovat', (string)$p['majitel'], 'Zablokovat majitele', $zal, 'nebezpecne', '', 'Zablokovat majitele a stáhnout jeho údaje i fotky z webu?')
             . '</div></article>';
     }
@@ -316,6 +429,7 @@ if ($zal === 'majitele') {
             . '<td>' . $e($m['jmeno']) . '<br><small>' . $e($m['email']) . ($m['telefon'] ? ' · ' . $e($m['telefon']) : '') . '</small></td>'
             . '<td><small>' . $e($m['overeni'] ?: '–') . '</small></td><td>' . $stav($m['stav']) . '</td><td class="akce">'
             . ($m['stav'] === 'ceka' ? $tlacitko('schvalit', (string)$m['id'], 'Schválit', $zal, 'hlavni') : '')
+            . (in_array($m['stav'], ['ok', 'ceka'], true) ? $odkazUpravit($k, $zal) : '')
             . ($m['stav'] !== 'blokovan' ? $tlacitko('zablokovat', (string)$m['id'], 'Zablokovat', $zal, 'nebezpecne', '', 'Zablokovat majitele a stáhnout jeho údaje i fotky z webu?') : '')
             . '</td></tr>';
     }
@@ -332,7 +446,7 @@ if ($zal === 'profily') {
             . ($p['duvod'] ? ' <small>(' . $e($p['duvod']) . ')</small>' : '') . '</summary>'
             . '<p><a href="' . $e($url($k)) . '" target="_blank" rel="noopener">Otevřít na webu</a> · ' . $e($p['email']) . '</p>'
             . $udaje(json_decode($p['data'], true) ?: [], json_decode((string)$p['predchozi'], true) ?: [])
-            . '<div class="akce">' . ($p['stav'] === 'ceka' ? $tlacitko('pustit', $k, 'Zveřejnit', $zal, 'hlavni') : '')
+            . '<div class="akce">' . ($p['stav'] === 'ceka' ? $tlacitko('pustit', $k, 'Zveřejnit', $zal, 'hlavni') : '') . ($p['stav'] !== 'stazeno' ? $odkazUpravit($k, $zal) : '')
             . ($p['predchozi'] !== null ? $tlacitko('vratit', $k, 'Vrátit předchozí', $zal, '', '', 'Vrátit kavárnu na předchozí verzi?') : '') . '</div></details>';
     }
 }

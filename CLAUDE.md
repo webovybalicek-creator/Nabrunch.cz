@@ -138,7 +138,7 @@ Na detailu kavárny je „Jste majitel? Upravte údaje zdarma“ (`/api/kavarna.
 - **Kontrola:** formát polí, zákaz odkazů v popisu, filtr vulgarismů a spamu, limity pokusů. Čisté změny jdou na web
   automaticky, podezřelé čekají na schválení. Každá změna a fotka přijde e-mailem s odkazy Vrátit / Smazat / Zablokovat.
 - **Administrace `/prihlaseni/`** (`public/api/admin.php`): schvalování textů hodnocení podniků (záložka Hodnocení: skrýt text, smazat i hvězdičky),
-  žádostí o správu a nových kaváren, zadržené úpravy
+  žádostí o správu a nových kaváren (i s úpravou údajů před schválením, tlačítko Upravit), zadržené úpravy
   (se zvýrazněním změn), fotky, majitelé (blokace) a historie změn (vrátit předchozí). Přihlášení bez hesla: e-mail ze seznamu
   `SPRAVCI` v `admin.php` dostane odkaz na 30 minut, nebo odkaz „Přehled všech majitelů a změn“ z konce e-mailu pro správce.
   Přihlášení platí 30 dní (cookie). Logika zásahů je v `$spravce` v `kavarna.php` – sdílí ji admin i odkazy z e-mailů.
