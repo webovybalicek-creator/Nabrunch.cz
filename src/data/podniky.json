@@ -5845,5 +5845,52 @@
    "/wp-content/uploads/2026/11/lekarna-city-roasters-karlovy-vary-3.jpg",
    "/wp-content/uploads/2026/11/lekarna-city-roasters-karlovy-vary-4.jpg"
   ]
+ },
+ {
+  "id": 2359,
+  "slug": "kavarna-paseka-jihlava",
+  "nazev": "Kavárna Paseka Jihlava",
+  "datum": "2026-11-18 21:30:00",
+  "doporuceny": false,
+  "lokality": [
+   "Jihlava"
+  ],
+  "adresa": "Helenínská 497/28a, Jihlava",
+  "lat": 49.406372,
+  "lon": 15.599767,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: 9:00 - 12:00"
+  ],
+  "web": "https://www.facebook.com/kavarnapaseka/",
+  "instagram": "@kavarnapaseka",
+  "instagramUrl": "https://www.instagram.com/kavarnapaseka/",
+  "telefon": "+420608177897",
+  "telefonText": "+420 608 177 897",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Kavárna+Paseka,+Helenínská+497/28a,+Jihlava",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si velkou anglickou snídani s fazolemi, slaninou, párky a kváskovým chlebem, nebo lehčí talíř s avokádovým toastem, volským okem a zeleninou. Na sladko jsou tu lívance s čerstvým ovocem.</p>",
+  "popis": "<p>Kavárna Paseka je oblíbená jihlavská kavárna v Helenínské ulici, pár minut chůze od centra. Podle městského turistického portálu je vyhlášená hlavně <strong>bohatými snídaněmi</strong>, výbornou kávou, pozorným servisem a pohodovým prostředím. Jejím mottem je „Dali jsme do kavárny duši a srdce… děláme to poctivě a jinak“.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně, které vás zasytí</h2>\n\n<p>Snídaňové talíře jsou tu opravdu velké. Na slano je tu <strong>anglická snídaně</strong> s vejcem, slaninou, párky, fazolemi a kváskovým chlebem, nebo lehčí talíř s <strong>avokádovým toastem</strong>, volským okem, sýrem, pomazánkou a čerstvou zeleninou. Na sladko si dejte <strong>lívance s ovocem</strong> a sirupem.</p>\n\n<h2 class=\"wp-block-heading\">Kdy vyrazit</h2>\n\n<p>Ve všední dny je otevřeno <strong>od 8:00 do 18:00</strong>, o víkendu jen <strong>dopoledne od 9:00 do 12:00</strong>, takže na víkendovou snídani přijďte spíš brzy. Kavárna je bezbariérová, hodí se i pro rodiny s dětmi a v létě má zahrádku. Pokud potřebujete u kávy pracovat, je tu k dispozici i pracovna.</p>",
+  "seoTitulek": "Kavárna Paseka Jihlava – snídaně, menu a otevírací doba",
+  "seoPopis": "Kavárna Paseka v Jihlavě: bohaté snídaně, anglická snídaně, avokádový toast a lívance s ovocem. Otevřeno Po–Pá 8–18, o víkendu 9–12. Adresa a tipy.",
+  "foto": "/wp-content/uploads/2026/11/kavarna-paseka-jihlava-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/kavarna-paseka-jihlava-2.jpg",
+   "/wp-content/uploads/2026/11/kavarna-paseka-jihlava-3.jpg",
+   "/wp-content/uploads/2026/11/kavarna-paseka-jihlava-4.jpg"
+  ]
  }
 ]
