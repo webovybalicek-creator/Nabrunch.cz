@@ -30,6 +30,7 @@
     },
     "mae8eea6fb": {
       "telefon": "+420 736 243 150",
+      "email": "info@offlinebar.cz",
       "web": "https://offlinebar.cz/",
       "rezervace": "https://offlinebar.cz/",
       "instagram": "https://www.instagram.com/offline.zlin/",
@@ -54,7 +55,15 @@
         "lat": 49.2263,
         "lon": 17.668165,
         "url": "/kavarny/zlin/offline-bar/"
-      }
+      },
+      "fotky": [
+        "/fotky-kavaren/mae8eea6fb/a5064ccba47f",
+        "/fotky-kavaren/mae8eea6fb/a4cfef2671fc",
+        "/fotky-kavaren/mae8eea6fb/73983bee4e49",
+        "/fotky-kavaren/mae8eea6fb/202f4707375c",
+        "/fotky-kavaren/mae8eea6fb/32cb46972410",
+        "/fotky-kavaren/mae8eea6fb/ff5dc58a5172"
+      ]
     }
   }
 }
