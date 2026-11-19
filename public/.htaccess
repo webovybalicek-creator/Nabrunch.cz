@@ -416,6 +416,9 @@ DirectoryIndex index.html
   RewriteRule ^kavarny/pisek/az-na-pudu/?$ /podniky/az-na-pudu-pisek/ [L,R=301]
   RewriteRule ^kavarny/praha/buddha-bar-prague/?$ /podniky/buddha-bar-praha/ [L,R=301]
   RewriteRule ^kavarny/zlin/offline-bar/?$ /podniky/offline-bar-zlin/ [L,R=301]
+  RewriteRule ^kavarny/praha/spizirna-1902/?$ /podniky/spizirna-1902-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/dobroteka/?$ /podniky/dobroteka-zizkov-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/srnky-americka/?$ /podniky/srnky-americka-praha/ [L,R=301]
   # Zavřené kavárny z OSM → stránka města
   RewriteRule ^kavarny/pardubice/dobry-kafe/?$ /lokalita/pardubice/ [L,R=301]
   # Zrušené téma (štítek měly skoro všechny podniky) → přehled podniků

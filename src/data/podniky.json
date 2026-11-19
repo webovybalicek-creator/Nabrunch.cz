@@ -6228,5 +6228,153 @@
    "/wp-content/uploads/2026/11/kafejn-beroun-4.jpg",
    "/wp-content/uploads/2026/11/kafejn-beroun-5.jpg"
   ]
+ },
+ {
+  "doporuceny": false,
+  "instagram": "@spizirna1902",
+  "instagramUrl": "https://www.instagram.com/spizirna1902/",
+  "telefon": "+420607305712",
+  "telefonText": "+420 607 305 712",
+  "rezervace": "Ano, online (jen ve všední dny)",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "id": 2367,
+  "slug": "spizirna-1902-praha",
+  "nazev": "Spižírna 1902 Praha",
+  "datum": "2026-11-19 14:00:00",
+  "lokality": [
+   "Praha 3",
+   "Praha"
+  ],
+  "adresa": "Korunní 86, Praha 3",
+  "lat": 50.0752695,
+  "lon": 14.4524671,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 20:00",
+   "So - Ne: 9:00 - 18:00"
+  ],
+  "web": "https://www.spizirna1902.cz/",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Spižírna+1902,+Korunní+86,+Praha",
+  "tip": "<p>Na víkendový brunch přijďte hned v 9:00, rezervace o víkendu nepřijímají. Ke snídani si vezměte domácí buchtu nebo koláč z jejich pekárny.</p>",
+  "popis": "<p>Spižírna 1902 je kavárna, bistro a pekárna v Korunní ulici na pomezí Vinohrad a Žižkova, kousek od náměstí Jiřího z Poděbrad. Jezdí sem tramvaje 10 a 16 (zastávky Perunova a Vinohradská vodárna). Filozofie je jednoduchá: čerstvé, zdravé a na místě připravené jídlo, jaké najdete ve spižírně.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně v týdnu, brunch o víkendu</h2>\n\n<p><strong>Snídaně</strong> se podávají ve všední dny od 8:00 do 11:15, <strong>víkendové brunche</strong> od 9:00 do 16:00 (kuchyně bere objednávky do 15:45). Menu se mění podle sezony: od vajec a slaných talířů přes bowly s ovocem až po sladké lívance. Každé ráno tu pečou <strong>domácí buchty, koláče a další pečivo</strong> podle rodinného receptu, k mání do vyprodání.</p>\n\n<h2 class=\"wp-block-heading\">Rezervace jen ve všední dny</h2>\n\n<p>Ve všední dny si stůl zarezervujete online přes Qerko, <strong>o víkendu rezervace nepřijímají</strong>, takže na brunch přijďte spíš dřív. Ve všední dny je i obědové menu pro masožravce i vegany. K pití domácí limonády, dobrá káva, víno a pivo z minipivovarů.</p>",
+  "seoTitulek": "Spižírna 1902 Praha – snídaně, víkendový brunch a otevírací doba",
+  "seoPopis": "Spižírna 1902 v Korunní ulici: snídaně ve všední dny 8–11:15, víkendový brunch 9–16, domácí buchty a koláče z vlastní pekárny. Otevírací doba a tipy.",
+  "foto": "/wp-content/uploads/2026/11/spizirna-1902-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/spizirna-1902-praha-2.jpg",
+   "/wp-content/uploads/2026/11/spizirna-1902-praha-3.jpg",
+   "/wp-content/uploads/2026/11/spizirna-1902-praha-4.jpg",
+   "/wp-content/uploads/2026/11/spizirna-1902-praha-5.jpg",
+   "/wp-content/uploads/2026/11/spizirna-1902-praha-6.jpg"
+  ]
+ },
+ {
+  "doporuceny": false,
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "id": 2368,
+  "slug": "dobroteka-zizkov-praha",
+  "nazev": "Dobrotéka Žižkov Praha",
+  "datum": "2026-11-19 14:10:00",
+  "lokality": [
+   "Praha 3",
+   "Praha"
+  ],
+  "adresa": "Hartigova 2396/176, Praha 3",
+  "lat": 50.0919158,
+  "lon": 14.4799827,
+  "oteviraciDoba": [
+   "Po - Pá: 8:30 - 22:00",
+   "So: 9:00 - 22:00",
+   "Ne: 9:00 - 20:00"
+  ],
+  "web": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dobrotéka,+Hartigova+176,+Praha",
+  "tip": "<p>Dejte si granolu s jogurtem a čerstvým ovocem nebo croissant s výběrovou kávou a v létě si sedněte na krytou zahrádku. Brunch stihnete do 13:00.</p>",
+  "popis": "<p>Dobrotéka je kavárna a lahůdkářství v Hartigově ulici na Žižkově. Dopoledne funguje jako kavárna se snídaněmi, večer jako příjemné místo na skleničku vína. Součástí je i obchůdek s delikatesami, prémiovými sýry a uzeninami.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch</h2>\n\n<p>Ve všední dny otevírá <strong>v 8:30</strong>, o víkendu v 9:00. Na snídani tu podávají výběrovou kávu, sypané čaje, croissanty, sendviče, granolu s jogurtem a ovocem a domácí dorty. Podle průvodce Around Prague patří brunch v Dobrotéce k cenově nejpříjemnějším v Praze a podává se do 13:00.</p>\n\n<h2 class=\"wp-block-heading\">Zahrádka a večerní víno</h2>\n\n<p>Za hezkého počasí se sedí na kryté zahrádce mezi zelení. Večer se nabídka mění na vína, domácí limonády a talíře se sýry a uzeninami, otevřeno je až do 22:00.</p>",
+  "seoTitulek": "Dobrotéka Žižkov – snídaně, brunch a otevírací doba",
+  "seoPopis": "Dobrotéka v Hartigově ulici na Žižkově: snídaně od 8:30, brunch do 13:00, výběrová káva, croissanty a zahrádka. Večer víno a delikatesy.",
+  "foto": "/wp-content/uploads/2026/11/dobroteka-zizkov-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/dobroteka-zizkov-praha-2.jpg",
+   "/wp-content/uploads/2026/11/dobroteka-zizkov-praha-3.jpg",
+   "/wp-content/uploads/2026/11/dobroteka-zizkov-praha-4.jpg",
+   "/wp-content/uploads/2026/11/dobroteka-zizkov-praha-5.jpg"
+  ]
+ },
+ {
+  "doporuceny": false,
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "id": 2369,
+  "slug": "srnky-americka-praha",
+  "nazev": "Srnky Americká Praha",
+  "datum": "2026-11-19 14:20:00",
+  "lokality": [
+   "Praha 2",
+   "Praha"
+  ],
+  "adresa": "Americká 849/26, Praha 2",
+  "lat": 50.0731058,
+  "lon": 14.4378485,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 20:00",
+   "So - Ne: 8:30 - 17:00"
+  ],
+  "web": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Srnky,+Americká+26,+Praha",
+  "tip": "<p>Ochutnejte jejich vyhlášené lívance, nebo si dejte něco z netradičních celodenních „snídaní“, třeba lečo nebo rýžovou kaši.</p>",
+  "popis": "<p>Srnky Americká je kavárna a bistro na Vinohradech, třetí pobočka oblíbeného konceptu Mezi Srnky. Leží v Americké ulici, pár minut chůze od náměstí Míru, a má kolem padesáti míst k sezení. Psi jsou vítáni.</p>\n\n<h2 class=\"wp-block-heading\">Celodenní brunch</h2>\n\n<p>Srnky jsou známé <strong>celodenními brunchi</strong>. Podle <a href=\"https://forbes.cz/brunch-vyhlasene-livance-a-misto-pro-starousedliky-mezi-srnky-otevrelo-treti-pobocku/\">Forbesu</a> sem lidé chodí hlavně na <strong>vyhlášené lívance</strong>, v menu jsou ale i netradiční „snídaně“ jako lečo, holandský řízek nebo rýžová kaše. Žádné polotovary: všechno vzniká v jejich kuchyni z lokálních farmářských surovin.</p>\n\n<h2 class=\"wp-block-heading\">Kdy vyrazit</h2>\n\n<p>Ve všední dny otevírá <strong>už v 7:30</strong> a zavírá ve 20:00, odpoledne se tu dá posedět u jídla a drinků. O víkendu je otevřeno <strong>od 8:30 do 17:00</strong>.</p>",
+  "seoTitulek": "Srnky Americká Vinohrady – celodenní brunch a otevírací doba",
+  "seoPopis": "Srnky v Americké ulici na Vinohradech: celodenní brunch, vyhlášené lívance a lokální suroviny. Ve všední dny od 7:30, o víkendu 8:30–17. Tipy a adresa.",
+  "foto": "/wp-content/uploads/2026/11/srnky-americka-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/srnky-americka-praha-2.jpg",
+   "/wp-content/uploads/2026/11/srnky-americka-praha-3.jpg",
+   "/wp-content/uploads/2026/11/srnky-americka-praha-4.jpg",
+   "/wp-content/uploads/2026/11/srnky-americka-praha-5.jpg"
+  ]
  }
 ]
