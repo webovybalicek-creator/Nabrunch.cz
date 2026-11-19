@@ -7350,5 +7350,150 @@
    "/wp-content/uploads/2026/11/bistro-popies-mikulov-5.jpg",
    "/wp-content/uploads/2026/11/bistro-popies-mikulov-6.jpg"
   ]
+ },
+ {
+  "id": 2390,
+  "slug": "karma-kavarna-breclav",
+  "nazev": "Kavárna & bistro Karma Břeclav",
+  "datum": "2026-11-19 20:40:26",
+  "doporuceny": false,
+  "lokality": [
+   "Břeclav"
+  ],
+  "adresa": "17. listopadu 51/22a, Břeclav",
+  "lat": 48.758854,
+  "lon": 16.883204,
+  "oteviraciDoba": [
+   "Po - Ne: 8:00 - 20:00"
+  ],
+  "web": "https://karmakavarna.cz/",
+  "instagram": "@karmakavarna",
+  "instagramUrl": "https://www.instagram.com/karmakavarna/",
+  "telefon": "+420603925960",
+  "telefonText": "+420 603 925 960",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Kavárna+&+bistro+Karma+Břeclav,+17.+listopadu+51/22a,+Břeclav",
+  "rezervace": "Ano, online",
+  "platba": [
+   "Hotově"
+  ],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte „Maminčinu snídani“ s míchanými vejci, šunkou od kosti a žervé, nebo French toast à la krupicová kaše s perníkovou espumou. Platí se hotově nebo přes Qerko.</p>",
+  "popis": "<p>Karma je snídaňové a brunchové bistro v Břeclavi s více než sedmiletou tradicí. Vzniklo z touhy po podniku, který v okolí chyběl – s výběrovou kávou, moderním interiérem a hlavně pořádnými snídaněmi. Má kapacitu až 80 míst a v létě i zahrádku.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně denně od 8 do 14</h2>\n\n<p>Snídaně a brunche se podávají <strong>každý den od 8:00 do 14:00</strong>, ze sezonních a lokálních surovin. V podzimním menu najdete <strong>Maminčinu snídani</strong> (míchaná vejce na másle, šunka od kosti, žervé, ředkvičky), francouzskou omeletu s parmazánem, pomalou snídani ze severu s vejcem na hniličku, <strong>vejce Benedikt</strong>, one pan breakfast se sázeným vejcem a fazolemi nebo Karma hot dog. Na sladko nadýchané lívance s domácím pribiňákem nebo <strong>French toast à la krupicová kaše</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Káva a matcha</h2>\n\n<p>K snídani výběrová káva, matcha latte nebo maracuja matcha limonáda. Otevřeno je denně do 20:00. Platit můžete hotově nebo přes aplikaci Qerko.</p>",
+  "seoTitulek": "Karma Břeclav – snídaně a brunch denně 8–14, otevírací doba",
+  "seoPopis": "Kavárna & bistro Karma v Břeclavi: snídaně a brunch denně 8–14, Maminčina snídaně, vejce Benedikt, French toast a výběrová káva. Menu a tipy.",
+  "foto": "/wp-content/uploads/2026/11/karma-kavarna-breclav-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/karma-kavarna-breclav-2.jpg",
+   "/wp-content/uploads/2026/11/karma-kavarna-breclav-3.jpg",
+   "/wp-content/uploads/2026/11/karma-kavarna-breclav-4.jpg",
+   "/wp-content/uploads/2026/11/karma-kavarna-breclav-5.jpg",
+   "/wp-content/uploads/2026/11/karma-kavarna-breclav-6.jpg"
+  ]
+ },
+ {
+  "id": 2391,
+  "slug": "kytky-pod-kominem-decin",
+  "nazev": "Kytky pod komínem Děčín",
+  "datum": "2026-11-19 20:40:26",
+  "doporuceny": false,
+  "lokality": [
+   "Děčín"
+  ],
+  "adresa": "Čsl. mládeže 332/47, Děčín",
+  "lat": 50.777152,
+  "lon": 14.202196,
+  "oteviraciDoba": [
+   "Po - Ne: 8:00 - 18:00"
+  ],
+  "web": "https://www.kytkypodkominem.cz/",
+  "instagram": "@kytkypodkominem",
+  "instagramUrl": "https://www.instagram.com/kytkypodkominem/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Kytky+pod+komínem+Děčín,+Čsl.+mládeže+332/47,+Děčín",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijďte na snídani nebo brunch a nevynechejte něco z domácího pečiva – chleba, toustový chléb i koláče si tu pečou sami. V létě si sedněte na zahradu pod starým komínem.</p>",
+  "popis": "<p>Kytky pod komínem je kavárna s výběrovou kávou, vlastní kuchyní a zahradou pod starým komínem v Děčíně. Součástí je i malé květinářství – sezonní květiny si pěstují na vlastním políčku a vážou z nich kytice, které najdete i v kavárně.</p>\n\n<h2 class=\"wp-block-heading\">Pečou a vaří sami</h2>\n\n<p>Všechno vzniká přímo u nich – od chleba a toustového chleba až po koláče, <strong>snídaně a brunche</strong>. Ke kávě se hodí domácí pečivo z vitríny. Otevřeno je <strong>každý den od 8:00 do 18:00</strong>, aktuální menu najdete v jejich online lístku. O svátcích si otevírací dobu raději ověřte na jejich Instagramu.</p>\n\n<h2 class=\"wp-block-heading\">Ubytování nad kavárnou</h2>\n\n<p>Nad kavárnou jsou tři pokoje pojmenované po původních obyvatelích domu – ráno stačí sejít pár schodů na snídani a kávu.</p>",
+  "seoTitulek": "Kytky pod komínem Děčín – snídaně, brunch a otevírací doba",
+  "seoPopis": "Kavárna Kytky pod komínem v Děčíně: snídaně a brunch, domácí pečivo, výběrová káva, zahrada pod starým komínem a vlastní květiny. Otevírací doba.",
+  "foto": "/wp-content/uploads/2026/11/kytky-pod-kominem-decin-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/kytky-pod-kominem-decin-2.jpg",
+   "/wp-content/uploads/2026/11/kytky-pod-kominem-decin-3.jpg",
+   "/wp-content/uploads/2026/11/kytky-pod-kominem-decin-4.jpg"
+  ]
+ },
+ {
+  "id": 2392,
+  "slug": "bistroteka-lavendy-jindrichuv-hradec",
+  "nazev": "Bistrotéka Lavendy Jindřichův Hradec",
+  "datum": "2026-11-19 20:40:26",
+  "doporuceny": false,
+  "lokality": [
+   "Jindřichův Hradec"
+  ],
+  "adresa": "Masarykovo náměstí 1, Jindřichův Hradec",
+  "lat": 49.145907,
+  "lon": 15.003807,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 19:00",
+   "So: 8:00 - 19:00",
+   "Ne: 8:00 - 18:00"
+  ],
+  "web": "https://bistroteka.lavendy.cz/",
+  "instagram": "@bistrotekalavendy",
+  "instagramUrl": "https://www.instagram.com/bistrotekalavendy/",
+  "telefon": "+420776028820",
+  "telefonText": "+420 776 028 820",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bistrotéka+Lavendy+Jindřichův+Hradec,+Masarykovo+náměstí+1,+Jindřichův+Hradec",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si brunch s vejcem Benedikt na kváskovém chlebu z rodinné pekárny Krajíček a na sladko něco z cukrářství Lavendy. V létě si sedněte na zahrádku přímo na náměstí.</p>",
+  "popis": "<p>Bistrotéka Lavendy je bistro a kavárna přímo na Masarykově náměstí v centru Jindřichova Hradce. Založila ji cukrářka Vendula Vytisková, která v roce 2020 otevřela ve městě cukrářství Lavendy, a na sladké navázala slanými dobrotami, kávou a vínem.</p>\n\n<h2 class=\"wp-block-heading\">Brunche z lokálních surovin</h2>\n\n<p>Otevřeno je <strong>každý den</strong>, ve všední dny už od 7:30. V nabídce jsou <strong>brunche</strong> a denní nabídka, vše z kvalitních lokálních a sezonních surovin: vejce od pana Štefana z Višňové, kváskový chléb a pečivo z rodinné pekárny Krajíček z Počátek a ovčí gouda z farmy Horní Dvorce. Na talíři tak najdete třeba vejce Benedikt nebo toasty s nakládanou zeleninou.</p>\n\n<h2 class=\"wp-block-heading\">Zahrádka na náměstí</h2>\n\n<p>Za hezkého počasí se sedí na zahrádce přímo na náměstí. K jídlu výběrová káva, vína a sladké z vlastního cukrářství.</p>",
+  "seoTitulek": "Bistrotéka Lavendy Jindřichův Hradec – brunch a otevírací doba",
+  "seoPopis": "Bistrotéka Lavendy na Masarykově náměstí v Jindřichově Hradci: brunche z lokálních surovin, kváskový chléb, káva a dezerty. Otevřeno denně od 7:30.",
+  "foto": "/wp-content/uploads/2026/11/bistroteka-lavendy-jindrichuv-hradec-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/bistroteka-lavendy-jindrichuv-hradec-2.jpg",
+   "/wp-content/uploads/2026/11/bistroteka-lavendy-jindrichuv-hradec-3.jpg",
+   "/wp-content/uploads/2026/11/bistroteka-lavendy-jindrichuv-hradec-4.jpg",
+   "/wp-content/uploads/2026/11/bistroteka-lavendy-jindrichuv-hradec-5.jpg"
+  ]
  }
 ]

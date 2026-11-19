@@ -436,6 +436,9 @@ DirectoryIndex index.html
   RewriteRule ^kavarny/vysoke-myto/kavarna-lacasa/?$ /podniky/kavarna-lacasa-vysoke-myto/ [L,R=301]
   RewriteRule ^kavarny/mikulov/drogerka/?$ /podniky/bistro-drogerka-mikulov/ [L,R=301]
   RewriteRule ^kavarny/mlada-boleslav/skoda-nezajit/?$ /podniky/skoda-nezajit-mlada-boleslav/ [L,R=301]
+  RewriteRule ^kavarny/breclav/kavarna-a-bistro-karma/?$ /podniky/karma-kavarna-breclav/ [L,R=301]
+  RewriteRule ^kavarny/decin/kytky-pod-kominem/?$ /podniky/kytky-pod-kominem-decin/ [L,R=301]
+  RewriteRule ^kavarny/jindrichuv-hradec/bistroteka-lavendy/?$ /podniky/bistroteka-lavendy-jindrichuv-hradec/ [L,R=301]
   # Zavřené kavárny z OSM → stránka města
   RewriteRule ^kavarny/pardubice/dobry-kafe/?$ /lokalita/pardubice/ [L,R=301]
   # Zrušené téma (štítek měly skoro všechny podniky) → přehled podniků
