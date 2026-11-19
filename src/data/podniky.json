@@ -6962,5 +6962,153 @@
    "/wp-content/uploads/2026/11/cafe-perfect-day-praha-4.jpg",
    "/wp-content/uploads/2026/11/cafe-perfect-day-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2382,
+  "slug": "bistro-belehradka-usti-nad-labem",
+  "nazev": "Bistro Bělehradka Ústí nad Labem",
+  "datum": "2026-11-19 20:29:19",
+  "doporuceny": false,
+  "lokality": [
+   "Ústí nad Labem"
+  ],
+  "adresa": "Bělehradská 1309/19, Ústí nad Labem",
+  "lat": 50.663264,
+  "lon": 14.038175,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: 8:00 - 14:00"
+  ],
+  "web": "https://belehradka.makro.bar/",
+  "instagram": "@belehradka",
+  "instagramUrl": "https://www.instagram.com/belehradka/",
+  "telefon": "+420730911811",
+  "telefonText": "+420 730 911 811",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bistro+Bělehradka+Ústí+nad+Labem,+Bělehradská+1309/19,+Ústí+nad+Labem",
+  "rezervace": "Ano, online",
+  "platba": [
+   "Kartou",
+   "Hotově"
+  ],
+  "wifi": true,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si vejce Benedikt s uzeným lososem nebo turecká vejce a na sladko legendárního skořicového šneka. Palačinky ze špaldovo-kukuřičné mouky jsou tu i na slano.</p>",
+  "popis": "<p>Bistro Bělehradka je ústecké místo, „kde brunch jede celý den“. Najdete ho v Bělehradské ulici nedaleko centra Ústí nad Labem. Uvnitř kamenná zeď a útulné sezení, venku krytá zahrádka.</p>\n\n<h2 class=\"wp-block-heading\">Brunch celý den</h2>\n\n<p>Ve všední dny je otevřeno <strong>od 8:00 do 18:00</strong>, o víkendu <strong>od 8:00 do 14:00</strong>, a brunch se podává po celou dobu. Na slano tu najdete míchaná vejce se slaninou, vaječnou omeletu, kváskový chléb s avokádem a zastřenými vejci, <strong>vejce Benedikt</strong> se šunkou, špenátem nebo uzeným lososem, <strong>turecká vejce</strong>, anglickou snídani nebo salát se zastřenými vejci. Zvláštností jsou <strong>palačinky ze špaldovo-kukuřičné mouky</strong> – slané s vejcem, kozím sýrem, trhaným masem nebo lososem i sladké s nutellou.</p>\n\n<h2 class=\"wp-block-heading\">Skořicoví šneci a káva</h2>\n\n<p>Proslavili se „legendárními“ skořicovými šneky, k tomu dobrá káva nebo domácí limonáda. Vše vám zabalí i s sebou. Bistro připravuje také catering a prodává dárkové poukazy, i elektronické.</p>",
+  "seoTitulek": "Bistro Bělehradka Ústí nad Labem – brunch celý den",
+  "seoPopis": "Bistro Bělehradka v Ústí nad Labem: brunch celý den, vejce Benedikt, turecká vejce, palačinky a skořicoví šneci. Otevírací doba, menu a tipy.",
+  "foto": "/wp-content/uploads/2026/11/bistro-belehradka-usti-nad-labem-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/bistro-belehradka-usti-nad-labem-2.jpg",
+   "/wp-content/uploads/2026/11/bistro-belehradka-usti-nad-labem-3.jpg",
+   "/wp-content/uploads/2026/11/bistro-belehradka-usti-nad-labem-4.jpg",
+   "/wp-content/uploads/2026/11/bistro-belehradka-usti-nad-labem-5.jpg",
+   "/wp-content/uploads/2026/11/bistro-belehradka-usti-nad-labem-6.jpg"
+  ]
+ },
+ {
+  "id": 2383,
+  "slug": "vita-cafe-bistro-liberec",
+  "nazev": "Vita Café Bistro Liberec",
+  "datum": "2026-11-19 20:29:19",
+  "doporuceny": false,
+  "lokality": [
+   "Liberec"
+  ],
+  "adresa": "Zhořelecká 414/19, Liberec",
+  "lat": 50.775019,
+  "lon": 15.054611,
+  "oteviraciDoba": [
+   "Po: 8:00 - 18:00",
+   "Út - Čt: 8:00 - 19:00",
+   "Pá - Ne: 8:00 - 18:00"
+  ],
+  "web": "https://www.vitacafe.cz/",
+  "instagram": "@vitacafebistro",
+  "instagramUrl": "https://www.instagram.com/vitacafebistro/",
+  "telefon": "+420606109713",
+  "telefonText": "+420 606 109 713",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Vita+Café+Bistro+Liberec,+Zhořelecká+414/19,+Liberec",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Na pořádný hlad je tu Vita snídaně s bio vejci, fazolemi, slaninou a hash brown. Lehčí volbou je fresh avokádový chléb se smetanovou omeletou, nebo bagel s míchanými vajíčky a holandskou omáčkou.</p>",
+  "popis": "<p>Vita Café Bistro je liberecká kavárna a bistro v Zhořelecké ulici, kterou majitelé otevřeli v lednu 2019 z vášně ke kávě a pečení. Dnes má vlastní profesionální kuchyň a cukrárnu, kde vznikají dorty na zakázku i slané pohoštění.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně každý den do 13:00</h2>\n\n<p>Otevřeno je <strong>každý den od 8:00</strong> a snídaně se podávají <strong>od 8:00 do 13:00</strong>, i o víkendu. Na slano tu najdete míchaná bio vajíčka na másle a smetaně, poctivé párky s Honzíkovým rohlíkem, <strong>bagel s míchanými vajíčky a holandskou omáčkou</strong>, italskou omeletu s parmazánem a špenátem, <strong>avokádový chléb</strong> se zastřenými bio vejci nebo velkou <strong>Vita snídani</strong>. Nechybí ani sladké snídaně.</p>\n\n<h2 class=\"wp-block-heading\">Obědy a dorty</h2>\n\n<p>Od poledne do odpoledne vaří polévky, saláty a teplá jídla. Na objednávku pečou dorty, tartaletky, cupcakes a skleničkové dezerty a připravují chlebíčky, bagely nebo obložené chleby na oslavy.</p>",
+  "seoTitulek": "Vita Café Bistro Liberec – snídaně, menu a otevírací doba",
+  "seoPopis": "Vita Café Bistro v Liberci: snídaně denně 8–13, bio vajíčka, avokádový chléb, bagel s holandskou omáčkou a domácí dorty. Otevírací doba a tipy.",
+  "foto": "/wp-content/uploads/2026/11/vita-cafe-bistro-liberec-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/vita-cafe-bistro-liberec-2.jpg",
+   "/wp-content/uploads/2026/11/vita-cafe-bistro-liberec-3.jpg",
+   "/wp-content/uploads/2026/11/vita-cafe-bistro-liberec-4.jpg"
+  ]
+ },
+ {
+  "id": 2384,
+  "slug": "park-cafe-zlin",
+  "nazev": "Park Café Zlín",
+  "datum": "2026-11-19 20:29:19",
+  "doporuceny": false,
+  "lokality": [
+   "Zlín"
+  ],
+  "adresa": "Soudní 5549, Zlín",
+  "lat": 49.225946,
+  "lon": 17.664603,
+  "oteviraciDoba": [
+   "Po - Čt: 8:00 - 20:00",
+   "Pá: 8:00 - 21:00",
+   "So: 9:00 - 21:00",
+   "Ne: zavřeno"
+  ],
+  "web": "https://www.parkcafezlin.cz/",
+  "instagram": "@parkcafezlin",
+  "instagramUrl": "https://www.instagram.com/parkcafezlin/",
+  "telefon": "+420771298942",
+  "telefonText": "+420 771 298 942",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Park+Café+Zlín,+Soudní+5549,+Zlín",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Zahajte den snídaní nebo brunchem na terase u parku a ke kávě Enzo Bencini si vyberte dezert z jejich vlastní výroby.</p>",
+  "popis": "<p>Park Café je designová kavárna v centru Zlína, v prosklené budově s terasou kousek od parku. Klade důraz na kvalitu – od snídaně a italské kávy Enzo Bencini signature až po vína a koktejly.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch</h2>\n\n<p>Ráno tu začíná snídaní nebo brunchem – ať už jde o pracovní schůzku, odměnu po náročném týdnu, nebo jen pohodové ráno. Ve všední dny otevírá <strong>v 8:00</strong>, v sobotu v 9:00. <strong>V neděli je zavřeno.</strong></p>\n\n<h2 class=\"wp-block-heading\">Káva, dezerty a večer víno</h2>\n\n<p>Odpoledne přichází na řadu káva a dezerty vlastní výroby i od dodavatelů, večer vybraná vína s pochutinami a koktejly. Za hezkého počasí se sedí na velké terase. Kavárna pořádá i firemní akce a večírky.</p>",
+  "seoTitulek": "Park Café Zlín – snídaně, brunch a otevírací doba",
+  "seoPopis": "Park Café v centru Zlína: designová kavárna s terasou, snídaně a brunch od 8:00, káva Enzo Bencini a domácí dezerty. V neděli zavřeno.",
+  "foto": "/wp-content/uploads/2026/11/park-cafe-zlin-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/park-cafe-zlin-2.jpg",
+   "/wp-content/uploads/2026/11/park-cafe-zlin-3.jpg",
+   "/wp-content/uploads/2026/11/park-cafe-zlin-4.jpg"
+  ]
  }
 ]
