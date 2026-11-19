@@ -13,13 +13,13 @@ obdobi: [jaro, leto]
 
 <h2 class="wp-block-heading">Vybrali jsme pro vás <strong>3 top podniky na snídani a brunch v Říčanech</strong>, které patří mezi místní stálice i oblíbené tipy na víkend.</h2>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/gabi-cafe-ricany/" data-type="link" data-id="/podniky/gabi-cafe-ricany/" target="_blank" rel="noreferrer noopener">1. Gabi Café Říčany</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/gabi-cafe-ricany/" target="_blank" rel="noreferrer noopener">1. Gabi Café Říčany</a></h2>
 
 <p><strong>Gabi Café</strong>&nbsp;v Říčanech je kavárna, která vás přivítá s otevřenou náručí – nejen pro milovníky kávy, ale i pro vaše čtyřnohé přátele.&nbsp;<strong>Pet-friendly kavárna</strong>&nbsp;s útulným interiérem a&nbsp;<strong>venkovním posezením</strong>, kde si můžete užít <strong>dokonalý brunch</strong> nebo si vychutnat čerstvé dezerty na čerstvém vzduchu.</p>
 
 <figure class="wp-block-image size-full"><a href="/podniky/gabi-cafe-ricany/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/04/kam-na-snidani-ci-brunch-v-ricanech-u-prahy-foto-1.jpg" alt="" class="wp-image-1312"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/spot-bistro-ricany/" data-type="link" data-id="/podniky/spot-bistro-ricany/" target="_blank" rel="noreferrer noopener">2. SPOT Bistro Říčany</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/spot-bistro-ricany/" target="_blank" rel="noreferrer noopener">2. SPOT Bistro Říčany</a></h2>
 
 <p>Ideální místo na <strong>snídani či brunch v Říčanech u Prahy s krásným venkovním posezením.</strong> Místo je oblíbené jak u místních obyvatel, tak návštěvníků z blízkého okolí, kteří sem rádi zajdou na snídani, brunch, lehký oběd nebo kávu s dezertem.</p>
 
@@ -27,7 +27,7 @@ obdobi: [jaro, leto]
 
 <figure class="wp-block-image size-full"><a href="/podniky/spot-bistro-ricany/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/galerie-3-600x600-1.jpg" alt="" class="wp-image-2118"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/peceme-ricany/" data-type="link" data-id="/podniky/peceme-ricany/" target="_blank" rel="noreferrer noopener">3. Pečeme Říčany</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/peceme-ricany/" target="_blank" rel="noreferrer noopener">3. Pečeme Říčany</a></h2>
 
 <p><strong>Pečeme Říčany</strong>&nbsp;je oblíbené&nbsp;<strong>řemeslné pekařství s kavárnou</strong>, kde se potkává vůně čerstvě upečeného pečiva s příjemným místem k posezení. </p>
 

@@ -7,7 +7,7 @@ image: "/wp-content/uploads/2026/02/samahan-caj.png"
 obdobi: [podzim, zima]
 ---
 
-<h1 class="wp-block-heading">Čaj Samahan: co to je, co obsahuje a k čemu je dobrý?</h1>
+<p class="lead"><strong>Čaj Samahan: co to je, co obsahuje a k čemu je dobrý?</strong></p>
 
 <p>V posledních letech se na menu kaváren a brunch podniků stále častěji objevují alternativní nápoje, které nejsou jen chutné, ale mají i určité benefity pro tělo. Jedním z nich je i <strong>Samahan</strong> – tradiční bylinný nápoj, který pochází ze Srí Lanky a v Asii se používá už po generace. Možná jste ho zahlédli v nabídce pod názvem „Samahan tea“ nebo „Samahan bylinný čaj“, ale stále spousta lidí neví, co přesně to je a proč ho ochutnat.</p>
 

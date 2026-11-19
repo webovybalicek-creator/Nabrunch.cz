@@ -5,13 +5,13 @@ date: "2026-01-20T13:37:01"
 image: "/wp-content/uploads/2026/01/brunchpraha.png"
 ---
 
-<h1 class="wp-block-heading">Kam na snídani nebo brunch v Praze: 5 osvědčených tipů</h1>
+<p class="lead"><strong>Kam na snídani nebo brunch v Praze: 5 osvědčených tipů</strong></p>
 
 <p>Přemýšlíte, kam na skvělou <strong>snídani</strong> nebo pohodový <strong>brunch v Praze?</strong> </p>
 
 <p>Máme pro vás 5 výborných kaváren, které stojí za návštěvu. Každý podnik nabízí něco trochu jiného – vyberte si podle lokality, nálady nebo chuti.</p>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/smetanaq-cafe-bistro-praha/" data-type="link" data-id="/podniky/smetanaq-cafe-bistro-praha/" target="_blank" rel="noreferrer noopener">1. SmetanaQ Café &amp; Bistro Praha</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/smetanaq-cafe-bistro-praha/" target="_blank" rel="noreferrer noopener">1. SmetanaQ Café &amp; Bistro Praha</a></h2>
 
 <p><strong>SmetanaQ Café &amp; Bistro</strong> je designová <strong>kavárna a bistro v samém srdci Prahy na Smetanově nábřeží</strong>, která potěší milovníky kvalitní kávy v příjemném prostředí s výhledem na Vltavu. </p>
 
@@ -19,7 +19,7 @@ image: "/wp-content/uploads/2026/01/brunchpraha.png"
 
 <figure class="wp-block-image size-full"><a href="/podniky/smetanaq-cafe-bistro-praha/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/smetanaq-cafe-bistro-praha-foto-4.png" alt="" class="wp-image-2079"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/umamy-cafe-narodni-praha/" data-type="link" data-id="/podniky/umamy-cafe-narodni-praha/" target="_blank" rel="noreferrer noopener">2. Umámy Café Národní Praha</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/umamy-cafe-narodni-praha/" target="_blank" rel="noreferrer noopener">2. Umámy Café Národní Praha</a></h2>
 
 <p><strong>Umámy Café</strong>&nbsp;je&nbsp;<strong>útulná kavárna a brunch místo v Praze</strong>&nbsp;na Národní, které vás vítá na&nbsp;<strong>snídani, brunch, lehký oběd i kávu s dezertem</strong>.</p>
 
@@ -27,7 +27,7 @@ image: "/wp-content/uploads/2026/01/brunchpraha.png"
 
 <figure class="wp-block-image size-large"><a href="/podniky/umamy-cafe-narodni-praha/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/umamy-cafe-narodni-praha-foto-4.png" alt="" class="wp-image-2086"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/cafe-letka-praha/" data-type="link" data-id="/podniky/umamy-cafe-narodni-praha/" target="_blank" rel="noreferrer noopener">3. Café Letka Praha</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/cafe-letka-praha/" target="_blank" rel="noreferrer noopener">3. Café Letka Praha</a></h2>
 
 <p><strong>Café Letka</strong>&nbsp;je oblíbená&nbsp;<strong>útulná kavárna v pražských Holešovicích / na Letné</strong>, která kombinuje přátelskou atmosféru s kvalitní nabídkou jídel a nápojů.</p>
 
@@ -35,7 +35,7 @@ image: "/wp-content/uploads/2026/01/brunchpraha.png"
 
 <figure class="wp-block-image size-full"><a href="/podniky/cafe-letka-praha/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2026/01/cafe-letka-praha-foto-2.png" alt="" class="wp-image-1961"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/bistro-cafe-laskava/" data-type="link" data-id="/podniky/umamy-cafe-narodni-praha/" target="_blank" rel="noreferrer noopener">4. Bistro Cafe Laskavá</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/bistro-cafe-laskava/" target="_blank" rel="noreferrer noopener">4. Bistro Cafe Laskavá</a></h2>
 
 <p>Bistro Café Laskavá je útulná kavárna a bistro nacházející se na Vinohradech v Praze. Je oblíbeným místem pro milovníky <strong>snídaní a brunchů</strong>, které se zde podávají po celý den.</p>
 
@@ -43,7 +43,7 @@ image: "/wp-content/uploads/2026/01/brunchpraha.png"
 
 <figure class="wp-block-image size-large"><a href="/podniky/bistro-cafe-laskava/" target="_blank" rel=" noreferrer noopener"><img src="/wp-content/uploads/2025/05/bistro-cafe-laskava-foto-5.jpg" alt="" class="wp-image-1576"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/" data-type="link" data-id="/podniky/bavard-cafe-brno/" target="_blank" rel="noreferrer noopener">👉🏼</a> <a href="/podniky/matilda-praha/" data-type="link" data-id="/podniky/matilda-praha/" target="_blank" rel="noreferrer noopener">5. Matilda Praha</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/matilda-praha/" target="_blank" rel="noreferrer noopener">5. Matilda Praha</a></h2>
 
 <p>Ve čtvrti Letná se nachází <strong>kavárna – bistro Matilda</strong>, kde jde o něco víc než jen klasickou snídani či odpolední kávičku.</p>
 
