@@ -424,6 +424,9 @@ DirectoryIndex index.html
   RewriteRule ^kavarny/brno/srdecno/?$ /podniky/srdecno-brno/ [L,R=301]
   RewriteRule ^kavarny/brno/liberty-cafe/?$ /podniky/liberty-cafe-brno/ [L,R=301]
   RewriteRule ^kavarny/ostrava/drinkeat/?$ /podniky/drinkeat-ostrava/ [L,R=301]
+  RewriteRule ^kavarny/praha/stranou/?$ /podniky/stranou-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/the-flat-cafe/?$ /podniky/flat-cafe-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/vila-63/?$ /podniky/vila-63-praha/ [L,R=301]
   # Zavřené kavárny z OSM → stránka města
   RewriteRule ^kavarny/pardubice/dobry-kafe/?$ /lokalita/pardubice/ [L,R=301]
   # Zrušené téma (štítek měly skoro všechny podniky) → přehled podniků

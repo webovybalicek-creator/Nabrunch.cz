@@ -6716,5 +6716,151 @@
    "/wp-content/uploads/2026/11/lajka-zije-ostrava-4.jpg",
    "/wp-content/uploads/2026/11/lajka-zije-ostrava-5.jpg"
   ]
+ },
+ {
+  "id": 2377,
+  "slug": "stranou-praha",
+  "nazev": "Stranou Praha",
+  "datum": "2026-11-19 20:23:29",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 1",
+   "Praha"
+  ],
+  "adresa": "Hellichova 463/4, Praha 1 – Malá Strana",
+  "lat": 50.084283,
+  "lon": 14.40615,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 18:00",
+   "So - Ne: 8:30 - 17:00"
+  ],
+  "web": "https://www.stranou.cz/",
+  "instagram": "@stranou_prague",
+  "instagramUrl": "https://www.instagram.com/stranou_prague/",
+  "telefon": "+420607060909",
+  "telefonText": "+420 607 060 909",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Stranou+Praha,+Hellichova+463/4,+Praha+1+–+Malá+Strana",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si krémová vajíčka s dýňovým crunchem, nebo na sladko švestkové lívance s perníkovou drobenkou. Chleba je kváskový od Tisse Bakery a uzeniny z rodinného řeznictví Čejka.</p>",
+  "popis": "<p>Stranou je malé bistro s velkým srdcem v Hellichově ulici na Malé Straně, kousek od Újezdu a lanovky na Petřín. Ráno tu voní čerstvě upečený koláč a káva z výběrových zrn, interiér s klenbami je světlý a útulný – ideální na chvilku s přáteli i na práci u kávy.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch od rána</h2>\n\n<p>Ve všední dny otevírá <strong>už v 7:30</strong>, o víkendu v 8:30. Snídaňové menu se podává <strong>od 8:00 do 15:00</strong> a mění se podle sezony. Na podzim tu najdete <strong>bistro talíř</strong> se šunkou od kosti nebo lahůdkovým párkem z rodinného řeznictví Čejka, sázeným vejcem, hermelínem a kváskovým chlebem od Tisse Bakery, <strong>krémová míchaná vajíčka s dýňovým crunchem</strong>, veganskou a bezlepkovou ovesnou kaši na slano nebo <strong>švestkové lívance</strong> s tvarohovým krémem a perníkovou drobenkou.</p>\n\n<h2 class=\"wp-block-heading\">Polední menu</h2>\n\n<p>Od 11:00 do 15:00 je k tomu obědové menu – polévka dne, švédské masové kuličky, quesadilla nebo veganský kimchi poke bowl. Na výběr je i bezlepkový chléb.</p>",
+  "seoTitulek": "Stranou Malá Strana – snídaně, brunch a otevírací doba",
+  "seoPopis": "Bistro Stranou na Malé Straně: snídaně od 8:00 do 15:00, bistro talíř, krémová vajíčka, švestkové lívance, chléb od Tisse a výběrová káva.",
+  "foto": "/wp-content/uploads/2026/11/stranou-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/stranou-praha-2.jpg",
+   "/wp-content/uploads/2026/11/stranou-praha-3.jpg",
+   "/wp-content/uploads/2026/11/stranou-praha-4.jpg",
+   "/wp-content/uploads/2026/11/stranou-praha-5.jpg",
+   "/wp-content/uploads/2026/11/stranou-praha-6.jpg"
+  ]
+ },
+ {
+  "id": 2378,
+  "slug": "flat-cafe-praha",
+  "nazev": "FLAT cafe Praha",
+  "datum": "2026-11-19 20:23:29",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 10",
+   "Praha"
+  ],
+  "adresa": "Kodaňská 81/4, Praha 10 – Vršovice",
+  "lat": 50.071088,
+  "lon": 14.451335,
+  "oteviraciDoba": [
+   "Po - Pá: 8:30 - 21:00",
+   "So - Ne: 9:00 - 18:00"
+  ],
+  "web": "https://flat-cafe.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420602691129",
+  "telefonText": "+420 602 691 129",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=FLAT+cafe+Praha,+Kodaňská+81/4,+Praha+10+–+Vršovice",
+  "rezervace": "Ano, jen ve všední dny",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijďte na „proper“ anglickou snídani – mají i veganskou verzi – nebo na naughty lívance. A ke kávě z londýnské pražírny Square Mile si dejte kousek dortu.</p>",
+  "popis": "<p>FLAT je kavárna ve Vršovicích na rohu Kodaňské a Moskevské ulice, zařízená v duchu britského obýváku – s portrétem královny, cihlovou zdí, chesterfieldy a starožitným nábytkem. Káva, brunch a drinky tu běží „pod laskavým dohledem Jejího Veličenstva“.</p>\n\n<h2 class=\"wp-block-heading\">Brunch, kde se snídaně a oběd potkávají</h2>\n\n<p>Hranice mezi snídaní a brunchem tu podle majitelů neexistuje, takže si můžete dát načas. Na menu je <strong>poctivá anglická snídaně</strong> (i ve veganské verzi), omelety, toasty a <strong>lívance</strong>. Kávu jim praží londýnská pražírna <strong>Square Mile</strong>, oceňovaná po celém světě. Večer se nabídka mění na gin – britskou klasiku i české giny.</p>\n\n<h2 class=\"wp-block-heading\">Pracovní a nepracovní část</h2>\n\n<p>Ve všední dny je otevřeno od 8:30 do 21:00 a stůl si můžete zarezervovat. O víkendu (9:00–18:00) rezervace nepřijímají a kavárna žádá hosty, aby nepoužívali laptopy, aby si všichni užili pohodovou atmosféru.</p>",
+  "seoTitulek": "FLAT cafe Vršovice – anglická snídaně, brunch a otevírací doba",
+  "seoPopis": "FLAT ve Vršovicích: kavárna v britském stylu, anglická snídaně i veganská, lívance, káva Square Mile a gin. Otevřeno denně, ve všední dny do 21:00.",
+  "foto": "/wp-content/uploads/2026/11/flat-cafe-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/flat-cafe-praha-2.jpg",
+   "/wp-content/uploads/2026/11/flat-cafe-praha-3.jpg",
+   "/wp-content/uploads/2026/11/flat-cafe-praha-4.jpg",
+   "/wp-content/uploads/2026/11/flat-cafe-praha-5.jpg"
+  ]
+ },
+ {
+  "id": 2379,
+  "slug": "vila-63-praha",
+  "nazev": "Vila 63 Praha",
+  "datum": "2026-11-19 20:23:29",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 10",
+   "Praha"
+  ],
+  "adresa": "Hradešínská 1930/63 (vstup z Říčanské), Praha 10",
+  "lat": 50.07417,
+  "lon": 14.460065,
+  "oteviraciDoba": [
+   "Po - Út: zavřeno",
+   "St - Ne: 8:30 - 18:00"
+  ],
+  "web": "https://www.vila63.cz/",
+  "instagram": "@vila_63",
+  "instagramUrl": "https://www.instagram.com/vila_63/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Vila+63+Praha,+Hradešínská+1930/63+(vstup+z+Říčanské),+Praha+10",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Za hezkého dne si sedněte na zahradu vily a dejte si českou snídani – hemenex, míchaná vejce se smaženou cibulkou nebo pomazánkové trio. Na podzim nevynechejte pumpkin spice latte.</p>",
+  "popis": "<p>Vila 63 je kavárna v prvorepublikové vile se zahradou na pomezí Vinohrad a Vršovic. Za zelenou brankou s číslem popisným 63 ruch města skoro neslyšíte a čas tu plyne pomaleji. Vstup je z Říčanské ulice, nejbližší je tramvajová zastávka Orionka (linky 10 a 16), pěšky to je kousek i od metra Flora. Vítáni jsou psi, děti i cyklisté.</p>\n\n<h2 class=\"wp-block-heading\">Česká snídaně s nápadem</h2>\n\n<p>Kuchyně se drží poctivé české klasiky a menu se mění podle sezony i speciálních týdnů. Na snídani tu bývá <strong>hemenex</strong> se šunkou, <strong>míchaná vejce</strong> se smaženou cibulkou a pažitkou, párky s křenem, pomazánkové trio nebo sladké bramborové šišky s mákem a povidly. Ke kávě se podává výběrová káva, matcha i chai latte, na podzim pumpkin spice latte.</p>\n\n<h2 class=\"wp-block-heading\">Kdy vyrazit</h2>\n\n<p>Otevřeno je <strong>od středy do neděle od 8:30 do 18:00</strong>, v pondělí a úterý je zavřeno. Ve vile se pořádají i pop-upy, večeře a degustace, stůl si můžete zarezervovat online.</p>",
+  "seoTitulek": "Vila 63 Praha – snídaně ve vile se zahradou, otevírací doba",
+  "seoPopis": "Vila 63 na pomezí Vinohrad a Vršovic: kavárna v prvorepublikové vile se zahradou, česká snídaně, výběrová káva. Otevřeno středa až neděle 8:30–18.",
+  "foto": "/wp-content/uploads/2026/11/vila-63-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/vila-63-praha-2.jpg",
+   "/wp-content/uploads/2026/11/vila-63-praha-3.jpg",
+   "/wp-content/uploads/2026/11/vila-63-praha-4.jpg"
+  ]
  }
 ]
