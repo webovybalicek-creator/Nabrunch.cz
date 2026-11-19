@@ -12,7 +12,7 @@ image: "/wp-content/uploads/2026/11/offline-bar-zlin-1.jpg"
 <p>Matcha bar a kavárna v přízemí obchodního centra Zlaté Jablko na náměstí Míru. Brunch podává <strong>každý den</strong> – ve všední dny od 8:00, o víkendu od 9:00 – a otevřeno má až do 21:00. Na talíři najdete vajíčka na tři způsoby, French toast nebo něco sladkého z vitríny. Specialitou je přes 20 druhů matcha drinků.</p>
 <p>🍳 <strong>Co si dát:</strong> vajíčka na tři způsoby a k nim matcha latte.</p>
 
-<h2>👉🏼 <a href="/podniky/kookie-by-nikol-zlin/">Kookie by Nikol</a> – třída Tomáše Bati</h2>
+<h2>👉🏼 <a href="/podniky/kookie-by-nikol-zlin/">Kookie by Nikol</a> – ulice Jana Antonína Bati</h2>
 <p>Útulná kavárna se zahrádkou, kde se dobře cítí rodiny s dětmi i pejskaři. Na menu jsou sladké i slané snídaně, domácí dortíky a matcha latte, pro děti je připravený koutek. Otevřeno je i v neděli dopoledne (9:00–13:00).</p>
 <p>🍳 <strong>Co si dát:</strong> bagel s trhaným masem a k němu domácí dortík.</p>
 
