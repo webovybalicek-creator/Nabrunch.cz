@@ -6617,5 +6617,104 @@
    "/wp-content/uploads/2026/11/liberty-cafe-brno-5.jpg",
    "/wp-content/uploads/2026/11/liberty-cafe-brno-6.jpg"
   ]
+ },
+ {
+  "id": 2375,
+  "slug": "drinkeat-ostrava",
+  "nazev": "Drinkeat Ostrava",
+  "datum": "2026-11-19 20:17:36",
+  "doporuceny": false,
+  "lokality": [
+   "Ostrava"
+  ],
+  "adresa": "Poděbradova 312/32, Ostrava",
+  "lat": 49.836122,
+  "lon": 18.283845,
+  "oteviraciDoba": [
+   "Po - Čt: 7:30 - 18:00",
+   "Pá: 7:30 - 22:00",
+   "So - Ne: 8:00 - 14:00"
+  ],
+  "web": "https://drinkeat.cz/",
+  "instagram": "@drink_eat_ostrava",
+  "instagramUrl": "https://www.instagram.com/drink_eat_ostrava/",
+  "telefon": "+420728200920",
+  "telefonText": "+420 728 200 920",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Drinkeat+Ostrava,+Poděbradova+312/32,+Ostrava",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si „Echt tři vejce“ se zastřenými vejci, raclette espumou a slaninovou drobenkou, nebo croissant Benedict. K brunchi patří mimosa za zvýhodněnou cenu – platí do 14:00.</p>",
+  "popis": "<p>Drinkeat je bistro v centru Ostravy na Poděbradově ulici, kousek od Stodolní. Sami o sobě říkají, že přinášejí nejlepší brunch v Ostravě – a menu se každý měsíc mění. Kávu jim praží liberecká pražírna Nordbeans.</p>\n\n<h2 class=\"wp-block-heading\">Brunch každý den do 14:00</h2>\n\n<p>Brunchové menu platí <strong>každý den do 14:00</strong>, ve všední dny od 7:30, o víkendu od 8:00. Na slano tu najdete <strong>croissant Benedict</strong>, „Echt tři vejce“ s raclette espumou, chleba ve vajíčku s pastrami, guacamole chléb s omeletou, dýňový hummus s trhaným hovězím v gochujangu nebo šlehanou ricottu s uzeným lososem a zastřenými vejci. Na sladko <strong>lívance</strong> (třeba podzimní pumpkin spice) nebo brioška s hruškami v karamelu.</p>\n\n<h2 class=\"wp-block-heading\">Mimosa a zahrádka ve vnitrobloku</h2>\n\n<p>Ke snídaním mají do 14:00 zvýhodněné nápoje – mimosu, snídaňové prosecco, fresh džusy i domácí limonády. Pro hosty s celiakií připravují bezlepkové pečivo. V létě se sedí na obrostlé zahrádce ve vnitrobloku, v pátek je otevřeno až do 22:00.</p>",
+  "seoTitulek": "Drinkeat Ostrava – brunch do 14:00, menu a otevírací doba",
+  "seoPopis": "Bistro Drinkeat v centru Ostravy: brunch denně do 14:00, croissant Benedict, lívance, mimosa a zahrádka ve vnitrobloku. Menu, otevírací doba a tipy.",
+  "foto": "/wp-content/uploads/2026/11/drinkeat-ostrava-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/drinkeat-ostrava-2.jpg",
+   "/wp-content/uploads/2026/11/drinkeat-ostrava-3.jpg",
+   "/wp-content/uploads/2026/11/drinkeat-ostrava-4.jpg",
+   "/wp-content/uploads/2026/11/drinkeat-ostrava-5.jpg",
+   "/wp-content/uploads/2026/11/drinkeat-ostrava-6.jpg"
+  ]
+ },
+ {
+  "id": 2376,
+  "slug": "lajka-zije-ostrava",
+  "nazev": "Lajka žije Ostrava",
+  "datum": "2026-11-19 20:17:36",
+  "doporuceny": false,
+  "lokality": [
+   "Ostrava"
+  ],
+  "adresa": "28. října 572/4, Ostrava",
+  "lat": 49.837242,
+  "lon": 18.295259,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 18:00",
+   "So: 9:00 - 17:00",
+   "Ne: 9:00 - 15:00"
+  ],
+  "web": "https://lajkazije.cz/",
+  "instagram": "@lajkazije",
+  "instagramUrl": "https://www.instagram.com/lajkazije/",
+  "telefon": "+420732420328",
+  "telefonText": "+420 732 420 328",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lajka+žije+Ostrava,+28.+října+572/4,+Ostrava",
+  "rezervace": "Ne, jen walk-in",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte „snídani Lajka“ – vejce do skla, labneh, rillettes z uzené makrely, smetanový hrášek a valašský chléb. Nebo skládaná míchaná vejce s lanýžovým pecorinem.</p>",
+  "popis": "<p>Lajka žije je kavárna u Sýkorova mostu v centru Ostravy, která chce být vaším oblíbeným místem na kafe a snídani. Vaří se tu fresh snídaně ze sezonních surovin, k tomu výběrová káva a matcha. Zvířátka a cyklisté jsou vítáni.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně ze sezonních surovin</h2>\n\n<p>Snídaně se podávají <strong>ve všední dny od 9:00 do 12:00</strong> a <strong>o víkendu od 9:00 do 14:00</strong>. V menu najdete <strong>skládaná míchaná vejce ze dvora</strong> se sezonním salátem a valašským chlebem (můžete přidat lanýžové pecorino nebo ‘nduju), domácí labneh s červenou řepou a piniovými oříšky, oříškovou granolu s řeckým jogurtem nebo velkou <strong>snídani Lajka</strong> s vejci do skla, labnehem a rillettes z uzené makrely.</p>\n\n<h2 class=\"wp-block-heading\">Bez rezervací</h2>\n\n<p>Rezervace nepřijímají, chodí se „walk-in“. Kavárna je otevřená ve všední dny od 8:00, v sobotu do 17:00 a v neděli do 15:00.</p>",
+  "seoTitulek": "Lajka žije Ostrava – snídaně, výběrová káva a otevírací doba",
+  "seoPopis": "Lajka žije u Sýkorova mostu v Ostravě: snídaně ze sezonních surovin, skládaná vejce, labneh, granola a výběrová káva. O víkendu snídaně do 14:00.",
+  "foto": "/wp-content/uploads/2026/11/lajka-zije-ostrava-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/lajka-zije-ostrava-2.jpg",
+   "/wp-content/uploads/2026/11/lajka-zije-ostrava-3.jpg",
+   "/wp-content/uploads/2026/11/lajka-zije-ostrava-4.jpg",
+   "/wp-content/uploads/2026/11/lajka-zije-ostrava-5.jpg"
+  ]
  }
 ]
