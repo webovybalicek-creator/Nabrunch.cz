@@ -5929,7 +5929,7 @@
   "tipNadpis": "Náš brunch tip",
   "tip": "<p>Na slano si dejte vejce Benedikt s lososem nebo slaninou, na sladko buchtičky se šodó a jahodami. Ke kávě nevynechejte některý z autorských dezertů, třeba lískooříškový Paris-Brest.</p>",
   "popis": "<p>Café Savorsky je kavárna v centru Jihlavy, kousek od Masarykova náměstí. Najdete ji v modrém, nově opraveném domě v Komenského ulici cestou k Horáckému divadlu. Spojuje kvalitní kávu, promyšlené snídaně, poctivé jídlo a autorské dezerty.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně po celý den</h2>\n\n<p>Snídaně se tu podávají <strong>celý den, sedm dní v týdnu od 8:00 do 19:00</strong>. Na výběr je <strong>vejce Benedikt</strong> na domácí bulce se slaninou, šunkou od kosti nebo lososem, vejce do skla s přepuštěným máslem a parmazánem, omelety, sendviče, bowly i avokádové chleby. Na sladko jsou tu smoothie bowly s ovocem a granolou nebo buchtičky se šodó. K snídani patří máslové croissanty, klasické i plněné.</p>\n\n<h2 class=\"wp-block-heading\">Dezerty od vítězky Peče celá země</h2>\n\n<p>Dezertní kolekci pro Savorsky tvoří <strong>Eliška Hlaváčová, vítězka soutěže Peče celá země</strong>. V nabídce jsou éclairy, tartaletky, lískooříškový Paris-Brest, medový dort nebo bezlepkový pistáciovo-malinový dort. Stůl si můžete zarezervovat online na webu.</p>",
-  "seoTitulek": "Café Savorsky Jihlava – snídaně celý den, menu a otevírací doba",
+  "seoTitulek": "Café Savorsky Jihlava – snídaně celý den a otevírací doba",
   "seoPopis": "Café Savorsky v centru Jihlavy: snídaně celý den a denně od 8:00, vejce Benedikt, croissanty a autorské dezerty od vítězky Peče celá země.",
   "foto": "/wp-content/uploads/2026/11/cafe-savorsky-jihlava-1.jpg",
   "galerie": [
@@ -6267,7 +6267,7 @@
   "googleMaps": "https://www.google.com/maps/search/?api=1&query=Spižírna+1902,+Korunní+86,+Praha",
   "tip": "<p>Na víkendový brunch přijďte hned v 9:00, rezervace o víkendu nepřijímají. Ke snídani si vezměte domácí buchtu nebo koláč z jejich pekárny.</p>",
   "popis": "<p>Spižírna 1902 je kavárna, bistro a pekárna v Korunní ulici na pomezí Vinohrad a Žižkova, kousek od náměstí Jiřího z Poděbrad. Jezdí sem tramvaje 10 a 16 (zastávky Perunova a Vinohradská vodárna). Filozofie je jednoduchá: čerstvé, zdravé a na místě připravené jídlo, jaké najdete ve spižírně.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně v týdnu, brunch o víkendu</h2>\n\n<p><strong>Snídaně</strong> se podávají ve všední dny od 8:00 do 11:15, <strong>víkendové brunche</strong> od 9:00 do 16:00 (kuchyně bere objednávky do 15:45). Menu se mění podle sezony: od vajec a slaných talířů přes bowly s ovocem až po sladké lívance. Každé ráno tu pečou <strong>domácí buchty, koláče a další pečivo</strong> podle rodinného receptu, k mání do vyprodání.</p>\n\n<h2 class=\"wp-block-heading\">Rezervace jen ve všední dny</h2>\n\n<p>Ve všední dny si stůl zarezervujete online přes Qerko, <strong>o víkendu rezervace nepřijímají</strong>, takže na brunch přijďte spíš dřív. Ve všední dny je i obědové menu pro masožravce i vegany. K pití domácí limonády, dobrá káva, víno a pivo z minipivovarů.</p>",
-  "seoTitulek": "Spižírna 1902 Praha – snídaně, víkendový brunch a otevírací doba",
+  "seoTitulek": "Spižírna 1902 Praha – snídaně, brunch a otevírací doba",
   "seoPopis": "Spižírna 1902 v Korunní ulici: snídaně ve všední dny 8–11:15, víkendový brunch 9–16, domácí buchty a koláče z vlastní pekárny. Otevírací doba a tipy.",
   "foto": "/wp-content/uploads/2026/11/spizirna-1902-praha-1.jpg",
   "galerie": [
@@ -6422,6 +6422,101 @@
   "galerie": [
    "/wp-content/uploads/2026/11/seiferts-brunch-praha-2.jpg",
    "/wp-content/uploads/2026/11/seiferts-brunch-praha-3.jpg"
+  ]
+ },
+ {
+  "id": 2371,
+  "slug": "caffe-diem-plzen",
+  "nazev": "Caffe Diem Plzeň",
+  "datum": "2026-11-19 20:10:05",
+  "doporuceny": false,
+  "lokality": [
+   "Plzeň"
+  ],
+  "adresa": "Pražská 59/31, Plzeň",
+  "lat": 49.74677,
+  "lon": 13.381675,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: zavřeno"
+  ],
+  "web": "https://www.caffediem.cz/",
+  "instagram": "@caffediemplzen",
+  "instagramUrl": "https://www.instagram.com/caffediemplzen/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Caffe+Diem+Plzeň,+Pražská+59/31,+Plzeň",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si anglickou snídani s volskými oky, fazolemi a párečky nebo lívance s čerstvým ovocem a medem. Ke snídani si objednejte výběrovou kávu z jejich vlastní pražírny, třeba na V60 nebo chemexu.</p>",
+  "popis": "<p>Caffe Diem je kavárna a pražírna v Pražské ulici v historickém centru Plzně, pár kroků od náměstí Republiky. Kávu si praží sami, takže tu ochutnáte čerstvě praženou výběrovou kávu připravenou na espresso i alternativními metodami (V60, chemex, aeropress, french press). Pořádají i kávové kurzy.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně ve všední dny</h2>\n\n<p>Kavárna je otevřená <strong>od pondělí do pátku od 8:00 do 18:00</strong> a snídaně tu podávají po celý den. Na slano je tu <strong>anglická snídaně</strong>, míchaná vajíčka se slaninou, vaječná omeleta, chléb s avokádem a míchanými vejci, americké toasty nebo bagely s vajíčkem. Na sladko <strong>lívance</strong> s čerstvým ovocem, medem a smetanou.</p>\n\n<h2 class=\"wp-block-heading\">O víkendu pražírna a kurzy</h2>\n\n<p>O víkendu kavárna pro veřejnost neotevírá, místo toho běží pražírna a kávové kurzy (latte art, baristický kurz, domácí příprava). Dárkové poukazy na kurzy i do kavárny se dají objednat online.</p>",
+  "seoTitulek": "Caffe Diem Plzeň – snídaně, výběrová káva a otevírací doba",
+  "seoPopis": "Caffe Diem v centru Plzně: snídaně ve všední dny 8–18, anglická snídaně, lívance, bagely a výběrová káva z vlastní pražírny. Otevírací doba a tipy.",
+  "foto": "/wp-content/uploads/2026/11/caffe-diem-plzen-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/caffe-diem-plzen-2.jpg",
+   "/wp-content/uploads/2026/11/caffe-diem-plzen-3.jpg",
+   "/wp-content/uploads/2026/11/caffe-diem-plzen-4.jpg",
+   "/wp-content/uploads/2026/11/caffe-diem-plzen-5.jpg",
+   "/wp-content/uploads/2026/11/caffe-diem-plzen-6.jpg"
+  ]
+ },
+ {
+  "id": 2372,
+  "slug": "schovana-kavarna-plzen",
+  "nazev": "Schovaná kavárna Plzeň",
+  "datum": "2026-11-19 20:10:05",
+  "doporuceny": false,
+  "lokality": [
+   "Plzeň"
+  ],
+  "adresa": "Zbrojnická 114/6, Plzeň",
+  "lat": 49.746008,
+  "lon": 13.379003,
+  "oteviraciDoba": [
+   "Po - So: 9:00 - 19:00",
+   "Ne: 10:00 - 18:00"
+  ],
+  "web": "https://schovanakavarna.cz/",
+  "instagram": "@schovana_kavarna",
+  "instagramUrl": "https://www.instagram.com/schovana_kavarna",
+  "telefon": "+420732699441",
+  "telefonText": "+420 732 699 441",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Schovaná+kavárna+Plzeň,+Zbrojnická+114/6,+Plzeň",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijďte na celodenní brunch a nechte si místo na kousek domácího dortu – cheesecake se slaným karamelem tu patří k nejoblíbenějším. Ke kávě si můžete dát i domácí limonádu nebo kombuchu.</p>",
+  "popis": "<p>Schovaná kavárna je, jak název napovídá, trochu schovaná – najdete ji ve Zbrojnické ulici v centru Plzně, kousek od náměstí Republiky. Uvnitř čeká světlý klenutý prostor s dřevěnými stolky, kam se dá „schovat“ před ruchem města.</p>\n\n<h2 class=\"wp-block-heading\">Celodenní brunche</h2>\n\n<p>Kavárna nabízí <strong>celodenní brunche</strong>, slané svačinky a sladké dorty. Otevřeno je <strong>každý den</strong>, od pondělí do soboty od 9:00 do 19:00 a v neděli od 10:00 do 18:00, takže brunch stihnete i pozdě odpoledne. Na talíři najdete třeba toasty s vejcem, avokádem a zeleninou.</p>\n\n<h2 class=\"wp-block-heading\">Dorty a káva</h2>\n\n<p>K espressu nebo flat white (ovesné či bezlaktózové mléko je zdarma) se hodí domácí dorty a cheesecaky. Z nápojů nechybí domácí limonády, matcha latte, kombucha nebo schorle z nebílovského moštu. Stůl si můžete zarezervovat online.</p>",
+  "seoTitulek": "Schovaná kavárna Plzeň – celodenní brunch a otevírací doba",
+  "seoPopis": "Schovaná kavárna ve Zbrojnické ulici v Plzni: celodenní brunche, domácí dorty a káva, otevřeno denně od 9:00 (v neděli od 10:00). Adresa a tipy.",
+  "foto": "/wp-content/uploads/2026/11/schovana-kavarna-plzen-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/schovana-kavarna-plzen-2.jpg",
+   "/wp-content/uploads/2026/11/schovana-kavarna-plzen-3.jpg",
+   "/wp-content/uploads/2026/11/schovana-kavarna-plzen-4.jpg",
+   "/wp-content/uploads/2026/11/schovana-kavarna-plzen-5.jpg"
   ]
  }
 ]
