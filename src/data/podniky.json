@@ -6180,5 +6180,53 @@
    "/wp-content/uploads/2026/11/strakaty-kralik-beroun-5.jpg",
    "/wp-content/uploads/2026/11/strakaty-kralik-beroun-6.jpg"
   ]
+ },
+ {
+  "id": 2366,
+  "slug": "kafejn-beroun",
+  "nazev": "Kafejn Beroun",
+  "datum": "2026-11-19 12:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Beroun"
+  ],
+  "adresa": "Slapská 131, Beroun",
+  "lat": 49.962464,
+  "lon": 14.073447,
+  "oteviraciDoba": [
+   "Po - Pá: 7:00 - 18:00",
+   "So - Ne: 8:00 - 18:00"
+  ],
+  "web": "https://www.facebook.com/kafejnberoun/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Kafejn,+Slapská+131,+Beroun",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si snídaňový talíř s krémovými míchanými vejci, avokádem, salátem a kváskovým chlebem, nebo toast se zastřenými vejci. Ke kávě nevynechejte domácí koláč s drobenkou nebo věneček.</p>",
+  "popis": "<p>Kafejn je kavárna a bistro ve Slapské ulici v centru Berouna, pár kroků od Husova náměstí. Spojuje výběrovou kávu s poctivou kuchyní a všechno sladké i slané si vyrábí sami.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně každý den od rána</h2>\n\n<p>Otevřeno je sedm dní v týdnu, <strong>ve všední dny už od 7:00</strong>, o víkendu od 8:00. Ráno tu podávají <strong>snídaně</strong>, o víkendu i <strong>brunch</strong>. Na talíři najdete krémová míchaná vejce s avokádem a kváskovým chlebem, párky s hořčicí, toast se zastřenými vejci, avokádem a ředkvičkami nebo čerstvý salát.</p>\n\n<h2 class=\"wp-block-heading\">Domácí koláče a dezerty</h2>\n\n<p>Pýchou Kafejnu je vlastní výroba sladkého: kynuté koláče s tvarohem, ovocem a drobenkou, věnečky s krémem a malinami nebo nepečené dorty. K tomu výběrová káva. V létě se sedí venku na ulici.</p>",
+  "seoTitulek": "Kafejn Beroun – snídaně od 7:00, brunch a otevírací doba",
+  "seoPopis": "Kafejn v centru Berouna: snídaně denně od 7:00, víkendový brunch, míchaná vejce s avokádem, domácí koláče a výběrová káva. Otevírací doba a adresa.",
+  "foto": "/wp-content/uploads/2026/11/kafejn-beroun-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/kafejn-beroun-2.jpg",
+   "/wp-content/uploads/2026/11/kafejn-beroun-3.jpg",
+   "/wp-content/uploads/2026/11/kafejn-beroun-4.jpg",
+   "/wp-content/uploads/2026/11/kafejn-beroun-5.jpg"
+  ]
  }
 ]
