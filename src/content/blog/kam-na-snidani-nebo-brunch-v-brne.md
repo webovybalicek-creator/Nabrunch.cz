@@ -1,7 +1,7 @@
 ---
-title: "Brunch Brno: kam na snídani a brunch – 10 ověřených tipů"
-description: "Hledáte brunch v Brně? 10 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
-seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 10 ověřených tipů"
+title: "Brunch Brno: kam na snídani a brunch – 12 ověřených tipů"
+description: "Hledáte brunch v Brně? 12 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
+seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 12 ověřených tipů"
 date: "2025-11-15T17:45:21"
 image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 ---
@@ -30,6 +30,10 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <p>Kavárna s výběrovou kávou z malé pražírny v Křížovicích, celodenními snídaněmi a zahrádkou. Lívance se slaným karamelem nebo anglická snídaně.</p>
 <p>🍳 <strong>Co si dát:</strong> avokádový chlebík s cheddarem, guacamole, rukolou, granátovým jablkem a mozzarellou, k tomu flat white na zahrádce.</p>
 
+<h3>👉🏼 <a href="/podniky/liberty-cafe-brno/">Liberty Cafe</a> – Radnická</h3>
+<p>Rodinná kavárna přímo naproti Staré radnici, kousek od Zelného trhu. Snídaně podává <strong>celý den a každý den</strong>: avokádové toasty s vejcem nebo uzeným lososem, Full English Breakfast a nadýchané lívance – s mangem, s nutellou nebo dubajské s pistáciemi a kadayifem. Psi i děti jsou vítáni.</p>
+<p>🍳 <strong>Co si dát:</strong> dubajské lívance.</p>
+
 <h2>Brunch v Králově Poli a okolí Lužánek</h2>
 
 <h3>👉🏼 <a href="/podniky/brunches-bistro-brno/">Brunche’s Bistro</a> – Vodova ♥</h3>
@@ -48,6 +52,12 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <p>Dog-friendly kavárna s pečivem z řemeslných pekáren a kávou od lokálních i zahraničních pražíren. Coffee Trail má po Brně víc poboček.</p>
 <p>🍳 <strong>Co si dát:</strong> croque madame s dijonskou hořčicí, šunkou od kosti, bešamelem, gruyère a volským okem.</p>
 
+<h2>Brunch na Veveří</h2>
+
+<h3>👉🏼 <a href="/podniky/srdecno-brno/">Srdečno</a> – Smetanova</h3>
+<p>Malá kavárna s vlastní cukrárnou, kde se <strong>brunch podává celý den</strong> (kuchyně do 15:40) a otevřeno je denně od 9:00. Na slano turecká vejce, vejce Benedikt na briošce s hovězí šunkou a Comté nebo lívance s trhaným vepřovým, na sladko French toast tiramisu. A k tomu francouzské dezerty z vlastní cukrárny.</p>
+<p>🍳 <strong>Co si dát:</strong> turecká vejce a s sebou éclair.</p>
+
 <h2>Jak si vybrat</h2>
 
 <ul>
@@ -56,7 +66,9 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <li><strong>Na kávu jako zážitek?</strong> Poppy Beans nebo Maybe coffee.</li>
 <li><strong>Brzy ráno nebo bez lepku?</strong> Buchta B otevírá v 6:30 a má bezlepkové i veganské varianty.</li>
 <li><strong>Venku?</strong> Maybe coffee a Café Momenta mají zahrádku.</li>
-<li><strong>S pejskem?</strong> Brunche’s Bistro, Coffee Trail, Café Momenta a Maybe coffee.</li>
+<li><strong>S pejskem?</strong> Brunche’s Bistro, Coffee Trail, Café Momenta, Maybe coffee, Liberty Cafe a Srdečno.</li>
+<li><strong>Brunch celý den i v neděli?</strong> Liberty Cafe nebo Srdečno.</li>
+<li><strong>Dezerty jako z Paříže?</strong> Srdečno s vlastní cukrárnou.</li>
 <li><strong>Vegan?</strong> Buchta B, SKØG, Bavard, Poppy Beans a Coffee Trail mají veganské varianty.</li>
 </ul>
 

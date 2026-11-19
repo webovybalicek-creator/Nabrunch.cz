@@ -6518,5 +6518,104 @@
    "/wp-content/uploads/2026/11/schovana-kavarna-plzen-4.jpg",
    "/wp-content/uploads/2026/11/schovana-kavarna-plzen-5.jpg"
   ]
+ },
+ {
+  "id": 2373,
+  "slug": "srdecno-brno",
+  "nazev": "Srdečno Brno",
+  "datum": "2026-11-19 20:14:37",
+  "doporuceny": false,
+  "lokality": [
+   "Brno"
+  ],
+  "adresa": "Smetanova 631/30, Brno-Veveří",
+  "lat": 49.203583,
+  "lon": 16.6063,
+  "oteviraciDoba": [
+   "Po - Ne: 9:00 - 19:00"
+  ],
+  "web": "https://www.kavarnasrdecno.cz/",
+  "instagram": "@_srdecno",
+  "instagramUrl": "https://www.instagram.com/_srdecno/",
+  "telefon": "+420773902225",
+  "telefonText": "+420 773 902 225",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Srdečno+Brno,+Smetanova+631/30,+Brno-Veveří",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Na slano si dejte turecká vejce s koprovým jogurtem a uzeným paprikovým máslem, na sladko French toast tiramisu. A odnést si domů musíte některý z francouzských dezertů z vlastní cukrárny.</p>",
+  "popis": "<p>Srdečno je malá kavárna s vlastní cukrárnou na Smetanově ulici v Brně-Veveří. Dezerty tu dělají od základu a podle sezony, brunch vaří z čerstvých surovin a ke kávě nabízí výběrovou kávu. Pejsci jsou vítaní.</p>\n\n<h2 class=\"wp-block-heading\">Celodenní brunch každý den</h2>\n\n<p>Otevřeno je <strong>denně od 9:00 do 19:00</strong> a <strong>brunch se podává celý den</strong>, kuchyně bere objednávky do 15:40. Na slano tu najdete <strong>turecká vejce</strong>, <strong>vejce Benedikt</strong> na briošce s hovězí šunkou a sýrem Comté, lívance s trhaným vepřovým, ricottovou pěnu s glazovanou karotkou nebo kváskový chléb s vajíčkovou či chorizo pomazánkou. Na sladko <strong>French toast tiramisu</strong>, švestkové knedlíčky s mákem nebo vánočková žemlovka.</p>\n\n<h2 class=\"wp-block-heading\">Francouzské dezerty</h2>\n\n<p>Chloubou Srdečna je cukrárna: éclairy, tartaletky, monoporce i dorty na zakázku, ke kterým připravují i svatební sweet bary a catering. Stůl si můžete zarezervovat online.</p>",
+  "seoTitulek": "Srdečno Brno – celodenní brunch, dezerty a otevírací doba",
+  "seoPopis": "Srdečno na Smetanově v Brně: celodenní brunch denně od 9:00, turecká vejce, vejce Benedikt, French toast tiramisu a francouzské dezerty z vlastní cukrárny.",
+  "foto": "/wp-content/uploads/2026/11/srdecno-brno-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/srdecno-brno-2.jpg",
+   "/wp-content/uploads/2026/11/srdecno-brno-3.jpg",
+   "/wp-content/uploads/2026/11/srdecno-brno-4.jpg",
+   "/wp-content/uploads/2026/11/srdecno-brno-5.jpg",
+   "/wp-content/uploads/2026/11/srdecno-brno-6.jpg"
+  ]
+ },
+ {
+  "id": 2374,
+  "slug": "liberty-cafe-brno",
+  "nazev": "Liberty Cafe Brno",
+  "datum": "2026-11-19 20:14:37",
+  "doporuceny": false,
+  "lokality": [
+   "Brno"
+  ],
+  "adresa": "Radnická 7, Brno",
+  "lat": 49.19327,
+  "lon": 16.608842,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 21:00",
+   "So: 9:00 - 21:00",
+   "Ne: 10:00 - 21:00"
+  ],
+  "web": "https://www.libertycafe.cz/",
+  "instagram": "@liberty_cafe_brno",
+  "instagramUrl": "https://www.instagram.com/liberty_cafe_brno/",
+  "telefon": "+420731617100",
+  "telefonText": "+420 731 617 100",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Liberty+Cafe+Brno,+Radnická+7,+Brno",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": true,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte dubajské lívance s kadayifem, pistáciovou pastou a nutellou, nebo na slano avokádový toast s uzeným lososem a dvěma vejci. Snídaně se podávají celý den.</p>",
+  "popis": "<p>Liberty Cafe je rodinná kavárna v historickém centru Brna, přímo naproti Staré radnici a kousek od Zelného trhu. Vítáni jsou rodiny s dětmi i pejsci, wifi je zdarma a v teplých dnech se sedí na terásce před kavárnou.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně po celý den</h2>\n\n<p>Snídaně a brunche se tu podávají <strong>po celou otevírací dobu</strong>, ve všední dny od 8:00, v sobotu od 9:00 a v neděli od 10:00. Na slano jsou tu míchaná vejce na másle s kváskovým chlebem, <strong>avokádové toasty</strong> s vejcem, uzeným lososem nebo opraženou šunkou a <strong>Full English Breakfast</strong>. Na sladko nadýchané <strong>lívance</strong> – s mangem a kokosovým mascarpone, s nutellou, nebo dubajské s kadayifem a pistáciemi.</p>\n\n<h2 class=\"wp-block-heading\">Káva, palačinky a drinky</h2>\n\n<p>Kromě snídaní tu připravují výběrovou kávu, sladké palačinky, dezerty a večer drinky. Otevřeno je každý den až do 21:00.</p>",
+  "seoTitulek": "Liberty Cafe Brno – snídaně celý den a otevírací doba",
+  "seoPopis": "Liberty Cafe naproti Staré radnici v Brně: snídaně celý den, avokádové toasty, Full English Breakfast a dubajské lívance. Otevřeno denně, psi vítáni.",
+  "foto": "/wp-content/uploads/2026/11/liberty-cafe-brno-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/liberty-cafe-brno-2.jpg",
+   "/wp-content/uploads/2026/11/liberty-cafe-brno-3.jpg",
+   "/wp-content/uploads/2026/11/liberty-cafe-brno-4.jpg",
+   "/wp-content/uploads/2026/11/liberty-cafe-brno-5.jpg",
+   "/wp-content/uploads/2026/11/liberty-cafe-brno-6.jpg"
+  ]
  }
 ]
