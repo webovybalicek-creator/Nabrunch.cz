@@ -7298,5 +7298,57 @@
    "/wp-content/uploads/2026/11/skoda-nezajit-mlada-boleslav-4.jpg",
    "/wp-content/uploads/2026/11/skoda-nezajit-mlada-boleslav-5.jpg"
   ]
+ },
+ {
+  "id": 2389,
+  "slug": "bistro-popies-mikulov",
+  "nazev": "Bistro Popie's Mikulov",
+  "datum": "2026-11-19 20:36:52",
+  "doporuceny": false,
+  "lokality": [
+   "Mikulov"
+  ],
+  "adresa": "Husova 304/52, Mikulov",
+  "lat": 48.8051687,
+  "lon": 16.6345742,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 17:30",
+   "So - Ne: 8:00 - 18:00"
+  ],
+  "web": "https://popies.cz/",
+  "instagram": "@popies_mikulov",
+  "instagramUrl": "https://www.instagram.com/popies_mikulov/",
+  "telefon": "+420730506951",
+  "telefonText": "+420 730 506 951",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bistro+Popie's+Mikulov,+Husova+304/52,+Mikulov",
+  "rezervace": null,
+  "platba": [
+   "Kartou",
+   "Hotově"
+  ],
+  "wifi": true,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte jejich croissanty – pečou je sami a jsou opravdu vrstvené. Na brunch si dejte velkou anglickou snídani nebo zastřená vejce na toastu a k tomu některou z domácích limonád.</p>",
+  "popis": "<p>Bistro Popie's je snídaňové a brunchové bistro v Husově ulici v Mikulově, pár minut od náměstí. Specializuje se na kvalitní snídaně, croissanty a výběrovou kávu. Většinu toho, co ochutnáte, si dělají sami: pečou croissanty a veškeré pečivo, vaří vlastní džemy, nakládají, fermentují a zavařují, co nabízí sezona.</p>\n\n<h2 class=\"wp-block-heading\">Brunch každý den od 8:00</h2>\n\n<p>Brunch se tu podává <strong>každý den od 8:00 do 14:00</strong>. Na talíři najdete <strong>anglickou snídani</strong> se sázeným vejcem, klobáskou, fazolemi a houbami, <strong>zastřená vejce</strong> na toastu s avokádem, vejce s hummusem a pečenou zeleninou nebo sladký French toast. Ve vitríně čekají <strong>domácí croissanty</strong> – máslové, s čokoládou, plněné i s jahodami. V nabídce jsou i veganská jídla.</p>\n\n<h2 class=\"wp-block-heading\">S pejskem i s kočárkem</h2>\n\n<p>Bistro je bezbariérové, takže se sem pohodlně dostanete i s kočárkem, a psi jsou vítáni. Wifi je zdarma, platit můžete hotově, kartou i přes Qerko. Jídlo vám zabalí i s sebou na výlet na Pálavu.</p>",
+  "seoTitulek": "Bistro Popie's Mikulov – brunch, croissanty a otevírací doba",
+  "seoPopis": "Bistro Popie's v Mikulově: brunch denně 8–14, domácí croissanty, anglická snídaně, zastřená vejce a výběrová káva. Psi vítáni, bezbariérový vstup.",
+  "foto": "/wp-content/uploads/2026/11/bistro-popies-mikulov-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/bistro-popies-mikulov-2.jpg",
+   "/wp-content/uploads/2026/11/bistro-popies-mikulov-3.jpg",
+   "/wp-content/uploads/2026/11/bistro-popies-mikulov-4.jpg",
+   "/wp-content/uploads/2026/11/bistro-popies-mikulov-5.jpg",
+   "/wp-content/uploads/2026/11/bistro-popies-mikulov-6.jpg"
+  ]
  }
 ]
