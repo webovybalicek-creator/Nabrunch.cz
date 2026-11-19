@@ -427,6 +427,8 @@ DirectoryIndex index.html
   RewriteRule ^kavarny/praha/stranou/?$ /podniky/stranou-praha/ [L,R=301]
   RewriteRule ^kavarny/praha/the-flat-cafe/?$ /podniky/flat-cafe-praha/ [L,R=301]
   RewriteRule ^kavarny/praha/vila-63/?$ /podniky/vila-63-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/misto/?$ /podniky/misto-dejvice-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/cafe-perfect-day/?$ /podniky/cafe-perfect-day-praha/ [L,R=301]
   # Zavřené kavárny z OSM → stránka města
   RewriteRule ^kavarny/pardubice/dobry-kafe/?$ /lokalita/pardubice/ [L,R=301]
   # Zrušené téma (štítek měly skoro všechny podniky) → přehled podniků
