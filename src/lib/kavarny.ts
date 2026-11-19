@@ -156,9 +156,14 @@ const jeDuplicitaPodniku = (k: Kavarna) =>
 const ZRUSENE = new Set([
   'n12705361153', // Dobrý Kafe, Pardubice – web 11/2026: „Provozovna uzavřena“
 ]);
+/** Kavárny od majitelů, které jsme převedli na ověřený podnik (podniky.json) – stará adresa má 301 v .htaccess */
+const PREVEDENE = new Set([
+  'm0e4cfe5ee', // Buddha-Bar Prague → /podniky/buddha-bar-praha/
+  'mae8eea6fb', // Offline bar, Zlín → /podniky/offline-bar-zlin/
+]);
 /** Zveřejněné kavárny: čas zveřejnění už nastal, nebo je ověřil majitel */
 export const KAVARNY: Kavarna[] = VSECHNY_KAVARNY.filter(
-  (k) => (k.overeno || (k.zverejnit && Date.parse(k.zverejnit) <= TED)) && !ZRUSENE.has(k.id) && (k.overeno || !jeDuplicitaPodniku(k)),
+  (k) => (k.overeno || (k.zverejnit && Date.parse(k.zverejnit) <= TED)) && !ZRUSENE.has(k.id) && !PREVEDENE.has(k.id) && (k.overeno || !jeDuplicitaPodniku(k)),
 );
 export const ZDROJ = (data as { zdroj?: string }).zdroj ?? '© přispěvatelé OpenStreetMap';
 

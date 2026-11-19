@@ -6071,7 +6071,7 @@
   "sezeni": [],
   "tipNadpis": "Náš brunch tip",
   "tip": "<p>Nedělní brunch formou bufetu se podává od 12:00 do 16:00, a to od října do dubna. Ochutnejte sushi, čerstvé ústřice, wok nudle a asijské teplé speciality. Nealko nápoje, káva a čaj jsou v ceně bez omezení a děti do 5 let mají brunch zdarma.</p>",
-  "popis": "<p>Buddha-Bar Prague je asijská fusion restaurace a sushi bar v Jakubské ulici na Starém Městě, kousek od Prašné brány. Patří do světové sítě Buddha-Bar a je známá svým dramatickým interiérem s velkou sochou Buddhy, tlumeným světlem a orientální atmosférou. Restauraci ocenil i průvodce Gault&amp;Millau.</p>\n\n<h2 class=\"wp-block-heading\">Nedělní brunch od října do dubna</h2>\n\n<p>Brunch se podává <strong>každou neděli od 12:00 do 16:00</strong>, a to v sezoně <strong>od října do dubna</strong>. Od června do září je v neděli zavřeno. Je to bufet se širokým výběrem studených i teplých jídel: <strong>sushi</strong>, čerstvé saláty, <strong>ústřice</strong>, nudlový bar, mezinárodní teplé pokrmy a dezerty. V ceně je neomezená konzumace nealkoholických nápojů, kávy a čaje. Pamatují i na alergiky a speciální dietní požadavky.</p>\n\n<h2 class=\"wp-block-heading\">Brunch s dětmi</h2>\n\n<p>Pro rodiny je připravený <strong>dětský koutek</strong> a <strong>děti do 5 let mají brunch zdarma</strong>. Stůl si rezervujte předem na webu restaurace. Večer (úterý až sobota) se Buddha-Bar mění v restauraci s autorskými sushi rolkami, koktejly a DJ.</p>",
+  "popis": "<p>Buddha-Bar Prague je asijská fusion restaurace a sushi bar v Jakubské ulici na Starém Městě, kousek od Prašné brány. Patří do světové sítě Buddha-Bar a je známá svým dramatickým interiérem s velkou sochou Buddhy, tlumeným světlem a orientální atmosférou. Restauraci ocenil i průvodce Gault&amp;Millau.</p>\n\n<h2 class=\"wp-block-heading\">Nedělní brunch od října do dubna</h2>\n\n<p>Brunch se podává <strong>každou neděli od 12:00 do 16:00</strong>, a to v sezoně <strong>od října do dubna</strong>. Od června do září je v neděli zavřeno. Je to bufet se širokým výběrem studených i teplých jídel: <strong>sushi</strong>, čerstvé saláty, <strong>ústřice</strong>, nudlový bar, mezinárodní teplé pokrmy a dezerty. V ceně je neomezená konzumace nealkoholických nápojů, kávy a čaje. Brunch stojí <strong>1 599 Kč</strong>, děti od 6 do 12 let platí 800 Kč. Pamatují i na alergiky a speciální dietní požadavky.</p>\n\n<h2 class=\"wp-block-heading\">Brunch s dětmi</h2>\n\n<p>Pro rodiny je připravený <strong>dětský koutek</strong> a <strong>děti do 5 let mají brunch zdarma</strong>. Rezervace je doporučená, na webu nebo na telefonu +420 725 069 213. Večer (úterý až sobota) se Buddha-Bar mění v restauraci s autorskými sushi rolkami, koktejly a DJ.</p>",
   "seoTitulek": "Buddha-Bar Prague – nedělní brunch, sushi a otevírací doba",
   "seoPopis": "Nedělní brunch v Buddha-Bar Prague na Starém Městě: bufet se sushi, ústřicemi a asijskými specialitami, neděle 12–16 (říjen–duben), děti do 5 let zdarma.",
   "foto": "/wp-content/uploads/2026/11/buddha-bar-praha-1.jpg",
@@ -6081,6 +6081,56 @@
    "/wp-content/uploads/2026/11/buddha-bar-praha-4.jpg",
    "/wp-content/uploads/2026/11/buddha-bar-praha-5.jpg",
    "/wp-content/uploads/2026/11/buddha-bar-praha-6.jpg"
+  ]
+ },
+ {
+  "id": 2364,
+  "slug": "offline-bar-zlin",
+  "nazev": "OFFLINE matcha bar Zlín",
+  "datum": "2026-11-19 10:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Zlín"
+  ],
+  "adresa": "náměstí Míru 174 (OC Zlaté Jablko), Zlín",
+  "lat": 49.2263,
+  "lon": 17.668165,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 21:00",
+   "So - Ne: 9:00 - 21:00"
+  ],
+  "web": "https://offlinebar.cz/",
+  "instagram": "@offline.zlin",
+  "instagramUrl": "https://www.instagram.com/offline.zlin/",
+  "telefon": "+420736243150",
+  "telefonText": "+420 736 243 150",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=OFFLINE+bar,+náměstí+Míru+174,+Zlín",
+  "rezervace": "Ano, online",
+  "platba": [
+   "Kartou"
+  ],
+  "wifi": true,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si vajíčka na tři způsoby nebo French toast a k tomu jeden z více než 20 matcha drinků. Ke kávě si vyberte croissant z vitríny.</p>",
+  "popis": "<p>OFFLINE je matcha bar a kavárna v centru Zlína, v přízemí obchodního centra Zlaté Jablko na náměstí Míru. Název mluví za vše: je to místo, kde se dá na chvíli vypnout. Interiér je světlý a útulný, se dřevem a sušenými květinami pod stropem.</p>\n\n<h2 class=\"wp-block-heading\">Brunch každý den</h2>\n\n<p>Ve všední dny otevírá <strong>v 8:00</strong>, o víkendu <strong>v 9:00</strong> a zavírá až ve 21:00. Na snídani a brunch si dáte <strong>vajíčka na tři způsoby</strong>, <strong>French toast</strong>, čerstvé pečivo nebo něco sladkého z vitríny, třeba plněné croissanty.</p>\n\n<h2 class=\"wp-block-heading\">Přes 20 druhů matchy</h2>\n\n<p>Specialitou podniku je <strong>matcha</strong>: v nabídce je přes 20 matcha drinků od klasického matcha latte po originální kombinace. Kdo dává přednost kávě, má na výběr výběrovou kávu. Podnik je bezbariérový, platí se i kartou a je tu wifi.</p>",
+  "seoTitulek": "OFFLINE matcha bar Zlín – brunch, matcha a otevírací doba",
+  "seoPopis": "OFFLINE ve Zlíně: brunch denně od 8:00, vajíčka na tři způsoby, French toast a přes 20 druhů matcha drinků. OC Zlaté Jablko, otevírací doba a tipy.",
+  "foto": "/wp-content/uploads/2026/11/offline-bar-zlin-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/offline-bar-zlin-2.jpg",
+   "/wp-content/uploads/2026/11/offline-bar-zlin-3.jpg",
+   "/wp-content/uploads/2026/11/offline-bar-zlin-4.jpg",
+   "/wp-content/uploads/2026/11/offline-bar-zlin-5.jpg",
+   "/wp-content/uploads/2026/11/offline-bar-zlin-6.jpg"
   ]
  }
 ]
