@@ -6376,5 +6376,52 @@
    "/wp-content/uploads/2026/11/srnky-americka-praha-4.jpg",
    "/wp-content/uploads/2026/11/srnky-americka-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2370,
+  "slug": "seiferts-brunch-praha",
+  "nazev": "Seifert's Brunch Praha",
+  "datum": "2026-11-19 15:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 3",
+   "Praha"
+  ],
+  "adresa": "Hartigova 152/8, Praha 3",
+  "lat": 50.087239,
+  "lon": 14.4542209,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 16:00",
+   "So - Ne: 9:00 - 18:00"
+  ],
+  "web": null,
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Seifert's+Brunch,+Hartigova+152/8,+Praha",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si český snídaňový talíř s vejci, pražskou šunkou ze sousedního řeznictví, sýrem Blaťácké zlato a kváskovým chlebem z Bread Society. Na sladko nevynechejte buchtu nebo perník od maminky jednoho z majitelů.</p>",
+  "popis": "<p>Seifert's Brunch je malé rodinné bistro v Hartigově ulici na Žižkově. Jméno má podle Rezidence Seifert, v níž sídlí, a design inspirovaný českou avantgardou, kdy začínal tvořit básník Jaroslav Seifert. Otevřeli ho Filip a Terra Kasalovi s kamarádkou Terezou Ryšavou, protože podle nich na Žižkově pořádné brunche chyběly.</p>\n\n<h2 class=\"wp-block-heading\">Brunch po česku každý den</h2>\n\n<p>Brunch se podává <strong>ve všední dny od 8:00 do 16:00</strong> a <strong>o víkendu od 9:00 do 18:00</strong>. Menu je podle <a href=\"https://cc.cz/maji-radi-brunche-na-zizkove-jim-ale-chybely-stvorili-tak-bistro-kde-si-date-poradnou-ceskou-hostinu/\">CzechCrunche</a> „maximálně české“: vajíčka, pražská šunka ze sousedního řeznictví, sýr Blaťácké zlato, kadeřávek, uzený pstruh, párky s křenem nebo ovesná kaše. Kváskový chléb dodává pekárna Bread Society, kávu moravská pražírna Coffee Spot. Myslí i na vegany.</p>\n\n<h2 class=\"wp-block-heading\">Buchty od maminky a české drinky</h2>\n\n<p>Zákusky, třeba nadýchaný perník s čokoládou nebo buchtu se strouhanými jablky, peče dvakrát týdně maminka jednoho z majitelů. Nápoje jsou také české: limonády, ochucené minerálky, drinky s becherovkou a naturální vína z Česka a Slovenska. V létě se sedí venku.</p>",
+  "seoTitulek": "Seifert's Brunch Žižkov – český brunch a otevírací doba",
+  "seoPopis": "Seifert's Brunch v Hartigově ulici na Žižkově: český brunch denně, pražská šunka, uzený pstruh, kváskový chléb a buchty od maminky. Otevírací doba a tipy.",
+  "foto": "/wp-content/uploads/2026/11/seiferts-brunch-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/seiferts-brunch-praha-2.jpg",
+   "/wp-content/uploads/2026/11/seiferts-brunch-praha-3.jpg"
+  ]
  }
 ]
