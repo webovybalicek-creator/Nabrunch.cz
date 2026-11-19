@@ -6132,5 +6132,53 @@
    "/wp-content/uploads/2026/11/offline-bar-zlin-5.jpg",
    "/wp-content/uploads/2026/11/offline-bar-zlin-6.jpg"
   ]
+ },
+ {
+  "id": 2365,
+  "slug": "strakaty-kralik-beroun",
+  "nazev": "Cafe Crêperie Strakatý králík Beroun",
+  "datum": "2026-11-19 11:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Beroun"
+  ],
+  "adresa": "Na Ostrově 9, Beroun",
+  "lat": 49.9646065,
+  "lon": 14.0763547,
+  "oteviraciDoba": [
+   "Po - Ne: 9:00 - 20:00"
+  ],
+  "web": "https://www.strakaty-kralik.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420603547212",
+  "telefonText": "+420 603 547 212",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Strakatý+králík,+Na+Ostrově+9,+Beroun",
+  "rezervace": "Ano, telefonicky",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Na slano si dejte pohankovou galettu se špenátem, vejcem a šunkou, na sladko palačinku se slaným karamelem a malinami. V létě si sedněte na zahrádku na ostrově.</p>",
+  "popis": "<p>Cafe Crêperie Strakatý králík je palačinkárna a kavárna v jedné z nejhezčích částí Berouna, na ostrově na řece Berounce, kousek od mostu v centru. V létě se sedí na zahrádce pod slunečníky, odkud si můžete vzít kávu i palačinku s sebou na procházku.</p>\n\n<h2 class=\"wp-block-heading\">Palačinky na slano i na sladko</h2>\n\n<p>Palačinky se tu dělají z čerstvého těsta, ne z instantních směsí, podle tradiční francouzské i vlastní receptury. <strong>Slané galetty</strong> jsou z pohankové mouky, třeba s uzeným lososem, špenátem a mozzarellou, se špenátem, vejcem a šunkou nebo s kozím sýrem a hruškovou marmeládou. <strong>Sladké crêpes</strong> mají náplně od nutelly s banánem přes slaný karamel s malinami po švestky s makovým tvarohem.</p>\n\n<h2 class=\"wp-block-heading\">Otevřeno každý den</h2>\n\n<p>Otevřeno je <strong>denně od 9:00 do 20:00</strong>, takže se hodí na pozdní snídani, brunch i odpolední kávu. Rezervace a objednávky přijímají telefonicky. Uplatnit tu můžete i návštěvnickou kartu Berounska, Brd a Podbrdska.</p>",
+  "seoTitulek": "Strakatý králík Beroun – palačinky, brunch a otevírací doba",
+  "seoPopis": "Palačinkárna Strakatý králík na ostrově v Berouně: slané pohankové galetty i sladké crêpes, káva a zahrádka. Otevřeno denně 9–20.",
+  "foto": "/wp-content/uploads/2026/11/strakaty-kralik-beroun-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/strakaty-kralik-beroun-2.jpg",
+   "/wp-content/uploads/2026/11/strakaty-kralik-beroun-3.jpg",
+   "/wp-content/uploads/2026/11/strakaty-kralik-beroun-4.jpg",
+   "/wp-content/uploads/2026/11/strakaty-kralik-beroun-5.jpg",
+   "/wp-content/uploads/2026/11/strakaty-kralik-beroun-6.jpg"
+  ]
  }
 ]
