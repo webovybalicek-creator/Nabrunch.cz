@@ -7495,5 +7495,198 @@
    "/wp-content/uploads/2026/11/bistroteka-lavendy-jindrichuv-hradec-4.jpg",
    "/wp-content/uploads/2026/11/bistroteka-lavendy-jindrichuv-hradec-5.jpg"
   ]
+ },
+ {
+  "id": 2393,
+  "slug": "sladka-cesta-praha",
+  "nazev": "Sladká cesta Praha",
+  "datum": "2026-11-19 20:45:23",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 3",
+   "Praha"
+  ],
+  "adresa": "Hartigova 2894/39, Praha 3 – Žižkov",
+  "lat": 50.088407,
+  "lon": 14.458382,
+  "oteviraciDoba": [
+   "Po - Pá: 7:00 - 19:00",
+   "So - Ne: 9:00 - 19:00"
+  ],
+  "web": "https://www.sladkacesta.cz/",
+  "instagram": "@sladkacesta.hartigova",
+  "instagramUrl": "https://www.instagram.com/sladkacesta.hartigova/",
+  "telefon": "+420737594477",
+  "telefonText": "+420 737 594 477",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Sladká+cesta+Praha,+Hartigova+2894/39,+Praha+3+–+Žižkov",
+  "rezervace": "Ano, telefonicky",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si bagel z jejich vlastní pekárny – nejoblíbenější je s lososem – nebo míchaná vajíčka se slaninou. Na sladko domácí koláč s drobenkou, a to už od 69 Kč.</p>",
+  "popis": "<p>Sladká cesta je útulná kavárna a bistro v Hartigově ulici na Žižkově. Každý den tu sami pečou čerstvé bagely, briošky, domácí dorty, zákusky a kynuté koláče. Pejsci jsou vítáni.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně po celý den</h2>\n\n<p>Snídani si tu dáte kdykoli – ve všední dny otevírají <strong>už v 7:00</strong>, o víkendu v 9:00, a snídaně podávají celý den. Na výběr jsou <strong>vajíčka podle chuti</strong> (míchaná se slaninou nebo s mozzarellou), <strong>bagely z vlastní pekárny</strong> (s lososem, s prosciuttem, César), plněné briošky, zapečené tousty, palačinky, jogurt nebo koláče. Snídaně začínají na 69 Kč za koláč, vajíčka se slaninou vyjdou na 149 Kč. Většinu jídel připraví i bez masa.</p>\n\n<h2 class=\"wp-block-heading\">Rezervace a dorty</h2>\n\n<p>Hlavně o víkendu doporučují rezervaci (telefonicky nebo e-mailem). Na objednávku pečou i dorty. Ke všemu výběrová káva.</p>",
+  "seoTitulek": "Sladká cesta Žižkov – snídaně celý den a otevírací doba",
+  "seoPopis": "Sladká cesta v Hartigově ulici na Žižkově: snídaně celý den od 7:00, bagely a briošky z vlastní pekárny, vajíčka, koláče a výběrová káva.",
+  "foto": "/wp-content/uploads/2026/11/sladka-cesta-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/sladka-cesta-praha-2.jpg",
+   "/wp-content/uploads/2026/11/sladka-cesta-praha-3.jpg",
+   "/wp-content/uploads/2026/11/sladka-cesta-praha-4.jpg",
+   "/wp-content/uploads/2026/11/sladka-cesta-praha-5.jpg"
+  ]
+ },
+ {
+  "id": 2394,
+  "slug": "cafe-peron-praha",
+  "nazev": "Café Perón Praha",
+  "datum": "2026-11-19 20:45:23",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 5",
+   "Praha"
+  ],
+  "adresa": "Stroupežnického 525/20, Praha 5 – Anděl",
+  "lat": 50.070749,
+  "lon": 14.403133,
+  "oteviraciDoba": [
+   "Po - Pá: 9:00 - 21:00",
+   "So - Ne: 9:00 - 20:00"
+  ],
+  "web": "https://www.cafeperon.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420605338552",
+  "telefonText": "+420 605 338 552",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Café+Perón+Praha,+Stroupežnického+525/20,+Praha+5+–+Anděl",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Na slano si dejte briošku s avokádem a ztraceným vejcem nebo Toast Madame Perón s cheddarem a slaninou, na sladko domácí granolu s jogurtem a medem.</p>",
+  "popis": "<p>Café Perón je stylová kavárna ve Stroupežnického ulici kousek od Anděla. Nabízí tradiční italskou kávu, snídaně a domácí dorty, které pečou přímo na místě. V létě se sedí na zahrádce ve vnitrobloku.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně každý den od 9:00</h2>\n\n<p>Snídaňové menu se podává <strong>denně od 9:00 do 13:00</strong>. Najdete v něm <strong>briošky</strong> s míchanými vejci a slaninou, s avokádem a ztraceným vejcem nebo s uzeným lososem, <strong>avokádový kváskový chléb</strong>, Toast Madame Perón zapečený ve vajíčku, míchaná vejce s jarní cibulkou, párky s křenem nebo domácí granolu s jogurtem, ovocem a medem.</p>\n\n<h2 class=\"wp-block-heading\">Káva a dorty</h2>\n\n<p>Po snídani přichází na řadu italská káva, nápoje a domácí dorty. Otevřeno je ve všední dny do 21:00, o víkendu do 20:00.</p>",
+  "seoTitulek": "Café Perón Anděl – snídaně, menu a otevírací doba",
+  "seoPopis": "Café Perón u Anděla: snídaně denně od 9:00, briošky s vejci a avokádem, avokádový chléb, granola, italská káva a domácí dorty. Zahrádka ve vnitrobloku.",
+  "foto": "/wp-content/uploads/2026/11/cafe-peron-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/cafe-peron-praha-2.jpg",
+   "/wp-content/uploads/2026/11/cafe-peron-praha-3.jpg"
+  ]
+ },
+ {
+  "id": 2395,
+  "slug": "foyer-cafe-praha",
+  "nazev": "Foyer Café Praha",
+  "datum": "2026-11-19 20:45:23",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 2",
+   "Praha"
+  ],
+  "adresa": "Wilsonova 300/8 (Hlavní nádraží), Praha 2",
+  "lat": 50.083428,
+  "lon": 14.435516,
+  "oteviraciDoba": [
+   "Po - Čt: 8:00 - 20:00",
+   "Pá - Ne: 8:00 - 22:00"
+  ],
+  "web": "https://foyercafe.cz/",
+  "instagram": "@foyercafe.prague",
+  "instagramUrl": "https://www.instagram.com/foyercafe.prague/",
+  "telefon": "+420725153892",
+  "telefonText": "+420 725 153 892",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Foyer+Café+Praha,+Wilsonova+300/8+(Hlavní+nádraží),+Praha+2",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijďte na dopolední viennoiserie – croissant nebo pain au chocolat – a kávu s výhledem na odjíždějící vlaky. Odpoledne si zarezervujte Čaj o páté s etažérem dobrot.</p>",
+  "popis": "<p>Foyer Café je kavárna v secesní Fantově budově pražského hlavního nádraží, jednom z nejvýznamnějších secesních děl v Česku. Moderní elegance se tu potkává s historickými štuky a velkými okny, ze kterých můžete pozorovat odjíždějící vlaky. Provozuje ji společnost Spojka Events.</p>\n\n<h2 class=\"wp-block-heading\">Dopolední viennoiserie a káva</h2>\n\n<p>Otevřeno je <strong>každý den od 8:00</strong>. Dopoledne patří <strong>viennoiserie</strong> – francouzskému pečivu z plundrového těsta, jako jsou croissanty, pain au chocolat nebo flan – a kávě. Ve vitríně najdete i zákusky a slané kanapky. Je to ideální místo na snídani před cestou vlakem nebo po příjezdu do Prahy.</p>\n\n<h2 class=\"wp-block-heading\">Čaj o páté a živá hudba</h2>\n\n<p>Odpoledne si můžete zarezervovat <strong>Čaj o páté</strong> se sladkými i slanými dobrotami. Každý pátek tu hraje živá hudba a pořádají se i akce pro děti. Večer se pije víno a šampaňské, v pátek až neděli je otevřeno do 22:00.</p>",
+  "seoTitulek": "Foyer Café hlavní nádraží – snídaně, káva a otevírací doba",
+  "seoPopis": "Foyer Café v secesní budově hlavního nádraží v Praze: snídaně s croissanty a viennoiserie od 8:00, káva, Čaj o páté a živá hudba. Otevřeno denně.",
+  "foto": "/wp-content/uploads/2026/11/foyer-cafe-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/foyer-cafe-praha-2.jpg",
+   "/wp-content/uploads/2026/11/foyer-cafe-praha-3.jpg",
+   "/wp-content/uploads/2026/11/foyer-cafe-praha-4.jpg",
+   "/wp-content/uploads/2026/11/foyer-cafe-praha-5.jpg",
+   "/wp-content/uploads/2026/11/foyer-cafe-praha-6.jpg"
+  ]
+ },
+ {
+  "id": 2396,
+  "slug": "55-bakery-praha",
+  "nazev": "55 Bakery Praha",
+  "datum": "2026-11-19 20:45:23",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 5",
+   "Praha"
+  ],
+  "adresa": "Štefánikova 9/55, Praha 5 – Smíchov",
+  "lat": 50.077646,
+  "lon": 14.404016,
+  "oteviraciDoba": [
+   "Po - Ne: 7:00 - 19:00"
+  ],
+  "web": "https://www.55bakery.cz/",
+  "instagram": "@55bakeryprague",
+  "instagramUrl": "https://www.instagram.com/55bakeryprague/",
+  "telefon": "+420607046445",
+  "telefonText": "+420 607 046 445",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=55+Bakery+Praha,+Štefánikova+9/55,+Praha+5+–+Smíchov",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte pistáciový croissant nebo skořicovou rolku s krémem z hnědého másla. Na slano pak pain suisse s fíky, kozím sýrem a mortadellou.</p>",
+  "popis": "<p>55 Bakery je pekárna a kavárna ve Štefánikově ulici na Smíchově, pár minut od Anděla. Každé ráno tu v peci pečou čerstvý kváskový chléb, chléb z černé pšenice, focacciu, ciabattu, francouzské bagety, croissanty a další sladké i slané pečivo.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně z pekárny</h2>\n\n<p>Otevřeno je <strong>každý den od 7:00 do 19:00</strong>, takže se hodí na rychlou snídani cestou do práce i na víkendové dopoledne. Hitem je <strong>pistáciový croissant</strong>, mašle s kokosovým krémem, mangem a maracujou, <strong>skořicová rolka s krémem z hnědého másla</strong> nebo slaný pain suisse s fíky, kozím sýrem a mortadellou. K tomu výběrová káva.</p>\n\n<h2 class=\"wp-block-heading\">Chléb domů</h2>\n\n<p>Kváskové chleby s pomalým studeným kynutím a bagety si můžete odnést i domů. Pečivo je k vidění na policích přímo v kavárně.</p>",
+  "seoTitulek": "55 Bakery Smíchov – croissanty, snídaně a otevírací doba",
+  "seoPopis": "Pekárna a kavárna 55 Bakery na Smíchově: otevřeno denně od 7:00, pistáciový croissant, skořicová rolka, kváskový chléb a výběrová káva.",
+  "foto": "/wp-content/uploads/2026/11/55-bakery-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/55-bakery-praha-2.jpg",
+   "/wp-content/uploads/2026/11/55-bakery-praha-3.jpg",
+   "/wp-content/uploads/2026/11/55-bakery-praha-4.jpg",
+   "/wp-content/uploads/2026/11/55-bakery-praha-5.jpg",
+   "/wp-content/uploads/2026/11/55-bakery-praha-6.jpg"
+  ]
  }
 ]

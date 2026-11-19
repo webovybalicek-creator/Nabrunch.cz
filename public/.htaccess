@@ -439,6 +439,10 @@ DirectoryIndex index.html
   RewriteRule ^kavarny/breclav/kavarna-a-bistro-karma/?$ /podniky/karma-kavarna-breclav/ [L,R=301]
   RewriteRule ^kavarny/decin/kytky-pod-kominem/?$ /podniky/kytky-pod-kominem-decin/ [L,R=301]
   RewriteRule ^kavarny/jindrichuv-hradec/bistroteka-lavendy/?$ /podniky/bistroteka-lavendy-jindrichuv-hradec/ [L,R=301]
+  RewriteRule ^kavarny/praha/sladka-cesta-hartigova/?$ /podniky/sladka-cesta-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/cafe-peron/?$ /podniky/cafe-peron-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/foyer-cafe/?$ /podniky/foyer-cafe-praha/ [L,R=301]
+  RewriteRule ^kavarny/praha/55-bakery/?$ /podniky/55-bakery-praha/ [L,R=301]
   # Zavřené kavárny z OSM → stránka města
   RewriteRule ^kavarny/pardubice/dobry-kafe/?$ /lokalita/pardubice/ [L,R=301]
   # Zrušené téma (štítek měly skoro všechny podniky) → přehled podniků
