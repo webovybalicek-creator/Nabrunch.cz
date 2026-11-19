@@ -3,8 +3,12 @@
   "kavarny": {
     "m0e4cfe5ee": {
       "telefon": "+420 725 069 213",
+      "email": "hostess@buddhabarprague.cz",
       "web": "https://www.buddha-bar.cz/",
-      "popis": "Asijská fusion restaurace a sushi bar v Jakubské ulici na Starém Městě, součást světové sítě Buddha-Bar. Nedělní brunch od 12 do 16 h (říjen až duben) s asijskými specialitami a sushi. Pro rodiny je tu dětský koutek a děti do 5 let mají brunch zdarma. Večer (úterý až sobota) autorské sushi rolky, koktejly a DJ. Od června do září je v neděli zavřeno.",
+      "rezervace": "https://www.buddha-bar.cz/?action=rezervace",
+      "instagram": "https://www.instagram.com/buddhabarprague/",
+      "facebook": "https://www.facebook.com/buddhabarpragueofficial",
+      "popis": "Asijská fusion restaurace a sushi bar v Jakubské ulici na Starém Městě, součást světové sítě Buddha-Bar. Nedělní brunch 12–16 h od října do dubna: sushi, saláty, teplá mezinárodní jídla a dezerty, k tomu neomezené nealko, káva a čaj. Cena 1 599 Kč, děti 6–12 let 800 Kč, do 5 let zdarma. Myslí i na alergiky a speciální diety, pro rodiny je dětský koutek. Rezervace doporučená na +420 725 069 213. Večer úterý až sobota autorské sushi rolky, koktejly a DJ. Od června do září je v neděli zavřeno.",
       "oteviraciDoba": "Su 12:00-16:00",
       "vlastnosti": [
         "brunch",
