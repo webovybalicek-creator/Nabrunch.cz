@@ -1,11 +1,10 @@
 name: Publikace kaváren
 
-# Postupné zveřejňování neověřených kaváren: dvakrát denně (v různou dobu) zkontroluje,
+# Postupné zveřejňování neověřených kaváren: jednou denně zkontroluje,
 # jestli od minulého běhu nastal čas zveřejnění dalších kaváren, a pokud ano, spustí nový build a nasazení.
 on:
   schedule:
-    - cron: '23 5 * * *'
-    - cron: '41 14 * * *'
+    - cron: '23 5 * * *'   # 1× denně – šetří minuty GitHub Actions
   workflow_dispatch:
 
 permissions:
