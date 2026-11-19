@@ -25,7 +25,7 @@ obdobi: [podzim, zima]
 
 <ul>
 <li><strong>Shakshuka</strong> – vejce pošírovaná v teplé rajčatové omáčce s paprikou a kořením.</li>
-<li><strong>Turecká vejce (çılbır)</strong> – zastřená vejce na česnekovém jogurtu, přelitá rozpuštěným máslem s chilli.</li>
+<li><strong><a href="/co-jsou-turecka-vejce/">Turecká vejce (çılbır)</a></strong> – zastřená vejce na česnekovém jogurtu, přelitá rozpuštěným máslem s chilli.</li>
 </ul>
 
 <p>Shakshuka je vydatnější a „zeleninová“, turecká vejce lehčí a krémová.</p>
