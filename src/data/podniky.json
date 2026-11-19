@@ -6032,5 +6032,55 @@
    "/wp-content/uploads/2026/11/cafe-love-veronica-kladno-4.jpg",
    "/wp-content/uploads/2026/11/cafe-love-veronica-kladno-5.jpg"
   ]
+ },
+ {
+  "id": 2363,
+  "slug": "buddha-bar-praha",
+  "nazev": "Buddha-Bar Prague",
+  "datum": "2026-11-19 09:00:00",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 1",
+   "Praha"
+  ],
+  "adresa": "Jakubská 649/8, Praha 1",
+  "lat": 50.088217,
+  "lon": 14.425799,
+  "oteviraciDoba": [
+   "Ne: 12:00 - 16:00"
+  ],
+  "web": "https://www.buddha-bar.cz/brunch",
+  "instagram": "@buddhabarprague",
+  "instagramUrl": "https://www.instagram.com/buddhabarprague/",
+  "telefon": "+420725069213",
+  "telefonText": "+420 725 069 213",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Buddha-Bar+Prague,+Jakubská+8,+Praha",
+  "rezervace": "Ano, online",
+  "platba": [
+   "Kartou"
+  ],
+  "wifi": null,
+  "wc": true,
+  "kuchyne": [
+   "Orientální"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Nedělní brunch formou bufetu se podává od 12:00 do 16:00, a to od října do dubna. Ochutnejte sushi, čerstvé ústřice, wok nudle a asijské teplé speciality. Nealko nápoje, káva a čaj jsou v ceně bez omezení a děti do 5 let mají brunch zdarma.</p>",
+  "popis": "<p>Buddha-Bar Prague je asijská fusion restaurace a sushi bar v Jakubské ulici na Starém Městě, kousek od Prašné brány. Patří do světové sítě Buddha-Bar a je známá svým dramatickým interiérem s velkou sochou Buddhy, tlumeným světlem a orientální atmosférou. Restauraci ocenil i průvodce Gault&amp;Millau.</p>\n\n<h2 class=\"wp-block-heading\">Nedělní brunch od října do dubna</h2>\n\n<p>Brunch se podává <strong>každou neděli od 12:00 do 16:00</strong>, a to v sezoně <strong>od října do dubna</strong>. Od června do září je v neděli zavřeno. Je to bufet se širokým výběrem studených i teplých jídel: <strong>sushi</strong>, čerstvé saláty, <strong>ústřice</strong>, nudlový bar, mezinárodní teplé pokrmy a dezerty. V ceně je neomezená konzumace nealkoholických nápojů, kávy a čaje. Pamatují i na alergiky a speciální dietní požadavky.</p>\n\n<h2 class=\"wp-block-heading\">Brunch s dětmi</h2>\n\n<p>Pro rodiny je připravený <strong>dětský koutek</strong> a <strong>děti do 5 let mají brunch zdarma</strong>. Stůl si rezervujte předem na webu restaurace. Večer (úterý až sobota) se Buddha-Bar mění v restauraci s autorskými sushi rolkami, koktejly a DJ.</p>",
+  "seoTitulek": "Buddha-Bar Prague – nedělní brunch, sushi a otevírací doba",
+  "seoPopis": "Nedělní brunch v Buddha-Bar Prague na Starém Městě: bufet se sushi, ústřicemi a asijskými specialitami, neděle 12–16 (říjen–duben), děti do 5 let zdarma.",
+  "foto": "/wp-content/uploads/2026/11/buddha-bar-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/buddha-bar-praha-2.jpg",
+   "/wp-content/uploads/2026/11/buddha-bar-praha-3.jpg",
+   "/wp-content/uploads/2026/11/buddha-bar-praha-4.jpg",
+   "/wp-content/uploads/2026/11/buddha-bar-praha-5.jpg",
+   "/wp-content/uploads/2026/11/buddha-bar-praha-6.jpg"
+  ]
  }
 ]
