@@ -3,7 +3,7 @@ title: "Šneci z listového těsta se šunkou a sýrem: rychlý recept"
 description: "Recept na slané šneky z listového těsta se šunkou a sýrem, hotové za 30 minut. Varianty s nivou a slaninou, s pestem i sladké šneky s tvarohem a jablky."
 seoTitle: "Šneci z listového těsta se šunkou a sýrem – recept | naBrunch.cz"
 date: "2026-11-20T12:40:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/sneci-z-listoveho-testa-recept-1.jpg"
 recept: {"nazev": "Šneci z listového těsta se šunkou a sýrem", "porce": "asi 20 kousků", "priprava": 15, "vareni": 15, "kategorie": "Pohoštění", "suroviny": ["1 balení listového těsta (275 g, rozválený plát z chladicího boxu)", "2 lžíce kečupu, rajčatového protlaku nebo pesta", "100 g šunky v plátcích", "100 g strouhaného sýra (eidam, čedar)", "1 vejce na potření", "sušené oregano nebo sezam na posypání"], "postup": ["Troubu předehřejte na 200 °C a plech vyložte pečicím papírem.", "Plát těsta rozbalte i s papírem a potřete ho tenkou vrstvou kečupu nebo pesta, kousek okraje nechte volný.", "Poklaďte šunkou a rovnoměrně posypte sýrem.", "Těsto pevně srolujte po delší straně a rolku dejte na 15 minut do lednice nebo na 5 minut do mrazáku – lépe se krájí.", "Ostrým nožem nakrájejte na plátky asi 1,5 cm silné a položte je na plech s odstupy.", "Potřete rozšlehaným vejcem, posypte oreganem nebo sezamem a pečte 15–18 minut do zlatova."], "klicova": ["šneci z listového těsta", "slané pohoštění", "pohoštění na oslavu"]}
 ---
 
