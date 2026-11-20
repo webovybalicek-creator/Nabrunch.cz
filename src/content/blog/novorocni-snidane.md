@@ -3,11 +3,11 @@ title: "Novoroční snídaně a brunch doma: co si dát po Silvestru"
 description: "Novoroční snídaně po oslavě: vydatná vejce, shakshuka, lívance, čočkový salát pro štěstí i vývar. Recepty a tipy na novoroční brunch doma bez námahy."
 seoTitle: "Novoroční snídaně a brunch doma – recepty a tipy | naBrunch.cz"
 date: "2026-11-20T10:00:00"
+image: "/wp-content/uploads/2026/11/novorocni-snidane-1.jpg"
 sezona:
   - od: "11-20"
     do: "01-03"
 obdobi: [zima]
-naHp: false
 ---
 
 <p>Ráno 1. ledna se nikomu nechce stát u plotny, ale něco pořádného k jídlu se hodí víc než kdy jindy. <strong>Novoroční snídaně</strong> by měla být vydatná, teplá a jednoduchá. Většinu si můžete nachystat už 31. prosince odpoledne. Tady je pár osvědčených receptů a tipů.</p>
