@@ -3,11 +3,11 @@ title: "Silvestrovské pohoštění: rychlé, slané i netradiční nápady s re
 description: "Co na silvestrovské pohoštění? Rychlé chuťovky z listového těsta, jednohubky, dipy, mini burgery, pohoštění pro děti i novoroční pohoštění. Recepty."
 seoTitle: "Silvestrovské pohoštění: rychlé recepty a nápady | naBrunch.cz"
 date: "2026-11-20T09:30:00"
+image: "/wp-content/uploads/2026/11/silvestrovske-pohosteni-1.jpg"
 sezona:
   - od: "12-10"
     do: "01-02"
 obdobi: [zima]
-naHp: false
 ---
 
 <p>Na Silvestra se nejí u stolu, ale celý večer po troškách. Ideální pohoštění je proto takové, které se dá vzít do ruky, nevadí mu, že chvíli postojí, a většinu z něj připravíte dopředu. Vybrali jsme <strong>nápady na silvestrovské pohoštění</strong> – rychlé, slané i netradiční – a na konci i tipy na <strong>novoroční pohoštění</strong>.</p>
