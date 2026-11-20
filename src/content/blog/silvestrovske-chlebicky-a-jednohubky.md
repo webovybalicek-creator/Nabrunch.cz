@@ -3,11 +3,11 @@ title: "Silvestrovské chlebíčky a jednohubky: pomazánky a recepty"
 description: "Recepty na silvestrovské chlebíčky a jednohubky – z tortilly, s uzeným lososem i z listového těsta. Nejlepší pomazánky a jak vše připravit dopředu."
 seoTitle: "Silvestrovské chlebíčky a jednohubky – recepty | naBrunch.cz"
 date: "2026-11-20T09:40:00"
+image: "/wp-content/uploads/2026/11/silvestrovske-chlebicky-a-jednohubky-1.jpg"
 sezona:
   - od: "11-20"
     do: "01-02"
 obdobi: [zima]
-naHp: false
 ---
 
 <p>Chlebíčky a jednohubky jsou základ silvestrovského stolu – vezmete je do ruky, nepotřebujete talíř ani příbor a jdou připravit předem. Tady jsou <strong>osvědčené recepty na silvestrovské chlebíčky a jednohubky</strong>, včetně pomazánek a tipů, jak je udělat rychle a hezky.</p>
