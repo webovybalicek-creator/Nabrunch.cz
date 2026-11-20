@@ -3,7 +3,7 @@ title: "Lívance: recept na nadýchané lívance bez kynutí"
 description: "Recept na nadýchané lívance bez kynutí, hotové za 20 minut. Poměry surovin, jak je smažit, aby byly vysoké, a s čím je podávat. Varianta s droždím i hrníčkový recept."
 seoTitle: "Lívance recept – nadýchané lívance bez kynutí | naBrunch.cz"
 date: "2026-11-20T12:10:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/livance-recept-1.jpg"
 recept: {"nazev": "Nadýchané lívance bez kynutí", "porce": "asi 14 lívanců (3–4 porce)", "priprava": 10, "vareni": 15, "kategorie": "Snídaně", "suroviny": ["250 g polohrubé mouky", "½ balíčku prášku do pečiva (asi 6 g)", "1 lžíce cukru", "1 vanilkový cukr", "špetka soli", "2 vejce", "300 ml mléka", "30 g rozpuštěného másla", "olej nebo máslo na smažení", "na servírování: tvaroh, zakysaná smetana, ovoce, javorový sirup nebo marmeláda"], "postup": ["V míse smíchejte mouku, prášek do pečiva, oba cukry a sůl.", "V jiné nádobě rozšlehejte vejce s mlékem a rozpuštěným máslem.", "Tekutou směs vlijte do mouky a krátce promíchejte metlou jen do spojení – pár hrudek nevadí.", "Těsto nechte 10 minut odpočinout, mezitím rozehřejte pánev (ideálně lívanečník) a lehce ji vytřete olejem.", "Na středním plameni dávejte na pánev lžíci těsta. Když se na povrchu objeví bublinky (asi po 1,5–2 minutách), obraťte a dopečte další minutu.", "Podávejte teplé s tvarohem nebo zakysanou smetanou, ovocem a sirupem."], "klicova": ["lívance recept", "lívance bez kynutí", "nadýchané lívance"]}
 ---
 
