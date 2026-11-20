@@ -3,11 +3,11 @@ title: "Vánoční chlebíčky: 6 pomazánek a nápady, jak je ozdobit"
 description: "Recepty na vánoční chlebíčky a nejlepší pomazánky – vajíčková, šunková, lososová, sýrová i rybí. Jak chlebíčky ozdobit, kolik jich udělat a jak vydrží."
 seoTitle: "Vánoční chlebíčky a pomazánky na chlebíčky – recepty | naBrunch.cz"
 date: "2026-11-20T09:10:00"
+image: "/wp-content/uploads/2026/11/vanocni-chlebicky-1.jpg"
 sezona:
   - od: "11-25"
     do: "01-02"
 obdobi: [zima]
-naHp: false
 ---
 
 <p>Chlebíčky k českým Vánocům patří stejně jako cukroví. Postaví se na stůl, když přijde návštěva, hodí se na <a href="/vanocni-brunch-doma/">vánoční brunch</a> i k televizi na Štěpána. Sepsali jsme <strong>6 osvědčených pomazánek na chlebíčky</strong>, nápady na vánoční zdobení a praktické tipy, aby chlebíčky vydržely čerstvé.</p>
