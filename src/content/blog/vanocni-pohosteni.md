@@ -3,11 +3,11 @@ title: "Vánoční pohoštění: 10 slaných i sladkých nápadů s recepty"
 description: "Vánoční pohoštění pro návštěvu: slané jednohubky, šneci z listového těsta, sýrové tyčinky, pečené mandle i ovocné stromečky pro děti. Rychlé recepty."
 seoTitle: "Vánoční pohoštění: slané i sladké recepty, i pro děti | naBrunch.cz"
 date: "2026-11-20T09:20:00"
+image: "/wp-content/uploads/2026/11/vanocni-pohosteni-1.jpg"
 sezona:
   - od: "11-25"
     do: "12-30"
 obdobi: [zima]
-naHp: false
 ---
 
 <p>Cukroví je hotové, ale návštěva by si dala i něco slaného? Sepsali jsme <strong>10 nápadů na vánoční pohoštění</strong>, které zvládnete bez velkého vaření. Některé uděláte dopředu, jiné za 15 minut, když zazvoní zvonek. A myslíme i na děti.</p>
