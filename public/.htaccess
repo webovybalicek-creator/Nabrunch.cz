@@ -444,7 +444,8 @@ DirectoryIndex index.html
   RewriteRule ^kavarny/praha/foyer-cafe/?$ /podniky/foyer-cafe-praha/ [L,R=301]
   RewriteRule ^kavarny/praha/55-bakery/?$ /podniky/55-bakery-praha/ [L,R=301]
   RewriteRule ^kavarny/ceske-budejovice/esence-cafe/?$ /podniky/esence-cafe-ceske-budejovice/ [L,R=301]
-  RewriteRule ^kavarny/ceske-budejovice/prazi-cafe/?$ /podniky/prazi-cafe-ceske-budejovice/ [L,R=301]
+  RewriteRule ^podniky/prazi-cafe-ceske-budejovice/?$ /kavarny/ceske-budejovice/prazi-cafe/ [L,R=301]
+  RewriteRule ^kavarny/liberec/nordbeans-dok/?$ /podniky/dok-nordbeans-liberec/ [L,R=301]
   # Zavřené kavárny z OSM → stránka města
   RewriteRule ^kavarny/pardubice/dobry-kafe/?$ /lokalita/pardubice/ [L,R=301]
   # Zrušené téma (štítek měly skoro všechny podniky) → přehled podniků

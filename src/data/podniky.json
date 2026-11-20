@@ -7840,28 +7840,78 @@
   ]
  },
  {
-  "id": 2400,
-  "slug": "prazi-cafe-ceske-budejovice",
-  "nazev": "Praži Café České Budějovice",
-  "datum": "2026-11-20 06:45:38",
+  "id": 2401,
+  "slug": "dok-nordbeans-liberec",
+  "nazev": "DOK Nordbeans Liberec",
+  "datum": "2026-11-20 06:57:06",
+  "doporuceny": false,
+  "lokality": [
+   "Liberec"
+  ],
+  "adresa": "Nákladní 431, Liberec",
+  "lat": 50.759807,
+  "lon": 15.048132,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 18:00",
+   "So - Ne: 8:00 - 18:00"
+  ],
+  "web": "https://www.nordbeans.cz/provozovny/1/bistro",
+  "instagram": "@dokliberec",
+  "instagramUrl": "https://www.instagram.com/dokliberec/",
+  "telefon": "+420775886336",
+  "telefonText": "+420 775 886 336",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=DOK+Nordbeans+Liberec,+Nákladní+431,+Liberec",
+  "rezervace": null,
+  "platba": [
+   "Kartou"
+  ],
+  "wifi": true,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si vejce 63° od farmáře s bylinkovým olejem a pečivem z jejich pekárny, k tomu filtr z vlastní pražírny. Než odejdete, kupte si bochník chleba domů.</p>",
+  "popis": "<p>DOK je kavárna, bistro, pekárna a pražírna kávy Nordbeans pod jednou střechou – v bývalé nákladové hale u liberecského nádraží. Vysoký dřevěný strop zdobí souhvězdí a skrz prosklenou stěnu můžete od stolu sledovat, jak se praží káva. V gastronomickém průvodci Gault&amp;Millau získal DOK <strong>ocenění POP roku 2026</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně z farmářských surovin</h2>\n\n<p>Otevírá <strong>ve všední dny v 7:30</strong>, o víkendu v 8:00. Na snídaňovém lístku jsou <strong>míchaná vejce se slaninou</strong>, crème fraîche a šlehaným máslem se solí, <strong>vejce 63°</strong> od farmáře s omáčkou podle nabídky a microgreens, párky od řezníka Nového nebo kokosový tvarohový termix s ořechovou granolou. Menu se mění podle sezony, vejce jsou ze Statku u Macháčků a pečivo z vlastní pekárny. Veganům uvaří talíř s dýňovým hummusem.</p>\n\n<h2 class=\"wp-block-heading\">Káva z vlastní pražírny</h2>\n\n<p>Nordbeans je liberecká pražírna, kterou v roce 2015 založili bratři Kozlové. V DOKu ochutnáte jejich espresso i filtr a kávu nebo čerstvé pečivo si můžete odnést domů. Od 11:00 vaří i obědy, od polévek po kroupoto.</p>",
+  "seoTitulek": "DOK Nordbeans Liberec – snídaně, brunch a pražírna",
+  "seoPopis": "DOK v Liberci: kavárna, bistro, pekárna a pražírna Nordbeans. Snídaně od 7:30, vejce 63° od farmáře a vlastní pečivo. Gault&Millau POP 2026.",
+  "foto": "/wp-content/uploads/2026/11/dok-nordbeans-liberec-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/dok-nordbeans-liberec-2.jpg",
+   "/wp-content/uploads/2026/11/dok-nordbeans-liberec-3.jpg",
+   "/wp-content/uploads/2026/11/dok-nordbeans-liberec-4.jpg",
+   "/wp-content/uploads/2026/11/dok-nordbeans-liberec-5.jpg",
+   "/wp-content/uploads/2026/11/dok-nordbeans-liberec-6.jpg"
+  ]
+ },
+ {
+  "id": 2402,
+  "slug": "born-in-london-ceske-budejovice",
+  "nazev": "Born in London České Budějovice",
+  "datum": "2026-11-20 06:57:06",
   "doporuceny": false,
   "lokality": [
    "České Budějovice"
   ],
-  "adresa": "Na Mlýnské stoce 282/11, České Budějovice",
-  "lat": 48.97769,
-  "lon": 14.474192,
+  "adresa": "Dvořákova 11, České Budějovice",
+  "lat": 48.9737613,
+  "lon": 14.4860984,
   "oteviraciDoba": [
-   "Po - Čt: 7:00 - 22:00",
-   "Pá - So: 7:00 - 23:00",
-   "Ne: 8:00 - 21:00"
+   "Po - Pá: 8:00 - 20:00",
+   "So - Ne: zavřeno"
   ],
-  "web": "https://www.prazicafe.cz/",
-  "instagram": "@prazicafe",
-  "instagramUrl": "https://www.instagram.com/prazicafe/",
-  "telefon": "+420607078485",
-  "telefonText": "+420 607 078 485",
-  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Praži+Café+České+Budějovice,+Na+Mlýnské+stoce+282/11,+České+Budějovice",
+  "web": "https://www.borninlondon.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420776577414",
+  "telefonText": "+420 776 577 414",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Born+in+London+České+Budějovice,+Dvořákova+11,+České+Budějovice",
   "rezervace": "Ano, online",
   "platba": [],
   "wifi": null,
@@ -7871,19 +7921,22 @@
   ],
   "atmosfera": [
    "Sezení uvnitř",
+   "Zahrádka",
    "Instagram-friendly místo"
   ],
   "sezeni": [],
   "tipNadpis": "Náš brunch tip",
-  "tip": "<p>Dejte si avokádo Benedikt, nebo na sladko lívance s nutellou a jahodami. O víkendu tu běží brunch.</p>",
-  "popis": "<p>Praži Café je kavárna v centru Českých Budějovic v domě U Pražské brány – jeho název a freska v čele domu připomínají Pražskou bránu, která tu kdysi stála. Kavárnu vede rodina Pražákových, otec Martin se syny.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně od 7:00 a víkendový brunch</h2>\n\n<p>Otevřeno je <strong>každý den od 7:00</strong> (v neděli od 8:00). Připravují <strong>snídaně, víkendové brunche</strong>, obědy i večeře, výběrovou kávu a večer drinky. Z doporučených jídel stojí za ochutnání <strong>avokádo Benedikt</strong>, chicken &amp; avocado nebo <strong>lívance s nutellou a jahodami</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Od rána do večera</h2>\n\n<p>Ve všední dny je otevřeno do 22:00, v pátek a v sobotu do 23:00. Stůl si můžete zarezervovat online.</p>",
-  "seoTitulek": "Praži Café České Budějovice – snídaně, brunch a otevírací doba",
-  "seoPopis": "Praži Café v centru Českých Budějovic: snídaně od 7:00, víkendový brunch, avokádo Benedikt, lívance a výběrová káva. Otevírací doba a tipy.",
-  "foto": "/wp-content/uploads/2026/11/prazi-cafe-ceske-budejovice-1.jpg",
+  "tip": "<p>Objednejte si Born in London snídani s párkem od Číhala, slaninou, sázenými vejci a pečenými fazolemi. Na sladko nadýchané lívance s borůvkami, v létě nejlépe na zahradě.</p>",
+  "popis": "<p>Born in London je rodinná kavárna a bistro v anglickém stylu v Dvořákově ulici v Českých Budějovicích. Majitelé strávili dvanáct let v Londýně a přivezli si odtud lásku k pořádné snídani, dobré kávě a pohodové atmosféře. Interiér připomíná anglický salonek a za domem je kouzelná zahrada s bílým nábytkem a květinami.</p>\n\n<h2 class=\"wp-block-heading\">Anglická snídaně a brunch</h2>\n\n<p>Snídaně se podávají <strong>od 8:00 do 11:00</strong>, brunch <strong>až do 17:00</strong>. Hlavní hvězdou je <strong>Born in London snídaně</strong> – vídeňský párek od Číhala, křupavá slanina, dvě sázená vejce, coleslaw s čedarem, pečené fazole a kváskový chléb. Dále <strong>turecká vejce Çılbır</strong> s koprovým jogurtem a chorizem, krémová míchaná vejce, kokosová ovesná kaše z bezlepkových vloček nebo <strong>lívance s borůvkami</strong> a domácí šlehačkou.</p>\n\n<h2 class=\"wp-block-heading\">Jen ve všední dny</h2>\n\n<p>Otevřeno je <strong>od pondělí do pátku od 8:00 do 20:00</strong>, o víkendu je zavřeno. V poledne vaří denní menu, odpoledne podávají domácí dezerty, víno a pivo. Stůl si můžete zarezervovat online.</p>",
+  "seoTitulek": "Born in London České Budějovice – anglická snídaně a brunch",
+  "seoPopis": "Born in London v Českých Budějovicích: anglická snídaně, turecká vejce, lívance a brunch do 17:00, zahrada a výběrová káva. Otevřeno Po–Pá od 8:00.",
+  "foto": "/wp-content/uploads/2026/11/born-in-london-ceske-budejovice-1.jpg",
   "galerie": [
-   "/wp-content/uploads/2026/11/prazi-cafe-ceske-budejovice-2.jpg",
-   "/wp-content/uploads/2026/11/prazi-cafe-ceske-budejovice-3.jpg",
-   "/wp-content/uploads/2026/11/prazi-cafe-ceske-budejovice-4.jpg"
+   "/wp-content/uploads/2026/11/born-in-london-ceske-budejovice-2.jpg",
+   "/wp-content/uploads/2026/11/born-in-london-ceske-budejovice-3.jpg",
+   "/wp-content/uploads/2026/11/born-in-london-ceske-budejovice-4.jpg",
+   "/wp-content/uploads/2026/11/born-in-london-ceske-budejovice-5.jpg",
+   "/wp-content/uploads/2026/11/born-in-london-ceske-budejovice-6.jpg"
   ]
  }
 ]
