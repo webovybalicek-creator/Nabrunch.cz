@@ -3,7 +3,7 @@ title: "French toast z vánočky: recept na nejlepší sváteční snídani"
 description: "Recept na french toast z vánočky krok za krokem. Jak vánočku namočit, aby se nerozpadla, na čem ji smažit a s čím podávat – sladce i slaně."
 seoTitle: "French toast z vánočky – recept krok za krokem | naBrunch.cz"
 date: "2026-11-20T11:00:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/french-toast-z-vanocky-recept-1.jpg"
 recept: {"nazev": "French toast z vánočky", "porce": "4 porce", "priprava": 10, "vareni": 15, "kategorie": "Snídaně", "suroviny": ["8 plátků vánočky (asi 2 cm silných, ideálně den staré)", "3 vejce", "200 ml plnotučného mléka", "1 lžíce cukru", "1 lžička vanilkového extraktu nebo vanilkový cukr", "½ lžičky mleté skořice", "špetka soli", "2–3 lžíce másla na smažení", "na servírování: javorový sirup nebo med, mascarpone nebo zakysaná smetana, ovoce"], "postup": ["V hluboké misce rozšlehejte vejce s mlékem, cukrem, vanilkou, skořicí a solí dohladka.", "Na pánvi na středním plameni rozpusťte lžičku másla.", "Plátek vánočky ponořte do směsi a nechte z každé strany nasáknout asi 10 vteřin – déle ne, jinak se rozpadne.", "Smažte 2–3 minuty z každé strany, až je povrch zlatohnědý a křupavý.", "Hotové plátky držte teplé v troubě na 90 °C a pokračujte s dalšími, máslo průběžně doplňujte.", "Podávejte hned s javorovým sirupem, mascarpone a ovocem – třeba s brusinkami, pomerančem nebo granátovým jablkem."], "klicova": ["french toast z vánočky", "french toast recept", "vánoční snídaně"]}
 ---
 
