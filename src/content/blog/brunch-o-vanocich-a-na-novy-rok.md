@@ -82,4 +82,6 @@ sezona:
 
 <p>Plánujete brunch i na konec roku? Tipy, kam vyrazit na Silvestra a 1. ledna, najdete v článku <a href="/brunch-na-silvestra-a-novy-rok/">Brunch na Silvestra a na Nový rok</a>.</p>
 
+<p>Chcete brunch raději doma? Hotové menu a recepty najdete v článku <a href="/vanocni-brunch-doma/">Vánoční brunch doma</a>, nápady pro návštěvy v <a href="/vanocni-pohosteni/">Vánočním pohoštění</a> a <a href="/vanocni-chlebicky/">Vánočních chlebíčcích</a>.</p>
+
 <p>Krásné svátky a dobrou chuť! 🎄</p>

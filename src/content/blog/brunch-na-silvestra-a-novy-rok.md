@@ -76,4 +76,6 @@ obdobi: [zima]
 
 <p>Novoroční brunch se dá i darovat – stačí pod stromeček dát poukaz. Přehled kaváren, které je prodávají, najdete v článku <a href="/darkovy-poukaz-na-brunch/">Dárkový poukaz na brunch</a>. A tipy na sváteční brunch mezi svátky jsou v článku <a href="/brunch-o-vanocich-a-na-novy-rok/">Brunch o Vánocích a na Nový rok</a>.</p>
 
+<p>Slavíte doma? Inspiraci najdete v článcích <a href="/silvestrovske-pohosteni/">Silvestrovské pohoštění</a>, <a href="/silvestrovske-chlebicky-a-jednohubky/">Silvestrovské chlebíčky a jednohubky</a>, <a href="/zdrave-pohosteni-na-silvestra/">Zdravé pohoštění na Silvestra</a> a <a href="/novorocni-snidane/">Novoroční snídaně</a>.</p>
+
 <p>Šťastný nový rok a dobrou chuť! 🥂</p>
