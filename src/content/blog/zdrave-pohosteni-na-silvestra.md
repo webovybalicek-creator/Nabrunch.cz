@@ -3,11 +3,11 @@ title: "Zdravé pohoštění na Silvestra a Vánoce: lehké jednohubky a chuťov
 description: "Zdravé silvestrovské pohoštění: jednohubky bez pečiva, zeleninové chuťovky, dipy, pečené cizrnové snacky a zdravé sladkosti. Recepty pro návštěvu i do práce."
 seoTitle: "Zdravé pohoštění na Silvestra: jednohubky a recepty | naBrunch.cz"
 date: "2026-11-20T09:50:00"
+image: "/wp-content/uploads/2026/11/zdrave-pohosteni-na-silvestra-1.jpg"
 sezona:
   - od: "11-20"
     do: "01-10"
 obdobi: [zima]
-naHp: false
 ---
 
 <p>Po týdnech cukroví, chlebíčků a svátečních večeří se lehké pohoštění hodí víc, než by se zdálo. <strong>Zdravé pohoštění</strong> přitom nemusí být nudné – zelenina, sýry, ryby, luštěniny a ořechy dají dohromady barevný stůl, který zmizí stejně rychle jako chlebíčky. Tady jsou nápady na <strong>zdravé jednohubky a chuťovky</strong> na Silvestra, na Vánoce i pro návštěvu kdykoliv jindy.</p>
