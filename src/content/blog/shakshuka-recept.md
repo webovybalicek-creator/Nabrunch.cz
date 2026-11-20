@@ -3,7 +3,7 @@ title: "Shakshuka: recept na vejce v rajčatové omáčce krok za krokem"
 description: "Recept na shakshuku – vejce pošírovaná v pikantní rajčatové omáčce s paprikou. Hotová za 30 minut v jedné pánvi. Klasická i varianta s fetou a špenátem."
 seoTitle: "Shakshuka recept – vejce v rajčatové omáčce | naBrunch.cz"
 date: "2026-11-20T12:00:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/shakshuka-recept-1.jpg"
 recept: {"nazev": "Shakshuka", "porce": "2–3 porce", "priprava": 10, "vareni": 20, "kategorie": "Snídaně", "suroviny": ["2 lžíce olivového oleje", "1 cibule", "1 červená paprika", "2 stroužky česneku", "1 lžička mletého kmínu (římského)", "1 lžička sladké papriky (nebo ½ uzené)", "špetka chilli nebo kajenského pepře", "1 plechovka krájených rajčat (400 g)", "1 lžička cukru", "4–5 vajec", "sůl, pepř", "čerstvá petrželka nebo koriandr", "pečivo na vytírání"], "postup": ["Na velké pánvi rozehřejte olej a na středním plameni orestujte nakrájenou cibuli a papriku asi 5–7 minut, až změknou.", "Přidejte nasekaný česnek, kmín, papriku a chilli a minutu restujte, aby koření rozvonělo.", "Vlijte rajčata, přidejte cukr, osolte, opepřete a za občasného míchání povařte 8–10 minut, až omáčka zhoustne.", "Lžící udělejte v omáčce důlky a do každého rozklepněte vejce. Bílky lehce osolte.", "Přikryjte pokličkou a na mírném plameni nechte 5–8 minut, dokud bílky neztuhnou a žloutky zůstanou tekuté.", "Posypte petrželkou nebo koriandrem a podávejte přímo v pánvi s čerstvým pečivem."], "klicova": ["shakshuka recept", "vejce v rajčatové omáčce", "snídaně z vajec"]}
 ---
 
