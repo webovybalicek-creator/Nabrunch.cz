@@ -3,7 +3,7 @@ title: "Šunková pěna: recept na retro klasiku na chlebíčky"
 description: "Recept na šunkovou pěnu jako z cukrárny. Z čeho ji udělat, jak dosáhnout nadýchané konzistence a jak ji nastříkat na chlebíčky, jednohubky nebo do trubiček."
 seoTitle: "Šunková pěna – recept na chlebíčky a jednohubky | naBrunch.cz"
 date: "2026-11-20T11:20:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/sunkova-pena-recept-1.jpg"
 recept: {"nazev": "Šunková pěna", "porce": "asi 350 g (na 15 chlebíčků)", "priprava": 15, "vareni": 0, "kategorie": "Pomazánky", "suroviny": ["200 g kvalitní šunky (nejvyšší jakosti nebo od kosti)", "100 g másla (změklého na pokojovou teplotu)", "100 g lučiny nebo žervé", "1 lžička plnotučné hořčice", "pár kapek citronové šťávy", "mletý bílý pepř, případně sůl"], "postup": ["Máslo nechte předem změknout při pokojové teplotě – musí být měkké, ne rozpuštěné.", "Šunku nakrájejte na kousky a v mixéru rozmixujte najemno.", "Přidejte máslo, lučinu a hořčici a mixujte, dokud nevznikne hladká nadýchaná pěna.", "Dochuťte pepřem, citronovou šťávou a podle potřeby solí (šunka je slaná, ochutnejte dřív).", "Pěnu dejte do zdobicího sáčku s hvězdicovou špičkou a nechte 15 minut ztuhnout v lednici.", "Nastříkejte na chlebíčky, jednohubky nebo do trubiček z listového těsta."], "klicova": ["šunková pěna", "šunková pěna recept", "pomazánka na chlebíčky"]}
 ---
 
