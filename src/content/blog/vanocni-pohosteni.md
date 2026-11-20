@@ -16,6 +16,7 @@ naHp: false
 
 <h3>1. Šneci z listového těsta se šunkou a sýrem</h3>
 <p>Rozválený plát listového těsta (asi 275 g z chladicího boxu) potřete 2 lžícemi kečupu nebo pesta, poklaďte 100 g šunky a posypte 100 g strouhaného sýra. Pevně srolujte po delší straně, rolku dejte na 15 minut do lednice a pak nakrájejte na plátky asi 1,5 cm silné. Pečte na plechu s pečicím papírem při 200 °C asi 15 minut do zlatova.</p>
+<p>👉 Podrobný recept s tipy: <a href="/sneci-z-listoveho-testa-recept/">Šneci z listového těsta</a></p>
 
 <h3>2. Sýrové tyčinky s kmínem</h3>
 <p>Plát listového těsta potřete rozšlehaným vejcem, posypte strouhaným parmazánem nebo eidamem, kmínem a hrubou solí. Nakrájejte na proužky široké 1,5 cm, každý dvakrát přetočte a pečte 12–15 minut při 200 °C. Vydrží křupavé i do druhého dne.</p>

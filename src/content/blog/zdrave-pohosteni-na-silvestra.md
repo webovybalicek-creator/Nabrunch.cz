@@ -32,6 +32,7 @@ naHp: false
 <h2>Zeleninové talíře a dipy</h2>
 
 <p>Mrkev, okurka, řapíkatý celer, paprika, ředkvičky a kedlubna nakrájené na tyčinky – a k tomu 2–3 dipy:</p>
+<p>👉 Podrobný recept s tipy: <a href="/hummus-recept/">Krémový hummus</a></p>
 
 <ul>
 <li><strong>Hummus:</strong> 1 plechovka cizrny (scezená), 2 lžíce tahini, šťáva z půlky citronu, stroužek česneku, 2 lžíce olivového oleje a sůl. Rozmixujte, případně přilijte trochu vody z cizrny.</li>

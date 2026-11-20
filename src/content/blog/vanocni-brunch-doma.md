@@ -36,6 +36,7 @@ naHp: false
 <li>Na pánvi rozpusťte lžičku másla a smažte na středním plameni 2–3 minuty z každé strany do zlatova.</li>
 <li>Hotové plátky držte teplé v troubě na 90 °C, dokud nedosmažíte všechny.</li>
 </ol>
+<p>👉 Podrobný recept s tipy: <a href="/french-toast-z-vanocky-recept/">French toast z vánočky</a></p>
 
 <p>Víc o tomhle klasickém jídle a jeho variantách najdete v článku <a href="/co-je-french-toast/">Co je french toast</a>.</p>
 
@@ -65,6 +66,7 @@ naHp: false
 <li>Pečte při 160 °C asi 20–25 minut, v polovině promíchejte.</li>
 <li>Nechte úplně vychladnout (teprve pak ztvrdne), vmíchejte brusinky a uložte do sklenice.</li>
 </ol>
+<p>👉 Podrobný recept s tipy: <a href="/granola-recept/">Domácí granola</a></p>
 
 <p>Rozdíl mezi granolou a müsli vysvětlujeme v článku <a href="/granola-vs-musli-jaky-je-rozdil/">Granola vs. müsli</a>.</p>
 

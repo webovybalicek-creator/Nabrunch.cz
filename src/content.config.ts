@@ -19,6 +19,19 @@ const blog = defineCollection({
     obdobi: z.array(z.enum(['jaro', 'leto', 'podzim', 'zima'])).optional(),
     /** false = nezobrazovat v „Brunch tipech“ na HP (např. SEO rozcestníky) */
     naHp: z.boolean().optional(),
+    /** Recept: vykreslí se jako karta na místě značky <!-- recept --> v textu a jako schema.org/Recipe */
+    recept: z
+      .object({
+        nazev: z.string(),
+        porce: z.string(),
+        priprava: z.number(),
+        vareni: z.number().default(0),
+        kategorie: z.string(),
+        suroviny: z.array(z.string()),
+        postup: z.array(z.string()),
+        klicova: z.array(z.string()).optional(),
+      })
+      .optional(),
   }),
 });
 

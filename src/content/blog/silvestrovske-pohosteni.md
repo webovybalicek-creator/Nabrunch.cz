@@ -32,6 +32,7 @@ naHp: false
 
 <h3>Šneci s pestem a sušenými rajčaty</h3>
 <p>Plát potřete pestem, posypte nasekanými sušenými rajčaty a parmazánem, srolujte, nakrájejte a pečte 15 minut při 200 °C. Recept na klasické šneky se šunkou najdete v článku <a href="/vanocni-pohosteni/">Vánoční pohoštění</a>.</p>
+<p>👉 Podrobný recept s tipy: <a href="/sneci-z-listoveho-testa-recept/">Šneci z listového těsta</a></p>
 
 <h2>Jednohubky a chlebíčky</h2>
 

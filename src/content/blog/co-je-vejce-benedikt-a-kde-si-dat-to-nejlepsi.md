@@ -68,3 +68,5 @@ image: "/wp-content/uploads/2025/04/Navrh-bez-nazvu-2025-04-28T111956.942.jpg"
 <h2 class="wp-block-heading">Kam na vejce Benedikt? Nechte se inspirovat!</h2>
 
 <p>Pokud dostáváte chuť na dokonale připravené vejce Benedikt, nemusíte se hned pouštět do domácí přípravy. Stačí si vybrat některou z kaváren z našeho výběru na <a href="/podniky/" target="_blank" rel="noreferrer noopener"><strong>nabrunch.cz</strong></a>, kde najdete ty nejlepší podniky na <strong>snídaně a brunche v Česku.</strong> Pečlivě pro vás vybíráme místa, kde si můžete pochutnat na poctivých, čerstvých a láskyplně připravených pokrmech. Vydejte se za gurmánským zážitkem a objevujte s námi kouzlo snídaní, které stojí za to!</p>
+
+<p>👉 Chcete si to udělat doma? <a href="/vejce-benedikt-recept/">Vejce Benedikt s holandskou omáčkou – recept</a>.</p>

@@ -44,3 +44,5 @@ obdobi: [jaro, leto]
 </ul>
 
 <p>Granola patří i do <a href="/co-je-acai-bowl/">acai bowlu</a>. Další lehké snídaně najdete mezi <a href="/zdrave-snidane-a-brunche/">zdravými snídaněmi a brunchi</a>. 🥣</p>
+
+<p>👉 Chcete si to udělat doma? <a href="/granola-recept/">Domácí křupavá granola – recept</a>.</p>

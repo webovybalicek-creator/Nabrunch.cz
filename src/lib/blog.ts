@@ -6,11 +6,12 @@ import { PODNIKY, type Podnik } from './data';
 export type Clanek = CollectionEntry<'blog'>;
 
 /** Rubriky blogu (WordPress měl všechno v „Nezařazené“, třídíme podle titulku) */
-export const KATEGORIE = ['Kam na brunch', 'Co je co', 'Inspirace'] as const;
+export const KATEGORIE = ['Kam na brunch', 'Co je co', 'Recepty', 'Inspirace'] as const;
 export type Kategorie = (typeof KATEGORIE)[number];
 
 export function kategorie(c: Clanek): Kategorie {
   const t = c.data.title;
+  if (c.data.recept) return 'Recepty';
   if (/^co (je|jsou|to)\b|\bvs\.?\b|rozdíl/i.test(t)) return 'Co je co';
   if (/kam na|nejlepší|kavárny v|bufet|brunch (ostrava|české)|\btop\b|mimo město|s dětmi|café|cafe|bistro|shelter|spot|brunch praha|pro děti/i.test(t)) return 'Kam na brunch';
   return 'Inspirace';
@@ -19,6 +20,7 @@ export function kategorie(c: Clanek): Kategorie {
 export const KATEGORIE_POPIS: Record<Kategorie, string> = {
   'Kam na brunch': 'Tipy na nejlepší snídaně a brunche podle měst a příležitostí.',
   'Co je co': 'Matcha, kombucha, sourdough nebo vejce Benedikt – vysvětlíme, co se skrývá za brunchovými pojmy.',
+  Recepty: 'Osvědčené recepty na snídaně, brunch, pomazánky a pohoštění krok za krokem.',
   Inspirace: 'Trendy, jídla a nápady pro každý víkendový brunch.',
 };
 

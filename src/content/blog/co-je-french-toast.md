@@ -36,3 +36,5 @@ obdobi: [podzim, zima]
 </ul>
 
 <p>Mezi sladkými brunchovými jídly nesmí chybět ani <a href="/livance-palacinky-pancakes-jaky-je-rozdil/">lívance a pancakes</a>. Hledáte slanou verzi toastu? Přečtěte si o <a href="/croque-monsieur-vs-croque-madame/">croque monsieur a croque madame</a>. 🍞</p>
+
+<p>👉 Chcete si to udělat doma? <a href="/french-toast-z-vanocky-recept/">French toast z vánočky – recept</a>.</p>

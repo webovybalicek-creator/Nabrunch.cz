@@ -22,6 +22,7 @@ naHp: false
 
 <h3>Shakshuka</h3>
 <p>Na pánvi na olivovém oleji orestujte cibuli, česnek a nakrájenou papriku, přidejte lžičku kmínu a sladké papriky a plechovku krájených rajčat. Povařte 10 minut, osolte, v omáčce udělejte důlky, rozklepněte do nich 4 vejce a pod pokličkou nechte 6–8 minut, než bílky ztuhnou. Víc o tomhle jídle najdete v článku <a href="/co-je-shakshuka/">Co je shakshuka</a>.</p>
+<p>👉 Podrobný recept s tipy: <a href="/shakshuka-recept/">Shakshuka</a></p>
 
 <h3>Slepičí vývar</h3>
 <p>Kdo si ho uvaří den předem, ráno jen ohřeje. Je lehký na žaludek, zahřeje a doplní tekutiny i minerály. Jedna z nejlepších věcí, kterou si můžete 1. ledna dopřát.</p>
@@ -30,6 +31,7 @@ naHp: false
 
 <h3>Palačinky nebo lívance</h3>
 <p>Těsto na lívance: 250 g polohrubé mouky, 2 vejce, 300 ml mléka, 1 lžíce cukru, ½ prášku do pečiva a špetka soli. Těsto si klidně udělejte večer a nechte ho v lednici. Ráno smažte na troše másla a podávejte s tvarohem, ovocem a javorovým sirupem. Rozdíl mezi lívanci, palačinkami a pancakes vysvětlujeme v <a href="/livance-palacinky-pancakes-jaky-je-rozdil/">tomto článku</a>.</p>
+<p>👉 Podrobný recept s tipy: <a href="/livance-recept/">Nadýchané lívance</a></p>
 
 <h3>French toast z vánočky</h3>
 <p>Po Vánocích skoro vždycky zbyde vánočka – v rozšlehaných vejcích s mlékem a skořicí a osmažená na másle z ní je skvělá snídaně. Postup najdete v článku <a href="/vanocni-brunch-doma/">Vánoční brunch doma</a>.</p>

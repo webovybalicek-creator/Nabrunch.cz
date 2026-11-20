@@ -72,3 +72,5 @@ obdobi: [podzim, zima]
 </ul>
 
 <p>Máte chuť na další brunchovou klasiku? Přečtěte si, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a> nebo <a href="/co-je-french-toast/">French toast</a>, a další podniky najdete na <a href="/mapa/">mapě</a>. 🍳</p>
+
+<p>👉 Chcete si to udělat doma? <a href="/shakshuka-recept/">Shakshuka – recept na podobné jídlo z vajec</a>.</p>

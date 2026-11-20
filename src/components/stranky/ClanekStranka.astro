@@ -30,6 +30,19 @@ if (c.data.image) {
   html = html.replace(new RegExp(`^\\s*<figure[^>]*>\\s*<img[^>]*${zaklad.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^>]*>\\s*</figure>`), '');
 }
 
+// Recept z frontmatteru: karta na místě značky <!-- recept --> (jinak na začátek textu)
+const r = c.data.recept;
+if (r) {
+  const esc = (t: string) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const info = [`Porce: ${r.porce}`, `Příprava: ${r.priprava} min`, ...(r.vareni ? [`Vaření/pečení: ${r.vareni} min`] : []), `Celkem: ${r.priprava + r.vareni} min`];
+  const karta =
+    `<section class="recept"><h2>Recept: ${esc(r.nazev)}</h2>` +
+    `<ul class="recept__info">${info.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` +
+    `<h3>Suroviny</h3><ul class="recept__suroviny">${r.suroviny.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` +
+    `<h3>Postup</h3><ol class="recept__postup">${r.postup.map((i) => `<li>${esc(i)}</li>`).join('')}</ol></section>`;
+  html = html.includes('<!-- recept -->') ? html.replace('<!-- recept -->', karta) : karta + html;
+}
+
 // Obsah článku: nadpisy H2 dostanou kotvy (id) pro odkazy z bočního panelu
 const nadpisy: { id: string; text: string }[] = [];
 const pouzite = new Set<string>();
@@ -61,7 +74,7 @@ const ctete = souvis.slice(0, 3);
   });
 }
 
-const jsonLd = {
+const blogPosting = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
   headline: c.data.title,
@@ -72,6 +85,29 @@ const jsonLd = {
   author: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
   publisher: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
 };
+const jsonLd = r
+  ? [
+      blogPosting,
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Recipe',
+        name: r.nazev,
+        description: popis,
+        ...(c.data.image ? { image: [new URL(velky(c.data.image), SITE.url).href] } : {}),
+        author: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
+        datePublished: c.data.date.toISOString(),
+        prepTime: `PT${r.priprava}M`,
+        ...(r.vareni ? { cookTime: `PT${r.vareni}M` } : {}),
+        totalTime: `PT${r.priprava + r.vareni}M`,
+        recipeYield: r.porce,
+        recipeCategory: r.kategorie,
+        recipeCuisine: 'česká',
+        ...(r.klicova ? { keywords: r.klicova.join(', ') } : {}),
+        recipeIngredient: r.suroviny,
+        recipeInstructions: r.postup.map((t, i) => ({ '@type': 'HowToStep', position: i + 1, text: t })),
+      },
+    ]
+  : blogPosting;
 ---
 
 <Base title={titulek} description={popis} obrazek={c.data.image} typ="article" publikovano={c.data.date.toISOString()} jsonLd={jsonLd}>
@@ -201,6 +237,34 @@ const jsonLd = {
 </script>
 
 <style>
+  .clanek-text :global(.recept) {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem 1.5rem;
+    border-radius: var(--radius);
+    background: var(--blush);
+    border: 1px solid var(--line);
+  }
+  .clanek-text :global(.recept h2) {
+    margin-top: 0;
+  }
+  .clanek-text :global(.recept__info) {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .clanek-text :global(.recept__info li) {
+    margin: 0;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    font-size: 0.9rem;
+  }
+  .clanek-text :global(.recept__postup li) {
+    margin-bottom: 0.5rem;
+  }
   .cta {
     margin: 2.5rem 0 0;
     padding: 1.4rem 1.5rem;

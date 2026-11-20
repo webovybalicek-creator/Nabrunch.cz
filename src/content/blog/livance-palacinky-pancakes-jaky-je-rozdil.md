@@ -47,3 +47,5 @@ obdobi: [zima]
 </ul>
 
 <p>Další sladké tipy najdete v článku <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenější brunch jídla</a>.</p>
+
+<p>👉 Chcete si to udělat doma? <a href="/livance-recept/">Nadýchané lívance bez kynutí – recept</a>.</p>

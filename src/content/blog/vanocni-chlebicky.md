@@ -23,12 +23,15 @@ naHp: false
 
 <h2>1. Vajíčková pomazánka</h2>
 <p>Natvrdo uvařte 5 vajec (10 minut od varu), zchlaďte a nastrouhejte najemno. Smíchejte se 100 g pomazánkového másla a 2 lžícemi majonézy, přidejte lžičku plnotučné hořčice, sůl, pepř a jemně nasekanou pažitku nebo jarní cibulku. Na chlebíček dejte plátek vejce a kousek okurky.</p>
+<p>👉 Podrobný recept s tipy: <a href="/vajickova-pomazanka-recept/">Vajíčková pomazánka</a></p>
 
 <h2>2. Šunková pěna</h2>
 <p>150 g kvalitní šunky (od kosti nebo s vysokým podílem masa) rozmixujte se 100 g změklého másla a 100 g lučiny nebo žervé. Dochuťte pepřem, případně kapkou křenu. Pěnu nastříkejte zdobicím sáčkem s hvězdičkou – vypadá to jako z cukrárny a chlebíček hned působí slavnostně.</p>
+<p>👉 Podrobný recept s tipy: <a href="/sunkova-pena-recept/">Šunková pěna</a></p>
 
 <h2>3. Lososová pomazánka s koprem</h2>
 <p>100 g uzeného lososa nasekejte nadrobno a smíchejte se 200 g žervé nebo krémového sýra, lžičkou citronové šťávy, nastrouhanou citronovou kůrou a nasekaným koprem. Navrch dejte proužek lososa, kapary a snítku kopru. Tahle pomazánka je hvězdou každého vánočního stolu.</p>
+<p>👉 Podrobný recept s tipy: <a href="/lososova-pomazanka-recept/">Lososová pomazánka</a></p>
 
 <h2>4. Sýrová pomazánka s ořechy a brusinkami</h2>
 <p>Nastrouhejte 150 g eidamu a 100 g hermelínu najemno (hermelín jde líp, když je vychlazený). Smíchejte se 100 g pomazánkového másla, hrstí nasekaných vlašských ořechů a lžící brusinek. Sladkoslaná kombinace chutná vánočně a zvládnete ji za 10 minut.</p>

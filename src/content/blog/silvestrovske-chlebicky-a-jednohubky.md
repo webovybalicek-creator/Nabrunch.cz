@@ -31,6 +31,7 @@ naHp: false
 
 <h3>Jednohubky z tortilly (rolky)</h3>
 <p>Nejoblíbenější silvestrovská jednohubka, kterou uděláte den předem. Tortillu potřete 2–3 lžícemi krémového sýra, poklaďte šunkou nebo lososem a listy salátu či špenátu, pevně srolujte a zabalte do fólie. Nechte v lednici aspoň 2 hodiny (klidně přes noc), pak odřízněte konce a nakrájejte na plátky 2 cm silné. Z jedné tortilly je 6–8 kousků.</p>
+<p>👉 Podrobný recept s tipy: <a href="/tortilla-rolky-recept/">Tortilla rolky</a></p>
 
 <p><strong>Varianty náplně:</strong></p>
 <ul>

@@ -57,3 +57,5 @@ obdobi: [podzim, zima]
 </ul>
 
 <p>Další tipy najdete v přehledu <a href="/orientalni-snidane-a-brunche/">orientálních snídaní a brunchů</a>. A pokud vás zajímají i jiná klasická brunchová jídla, přečtěte si, <a href="/co-je-vejce-benedikt-a-kde-si-dat-to-nejlepsi/">co je vejce Benedikt</a>, nebo náš přehled <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenějších brunch jídel</a>.</p>
+
+<p>👉 Chcete si to udělat doma? <a href="/shakshuka-recept/">Shakshuka – recept krok za krokem</a>.</p>
