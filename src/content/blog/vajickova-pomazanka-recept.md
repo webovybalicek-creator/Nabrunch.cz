@@ -3,7 +3,7 @@ title: "Vajíčková pomazánka: recept na nejlepší pomazánku na chlebíčky"
 description: "Recept na vajíčkovou pomazánku na chlebíčky i k snídani. Klasická s pomazánkovým máslem, lehčí s tvarohem nebo cottage, tipy na dochucení a jak dlouho vydrží."
 seoTitle: "Vajíčková pomazánka – nejlepší recept na chlebíčky | naBrunch.cz"
 date: "2026-11-20T11:10:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/vajickova-pomazanka-recept-1.jpg"
 recept: {"nazev": "Vajíčková pomazánka", "porce": "asi 400 g (na 12–15 chlebíčků)", "priprava": 15, "vareni": 10, "kategorie": "Pomazánky", "suroviny": ["5 vajec", "100 g pomazánkového másla", "2 lžíce majonézy", "1 lžička plnotučné hořčice", "1 malá cibule nebo 2 jarní cibulky", "pažitka", "sůl, mletý pepř"], "postup": ["Vejce vložte do hrnce se studenou vodou, přiveďte k varu a vařte 10 minut.", "Uvařená vejce zchlaďte ve studené vodě a oloupejte.", "Vejce nastrouhejte najemno nebo rozmačkejte vidličkou.", "Přidejte pomazánkové máslo, majonézu, hořčici a nadrobno nakrájenou cibuli.", "Osolte, opepřete a vmíchejte nasekanou pažitku. Promíchejte dohladka.", "Před podáváním nechte aspoň 30 minut odležet v lednici, aby se chutě propojily."], "klicova": ["vajíčková pomazánka", "pomazánka na chlebíčky", "vajíčková pomazánka recept"]}
 ---
 
