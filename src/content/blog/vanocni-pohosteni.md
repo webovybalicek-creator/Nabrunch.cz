@@ -5,7 +5,7 @@ seoTitle: "Vánoční pohoštění: slané i sladké recepty, i pro děti | naBr
 date: "2026-11-20T09:20:00"
 image: "/wp-content/uploads/2026/11/vanocni-pohosteni-1.jpg"
 sezona:
-  - od: "11-25"
+  - od: "11-20"
     do: "12-30"
 obdobi: [zima]
 ---

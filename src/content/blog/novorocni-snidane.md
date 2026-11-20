@@ -4,7 +4,7 @@ description: "Novoroční snídaně po oslavě: vydatná vejce, shakshuka, líva
 seoTitle: "Novoroční snídaně a brunch doma – recepty a tipy | naBrunch.cz"
 date: "2026-11-20T10:00:00"
 sezona:
-  - od: "12-20"
+  - od: "11-20"
     do: "01-03"
 obdobi: [zima]
 naHp: false

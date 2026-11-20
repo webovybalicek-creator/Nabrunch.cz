@@ -4,7 +4,7 @@ description: "Zdravé silvestrovské pohoštění: jednohubky bez pečiva, zelen
 seoTitle: "Zdravé pohoštění na Silvestra: jednohubky a recepty | naBrunch.cz"
 date: "2026-11-20T09:50:00"
 sezona:
-  - od: "12-01"
+  - od: "11-20"
     do: "01-10"
 obdobi: [zima]
 naHp: false

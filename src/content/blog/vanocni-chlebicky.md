@@ -5,7 +5,7 @@ seoTitle: "Vánoční chlebíčky a pomazánky na chlebíčky – recepty | naBr
 date: "2026-11-20T09:10:00"
 image: "/wp-content/uploads/2026/11/vanocni-chlebicky-1.jpg"
 sezona:
-  - od: "11-25"
+  - od: "11-20"
     do: "01-02"
 obdobi: [zima]
 ---

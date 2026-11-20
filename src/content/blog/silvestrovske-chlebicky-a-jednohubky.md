@@ -4,7 +4,7 @@ description: "Recepty na silvestrovské chlebíčky a jednohubky – z tortilly,
 seoTitle: "Silvestrovské chlebíčky a jednohubky – recepty | naBrunch.cz"
 date: "2026-11-20T09:40:00"
 sezona:
-  - od: "12-10"
+  - od: "11-20"
     do: "01-02"
 obdobi: [zima]
 naHp: false

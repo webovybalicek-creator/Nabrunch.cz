@@ -17,9 +17,18 @@ const vse = [...PODNIKY].sort((a, b) => a.nazev.localeCompare(b.nazev, 'cs'));
 const topMesta = [...mesta()].sort((a, b) => b.podniky.length - a.podniky.length);
 // Brunch tipy: sezónní výběr (logika v src/lib/sezona.ts). Do HTML jde „zásobník“ kandidátů,
 // viditelných je 6 podle data buildu; skript níže výběr přepočítá podle dnešního data v prohlížeči.
-const vsechny = (await clanky()).filter((c) => c.data.naHp !== false);
-const TIPU = 5;
 const rok = new Date().getFullYear();
+// Sváteční oddíl („Vánoce a Silvestr“): všechny články o Vánocích, Silvestru a Novém roce, jejichž sezóna právě běží
+const dnesIso = new Date().toISOString().slice(0, 10);
+const SVATKY_RE = /vánoc|vánoč|silvest|nový rok|novoroč/i;
+const svatky = (await clanky())
+  .filter((c) => c.data.naHp !== false && c.data.image && SVATKY_RE.test(c.data.title))
+  .map((c) => ({ c, okno: oknaData(c.data.sezona, rok - 1, rok + 1).find(([a, b]) => a <= dnesIso && dnesIso <= b) }))
+  .filter((x) => x.okno)
+  .sort((a, b) => (/silvest|nový rok|novoroč/i.test(a.c.data.title) ? 1 : 0) - (/silvest|nový rok|novoroč/i.test(b.c.data.title) ? 1 : 0) || a.c.data.date.getTime() - b.c.data.date.getTime())
+  .map((x) => x.c);
+const vsechny = (await clanky()).filter((c) => c.data.naHp !== false && !svatky.some((s) => s.id === c.id));
+const TIPU = 5;
 const zasobnik = [
   ...vsechny.filter((c) => c.data.sezona?.length || c.data.obdobi?.length),
   ...vsechny.filter((c) => !c.data.sezona?.length && !c.data.obdobi?.length).slice(0, 12),
@@ -204,6 +213,27 @@ const jsonLd = [organizace, webLd];
       </ul>
     </div>
   </section>
+
+  {
+    svatky.length > 0 && (
+      <section class="section">
+        <div class="wrap">
+          <div class="sec-head">
+            <div>
+              <span class="eyebrow">Sváteční inspirace</span>
+              <h2>Vánoce a Silvestr 🎄</h2>
+            </div>
+            <a href="/blog/recepty/" class="btn btn--ghost">Recepty</a>
+          </div>
+          <ul class="karty karty--blog">
+            {svatky.map((c) => (
+              <BlogKarta c={c} />
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
 
   <section class="section">
     <div class="wrap">

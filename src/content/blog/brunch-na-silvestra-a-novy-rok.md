@@ -5,7 +5,7 @@ seoTitle: "Brunch na Silvestra a Nový rok 2027 – kam vyrazit | naBrunch.cz"
 date: "2026-11-15T10:00:00"
 image: "/wp-content/uploads/2026/11/dabl-bistro-praha-4.jpg"
 sezona:
-  - od: "12-10"
+  - od: "11-20"
     do: "01-03"
 obdobi: [zima]
 ---
