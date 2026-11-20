@@ -7688,5 +7688,202 @@
    "/wp-content/uploads/2026/11/55-bakery-praha-5.jpg",
    "/wp-content/uploads/2026/11/55-bakery-praha-6.jpg"
   ]
+ },
+ {
+  "id": 2397,
+  "slug": "wink-cafe-liberec",
+  "nazev": "Wink Café Liberec",
+  "datum": "2026-11-20 06:45:38",
+  "doporuceny": false,
+  "lokality": [
+   "Liberec"
+  ],
+  "adresa": "Tržní náměstí 876/11, Liberec",
+  "lat": 50.7744013,
+  "lon": 15.0613857,
+  "oteviraciDoba": [
+   "Po - Pá: 7:00 - 19:00",
+   "So: 8:00 - 19:00",
+   "Ne: 9:00 - 18:00"
+  ],
+  "web": "https://winkcafe.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Wink+Café+Liberec,+Tržní+náměstí+876/11,+Liberec",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si anglickou snídani nebo vejce Benedikt a k tomu latte. Na sladko je hitem francouzský toust se zmrzlinou a karamelem – a nevynechejte jejich Míša dort.</p>",
+  "popis": "<p>Wink Café je útulná kavárna ve vile naproti bazénu v Liberci, kousek od centra. Má výběrovou kávu, poctivé sladké i slané snídaně, domácí dezerty a v létě terasu se zahradou, kterou se majitelům povedlo hezky oddělit od ulice. Na Googlu má hodnocení 4,7 z více než 400 recenzí a pejskaři tu dostanou misku s vodou.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně od 7:00</h2>\n\n<p>Ve všední dny otevírá <strong>už v 7:00</strong>, v sobotu v 8:00 a v neděli v 9:00. Na snídaňovém lístku je <strong>anglická snídaně</strong> se sázenými vejci, párky a fazolemi, <strong>vejce Benedikt</strong>, hemenex, míchaná vejce, omeleta s pražskou šunkou a parmazánem, avokádový toust i bramborové lokše s vejci a šunkou. Na sladko ovesná kaše s ovocem, domácí granola s řeckým jogurtem, palačinka s tvarohem nebo <strong>francouzský toust se zmrzlinou a karamelem</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Dorty a terasa</h2>\n\n<p>Ve vitríně čekají domácí dorty – od Míša dortu po red velvet. Odpoledne se hodí sendviče, chlebíčky a míchané drinky na terase.</p>",
+  "seoTitulek": "Wink Café Liberec – snídaně od 7:00, terasa a otevírací doba",
+  "seoPopis": "Wink Café v Liberci: snídaně denně od 7:00, anglická snídaně, vejce Benedikt, francouzský toust a domácí dorty. Terasa, psi vítáni.",
+  "foto": "/wp-content/uploads/2026/11/wink-cafe-liberec-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/wink-cafe-liberec-2.jpg",
+   "/wp-content/uploads/2026/11/wink-cafe-liberec-3.jpg",
+   "/wp-content/uploads/2026/11/wink-cafe-liberec-4.jpg",
+   "/wp-content/uploads/2026/11/wink-cafe-liberec-5.jpg",
+   "/wp-content/uploads/2026/11/wink-cafe-liberec-6.jpg"
+  ]
+ },
+ {
+  "id": 2398,
+  "slug": "mikyna-liberec",
+  "nazev": "Mikyna Coffee & Food Point Liberec",
+  "datum": "2026-11-20 06:45:38",
+  "doporuceny": false,
+  "lokality": [
+   "Liberec"
+  ],
+  "adresa": "5. května 62/46, Liberec",
+  "lat": 50.7717253,
+  "lon": 15.0633453,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: 9:00 - 17:00"
+  ],
+  "web": "https://mikynapoint.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420482710746",
+  "telefonText": "+420 482 710 746",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Mikyna+Coffee+&+Food+Point+Liberec,+5.+května+62/46,+Liberec",
+  "rezervace": "Ano, telefonicky",
+  "platba": [
+   "Kartou",
+   "Hotově"
+  ],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Zdravá/fitness"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijďte o víkendu na brunch (9:00–16:00) a ke kávě si dejte jejich legendární karamelový košíček se solí. Chleba si pečou sami.</p>",
+  "popis": "<p>Mikyna je rodinné vegetariánské bistro a kavárna v ulici 5. května v centru Liberce, které funguje od roku 2015. Vaří pestré, vyvážené a pořádné jídlo převážně z lokálních sezonních surovin – a zelenina tu rozhodně není jen příloha.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně celý den, o víkendu brunch</h2>\n\n<p>Snídaně se podávají <strong>celý den</strong>, třeba topinka s avokádem. Ve všední dny je k tomu denní menu s polévkou a obědovými miskami (11:00–15:00), o víkendu <strong>brunch od 9:00 do 16:00</strong>. Všechno je vegetariánské a mnohé i veganské.</p>\n\n<h2 class=\"wp-block-heading\">Vlastní pečivo a výběrová káva</h2>\n\n<p>Žitný chléb, kynuté pečivo i dezerty pečou každý den – karamelové košíčky jsou s nimi už roky, ve vitríně se dál střídá sezonní nabídka. Kávu připravují na espressu i filtru a střídají české pražírny. Stůl si můžete zarezervovat telefonicky.</p>",
+  "seoTitulek": "Mikyna Liberec – vegetariánský brunch a otevírací doba",
+  "seoPopis": "Mikyna v centru Liberce: vegetariánské bistro se snídaněmi celý den, víkendovým brunchem 9–16, vlastním pečivem a výběrovou kávou.",
+  "foto": "/wp-content/uploads/2026/11/mikyna-liberec-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/mikyna-liberec-2.jpg",
+   "/wp-content/uploads/2026/11/mikyna-liberec-3.jpg",
+   "/wp-content/uploads/2026/11/mikyna-liberec-4.jpg",
+   "/wp-content/uploads/2026/11/mikyna-liberec-5.jpg",
+   "/wp-content/uploads/2026/11/mikyna-liberec-6.jpg"
+  ]
+ },
+ {
+  "id": 2399,
+  "slug": "esence-cafe-ceske-budejovice",
+  "nazev": "Esence Café České Budějovice",
+  "datum": "2026-11-20 06:45:38",
+  "doporuceny": false,
+  "lokality": [
+   "České Budějovice"
+  ],
+  "adresa": "náměstí Přemysla Otakara II. 8/5, České Budějovice",
+  "lat": 48.974764,
+  "lon": 14.473335,
+  "oteviraciDoba": [
+   "Po - Čt: 7:00 - 22:00",
+   "Pá - So: 7:00 - 24:00",
+   "Ne: 8:00 - 21:00"
+  ],
+  "web": "https://www.esencecafe.cz/",
+  "instagram": "@esencecafe",
+  "instagramUrl": "https://www.instagram.com/esencecafe/",
+  "telefon": "+420720039950",
+  "telefonText": "+420 720 039 950",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Esence+Café+České+Budějovice,+náměstí+Přemysla+Otakara+II.+8/5,+České+Budějovice",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte Esence snídani nebo vejce Benedikt, na sladko kefírové lívance či dukátové buchtičky. Brunch se podává denně až do 18:00.</p>",
+  "popis": "<p>Esence Café je kavárna přímo na náměstí Přemysla Otakara II. v srdci Českých Budějovic. Interiér s klenbami zdobí živá mechová stěna, která dodává prostoru klid. Za kavárnou stojí rodina Pražákových, která ve městě provozuje i Praži Café.</p>\n\n<h2 class=\"wp-block-heading\">Brunch každý den do 18:00</h2>\n\n<p>Otevřeno je <strong>denně od 7:00</strong> (v neděli od 8:00) a <strong>brunch se podává každý den až do 18:00</strong>. V menu najdete avokádový chléb, <strong>vejce Benedikt</strong>, velkou Esence snídani, podmáslový chléb s batátovým hummusem, croissant s míchanými vajíčky a Gruyère, <strong>kefírové lívance</strong> nebo dukátové buchtičky. Každý týden přibývají sezonní speciality.</p>\n\n<h2 class=\"wp-block-heading\">Večer tapas a víno</h2>\n\n<p>Večer se nabídka mění na tapas, dezerty a víno, v pátek a v sobotu je otevřeno až do půlnoci. Stůl si můžete zarezervovat online.</p>",
+  "seoTitulek": "Esence Café České Budějovice – brunch do 18:00",
+  "seoPopis": "Esence Café na náměstí v Českých Budějovicích: brunch denně až do 18:00, vejce Benedikt, kefírové lívance a dukátové buchtičky. Otevřeno od 7:00.",
+  "foto": "/wp-content/uploads/2026/11/esence-cafe-ceske-budejovice-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/esence-cafe-ceske-budejovice-2.jpg",
+   "/wp-content/uploads/2026/11/esence-cafe-ceske-budejovice-3.jpg",
+   "/wp-content/uploads/2026/11/esence-cafe-ceske-budejovice-4.jpg",
+   "/wp-content/uploads/2026/11/esence-cafe-ceske-budejovice-5.jpg"
+  ]
+ },
+ {
+  "id": 2400,
+  "slug": "prazi-cafe-ceske-budejovice",
+  "nazev": "Praži Café České Budějovice",
+  "datum": "2026-11-20 06:45:38",
+  "doporuceny": false,
+  "lokality": [
+   "České Budějovice"
+  ],
+  "adresa": "Na Mlýnské stoce 282/11, České Budějovice",
+  "lat": 48.97769,
+  "lon": 14.474192,
+  "oteviraciDoba": [
+   "Po - Čt: 7:00 - 22:00",
+   "Pá - So: 7:00 - 23:00",
+   "Ne: 8:00 - 21:00"
+  ],
+  "web": "https://www.prazicafe.cz/",
+  "instagram": "@prazicafe",
+  "instagramUrl": "https://www.instagram.com/prazicafe/",
+  "telefon": "+420607078485",
+  "telefonText": "+420 607 078 485",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Praži+Café+České+Budějovice,+Na+Mlýnské+stoce+282/11,+České+Budějovice",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si avokádo Benedikt, nebo na sladko lívance s nutellou a jahodami. O víkendu tu běží brunch.</p>",
+  "popis": "<p>Praži Café je kavárna v centru Českých Budějovic v domě U Pražské brány – jeho název a freska v čele domu připomínají Pražskou bránu, která tu kdysi stála. Kavárnu vede rodina Pražákových, otec Martin se syny.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně od 7:00 a víkendový brunch</h2>\n\n<p>Otevřeno je <strong>každý den od 7:00</strong> (v neděli od 8:00). Připravují <strong>snídaně, víkendové brunche</strong>, obědy i večeře, výběrovou kávu a večer drinky. Z doporučených jídel stojí za ochutnání <strong>avokádo Benedikt</strong>, chicken &amp; avocado nebo <strong>lívance s nutellou a jahodami</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Od rána do večera</h2>\n\n<p>Ve všední dny je otevřeno do 22:00, v pátek a v sobotu do 23:00. Stůl si můžete zarezervovat online.</p>",
+  "seoTitulek": "Praži Café České Budějovice – snídaně, brunch a otevírací doba",
+  "seoPopis": "Praži Café v centru Českých Budějovic: snídaně od 7:00, víkendový brunch, avokádo Benedikt, lívance a výběrová káva. Otevírací doba a tipy.",
+  "foto": "/wp-content/uploads/2026/11/prazi-cafe-ceske-budejovice-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/prazi-cafe-ceske-budejovice-2.jpg",
+   "/wp-content/uploads/2026/11/prazi-cafe-ceske-budejovice-3.jpg",
+   "/wp-content/uploads/2026/11/prazi-cafe-ceske-budejovice-4.jpg"
+  ]
  }
 ]
