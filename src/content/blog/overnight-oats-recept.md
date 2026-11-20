@@ -3,7 +3,7 @@ title: "Overnight oats: recept na ovesnou kaši přes noc"
 description: "Recept na overnight oats – ovesnou kaši přes noc bez vaření. Základní poměr, varianty s tvarohem, banánem, kakaem i proteinem. Snídaně, která na vás ráno čeká."
 seoTitle: "Overnight oats – recept na ovesnou kaši přes noc | naBrunch.cz"
 date: "2026-11-20T12:50:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/overnight-oats-recept-1.jpg"
 recept: {"nazev": "Overnight oats (ovesná kaše přes noc)", "porce": "1 porce", "priprava": 5, "vareni": 0, "kategorie": "Snídaně", "suroviny": ["50 g ovesných vloček (jemných)", "120 ml mléka (kravského nebo rostlinného)", "80 g bílého nebo řeckého jogurtu", "1 lžička chia semínek (nepovinné)", "1 lžička medu nebo javorového sirupu", "špetka skořice", "na servírování: ovoce, ořechy, arašídové máslo"], "postup": ["Do sklenice nebo misky s víčkem dejte vločky, chia semínka a skořici.", "Přilijte mléko, přidejte jogurt a med a důkladně promíchejte.", "Uzavřete a nechte v lednici přes noc, nejméně 6 hodin.", "Ráno promíchejte. Pokud je kaše moc hustá, přilijte trochu mléka.", "Navrch dejte ovoce, ořechy nebo lžičku arašídového másla a jezte studenou, nebo ji krátce ohřejte."], "klicova": ["overnight oats", "ovesná kaše přes noc", "zdravá snídaně"]}
 ---
 
