@@ -3,7 +3,7 @@ title: "Banánový chlebíček: recept z přezrálých banánů"
 description: "Recept na šťavnatý banánový chlebíček (banana bread) z přezrálých banánů. Hotový za hodinu, varianta s čokoládou, s ořechy i bez cukru z ovesných vloček."
 seoTitle: "Banánový chlebíček – recept z přezrálých banánů | naBrunch.cz"
 date: "2026-11-20T13:00:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/bananovy-chlebicek-recept-1.jpg"
 recept: {"nazev": "Banánový chlebíček", "porce": "1 forma 25 cm (10 plátků)", "priprava": 15, "vareni": 55, "kategorie": "Snídaně a dezerty", "suroviny": ["3 přezrálé banány (asi 300 g bez slupky)", "80 g rozpuštěného másla nebo oleje", "100 g cukru (třtinového nebo krupice)", "1 vejce", "1 lžička vanilkového extraktu", "1 lžička jedlé sody", "špetka soli", "1 lžička skořice", "200 g hladké nebo polohrubé mouky", "50 g nasekaných vlašských ořechů nebo kousků čokolády (nepovinné)"], "postup": ["Troubu předehřejte na 175 °C a formu na biskupský chlebíček (25 cm) vyložte pečicím papírem.", "Banány v míse rozmačkejte vidličkou na kaši.", "Vmíchejte rozpuštěné máslo, cukr, vejce a vanilku.", "Přidejte sodu, sůl a skořici a pak vmíchejte mouku – jen do spojení, těsto nepřemíchávejte.", "Přimíchejte ořechy nebo čokoládu, těsto nalijte do formy a navrch můžete položit podélně rozpůlený banán.", "Pečte 50–60 minut, dokud špejle zapíchnutá doprostřed nevyjde čistá. Pokud povrch tmavne moc rychle, přikryjte ho alobalem.", "Nechte 10 minut vychladnout ve formě, pak vyndejte na mřížku."], "klicova": ["banánový chlebíček", "banana bread recept", "recept z přezrálých banánů"]}
 ---
 
