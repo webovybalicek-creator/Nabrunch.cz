@@ -3,7 +3,7 @@ title: "Hummus: recept na krémový hummus z konzervy (i bez tahini)"
 description: "Recept na domácí hummus z cizrny v konzervě, krémový jako z bistra. S tahini i bez tahini, tipy na dochucení a s čím hummus podávat na snídani nebo jako pohoštění."
 seoTitle: "Hummus recept – krémový hummus z konzervy | naBrunch.cz"
 date: "2026-11-20T11:50:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/hummus-recept-1.jpg"
 recept: {"nazev": "Hummus z cizrny v konzervě", "porce": "asi 400 g (4–6 porcí)", "priprava": 10, "vareni": 0, "kategorie": "Pomazánky a dipy", "suroviny": ["1 plechovka cizrny (400 g, po scezení asi 240 g)", "2–3 lžíce tahini (sezamové pasty)", "šťáva z ½–1 citronu", "1 stroužek česneku", "½ lžičky mletého kmínu (římského)", "3 lžíce olivového oleje", "2–4 lžíce ledové vody", "sůl", "na ozdobu: olivový olej, sladká nebo uzená paprika, petrželka"], "postup": ["Cizrnu sceďte (nálev si odlijte stranou) a propláchněte.", "Do mixéru dejte tahini a citronovou šťávu a minutu mixujte, až vznikne světlý krém.", "Přidejte česnek, kmín, olivový olej a špetku soli a krátce promixujte.", "Přidejte cizrnu a mixujte 2–3 minuty. Postupně přilévejte ledovou vodu (nebo nálev z cizrny), dokud hummus není hladký a krémový.", "Ochutnejte a dosolte nebo přidejte citron.", "Hummus rozetřete do misky, lžící udělejte důlek, pokapejte olivovým olejem a posypte paprikou a petrželkou."], "klicova": ["hummus recept", "hummus z konzervy", "hummus bez tahini"]}
 ---
 
