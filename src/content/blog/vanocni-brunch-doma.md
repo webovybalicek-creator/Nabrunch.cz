@@ -3,11 +3,11 @@ title: "Vánoční brunch doma: menu, recepty a plán, jak to stihnout"
 description: "Jak připravit vánoční brunch doma? Hotové menu pro 4–6 lidí, recepty na french toast z vánočky, vejce, slaná jídla i drinky a plán, co udělat den předem."
 seoTitle: "Vánoční brunch doma: menu a recepty krok za krokem | naBrunch.cz"
 date: "2026-11-20T09:00:00"
+image: "/wp-content/uploads/2026/11/vanocni-brunch-doma-1.jpg"
 sezona:
   - od: "11-20"
     do: "12-27"
 obdobi: [zima]
-naHp: false
 ---
 
 <p>Vánoční brunch je ideální způsob, jak strávit sváteční dopoledne s rodinou nebo přáteli – bez stresu kolem velké večeře a bez toho, abyste půl dne stáli u plotny. Hodí se na <strong>Štědrý den ráno</strong>, na <strong>Boží hod</strong> i na <strong>Štěpána</strong>. Sestavili jsme pro vás hotové menu pro 4–6 lidí, recepty a plán, co si připravit den předem, aby ráno stačilo jen dopéct a prostřít.</p>
