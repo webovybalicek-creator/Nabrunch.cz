@@ -49,3 +49,5 @@ obdobi: [zima]
 <p>Další sladké tipy najdete v článku <a href="/nejoblibenejsi-brunch-jidla/">nejoblíbenější brunch jídla</a>.</p>
 
 <p>👉 Chcete si to udělat doma? <a href="/livance-recept/">Nadýchané lívance bez kynutí – recept</a>.</p>
+
+<p>👉 Recepty: <a href="/palacinky-recept/">klasické palačinky</a>, <a href="/americke-palacinky-pancakes-recept/">americké palačinky (pancakes)</a> a <a href="/livance-recept/">lívance</a>.</p>
