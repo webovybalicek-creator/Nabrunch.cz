@@ -46,6 +46,16 @@ image: "/wp-content/uploads/2025/04/brunchpraha1.png"
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
+<h3 class="wp-block-heading"><a href="/podniky/traum-concept-praha/">🖤 4. <strong>Traum Concept</strong> – berlínský brunch od kuchařů z Esky a Štanglu</a></h3>
+
+<p>Novinka v pasáži mezi Revoluční a Benediktskou. Bistro v syrovém berlínském stylu s neony a nábytkem jako od babičky, káva z berlínské pražírny 19grams a v kuchyni bývalí kuchaři z Esky a michelinského Štanglu. Rezervace neberou, v úterý je zavřeno a v pondělí jen káva a koláče.</p>
+
+<p><strong>Co si dát?</strong><br>Hashbrown s pošírovaným vejcem a lososem gravlax, turecká vejce s limetkovým labneh nebo French toast s crème brûlée.</p>
+
+<p><a href="/podniky/traum-concept-praha/">🔗 <strong>Více info o bistru a fotky najdete tady</strong></a></p>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
 <h3 class="wp-block-heading">💛 Ať už jste místní, nebo v centru jen na výletě…</h3>
 
 <p>…tyhle tři podniky vás přesvědčí, že <strong>Praha 1 má co nabídnout i brunchově</strong>. Od stylu a dezertů až po domácí atmosféru – a my už se těšíme, až si tu vyberete ten svůj.</p>

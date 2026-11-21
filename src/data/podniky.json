@@ -8087,5 +8087,56 @@
    "/wp-content/uploads/2026/11/vazkafe-brno-3.jpg",
    "/wp-content/uploads/2026/11/vazkafe-brno-4.jpg"
   ]
+ },
+ {
+  "id": 2406,
+  "slug": "traum-concept-praha",
+  "nazev": "Traum Concept",
+  "datum": "2026-11-21 21:37:01",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 1",
+   "Praha"
+  ],
+  "adresa": "Revoluční 1006/5 (vchod i z Benediktské 12), Praha 1",
+  "lat": 50.0900139,
+  "lon": 14.4277026,
+  "oteviraciDoba": [
+   "Po: 8:00 - 17:30 (jen káva a koláče)",
+   "Út: zavřeno",
+   "St - Pá: 8:00 - 17:30",
+   "So - Ne: 9:00 - 16:00"
+  ],
+  "web": "https://www.traumconcept.com/",
+  "instagram": "@traumconcept",
+  "instagramUrl": "https://www.instagram.com/traumconcept/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Traum+Concept,+Revoluční+1006/5+(vchod+i+z+Benediktské+12),+Praha+1",
+  "rezervace": "Ne, bez rezervace",
+  "platba": [],
+  "wifi": true,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si hashbrown s pošírovaným vejcem a lososem gravlax, na sladko francouzský toast s crème brûlée a pohankovým popcornem. K tomu flat white z berlínské pražírny 19grams.</p>",
+  "popis": "<p>Traum Concept (německy <em>Traum</em> = sen) je nové brunchové bistro v pasáži mezi Revoluční a Benediktskou ulicí v centru Prahy. Vysnili si ho manželé Renáta a Matěj Hniličkovi, kteří milují nenačančané berlínské podniky – a tak tu najdete industriální prvky, odhalené zdi, neony, moderní nábytek i kousky jako od babičky ze socialismu. Kávu vozí z berlínské pražírny <strong>19grams</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Kuchaři z Esky a michelinského Štanglu</h2>\n\n<p>O kuchyni se starají Diego Manuel Guilherme Fonseca, dříve v Esce a Café Savoy, a Roman Davidov z michelinského Štanglu. Na brunchovém lístku jsou <strong>vejce Benedikt</strong> na domácí briošce s holandskou omáčkou, grilovaným kadeřávkem a kimchi chipsy, <strong>turecká vejce</strong> s limetkovým labneh a chilli crunch, <strong>hashbrown s pošírovaným vejcem a lososem gravlax</strong> nebo omeleta se sýrem Gruyère. Na sladko <strong>francouzský toast s crème brûlée</strong> a pohankovým popcornem nebo čokoládový krém s olivovým olejem a solí Maldon.</p>\n\n<h2 class=\"wp-block-heading\">Kdy přijít</h2>\n\n<p>Ve středu až pátek je otevřeno od 8:00 do 17:30, o víkendu od 9:00 do 16:00, v úterý je zavřeno. <strong>V pondělí kuchyně nevaří</strong> – podává se jen káva a koláče. Rezervace nepřijímají, přijďte rovnou. K brunchi si můžete dát mimosu, naturální víno nebo signature koktejl.</p>",
+  "seoTitulek": "Traum Concept Praha – berlínský brunch v centru",
+  "seoPopis": "Traum Concept v Praze 1: nové brunchové bistro v berlínském stylu. Vejce Benedikt, turecká vejce, French toast s crème brûlée a káva 19grams.",
+  "foto": "/wp-content/uploads/2026/11/traum-concept-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/traum-concept-praha-2.jpg",
+   "/wp-content/uploads/2026/11/traum-concept-praha-3.jpg",
+   "/wp-content/uploads/2026/11/traum-concept-praha-4.jpg",
+   "/wp-content/uploads/2026/11/traum-concept-praha-5.jpg",
+   "/wp-content/uploads/2026/11/traum-concept-praha-6.jpg"
+  ]
  }
 ]
