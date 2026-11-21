@@ -3,7 +3,7 @@ title: "Brunch Liberec: kam na snídani a brunch – 5 ověřených tipů"
 description: "Kam na snídani a brunch v Liberci? DOK s pražírnou Nordbeans, Wink Café s terasou, vegetariánská Mikyna, Bistretto a Vita Café Bistro. Co si dát a kdy."
 seoTitle: "Brunch Liberec 2026: kam na snídani a brunch – 5 tipů | naBrunch.cz"
 date: "2026-11-20T08:00:00"
-image: "/wp-content/uploads/2026/11/dok-nordbeans-liberec-1.jpg"
+image: "/wp-content/uploads/2026/11/dok-nordbeans-liberec-7.jpg"
 ---
 
 <p>Liberec není jen Ještěd a zoo – v centru najdete i kavárny, kam se vyplatí vyrazit na pořádnou snídani nebo víkendový brunch. Vybrali jsme <strong>5 ověřených míst, kam na snídani a brunch v Liberci</strong>. Všechna jsou v centru nebo kousek od něj.</p>
