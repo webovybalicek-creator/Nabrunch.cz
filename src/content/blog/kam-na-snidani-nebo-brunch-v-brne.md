@@ -1,7 +1,7 @@
 ---
-title: "Brunch Brno: kam na snídani a brunch – 12 ověřených tipů"
-description: "Hledáte brunch v Brně? 12 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
-seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 12 ověřených tipů"
+title: "Brunch Brno: kam na snídani a brunch – 13 ověřených tipů"
+description: "Hledáte brunch v Brně? 13 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
+seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 13 ověřených tipů"
 date: "2025-11-15T17:45:21"
 image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 ---
@@ -58,6 +58,10 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <p>Malá kavárna s vlastní cukrárnou, kde se <strong>brunch podává celý den</strong> (kuchyně do 15:40) a otevřeno je denně od 9:00. Na slano turecká vejce, vejce Benedikt na briošce s hovězí šunkou a Comté nebo lívance s trhaným vepřovým, na sladko French toast tiramisu. A k tomu francouzské dezerty z vlastní cukrárny.</p>
 <p>🍳 <strong>Co si dát:</strong> turecká vejce a s sebou éclair.</p>
 
+<h3>👉🏼 <a href="/podniky/bistro-franz-brno/">Bistro Franz</a> – Veveří</h3>
+<p>Jedno z nejoblíbenějších brunchových míst v Brně, na Googlu s hodnocením 4,8 z více než 2 000 recenzí. Otevřeno je <strong>každý den od 8:00</strong> a o víkendu se snídaně podávají <strong>až do 15:00</strong>. Vejce Benedikt na domácím anglickém muffinu, míchaná vejce z farmy Valcha, anglická snídaně a na sladko French toast s jablky a vanilkovým krémem.</p>
+<p>🍳 <strong>Co si dát:</strong> Burrata French toast s pršutem a vlašskými ořechy.</p>
+
 <h2>Jak si vybrat</h2>
 
 <ul>
@@ -67,7 +71,7 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <li><strong>Brzy ráno nebo bez lepku?</strong> Buchta B otevírá v 6:30 a má bezlepkové i veganské varianty.</li>
 <li><strong>Venku?</strong> Maybe coffee a Café Momenta mají zahrádku.</li>
 <li><strong>S pejskem?</strong> Brunche’s Bistro, Coffee Trail, Café Momenta, Maybe coffee, Liberty Cafe a Srdečno.</li>
-<li><strong>Brunch celý den i v neděli?</strong> Liberty Cafe nebo Srdečno.</li>
+<li><strong>Brunch celý den i v neděli?</strong> Liberty Cafe nebo Srdečno, o víkendu do 15:00 i Bistro Franz.</li>
 <li><strong>Dezerty jako z Paříže?</strong> Srdečno s vlastní cukrárnou.</li>
 <li><strong>Vegan?</strong> Buchta B, SKØG, Bavard, Poppy Beans a Coffee Trail mají veganské varianty.</li>
 </ul>

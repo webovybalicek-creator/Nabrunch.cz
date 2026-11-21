@@ -7939,5 +7939,54 @@
    "/wp-content/uploads/2026/11/born-in-london-ceske-budejovice-5.jpg",
    "/wp-content/uploads/2026/11/born-in-london-ceske-budejovice-6.jpg"
   ]
+ },
+ {
+  "id": 2403,
+  "slug": "bistro-franz-brno",
+  "nazev": "Bistro Franz Brno",
+  "datum": "2026-11-21 14:47:00",
+  "doporuceny": false,
+  "lokality": [
+   "Brno"
+  ],
+  "adresa": "Veveří 461/14, Brno",
+  "lat": 49.1995378,
+  "lon": 16.6023995,
+  "oteviraciDoba": [
+   "Po - Ne: 8:00 - 15:30"
+  ],
+  "web": "https://www.bistrofranz.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420720113502",
+  "telefonText": "+420 720 113 502",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bistro+Franz+Brno,+Veveří+461/14,+Brno",
+  "rezervace": "Ano, telefonicky",
+  "platba": [
+   "Kartou",
+   "Hotově"
+  ],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte Burrata French toast s pršutem, rukolou a vlašskými ořechy – nebo vejce Benedikt s lososem. O víkendu se snídaně podávají až do 15:00.</p>",
+  "popis": "<p>Bistro Franz na Veveří patří k nejoblíbenějším brunchovým místům v Brně – na Googlu má hodnocení 4,8 z více než 2 000 recenzí. Funguje přes 12 let, od roku 2020 ho vedou kamarádky Lenka a Lucka a v kuchyni udává směr šéfkuchař Jarda Gerlich. Vaří sezonně, z čerstvých surovin od místních dodavatelů, a vlastní anglické muffiny i bagety si pečou sami.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch každý den</h2>\n\n<p>Otevřeno je <strong>každý den od 8:00</strong>. Snídaně se podávají ve všední dny do 11:00, <strong>o víkendu až do 15:00</strong>. Na lístku jsou <strong>vejce Benedikt</strong> na domácím anglickém muffinu (se slaninou, s čedarem nebo s lososem), míchaná vejce z farmy Valcha s bylinkami, čedarem nebo slaninou, <strong>anglická snídaně</strong> a na sladko <strong>Burrata French toast</strong>, French toast s jablky a vanilkovým krémem nebo Rafaelo bowl s granolou a banánem.</p>\n\n<h2 class=\"wp-block-heading\">Rezervace</h2>\n\n<p>O víkendu bývá plno, stůl si proto raději zarezervujte telefonicky na čísle bistra. Rezervaci drží 15 minut. Přes poledne vaří i obědy a k odpolední kávě domácí dezerty.</p>",
+  "seoTitulek": "Bistro Franz Brno – brunch na Veveří denně",
+  "seoPopis": "Bistro Franz na Veveří v Brně: snídaně a brunch každý den od 8:00, o víkendu až do 15:00. Vejce Benedikt, Burrata French toast, anglická snídaně.",
+  "foto": "/wp-content/uploads/2026/11/bistro-franz-brno-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/bistro-franz-brno-2.jpg",
+   "/wp-content/uploads/2026/11/bistro-franz-brno-3.jpg",
+   "/wp-content/uploads/2026/11/bistro-franz-brno-4.jpg",
+   "/wp-content/uploads/2026/11/bistro-franz-brno-5.jpg"
+  ]
  }
 ]
