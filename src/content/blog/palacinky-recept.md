@@ -3,7 +3,7 @@ title: "Palačinky: recept na tenké palačinky, které se netrhají"
 description: "Osvědčený recept na palačinky z polohrubé mouky, hrnkový recept i palačinky bez vajec. Poměr těsta, jak je smažit, aby se netrhaly, a nápady na sladké i slané plnění."
 seoTitle: "Palačinky recept – tenké, netrhají se, i hrnkový | naBrunch.cz"
 date: "2026-11-21T19:00:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/palacinky-recept-1.jpg"
 recept: {"nazev": "Klasické palačinky", "porce": "asi 12 palačinek (4 porce)", "priprava": 10, "vareni": 25, "kategorie": "Snídaně", "suroviny": ["250 g polohrubé mouky", "500 ml plnotučného mléka", "2 vejce", "1 lžíce cukru", "špetka soli", "2 lžíce rozpuštěného másla nebo oleje (do těsta)", "trochu oleje nebo másla na pánev", "na plnění: marmeláda, tvaroh, nutella, ovoce, šlehačka"], "postup": ["Do mísy dejte mouku, cukr a sůl a udělejte uprostřed důlek.", "Přilijte asi polovinu mléka, přidejte vejce a metlou vymíchejte husté hladké těsto bez hrudek.", "Postupně přilévejte zbytek mléka a nakonec vmíchejte rozpuštěné máslo. Těsto má mít konzistenci smetany ke šlehání.", "Nechte těsto aspoň 20 minut odpočinout – mouka nabobtná a palačinky se nebudou trhat.", "Pánev (ideálně palačinkovou) rozehřejte na středně vysokou teplotu a vytřete ji papírovou utěrkou namočenou v oleji.", "Nalijte naběračku těsta a krouživým pohybem ho rozlijte po celém dně pánve.", "Smažte asi 1 minutu, až se okraje začnou zvedat a spodek je zlatý, pak obraťte a dopečte 30 vteřin.", "Hotové palačinky skládejte na talíř na sebe a přikryjte je pokličkou, aby zůstaly teplé a vláčné."], "klicova": ["palačinky recept", "hrnkový recept na palačinky", "palačinky z polohrubé mouky"]}
 ---
 
