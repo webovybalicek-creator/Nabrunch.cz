@@ -8035,5 +8035,57 @@
    "/wp-content/uploads/2026/11/eggo-bistro-brno-3.jpg",
    "/wp-content/uploads/2026/11/eggo-bistro-brno-4.jpg"
   ]
+ },
+ {
+  "id": 2405,
+  "slug": "vazkafe-brno",
+  "nazev": "Vážkafé Brno",
+  "datum": "2026-11-21 15:01:34",
+  "doporuceny": false,
+  "lokality": [
+   "Brno"
+  ],
+  "adresa": "Běhounská 677/15, Brno",
+  "lat": 49.197184,
+  "lon": 16.6087823,
+  "oteviraciDoba": [
+   "Po - Pá: 8:30 - 19:15",
+   "So: 10:00 - 19:15",
+   "Ne: 10:00 - 18:00"
+  ],
+  "web": "https://vazkafe.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420704229994",
+  "telefonText": "+420 704 229 994",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Vážkafé+Brno,+Běhounská+677/15,+Brno",
+  "rezervace": "Ano, online",
+  "platba": [
+   "Kartou",
+   "Hotově"
+  ],
+  "wifi": true,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si chléb s vajíčkovou pomazánkou, ředkvičkami a polníčkem a k tomu cappuccino. Na sladko nevynechejte Lotus cheesecake nebo domácí gelato.</p>",
+  "popis": "<p>Vážkafé je elegantní a útulná kavárna na Běhounské ulici v samém centru Brna, pár kroků od náměstí Svobody. Barevný interiér s velkými okny láká na pomalé ráno i odpolední kávu a na Firmy.cz má kavárna hodnocení 4,9.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch v centru</h2>\n\n<p>Ve všední dny otevírá <strong>v 8:30</strong>, o víkendu v 10:00. Na snídani si dáte třeba <strong>kváskový chléb s vajíčkovou pomazánkou</strong>, ředkvičkami a polníčkem, k tomu výběrovou kávu. Brunch podávají i o víkendu.</p>\n\n<h2 class=\"wp-block-heading\">Dezerty a italské gelato</h2>\n\n<p>Ve vitríně čekají domácí dezerty – <strong>Lotus cheesecake</strong>, malinové dortíky s čokoládou nebo kokosové kuličky – a v létě <strong>italské gelato</strong>. Posedět se dá i venku, pejsci jsou vítáni a stůl si můžete zarezervovat online.</p>",
+  "seoTitulek": "Vážkafé Brno – snídaně, dezerty a gelato v centru",
+  "seoPopis": "Vážkafé na Běhounské v centru Brna: snídaně od 8:30, brunch, výběrová káva, domácí dezerty jako Lotus cheesecake a italské gelato. Pejsci vítáni.",
+  "foto": "/wp-content/uploads/2026/11/vazkafe-brno-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/vazkafe-brno-2.jpg",
+   "/wp-content/uploads/2026/11/vazkafe-brno-3.jpg",
+   "/wp-content/uploads/2026/11/vazkafe-brno-4.jpg"
+  ]
  }
 ]

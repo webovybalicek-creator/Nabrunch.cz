@@ -1,7 +1,7 @@
 ---
-title: "Brunch Brno: kam na snídani a brunch – 14 ověřených tipů"
-description: "Hledáte brunch v Brně? 14 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
-seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 14 ověřených tipů"
+title: "Brunch Brno: kam na snídani a brunch – 15 ověřených tipů"
+description: "Hledáte brunch v Brně? 15 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
+seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 15 ověřených tipů"
 date: "2025-11-15T17:45:21"
 image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 ---
@@ -37,6 +37,10 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <h3>👉🏼 <a href="/podniky/eggo-bistro-brno/">EGGO Bistro</a> – Dvořákova</h3>
 <p>Brněnská snídaňová legenda, která začínala jako food truck na Zelném trhu. Dnes má bistro v Dvořákově ulici a snídaně a brunch podává <strong>každý den od 9:00</strong>. Vejce Benedikt s holandskou omáčkou, poctivé omelety a míchaná vajíčka. Rezervace neberou, takže o víkendu přijďte hned po otevření.</p>
 <p>🍳 <strong>Co si dát:</strong> vejce Benedikt s trhaným masem.</p>
+
+<h3>👉🏼 <a href="/podniky/vazkafe-brno/">Vážkafé</a> – Běhounská</h3>
+<p>Elegantní a barevná kavárna pár kroků od náměstí Svobody. Ve všední dny otevírá v 8:30, o víkendu v 10:00. Na snídani kváskový chléb s vajíčkovou pomazánkou a ředkvičkami, k tomu výběrová káva, domácí dezerty a v létě italské gelato.</p>
+<p>🍳 <strong>Co si dát:</strong> chléb s vajíčkovou pomazánkou a na sladko Lotus cheesecake.</p>
 
 <h2>Brunch v Králově Poli a okolí Lužánek</h2>
 
@@ -76,7 +80,7 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <li><strong>Venku?</strong> Maybe coffee a Café Momenta mají zahrádku.</li>
 <li><strong>S pejskem?</strong> Brunche’s Bistro, Coffee Trail, Café Momenta, Maybe coffee, Liberty Cafe a Srdečno.</li>
 <li><strong>Brunch celý den i v neděli?</strong> Liberty Cafe nebo Srdečno, o víkendu do 15:00 i Bistro Franz.</li>
-<li><strong>Dezerty jako z Paříže?</strong> Srdečno s vlastní cukrárnou.</li>
+<li><strong>Dezerty jako z Paříže?</strong> Srdečno s vlastní cukrárnou, gelato a dortíky má Vážkafé.</li>
 <li><strong>Vegan?</strong> Buchta B, SKØG, Bavard, Poppy Beans a Coffee Trail mají veganské varianty.</li>
 </ul>
 
