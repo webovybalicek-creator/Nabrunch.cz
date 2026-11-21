@@ -1,7 +1,7 @@
 ---
-title: "Brunch Brno: kam na snídani a brunch – 13 ověřených tipů"
-description: "Hledáte brunch v Brně? 13 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
-seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 13 ověřených tipů"
+title: "Brunch Brno: kam na snídani a brunch – 14 ověřených tipů"
+description: "Hledáte brunch v Brně? 14 ověřených podniků na snídani a brunch v centru i Králově Poli – co si v nich dát, kde mají zahrádku a kam vzít pejska."
+seoTitle: "Brunch Brno 2026: kam na snídani a brunch – 14 ověřených tipů"
 date: "2025-11-15T17:45:21"
 image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 ---
@@ -33,6 +33,10 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 <h3>👉🏼 <a href="/podniky/liberty-cafe-brno/">Liberty Cafe</a> – Radnická</h3>
 <p>Rodinná kavárna přímo naproti Staré radnici, kousek od Zelného trhu. Snídaně podává <strong>celý den a každý den</strong>: avokádové toasty s vejcem nebo uzeným lososem, Full English Breakfast a nadýchané lívance – s mangem, s nutellou nebo dubajské s pistáciemi a kadayifem. Psi i děti jsou vítáni.</p>
 <p>🍳 <strong>Co si dát:</strong> dubajské lívance.</p>
+
+<h3>👉🏼 <a href="/podniky/eggo-bistro-brno/">EGGO Bistro</a> – Dvořákova</h3>
+<p>Brněnská snídaňová legenda, která začínala jako food truck na Zelném trhu. Dnes má bistro v Dvořákově ulici a snídaně a brunch podává <strong>každý den od 9:00</strong>. Vejce Benedikt s holandskou omáčkou, poctivé omelety a míchaná vajíčka. Rezervace neberou, takže o víkendu přijďte hned po otevření.</p>
+<p>🍳 <strong>Co si dát:</strong> vejce Benedikt s trhaným masem.</p>
 
 <h2>Brunch v Králově Poli a okolí Lužánek</h2>
 
@@ -66,7 +70,7 @@ image: "/wp-content/uploads/2025/11/Navrh-bez-nazvu-2025-11-15T173509.883.jpg"
 
 <ul>
 <li><strong>Chcete sladký brunch?</strong> Brunche’s Bistro (lívance) nebo Café Placzek.</li>
-<li><strong>Slaný a výrazný?</strong> Bavard (turecká vejce) nebo SKØG.</li>
+<li><strong>Slaný a výrazný?</strong> Bavard (turecká vejce), SKØG nebo EGGO (vejce Benedikt).</li>
 <li><strong>Na kávu jako zážitek?</strong> Poppy Beans nebo Maybe coffee.</li>
 <li><strong>Brzy ráno nebo bez lepku?</strong> Buchta B otevírá v 6:30 a má bezlepkové i veganské varianty.</li>
 <li><strong>Venku?</strong> Maybe coffee a Café Momenta mají zahrádku.</li>

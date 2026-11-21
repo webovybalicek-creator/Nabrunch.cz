@@ -7988,5 +7988,52 @@
    "/wp-content/uploads/2026/11/bistro-franz-brno-4.jpg",
    "/wp-content/uploads/2026/11/bistro-franz-brno-5.jpg"
   ]
+ },
+ {
+  "id": 2404,
+  "slug": "eggo-bistro-brno",
+  "nazev": "EGGO Bistro Brno",
+  "datum": "2026-11-21 14:51:36",
+  "doporuceny": false,
+  "lokality": [
+   "Brno"
+  ],
+  "adresa": "Dvořákova 43/12, Brno",
+  "lat": 49.1959319,
+  "lon": 16.6113107,
+  "oteviraciDoba": [
+   "Po - Pá: 9:00 - 14:00",
+   "So: 9:00 - 15:00",
+   "Ne: 9:00 - 14:00"
+  ],
+  "web": "https://www.eggofoodtruck.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420774737809",
+  "telefonText": "+420 774 737 809",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=EGGO+Bistro+Brno,+Dvořákova+43/12,+Brno",
+  "rezervace": "Ne, bez rezervace",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si vejce Benedikt s trhaným masem a holandskou omáčkou, nebo omeletu s rajčaty a parmazánem. Rezervace neberou – přijďte hned po deváté.</p>",
+  "popis": "<p>EGGO je brněnská snídaňová legenda. Začínalo jako food truck na Moravském náměstí a na Zelném trhu, kde lidi učilo, že vajíčka můžou být víc než jen vajíčka – s holandskou omáčkou, lanýži nebo kaviárem. Dnes má stálé bistro v Dvořákově ulici kousek od centra a průvodce Gault&amp;Millau ho uvedl mezi nejzajímavějšími nehodnocenými podniky.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch každý den od 9:00</h2>\n\n<p>Otevřeno je <strong>každý den od 9:00</strong>, v sobotu do 15:00, ostatní dny do 14:00. Základem jsou vejce, čerstvé pečivo a slanina: <strong>vejce Benedikt</strong> (třeba s trhaným masem), <strong>omelety</strong> udělané pořádně, nebo vůbec, míchaná vajíčka bez kompromisů a jídla s jogurtem a čerstvými bylinkami. Na sladko dezerty jako jahody se šlehaným krémem nebo buchta. O víkendu mají vlastní víkendovou nabídku.</p>\n\n<h2 class=\"wp-block-heading\">Bez rezervací</h2>\n\n<p>Rezervace v Eggu nepřijímají – jak sami píšou, „berem hladové lidi“. O víkendu se vyplatí přijít hned po otevření. Zeptat se můžete i na „podpultovku“ mimo menu. Když nemáte čas zajít, jídlo rozváží Wolt.</p>",
+  "seoTitulek": "EGGO Bistro Brno – snídaně a brunch denně od 9:00",
+  "seoPopis": "EGGO Bistro v Dvořákově ulici v Brně: snídaňová legenda z food trucku. Vejce Benedikt, omelety a brunch každý den od 9:00, bez rezervace.",
+  "foto": "/wp-content/uploads/2026/11/eggo-bistro-brno-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/eggo-bistro-brno-2.jpg",
+   "/wp-content/uploads/2026/11/eggo-bistro-brno-3.jpg",
+   "/wp-content/uploads/2026/11/eggo-bistro-brno-4.jpg"
+  ]
  }
 ]
