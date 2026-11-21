@@ -3,7 +3,7 @@ title: "Americké palačinky (pancakes): recept na nadýchanou věž"
 description: "Recept na nadýchané americké palačinky – pancakes s podmáslím i s mlékem. Jak je udělat vysoké, na čem je smažit a s čím podávat: javorový sirup, ovoce, slanina."
 seoTitle: "Americké palačinky recept – nadýchané pancakes | naBrunch.cz"
 date: "2026-11-21T19:10:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/americke-palacinky-pancakes-recept-1.jpg"
 recept: {"nazev": "Americké palačinky (pancakes)", "porce": "asi 10 pancakes (3 porce)", "priprava": 10, "vareni": 20, "kategorie": "Snídaně", "suroviny": ["200 g hladké mouky", "2 lžičky prášku do pečiva", "½ lžičky jedlé sody", "2 lžíce cukru", "špetka soli", "250 ml podmáslí (nebo 230 ml mléka + 1 lžíce citronové šťávy)", "1 vejce", "30 g rozpuštěného másla", "máslo na smažení", "na servírování: javorový sirup, máslo, borůvky, banán, slanina"], "postup": ["V míse smíchejte mouku, prášek do pečiva, sodu, cukr a sůl.", "V druhé nádobě rozšlehejte podmáslí s vejcem a rozpuštěným máslem.", "Tekutou směs nalijte do mouky a krátce promíchejte vařečkou jen do spojení. Hrudky v těstě nechte – díky nim budou pancakes nadýchané.", "Těsto nechte 5–10 minut odpočinout, mezitím se začne kypřit.", "Pánev rozehřejte na střední teplotu a lehce ji vytřete máslem.", "Na pánev dávejte asi 3 lžíce těsta (naběračku na jeden pancake) a nerozlévejte ho.", "Když se na povrchu objeví bublinky a okraje zmatní (asi po 2 minutách), obraťte a dopečte 1 minutu.", "Pancakes skládejte na sebe do věže a podávejte s máslem, javorovým sirupem a ovocem."], "klicova": ["americké palačinky recept", "pancakes recept", "nadýchané americké palačinky"]}
 ---
 
