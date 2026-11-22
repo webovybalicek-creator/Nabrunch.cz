@@ -8475,5 +8475,54 @@
    "/wp-content/uploads/2026/11/vnitroblock-praha-4.jpg",
    "/wp-content/uploads/2026/11/vnitroblock-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2414,
+  "slug": "phills-corner-praha",
+  "nazev": "Phill's Corner",
+  "datum": "2026-11-22 10:01:37",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 7",
+   "Praha"
+  ],
+  "adresa": "Komunardů 886/26, Praha 7 – Holešovice",
+  "lat": 50.1034852,
+  "lon": 14.4501605,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 22:00",
+   "So - Ne: 9:00 - 22:00"
+  ],
+  "web": "https://www.phillscorner.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Phill's+Corner,+Komunardů+886/26,+Praha+7+–+Holešovice",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte Super lívanec s uzeným lososem, avokádem a sázeným vejcem, nebo kaši s pečenými broskvemi a pekany. K tomu ledovou jahodovou matchu.</p>",
+  "popis": "<p>Phill's Corner je bistro a kavárna na rohu ulic Komunardů a Dělnická, na jedné z nejrušnějších křižovatek v Holešovicích, pár kroků od tramvaje i Pražské tržnice. Za podnikem stojí tým nedalekého bistra Twenty7 a heslo je jasné: ráno to musí být snídaně.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně od 7:30, o víkendu brunch</h2>\n\n<p>Ve všední dny otevírá <strong>už v 7:30</strong>, o víkendu v 9:00 a o víkendu přidává i brunchové speciály. Na snídaňovém lístku je <strong>Super lívanec</strong> s bylinkovým crème fraîche, uzeným lososem, avokádem a sázeným vejcem, <strong>tři vejce do skla s holandskou omáčkou</strong>, míchaná vejce se sýrovým toastem a portobello nebo párky od Našeho masa s kváskovým chlebem. Na sladko <strong>ovesné kaše</strong> (třeba s pečenými broskvemi, pekany a ricottou), domácí granola s pečeným jablkem a slaným karamelem a <strong>wafle</strong> se slaninou a javorovým sirupem.</p>\n\n<h2 class=\"wp-block-heading\">Od rána do večera</h2>\n\n<p>Přes poledne vaří denní menu, odpoledne kávu a zákusky a večer je otevřeno až do 22:00. Posedět se dá i venku na zahrádce.</p>",
+  "seoTitulek": "Phill's Corner Holešovice – snídaně od 7:30 a brunch",
+  "seoPopis": "Phill's Corner v Holešovicích: snídaně od 7:30, Super lívanec s lososem, vejce do skla, ovesné kaše, wafle a víkendový brunch. Otevřeno denně.",
+  "foto": "/wp-content/uploads/2026/11/phills-corner-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/phills-corner-praha-2.jpg",
+   "/wp-content/uploads/2026/11/phills-corner-praha-3.jpg",
+   "/wp-content/uploads/2026/11/phills-corner-praha-4.jpg",
+   "/wp-content/uploads/2026/11/phills-corner-praha-5.jpg"
+  ]
  }
 ]
