@@ -1,6 +1,6 @@
 ---
-title: "Snídaně a brunch v Karlíně: 9 míst, kam zajít"
-description: "Kam na snídani nebo brunch v Karlíně? 9 ověřených podniků – Spojka, Eska, Dvorek, Proti Proudu, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
+title: "Snídaně a brunch v Karlíně: 10 míst, kam zajít"
+description: "Kam na snídani nebo brunch v Karlíně? 10 ověřených podniků – Spojka, Eska, Dvorek, Proti Proudu, Supernova, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
 date: "2026-06-01T16:17:08"
 image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-foto-1.png"
 ---
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-fo
 <p>Najdete tu ikonické pekárny, moderní bistra i podniky, kam se chodí na pomalé víkendové brunche s přáteli.</p>
 
 
-<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme devět podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
+<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme deset podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/"></a> 👉🏼 <a href="/podniky/eska-karlin/">1. Eska Karlín Praha</a></h2>
 
@@ -73,6 +73,10 @@ image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-fo
 <h2 class="wp-block-heading">👉🏼 <a href="/podniky/dvorek-karlin-praha/">9. Dvorek Karlín</a></h2>
 <p>Uvolněné bistro v Křižíkově ulici, které se o víkendu mění v jedno z nejhezčích brunchových míst v Karlíně. <strong>V sobotu a v neděli od 9:00 do 14:00</strong> servírují velké brunchové talíře s vejci a lososem, zastřená vejce na kváskovém toastu i sladké dobroty. Ve všední dny snídaně a denní menu od 8:00.</p>
 <p>🍳 <strong>Co si dát:</strong> růžovou wafli s jahodami a pistáciovým krémem a k ní matcha drink.</p>
+
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/supernova-bakehouse-karlin-praha/">10. Supernova Bakehouse</a></h2>
+<p>Moderní pekárna v Thámově ulici, kam se chodí na <strong>nejhezčí croissanty v Karlíně</strong> – dvoubarevné pistáciové, se slaným karamelem nebo cinnamon buny s pistáciovým krémem. Otevřeno je každý den, ve všední dny od 8:00, o víkendu od 9:00.</p>
+<p>🍳 <strong>Co si dát:</strong> pistáciový croissant a Competition flat white, který mají jen v Karlíně.</p>
 
 <h2 class="wp-block-heading">Kde si dáte brunch v Karlíně vy?</h2>
 

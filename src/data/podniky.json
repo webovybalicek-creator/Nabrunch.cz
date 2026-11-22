@@ -8234,5 +8234,53 @@
    "/wp-content/uploads/2026/11/dvorek-karlin-praha-4.jpg",
    "/wp-content/uploads/2026/11/dvorek-karlin-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2409,
+  "slug": "supernova-bakehouse-karlin-praha",
+  "nazev": "Supernova Bakehouse Karlín",
+  "datum": "2026-11-22 09:23:27",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 8",
+   "Praha"
+  ],
+  "adresa": "Thámova 137/16, Praha 8 – Karlín",
+  "lat": 50.091971,
+  "lon": 14.452741,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: 9:00 - 18:00"
+  ],
+  "web": "https://supernovabakehouse.cz/",
+  "instagram": "@supernova_bakehouse",
+  "instagramUrl": "https://www.instagram.com/supernova_bakehouse/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Supernova+Bakehouse+Karlín,+Thámova+137/16,+Praha+8+–+Karlín",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si pistáciový croissant nebo cinnamon bun s pistáciovým krémem a k tomu jahodovou ledovou matchu. Kávaři by neměli vynechat Competition flat white – mají ho jen v Karlíně.</p>",
+  "popis": "<p>Supernova Bakehouse je moderní pekárna a kavárna v Thámově ulici v Karlíně. Je známá <strong>croissanty a moderním sladkým pečivem</strong>, které se každý den peče čerstvé – třeba dvoubarevné pistáciové croissanty, croissanty se slaným karamelem a pusinkou nebo <strong>cinnamon buny s pistáciovým krémem</strong>. Aktuální várky ukazuje na Instagramu. Interiér s terazzo pultem a stěnou plnou barevných krabic je jak stvořený na fotky. Otevřeno je <strong>každý den</strong>, ve všední dny od 8:00, o víkendu od 9:00.</p>\n\n<h2 class=\"wp-block-heading\">Pečivo a výběrová káva</h2>\n\n<p>Ke croissantům a cinnamon bunům si můžete vybrat espresso, flat white, batch brew, matcha latte nebo chai. Karlínská pobočka nabízí jako jediná <strong>Competition flat white</strong> a <strong>ručně překapávanou kávu</strong>. Na sklenku je tu mimosa, prosecco nebo domácí limonáda.</p>\n\n<h2 class=\"wp-block-heading\">Snídaňové menu v Holešovicích</h2>\n\n<p>Teplé snídaně – Supernova breakfast s míchanými vejci z farmy Valcha a párky z Amasa, granolu s řeckým jogurtem nebo mléčnou rýži s cinnamon bun crumble – podává sesterská pobočka v Holešovicích (Na Zátorách 3).</p>",
+  "seoTitulek": "Supernova Bakehouse Karlín – croissanty a káva",
+  "seoPopis": "Supernova Bakehouse v Karlíně: čerstvé croissanty, cinnamon buny a moderní pečivo, výběrová káva i Competition flat white. Otevřeno denně.",
+  "foto": "/wp-content/uploads/2026/11/supernova-bakehouse-karlin-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/supernova-bakehouse-karlin-praha-2.jpg",
+   "/wp-content/uploads/2026/11/supernova-bakehouse-karlin-praha-3.jpg",
+   "/wp-content/uploads/2026/11/supernova-bakehouse-karlin-praha-4.jpg",
+   "/wp-content/uploads/2026/11/supernova-bakehouse-karlin-praha-5.jpg"
+  ]
  }
 ]
