@@ -3,7 +3,7 @@ title: "Míchaná vajíčka: recept na krémová vajíčka jako z bistra"
 description: "Recept na krémová míchaná vajíčka krok za krokem. Jak je udělat, aby nebyla suchá, se smetanou nebo cottage, a varianty na cibulce i se slaninou."
 seoTitle: "Míchaná vajíčka recept – krémová, jako z bistra | naBrunch.cz"
 date: "2026-11-22T09:10:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/michana-vajicka-recept-1.jpg"
 recept: {"nazev": "Krémová míchaná vajíčka", "porce": "1–2 porce", "priprava": 3, "vareni": 5, "kategorie": "Snídaně", "suroviny": ["3 vejce", "1 lžíce másla", "1 lžíce smetany ke šlehání nebo crème fraîche (nepovinné)", "sůl, čerstvě mletý pepř", "pažitka", "opečený kváskový chléb"], "postup": ["Vejce rozklepněte do misky, osolte a vidličkou je prošlehejte jen do spojení žloutků a bílků.", "Na pánvi na mírném až středním plameni rozpusťte máslo – nesmí zhnědnout.", "Vlijte vejce a nechte je asi 10 vteřin v klidu.", "Silikonovou stěrkou pomalu stahujte vejce od okrajů ke středu tak, aby vznikaly velké měkké hrudky.", "Když je asi 70 % vajec sražených a zbytek ještě tekutý, stáhněte pánev z plotny – vejce se dopečou zbytkovým teplem.", "Vmíchejte lžíci smetany nebo crème fraîche, opepřete a posypte nasekanou pažitkou.", "Podávejte hned na opečeném kváskovém chlebu."], "klicova": ["míchaná vajíčka recept", "krémová míchaná vajíčka", "míchaná vajíčka se slaninou"]}
 ---
 
