@@ -29,3 +29,5 @@ recept: {"nazev": "Shakshuka", "porce": "2–3 porce", "priprava": 10, "vareni":
 <p>S chlebem, pita chlebem nebo bagetou na vytírání omáčky, s jogurtem, fetou a avokádem.</p>
 
 <p>Odkud shakshuka pochází a kde si ji dát v kavárně, se dočtete v článku <a href="/co-je-shakshuka/">Co je shakshuka</a>. Podobné jídlo jsou <a href="/co-jsou-turecka-vejce/">turecká vejce</a>. Shakshuka je skvělá i jako <a href="/novorocni-snidane/">novoroční snídaně</a>.</p>
+
+<p>👉 Recepty: <a href="/omeleta-recept/">omeleta</a> a <a href="/michana-vajicka-recept/">krémová míchaná vajíčka</a>.</p>
