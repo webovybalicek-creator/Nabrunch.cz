@@ -8427,5 +8427,53 @@
    "/wp-content/uploads/2026/11/cafe-v-raji-praha-4.jpg",
    "/wp-content/uploads/2026/11/cafe-v-raji-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2413,
+  "slug": "vnitroblock-praha",
+  "nazev": "Vnitroblock",
+  "datum": "2026-11-22 09:59:41",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 7",
+   "Praha"
+  ],
+  "adresa": "Tusarova 791/31, Praha 7 – Holešovice",
+  "lat": 50.101951,
+  "lon": 14.449331,
+  "oteviraciDoba": [
+   "Po - Ne: 9:00 - 22:00"
+  ],
+  "web": "https://vnitroblock.cz/",
+  "instagram": "@vnitroblock",
+  "instagramUrl": "https://www.instagram.com/vnitroblock/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Vnitroblock,+Tusarova+791/31,+Praha+7+–+Holešovice",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": true,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si míchaná vejce z farmy s čerstvým černým lanýžem a chlebem z jejich pekárny Skýva. O víkendu přijďte na brunch a v létě si sedněte na zahradu.</p>",
+  "popis": "<p>Vnitroblock je multifunkční prostor v bývalé továrně mezi ulicemi Tusarova a Dělnická v Holešovicích – industriální hala s cihlovými zdmi, ochozem plným rostlin a pohodlnými křesly a gauči. Je tu kavárna, restaurace, vlastní pražírna kávy <strong>Not Another Boring Roastery</strong> a pekárna <strong>Skýva</strong>. V létě se dá sedět na zahradě pod světýlky.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a víkendový brunch</h2>\n\n<p>Snídaně podávají <strong>ve všední dny od 9:00 do 11:00</strong>, o víkendu <strong>od 9:00 do 15:00</strong>. Na lístku jsou <strong>farmářská míchaná vejce s černým lanýžem</strong> a šlehaným hnědým máslem, <strong>turecká vejce</strong> s řeckým jogurtem, omeleta s lučinou a medvědím česnekem, pea-camole chléb s vejcem 63° nebo toustový chléb ve vajíčku se šunkou od kosti. Na sladko <strong>borůvkové lívance</strong> s vanilkovou šlehačkou, French toast s ovocem nebo kávová granola s kešu jogurtem. Na požádání mají i bezlepkové pečivo.</p>\n\n<h2 class=\"wp-block-heading\">Od kávy po večeři</h2>\n\n<p>Ve všední dny se vaří obědy, každý večer od 16:00 večeře pod vedením Dominika Dorňáka. Mezi tím je to klidné místo na kávu, práci s notebookem nebo schůzku.</p>",
+  "seoTitulek": "Vnitroblock Holešovice – brunch, pražírna a pekárna",
+  "seoPopis": "Vnitroblock v Holešovicích: industriální kavárna s vlastní pražírnou a pekárnou Skýva. Víkendový brunch 9–15, míchaná vejce s lanýžem a lívance.",
+  "foto": "/wp-content/uploads/2026/11/vnitroblock-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/vnitroblock-praha-2.jpg",
+   "/wp-content/uploads/2026/11/vnitroblock-praha-3.jpg",
+   "/wp-content/uploads/2026/11/vnitroblock-praha-4.jpg",
+   "/wp-content/uploads/2026/11/vnitroblock-praha-5.jpg"
+  ]
  }
 ]
