@@ -8331,5 +8331,51 @@
    "/wp-content/uploads/2026/11/nostress-bakery-karlin-praha-4.jpg",
    "/wp-content/uploads/2026/11/nostress-bakery-karlin-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2411,
+  "slug": "the-oat-bar-praha",
+  "nazev": "The Oat Bar",
+  "datum": "2026-11-22 09:32:14",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 8",
+   "Praha"
+  ],
+  "adresa": "Křižíkova 289/38, Praha 8 – Karlín",
+  "lat": 50.0925023,
+  "lon": 14.4516457,
+  "oteviraciDoba": [
+   "Po - Ne: 7:00 - 18:45"
+  ],
+  "web": null,
+  "instagram": "@theoatbar",
+  "instagramUrl": "https://www.instagram.com/theoatbar/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=The+Oat+Bar,+Křižíkova+289/38,+Praha+8+–+Karlín",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Zdravá/fitness"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ochutnejte ovesnou kaši s arašídovým máslem, banánem a čokoládou, nebo „PB&amp;J“ s jahodovým džemem. Kdo má rád slané, zkusí kaši s kozím sýrem, řepou a pistáciemi.</p>",
+  "popis": "<p>The Oat Bar je malé bistro v Křižíkově ulici kousek od metra Křižíkova, které se celé točí kolem <strong>ovesných kaší</strong>. Založila ho Maďarka Anita, která chtěla oprášit nudné kaše z dětství a připravit jídlo, které je zdravé a zároveň chutná. Používá bio suroviny a celozrnné ovesné kroupy.</p>\n\n<h2 class=\"wp-block-heading\">Sladké i slané ovesné kaše</h2>\n\n<p>Otevírá <strong>každý den už v 7:00</strong>. Sladké kaše jsou třeba s <strong>arašídovým máslem, banánem a čokoládovými kapkami</strong>, s jahodovým džemem a praženými arašídy nebo klasicky s máslem, třtinovým cukrem a rozinkami. Slané varianty překvapí – kaše s kozím sýrem, červenou řepou a pistáciemi nebo Tex-Mex se slaninou, čedarem a guacamole. Nabídku doplňují <strong>skyr bowls</strong> s islandským skyrem a ovesné tyčinky.</p>\n\n<h2 class=\"wp-block-heading\">Rychlá snídaně s sebou</h2>\n\n<p>Místa k sezení je jen pár, většina hostů si kaši bere s sebou do kanceláře. Když nechcete chodit, The Oat Bar rozváží Wolt.</p>",
+  "seoTitulek": "The Oat Bar Karlín – ovesné kaše a skyr bowls",
+  "seoPopis": "The Oat Bar v Karlíně: sladké i slané ovesné kaše z bio surovin, skyr bowls a snídaně s sebou. Otevřeno každý den od 7:00 u metra Křižíkova.",
+  "foto": "/wp-content/uploads/2026/11/the-oat-bar-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/the-oat-bar-praha-2.jpg",
+   "/wp-content/uploads/2026/11/the-oat-bar-praha-3.jpg",
+   "/wp-content/uploads/2026/11/the-oat-bar-praha-4.jpg"
+  ]
  }
 ]

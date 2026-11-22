@@ -1,6 +1,6 @@
 ---
-title: "Snídaně a brunch v Karlíně: 11 míst, kam zajít"
-description: "Kam na snídani nebo brunch v Karlíně? 11 ověřených podniků – Spojka, Eska, Dvorek, Proti Proudu, Supernova, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
+title: "Snídaně a brunch v Karlíně: 12 míst, kam zajít"
+description: "Kam na snídani nebo brunch v Karlíně? 12 ověřených podniků – Spojka, Eska, Dvorek, Proti Proudu, Supernova, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
 date: "2026-06-01T16:17:08"
 image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-foto-1.png"
 ---
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-fo
 <p>Najdete tu ikonické pekárny, moderní bistra i podniky, kam se chodí na pomalé víkendové brunche s přáteli.</p>
 
 
-<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme jedenáct podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
+<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme dvanáct podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/"></a> 👉🏼 <a href="/podniky/eska-karlin/">1. Eska Karlín Praha</a></h2>
 
@@ -81,6 +81,10 @@ image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-fo
 <h2 class="wp-block-heading">👉🏼 <a href="/podniky/nostress-bakery-karlin-praha/">11. Nostress Bakery</a></h2>
 <p>Francouzská pekárna a kavárna přímo na Karlínském náměstí. Na snídani tu dostanete míchaná vejce, tartine s avokádem nebo uzeným lososem, quiche a košík croissantů, ve vitríně pak tartaletky s ovocem, makronky a dorty. Otevřeno je každý den.</p>
 <p>🍳 <strong>Co si dát:</strong> tartine s avokádem a k tomu pistáciový croissant.</p>
+
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/the-oat-bar-praha/">12. The Oat Bar</a></h2>
+<p>Malé bistro u metra Křižíkova, kde se všechno točí kolem <strong>ovesných kaší</strong> – sladkých i slaných, z bio surovin. Otevírá každý den v 7:00, takže je ideální na rychlou zdravou snídani cestou do práce. K tomu skyr bowls s islandským skyrem.</p>
+<p>🍳 <strong>Co si dát:</strong> kaši s arašídovým máslem, banánem a čokoládou.</p>
 
 <h2 class="wp-block-heading">Kde si dáte brunch v Karlíně vy?</h2>
 
