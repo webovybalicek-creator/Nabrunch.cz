@@ -8377,5 +8377,55 @@
    "/wp-content/uploads/2026/11/the-oat-bar-praha-3.jpg",
    "/wp-content/uploads/2026/11/the-oat-bar-praha-4.jpg"
   ]
+ },
+ {
+  "id": 2412,
+  "slug": "cafe-v-raji-praha",
+  "nazev": "Café V Ráji",
+  "datum": "2026-11-22 09:35:19",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 8",
+   "Praha"
+  ],
+  "adresa": "Karlínské náměstí 170/3, Praha 8 – Karlín",
+  "lat": 50.0927541,
+  "lon": 14.4484321,
+  "oteviraciDoba": [
+   "Po - St: 7:45 - 19:00",
+   "Čt - Pá: 7:45 - 20:00",
+   "So - Ne: 10:00 - 17:00"
+  ],
+  "web": "https://www.cafevraji.cz/",
+  "instagram": "@cafevraji",
+  "instagramUrl": "https://www.instagram.com/cafevraji/",
+  "telefon": "+420724357399",
+  "telefonText": "+420 724 357 399",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Café+V+Ráji,+Karlínské+náměstí+170/3,+Praha+8+–+Karlín",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si kváskový toast s uzeným lososem, koprovým krémem a zastřeným vejcem a k tomu matcha latte. V pátek večer zůstaňte na jazz.</p>",
+  "popis": "<p>Café V Ráji je rodinná kavárna v secesním stylu přímo na Karlínském náměstí. Přes den je to klidné místo na snídani, práci nebo schůzku, večer se mění v živou „setkávárnu“ s koncerty u pianina – ve středu klasika, v pátek jazz.</p>\n\n<h2 class=\"wp-block-heading\">Brunch každý den</h2>\n\n<p><strong>Brunch menu</strong> podávají ve všední dny <strong>od 8:00 do 13:00</strong>, o víkendu od 10:00 do 14:00. Na talíři najdete třeba <strong>kváskový toast s uzeným lososem</strong>, koprovým krémem, nakládanou cibulí a zastřeným vejcem, <strong>marinovaná vejce</strong> v bylinkovém jogurtu s chilli olejem nebo pomazánku s ořechy a domácím chlebem. Ve všední dny otevírá už v 7:45.</p>\n\n<h2 class=\"wp-block-heading\">Výběrová káva a matcha</h2>\n\n<p>Kromě výběrové kávy tu připravují <strong>matcha latte</strong> v několika variantách a k tomu domácí dezerty. Večer si můžete dát sklenku vína, čepované prosecco nebo míchaný drink. Na Vánoce pečou vánočky a dělají domácí vaječný likér.</p>",
+  "seoTitulek": "Café V Ráji Karlín – brunch a káva na Karlínském náměstí",
+  "seoPopis": "Café V Ráji na Karlínském náměstí: rodinná secesní kavárna, brunch denně od 8:00, toast s lososem, marinovaná vejce, matcha a jazz v pátek večer.",
+  "foto": "/wp-content/uploads/2026/11/cafe-v-raji-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/cafe-v-raji-praha-2.jpg",
+   "/wp-content/uploads/2026/11/cafe-v-raji-praha-3.jpg",
+   "/wp-content/uploads/2026/11/cafe-v-raji-praha-4.jpg",
+   "/wp-content/uploads/2026/11/cafe-v-raji-praha-5.jpg"
+  ]
  }
 ]
