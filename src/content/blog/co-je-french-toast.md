@@ -32,6 +32,9 @@ obdobi: [podzim, zima]
 <li><a href="/podniky/cafe-letka-praha/"><strong>Café Letka</strong></a> (Letná) – náš tip: French toast s jablečným pyré, pošírovanou hruškou, crème fraîche, drobenkou a hnědým máslem.</li>
 <li><a href="/podniky/muj-salek-kavy-praha/"><strong>Můj šálek kávy</strong></a> (Karlín) – francouzský toast s karamelem, hruškami a mascarpone.</li>
 <li><a href="/podniky/botaniqa-bistro-cafe-opava/"><strong>Botaniqa Bistro &amp; Café</strong></a> (Opava) – French toast s borůvkami, vanilkovým mascarpone a javorovým sirupem.</li>
+<li><a href="/podniky/traum-concept-praha/"><strong>Traum Concept</strong></a> (Praha 1) – novinka: French toast s crème brûlée, pohankovým popcornem a vanilkovým krémem.</li>
+<li><a href="/podniky/dabl-bistro-praha/"><strong>Dabl.</strong></a> (Praha 1) – tiramisu French toast.</li>
+<li><a href="/podniky/bistro-franz-brno/"><strong>Bistro Franz</strong></a> (Brno) – Burrata French toast s pršutem a vlašskými ořechy i sladký s jablky a vanilkovým krémem.</li>
 <li><a href="/podniky/cafe-placzek-brno/"><strong>Café Placzek</strong></a> (Brno) – francouzské toasty s ovocem a sezónními doplňky.</li>
 </ul>
 

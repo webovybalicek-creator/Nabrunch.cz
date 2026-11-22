@@ -1,14 +1,14 @@
 ---
-title: "Kam na snídani nebo brunch v Olomouci?"
-description: "Hledáte inspiraci, kam na snídani nebo brunch v Olomouci? Máme pro vás 5 tipů, kam v Olomouci na snídani či brunch."
-seoTitle: "Kam na snídani nebo brunch v Olomouci? - naBrunch.cz"
+title: "Kam na snídani nebo brunch v Olomouci: 6 ověřených tipů"
+description: "Brunch v Olomouci: 6 ověřených kaváren a bister na snídani a brunch – Sophie’s Café, Bistro Central, Café La Fée a další. Co si dát a kdy mají otevřeno."
+seoTitle: "Brunch Olomouc 2026: kam na snídani a brunch – 6 tipů | naBrunch.cz"
 date: "2026-01-11T20:13:53"
 image: "/wp-content/uploads/2026/01/kam-na-snidani-nebo-brunch-v-olomouci-foto-1.png"
 ---
 
 <p>Hledáte inspiraci, <strong>kam na snídani nebo brunch v Olomouci</strong>? Ať už máte chuť na poctivou snídani s kávou, nebo si chcete užít pohodový víkendový brunch s přáteli, Olomouc nabízí spoustu skvělých míst, kde si přijdete na své. </p>
 
-<p>Abychom vám výběr usnadnili, máme pro vás <strong>5 tipů na snídani a brunch v Olomouci</strong>.</p>
+<p>Abychom vám výběr usnadnili, máme pro vás <strong>6 tipů na snídani a brunch v Olomouci</strong>.</p>
 
 <h2 class="wp-block-heading"><a href="/podniky/cafe-new-one-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼  1.  Cafe New One Olomouc</strong></a></h2>
 
@@ -22,25 +22,31 @@ image: "/wp-content/uploads/2026/01/kam-na-snidani-nebo-brunch-v-olomouci-foto-1
 
 <figure class="wp-block-image size-full"><a href="/podniky/sophies-cafe-olomouc/"><img src="/wp-content/uploads/2026/01/sophies-cafe-olomouc-foto-3.png" alt="" class="wp-image-1906"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/sophies-cafe-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼</strong></a> <a href="/podniky/cafe-la-fee-olomouc/" target="_blank" rel="noreferrer noopener"><strong>3. Café La Fée Olomouc</strong></a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/cafe-la-fee-olomouc/" target="_blank" rel="noreferrer noopener"><strong>3. Café La Fée Olomouc</strong></a></h2>
 
 <p><strong>Café La Fée</strong> je malá a útulná pet-friendly kavárna v Olomouci s jemným francouzským nádechem, která si získala oblibu díky příjemné atmosféře a kvalitní nabídce snídaní a brunchů. </p>
 
 <figure class="wp-block-image size-large"><a href="/podniky/cafe-la-fee-olomouc/"><img src="/wp-content/uploads/2026/01/cafe-la-fee-olomouc-foto-4.png" alt="" class="wp-image-1922"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/sophies-cafe-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼</strong></a> <a href="/podniky/coffee-library-olomouc/" target="_blank" rel="noreferrer noopener">4. Coffee Library Olomouc</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/coffee-library-olomouc/" target="_blank" rel="noreferrer noopener">4. Coffee Library Olomouc</a></h2>
 
 <p><strong>Coffee Library</strong> je stylová kavárna v samém srdci Olomouce, kde to voní po kávě, croissantech a pohodové atmosféře. <strong>Coffee Library</strong> <strong>Olomouc </strong>je ideální místo na klidný brunch, snídani, kávovou pauzu nebo sladkou odměnu během dne.</p>
 
 <figure class="wp-block-image size-full is-resized"><a href="/podniky/coffee-library-olomouc/"><img src="/wp-content/uploads/2026/01/kam-na-snidani-nebo-brunch-v-olomouci-foto-1.png" alt="" class="wp-image-1926" style="width:657px;height:auto"/></a></figure>
 
-<h2 class="wp-block-heading"><a href="/podniky/sophies-cafe-olomouc/" target="_blank" rel="noreferrer noopener"><strong>👉🏼</strong></a> <a href="/podniky/nm-desserts-cafe-olomouc/" target="_blank" rel="noreferrer noopener">5. NM desserts cafe Olomouc</a></h2>
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/nm-desserts-cafe-olomouc/" target="_blank" rel="noreferrer noopener">5. NM desserts cafe Olomouc</a></h2>
 
 <p><strong>NM DESSERTS CAFE Olomouc </strong>je víc než jen kavárna – je to místo, kde se spojuje chuť, vůně a příběh. Ráno začíná<strong> dokonalým zákuskem</strong>, den pokračuje šálkem výběrové kávy, a víkendy patří <strong>pohodovým brunchům </strong>s přáteli.</p>
 
 <figure class="wp-block-image size-full"><a href="/podniky/nm-desserts-cafe-olomouc/"><img src="/wp-content/uploads/2025/06/NM_11088_Finalx.webp" alt="" class="wp-image-1684"/></a></figure>
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/bistro-central-olomouc/"><strong>6. Bistro Central Olomouc</strong></a></h2>
+
+<p><strong>Bistro Central</strong> v Denisově ulici kousek od Horního náměstí je oblíbené bistro se snídaněmi a brunchem se středomořským nádechem. Otevírá <strong>ve všední dny už v 7:30</strong>, o víkendu v 8:00. Na lístku jsou turecká vejce s ochuceným jogurtem a chilli olejem, míchaná vejce s croissantem a lanýžem, topinka s uzeným lososem a avokádem nebo bramborová placka se slaninou.</p>
+
+<p>🍳 <strong>Co si dát:</strong> turecká vejce s čerstvou focaccií a k tomu sklenku prosecca.</p>
 
 <p>Doufáme, že jsme vám tímto článkem <strong>pomohli s výběrem, kam na snídani nebo brunch v Olomouci</strong>, a že si mezi našimi tipy najdete své nové oblíbené místo. Olomouc má v oblasti snídaní a brunchů opravdu co nabídnout – stačí si jen vybrat podle chuti a nálady.</p>
 
