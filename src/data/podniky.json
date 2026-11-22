@@ -8282,5 +8282,54 @@
    "/wp-content/uploads/2026/11/supernova-bakehouse-karlin-praha-4.jpg",
    "/wp-content/uploads/2026/11/supernova-bakehouse-karlin-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2410,
+  "slug": "nostress-bakery-karlin-praha",
+  "nazev": "Nostress Bakery Karlín",
+  "datum": "2026-11-22 09:25:00",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 8",
+   "Praha"
+  ],
+  "adresa": "Karlínské náměstí 156/2, Praha 8 – Karlín",
+  "lat": 50.0929095,
+  "lon": 14.4483425,
+  "oteviraciDoba": [
+   "Po - So: 8:00 - 19:00",
+   "Ne: 9:00 - 16:00"
+  ],
+  "web": "https://www.nostress.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420606721381",
+  "telefonText": "+420 606 721 381",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Nostress+Bakery+Karlín,+Karlínské+náměstí+156/2,+Praha+8+–+Karlín",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Pet-friendly",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ke snídani si dejte tartine s uzeným lososem nebo avokádem a na sladko pistáciový croissant. Domů si odneste bagetu s pepřem a lanýžem.</p>",
+  "popis": "<p>Nostress je francouzská pekárna a kavárna přímo na Karlínském náměstí. Den tu můžete začít <strong>bohatou snídaní</strong> nebo jen rychlou kávou s croissantem, v poledne se vrátit na denní menu a odpoledne na dort.</p>\n\n<h2 class=\"wp-block-heading\">Francouzské snídaně</h2>\n\n<p>Na snídani jsou <strong>míchaná vejce</strong>, <strong>tartine</strong> – venkovský chléb s avokádem, roastbeefem nebo uzeným lososem –, slané koláče quiche a zapečené bagety. Ze sladkého pečiva vybírejte <strong>croissanty</strong> (klasický, mandlový, pistáciový nebo malinový), pain suisse, šneky nebo ovocné koláče.</p>\n\n<h2 class=\"wp-block-heading\">Dorty a chléb domů</h2>\n\n<p>Ve vitríně čekají makronky, millefeuille, lemon tart, tartaletky a pavlova. Domů si můžete koupit kváskový žitný či špaldový chléb nebo focacciu. Otevřeno je každý den, ve všední dny a v sobotu až do 19:00.</p>",
+  "seoTitulek": "Nostress Bakery Karlín – francouzská snídaně a croissanty",
+  "seoPopis": "Nostress na Karlínském náměstí: francouzská pekárna s croissanty, tartine s lososem či avokádem, quiche a míchanými vejci. Otevřeno denně.",
+  "foto": "/wp-content/uploads/2026/11/nostress-bakery-karlin-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/nostress-bakery-karlin-praha-2.jpg",
+   "/wp-content/uploads/2026/11/nostress-bakery-karlin-praha-3.jpg",
+   "/wp-content/uploads/2026/11/nostress-bakery-karlin-praha-4.jpg",
+   "/wp-content/uploads/2026/11/nostress-bakery-karlin-praha-5.jpg"
+  ]
  }
 ]
