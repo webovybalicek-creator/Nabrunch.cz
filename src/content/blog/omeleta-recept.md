@@ -3,7 +3,7 @@ title: "Omeleta: recept na nadýchanou omeletu se šunkou a sýrem"
 description: "Jak udělat nadýchanou omeletu? Recept na omeletu se šunkou a sýrem krok za krokem, francouzská omeleta a varianty se špenátem, cottage, bramborem i cuketou."
 seoTitle: "Omeleta recept – nadýchaná, se šunkou a sýrem | naBrunch.cz"
 date: "2026-11-22T09:00:00"
-naHp: false
+image: "/wp-content/uploads/2026/11/omeleta-recept-1.jpg"
 recept: {"nazev": "Omeleta se šunkou a sýrem", "porce": "1 porce", "priprava": 5, "vareni": 6, "kategorie": "Snídaně", "suroviny": ["3 vejce", "2 lžíce mléka nebo smetany", "1 lžička másla", "40 g šunky", "30 g strouhaného sýra (eidam, ementál nebo čedar)", "sůl, čerstvě mletý pepř", "pažitka nebo petrželka"], "postup": ["Vejce rozklepněte do misky, přidejte mléko, špetku soli a pepř a vidličkou nebo metličkou je důkladně prošlehejte, až nebudou vidět šmouhy bílku.", "Šunku nakrájejte na kostičky nebo nudličky.", "Na nepřilnavé pánvi (ideálně 20–24 cm) rozpusťte máslo na středním plameni, až přestane pěnit.", "Vlijte vejce a nechte je 20–30 vteřin jen tak stát, aby začala tuhnout u okrajů.", "Stěrkou přitahujte ztuhlé okraje do středu a pánev nakloňte, aby tekuté vejce zateklo na volná místa.", "Když je spodek pevný a povrch ještě lehce krémový, posypte jednu polovinu šunkou a sýrem.", "Druhou polovinu přeložte přes náplň, nechte 30 vteřin, aby se sýr rozpustil, a omeletu sesuňte na talíř.", "Posypte pažitkou a podávejte hned, třeba s opečeným chlebem a rajčaty."], "klicova": ["omeleta recept", "omeleta se šunkou a sýrem", "nadýchaná omeleta"]}
 ---
 
