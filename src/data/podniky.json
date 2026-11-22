@@ -8575,5 +8575,54 @@
    "/wp-content/uploads/2026/11/kafe-francin-praha-4.jpg",
    "/wp-content/uploads/2026/11/kafe-francin-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2416,
+  "slug": "la-forme-holesovice-praha",
+  "nazev": "La Forme Holešovice",
+  "datum": "2026-11-22 10:10:22",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 7",
+   "Praha"
+  ],
+  "adresa": "Tusarova 1384/25, Praha 7 – Holešovice",
+  "lat": 50.1019352,
+  "lon": 14.4482933,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 19:00",
+   "So - Ne: 8:00 - 19:00"
+  ],
+  "web": "https://www.laforme.cz/",
+  "instagram": "@laformebakery",
+  "instagramUrl": "https://www.instagram.com/laformebakery/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=La+Forme+Holešovice,+Tusarova+1384/25,+Praha+7+–+Holešovice",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si French toast s karamelizovanými broskvemi nebo tvarohové lívanečky se švestkovým povidlem a řeckým jogurtem. A s sebou mandlový croissant.</p>",
+  "popis": "<p>La Forme patří mezi nejlépe hodnocené pražské pekárny a v Tusarově ulici v Holešovicích má kavárnu, kde se dá v klidu nasnídat – uvnitř i na slunné zahrádce. Stejně jako na pobočce v <a href=\"/podniky/la-forme-rytirska-praha/\">Rytířské</a> tu najdete plněné croissanty, danishe a sladké motance z vlastní pekárny a výběrovou kávu.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a brunch</h2>\n\n<p>Kromě pečiva tu podávají i teplé snídaně: <strong>French toast s karamelizovanými broskvemi</strong>, <strong>tvarohové lívanečky</strong> se švestkovým povidlem a jogurtem, <strong>krémová míchaná vejce</strong> s kváskovým chlebem, vejce s pečenými rajčaty nebo kaši s višněmi a lískovými ořechy a řecký jogurt s ovocem. Otevřeno je <strong>ve všední dny od 7:30</strong>, o víkendu od 8:00.</p>\n\n<h2 class=\"wp-block-heading\">Pečivo na doma</h2>\n\n<p>Domů si můžete odnést kváskový chléb, croissanty nebo sezonní pečivo – v zimě třeba vánoční štolu.</p>",
+  "seoTitulek": "La Forme Holešovice – snídaně, croissanty a French toast",
+  "seoPopis": "La Forme v Holešovicích: pekárna a kavárna se snídaněmi od 7:30. French toast s broskvemi, tvarohové lívanečky, míchaná vejce a plněné croissanty.",
+  "foto": "/wp-content/uploads/2026/11/la-forme-holesovice-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/la-forme-holesovice-praha-2.jpg",
+   "/wp-content/uploads/2026/11/la-forme-holesovice-praha-3.jpg",
+   "/wp-content/uploads/2026/11/la-forme-holesovice-praha-4.jpg",
+   "/wp-content/uploads/2026/11/la-forme-holesovice-praha-5.jpg"
+  ]
  }
 ]
