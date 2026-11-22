@@ -8138,5 +8138,53 @@
    "/wp-content/uploads/2026/11/traum-concept-praha-5.jpg",
    "/wp-content/uploads/2026/11/traum-concept-praha-6.jpg"
   ]
+ },
+ {
+  "id": 2407,
+  "slug": "bistro-proti-proudu-praha",
+  "nazev": "Bistro Proti Proudu",
+  "datum": "2026-11-22 09:19:20",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 8",
+   "Praha"
+  ],
+  "adresa": "Březinova 471/22, Praha 8 – Karlín",
+  "lat": 50.0945309,
+  "lon": 14.4561225,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 18:00",
+   "So: 9:00 - 16:00",
+   "Ne: 9:00 - 14:00"
+  ],
+  "web": "https://bistroprotiproudu.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420728036171",
+  "telefonText": "+420 728 036 171",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Bistro+Proti+Proudu,+Březinova+471/22,+Praha+8+–+Karlín",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Nemůžete se rozhodnout? Objednejte si Talíř pro nerozhodné – vejce do skla, croque-monsieur, wafle s vanilkovým krémem a ovoce na jednom talíři. Snídaně se podávají do 12:00.</p>",
+  "popis": "<p>Proti Proudu je moderní bistro v Karlíně, dvě minuty od Florence. Vzniklo v roce 2014 podle italských kaváren – s hutným espressem, dlouhými snídaněmi a sklenkou prosecca. Otevírá <strong>ve všední dny už v 7:30</strong>, v sobotu a v neděli v 9:00.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně do poledne</h2>\n\n<p>Snídaně se podávají <strong>každý den do 12:00</strong>. Na lístku jsou <strong>turecká vejce</strong> s bylinkovým jogurtem a oříškovým máslem, <strong>anglická snídaně</strong> se salsicciou, tomatovými fazolemi a bramborovou plackou, omeleta s čedarem, sázená vejce se slaninou, <strong>vejce do skla</strong> se sýrem Grana Padano i <strong>francouzský toast</strong> s mascarpone, ovocem a javorovým sirupem. Hitem je Talíř pro nerozhodné, kde ochutnáte od všeho trochu.</p>\n\n<h2 class=\"wp-block-heading\">Od kávy po večerní sklenku</h2>\n\n<p>Přes den vaří těstoviny, saláty a bagety, odpoledne podávají domácí dezerty a ve všední dny je otevřeno až do 18:00. Kávu připravují na espressu i jako filtr, nechybí ani matcha latte.</p>",
+  "seoTitulek": "Bistro Proti Proudu Karlín – snídaně do 12:00",
+  "seoPopis": "Bistro Proti Proudu v Karlíně: snídaně do poledne, turecká vejce, French toast, anglická snídaně a vejce do skla. Ve všední dny od 7:30.",
+  "foto": "/wp-content/uploads/2026/11/bistro-proti-proudu-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/bistro-proti-proudu-praha-2.jpg",
+   "/wp-content/uploads/2026/11/bistro-proti-proudu-praha-3.jpg",
+   "/wp-content/uploads/2026/11/bistro-proti-proudu-praha-4.jpg"
+  ]
  }
 ]

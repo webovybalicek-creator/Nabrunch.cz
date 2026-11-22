@@ -1,6 +1,6 @@
 ---
-title: "Snídaně a brunch v Karlíně: 7 míst, kam zajít"
-description: "Kam na snídani nebo brunch v Karlíně? 7 ověřených podniků – Spojka, Eska, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
+title: "Snídaně a brunch v Karlíně: 8 míst, kam zajít"
+description: "Kam na snídani nebo brunch v Karlíně? 8 ověřených podniků – Spojka, Eska, Proti Proudu, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
 date: "2026-06-01T16:17:08"
 image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-foto-1.png"
 ---
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-fo
 <p>Najdete tu ikonické pekárny, moderní bistra i podniky, kam se chodí na pomalé víkendové brunche s přáteli.</p>
 
 
-<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme sedm podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
+<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme osm podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/"></a> 👉🏼 <a href="/podniky/eska-karlin/">1. Eska Karlín Praha</a></h2>
 
@@ -65,6 +65,10 @@ image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-fo
 <h2 class="wp-block-heading">👉🏼 <a href="/podniky/tea-field-praha/">7. Tea Field Praha</a></h2>
 <p>Čajovna a kavárna, kde se čaj připravuje přímo před vámi. Ideální pro ty, kdo místo kávy hledají matchu nebo čajové speciality.</p>
 <p>🍳 <strong>Co si dát:</strong> Mango Matcha – zelená energie matchy se sladkostí manga.</p>
+
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/bistro-proti-proudu-praha/">8. Bistro Proti Proudu</a></h2>
+<p>Moderní bistro v Březinově ulici, dvě minuty od Florence, kde <strong>snídaně podávají každý den do poledne</strong>. Ve všední dny otevírá už v 7:30. Na lístku jsou turecká vejce, anglická snídaně, vejce do skla s Grana Padano, French toast s mascarpone i jogurt s granolou.</p>
+<p>🍳 <strong>Co si dát:</strong> Talíř pro nerozhodné – vejce do skla, croque-monsieur, wafle a ovoce na jednom talíři.</p>
 
 <h2 class="wp-block-heading">Kde si dáte brunch v Karlíně vy?</h2>
 
