@@ -8526,5 +8526,54 @@
    "/wp-content/uploads/2026/11/phills-corner-praha-4.jpg",
    "/wp-content/uploads/2026/11/phills-corner-praha-5.jpg"
   ]
+ },
+ {
+  "id": 2415,
+  "slug": "kafe-francin-praha",
+  "nazev": "Kafe Francin",
+  "datum": "2026-11-22 10:06:57",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 7",
+   "Praha"
+  ],
+  "adresa": "Dukelských hrdinů 692/35, Praha 7 – Holešovice",
+  "lat": 50.099323,
+  "lon": 14.433096,
+  "oteviraciDoba": [
+   "Po - Pá: 7:30 - 19:30",
+   "So - Ne: 8:00 - 19:30"
+  ],
+  "web": "https://kafefrancin.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Kafe+Francin,+Dukelských+hrdinů+692/35,+Praha+7+–+Holešovice",
+  "rezervace": null,
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si open sandwich se sázenými vejci, citronovou ricottou a cuketou, nebo vydatnou anglickou snídani. K tomu kávu z jejich vlastní pražírny.</p>",
+  "popis": "<p>Kafe Francin je oblíbená kavárna a pražírna v Dukelských hrdinů, kousek od Strossmayerova náměstí a Veletržního paláce. Kávu si praží sami a v kavárně ji koupíte i domů. Místní ji mají rádi pro pohodovou atmosféru, poctivé snídaně a skvělý poměr ceny a výkonu.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně každý den od rána</h2>\n\n<p>Otevírá <strong>ve všední dny v 7:30</strong>, o víkendu v 8:00 a má otevřeno až do večera. Na snídani si můžete dát <strong>anglickou snídani</strong> s klobásou, slaninou, sázenými vejci a fazolemi, <strong>open sandwich se sázenými vejci</strong>, citronovou ricottou a restovanou cuketou, omeletu se salátem, <strong>croque madame</strong>, bagel s halloumi a avokádem nebo BLT bagel. Na sladko řecký jogurt s domácí granolou nebo veganská jáhlová kaše s mandlovým mlékem.</p>\n\n<h2 class=\"wp-block-heading\">Vlastní pražírna</h2>\n\n<p>Francin si kávu praží sám – na espresso i filtr. Ve vitríně čekají domácí dezerty a skořicoví šneci, v létě domácí limonády a kombucha.</p>",
+  "seoTitulek": "Kafe Francin Holešovice – snídaně a vlastní pražírna",
+  "seoPopis": "Kafe Francin v Holešovicích: kavárna s vlastní pražírnou, snídaně denně od 7:30, anglická snídaně, open sandwich s vejci, croque madame a granola.",
+  "foto": "/wp-content/uploads/2026/11/kafe-francin-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/kafe-francin-praha-2.jpg",
+   "/wp-content/uploads/2026/11/kafe-francin-praha-3.jpg",
+   "/wp-content/uploads/2026/11/kafe-francin-praha-4.jpg",
+   "/wp-content/uploads/2026/11/kafe-francin-praha-5.jpg"
+  ]
  }
 ]
