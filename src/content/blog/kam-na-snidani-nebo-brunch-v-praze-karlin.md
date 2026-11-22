@@ -1,6 +1,6 @@
 ---
-title: "Snídaně a brunch v Karlíně: 8 míst, kam zajít"
-description: "Kam na snídani nebo brunch v Karlíně? 8 ověřených podniků – Spojka, Eska, Proti Proudu, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
+title: "Snídaně a brunch v Karlíně: 9 míst, kam zajít"
+description: "Kam na snídani nebo brunch v Karlíně? 9 ověřených podniků – Spojka, Eska, Dvorek, Proti Proudu, Můj šálek kávy, Etapa a další. Co si dát, kde mají zahrádku a kam s pejskem."
 date: "2026-06-01T16:17:08"
 image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-foto-1.png"
 ---
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-fo
 <p>Najdete tu ikonické pekárny, moderní bistra i podniky, kam se chodí na pomalé víkendové brunche s přáteli.</p>
 
 
-<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme osm podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
+<p>Pokud přemýšlíte, <strong>kam na snídani nebo brunch v Karlíně</strong>, vybrali jsme devět podniků, které podle nás stojí za návštěvu. U každého najdete i tip, co si dát, a jestli můžete vzít pejska.</p>
 
 <h2 class="wp-block-heading"><a href="/podniky/brunches-bistro-brno/"></a> 👉🏼 <a href="/podniky/eska-karlin/">1. Eska Karlín Praha</a></h2>
 
@@ -69,6 +69,10 @@ image: "/wp-content/uploads/2026/06/kam-na-snidani-nebo-brunch-v-praze-karlin-fo
 <h2 class="wp-block-heading">👉🏼 <a href="/podniky/bistro-proti-proudu-praha/">8. Bistro Proti Proudu</a></h2>
 <p>Moderní bistro v Březinově ulici, dvě minuty od Florence, kde <strong>snídaně podávají každý den do poledne</strong>. Ve všední dny otevírá už v 7:30. Na lístku jsou turecká vejce, anglická snídaně, vejce do skla s Grana Padano, French toast s mascarpone i jogurt s granolou.</p>
 <p>🍳 <strong>Co si dát:</strong> Talíř pro nerozhodné – vejce do skla, croque-monsieur, wafle a ovoce na jednom talíři.</p>
+
+<h2 class="wp-block-heading">👉🏼 <a href="/podniky/dvorek-karlin-praha/">9. Dvorek Karlín</a></h2>
+<p>Uvolněné bistro v Křižíkově ulici, které se o víkendu mění v jedno z nejhezčích brunchových míst v Karlíně. <strong>V sobotu a v neděli od 9:00 do 14:00</strong> servírují velké brunchové talíře s vejci a lososem, zastřená vejce na kváskovém toastu i sladké dobroty. Ve všední dny snídaně a denní menu od 8:00.</p>
+<p>🍳 <strong>Co si dát:</strong> růžovou wafli s jahodami a pistáciovým krémem a k ní matcha drink.</p>
 
 <h2 class="wp-block-heading">Kde si dáte brunch v Karlíně vy?</h2>
 

@@ -8186,5 +8186,53 @@
    "/wp-content/uploads/2026/11/bistro-proti-proudu-praha-3.jpg",
    "/wp-content/uploads/2026/11/bistro-proti-proudu-praha-4.jpg"
   ]
+ },
+ {
+  "id": 2408,
+  "slug": "dvorek-karlin-praha",
+  "nazev": "Dvorek Karlín",
+  "datum": "2026-11-22 09:21:37",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 8",
+   "Praha"
+  ],
+  "adresa": "Křižíkova 682/34a, Praha 8 – Karlín",
+  "lat": 50.0915638,
+  "lon": 14.4510735,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 15:00",
+   "So - Ne: 9:00 - 14:00"
+  ],
+  "web": "https://www.dvorekkarlin.com/cs",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Dvorek+Karlín,+Křižíkova+682/34a,+Praha+8+–+Karlín",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Přijďte o víkendu na brunch (9:00–14:00) a ochutnejte jejich růžovou wafli s jahodami a pistáciovým krémem. Stůl si raději zarezervujte online – v sobotu dopoledne bývá plno.</p>",
+  "popis": "<p>Dvorek Karlín je uvolněné bistro v Křižíkově ulici v srdci Karlína. Ve všední dny vaří denní menu pro lidi z okolních kanceláří, o víkendu se mění v místo na <strong>pomalý brunch</strong> bez budíku. Vaří ze sezonních surovin a podává výběrovou kávu.</p>\n\n<h2 class=\"wp-block-heading\">Víkendový brunch</h2>\n\n<p><strong>V sobotu a v neděli od 9:00 do 14:00</strong> servírují brunch, který vypadá stejně dobře, jak chutná: velký brunchový talíř s míchanými vejci, vejcem Benedikt, uzeným lososem a domácím chlebem, zastřená vejce na kváskovém toastu s rajčaty, <strong>růžová wafle s jahodami, malinami a pistáciovým krémem</strong>, jogurt s granolou nebo brownie s malinami. K tomu výběrová káva a barevné matcha drinky. Nabídka se mění podle sezony a stůl si můžete zarezervovat online přímo na webu bistra.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a oběd ve všední dny</h2>\n\n<p>Od pondělí do pátku otevírá v 8:00 – zastavit se můžete na kávu a snídani cestou do práce, v poledne pak na denní menu. Bistro zajišťuje i catering a firemní akce.</p>",
+  "seoTitulek": "Dvorek Karlín – víkendový brunch v Praze 8",
+  "seoPopis": "Dvorek Karlín v Křižíkově ulici: víkendový brunch 9–14 h, růžová wafle s jahodami, vejce Benedikt, losos a matcha drinky. Rezervace online.",
+  "foto": "/wp-content/uploads/2026/11/dvorek-karlin-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/dvorek-karlin-praha-2.jpg",
+   "/wp-content/uploads/2026/11/dvorek-karlin-praha-3.jpg",
+   "/wp-content/uploads/2026/11/dvorek-karlin-praha-4.jpg",
+   "/wp-content/uploads/2026/11/dvorek-karlin-praha-5.jpg"
+  ]
  }
 ]
