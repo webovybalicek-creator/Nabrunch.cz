@@ -74,3 +74,5 @@ image: "/wp-content/uploads/2025/07/brunch_1-1.jpg"
 <p>Pokud si chcete vybrat z kompletní nabídky všech podniků po ČR, kde si dát skvělou&nbsp;<strong>snídani</strong>&nbsp;nebo&nbsp;<strong>brunch</strong>,&nbsp;<a href="/#vsechnypodniky" target="_blank" rel="noreferrer noopener"><strong>mrkněte SEM.</strong></a></p>
 
 <p>A pokud máte&nbsp;<strong>tip na další místo</strong>, které bychom měli do výběru zařadit, napište nám — budeme rádi za každý nápad:&nbsp;<strong><a>karolina@nabrunch.cz</a></strong>!</p>
+
+<p>👉 Celý přehled čtvrti najdete v článku <a href="/brunch-vinohrady/">Snídaně a brunch na Vinohradech</a>.</p>

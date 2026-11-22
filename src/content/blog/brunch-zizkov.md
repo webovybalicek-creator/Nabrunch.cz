@@ -54,4 +54,4 @@ image: "/wp-content/uploads/2026/11/seiferts-brunch-praha-1.jpg"
 <li><strong>S pejskem:</strong> Sladká cesta.</li>
 </ul>
 
-<p>Další podniky najdete na stránce <a href="/lokalita/praha-3/">snídaně a brunch na Praze 3</a>. Hledáte tipy jinde? Mrkněte na <a href="/brunch-v-nedeli-praha/">brunch v neděli v Praze</a>, <a href="/brunch-holesovice-letna/">Holešovice a Letnou</a>, <a href="/kam-na-snidani-nebo-brunch-v-praze-karlin/">Karlín</a> nebo na celý průvodce <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>. ☕</p>
+<p>Další podniky najdete na stránce <a href="/lokalita/praha-3/">snídaně a brunch na Praze 3</a>. Hledáte tipy jinde? Mrkněte na <a href="/brunch-v-nedeli-praha/">brunch v neděli v Praze</a>, <a href="/brunch-holesovice-letna/">Holešovice a Letnou</a>, <a href="/brunch-vinohrady/">Vinohrady</a>, <a href="/kam-na-snidani-nebo-brunch-v-praze-karlin/">Karlín</a> nebo na celý průvodce <a href="/nejlepsi-brunch-v-praze/">nejlepší brunch v Praze</a>. ☕</p>
