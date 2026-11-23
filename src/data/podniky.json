@@ -8717,5 +8717,55 @@
    "/wp-content/uploads/2026/11/pumpa-pruhonice-4.jpg",
    "/wp-content/uploads/2026/11/pumpa-pruhonice-5.jpg"
   ]
+ },
+ {
+  "id": 2419,
+  "slug": "creperie-u-slepicek-pruhonice",
+  "nazev": "Creperie U Slepiček",
+  "datum": "2026-11-23 13:00:16",
+  "doporuceny": false,
+  "lokality": [
+   "Průhonice"
+  ],
+  "adresa": "Říčanská 89, Průhonice",
+  "lat": 50.0011653,
+  "lon": 14.5632645,
+  "oteviraciDoba": [
+   "Po: 8:30 - 20:00",
+   "Út: 8:30 - 22:00",
+   "St - Čt: 8:30 - 20:00",
+   "Pá - So: 8:30 - 22:00",
+   "Ne: 8:30 - 20:00"
+  ],
+  "web": "https://www.uslepicek.cz/",
+  "instagram": null,
+  "instagramUrl": null,
+  "telefon": "+420267751102",
+  "telefonText": "+420 267 751 102",
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Creperie+U+Slepiček,+Říčanská+89,+Průhonice",
+  "rezervace": "Ano, telefonicky",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Zahrádka",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si slanou galette se šunkou a volským okem nebo se špenátem a slaninou, na sladko palačinku s jahodami a tvarohem. Bezlepkové galettes z pohankové mouky jsou tu specialita.</p>",
+  "popis": "<p>Creperie U Slepiček je útulná francouzská palačinkárna v Říčanské ulici v Průhonicích, kousek od zámeckého parku. Má stylový interiér a zahrádku, kde se dá sedět i v chladnějších dnech, a v zahradě za domem altán s grilem a netradiční minigolf.</p>\n\n<h2 class=\"wp-block-heading\">Snídaně a palačinky od 8:30</h2>\n\n<p>Otevřeno je <strong>každý den od 8:30</strong>. Na snídani tu čekají čerstvě upečené croissanty a bagety, hlavní hvězdou jsou ale <strong>sladké i slané palačinky</strong>. Slané <strong>galettes z bretaňské pohankové mouky</strong> jsou přirozeně bez lepku – třeba se šunkou, sýrem a volským okem, se špenátem a slaninou nebo s hruškou, brie a vlašskými ořechy. Sladké palačinky jsou s ovocem, tvarohem nebo čokoládou.</p>\n\n<h2 class=\"wp-block-heading\">Francouzské speciality</h2>\n\n<p>Kromě palačinek mají tarte flambée, sýrové fondue, raclette nebo cibulovou polévku a francouzská vína. V úterý, pátek a sobotu je otevřeno až do 22:00.</p>",
+  "seoTitulek": "Creperie U Slepiček Průhonice – palačinky a galettes",
+  "seoPopis": "Creperie U Slepiček v Průhonicích: snídaně od 8:30, sladké palačinky a slané bezlepkové galettes s vejcem, croissanty a zahrádka u zámeckého parku.",
+  "foto": "/wp-content/uploads/2026/11/creperie-u-slepicek-pruhonice-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/creperie-u-slepicek-pruhonice-2.jpg",
+   "/wp-content/uploads/2026/11/creperie-u-slepicek-pruhonice-3.jpg",
+   "/wp-content/uploads/2026/11/creperie-u-slepicek-pruhonice-4.jpg"
+  ]
  }
 ]

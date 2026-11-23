@@ -16,7 +16,7 @@ image: "/wp-content/uploads/2026/11/sokolovna-pruhonice-1.jpg"
 <p>Zrekonstruovaná sokolovna s prosvětlenou restaurací a terasou, kde v kuchyni vládne šéfkuchař Jiří Eberl. Snídaně podávají <strong>ve všední dny už od 7:00</strong>, o víkendu od 8:00, vždy do 11:00. Výběr je velký – vejce Benedikt, turecká vejce s lososem, tři vejce do skla s lanýžovým olejem, anglická snídaně i kaše a granola.</p>
 <p>🍳 <strong>Co si dát:</strong> turecká vejce s uzeným lososem a chilli máslem.</p>
 
-<h2>👉🏼 Creperie U Slepiček – Říčanská</h2>
+<h2>👉🏼 <a href="/podniky/creperie-u-slepicek-pruhonice/">Creperie U Slepiček</a> – Říčanská</h2>
 <p>Útulná creperie s francouzskými specialitami a zahrádkou, kde se dá sedět i v chladnějších dnech. Otevírá <strong>denně v 8:30</strong> a na snídani tu čekají čerstvě upečené croissanty a bagety. Hlavní hvězdou jsou sladké i slané palačinky – včetně <strong>bezlepkových galettes</strong> z bretaňské pohankové mouky.</p>
 <p>🍳 <strong>Co si dát:</strong> slanou galette, nebo sladkou palačinku s ovocem.</p>
 
