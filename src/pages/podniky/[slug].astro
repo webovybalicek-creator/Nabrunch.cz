@@ -89,7 +89,8 @@ const podnikLd = {
     ? { amenityFeature: vybaveni.map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })) }
     : {}),
   ...(tyden ? { openingHoursSpecification: schemaSpec(tyden) } : {}),
-  servesCuisine: p.kuchyne,
+  // Hledá se „snídaně / brunch“ – kategorie „Klasická“ nic neříká, nahradit konkrétním typem jídla
+  servesCuisine: ['Snídaně', 'Brunch', ...p.kuchyne.filter((k) => k !== 'Klasická').map((k) => (k === 'Zdravá/fitness' ? 'Zdravá kuchyně' : k))],
   acceptsReservations: !!p.rezervace && !/^ne\b/i.test(p.rezervace),
 };
 const jsonLd = dotazy.length
