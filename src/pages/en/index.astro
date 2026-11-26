@@ -4,8 +4,10 @@ import Base from '../../layouts/Base.astro';
 import Foto from '../../components/Foto.astro';
 import Mapa from '../../components/Mapa.astro';
 import { SITE } from '../../lib/config';
+import { getCollection } from 'astro:content';
 import { PODNIKY_EN, enUrl, hodinyEn, nazevEn, EN_INDEXOVAT } from '../../lib/en';
 
+const clanky = (await getCollection('blogEn')).sort((a, b) => +b.data.date - +a.data.date);
 const mista = [...PODNIKY_EN].sort((a, b) => Number(b.p.doporuceny) - Number(a.p.doporuceny));
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -31,7 +33,7 @@ const jsonLd = {
         We are naBrunch.cz – the Czech guide to breakfast and brunch. Every place here we have visited ourselves: real cafés where Praguers eat, with good coffee, fair prices and
         opening hours you can trust.
       </p>
-      <p><a class="btn btn--akcent" href="/en/best-brunch-prague-old-town/">Breakfast near Old Town Square →</a></p>
+      <p><a class="btn btn--akcent" href="/en/best-brunch-prague/">Best brunch in Prague →</a></p>
     </div>
   </section>
 
@@ -51,6 +53,15 @@ const jsonLd = {
             </li>
           ))
         }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Prague breakfast guides</h2>
+      <ul class="pruvodci">
+        {clanky.map((c) => (<li><a href={`/en/${c.id}/`}>{c.data.title}</a></li>))}
       </ul>
     </div>
   </section>
@@ -119,4 +130,6 @@ const jsonLd = {
   .mista__h {
     font-size: 0.88rem;
   }
+  .pruvodci { display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); list-style: none; padding: 0; }
+  .pruvodci a { display: block; padding: 0.9rem 1rem; border-radius: 12px; background: var(--bila, #fff); box-shadow: 0 1px 4px rgb(0 0 0 / 8%); font-weight: 600; }
 </style>
