@@ -1,0 +1,92 @@
+---
+// Anglické články – src/content/blog-en/<slug>.md
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Foto from '../../components/Foto.astro';
+import { SITE } from '../../lib/config';
+import { velky, obrazkyVHtml } from '../../lib/data';
+import { EN_INDEXOVAT } from '../../lib/en';
+
+export async function getStaticPaths() {
+  return (await getCollection('blogEn')).map((c) => ({ params: { slug: c.id }, props: { c } }));
+}
+
+const { c } = Astro.props as { c: CollectionEntry<'blogEn'> };
+const cesta = `/en/${c.id}/`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: c.data.title,
+  description: c.data.description,
+  inLanguage: 'en',
+  datePublished: c.data.date.toISOString(),
+  ...(c.data.image ? { image: new URL(velky(c.data.image), SITE.url).href } : {}),
+  mainEntityOfPage: new URL(cesta, SITE.url).href,
+  author: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
+  publisher: { '@type': 'Organization', name: SITE.nazev, url: SITE.url },
+};
+const datum = c.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Base
+  title={c.data.seoTitle ?? c.data.title}
+  description={c.data.description}
+  obrazek={c.data.image}
+  typ="article"
+  publikovano={c.data.date.toISOString()}
+  jsonLd={jsonLd}
+  lang="en"
+  alternates={{ cs: c.data.cs, en: cesta }}
+  noindex={!EN_INDEXOVAT}
+>
+  <article>
+    <header class="clanek-head">
+      <div class="wrap">
+        <nav class="drobky" aria-label="Breadcrumb"><a href="/en/">Brunch in Prague</a> › <span>Guide</span></nav>
+        <h1>{c.data.title}</h1>
+        <p class="meta muted"><time datetime={c.data.date.toISOString()}>{datum}</time></p>
+      </div>
+    </header>
+    {
+      c.data.image && (
+        <div class="wrap">
+          <div class="clanek-foto">
+            <Foto src={c.data.image} alt={c.data.title} plna eager />
+          </div>
+        </div>
+      )
+    }
+    <div class="wrap">
+      <div class="prose clanek-text" set:html={obrazkyVHtml(c.body ?? '')} />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .clanek-head {
+    padding-block: clamp(28px, 5vw, 56px) clamp(20px, 3vw, 32px);
+  }
+  .clanek-head h1 {
+    max-width: 24ch;
+  }
+  .drobky {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--ink-soft);
+  }
+  .meta {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  .clanek-foto {
+    aspect-ratio: 16 / 8;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .clanek-text {
+    padding-block: clamp(32px, 5vw, 56px);
+    max-width: 46rem;
+    margin-inline: auto;
+  }
+</style>

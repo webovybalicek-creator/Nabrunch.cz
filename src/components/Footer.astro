@@ -5,8 +5,46 @@ import { mesta, lokalitaUrl, TEMATA, temaUrl } from '../lib/data';
 
 const topMesta = [...mesta()].sort((a, b) => b.podniky.length - a.podniky.length).slice(0, 8);
 const rok = new Date().getFullYear();
+interface Props {
+  lang?: 'cs' | 'en';
+}
+const en = Astro.props.lang === 'en';
 ---
 
+{
+  en ? (
+<footer class="ftr">
+  <div class="wrap ftr__grid">
+    <div class="ftr__o">
+      <a href="/en/" aria-label="naBrunch.cz – home" class="ftr__logo"><Logo svetle /></a>
+      <p>Hand-picked breakfast and brunch spots in Prague and across the Czech Republic – places we have visited ourselves.</p>
+      <p class="ftr__soc">
+        <a href={SITE.instagram} rel="noopener" target="_blank">Instagram</a>
+        <a href={SITE.facebook} rel="noopener" target="_blank">Facebook</a>
+      </p>
+    </div>
+    <nav aria-label="Prague">
+      <h2>Prague</h2>
+      <ul>
+        <li><a href="/en/">Brunch in Prague</a></li>
+        <li><a href="/en/best-brunch-prague-old-town/">Breakfast near Old Town</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="naBrunch.cz">
+      <h2>naBrunch.cz</h2>
+      <ul>
+        <li><a href="/" hreflang="cs" lang="cs">Česká verze</a></li>
+        <li><a href="/kontakt/">Contact</a></li>
+        <li><a href="/ochrana-osobnich-udaju/">Privacy policy (CZ)</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap ftr__spodek">
+    <span>© {rok} nabrunch.cz · Picked with love and appetite.</span>
+    <a href="https://webovybalicek.cz/" rel="noopener" target="_blank">by webovybalicek</a>
+  </div>
+</footer>
+  ) : (
 <footer class="ftr">
   <div class="wrap ftr__grid">
     <div class="ftr__o">
@@ -48,6 +86,8 @@ const rok = new Date().getFullYear();
     <a href="https://webovybalicek.cz/" rel="noopener" target="_blank">by webovybalicek</a>
   </div>
 </footer>
+  )
+}
 
 <style>
   .ftr {

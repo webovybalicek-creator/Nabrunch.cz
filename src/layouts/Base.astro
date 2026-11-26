@@ -18,9 +18,14 @@ interface Props {
   obrazek?: string;
   typ?: 'website' | 'article';
   publikovano?: string;
+  /** Jazyk stránky – anglická verze běží pod /en/ */
+  lang?: 'cs' | 'en';
+  /** Jazykové verze téže stránky (cesty), pro hreflang a přepínač jazyka */
+  alternates?: { cs?: string; en?: string };
 }
 
-const { title, jsonLd, noindex = false, obrazek, typ = 'website', publikovano } = Astro.props;
+const { title, jsonLd, noindex = false, obrazek, typ = 'website', publikovano, lang = 'cs', alternates } = Astro.props;
+const hreflang = alternates?.cs && alternates?.en ? alternates : undefined;
 // Stránky, které existovaly na WordPressu, si nechávají přesně stejný titulek (a popis, pokud byl) – kvůli pozicím ve vyhledávání
 const wp = (seoWp as Record<string, { t: string; d?: string }>)[decodeURI(Astro.url.pathname)];
 const popisCely = (wp?.d ?? Astro.props.description).replace(/\s+/g, ' ').trim();
@@ -33,7 +38,7 @@ const fullTitle = wp?.t ?? (/nabrunch/i.test(title) || title.length > 48 ? title
 ---
 
 <!doctype html>
-<html lang="cs">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,7 +54,16 @@ const fullTitle = wp?.t ?? (/nabrunch/i.test(title) || title.length > 48 ? title
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#FFF5F4" />
     <meta property="og:type" content={typ} />
-    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'cs_CZ'} />
+    {
+      hreflang && (
+        <>
+          <link rel="alternate" hreflang="cs" href={new URL(hreflang.cs!, SITE.url).href} />
+          <link rel="alternate" hreflang="en" href={new URL(hreflang.en!, SITE.url).href} />
+          <link rel="alternate" hreflang="x-default" href={new URL(hreflang.cs!, SITE.url).href} />
+        </>
+      )
+    }
     <meta property="og:site_name" content={SITE.nazev} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
@@ -72,14 +86,14 @@ const fullTitle = wp?.t ?? (/nabrunch/i.test(title) || title.length > 48 ? title
     <slot name="head" />
   </head>
   <body>
-    <a class="sr-only" href="#obsah">Přejít na obsah</a>
-    <Header />
+    <a class="sr-only" href="#obsah">{lang === 'en' ? 'Skip to content' : 'Přejít na obsah'}</a>
+    <Header lang={lang} alternates={alternates} />
     <main id="obsah">
       <slot />
     </main>
-    <OdberNovinek />
+    {lang === 'cs' && <OdberNovinek />}
     <slot name="za-newsletterem" />
-    <Footer />
+    <Footer lang={lang} />
     <script>
       import { inicializujSrdicka, inicializujPocitadlo } from '../scripts/oblibene';
       import { doplnHodnoceni } from '../scripts/hodnoceni-souhrn';

@@ -35,4 +35,18 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+// Anglické články (/en/<slug>/)
+const blogEn = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog-en' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    seoTitle: z.string().optional(),
+    date: z.coerce.date(),
+    image: z.string().optional(),
+    /** Česká verze článku (cesta) pro hreflang a přepínač jazyka */
+    cs: z.string().optional(),
+  }),
+});
+
+export const collections = { blog, blogEn };

@@ -1,0 +1,472 @@
+---
+// Anglická stránka podniku – jen pro podniky s překladem v src/data/en/podniky.json
+import Base from '../../../layouts/Base.astro';
+import Foto from '../../../components/Foto.astro';
+import Mapa from '../../../components/Mapa.astro';
+import { SITE } from '../../../lib/config';
+import { url, velky, vOkoli, tydenPodniku, type Podnik } from '../../../lib/data';
+import { schemaSpec } from '../../../lib/oteviraci-doba';
+import { PODNIKY_EN, enUrl, maEn, hodinyEn, nazevEn, EN_INDEXOVAT, type PodnikEnText } from '../../../lib/en';
+
+export function getStaticPaths() {
+  return PODNIKY_EN.map(({ p, en }) => ({ params: { slug: p.slug }, props: { p, en } }));
+}
+
+const { p, en } = Astro.props as { p: Podnik; en: PodnikEnText };
+const fotky = [p.foto, ...p.galerie];
+const jmeno = nazevEn(p);
+const hodiny = hodinyEn(p);
+const tyden = tydenPodniku(p);
+const alt = (i = 0) => `${jmeno}, ${en.oblast}, Prague – breakfast${i ? ` (photo ${i + 1})` : ''}`;
+const okoli = vOkoli(p, 12).filter(({ p: o }) => maEn(o)).slice(0, 4);
+const km = (n: number) => (n < 1 ? `${Math.round(n * 1000)} m` : `${n.toFixed(1)} km`);
+
+const dotazy: [string, string][] = [
+  ...(hodiny.length ? [[`What are the opening hours of ${jmeno}?`, `${jmeno} is open ${hodiny.join(', ')}.`] as [string, string]] : []),
+  [`Where is ${jmeno}?`, `${jmeno} is at ${p.adresa} (${en.oblast}, Prague).`],
+  ...(p.rezervace ? [[`Can I book a table at ${jmeno}?`, /^ne\b/i.test(p.rezervace) ? 'They do not take reservations – just walk in.' : 'Yes, reservations are possible.'] as [string, string]] : []),
+];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CafeOrCoffeeShop',
+    '@id': new URL(enUrl(p), SITE.url).href + '#place',
+    name: jmeno,
+    url: new URL(enUrl(p), SITE.url).href,
+    description: en.seoPopis,
+    inLanguage: 'en',
+    image: fotky.slice(0, 4).map((f) => new URL(velky(f), SITE.url).href),
+    address: { '@type': 'PostalAddress', streetAddress: p.adresa, addressLocality: 'Prague', addressCountry: 'CZ' },
+    ...(p.lat != null ? { geo: { '@type': 'GeoCoordinates', latitude: p.lat, longitude: p.lon } } : {}),
+    ...(p.telefon ? { telephone: p.telefon } : {}),
+    ...(p.web || p.instagramUrl ? { sameAs: [p.web, p.instagramUrl].filter(Boolean) } : {}),
+    ...(p.googleMaps ? { hasMap: p.googleMaps } : {}),
+    ...(tyden ? { openingHoursSpecification: schemaSpec(tyden) } : {}),
+    servesCuisine: ['Breakfast', 'Brunch'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: dotazy.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Brunch in Prague', item: new URL('/en/', SITE.url).href },
+      { '@type': 'ListItem', position: 2, name: jmeno },
+    ],
+  },
+];
+---
+
+<Base title={en.seoTitulek} description={en.seoPopis} obrazek={p.foto} jsonLd={jsonLd} lang="en" alternates={{ cs: url(p), en: enUrl(p) }} noindex={!EN_INDEXOVAT}>
+  <article>
+    <header class="detail-head">
+      <div class="wrap">
+        <nav class="drobky" aria-label="Breadcrumb"><a href="/en/">Brunch in Prague</a> › <span>{jmeno}</span></nav>
+        <div class="detail-head__row">
+          <div>
+            {p.doporuceny && <span class="srdcovka">♥ Our favourite</span>}
+            <h1>{jmeno}</h1>
+            <p class="detail-adr">📍 {p.adresa} · {en.oblast}</p>
+          </div>
+          <div class="detail-akce">
+            {p.googleMaps && <a class="btn btn--akcent" href={p.googleMaps} rel="noopener" target="_blank">Directions</a>}
+            {p.web && <a class="btn btn--ghost" href={p.web} rel="noopener nofollow" target="_blank">Website</a>}
+            {p.instagramUrl && <a class="btn btn--ghost" href={p.instagramUrl} rel="noopener nofollow" target="_blank">Instagram</a>}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <div class:list={['galerie', `galerie--${Math.min(fotky.length, 5)}`]}>
+        {
+          fotky.slice(0, 5).map((f, i) => (
+            <a href={velky(f)} class="galerie__f" target="_blank">
+              <Foto src={f} alt={alt(i)} plna={i === 0} eager={i === 0} />
+            </a>
+          ))
+        }
+      </div>
+
+      <div class="detail-grid">
+        <div>
+          <aside class="tip">
+            <span class="tip__h">🥞 Our brunch tip</span>
+            <div set:html={en.tip} />
+          </aside>
+          <div class="prose" set:html={en.popis} />
+          <section class="dotazy">
+            <h2>FAQ</h2>
+            {
+              dotazy.map(([q, a]) => (
+                <div class="dotazy__polozka">
+                  <h3>{q}</h3>
+                  <p>{a}</p>
+                </div>
+              ))
+            }
+          </section>
+        </div>
+
+        <aside class="info">
+          {
+            hodiny.length > 0 && (
+              <section>
+                <h2>Opening hours</h2>
+                <ul class="info__doba">{hodiny.map((r) => <li>{r}</li>)}</ul>
+                <p class="muted info__pozn">Hours can change on public holidays – check the café's Instagram before you go.</p>
+              </section>
+            )
+          }
+          <section>
+            <h2>Contact</h2>
+            <dl>
+              <dt>Address</dt>
+              <dd>{p.adresa}</dd>
+              {p.telefon && (<><dt>Phone</dt><dd><a href={`tel:${p.telefon}`}>{p.telefonText ?? p.telefon}</a></dd></>)}
+              {p.web && (<><dt>Website</dt><dd><a href={p.web} rel="noopener nofollow" target="_blank">{p.web.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</a></dd></>)}
+              {p.platba.length > 0 && (<><dt>Payment</dt><dd>{p.platba.map((x) => (x === 'Kartou' ? 'Card' : x === 'Hotově' ? 'Cash' : x)).join(', ')}</dd></>)}
+            </dl>
+          </section>
+          {p.lat != null && <Mapa podniky={[]} body={[[p.lat, p.lon!, jmeno, enUrl(p), p.adresa, 0]]} popis={`Map – ${jmeno}`} />}
+          <p class="info__chyba muted">
+            Something not right? <a href={`mailto:${SITE.email}?subject=${encodeURIComponent(`Correction: ${jmeno}`)}`}>Let us know</a>.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </article>
+
+  {
+    okoli.length > 0 && (
+      <section class="section">
+        <div class="wrap">
+          <h2>More breakfast nearby</h2>
+          <ul class="okoli-en">
+            {okoli.map(({ p: o, km: d }) => (
+              <li>
+                <a href={enUrl(o)}>
+                  <Foto src={o.foto} alt={`${nazevEn(o)} – breakfast in Prague`} />
+                  <strong>{nazevEn(o)}</strong>
+                  <span class="muted">{km(d)} away</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
+</Base>
+<style>
+  .detail-head {
+    padding-block: clamp(24px, 4vw, 44px) 1.5rem;
+  }
+  .detail-head__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.25rem 2rem;
+  }
+  .detail-head h1 {
+    margin-bottom: 0.25em;
+  }
+  .srdcovka {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.25em 0.8em;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font: 600 0.78rem/1.3 var(--f-display);
+  }
+  .dotazy {
+    margin-top: 2.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--line);
+  }
+  .dotazy h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+  .dotazy__polozka {
+    padding: 0.85rem 0;
+    border-bottom: 1px dashed var(--line);
+  }
+  .dotazy__polozka:last-child {
+    border-bottom: 0;
+  }
+  .dotazy h3 {
+    font-size: 1rem;
+    margin: 0 0 0.3rem;
+  }
+  .dotazy p {
+    margin: 0;
+    color: var(--ink-soft);
+    max-width: none;
+  }
+  .detail-hod {
+    display: inline-block;
+    margin: -0.35rem 0 0.75rem;
+    text-decoration: none;
+  }
+  .detail-hod .hod-mini {
+    font-size: 0.9rem;
+  }
+  .detail-adr {
+    margin: 0 0 0.75rem;
+    color: var(--ink-soft);
+  }
+  .detail-tagy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0;
+  }
+  .detail-akce {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .galerie {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    height: clamp(260px, 42vw, 480px);
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .galerie__f {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--cream);
+  }
+  .galerie__f:first-child {
+    grid-row: span 2;
+  }
+  .galerie--1 {
+    grid-template-columns: 1fr;
+  }
+  .galerie--2 {
+    grid-template-columns: 2fr 1fr;
+  }
+  .galerie--2 .galerie__f:nth-child(2) {
+    grid-row: span 2;
+  }
+  .galerie--3 {
+    grid-template-columns: 2fr 1fr;
+  }
+  .galerie--4 .galerie__f:nth-child(4) {
+    grid-column: span 2;
+  }
+  .galerie__vic {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgb(83 42 25 / 0.45);
+    color: #fff;
+    font: 600 1.5rem var(--f-display);
+  }
+  @media (max-width: 640px) {
+    .galerie {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 2fr 1fr;
+      height: 420px;
+    }
+    .galerie__f:first-child {
+      grid-column: span 2;
+      grid-row: auto;
+    }
+    .galerie__f:nth-child(n + 4) {
+      display: none;
+    }
+  }
+  .lightbox {
+    width: min(96vw, 1200px);
+    max-height: 92vh;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
+    background: #1b120d;
+  }
+  .lightbox::backdrop {
+    background: rgb(20 12 8 / 0.85);
+  }
+  .lightbox img {
+    width: 100%;
+    max-height: 92vh;
+    object-fit: contain;
+  }
+  .lb-x,
+  .lb-sip {
+    position: absolute;
+    border: 0;
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: rgb(255 255 255 / 0.9);
+    color: var(--brown-dark);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .lb-x {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  .lb-sip {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .lb-sip--l {
+    left: 0.75rem;
+  }
+  .lb-sip--p {
+    right: 0.75rem;
+  }
+  .detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 22rem;
+    gap: clamp(2rem, 5vw, 4rem);
+    padding-block: clamp(32px, 5vw, 56px);
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .tip {
+    margin-bottom: 2rem;
+    padding: 1.4rem 1.6rem;
+    background: var(--blush);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--accent);
+  }
+  .tip__h {
+    display: block;
+    margin-bottom: 0.4rem;
+    font: 600 1.05rem var(--f-display);
+    color: var(--brown-dark);
+  }
+  .tip :global(p) {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+  .detail-temata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 2rem;
+    font-weight: 500;
+  }
+  .info {
+    position: sticky;
+    top: 90px;
+    display: grid;
+    gap: 1.25rem;
+  }
+  @media (max-width: 900px) {
+    .info {
+      position: static;
+    }
+  }
+  .info section {
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+  }
+  .info h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+  .info__stav {
+    margin: -0.35rem 0 0.6rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-height: 1.4em;
+  }
+  .info__stav :global([data-stav='open']) {
+    color: var(--green);
+  }
+  .info__stav :global([data-stav='closed']) {
+    color: var(--accent-deep);
+  }
+  .info__doba {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.25rem;
+    font-size: 0.95rem;
+  }
+  .info dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.45rem 1rem;
+    font-size: 0.92rem;
+  }
+  .info dt {
+    color: var(--ink-soft);
+  }
+  .info dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .info :global(.mapa) {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+  .info__chyba {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .karty--blog {
+    grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
+  }
+  .okoli-km {
+    margin-top: 1.5rem;
+    font-size: 0.82rem;
+    max-width: none;
+  }
+  .drobky {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--ink-soft);
+  }
+  .info__pozn {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .okoli-en {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(14rem, 46%), 1fr));
+    gap: 1.25rem;
+  }
+  .okoli-en a {
+    display: grid;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .okoli-en :global(img) {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    width: 100%;
+  }
+</style>

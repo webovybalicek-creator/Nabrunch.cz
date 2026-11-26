@@ -1,0 +1,122 @@
+---
+// Anglická úvodní stránka – zatím jen Praha
+import Base from '../../layouts/Base.astro';
+import Foto from '../../components/Foto.astro';
+import Mapa from '../../components/Mapa.astro';
+import { SITE } from '../../lib/config';
+import { PODNIKY_EN, enUrl, hodinyEn, nazevEn, EN_INDEXOVAT } from '../../lib/en';
+
+const mista = [...PODNIKY_EN].sort((a, b) => Number(b.p.doporuceny) - Number(a.p.doporuceny));
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Best breakfast and brunch in Prague',
+  itemListElement: mista.map(({ p }, i) => ({ '@type': 'ListItem', position: i + 1, url: new URL(enUrl(p), SITE.url).href, name: nazevEn(p) })),
+};
+---
+
+<Base
+  title="Best Brunch & Breakfast in Prague – local guide"
+  description="Where to have breakfast and brunch in Prague: hand-picked cafés and bistros we have visited ourselves, with photos, opening hours and a map. By naBrunch.cz."
+  jsonLd={jsonLd}
+  lang="en"
+  alternates={{ cs: '/lokalita/praha/', en: '/en/' }}
+  noindex={!EN_INDEXOVAT}
+>
+  <section class="hero-en">
+    <div class="wrap">
+      <span class="eyebrow">Prague · hand-picked by locals</span>
+      <h1>Best brunch &amp; breakfast <span class="akcent">in Prague</span></h1>
+      <p class="lead">
+        We are naBrunch.cz – the Czech guide to breakfast and brunch. Every place here we have visited ourselves: real cafés where Praguers eat, with good coffee, fair prices and
+        opening hours you can trust.
+      </p>
+      <p><a class="btn btn--akcent" href="/en/best-brunch-prague-old-town/">Breakfast near Old Town Square →</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Our breakfast picks in Prague</h2>
+      <ul class="mista">
+        {
+          mista.map(({ p, en }) => (
+            <li>
+              <a href={enUrl(p)}>
+                <div class="mista__foto"><Foto src={p.foto} alt={`${nazevEn(p)} – breakfast in ${en.oblast}, Prague`} /></div>
+                <strong>{nazevEn(p)}</strong>
+                <span class="muted">{en.oblast}</span>
+                {hodinyEn(p)[0] && <span class="mista__h">🕗 {hodinyEn(p)[0]}</span>}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--blush">
+    <div class="wrap">
+      <h2>Map</h2>
+      <Mapa podniky={[]} body={mista.filter(({ p }) => p.lat != null).map(({ p }) => [p.lat!, p.lon!, nazevEn(p), enUrl(p), p.adresa, 0])} popis="Map of breakfast places in Prague" />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero-en {
+    padding-block: clamp(110px, 14vw, 150px) clamp(32px, 5vw, 56px);
+    background: linear-gradient(180deg, var(--blush), var(--paper));
+  }
+  .hero-en h1 {
+    max-width: 18ch;
+  }
+  .akcent {
+    color: var(--accent);
+  }
+  .lead {
+    max-width: 46rem;
+    font-size: 1.1rem;
+  }
+  .eyebrow {
+    display: block;
+    margin-bottom: 0.8rem;
+    font: 600 0.78rem/1.3 var(--f-display);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-deep);
+  }
+  .mista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(15rem, 46%), 1fr));
+    gap: 2rem clamp(0.75rem, 2vw, 1.5rem);
+  }
+  .mista a {
+    display: grid;
+    gap: 0.3rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .mista__foto {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--cream);
+    margin-bottom: 0.4rem;
+  }
+  .mista__foto :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .mista strong {
+    font-family: var(--f-display);
+    font-size: 1.1rem;
+  }
+  .mista__h {
+    font-size: 0.88rem;
+  }
+</style>
