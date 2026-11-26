@@ -9,6 +9,7 @@ import { souhrnHodnoceni } from '../../lib/hodnoceni';
 import Mapa from '../../components/Mapa.astro';
 import BlogKarta from '../../components/BlogKarta.astro';
 import { SITE } from '../../lib/config';
+import { maEn, enUrl, EN_INDEXOVAT } from '../../lib/en';
 import {
   PODNIKY,
   url,
@@ -105,7 +106,7 @@ const jsonLd = dotazy.length
   : podnikLd;
 ---
 
-<Base title={title} description={description} obrazek={p.foto} jsonLd={jsonLd}>
+<Base title={title} description={description} obrazek={p.foto} jsonLd={jsonLd} alternates={EN_INDEXOVAT && maEn(p) ? { cs: url(p), en: enUrl(p) } : undefined}>
   <article>
     <header class="detail-head">
       <div class="wrap">

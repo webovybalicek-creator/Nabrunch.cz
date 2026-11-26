@@ -48,7 +48,7 @@ const jsonLd = dotazy.length
 const description = `${podnikuText(l.podniky.length)} na snídani a brunch ${kde}${srdcovky ? `, z toho ${pocetText(srdcovky, 'naše srdcovka', 'naše srdcovky', 'našich srdcovek')}` : ''}. Adresy, otevírací doba, mapa a naše tipy, co si dát.`;
 ---
 
-<Base title={titulek} description={description} jsonLd={jsonLd}>
+<Base title={titulek} description={description} jsonLd={jsonLd} alternates={Astro.url.pathname === '/lokalita/praha/' ? { cs: '/lokalita/praha/', en: '/en/' } : undefined}>
   <header class="page-head">
     <div class="wrap">
       <Breadcrumb

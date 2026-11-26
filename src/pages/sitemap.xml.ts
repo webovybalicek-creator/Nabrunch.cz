@@ -3,11 +3,14 @@ import { SITE } from '../lib/config';
 import { PODNIKY, velky, url, lokality, lokalitaUrl, TEMATA, temaUrl, kombinace, kombinaceUrl } from '../lib/data';
 import { KAVARNY, mestaKavaren, indexovatMesto, indexovatKavarnu, kavarnaUrl, mestoKavarenUrl } from '../lib/kavarny';
 import { clanky, clanekUrl, KATEGORIE, kategorieUrl } from '../lib/blog';
+import { getCollection } from 'astro:content';
+import { PODNIKY_EN, enUrl, EN_INDEXOVAT } from '../lib/en';
 
 const den = (d: string | Date) => new Date(d).toISOString().slice(0, 10);
 
 export const GET: APIRoute = async () => {
   const vse = await clanky();
+  const clankyEn = EN_INDEXOVAT ? await getCollection('blogEn') : [];
   const posledni = den(PODNIKY.reduce((m, p) => (p.datum > m ? p.datum : m), '2025-01-01'));
   const polozky: { loc: string; lastmod?: string; obrazky?: string[] }[] = [
     { loc: '/', lastmod: posledni },
@@ -30,6 +33,10 @@ export const GET: APIRoute = async () => {
       .filter(indexovatMesto)
       .map((m) => ({ loc: mestoKavarenUrl(m.slug), lastmod: den(m.kavarny.reduce((x, k) => (k.zverejnit! > x ? k.zverejnit! : x), '2026-01-01')) })),
     ...KAVARNY.filter(indexovatKavarnu).map((k) => ({ loc: kavarnaUrl(k), lastmod: den(k.zverejnit!) })),
+    // Anglická verze
+    ...(EN_INDEXOVAT ? [{ loc: '/en/', lastmod: posledni }] : []),
+    ...(EN_INDEXOVAT ? PODNIKY_EN.map(({ p }) => ({ loc: enUrl(p), lastmod: den(p.datum.replace(' ', 'T')), obrazky: [p.foto].filter(Boolean) })) : []),
+    ...clankyEn.map((c) => ({ loc: `/en/${c.id}/`, lastmod: den(c.data.date), obrazky: c.data.image ? [c.data.image] : [] })),
     ...['/o-nas/', '/kontakt/', '/pridat-podnik/', '/casto-kladene-dotazy/', '/obchodni-podminky/', '/ochrana-osobnich-udaju/'].map((loc) => ({ loc })),
   ];
   const body =

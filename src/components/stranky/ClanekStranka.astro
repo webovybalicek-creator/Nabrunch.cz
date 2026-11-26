@@ -5,6 +5,8 @@ import Foto from '../Foto.astro';
 import Karta from '../Karta.astro';
 import BlogKarta from '../BlogKarta.astro';
 import { SITE } from '../../lib/config';
+import { getCollection } from 'astro:content';
+import { EN_INDEXOVAT } from '../../lib/en';
 import { velky, obrazkyVHtml, PODNIKY, altFoto, mesta, lokalitaUrl, podnikuText } from '../../lib/data';
 import { slugify } from '../../lib/slug';
 import { nazev, clanky, clanekUrl, kategorie, kategorieUrl, casCteni, datumText, perex, souvisejici, zminenePodniky, type Clanek } from '../../lib/blog';
@@ -13,6 +15,8 @@ interface Props {
   c: Clanek;
 }
 const { c } = Astro.props;
+const enClanek = EN_INDEXOVAT ? (await getCollection('blogEn')).find((e) => e.data.cs === clanekUrl(c)) : undefined;
+const alternates = enClanek ? { cs: clanekUrl(c), en: `/en/${enClanek.id}/` } : undefined;
 const vse = await clanky();
 // Blok „Kam na kávu a snídani“ na konci článku: nejčastější města
 const mestaCta = [...mesta()].sort((a, b) => b.podniky.length - a.podniky.length).slice(0, 6);
@@ -110,7 +114,7 @@ const jsonLd = r
   : blogPosting;
 ---
 
-<Base title={titulek} description={popis} obrazek={c.data.image} typ="article" publikovano={c.data.date.toISOString()} jsonLd={jsonLd}>
+<Base title={titulek} description={popis} obrazek={c.data.image} typ="article" publikovano={c.data.date.toISOString()} jsonLd={jsonLd} alternates={alternates}>
   <article>
     <header class="clanek-head">
       <div class="wrap">

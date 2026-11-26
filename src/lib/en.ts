@@ -12,7 +12,7 @@ export interface PodnikEnText {
 }
 
 /** Dokud není fáze 1 hotová, anglické stránky nejsou ve vyhledávačích ani v sitemapě */
-export const EN_INDEXOVAT = false;
+export const EN_INDEXOVAT = true;
 
 const texty = podnikyEn as Record<string, PodnikEnText>;
 

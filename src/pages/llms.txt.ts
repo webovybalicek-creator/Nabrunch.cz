@@ -4,6 +4,8 @@ import { PODNIKY, url, mesta, lokalitaUrl, TEMATA, temaUrl, podnikyTematu, podni
 import { KAVARNY } from '../lib/kavarny';
 import { clanky, clanekUrl, nazev, perex } from '../lib/blog';
 import { dobaText } from '../lib/dotazy';
+import { getCollection } from 'astro:content';
+import { PODNIKY_EN, enUrl, nazevEn, EN_INDEXOVAT } from '../lib/en';
 
 // /llms.txt – stručný přehled webu pro AI vyhledávače a asistenty (formát llmstxt.org).
 // Obsahuje jen fakta z dat: ověřené podniky s adresou a otevírací dobou, témata a články.
@@ -57,6 +59,12 @@ export const GET: APIRoute = async () => {
 
   const vse = await clanky();
   radky.push('', '## Články', '', ...vse.slice(0, 40).map((c) => `- [${nazev(c)}](${abs(clanekUrl(c))}): ${perex(c, 140)}`));
+  if (EN_INDEXOVAT) {
+    const en = await getCollection('blogEn');
+    radky.push('', '## English version (Prague)', '', `- [Best brunch & breakfast in Prague](${abs('/en/')}): English guide to ${PODNIKY_EN.length} verified places in Prague`);
+    radky.push(...en.map((c) => `- [${c.data.title}](${abs(`/en/${c.id}/`)}): ${c.data.description}`));
+    radky.push(...PODNIKY_EN.map(({ p, en: e }) => `- [${nazevEn(p)}](${abs(enUrl(p))}): ${e.oblast}, ${p.adresa}`));
+  }
   radky.push('', '## Kontakt', '', `- E-mail redakce: ${SITE.email}`, `- Přidat podnik: ${abs('/pridat-podnik/')}`, '');
 
   return new Response(radky.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
