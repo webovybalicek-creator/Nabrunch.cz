@@ -1,12 +1,12 @@
 ---
-title: "Snídaně a brunch na Žižkově: 7 ověřených tipů"
+title: "Snídaně a brunch na Žižkově: 8 ověřených tipů"
 description: "Kam na snídani nebo brunch na Žižkově? Seifert's Brunch, Sladká cesta, Dobrotéka, SOMA, Cafefin, Pomalu pomalu a Sensu Cafe. Co si dát a kdy mají otevřeno."
-seoTitle: "Brunch Žižkov: 7 tipů na snídani a brunch | naBrunch.cz"
+seoTitle: "Brunch Žižkov: 8 tipů na snídani a brunch | naBrunch.cz"
 date: "2026-11-22T13:00:00"
 image: "/wp-content/uploads/2026/11/seiferts-brunch-praha-1.jpg"
 ---
 
-<p>Žižkov už dávno není jen čtvrť hospod. V Hartigově ulici, kolem náměstí Jiřího z Poděbrad a pod Vítkovem vyrostla řada kaváren a bister, kam se vyplatí vyrazit na pořádnou snídani. Vybrali jsme <strong>7 ověřených míst, kam na snídani a brunch na Žižkově</strong> – od české snídaně přes bagely z vlastní pekárny až po matchu.</p>
+<p>Žižkov už dávno není jen čtvrť hospod. V Hartigově ulici, kolem náměstí Jiřího z Poděbrad a pod Vítkovem vyrostla řada kaváren a bister, kam se vyplatí vyrazit na pořádnou snídani. Vybrali jsme <strong>8 ověřených míst, kam na snídani a brunch na Žižkově</strong> – od české snídaně přes bagely z vlastní pekárny až po matchu.</p>
 
 <h2>Hartigova ulice</h2>
 
@@ -27,6 +27,10 @@ image: "/wp-content/uploads/2026/11/seiferts-brunch-praha-1.jpg"
 <h3>👉🏼 <a href="/podniky/soma-praha/">SOMA</a></h3>
 <p>Světlá kavárna v Seifertově ulici s výběrovou kávou od několika pražíren a snídaněmi celé dopoledne. Ideální i na práci s notebookem. Ve všední dny od 8:00, o víkendu od 9:00.</p>
 <p>🍳 <strong>Co si dát:</strong> dýňový chlebíček s cream cheese krémem.</p>
+
+<h3>👉🏼 <a href="/podniky/golden-egg-zizkov-praha/">Golden Egg</a></h3>
+<p>Bistro, kde všechno točí kolem vajec z volného výběhu – vejce Benedikt, omelety a brioše s vejcem. Pár minut od hlavního nádraží, ve všední dny od 8:00, o víkendu od 9:00.</p>
+<p>🍳 <strong>Co si dát:</strong> vejce Benedikt s lososem a na sladko lívance.</p>
 
 <h2>Kolem Jiřáku</h2>
 

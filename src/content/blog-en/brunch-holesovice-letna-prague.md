@@ -23,6 +23,9 @@ cs: "/brunch-holesovice-letna/"
 <h3>👉🏼 <a href="/en/places/la-forme-holesovice-praha/">La Forme Holešovice</a></h3>
 <p>One of Prague's best bakeries – French toast with caramelised peaches, quark pancakes and filled croissants.</p>
 
+<h3>👉🏼 <a href="/en/places/supernova-bakehouse-holesovice-praha/">Supernova Bakehouse</a></h3>
+<p>The Holešovice branch of the Karlín bakery, with a full breakfast menu – house croissants, the Supernova breakfast and milky rice with cinnamon bun crumble.</p>
+
 <h3>👉🏼 <a href="/en/places/mama-shelter-praha/">Mama Shelter</a></h3>
 <p>Sunday all-you-can-eat brunch buffet, 12:00–15:00.</p>
 

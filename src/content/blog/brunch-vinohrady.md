@@ -1,12 +1,12 @@
 ---
-title: "Snídaně a brunch na Vinohradech: 10 ověřených tipů"
+title: "Snídaně a brunch na Vinohradech: 11 ověřených tipů"
 description: "Kam na snídani nebo brunch na Vinohradech? Spižírna 1902, Srnky, Laskavá, TISSE, Pomalu pomalu, Cafefin a další. Co si dát, kde mají lívance a kde pejsky."
-seoTitle: "Brunch Vinohrady: 10 nejlepších míst na snídani | naBrunch.cz"
+seoTitle: "Brunch Vinohrady: 11 nejlepších míst na snídani | naBrunch.cz"
 date: "2026-11-22T17:40:00"
 image: "/wp-content/uploads/2026/11/spizirna-1902-praha-1.jpg"
 ---
 
-<p>Vinohrady jsou pro brunch jako stvořené – secesní domy, stromořadí, parky Riegrovy sady a Havlíčkovy sady a na každém rohu kavárna. Vybrali jsme <strong>10 ověřených míst, kam na snídani a brunch na Vinohradech</strong>, od náměstí Míru až po Jiřák. U každého najdete, co si dát a od kolika mají otevřeno.</p>
+<p>Vinohrady jsou pro brunch jako stvořené – secesní domy, stromořadí, parky Riegrovy sady a Havlíčkovy sady a na každém rohu kavárna. Vybrali jsme <strong>11 ověřených míst, kam na snídani a brunch na Vinohradech</strong>, od náměstí Míru až po Jiřák. U každého najdete, co si dát a od kolika mají otevřeno.</p>
 
 <h2>Kolem náměstí Míru</h2>
 
@@ -21,6 +21,10 @@ image: "/wp-content/uploads/2026/11/spizirna-1902-praha-1.jpg"
 <h3>👉🏼 <a href="/podniky/o-mai-coffee-brunch-praha/">ô-mai Coffee &amp; Brunch</a> – Belgická</h3>
 <p>Stylová kavárna na pomalé snídaně s avokádovými toasty a domácími dezerty. Otevřeno od úterý do neděle od 9:00.</p>
 <p>🍳 <strong>Co si dát:</strong> avokádový toast s lososem a iced matcha mango.</p>
+
+<h3>👉🏼 <a href="/podniky/matoka-georgian-vinohrady-praha/">Matoka Georgian</a> – Slezská</h3>
+<p>Gruzínské brunch cafe kousek od náměstí Míru. Snídaně každý den od 8:00 do 15:00 – gruzínské omelety, syrniky a hlavně khachapuri. Rezervace nepřijímají.</p>
+<p>🧀 <strong>Co si dát:</strong> khachapuri Acharuli se sýrem a vejcem a dort Napoleon.</p>
 
 <h3>👉🏼 <a href="/podniky/yorkmut-cafe-praha/">Yorkmut Café</a> – Londýnská</h3>
 <p>Kavárna, kde vás přivítají psí kamarádi. Káva, pečivo, dezerty a zapečené chleby v klidném prostředí.</p>

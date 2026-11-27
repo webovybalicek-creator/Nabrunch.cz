@@ -40,6 +40,9 @@ cs: "/brunch-vinohrady/"
 <h3>👉🏼 <a href="/en/places/o-mai-coffee-brunch-praha/">O-Mai Coffee &amp; Brunch</a></h3>
 <p>Avocado toasts, vegetarian options and creative matcha drinks.</p>
 
+<h3>👉🏼 <a href="/en/places/matoka-georgian-vinohrady-praha/">Matoka Georgian</a></h3>
+<p>Georgian brunch café near Náměstí Míru: breakfast 8:00–15:00, syrniki and khachapuri Acharuli – a bread boat with cheese and egg.</p>
+
 <h3>👉🏼 <a href="/en/places/yorkmut-cafe-praha/">Yorkmut Café</a></h3>
 <p>A dog café – coffee and baked sandwiches with friendly resident dogs.</p>
 

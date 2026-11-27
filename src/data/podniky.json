@@ -8767,5 +8767,151 @@
    "/wp-content/uploads/2026/11/creperie-u-slepicek-pruhonice-3.jpg",
    "/wp-content/uploads/2026/11/creperie-u-slepicek-pruhonice-4.jpg"
   ]
+ },
+ {
+  "id": 2420,
+  "slug": "supernova-bakehouse-holesovice-praha",
+  "nazev": "Supernova Bakehouse Holešovice",
+  "datum": "2026-11-27 11:37:33",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 7",
+   "Praha"
+  ],
+  "adresa": "Na Zátorách 3, Praha 7 – Holešovice",
+  "lat": 50.108117,
+  "lon": 14.437881,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 18:00",
+   "So - Ne: 9:00 - 18:00"
+  ],
+  "web": "https://supernovabakehouse.cz/",
+  "instagram": "@supernova_bakehouse",
+  "instagramUrl": "https://www.instagram.com/supernova_bakehouse/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Supernova+Bakehouse+Holešovice,+Na+Zátorách+3,+Praha+7+–+Holešovice",
+  "rezervace": "Ne",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si mléčnou rýži s cinnamon bun crumble a višněmi a k tomu pistáciový croissant. Na slano Supernova breakfast s vejci a párky z Amasa.</p>",
+  "popis": "<p>Supernova Bakehouse v ulici Na Zátorách v Holešovicích je druhá pobočka oblíbené karlínské pekárny. Na rozdíl od Karlína, kde je espresso bar hlavně na kávu a pečivo, tady mají <strong>plnou snídaňovou nabídku</strong>. Prostor je světlý, s velkými okny, dlouhým barem a stěnou barevných krabic.</p>\n\n<h2 class=\"wp-block-heading\">Croissanty a snídaně</h2>\n\n<p>Každý den pečou vlastní croissanty a sladké i slané pečivo – dvoubarevné pistáciové croissanty, croissanty se slaným karamelem nebo cinnamon buny. K snídani je <strong>Supernova breakfast</strong> (míchaná vejce, párky z Amasa, gouda, chleba, máslo a marmeláda), tři míchaná vejce s bylinkovým máslem, sendvič s pastrami a sýrem, <strong>mléčná rýže s vanilkou, cinnamon bun crumble a višněmi</strong> nebo řecký jogurt s ořechovou granolou a medem. Vejce jsou z farmy Valcha, chleba ze Zrno Zrnko.</p>\n\n<p>Ke kávě espresso, flat white, batch brew, matcha latte nebo iced strawberry banana matcha. Otevřeno <strong>ve všední dny od 8:00</strong>, o víkendu od 9:00.</p>",
+  "seoTitulek": "Supernova Bakehouse Holešovice – croissanty a snídaně",
+  "seoPopis": "Supernova Bakehouse Na Zátorách v Holešovicích: vlastní croissanty, Supernova breakfast, mléčná rýže s cinnamon bun crumble a matcha. Od 8:00.",
+  "foto": "/wp-content/uploads/2026/11/supernova-bakehouse-holesovice-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/supernova-bakehouse-holesovice-praha-2.jpg",
+   "/wp-content/uploads/2026/11/supernova-bakehouse-holesovice-praha-3.jpg",
+   "/wp-content/uploads/2026/11/supernova-bakehouse-holesovice-praha-4.jpg",
+   "/wp-content/uploads/2026/11/supernova-bakehouse-holesovice-praha-5.jpg",
+   "/wp-content/uploads/2026/11/supernova-bakehouse-holesovice-praha-6.jpg"
+  ]
+ },
+ {
+  "id": 2421,
+  "slug": "golden-egg-zizkov-praha",
+  "nazev": "Golden Egg Žižkov",
+  "datum": "2026-11-27 11:37:33",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 3",
+   "Praha"
+  ],
+  "adresa": "Seifertova 1840/2, Praha 3 – Žižkov",
+  "lat": 50.0850359,
+  "lon": 14.4422219,
+  "oteviraciDoba": [
+   "Po - Pá: 8:00 - 16:00",
+   "So - Ne: 9:00 - 16:00"
+  ],
+  "web": "https://goldenegg.cz/",
+  "instagram": "@goldeneggcz",
+  "instagramUrl": "https://www.instagram.com/goldeneggcz/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Golden+Egg+Žižkov,+Seifertova+1840/2,+Praha+3+–+Žižkov",
+  "rezervace": "Ano, online",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Dejte si vejce Benedikt s lososem na brioši a na sladko lívance. O víkendu si stůl raději zarezervujte.</p>",
+  "popis": "<p>Golden Egg je bistro postavené na lásce k vejcím. Pobočka v Seifertově ulici na Žižkově je pár minut chůze od hlavního nádraží. Sami si říkají „poctivý fast food“ – v každém jídle hraje hlavní roli vejce, a to výhradně <strong>z volného výběhu</strong>.</p>\n\n<h2 class=\"wp-block-heading\">Vejce na všechny způsoby</h2>\n\n<p>Na menu jsou <strong>vejce Benedikt s lososem nebo se šunkou</strong>, omeleta, míchaná vejce, omeleta nebo míchaná s avokádem a sendviče s vejci v čerstvé brioši z místní pekárny (brioš vám na přání bez příplatku vymění za salát). Na sladko <strong>lívance</strong> nebo matcha tiramisu. K tomu italská káva, čerstvý pomerančový džus a domácí limonády z ovocného rozvaru.</p>\n\n<p>Otevřeno <strong>ve všední dny od 8:00</strong>, o víkendu od 9:00, vždy do 16:00. Bývá plno, proto doporučují online rezervaci.</p>",
+  "seoTitulek": "Golden Egg Žižkov – vejce Benedikt a snídaně u nádraží",
+  "seoPopis": "Golden Egg v Seifertově na Žižkově: bistro s vejci z volného výběhu – vejce Benedikt, omelety, brioše s vejcem a lívance. Ve všední dny od 8:00.",
+  "foto": "/wp-content/uploads/2026/11/golden-egg-zizkov-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/golden-egg-zizkov-praha-2.jpg",
+   "/wp-content/uploads/2026/11/golden-egg-zizkov-praha-3.jpg",
+   "/wp-content/uploads/2026/11/golden-egg-zizkov-praha-4.jpg",
+   "/wp-content/uploads/2026/11/golden-egg-zizkov-praha-5.jpg"
+  ]
+ },
+ {
+  "id": 2422,
+  "slug": "matoka-georgian-vinohrady-praha",
+  "nazev": "Matoka Georgian",
+  "datum": "2026-11-27 11:37:33",
+  "doporuceny": false,
+  "lokality": [
+   "Praha 2",
+   "Praha"
+  ],
+  "adresa": "Slezská 1357/1, Praha 2 – Vinohrady",
+  "lat": 50.0759763,
+  "lon": 14.4379638,
+  "oteviraciDoba": [
+   "Po - Ne: 8:00 - 20:00"
+  ],
+  "web": "https://matokageorgian.com/cs",
+  "instagram": "@matokageorgian",
+  "instagramUrl": "https://www.instagram.com/matokageorgian/",
+  "telefon": null,
+  "telefonText": null,
+  "googleMaps": "https://www.google.com/maps/search/?api=1&query=Matoka+Georgian,+Slezská+1357/1,+Praha+2+–+Vinohrady",
+  "rezervace": "Ne",
+  "platba": [],
+  "wifi": null,
+  "wc": null,
+  "kuchyne": [
+   "Klasická",
+   "Orientální"
+  ],
+  "atmosfera": [
+   "Sezení uvnitř",
+   "Instagram-friendly místo"
+  ],
+  "sezeni": [],
+  "tipNadpis": "Náš brunch tip",
+  "tip": "<p>Ke snídani si dejte khachapuri Acharuli – lodičku se sýrem a vejcem, kterou před jídlem promícháte. Na sladko syrniky se zakysanou smetanou a višněmi a k tomu kousek dortu Napoleon.</p>",
+  "popis": "<p>Matoka Georgian je gruzínská pekárna, kavárna a brunch cafe. Pobočka ve Slezské ulici, kousek od náměstí Míru na Vinohradech, je jejich brunch cafe s plnou kuchyní. Další dvě pobočky (Anglická 1 a Hartigova 61) fungují jako pekárny a kavárny.</p>\n\n<h2 class=\"wp-block-heading\">Gruzínská snídaně</h2>\n\n<p>Snídaně se podávají <strong>každý den od 8:00 do 15:00</strong>. Ochutnáte gruzínské omelety s gruzínským chlebem – Zhuzhuna se špenátem, Limo se sýrem, Nino s krůtí slaninou nebo Nonna s ajapsandalem (dušenou zeleninou). Na sladko <strong>domácí syrniky</strong> (tvarohové lívanečky) se zakysanou smetanou, džemem a višněmi nebo palačinky.</p>\n\n<p>Hlavní hvězdou je ale <strong>khachapuri</strong> – hlavně Acharuli, lodička z těsta se sýrem a vejcem. Dále khinkali (gruzínské taštičky), polévky, saláty a legendární vrstvený dort <strong>Napoleon</strong>. Rezervace nepřijímají.</p>",
+  "seoTitulek": "Matoka Georgian Vinohrady – gruzínská snídaně a khachapuri",
+  "seoPopis": "Matoka Georgian ve Slezské u náměstí Míru: gruzínské snídaně 8–15, khachapuri Acharuli se sýrem a vejcem, syrniky, khinkali a dort Napoleon.",
+  "foto": "/wp-content/uploads/2026/11/matoka-georgian-vinohrady-praha-1.jpg",
+  "galerie": [
+   "/wp-content/uploads/2026/11/matoka-georgian-vinohrady-praha-2.jpg",
+   "/wp-content/uploads/2026/11/matoka-georgian-vinohrady-praha-3.jpg",
+   "/wp-content/uploads/2026/11/matoka-georgian-vinohrady-praha-4.jpg",
+   "/wp-content/uploads/2026/11/matoka-georgian-vinohrady-praha-5.jpg",
+   "/wp-content/uploads/2026/11/matoka-georgian-vinohrady-praha-6.jpg"
+  ]
  }
 ]

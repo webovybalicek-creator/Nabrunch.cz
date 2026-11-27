@@ -1,6 +1,6 @@
 ---
 title: "Breakfast & Brunch in Žižkov, Prague: Honest Cafés Under the TV Tower"
-description: "Where to have breakfast or brunch in Žižkov, Prague – Seifert's Brunch, Sladká cesta, Dobrotéka, SOMA and Sensu Cafe. Affordable, local and authentic."
+description: "Where to have breakfast or brunch in Žižkov, Prague – Seifert's Brunch, Sladká cesta, Dobrotéka, Golden Egg, SOMA and Sensu Cafe. Affordable, local and authentic."
 seoTitle: "Brunch in Žižkov Prague – local breakfast cafés"
 date: "2026-11-26T12:40:00"
 image: "/wp-content/uploads/2026/11/seiferts-brunch-praha-1.jpg"
@@ -20,6 +20,9 @@ cs: "/brunch-zizkov/"
 
 <h3>👉🏼 <a href="/en/places/soma-praha/">SOMA</a></h3>
 <p>Specialty coffee from Czech and European roasters and a seasonal brunch menu. Don't miss the pumpkin bread.</p>
+
+<h3>👉🏼 <a href="/en/places/golden-egg-zizkov-praha/">Golden Egg</a></h3>
+<p>An egg-focused bistro near the main railway station – eggs Benedict with salmon or ham, omelettes and egg brioche sandwiches, all with free-range eggs. Weekdays from 8:00.</p>
 
 <h3>👉🏼 <a href="/en/places/sensu-cafe-praha/">Sensu Cafe</a></h3>
 <p>A matcha specialist near Želivského metro – iced matcha with vanilla cloud and matcha cakes.</p>

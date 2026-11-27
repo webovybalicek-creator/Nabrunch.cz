@@ -1,12 +1,12 @@
 ---
-title: "Snídaně a brunch v Holešovicích a na Letné: 8 ověřených tipů"
-description: "Kam na snídani nebo brunch v Holešovicích a na Letné? 8 ověřených míst – Vnitroblock, La Forme, Phill's Corner, Kafe Francin, Café Letka a další. Co si dát a kdy."
-seoTitle: "Brunch Holešovice a Letná: 8 tipů na snídani | naBrunch.cz"
+title: "Snídaně a brunch v Holešovicích a na Letné: 9 ověřených tipů"
+description: "Kam na snídani nebo brunch v Holešovicích a na Letné? 9 ověřených míst – Vnitroblock, La Forme, Phill's Corner, Kafe Francin, Café Letka a další. Co si dát a kdy."
+seoTitle: "Brunch Holešovice a Letná: 9 tipů na snídani | naBrunch.cz"
 date: "2026-11-22T10:20:00"
 image: "/wp-content/uploads/2026/11/vnitroblock-praha-1.jpg"
 ---
 
-<p>Holešovice a Letná patří k nejživějším čtvrtím Prahy – bývalé továrny, galerie, Pražská tržnice, Letenské sady a mezi tím spousta kaváren, kam se vyplatí vyrazit na pořádnou snídani. Vybrali jsme <strong>8 ověřených míst, kam na snídani a brunch v Holešovicích a na Letné</strong>. U každého najdete, co si dát a od kolika mají otevřeno.</p>
+<p>Holešovice a Letná patří k nejživějším čtvrtím Prahy – bývalé továrny, galerie, Pražská tržnice, Letenské sady a mezi tím spousta kaváren, kam se vyplatí vyrazit na pořádnou snídani. Vybrali jsme <strong>9 ověřených míst, kam na snídani a brunch v Holešovicích a na Letné</strong>. U každého najdete, co si dát a od kolika mají otevřeno.</p>
 
 <h2>Holešovice</h2>
 
@@ -25,6 +25,10 @@ image: "/wp-content/uploads/2026/11/vnitroblock-praha-1.jpg"
 <h3>👉🏼 <a href="/podniky/kafe-francin-praha/">Kafe Francin</a> – Dukelských hrdinů</h3>
 <p>Kavárna s vlastní pražírnou u Veletržního paláce, kterou místní milují za poctivé snídaně a dobré ceny. Otevřeno denně od rána (ve všední dny od 7:30) do večera.</p>
 <p>🍳 <strong>Co si dát:</strong> anglickou snídani nebo open sandwich se sázenými vejci a citronovou ricottou.</p>
+
+<h3>👉🏼 <a href="/podniky/supernova-bakehouse-holesovice-praha/">Supernova Bakehouse</a> – Na Zátorách</h3>
+<p>Holešovická pobočka karlínské pekárny, tady i s plnou snídaňovou nabídkou. Vlastní croissanty, Supernova breakfast s vejci a mléčná rýže s cinnamon bun crumble. Ve všední dny od 8:00.</p>
+<p>🥐 <strong>Co si dát:</strong> pistáciový croissant a mléčnou rýži s višněmi.</p>
 
 <h3>👉🏼 <a href="/podniky/und-kaffee-praha/">Ünd Kaffee</a> – Veletržní</h3>
 <p>Kavárna, kde vládne laminované pečivo – croissanty a jejich moderní variace plněné pistáciovým krémem nebo sezonním ovocem. Otevřeno <strong>každý den od 8:00</strong>.</p>
